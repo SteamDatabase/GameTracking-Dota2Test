@@ -60,6 +60,7 @@
 	Current enemy drawn in red
 	Current target entity drawn in magenta
 	Cyan	- detour around an object (triangulation)
+	D9%/bool
 	DEM_Error
 	Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
 	ENameItem
@@ -2685,14 +2686,12 @@ $wDE1
 (%1.3f)
 (%2.2f - %2.2f - %2.2f)
 (%2.2f)
-(%_Q_
 (%__float128 %__float128 %__float128 %__float128)
 (%__float128 %__float128 %__float128)
 (%__float128 %__float128)
 (%double %double %double %double)
 (%double) Name: %short (%short)
 (%float, %float, %float)
-(%lQ_
 ((CSosFilterSetSoundEventFieldsInfo_t *)( *pEvent ))->m_nGuid.GetRaw() == nGuid.GetRaw()
 ((equipped_slot_t)-1) != m_unFirstValidItemSlot
 ()+-*/
@@ -2889,6 +2888,7 @@ $wDE1
 )k_ESuspiciousActivity_SuspectedBotFarming
 )k_ESuspiciousBuildType_NoSignificantItems
 )k_ETourneyQueueDeadlineState_ExpiringSoon
+*		`+	
 * If the error can be repeatably reproduced, this is signed char bug in
 * If the error cannot be reproduced, and/or happens at different
 ** ERROR: .NAV FILE NOT WRITABLE!!!      **
@@ -3174,15 +3174,15 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%,VD
-.%^double]
+.%: /
+.%KvG
+.%U+;
 .%llu
-.-#XD
-.-;R
+.%~long double]
+.-B`D
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
-.=o8g
 .@(wSA
 .@,sT
 .@Ts|
@@ -3524,6 +3524,7 @@ $wDE1
 .vpcf
 .vrman
 .xXB%
+/		02	
 /CHAT_MESSAGE_LOW_PRIORITY_COMPLETED_EXPLANATION
 /CMsgRequestItemPurgatory_RefundPurchaseResponse
 /CMsgServerToGCCompendiumInGamePredictionResults
@@ -8895,7 +8896,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5r
+AVSLc5
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -27278,10 +27279,8 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%+,P
-D%kiH
+D%]:...
 D%pD9
-D%q9z
 D)T@u
 D+ E1
 D+(E1
@@ -27293,14 +27292,15 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-)0z
+D-int ...
+D-~<...
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
-D5v%...
+D5L~8
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27310,8 +27310,9 @@ D9#unsigned short)H
 D9#unsigned short-A
 D9#unsigned short-H
 D9#uuHcC
-D9%]<C
-D9%|lt
+D9%!long double
+D9%M>C
+D9%lnt
 D9(te
 D9(ts
 D9(unsigned short"f.
@@ -27320,6 +27321,7 @@ D93t&H
 D93t)H
 D93t+H
 D947u
+D95Ab
 D98ta
 D98te
 D98tg
@@ -27369,48 +27371,50 @@ D9{$A
 D9{$|
 D9{(~
 D;#unsigned short&H
-D;%+we
+D;%Hr
+D;%[{long double
 D;)u"
 D;+u!
-D;-)>4
-D;-0BO
+D;-1ze
+D;-YB4
+D;-`FO
 D;... u 
 D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5!18
-D;5&long;
-D;5(V
-D;5*xR
-D;51?,
-D;53o@
-D;53p,
-D;58W
-D;596;
-D;5=q1
-D;5Ht+
-D;5J]>
-D;5LeA
-D;5SQ
-D;5Xgc
-D;5[r1
-D;5];
-D;5^7;
-D;5eU/
-D;5gX
-D;5n::
-D;5nh:
-D;5qfA
-D;5s`#
-D;5t	O
-D;5v%=
-D;5w^>
-D;5wu+
-D;5{s1
+D;5'double;
+D;5,vN
+D;52C5
+D;54B,
+D;5=}8
+D;5@.__float128
+D;5ChA
+D;5F`>
+D;5Hic
+D;5J'=
+D;5Kw+
+D;5L	#
+D;5Q58
+D;5Vp;
+D;5XZ
+D;5aC,
+D;5cs@
+D;5ct,
+D;5h[
+D;5i:;
+D;5k	A
+D;5mu1
+D;5qZ
+D;5xx+
+D;5za>
+D;5|iA
 D;8}D
-D;=G$=
-D;=hl@
+D;=2o@
+D;=6EO
+D;=Dk
+D;=pYC
+D;=wchar_t(=
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -27513,6 +27517,7 @@ D;~,|
 D< K9D, trK
 D<(K9D,(tnK
 D<PfA
+D=7Zz
 DAMAGE_EVENTS_ONLY
 DAMAGE_NO
 DAMAGE_TYPES
@@ -32369,7 +32374,6 @@ HaticsType_None
 Have Entity say string, and teamOnly or not
 Have we received the post match signout message that includes reward information
 HaveAllPlayersJoined
-Hc5_7e
 Hc@XHi
 Hc@pH
 Hc@pI
@@ -35613,16 +35617,12 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L95	5
-L95=5
-L95Ey
-L95G}
-L95l[
-L95{^
+L9599
+L95m9
+L95u}
 L98t"H
 L98t5H
 L98tY
-L9=signed char	O
 L9` u	I
 L9h u
 L9p u
@@ -35717,9 +35717,8 @@ LaunchLootInitialHeight
 LayoutPositionType_e
 Lc1E9
 Lc2E1
-Lc5[-P
-Lc=G3!
-Lc=q{
+Lc5K/P
+Lc=w7!
 LcGhf
 LcO,D
 LcOhf
@@ -41287,7 +41286,6 @@ T$tE1
 T,XH9
 T0xRAp
 T1wHc
-T5ha]
 TARARARARARARARC`
 TARBRB]ARBRAp
 TARBRD`
@@ -42945,6 +42943,7 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
+W%Ww&
 W(I94
 W0Lcs(G
 W8I94
@@ -43139,10 +43138,11 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%0N_
-X%hO_
+X%0Q_
+X%PO_
 X(A;X,uo
-X56;U
+X-tJE
+X5V<U
 X<[A^]
 XATAp
 XAxis
@@ -43182,10 +43182,12 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%	|r
-Y%%}r
-Y%BYa
-Y%~7Y
+Y%$]signed char
+Y%)}r
+Y%<Zr
+Y%E~r
+Y%Zr
+Y5h-L
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43310,6 +43312,7 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
+]%	`T
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -43408,7 +43411,6 @@ Zffffff.
 ^$A+^ ~|ffffff.
 ^$A+^ ~}ffff.
 ^$A+^<
-^%H? 
 ^(A;^,u_
 ^(A;^,ug
 ^(A;^,ukL
@@ -52199,7 +52201,6 @@ long long signed char::* view roll angle
 long long!IcN
 long long"A9^
 long long#D9{
-long long%9=r
 long long'A9^
 long long*[A^]
 long long+A9^
@@ -66638,6 +66639,7 @@ static bool CMemberScriptBinding0<CDOTA_Bot_Script *, float (CDOTA_Bot_Script::*
 static bool CMemberScriptBinding0<CDOTA_Bot_Script *, int (CDOTA_Bot_Script::*)(), int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Bot_Script *, FUNC_TYPE = int (CDOTA_Bot_Script::*)(), FUNCTION_RETTYPE = int]
 static bool CMemberScriptBinding0<CDOTA_Bot_Script *, void (CDOTA_Bot_Script::*)(), void>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Bot_Script *, FUNC_TYPE = void (CDOTA_Bot_Script::*)(), FUNCTION_RETTYPE = void]
 static bool CMemberScriptBinding0<CDOTA_Buff *, HSCRIPT__ *(CDOTA_Buff::*)(), HSCRIPT__ *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = HSCRIPT__ *(CDOTA_Buff::*)(), FUNCTION_RETTYPE = HSCRIPT__ *]
+static bool CMemberScriptBinding0<CDOTA_Buff *, bool (CDOTA_Buff::*)(), bool>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = bool (CDOTA_Buff::*)(), FUNCTION_RETTYPE = bool]
 static bool CMemberScriptBinding0<CDOTA_Buff *, const char *(CDOTA_Buff::*)(), const char *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = const char *(CDOTA_Buff::*)(), FUNCTION_RETTYPE = const char *]
 static bool CMemberScriptBinding0<CDOTA_Buff *, float (CDOTA_Buff::*)(), float>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = float (CDOTA_Buff::*)(), FUNCTION_RETTYPE = float]
 static bool CMemberScriptBinding0<CDOTA_Buff *, int (CDOTA_Buff::*)(), int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = int (CDOTA_Buff::*)(), FUNCTION_RETTYPE = int]
@@ -73470,8 +73472,8 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
-unsigned __int128%p}N
-unsigned __int128%xdN
+unsigned __int128%,tJ
+unsigned __int128%7Ef
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char=unsigned short	H
@@ -73596,6 +73598,7 @@ unsigned short+(vTJ
 unsigned short+9D1
 unsigned short+9D2
 unsigned short+9L:
+unsigned short+;5E
 unsigned short+B9D
 unsigned short+B9L
 unsigned short+H9z0u%H
@@ -73704,7 +73707,7 @@ unsigned short=ffffff.
 unsigned short>0E1
 unsigned short>9D1
 unsigned short>9L:
-unsigned short>D;5x
+unsigned short>D;5
 unsigned short>IcG
 unsigned short>fffff.
 unsigned short?9D1
