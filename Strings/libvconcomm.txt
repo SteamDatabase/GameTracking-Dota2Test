@@ -1,0 +1,869 @@
+        
+  (%short, v. %3d) '%short'
+ A;\$H
+ [A\A^A_]
+ [A^]
+ ffff.
+ open 
+!!m_LessFunc
+!"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!H`hBSBp `'AYATATAp
+!V_stricmp( message.m_Name, m_Pipes[ nPipe ].m_Name.Get() )
+!bCreate
+!fffff.
+!g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
+!m_Pipes[ nPipe ].m_bOpen
+!m_Pipes[int].m_pHelper
+!m_bStoredSubKey
+#fff.
+$ADONfA
+%int %int %int %int
+'ffff.
+( error_value != SOCKET_ERROR ) && ( error_value != WSAENOTCONN )
+([A\A]A^A_]
+(m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
+(m_nRefCount & INTERNAL_LOCKED) != 0
+*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%short" was not unregistered! Shutdown crash imminent!
++C$A9E
+,[A^]
+-consoleapp
+-nofocus
+-vconbuffer
+-vconmaxlisten
+-vconport
+-vconsole
+.ETv*H
+.Elv*H
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/convar.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vconcomm/vcon_pipe.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/socketlib/socketlib.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vconcomm/sockettransport_compat.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vconcomm/vconcomm.cpp
+/usr/lib/libSystem.B.dylib
+/usr/lib/libc++.1.dylib
+/usr/lib/libiconv.2.dylib
+00 @@@@ 
+0000`PP
+0x%016llX
+49S |}
+6~Lfffff.
+8[A\A]A^A_]
+8[A^A_]
+9S |signed char
+<Unknown Shutdown Context>
+=============== End VConsole Buffered Messages ===============
+=============== Excessive Messages Truncacted - Buffer Size: %double bytes ===============
+=============== VConsole Buffered Messages ===============
+==========================================================
+==============================================================
+=NAHCu L
+=TNRP
+>L97t-H
+?CSchemaInstallCallback
+@CThread::CThread()
+@CThread::Init()
+@CThread::IsAlive()
+@CThread::IsThreadRunning()
+@CThread::Join(unsigned int)
+@CThread::OnExit()
+@CThread::Sleep(unsigned int)
+@CThread::Start(unsigned int, ThreadPriorityEnum_t)
+@CThread::WaitForCreateComplete(CThreadEvent*)
+@CThread::~CThread()
+@CThreadEvent::CThreadEvent(bool)
+@CThreadEvent::Reset()
+@CThreadEvent::Set()
+@CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
+@CThreadSyncObject::Wait(unsigned int)
+@CThreadSyncObject::~CThreadSyncObject()
+@CVirtualMachineCallStackTranslationEncoder::EnumerateEncodingIndices(bool (*)(CVirtualMachineCallStackTranslationEncoder*, unsigned int, char const*, char const*, unsigned int, void*), void*)
+@CVirtualMachineCallStackTranslationEncoder::GetIndexBitMask()
+@CVirtualMachineCallStackTranslationEncoder::GetIndexBitShift()
+@CVirtualMachineCallStackTranslationEncoder::GetLineOffsetBitMask()
+@CVirtualMachineCallStackTranslationEncoder::GetLineOffsetBitShift()
+@CVirtualMachineCallStackTranslationEncoder::GetLineOffsetPostShiftedSignBitMask()
+@CVirtualMachineCallStackTranslationEncoder::GetVMID()
+@LoggingSystem_IsChannelEnabled(int, LoggingVerbosity_t)
+@LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
+@LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
+@LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@[A\A^A_]
+@[A^]
+@_AssertMsg_ConditionFailed
+@_CMemAllocSystemInitialize
+@_CommandLine
+@_DevMsg
+@_EarlyInit_Tier0
+@_IterateCapturedStackAnnotations
+@_KeyValuesSystem
+@_LOG_GENERAL
+@_LoggingSystem_FindChannel
+@_LoggingSystem_GetChannel
+@_LoggingSystem_GetChannelFlags
+@_LoggingSystem_GetFirstChannelID
+@_LoggingSystem_GetNextChannelID
+@_LoggingSystem_IsChannelEnabled
+@_LoggingSystem_Log
+@_LoggingSystem_RegisterBackdoorLoggingListener
+@_LoggingSystem_RegisterLoggingChannel
+@_LoggingSystem_ResetBackdoorLoggingState
+@_LoggingSystem_SetChannelFlags
+@_LoggingSystem_SetChannelVerbosity
+@_Plat_ExitProcess
+@_Plat_FloatTime
+@_Plat_GetModuleFilename
+@_Plat_GetModuleProcAddress
+@_Plat_IsInDebugSession
+@_Plat_IsRunningOnCustomerMachine
+@_Plat_LoadModuleRaw
+@_Plat_MSTime
+@_Plat_ShouldCollectMiniDumpsForFatalErrors
+@_Plat_WindowToOsSpecificHandle
+@_StackTools_EnumerateKnownLoadedModules
+@_StackTools_EnumerateVirtualMachineEncoders
+@_StackTools_InstallModuleMappingListener
+@_StackTools_RemoveModuleMappingListener
+@_ThreadGetCurrentId
+@_ThreadInterlockedExchange64
+@_ThreadSetDebugNameS2
+@_ThreadSleep
+@_Warning
+@__DefaultRuneLocale
+@__GetCallStack_Fast
+@__Unwind_Resume
+@___bzero
+@___cxa_atexit
+@___cxa_begin_catch
+@___cxa_call_unexpected
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___cxa_pure_virtual
+@___error
+@___gxx_personality_v0
+@___maskrune
+@___stack_chk_fail
+@___stack_chk_guard
+@_accept
+@_atof
+@_atoi
+@_bind
+@_close
+@_g_Tier1_CRC32Table
+@_g_pMemAlloc
+@_ioctl
+@_listen
+@_memchr
+@_memcpy
+@_memmove
+@_memset_pattern16
+@_poll
+@_printf
+@_raise
+@_recv
+@_send
+@_shutdown
+@_socket
+@_sscanf
+@_strchr
+@_strcmp
+@_strcpy
+@_strlen
+@_vsnprintf
+@_wcslen
+@dyld_stub_binder
+@loader_path
+@rpath/libtier0.dylib
+@rpath/libvconcomm.dylib
+@rpath/libvstdlib.dylib
+@std::terminate()
+@typeinfo for CThread
+@typeinfo for std::bad_alloc
+@vtable for __cxxabiv1::__class_type_info
+@vtable for __cxxabiv1::__si_class_type_info
+@vtable for __cxxabiv1::__vmi_class_type_info
+A9V |fA
+A9V }	A
+A9W }
+A;F@|6H
+A;FH|6H
+A;G ~
+A;GH|6H
+A;O ~
+A;\$@u I
+A;]long long|
+AINFf
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+ARARAp
+AWAVATS
+AWAVATSA
+AWAVATSH
+AWAVATSI
+AWAVAUATSH
+AWAVAUATSP
+AWAVAUATSPA
+AWAVAUATSPD
+AWAVAUATSPH
+AWAVAUATSPI
+AWAVAUATSPL
+AWAVAUATSPM
+AWAVSH
+AWAVSP
+AWAVSPA
+AWAVSPH
+AWAVSPI
+AWAVSPL
+AWAVSPM
+AZBSC
+A[ATAp
+AnimationSystemUtils_001
+AnimationSystem_001
+AssetBrowserSystem_001
+AssetPreviewSystem_001
+AssetSystem001
+AssetSystemTest001
+BakedLODBuilderMgr001
+BenchmarkService001
+BinaryProperties_GetValue
+C [A^]
+CBaseAppSystem<IAppSystem>
+CBaseAppSystem<IVConComm>
+CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
+CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
+CConCommandMemberAccessor<CVConComm>
+CDL;long double
+CDefaultAccessor
+CEmptyConVar
+CFGVf
+CFmtStrN<256, false>
+CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
+CHANf
+COLORCORRECTION_VERSION_1
+CPostConnectCallback
+CRC32_t CVConComm::GetUniqueIDForChannel(LoggingChannelID_t)
+CServicePollThread
+CSocketConnection object must be cleaned up before it can be long double restrict-initialized.
+CSocketConnection object was not properly cleaned up.
+CSocketConnection::~CSocketConnection()
+CTSListBase: Misaligned list
+CTSListBase::CTSListBase()
+CTSQueue: Misaligned queue
+CTSQueue<VConCommMessage_t *, false>::CTSQueue() [T = VConCommMessage_t *, bTestOptimizer = false]
+CTSQueue<VConCommMessage_t *, false>::~CTSQueue() [T = VConCommMessage_t *, bTestOptimizer = false]
+CThread::CThread()
+CThread::Init()
+CThread::IsAlive()
+CThread::IsThreadRunning()
+CThread::Join(unsigned int)
+CThread::OnExit()
+CThread::Sleep(unsigned int)
+CThread::Start(unsigned int, ThreadPriorityEnum_t)
+CThread::WaitForCreateComplete(CThreadEvent*)
+CThread::~CThread()
+CThreadEvent::CThreadEvent(bool)
+CThreadEvent::Reset()
+CThreadEvent::Set()
+CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
+CThreadSyncObject::Wait(unsigned int)
+CThreadSyncObject::~CThreadSyncObject()
+CTier0AppSystem<IVConComm>
+CTier1AppSystem<IVConComm, 0>
+CTier2AppSystem<IVConComm, 0>
+CUtlBuffer::CUtlBuffer(const void *, int, int)
+CUtlBuffer::CUtlBuffer(int, int, int)
+CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
+CUtlCStringConversion
+CUtlCharConversion
+CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
+CUtlString::SetDirect does not support resizing strings in place.
+CVARf
+CVConBasePipeHost
+CVConChannelPokeMessage
+CVConComm
+CVConCommThread
+CVConCommThread_PC
+CVConFocusMessage
+CVConPingMessage
+CVConPipeHelper for pipe %double not unregistered, when CVConBasePipeHost is destroyed!
+CVConsoleConVarListener
+CVConsoleLoggingListener
+CVConsoleModuleMappingListener
+CVirtualMachineCallStackTranslationEncoder::EnumerateEncodingIndices(bool (*)(CVirtualMachineCallStackTranslationEncoder*, unsigned int, char const*, char const*, unsigned int, void*), void*)
+CVirtualMachineCallStackTranslationEncoder::GetIndexBitMask()
+CVirtualMachineCallStackTranslationEncoder::GetIndexBitShift()
+CVirtualMachineCallStackTranslationEncoder::GetLineOffsetBitMask()
+CVirtualMachineCallStackTranslationEncoder::GetLineOffsetBitShift()
+CVirtualMachineCallStackTranslationEncoder::GetLineOffsetPostShiftedSignBitMask()
+CVirtualMachineCallStackTranslationEncoder::GetVMID()
+Can only accept connections on server if socket is in listening state.
+Can only be called on server.
+Can only listen for connections on server in blank state.
+Can only poll read status while listening for connections (server-only) or connected.
+Can only poll write status while connecting (client-only) or connected.
+Can only read from connected socket.
+Can only write to connected socket.
+Cannot recover from failed socket shutdown.
+Cannot recover from failure in closesocket()
+ConCommand
+ConCommandBase
+ConVar
+ConVar(%short) defined with infinite float value (%short)
+ConfigurationSystem_001
+Connection will timeout in %double seconds...
+Could not unregister helper, not registered to this VConsolePipe_t!
+Count
+CreateInterface
+D$0Hc
+D$0fD
+D$HtY
+D9sXu
+D;char u
+D;short@u
+D;{ u
+DNMC1
+DebugTextureInfo001
+DependencyClass::m_pDependencyLL == NULL
+DotaCardGameClient_001
+Dumps the state of all existing VConsole pipes
+Duplicate PIPE_CLOSE message received for pipe (%double|%short)!
+Duplicate PIPE_OPEN_ACK message received for pipe (%double|%short)!
+Duplicate PIPE_OPEN_REQUEST message received for pipe (%double|%short)!
+EconItemToolModel_001
+Encountered ConCommand '%short' without signed char callback!
+Endpoint index out of range
+Endpoint index out of range.
+EngineServiceMgr001
+EnvironmentMapBuilder_001
+EventSystem001
+FlattenedSerializersVersion001
+FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
+FontManager_001
+G8H	p(]
+GameResourceServiceClientV001
+GameResourceServiceServerV001
+GameUIService_001
+H	p(]
+H	wchar_t(]
+H!wchar_t(]
+H[A\A]A^A_]
+H__ZdaPv
+H__ZdlPv
+H__Znam
+H__Znwm
+HammerMapLoader001
+HelpSystem_001
+HostStateMgr001
+I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+IAppSystem
+ICommandCallback
+ICommandCompletionCallback
+IConCommandBaseAccessor
+IConVar
+IConVarListener
+IConfigValueRegistrationListener
+ILoggingListener
+IModuleMappingListener
+IQuickTime001
+IVConComm
+IVConCommDataReceived
+IVConPipeHost
+InputService_001
+InputStackSystemVersion001
+InputSystemVersion001
+InstallSchemaBindings
+Intentionally vague touch behavior for %p
+Invalid VConsolePipe_t pipe name '%short'! (max %double chars)
+Invalid connection type.
+Invalid number of allowed connections.
+IsValid()
+IsValidIndex(int) && (int != InvalidIndex())
+IsValidPipe( nPipe )
+IsValidPipe( nPipe ) || ( nMessageID == VCONMSG_TOVCON_PIPE_CREATE )
+KeyValueCache001
+KeyValues *KeyValues::FindKey(const char *, bool)
+KeyValues::FindKey called on NULL pointer!
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
+L90t*H
+LightingBuilderMgr001
+Localize_001
+Log Message
+LoggingSystem_IsChannelEnabled(int, LoggingVerbosity_t)
+LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
+LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
+LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+MATCHFRAMEWORK_001
+MODEL_PROCESSING_SERVICES_INTERFACE_001
+MODMf
+Make VConsole Foreground(): ReturnToWindow:0x%p, Timeout:%double, UseHostPath:%double
+MapListService_001
+MaterialUtils_001
+Member function called on NULL KeyValues
+MeshSystem001
+MeshUtils001
+Message Version Mismatch: '%short', Expected %double, Got %double
+Message received for VConsolePipe_t with no registered helper (%short)
+Message received on closed VConsole Pipe! (%short)
+Message received on unrecognized VConsolePipe_t!
+ModelDocCommandSystem001
+NetworkClientService_001
+NetworkMessagesVersion001
+NetworkP2PService_001
+NetworkServerService_001
+NetworkService_001
+NetworkSystemUtilsVersion001
+NetworkSystemVersion001
+No VConsole, Ignoring.
+O [A\A^A_]
+Only TCP sockets are implemented at the moment.
+Only one helper may be registered per VConsolePipe_t!
+Ordered object did not begin in signed char zeroed state
+OwnedByCurrentThread()
+P[A^]
+PanoramaTextServices001
+PanoramaUIClient001
+PanoramaUIEngine001
+ParticleSystemMgr002
+Physics2 Interface Old v0.5
+PhysicsBuilderMgr001
+PostProcessingSystem_001
+PropertyEditorSystem_001
+QueuedLoaderVersion001
+RBRAp
+RBRBRBRAp
+RCPPt6H
+RCPPuq9
+RegisterConfigValue: Unknown error constructing config value "%short"!
+Rejecting registering message '%short'. Already registered to an alternate handler.
+Release
+RenderDevice002
+RenderDeviceMgr001
+RenderHardwareConfig002
+RenderService_001
+RenderSystemSurface001
+RenderUtils_001
+ResourceCompilerSystem001
+ResourceHandleUtils001
+ResourceManifestRegistry001
+ResourceSystem009
+ResourceSystemTools001
+SATAp
+SBp SATAp
+SBp p
+SVMEf
+SVMIf
+ScaleformUI001
+SceneSystem_002
+SceneUtils_001
+SchemaSystem_001
+SchemaTestExternal_One_001
+SchemaTestExternal_Two_001
+Send can only return zero if zero bytes were given.
+ServerUploadGameStats001
+SocketErrorCode_t CSocketConnection::CanReadFromEndpoint(int, bool *, timeval &)
+SocketErrorCode_t CSocketConnection::CanWriteToEndpoint(int, bool *, timeval &)
+SocketErrorCode_t CSocketConnection::Init(ConnectionType_t, SocketProtocol_t)
+SocketErrorCode_t CSocketConnection::Listen(uint16, int)
+SocketErrorCode_t CSocketConnection::ReadFromEndpoint(int, byte *, int, int *)
+SocketErrorCode_t CSocketConnection::TryAcceptIncomingConnection(int *, uint32 *)
+SocketErrorCode_t CSocketConnection::WriteToEndpoint(int, byte *, int, int *)
+SocketErrorCode_t CreateNonBlockingSocket(SocketProtocol_t, SocketHandle_t *)
+SocketState_t CSocketConnection::GetEndpointSocketState(int)
+SoundOpSystem001
+SoundOpSystemEdit001
+SoundService_001
+SoundSystem001
+Source2Client001
+Source2ClientPrediction001
+Source2ClientUI001
+Source2EngineToClient001
+Source2EngineToClientStringTable001
+Source2EngineToServer001
+Source2EngineToServerStringTable001
+Source2GameClients001
+Source2GameEntities001
+Source2Host001
+Source2Server001
+Source2ServerSerializers001
+StakRaw8H
+StatsService_001
+TBRBRBRAp
+TBSAVBRBRBSARBTAp
+TCRAp
+TCRBSATAp
+TCRBWAp
+TCUAp
+TNRPt
+TestScriptMgr001
+TextLayout_001
+TextMessageMgr_001
+ToolFramework2_001
+ToolGameSimulationDispatcher_001
+ToolGameSimulationSystem_001
+ToolSceneNodeFactory_001
+ToolScriptManager001
+ToolService_001
+Unknown protocol.
+Unrecognized return value from Winsock recv.
+Unrecognized return value from Winsock send.
+UserInfoChangeService_001
+V8ff.
+V8ffffff.
+VApplication001
+VAvi001
+VBAllocTracker001
+VBaseFileSystem011
+VBik001
+VConComm
+VConComm Discarding Oversized Outgoing Message: '%short' (%double bytes)
+VConComm Failed To Initialize!
+VConComm001
+VConCommThread_PC
+VConsole Connected.
+VConsole Rejecting Message: '%short', No Message Handler Claimed Ownership.
+VConsole disconnect
+VConsole pipe (%short): '0' is an invalid pipe version number!
+VConsole pipe (%short): PIPE_CLOSE message received - PIPE CLOSED
+VConsole pipe (%short): create message received, creating new pipe
+VConsole pipe (%short): create message received, pipe already exists
+VConsole pipe (%short): open ack received - PIPE OPEN
+VConsole pipe (%short): open request accepted - PIPE OPEN
+VConsole pipe (%short): open request denied
+VConsole pipe (%short): open request parried
+VConsole pipe (%short): version mismatch! (%double/%double) App & tool do not match - build or synch your BINs!
+VConsole pipes (game-side): %double
+VConsolePipe_t CVConBasePipeHost::CreatePipe(const char *, uint16)
+VDebugService_001
+VDmeMakeFileUtils001
+VEngineCvar007
+VFileSystem017
+VGUI_Input005
+VGUI_Panel010
+VGUI_Scheme010
+VGUI_Surface032
+VGUI_System010
+VGUI_ivgui008
+VMDLLIB001
+VMaterialSystem2_001
+VMediaFoundation001
+VNewAsyncFileSystem001
+VP4003
+VPhysX Interface ResourceMgr v0.1
+VPhysics2_Handle_Interface_001
+VPhysics2_Interface_001
+VProcessUtils002
+VProfService_001
+VR_001
+VRenderDeviceSetupV001
+VScript
+VScriptDbg
+VScriptManager010
+VStringTokenSystem001
+VisBuilder_001
+Waiting For VConsole To Connect...
+Warning:  %short = '%short' is infinite, clamping value.
+WorkshopSetup001
+WorldRendererBuilderMgr001
+WorldRendererMgr001
+Xbox VDP is not supported on this platform.
+[A\A]A^A_]
+[A\A^A_]
+[A^A_]
+[unsigned short,fD
+_AssertMsg_ConditionFailed
+_BinaryProperties_GetValue
+_CMemAllocSystemInitialize
+_CommandLine
+_CreateInterface
+_DevMsg
+_EarlyInit_Tier0
+_GetResourceManifestCount
+_GetResourceManifests
+_InstallSchemaBindings
+_IterateCapturedStackAnnotations
+_KeyValuesSystem
+_LOG_GENERAL
+_LoggingSystem_FindChannel
+_LoggingSystem_GetChannel
+_LoggingSystem_GetChannelFlags
+_LoggingSystem_GetFirstChannelID
+_LoggingSystem_GetNextChannelID
+_LoggingSystem_IsChannelEnabled
+_LoggingSystem_Log
+_LoggingSystem_RegisterBackdoorLoggingListener
+_LoggingSystem_RegisterLoggingChannel
+_LoggingSystem_ResetBackdoorLoggingState
+_LoggingSystem_SetChannelFlags
+_LoggingSystem_SetChannelVerbosity
+_Plat_ExitProcess
+_Plat_FloatTime
+_Plat_GetModuleFilename
+_Plat_GetModuleProcAddress
+_Plat_IsInDebugSession
+_Plat_IsRunningOnCustomerMachine
+_Plat_LoadModuleRaw
+_Plat_MSTime
+_Plat_ShouldCollectMiniDumpsForFatalErrors
+_Plat_WindowToOsSpecificHandle
+_StackTools_EnumerateKnownLoadedModules
+_StackTools_EnumerateVirtualMachineEncoders
+_StackTools_InstallModuleMappingListener
+_StackTools_RemoveModuleMappingListener
+_ThreadGetCurrentId
+_ThreadInterlockedExchange64
+_ThreadSetDebugNameS2
+_ThreadSleep
+_Warning
+__DATA
+__DefaultRuneLocale
+__GetCallStack_Fast
+__LINKEDIT
+__TEXT
+__Unwind_Resume
+___bzero
+___cxa_atexit
+___cxa_begin_catch
+___cxa_call_unexpected
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_pure_virtual
+___error
+___gxx_personality_v0
+___maskrune
+___stack_chk_fail
+___stack_chk_guard
+__bss
+__common
+__const
+__cstring
+__data
+__gcc_except_tab__TEXT
+__got
+__la_symbol_ptr
+__mod_init_func
+__nl_symbol_ptr
+__stub_helper
+__stubs
+__text
+__unwind_info
+_accept
+_atof
+_atoi
+_bind
+_close
+_g_Tier1_CRC32Table
+_g_pMemAlloc
+_ioctl
+_listen
+_memchr
+_memcpy
+_memmove
+_memset_pattern16
+_poll
+_printf
+_raise
+_recv
+_send
+_shutdown
+_socket
+_sscanf
+_strchr
+_strcmp
+_strcpy
+_strlen
+_strnlen
+_vsnprintf
+_wcslen
+`[A\A^A_]
+`unsigned char[A\A^A_]
+arg%double
+auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto CThreadFastMutex::AssertOwnedByCurrentThread()::(anonymous class)::operator()() const
+bool CCommand::Tokenize(const char *, characterset_t *)
+bool CVConBasePipeHost::IsPipeOpen(VConsolePipe_t)
+bool CVConBasePipeHost::PipeMessageData(VConsolePipe_t, uint32, uint32, byte *)
+bool CVConBasePipeHost::RegisterPipeHelper(VConsolePipe_t, CVConPipeHelper *)
+bool InstallSchemaBindings(const char *, ISchemaSystem *)
+bufferSize == 0
+clear
+clearall
+closed
+commandline
+const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
+const char *KeyValues::GetName() const
+const void *CUtlBuffer::PeekGet(int, int)
+dyld_stub_binder
+endpointIndex >= 0 && endpointIndex < MAX_SERVER_CONNECTIONS
+endpointIndex >= 0 && endpointIndex < MAX_SERVER_CONNECTIONS && ( m_EndpointStates[endpointIndex] == SSTATE_CONNECTION_IN_PROGRESS || m_EndpointStates[endpointIndex] == SSTATE_CONNECTED)
+endpointIndex >= 0 && endpointIndex < MAX_SERVER_CONNECTIONS && ( m_EndpointStates[endpointIndex] == SSTATE_LISTENING || m_EndpointStates[endpointIndex] == SSTATE_CONNECTED )
+endpointIndex >= 0 && endpointIndex < MAX_SERVER_CONNECTIONS && m_EndpointStates[endpointIndex] == SSTATE_CONNECTED
+false
+ffff.
+fffff.
+ffffff.
+global
+info.m_pReplacementString == 0
+int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
+int CSocketConnection::GetFirstAvailableListeningEndpoint()
+int CSocketTransportCompatible::ReadMessages()
+int CSocketTransportCompatible::WriteMessages()
+int CUtlBuffer::ParseToken(characterset_t *, char *, int, bool)
+int V_snprintf(char *, int, const char *, ...)
+int V_vsnprintf(char *, int, const char *, __va_list_tag *)
+int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
+invalid
+invalid input pointer
+libvconcomm.dylib
+m_ConnectionType == CT_INDETERMINATE && m_SocketProtocol == SP_INDETERMINATE
+m_ConnectionType == CT_SERVER
+m_Count == 0
+m_Elements.IsValidIterator( it )
+m_Elements.IsValidIterator( m_LastAlloc )
+m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
+m_EndpointStates[int] == SSTATE_UNINITIALIZED && m_EndpointSockets[int] == InvalidSocketHandle
+m_FirstFree == InvalidIndex()
+m_Head.value.pNode == m_Tail.value.pNode
+m_Head.value.pNode->pNext == End()
+m_ListeningSocketState == SSTATE_LISTENING && m_ConnectionType == CT_SERVER
+m_ListeningSocketState == SSTATE_UNINITIALIZED && m_ConnectionType == CT_SERVER
+m_ListeningSocketState == SSTATE_UNINITIALIZED && m_SocketProtocol == SP_INDETERMINATE && m_ConnectionType == CT_INDETERMINATE
+m_Memory.IsIdxValid( Index )
+m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + nMaxSize - 1 )
+m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
+m_MessageDataInfosMutex.AssertOwnedByCurrentThread()
+m_NumElements == 0
+m_Pipes[int].m_nVersion == nVersion
+m_Root == InvalidIndex()
+m_fnChangeCallbacks.Count() == 0
+m_iDataType == TYPE_NONE
+m_nArgv0Size != 0
+m_pCurrentOutgoingMessage->m_nMessageLength > 0
+m_pOwner && m_CompletionFunc
+m_pOwner && m_Func
+m_pParent == this
+m_pParent->m_fnCompletionCallback
+maxLen > 0
+maxLen >= sizeof( *pDest )
+maxlen >= 1
+mffff.
+nArgvBufferSize <= COMMAND_MAX_LENGTH
+nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
+nChars == V_strlen(m_pString)
+nFlags >= 0 && nFlags <= UINT8_MAX
+nMaxBytesToReceive > 0
+nMaxLen > 0
+nMessageID == VCONMSG_TOVCON_PIPE_CREATE
+nMessageSize > 0
+nPipe == m_PipeMap.Count()
+nSize != 0
+nVersion
+numAllowedConnections > 0 && numAllowedConnections <= MAX_SERVER_CONNECTIONS
+operator delete(void*)
+operator delete[](void*)
+operator new(unsigned long)
+operator new[](unsigned long)
+p   00 
+pCallback == NULL
+pHVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBp
+pName
+pSchemaSystem != NULL
+pTarget == ( pData + nDataLength )
+p`0P `
+pipe.m_bOpen
+radr://5614542
+recv_return_value > 0
+s_nConnectionCount > 0
+s_nDLLIdentifier < 0
+s_nDLLIdentifier >= 0
+s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
+s_nResourceFCRegisteredCount > 0
+send_return_value > 0
+short,HcS(H
+size < 1024 * 1024
+size >= 0
+socketProtocol == SP_TCP
+static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+std::terminate()
+strnlen
+t$H9[8u
+t3ffff.
+tMff.
+typeinfo for CThread
+typeinfo for std::bad_alloc
+uGetResourceManifest
+uint16 CVConBasePipeHost::PipeVersion(VConsolePipe_t)
+unsigned char[A\A]A^A_]
+unsigned short&H9[8tUH
+uwHcE
+vc_exit %short
+vcon_pipe_dump
+virtual CVConBasePipeHost::~CVConBasePipeHost()
+virtual InitReturnVal_t CVConComm::Init()
+virtual bool CVConComm::RegisterMessageId(uint32, uint16, IVConCommDataReceived *)
+virtual int CConCommandMemberAccessor<CVConComm>::CommandCompletionCallback(const char *, CUtlVector<CUtlString> &) [T = CVConComm]
+virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
+virtual void CConCommandMemberAccessor<CVConComm>::CommandCallback(const CCommandContext &, const CCommand &) [T = CVConComm]
+virtual void CVConsoleLoggingListener::Log(const LoggingContext_t *, const tchar *)
+virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
+virtual void ConCommandBase::Create(const char *, const char *, int64)
+virtual void ConVar::ChangeStringValue(const char *, float)
+virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
+virtual void ConVar::InternalSetFloatValue(float)
+virtual void ConVar::InternalSetIntValue(int)
+virtual void ConVar::InternalSetValue(const char *)
+void CKeyValues_Data::Internal_ClearData()
+void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
+void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
+void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void CSocketConnection::ResetEndpoint(int)
+void CTSQueue<VConCommMessage_t *, false>::Purge() [T = VConCommMessage_t *, bTestOptimizer = false]
+void CUtlBuffer::AddNullTermination()
+void CUtlBuffer::Put(const void *, int)
+void CUtlBuffer::VaPrintf(const char *, __va_list_tag *)
+void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlString::SetDirect(const char *, int)
+void CVConBasePipeHost::ClosePipe(VConsolePipe_t, const char *)
+void CVConBasePipeHost::OpenPipe(VConsolePipe_t, const char *)
+void CVConBasePipeHost::UnregisterPipeHelper(VConsolePipe_t, CVConPipeHelper *)
+void CVConComm::DistributeIncomingMessage(VConCommMessage_t *)
+void CallPostConnect()
+void CloseSocket(SocketHandle_t *)
+void ConVar_Register(int64, IConCommandBaseAccessor *)
+void ConVar_Unregister()
+void ConnectInterfaces(CreateInterfaceFn *, int)
+void DisconnectInterfaces()
+void DisconnectTier2Libraries()
+void ReconnectInterface(CreateInterfaceFn, const char *, void **)
+void RegisterInterface(CreateInterfaceFn, const char *, void **)
+void _V_FileBase(const char *, char *, int)
+void _V_strncpy(char *, const char *, int)
+vstdlib
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+{}()':
+}HA;EP}

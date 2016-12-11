@@ -1,0 +1,90 @@
+ AssertMsg_ConditionFailed
+ CMemAllocSystemInitialize
+ CThreadEvent::CThreadEvent(bool)
+ CThreadEvent::Set()
+ CThreadRWLock::LockForWrite()
+ CThreadRWLock::UnlockWrite()
+ CThreadRWLock::WaitForRead()
+ CThreadSyncObject::~CThreadSyncObject()
+ CommandLine
+ DevMsg(char const*, ...)
+ EarlyInit_Tier0
+ KeyValuesSystem
+ LOG_GENERAL
+ LoggingSystem_IsChannelEnabled
+ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+ LoggingSystem_RegisterLoggingChannel
+ Msg
+ Plat_ExitProcess
+ Plat_GetModuleFilename
+ Plat_GetModuleProcAddress
+ Plat_GetOSType
+ Plat_IsHighDPI
+ Plat_IsInDebugSession
+ Plat_LoadModuleRaw
+ Plat_MessageBox
+ Plat_ShouldCollectMiniDumpsForFatalErrors
+ SteamAPI_GetHSteamPipe
+ SteamAPI_GetHSteamUser
+ SteamInternal_CreateInterface
+ T BinaryProperties_GetValue
+ T CreateInterface
+ T GetResourceManifestCount
+ T GetResourceManifests
+ T InstallSchemaBindings
+ T operator delete(void*)
+ T operator delete[](void*)
+ T operator new(unsigned long)
+ T operator new[](unsigned long)
+ T strnlen
+ Warning
+ _DefaultRuneLocale
+ _Unwind_Resume
+ __bzero
+ __cxa_atexit
+ __cxa_begin_catch
+ __cxa_call_unexpected
+ __cxa_pure_virtual
+ __gxx_personality_v0
+ __maskrune
+ __stack_chk_fail
+ __stack_chk_guard
+ atof
+ atoi
+ dyld_stub_binder
+ free
+ g_pMemAlloc
+ iconv
+ iconv_close
+ iconv_open
+ malloc
+ memchr
+ memcpy
+ memmove
+ printf
+ pthread_mutex_destroy
+ pthread_mutex_init
+ pthread_mutex_lock
+ pthread_mutex_unlock
+ pthread_mutexattr_init
+ pthread_mutexattr_settype
+ raise
+ sscanf
+ std::terminate()
+ strchr
+ strcmp
+ strlen
+ strncat
+ strrchr
+ strstr
+ swprintf
+ typeinfo for std::bad_alloc
+ vsnprintf
+ vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__si_class_type_info
+ vtable for __cxxabiv1::__vmi_class_type_info
+ wcschr
+ wcscmp
+ wcscpy
+ wcslen
+ wcsncpy

@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/weekendtourney_status.vcss_c" />
+	</styles>
+
+	<WeekendTourneyStatusPanel>
+		<Panel id="NotInTourney">
+			<Label id="NoTournamentScheduledLabel" text="#WeekendTourneyStatus_NoTournamentScheduled" html="true"/>
+			<Label id="StartingLaterLabel" text="#WeekendTourneyStatus_StartingLater" html="true"/>
+			<Label id="StartingSoonLabel" text="#WeekendTourneyStatus_StartingSoon" html="true"/>
+			<Label id="NowOpenLabel" text="#WeekendTourneyStatus_Open" html="true"/>
+			<Label id="TooLateLabel" text="#WeekendTourneyStatus_TooLate" html="true"/>
+			<!--
+			<Button class="BlueButton" onactivate="DOTAPlayPanelCloseButtonClicked(true); DOTAShowWeekendTourneyPage();" >
+				<Label text="Learn More" />
+			</Button>
+			-->
+		</Panel>
+		<Panel id="InTourney">
+		</Panel>
+	</WeekendTourneyStatusPanel>
+</root>

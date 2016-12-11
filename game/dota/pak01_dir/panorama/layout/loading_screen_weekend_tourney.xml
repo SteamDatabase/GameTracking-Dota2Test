@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/loading_screen.vcss_c" />
+		<include src="s2r://panorama/styles/loading_screen_weekend_tourney.vcss_c" />
+	</styles>
+
+	<DOTALoadingScreenWeekendTourney>
+		<TournamentBracket id="Bracket" class="BattleCupBracket HideStateSummary"/>
+	</DOTALoadingScreenWeekendTourney>
+</root>

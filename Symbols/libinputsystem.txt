@@ -1,0 +1,96 @@
+ AssertMsg_ConditionFailed
+ CMemAllocSystemInitialize
+ CThreadSyncObject::~CThreadSyncObject()
+ CVProfNode::EnterScope()
+ CVProfNode::ExitScope()
+ CVProfNode::GetSubNode(char const*, int, char const*, int)
+ CommandLine
+ ConMsg(char const*, ...)
+ DevMsg(char const*, ...)
+ EarlyInit_Tier0
+ KeyValuesSystem
+ LOG_GENERAL
+ LoggingSystem_IsChannelEnabled
+ LoggingSystem_Log
+ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+ LoggingSystem_RegisterLoggingChannel
+ Msg
+ Plat_ExitProcess
+ Plat_GetDefaultMonitorIndex
+ Plat_GetDesktopResolution
+ Plat_GetEnv
+ Plat_GetModuleFilename
+ Plat_GetModuleProcAddress
+ Plat_GetOSType
+ Plat_GetWindowClientSize
+ Plat_GetWindowMonitorIndex
+ Plat_IsHighDPI
+ Plat_IsInDebugSession
+ Plat_LoadModuleRaw
+ Plat_LoadSDL
+ Plat_MSTime
+ Plat_MilliSecTickDiff
+ Plat_OsSpecificHandleToPlatWindow
+ Plat_RelativeTicks
+ Plat_RequireSDL
+ Plat_ScreenToWindowCoords
+ Plat_SetupFPUControlWord
+ Plat_ShouldCollectMiniDumpsForFatalErrors
+ Plat_WindowToOsSpecificHandle
+ Plat_WindowToScreenCoords
+ RegisterStringToken
+ T BinaryProperties_GetValue
+ T CreateInterface
+ T GetResourceManifestCount
+ T GetResourceManifests
+ T InstallSchemaBindings
+ T operator delete(void*)
+ T operator delete[](void*)
+ T operator new(unsigned long)
+ T operator new[](unsigned long)
+ T strnlen
+ ThreadGetCurrentId
+ Warning
+ _DefaultRuneLocale
+ _Unwind_Resume
+ __bzero
+ __cxa_atexit
+ __cxa_begin_catch
+ __cxa_call_unexpected
+ __cxa_pure_virtual
+ __error
+ __gxx_personality_v0
+ __maskrune
+ __stack_chk_fail
+ __stack_chk_guard
+ __tolower
+ atof
+ atoi
+ dlclose
+ dyld_stub_binder
+ g_VProfCurrentProfile
+ g_pMemAlloc
+ memchr
+ memcpy
+ memmove
+ memset
+ memset_pattern16
+ pow
+ printf
+ pthread_mutex_destroy
+ raise
+ sscanf
+ std::terminate()
+ strchr
+ strcmp
+ strlen
+ strncat
+ strtod
+ strtol
+ typeinfo for std::bad_alloc
+ vsnprintf
+ vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__si_class_type_info
+ vtable for __cxxabiv1::__vmi_class_type_info
+ wcslen
+ wcstol

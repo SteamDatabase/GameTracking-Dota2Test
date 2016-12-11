@@ -1,0 +1,138 @@
+ AssertMsg_ConditionFailed
+ CMemAllocSystemInitialize
+ CThreadEvent::CThreadEvent(bool)
+ CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
+ CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
+ CThreadRWLock_FastRead::CThreadRWLock_FastRead()
+ CThreadSemaphore::~CThreadSemaphore()
+ CThreadSpinRWLock::LockForRead()
+ CThreadSpinRWLock::SpinLockForWrite(unsigned long long)
+ CThreadSpinRWLock::UnlockRead()
+ CThreadSpinRWLock::UnlockWrite()
+ CThreadSyncObject::~CThreadSyncObject()
+ CVProfNode::EnterScope()
+ CVProfNode::ExitScope()
+ CVProfNode::GetSubNode(char const*, int, char const*, int)
+ CommandLine
+ DevMsg
+ DevMsg(char const*, ...)
+ DevWarning(char const*, ...)
+ EarlyInit_Tier0
+ GetCPUInformation
+ IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
+ IStack_Annotation::~IStack_Annotation()
+ KeyValuesSystem
+ LOG_GENERAL
+ LoggingSystem_IsChannelEnabled
+ LoggingSystem_Log
+ LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
+ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+ LoggingSystem_RegisterLoggingChannel
+ Plat_ExitProcess
+ Plat_FloatTime
+ Plat_GetCPUFrequency
+ Plat_GetClockStart
+ Plat_GetModuleFilename
+ Plat_GetModuleProcAddress
+ Plat_GetMonitorResolution
+ Plat_GetOSType
+ Plat_GlobalMemoryStatus
+ Plat_IsHighDPI
+ Plat_IsInDebugSession
+ Plat_IsRunningOnCustomerMachine
+ Plat_LoadModuleRaw
+ Plat_OsSpecificHandleToPlatWindow
+ Plat_ReconfigureWindow
+ Plat_RelativeTicks
+ Plat_ShouldCollectMiniDumpsForFatalErrors
+ Plat_VirtualFree
+ Plat_WindowToOsSpecificHandle
+ SeriousWarning
+ T BinaryProperties_GetValue
+ T CreateInterface
+ T GetResourceManifestCount
+ T GetResourceManifests
+ T InstallSchemaBindings
+ T operator delete(void*)
+ T operator delete[](void*)
+ T operator new(unsigned long)
+ T operator new[](unsigned long)
+ T strnlen
+ ThreadGetCurrentId
+ ThreadInMainThread
+ ThreadInterlockedExchange64
+ ThreadYield
+ Warning
+ _DefaultRuneLocale
+ _Unwind_Resume
+ __bzero
+ __cxa_atexit
+ __cxa_begin_catch
+ __cxa_call_unexpected
+ __cxa_guard_abort
+ __cxa_guard_acquire
+ __cxa_guard_release
+ __cxa_pure_virtual
+ __error
+ __gxx_personality_v0
+ __maskrune
+ __memcpy_chk
+ __sprintf_chk
+ __stack_chk_fail
+ __stack_chk_guard
+ __stderrp
+ __tolower
+ abort
+ atof
+ atoi
+ dyld_stub_binder
+ exit
+ floor
+ floorf
+ fprintf
+ fputc
+ fread
+ free
+ g_VProfCurrentProfile
+ g_pMemAlloc
+ g_pThreadPool
+ getenv
+ logf
+ longjmp
+ malloc
+ memchr
+ memcmp
+ memcpy
+ memmove
+ memset
+ memset_pattern16
+ pow
+ printf
+ pthread_mutex_destroy
+ pthread_mutex_init
+ pthread_mutex_lock
+ pthread_mutex_unlock
+ pthread_mutexattr_init
+ pthread_mutexattr_settype
+ qsort
+ raise
+ setjmp
+ sscanf
+ std::terminate()
+ strchr
+ strcmp
+ strlen
+ strncat
+ strstr
+ strtod
+ strtol
+ strtoul
+ typeinfo for IStack_Annotation
+ typeinfo for std::bad_alloc
+ vsnprintf
+ vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__si_class_type_info
+ vtable for __cxxabiv1::__vmi_class_type_info
+ wcslen
+ wcstof
+ wcstol

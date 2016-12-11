@@ -1,0 +1,165 @@
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(801): Error! Trying to load material "%s" without any params!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1081): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1091): Error masking unused parts for "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1240): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1317): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4393): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4527): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4758): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4792): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4831): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4935): Error opening file "%s"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5398): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5399): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(80): Don't call VfxInit() more than once!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(81): Don't call VfxInit() more than once!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(90): g_pFullFileSystem must be set up before calling VfxInit!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(91): g_pFullFileSystem must be set up before calling VfxInit!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/materialsystem2/release/osx64/bitmapfontschema_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/materialsystem2/release/osx64/colorcorrectionparams_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/materialsystem2/release/osx64/material_resource_data_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/imageformat.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/texturepacker.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/common/vfx/vfx_common.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/common/vfx/vfx_param.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/bitmapfont.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/fontamalgam.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/fontmanager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/fonttexturecache.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/osxfont.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(106): ERROR! Can't load vfx_dx dll, dynamic shader compile unavailable!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1296): DxSupportLevel %d not supported!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1618): Dynamic Combos should be assumed to be unique for dynamic shader compile! %d != %d
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1652): Dynamic shader compile failed for %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1675): Dynamic shader compile failed for %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1906): Failed call to FindOrLoadStaticComboData()!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2035): Too many passes for caller! Ignoring layer %d pass %d
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2115): All bad! The error material failed in dynamic shader compile!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2370): Find a graphics programmer! Trying to bind a "%s" shader that doesn't exist! for %s
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2733): Find a graphics programmer! Trying to bind a "%s" shader that doesn't exist! for %s
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(400): Material "%s" is requesting a bad mode "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(443): Error! Material "%s" doesn't have any valid layers to get the CVsInputSignatureVector from!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(467): Error! Material "%s" doesn't have a CVsInputSignatureVector!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(796): Error! Material "%s" is already loaded!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(826): Cannot find shader entry in material "%s"! Using error.vfx!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(869): Error creating shader %s for material %s!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(874): Error creating shader %s and cannot load error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(914): Error creating fallback shader %s for %s for material %s! A fallback shader cannot fallback to a different shader!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(927): Error creating fallback shader %s for %s for material %s!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(931): Error creating fallback shader %s for %s and cannot load error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(961): Error creating shader %s for material %s!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(966): Error creating shader %s and cannot load error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(974): Error creating static combos for shader %s and error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_command_buffer.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1006): Could not bind constant buffer "%s" because the constant buffer handle was invalid in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1022): Error setting constant for REGISTER_FLOAT4 for "%s" in material "%s"! Talk to a programmer!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1084): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1089): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1305): Invalid data type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1345): Invalid data type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1430): Invalid data type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1438): Invalid variable source type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1533): Unsupported render state type in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1615): Unsupported render state in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1688): Unsupported sampler state type for "%s" in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1710): Unsupported sampler state type for "%s" in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(264): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(269): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(324): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(329): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(38): Error! Unknown static combo source %d!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(406): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(411): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(707): Unknown variable type for %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(747): Invalid data type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(787): Invalid data type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(794): Error evaluating expression for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(800): Invalid variable source type for render state variable %s in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(862): Unsupported render state type in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(874): Sampler index %d out of bounds for "%s" in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(943): Unsupported sampler state type for "%s" in material "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_type_manager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_type_manager.cpp(51): GetErrorMaterial() called before error material exists!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(127): ERROR! Empty shader mode string found! Use "Default" instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(139): ERROR! Shader mode "%s" has unsupported type "%s" specified gameinfo.gi!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2152): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2203): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2467): Error reading index!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(247): ERROR!!! Materials not released by other systems on shutdown! (See spew above)
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(252): ERROR!!! Shaders not freed on shutdown, likely due to unreleased materials! (See spew above)
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(266): GetErrorMaterial() called when m_pMaterialTypeManager == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(591): ERROR!!! Shaders not freed before shader reload! (See spew above)
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/postprocessingsystem.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/textlayout/textlayout.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/utils/materialsystem2utils.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/colorcorrectionparams.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/materialsystem2/imaterial2.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/indexdata.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/irenderdevice.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/vertexdata.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/introspectedtypemanager.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/iresourcesystem.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcehandle.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcesystemhelpers.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/weakhandle.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/vertexformat.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemadatatraversal.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhash.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlntree.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlqueue.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstackmachine.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/introspectedtypemanager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcefile.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcestream.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/schemalib/schemadatatraversal.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/schemalib/schemaiterator.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/texturedictionary/texturedictionary.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/texturedictionary/texturedictionary.cpp(249): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/interface.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/lzmadecoder.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstackmachine.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/utlstreambuffer.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/compiletargetexpr.g
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(3001): Error! Ref count !=0 for static combo data cache entry!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6013): Error opening file %s
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6072): VCS %s Unserialize failed
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6086): VCS %s Unserialize hit EOF
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6220): Error opening file %s
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6227): Error calling SkipAndValidateVCSHeader() for %s
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_helpers.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(105): : Failed to create lexer from "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(113): : Failed to create token stream from "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(121): : Failed to create parser from "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(97): : Failed to create input stream from "%s"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_expression_parser.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_render_state.cpp

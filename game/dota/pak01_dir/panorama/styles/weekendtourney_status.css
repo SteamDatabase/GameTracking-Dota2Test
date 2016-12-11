@@ -1,0 +1,92 @@
+
+WeekendTourneyStatusPanel
+{
+	flow-children: down;
+	background-color: gradient( linear, 100% 0%, 100% 100%, from( #192229 ), to( #000000 ) );
+	padding-top: 12px;
+	padding-bottom: 9px;
+}
+
+/*
+#Title
+{
+	font-size: 20px;
+	font-weight: thin;
+	color: #666666;
+	letter-spacing: 2px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.StateNowOpen #Title, .StateInTourney #Title, .StateStartingSoon #Title
+{
+	color: white;
+	font-weight: bold;
+	margin-left: 8px;
+}
+*/
+
+#NoTournamentScheduledLabel,
+#StartingLaterLabel,
+#StartingSoonLabel,
+#NowOpenLabel,
+#TooLateLabel
+{
+	visibility: collapse;
+	width: 100%;
+	text-align: center;
+	color: #aaa;
+}
+
+.StateInTourney #NotInTourney
+{
+	visibility: collapse;
+}
+
+.StateNothingScheduledForThisDivision #NoTournamentScheduledLabel,
+.StateNothingScheduledForAnyDivision #NoTournamentScheduledLabel,
+.StartingLater #StartingLaterLabel,
+.StateStartingSoon #StartingSoonLabel,
+.StateNowOpen #NowOpenLabel,
+.StateTooLate #TooLateLabel,
+.StateInTourney #InTourney
+{
+	visibility: visible;
+}
+
+a
+{
+	text-decoration: underline;
+}
+
+a:hover
+{
+	color: white;
+}
+
+
+#NotInTourney
+{
+	flow-children: down;
+	width: 100%;
+	visibility: visible;
+}
+
+#InTourney
+{
+	flow-children: down;
+	width: 100%;
+	visibility: collapse;
+	visibility: collapse;
+}
+
+Button
+{
+	horizontal-align: center;
+}
+
+#TimeRemainingLabel
+{
+	horizontal-align: center;
+}

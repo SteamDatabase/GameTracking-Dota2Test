@@ -1,0 +1,64 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/dashboard_page_shared.vcss_c" />
+		<include src="s2r://panorama/styles/battle_pass/spring2016/comp_manila2016_pages.vcss_c" />
+	</styles>
+
+	<script>
+	</script>
+
+	<snippets>
+		<snippet name="PlayerCardTeam">
+			<Panel class="TeamContainer">
+				<Label class="TeamName" text="{s:team_name}"/>
+				<Panel class="PlayerContainers">
+					<Panel id="PlayerContainer0" class="PlayerContainer">
+						<Panel id="CardContainer" class="CardContainer"/> <!-- dynamically filled with the player card -->
+						<Panel class="CardCount"><Label text="x{i:card_count}"/></Panel>
+					</Panel>
+					<Panel id="PlayerContainer1" class="PlayerContainer">
+						<Panel id="CardContainer" class="CardContainer"/> <!-- dynamically filled with the player card -->
+						<Panel class="CardCount"><Label text="x{i:card_count}"/></Panel>
+					</Panel>
+					<Panel id="PlayerContainer2" class="PlayerContainer">
+						<Panel id="CardContainer" class="CardContainer"/> <!-- dynamically filled with the player card -->
+						<Panel class="CardCount"><Label text="x{i:card_count}"/></Panel>
+					</Panel>
+					<Panel id="PlayerContainer3" class="PlayerContainer">
+						<Panel id="CardContainer" class="CardContainer"/> <!-- dynamically filled with the player card -->
+						<Panel class="CardCount"><Label text="x{i:card_count}"/></Panel>
+					</Panel>
+					<Panel id="PlayerContainer4" class="PlayerContainer">
+						<Panel id="CardContainer" class="CardContainer"/> <!-- dynamically filled with the player card -->
+						<Panel class="CardCount"><Label text="x{i:card_count}"/></Panel>
+					</Panel>
+				</Panel>					
+			</Panel>
+		</snippet>
+	</snippets>
+
+
+	<DOTACompManila2016PlayerCardsPage class="DashboardPage" hittest="false">
+		<Panel id="CompendiumBody" class="CompendiumBody">
+			<Panel id="PlayerCardsHeader">
+				<Panel class="LeftRightFlow LeftAlign MiddleAlign">
+					<Button id="OpenPackButton" class="ButtonBevel" onactivate="DOTAOpenPlayerCardPack(14)"><Label text="#DOTA_PlayerCardsOpenPack"/></Button>
+					<Label id="PackCount" text="#DOTA_PlayerCardsPackCount"/>
+				</Panel>
+
+				<Panel class="LeftRightFlow RightAlign MiddleAlign">
+					<Label id="DustCount" text="#DOTA_PlayerCardsDustCount"/>
+					<Button id="BuyPackButton" class="ButtonBevel" onactivate="DOTABuyPlayerCardPack(14)"><Label text="#DOTA_PlayerCardsBuyPack"/></Button>
+				</Panel>
+			</Panel>
+			<Label id="FantasyLabel" text="#DOTA_PlayerCard_Fantasy" onactivate="DOTAShowCompManila2016FantasyPage( -1 )"/>
+
+			<!--Button class="PopupButton Red" onactivate="DOTADeleteAllPlayerCards(14)"><Label text="!!! Delete All Player Cards !!!"/></Button-->
+			
+			<Panel id="PlayerCardsBody">
+				<!-- dynamically filled with PlayerCardTeam snippets -->
+			</Panel>
+		</Panel>		
+	</DOTACompManila2016PlayerCardsPage>
+</root>
