@@ -38,9 +38,12 @@
 	"DOTA_Done"				"Done"
 	"DOTA_TryAgain"			"Try Again"
 	"DOTA_View_Details"		"View Details"
+	"DOTA_More_Details"		"More Details"
 	"DOTA_View_Details_Arrow"		"View Details >>"
 	"DOTA_Combine"			"Combine"
 	"DOTA_Claim"	"Claim"
+	"DOTA_Vote"	"Vote"
+	"DOTA_NowAvailable" "Now Available"
 
 	"DOTA_SortBy"						"Sort By"
 	"DOTA_SortOption_Relevance"			"Most Relevant"
@@ -200,6 +203,7 @@
 	"DOTA_TeamDisbandTeam"						"Disband Team"
 	"DOTA_TeamDisbandTeamTooltip"				"Team Roster must be empty to disband the team"
 	"DOTA_TeamInviteAPlayer"					"Type a friends name..."
+	"DOTA_TeamManagement_SelectLogo"			"Select a Logo"
 	"DOTA_TeamTransferAdmin_Confirm_Header"							"CHANGE TEAM ADMIN"
 	"DOTA_TeamTransferAdmin_Confirm_Message"						"Do you wish to make {s:player_name} the Team Administrator?  If you continue, you will no longer be able to manage this team."
 	"DOTA_TeamTransferAdmin_Success_Header"							"SUCCESS"
@@ -231,11 +235,13 @@
 	"DOTA_ProfileCard_SlotTab_Items"		"Armory"
 	"DOTA_ProfileCard_SlotTab_Heroes"		"Heroes"
 	"DOTA_ProfileCard_SlotTab_Emoticons"	"Emoticons"
+	"DOTA_ProfileCard_SlotTab_PlayerCards"	"Player Cards"
 
 	"DOTA_ProfileCard_Slot_Clear"			"Clear"
 
 	"DOTA_ProfileCard_NoTrophies"		"No trophies are available."
 	"DOTA_ProfileCard_NoItems"			"No items are available."
+	"DOTA_ProfileCard_NoPlayerCards"	"No player cards are available."
 
 	"DOTA_ProfileCard_HeroHover"				"Show on hover:"
 	"DOTA_ProfileCard_HeroOnly"					"Hero Only"
@@ -256,7 +262,7 @@
 	"DOTA_ProfileCard_CoinsBalance"	"Coins Balance"
 	"DOTA_ProfileCard_WageredCoinsWon"	"Wagered Coins Won"
 
-	"DOTA_ProfileCard_BattlePassLevel"	"The International 2016 Battle Level"
+	"DOTA_ProfileCard_BattlePassLevel"	"Fall 2016 Battle Level"
 	
 	"DOTA_BadgeLevel"	"{d:badge_level}"
 
@@ -273,6 +279,31 @@
 	"DOTA_Profile_Team_MMR"				"Team MMR"
 	"DOTA_Profile_Party_MMR"				"Party MMR"
 	"DOTA_Profile_VictoryCount"			"Victories"
+	
+	"DOTA_Profile_Previous_BattlePass_TI6" "The International 2016 Battle Pass Summary"
+	
+	"DOTA_Profile_BP_Rollup_Quest_Progress"  "Quest Progress"
+	"DOTA_Profile_BP_Rollup_Quest_Completed" "Quests Completed"
+	"DOTA_Profile_BP_Rollup_Quest_Stars" "Stars"
+	
+	"DOTA_Profile_BP_Rollup_Tips_Given" "Total Tips Given"
+	"DOTA_Profile_BP_Rollup_Tips_Received" "Total Tips Received"
+
+	"DOTA_Profile_BP_Rollup_Battle_Cup_Wins"  "Battle Cup Wins"
+	"DOTA_Profile_BP_Rollup_Battle_Cup_Score"   "Battle Cup Score"
+	"DOTA_Profile_BP_Rollup_Achievements_Completed"   "Achievements Completed"
+	"DOTA_Profile_BP_Rollup_Achievements_Points"   "Achievements Points Earned"
+	"DOTA_Profile_BP_Rollup_Predictions_Correct"  "Predictions Correct"
+	"DOTA_Profile_BP_Rollup_Predictions_Earned"  "Predictions Points Earned"
+	
+	"DOTA_Profile_BP_Rollup_Bracket_Correct" "Correctly Predicted Brackets"
+	"DOTA_Profile_BP_Rollup_Bracket_Points" "Bracket Points Earned"
+	
+	"DOTA_Profile_BP_Rollup_Fantasy_Score" "Fantasy Challenge Score"
+	"DOTA_Profile_BP_Rollup_Fantasy_Percentile" "Fantasy Challenge Percentile"
+
+	"DOTA_Profile_BP_Rollup_Fantasy_Card_Collection" "Player Card Collection"
+	
 
 	"DOTA_Profile_ProfilePage"		"Profile"
 	"DOTA_Profile_TrophyPage"		"Trophies"
@@ -423,6 +454,7 @@
 	"DOTA_RecentGame_Unavailable"		"Replay Unavailable"
 	"DOTA_RecentGame_MatchID"			"Match ID: #{s:match_id}"
 	"DOTA_RecentGame_Download_When_Ready" "Notify me when the Replay for this game becomes available"
+	"DOTA_RecentGame_Replay"			"Replay"
 
 	"DOTA_RecentGame_Watch_Error"			"Watch Replay Error"
 	"DOTA_RecentGame_Watch_NoMatchInfo"		"No Match Info"
@@ -465,6 +497,20 @@
 
 	"DOTA_LearnTabName_Tutorials"	"Tutorials"
 	"DOTA_LearnTabName_Items"		"Items"
+
+	"DOTA_Tutorial_Multiplayer_Match"   "Multiplayer Match"
+	"DOTA_Tutorial_Co-op_Match"   "Co-op Match"
+	"DOTA_Tutorial_Mechanics"   "Mechanics"
+	"DOTA_Tutorial_Mechanics_Desc"   "Learn the basics of Dota, from controlling your hero to using the item shop, and more. After this short tutorial you will have a general understanding of fundamentals of the game."
+	"DOTA_Tutorial_Strength_Desc"   "In this match you'll play as Dragon Knight, a melee strength hero. Strength heroes tend to have more health and health regeneration than heroes of other classes, making them more resilient to both physical attacks and spells. These heroes gain bonus attack damage for each additional point in Strength."
+	"DOTA_Tutorial_Agility_Desc"   "In this match you'll play as Sniper, a ranged agility hero. Agility heroes tend to have more armor and attack speed than heroes of other classes, making them perfect bearers of powerful attack damage items. These heroes gain bonus attack damage for each additional point in Agility."
+	"DOTA_Tutorial_Intelligence_Desc"   "In this match you'll play as Shadow Shaman, a ranged intelligence hero. Intelligence heroes tend to have more mana and mana regeneration than heroes of other classes, making them ideal for ability-focused roles. These heroes gain bonus attack damage for each additional point in Intelligence."
+	"DOTA_Tutorial_HoverText"   "Hover icon for description"
+	"DOTA_Tutorial_TopicsCovered"   "Topics Covered"
+	"DOTA_Tutorial_Mechanics_Bullets"  "- Purchasing Items from the Shop<br />- Camera and Movement Control<br />- Basic Combat<br />- Leveling-Up Abilities<br />- Ability Usage"
+	
+	"DOTA_Tutorial_Co-op_Desc"	"Now that you've got the basics of a few heroes, it's time to jump into a game with real teammates battling to destroy an enemy bot team's Ancient. Work together and communicate to drop those bots in the lanes and smash their Ancient to pieces."
+	"DOTA_Tutorial_Multiplayer_Desc"	"It's time. You're ready. Press the button to jump into a real multiplayer match and join your new teammates in facing off against five other players. Remember: everyone else is new at this, too. So just relax. You're doing fine."
 
 	"DOTA_NewPlayerQuestion_Title"				"WELCOME TO DOTA 2"
 	"DOTA_PlayerOriginQuestion_Question"       "To improve your game experience, please share your familiarity with Dota 2 and similar games:"
@@ -554,6 +600,10 @@
 	"DOTA_FindMatchTime"	"{s:find_match_time}"
 	"DOTA_Searching"		"Searching"
 	"DOTA_StartSoloBotMatch"	"Start Bot Match"
+	"DOTA_StartSoloBotMatchTutorial" "Start Solo Bot Match"
+	"DOTA_StartCoopBotMatchTutorial"    "Start Co-op Bot Match"
+	"DOTA_StartMultiplayerMatchTutorial"    "Start Multiplayer Match"
+	"DOTA_StartMechanicsTutorial"    "Start Mechanics Tutorial"
 
 	"DOTA_Create_Lobby"		"Create Lobby"
 	"DOTA_Join_Lobby"		"Join Lobby"
@@ -563,6 +613,7 @@
 	"DOTA_FindMatchStatus"	"{s:searching_matchtype}  /  {s:searching_gamemodes}  /  {s:searching_region}"
 	"DOTA_FindMatchStatusWeekendTourney"	"{s:searching_tourney_division} Division  /  {s:searching_tourney_round}  /  {s:searching_region}"
 	"WeekendTourney_DivisionAndTier"	"{s:tournament_division} Division - Tier {d:tournament_tier}"
+	"WeekendTourney_TournamentID"		"Tournament ID: {d:r:tournament_id}"
 
 	"DOTA_FindGameModesMany"	"Game Modes: "
 	"DOTA_FindRegionsMany"	"Regions: "
@@ -716,7 +767,7 @@
 	"npc_dota_hero_faceless_void_hype"			"Time is everything to Faceless Void. He speeds time to dash between locations, manipulates it to dodge attacks, stops it in a large area to devastate his foes, and given enough of it to gather resources, he can make himself unbelievably powerful."
 	"npc_dota_hero_gyrocopter_hype"			"With his arsenal of firepower at the ready, Gyrocopter soars into battle. Blasting all nearby enemies with shots from his cannon or hammering them with a barrage of rockets, if he is able to gather his full strength, he demolishes foes with ease."
 	"npc_dota_hero_huskar_hype"			"As his health lowers, Huskar's ability to slay enemies grows considerably. Able to instantly remove a portion of both his and an enemy's health with his ultimate, when near death he is able to throw his burning spears with devastating speed."
-	"npc_dota_hero_invoker_hype"			"With an intricate arsenal of spells at his disposal, Invoker can adapt to any battle situation. Each configuration of his three spell components yields of one of eleven spells, meaning he's never without a way to destroy or escape his enemies."
+	"npc_dota_hero_invoker_hype"			"With an intricate arsenal of spells at his disposal, Invoker can adapt to any battle situation. Each configuration of his three spell components yields of one of ten spells, meaning he's never without a way to destroy or escape his enemies."
 	"npc_dota_hero_wisp_hype"			"Io has a talent for making allies more effective. A powerful companion, the wisp's tether speeds allies and stops enemies. Capable of linking to and teleporting across the battlefield with an ally, Io can make a dangerous ally even deadlier."
 	"npc_dota_hero_jakiro_hype"			"Jakiro is their own best friend. Not content to merely punish enemies with fire, the twins freeze them in place to force them to stand there and burn. With foes aflame, they turn to inflicting massive damage on enemy structures with their liquid fire."
 	"npc_dota_hero_juggernaut_hype"			"In a flurry of slashes, Juggernaut cuts down his foes. Sprinting and spinning into battle with reckless abandon, and nearly invincible once he is able to begin his assault, stopping Juggernaut can often be just as difficult as surviving him."
@@ -778,6 +829,7 @@
 	"npc_dota_hero_treant_hype"			"Treant Protector is ever the benevolent ally, sprouting regenerating armor for his cohorts and their fortifications alike. Emerging unseen from among the trees, he binds foes with overgrowth as he leeches health from enemies and into nearby allies."
 	"npc_dota_hero_troll_warlord_hype"			"Instantly able to swap between ranged and melee attacks, Troll Warlord is a formidable force at any distance. Axes in hand, he can strike in a storm of spinning blades. He takes down enemies with increasingly swift attacks, and can speed his allies' assaults wherever they are."
 	"npc_dota_hero_tusk_hype"			"Tusk is always eager to start a fight. Able to instantly corner an enemy with a wall of ice shards, he gathers with his allies and rolls into enemies inside of a massive snowball, bringing him in range to land his signature knockout punch."
+	"npc_dota_hero_abyssal_underlord_hype"	"Conjure waves of abyssal flame to immolate enemies held paralyzed in your spiteful grip. Feast upon the carnage of battle, gaining strength as foes perish around you, their attacks diminished by your very presence. Tear a rift in reality to teleport yourself and your teammates across the map, delivering bloody retribution to any who would defy the will of Vrogros the Underlord."
 	"npc_dota_hero_undying_hype"			"Shambling into battle, Undying forces enemies to decide whether to flee his wrath or be torn apart by it. He drains strength from his foes, and summons a horde of clawing undead. When he finally becomes a hulking flesh golem, his enemies may already be overwhelmed."
 	"npc_dota_hero_ursa_hype"			"With each swipe of his claws, Ursa increases his target's vulnerability to his next attack. Capable of briefly increasing how swiftly he can strike, and able to slow down nearby prey, he quickly tears apart his enemies."
 	"npc_dota_hero_vengefulspirit_hype"			"Vengeful Spirit's presence is felt at all times, whether she is alive or dead. Able to swap positions with any nearby hero, stun enemies, and reduce her killer's effectiveness if she falls, she constantly brings confusion and chaos to her foes."
@@ -798,6 +850,7 @@
 	"DOTA_AbilityTooltip_CastType" "ABILITY: {s:casttype}"
 	"DOTA_AbilityTooltip_DamageType" "DAMAGE TYPE: {s:damagetype}"
 	"DOTA_AbilityTooltip_SpellImmunityType" "SPELL IMMUNITY: {s:spellimmunity}"
+	"DOTA_AbilityTooltip_DispelType" "DISPELLABLE: {s:dispeltype}"
 	"DOTA_AbilityTooltip_Description" "{s:description}"
 	"DOTA_AbilityTooltip_ScepterDescription" "{s:scepterdescription}"
 	"DOTA_AbilityTooltip_ExtraDescription" "{s:extradescription}"
@@ -879,11 +932,18 @@
 	"dota_suggest_invite_format_lobby"					"Please invite {s:invite_persona} to the lobby."
 	"dota_suggest_invite_format_lobby_leader"			"Please invite {s:invite_persona} to the lobby. ( <a href=\"event:DOTAInviteToLobby({s:invite_persona_steamid})\" class=\"InviteButton\">Send Invite</a> )"
 
-	"DOTA_ChatMessage_Default"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">({s:target})</span> <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_Default"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">[{s:target}]</span> <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_Emote"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">[{s:target}]</span> <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_Default_NoTarget"		"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_Emote_NoTarget"		"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_WhisperTo"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">To <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_WhisperFrom"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">From <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_System"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">({s:target})</span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_SystemTerse"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_Hud"					"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{s:hero_icon}<span class=\"ChatTarget\">[{s:target}] <span class=\"ChatPersona\"><span class=\"{s:player_color_class}\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span></span></span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_HudAll"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{s:hero_icon}<span class=\"ChatTarget\"> <span class=\"ChatPersona\"><span class=\"{s:player_color_class}\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span></span></span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_HudTerse"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_HudEmote"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
 
 	"DOTA_ChatTarget_Format_Default"		"{s:target}"
 	"DOTA_ChatTarget_Prompt_Default"		"To ({s:target}):"
@@ -893,8 +953,8 @@
 	"DOTA_ChatTarget_Format_CustomGame"		"{g:dota_custom_game_name:custom_game_id}"
 	"DOTA_ChatTarget_Prompt_PostGame"		"To (Post Game):"
 	"DOTA_ChatTarget_Format_PostGame"		"Post Game"
-	"DOTA_ChatTarget_Prompt_BattleCup"		"To Battle Cup ({g:dota_battlecup_division:division}):"
-	"DOTA_ChatTarget_Format_BattleCup"		"Battle Cup ({g:dota_battlecup_division:division})"
+	"DOTA_ChatTarget_Prompt_BattleCup"		"To Battle Cup ({g:dota_battlecup_division:division} {i:skill_level}):"
+	"DOTA_ChatTarget_Format_BattleCup"		"Battle Cup ({g:dota_battlecup_division:division} {i:skill_level})"
 
 	"DOTA_ChatTarget_Party"			"Party"
 	"DOTA_ChatTarget_Lobby"			"Lobby"
@@ -902,12 +962,14 @@
 	"DOTA_ChatTarget_Guild"			"Guild"
 	"DOTA_ChatTarget_Fantasy"		"Fantasy"
 	"DOTA_ChatTarget_Console"		"Console"
+	"DOTA_ChatTarget_HLTVSpectator"	"Live Game"
 	"DOTA_ChatTarget_Whisper"		"Whisper"
 	"DOTA_ChatTarget_Invalid"		"No Channel"
 	"DOTA_ChatTarget_GameAll"		"All"
 	"DOTA_ChatTarget_GameAllies"	"Allies"
 	"DOTA_ChatTarget_GameCoaching"	"Coaching"
 	"DOTA_ChatTarget_GameSpectator"	"Spectator"
+	"DOTA_ChatTarget_GameEvents"	"Game"
 	"DOTA_ChatTarget_PostGame"		"Post Game"
 
 	"DOTA_ChatTargetMenu_Title"	"{s:target}"
@@ -1061,6 +1123,9 @@
 	"DOTA_ShareLobby_Available"			"Join Lobby"
 	"DOTA_ShareLobby_Available_Tooltip"	"Click here to join the lobby."	
 
+	"DOTA_Chat_SuggestHero"			"suggests picking <a class=\"SuggestedHero\" href=\"event:DOTASuggestedHeroActivated( {d:hero_id} )\">[{g:dota_hero_name:hero_id}]</a>."
+	"DOTA_Chat_SuggestHeroRole"		"suggests picking a hero with <a class=\"SuggestedHeroRole\" href=\"event:DOTASuggestedHeroRoleActivated( {s:hero_role} )\">[{s:localized_hero_role}]</a>."
+
 	"DOTA_ChatHelp_Targets"			"Targets"
 	"DOTA_ChatHelp_Commands"		"Commands"
 	"DOTA_ChatHelp_NameFormat"		"{s:command_name}:"
@@ -1149,6 +1214,7 @@
 	"DOTA_PlayerContextMenu_Trade"					"Invite to Trade"
 	"DOTA_PlayerContextMenu_Ignore"					"Ignore User"
 	"DOTA_PlayerContextMenu_Unignore"				"Unignore User"
+	"DOTA_PlayerContextMenu_IgnoreSpam"				"Ignore User and Report Spam"
 
 	"DOTA_FeaturedHero_UnableToLoad"				"Unable to load featured heroes."
 	"DOTA_FeaturedHero_ViewGrid"					"View Grid"
@@ -1181,7 +1247,7 @@
 
 	"DOTA_HeroSelector_SelectHero_Label"						"Pick"
 
-	"DOTA_HeroSelector_ClearFilters"							"Clear Filters"
+	"DOTA_HeroSelector_ClearFilters_Button"						"Clear"
 
 	"DOTA_OwnedItemSet_Selector_Title"							"Owned"
 	"DOTA_EquippedItemSet_Selector_Title"						"Equipped"
@@ -1238,13 +1304,70 @@
 	"DOTA_Lobby_Settings_Enable_Cheats"			"ENABLE CHEATS"
 	"DOTA_Lobby_Settings_All_Chat"			"ALL CHAT"
 	"DOTA_Lobby_Settings_Fill_Bots"				"FILL EMPTY SLOTS WITH BOTS"
+
+	"DOTA_Lobby_Settings_Bot_Settings"				"BOT SETTINGS"
+	"DOTA_Lobby_Settings_Bots_Radiant"				"RADIANT BOTS"
+	"DOTA_Lobby_Settings_Bots_Radiant_Difficulty"	"RADIANT DIFFICULTY"
+	"DOTA_Lobby_Settings_Bots_Dire"					"DIRE BOTS"
+	"DOTA_Lobby_Settings_Bots_Dire_Difficulty"		"DIRE DIFFICULTY"
+	"DOTA_Lobby_Settings_Bots_Default"				"Default"
 	
 	"DOTA_Lobby_Settings_Bot_Difficulty"			"BOT DIFFICULTY"
+	"DOTA_Lobby_Settings_Bot_Difficulty_None"		"NONE"
 	"DOTA_Lobby_Settings_Bot_Difficulty_Passive"	"PASSIVE"
 	"DOTA_Lobby_Settings_Bot_Difficulty_Easy"		"EASY"
 	"DOTA_Lobby_Settings_Bot_Difficulty_Medium"		"MEDIUM"
 	"DOTA_Lobby_Settings_Bot_Difficulty_Hard"		"HARD"
 	"DOTA_Lobby_Settings_Bot_Difficulty_Unfair"		"UNFAIR"
+
+	"DOTA_Lobby_Settings_Bots_DevScript"			"Local Dev Script"
+	"DOTA_Lobby_Settings_Bots_Browse"				"Browse on Workshop..."
+
+	
+	"DOTA_Bot_Mode_1"				"Laning"
+	"DOTA_Bot_Mode_2"				"Attack"
+	"DOTA_Bot_Mode_3"				"Roam"
+	"DOTA_Bot_Mode_4"				"Retreat"
+	"DOTA_Bot_Mode_5"				"Secret Shop"
+	"DOTA_Bot_Mode_6"				"Side Shop"
+	"DOTA_Bot_Mode_7"				"Rune"
+	"DOTA_Bot_Mode_8"				"Push Top"
+	"DOTA_Bot_Mode_9"				"Push Mid"
+	"DOTA_Bot_Mode_10"				"Push Bot"
+	"DOTA_Bot_Mode_11"				"Defend Top"
+	"DOTA_Bot_Mode_12"				"Defend Mid"
+	"DOTA_Bot_Mode_13"				"Defend Bot"
+	"DOTA_Bot_Mode_14"				"Assemble"
+	"DOTA_Bot_Mode_15"				"Assemble w/Humans"
+	"DOTA_Bot_Mode_16"				"Team Roam"
+	"DOTA_Bot_Mode_17"				"Farm"
+	"DOTA_Bot_Mode_18"				"Defend Ally"
+	"DOTA_Bot_Mode_19"				"Evasive"
+	"DOTA_Bot_Mode_20"				"Roshan"
+	"DOTA_Bot_Mode_21"				"Item"
+	"DOTA_Bot_Mode_22"				"Ward"
+	"DOTA_Bot_Mode_23"				"Companion"
+	"DOTA_Bot_Mode_24"				"Boss"
+
+	"DOTA_Bot_Action_1"				"Idle"
+	"DOTA_Bot_Action_2"				"Moving"
+	"DOTA_Bot_Action_3"				"Attacking - {s:action_target}"
+	"DOTA_Bot_Action_4"				"Attack Moving"
+	"DOTA_Bot_Action_5"				"Using Ability - {s:action_target}"
+	"DOTA_Bot_Action_6"				"Getting Rune"
+	"DOTA_Bot_Action_7"				"Picking up Item"
+	"DOTA_Bot_Action_8"				"Dropping Item"
+
+	"DOTA_Bot_Top"					"Top"
+	"DOTA_Bot_Mid"					"Mid"
+	"DOTA_Bot_Bot"					"Bot"
+	
+	"DOTA_Bot_LaneDesires"	"Lane Desires"
+	"DOTA_Bot_LanePush"		"Push"
+	"DOTA_Bot_LaneDefend"	"Defend"
+	"DOTA_Bot_LaneFarm"		"Farm"
+
+	"DOTA_Bot_Power"		"Power"
 
 	"DOTA_Lobby_Settings_Version"				"VERSION"
 	"DOTA_Lobby_Settings_Version_Latest"		"LATEST"
@@ -1341,7 +1464,7 @@
 	"dota_popup_report_player_title"		"Report Player"
 	"dota_popup_commend_player_title"		"Commend Player"
 	"dota_popup_report_player_select_category"		"Select a Category"
-	"dota_popup_report_player_comment"		"More Information:"
+	"dota_popup_report_player_comment"		"More Information"
 	"dota_popup_report_player_comment_default"	"Leave a comment..."
 	
 	"dota_popup_reports_remaining"		"Reports Remaining: {d:reports_remaining}"
@@ -1372,7 +1495,7 @@
 	"LobbySetting_GameMode_Value"	"{s:lobbysetting_gamemode}"
 
 	"LobbySetting_Bots"				"Bots"
-	"LobbySetting_Bots_Value"		"{s:lobbysetting_bots}"
+	"LobbySetting_Bots_Value"		"{s:lobbysetting_bots_radiant} / {s:lobbysetting_bots_dire}"
 
 	"LobbySetting_Password"			"Password"
 	"LobbySetting_Password_Value"	"{s:lobbysetting_password}"
@@ -1416,6 +1539,7 @@
 	"DOTA_Frontpage_GameplayPatch_Title"			"New Gameplay Patch"
 	"DOTA_Frontpage_GameplayPatch_Button"			"View Patch Details"
 
+	"DOTA_Frontpage_ChangeLog_Title"				"Changes To Dota 2"
 
 	"DOTA_Custom_Game"		"Custom Game"
 	"DOTA_Custom_Game_About"		"About"
@@ -1423,6 +1547,7 @@
 	"DOTA_Custom_Game_Info"		"Info"
 	"DOTA_Custom_Game_View_Details"		"See Game Details"
 	"DOTA_Custom_Game_Author"			"by {g:dota_persona:author}"
+	"DOTA_Custom_Game_Author_ShortFilm"			"by {g:dota_persona:shortfilm_author}"
 	"DOTA_Custom_Game_Lobby_Count"		"{d:lobby_count} lobby"
 	"DOTA_Custom_Game_Lobby_Count_Plural"	"{d:lobby_count} lobbies"
 	"DOTA_Custom_Game_Friend_Lobbies_Alert"		"You have {d:friend_count} friend with an open game lobby."
@@ -1469,6 +1594,8 @@
 	"custom_game_file_error"				"Error accessing custom game files."
 	"DOTA_Custom_Game_Last_Updated" 		"Updated {t:r:t:last_updated}"
 	"DOTA_Custom_Game_Last_Updated_String"	"Updated {s:last_updated_date_string}"
+	"DOTA_Custom_Game_Not_Updated_Recently"	"Last Updated Before Dota 7.00"
+	"DOTA_Custom_Game_Not_Updated_RecentlyTT"	"Dota 7.00 has changed user interface and gameplay mechanics. Custom games uploaded prior to 7.00 may not work correctly."
 	
 	"DOTA_Custom_Game_Of_The_Day"			"Game of the Day"
 
@@ -1495,13 +1622,20 @@
 	"DOTA_Custom_Game_Vote_Box_Title"		"Workshop Vote"
 	"DOTA_Custom_Game_Vote_Box_Desc"		"Help undiscovered games gain a foothold."
 	"DOTA_Custom_Game_Vote_Start"			"Start voting"
-	"DOTA_Custom_Game_VoteThanks"			"Thanks for voting!"
+	"DOTA_Custom_Game_VoteThanks"			"Thank you for voting!"
 	"DOTA_Custom_Game_Vote_PrevLabel"		"Prev Game"
 	"DOTA_Custom_Game_Vote_NextLabel"		"Next Game"
 	"DOTA_Custom_Game_Vote_ControlsLabel"	"Workshop Vote"
 	"DOTA_Custom_Game_Vote_YesLabel"		"Yes, promote it!"
 	"DOTA_Custom_Game_Vote_NoLabel" 		"Nope, needs work."
 	"DOTA_Custom_Game_Vote_SkipLabel"		"Skip this game, I got nothing."
+
+	"DOTA_Short_Film_VotePrompt"			"Did you enjoy this short film?"
+	"DOTA_Short_Film_Vote_PrevLabel"		"Prev Video"
+	"DOTA_Short_Film_Vote_NextLabel"		"Next Video"
+	"DOTA_Short_Film_Vote_YesLabel"		"Yes, I like it!"
+	"DOTA_Short_Film_Vote_NoLabel" 		"Nope, not really."
+	"DOTA_Short_Film_Vote_SkipLabel"		"Skip this video, I got nothing."
 	
 	"DOTA_Custom_Game_Vote_Up"				"Good Game"
 	"DOTA_Custom_Game_Vote_Down"			"Needs Work"
@@ -1584,14 +1718,14 @@
 	"DOTA_TabName_ModsWorkshop" "Workshop"
 	"DOTA_TabName_ModsBrowse" "Browse"
 
+	"DOTA_TournamentBracket_TBD"					"TBD"
 	"DOTA_TournamentBracket_GSL1"					"GSL Match 1"
 	"DOTA_TournamentBracket_GSL2"					"GSL Match 2"
 	"DOTA_TournamentBracket_LosersMatchNew"			"Losers Match"
 	"DOTA_TournamentBracket_GrandFinals"			"Grand Finals"
-	"DOTA_TournamentBracket_UBFinals"				"Upper Bracket Finals"
-	"DOTA_TournamentBracket_UBSemiFinals"			"Upper Bracket Semifinals"
-	"DOTA_TournamentBracket_UBQuarterFinals"		"Upper Bracket Quarter Finals"
-	"DOTA_TournamentBracket_GrandFinals"			"Grand Finals"
+	"DOTA_TournamentBracket_UBFinals"				"UB Finals"
+	"DOTA_TournamentBracket_UBSemiFinals"			"UB Semifinals"
+	"DOTA_TournamentBracket_UBQuarterFinals"		"UB Quarter Finals"
 	"DOTA_TournamentBracket_LosersMatch"			"Elimination Match"
 	"DOTA_TournamentBracket_Qualification1"			"Qualification #1"
 	"DOTA_TournamentBracket_Qualification2"			"Qualification #2"
@@ -1615,13 +1749,14 @@
 	"DOTA_TournamentBracket_Match8"					"Match 8"
 	"DOTA_TournamentBracket_Match9"					"Match 9"
 	"DOTA_TournamentBracket_Match10"				"Match 10"
-	"DOTA_TournamentBracket_LBR1"					"Lower Bracket Round 1"
-	"DOTA_TournamentBracket_LBR2"					"Lower Bracket Round 2"
-	"DOTA_TournamentBracket_LBR3"					"Lower Bracket Round 3"
-	"DOTA_TournamentBracket_LBR4"					"Lower Bracket Round 4"
-	"DOTA_TournamentBracket_LBR5"					"Lower Bracket Round 5"
-	"DOTA_TournamentBracket_LBR6"					"Lower Bracket Round 6"
-	"DOTA_TournamentBracket_LBFinals"				"Lower Bracket Finals"
+	"DOTA_TournamentBracket_LBR1"					"LB Round 1"
+	"DOTA_TournamentBracket_LBR2"					"LB Round 2"
+	"DOTA_TournamentBracket_LBR3"					"LB Round 3"
+	"DOTA_TournamentBracket_LBR4"					"LB Round 4"
+	"DOTA_TournamentBracket_LBR5"					"LB Round 5"
+	"DOTA_TournamentBracket_LBR6"					"LB Round 6"
+	"DOTA_TournamentBracket_LBFinals"				"LB Finals"
+	"DOTA_TournamentBracket_GroupNumber"			"Group {i:group_num}"
 	"DOTA_TournamentBracket_MatchList_Timestamp"	"{T:l:timestamp}"
 	"DOTA_TournamentBracket_Sidebar_Watch"			"Watch"
 	"DOTA_TournamentBracket_MatchList_TBD"			"TBD"
@@ -1720,7 +1855,7 @@
 	"DOTAMVPVote_Place7"							"8th"
 	"DOTAMVPVote_Place8"							"9th"
 	"DOTAMVPVote_Place9"							"10th"
-					  
+	
 	"DOTAArcanaVote_Title"							"Vote For Hero Arcana"
 	"DOTAArcanaVote_TitleResults"					"Arcana Vote Results"
 	"DOTAArcanaVote_TooltipRoundName"				"{s:arcana_vote_round_name}"
@@ -1758,7 +1893,7 @@
 	"DOTAArcanaVote_NavigatedAwayOk"				"Submit Votes"
 	"DOTAArcanaVote_NavigatedAwayCancel"			"Clear Votes"
 	"DOTAArcanaVote_TimeUntilRoundEnds"				"Round Ends:"
-	"DOTAArcanaVote_WinnerTitle"					"Arcana Vote Winner"
+	"DOTAArcanaVote_WinnerTitle"					"Winner"
 	"DOTAArcanaVote_ViewResults"					"View Results"
 	"DOTAArcanaVote_NotStarted"						"Arcana Voting Not Started Yet"
 	"DOTAArcanaVote_ResultsHidden"					"Voting for Arcana is closed.\nResults will be revealed at The International."
@@ -1823,12 +1958,48 @@
 	"DOTA_BattlePassLog_RecycledItem"				"Recycled Item"
 	"DOTA_BattlePassLog_AchievementCompleted"		"Completed Achievement \"{s:achievement}\""
 	"DOTA_BattlePassLog_CorrectPrediction"			"Correctly Guessed Prediction"
+	"DOTA_BattlePassLog_WeekendTourneyPayout"		"Won Battle Cup Tournament"
+	"DOTA_BattlePassLog_FantasyChallengeWinnings"	"Fantasy Challenge Winnings: Top {i:percentile} percent"
+	"DOTA_BattlePassLog_BracketPrediction"			"Bracket Predictions: {i:correct_answers} correct answers"
+	
+	"DOTA_BattlePassRollUp_Title"					"Summary View"
+	"DOTA_BattlePassRollUp_SubTitle"				"May 16, 2016 - August 30, 2016"
+
+	"DOTA_Bracket_UpperBracketRound1"				"UB Round 1"
+	"DOTA_Bracket_UpperBracketRound2"				"UB Round 2"
+	"DOTA_Bracket_UpperBracketFinals"				"UB Finals"
+	"DOTA_Bracket_LowerBracketRound1"				"LB Round 1"
+	"DOTA_Bracket_LowerBracketRound2"				"LB Round 2"
+	"DOTA_Bracket_LowerBracketRound3"				"LB Round 3"
+	"DOTA_Bracket_LowerBracketRound4"				"LB Round 4"
+	"DOTA_Bracket_LowerBracketRound5"				"LB Round 5"
+	"DOTA_Bracket_LowerBracketFinals"				"LB Finals"
+	"DOTA_Bracket_GrandFinals"						"Grand Finals"
+	"DOTA_Bracket_Winner"							"Winner"
+	"DOTA_Bracket_LoserGameA"						"Loser A"
+	"DOTA_Bracket_LoserGameB"						"Loser B"
+	"DOTA_Bracket_LoserGameC"						"Loser C"
+	"DOTA_Bracket_LoserGameD"						"Loser D"
+	"DOTA_Bracket_LoserGameE"						"Loser E"
+	"DOTA_Bracket_LoserGameF"						"Loser F"
+	"DOTA_Bracket_LoserGameG"						"Loser G"
+
+	"DOTA_Bracket_Round1"							"First Round"
+	"DOTA_Bracket_Round2"							"Quarter Finals"
+	"DOTA_Bracket_Round3"							"Semi Finals"
+	"DOTA_Bracket_Finals"							"Finals"
+	"DOTA_Bracket_Winner"							"Winner"
+
+	"DOTA_Bracket_HelpTitle"						"Fall 2016 Bracket Predictions"
+	"DOTA_Bracket_HelpBody"							"Fill out your tournament bracket and earn increasing amounts of Battle Points for correct predictions in the Boston Major.<br><br>Review the matchups and click on the team you think is going to win each series.<br><br>Make your selections any time from {t:l:start_time} {t:T:start_time} until predictions close on {t:l:lock_time} {t:T:lock_time}."
 
 	"DOTA_WatchTabName_Live"						"Live"
 	"DOTA_WatchTabName_Featured"					"Featured"
 	"DOTA_WatchTabName_Replays"						"Replays"
 	"DOTA_WatchTabName_Tournaments"					"Tournaments"
 	"DOTA_WatchTabName_Downloads"					"Downloads"
+
+	"DOTA_Watch_Streams"	"Streams"
 
 	"dota_watchtab_unread_tooltip"					"{d:unread_count} unseen replays"
 	
@@ -1862,6 +2033,7 @@
 	"DOTA_WatchLive_WatchLabel"						"WATCH:"
 	"DOTA_WatchLive_ThirdParty"						"THIRD PARTY"
 	"DOTA_WatchLive_Fullscreen"						"FULLSCREEN"
+	"DOTA_WatchLive_BattleCupBracket"				"BATTLE CUP BRACKET"
 	"DOTA_WatchLive_Steam"							"STEAM"
 	"DOTA_WatchLive_InGame"							"IN-GAME"
 	"DOTA_WatchLive_Purchase"						"Ticket {g:dota_item_price:ticket_itemdef}"
@@ -1872,7 +2044,7 @@
 	"DOTA_WatchLive_Game_TeamInfo"					"<font color='#ffffff'>{s:team_1_name}</font> vs <font color='#ffffff'>{s:team_2_name}</font>"
 	"DOTA_WatchLive_Game_AverageMMR"				"{i:avg_mmr} avg MMR"
 	"DOTA_WatchLive_Game_TimeAndScore"				"{t:d:duration} / {i:radiant_score} - {i:dire_score}"
-	"DOTA_WatchLive_Game_Round"						""
+	"DOTA_WatchLive_Game_Tier"						"{s:weekend_tourney_division} - Tier {i:weekend_tourney_skill_level}"
 	"DOTA_WatchLive_Game_LoadMore"					"Load More"
 
 	"DOTA_WatchLive_Broadcaster0"					"Watch {g:dota_persona:b:broadcaster_account_id_0}"
@@ -1955,6 +2127,7 @@
 	"DOTA_WatchTournament_BestOf5"					"Best of 5"
 	"DOTA_WatchTournament_Website"					"View Tournament Website"
 	"DOTA_WatchTournament_Compendium"				"Compendium"
+	"DOTA_WatchTournament_BattlePassSummary"		"Battle Pass Summary"
 	"DOTA_WatchTournament_Page"						"Page {i:page_cur} / {i:page_max}"
 	"DOTA_WatchTournament_Spectators"				"{i:spectators} Watching"
 	"DOTA_WatchTournament_Recent"					"Recent Games"
@@ -2122,6 +2295,17 @@
 	"seasonal_ranked_mmr_locked_explain"		"Season Ranked Matchmaking:<br /><br />Available exclusively to owners of the <a href=\"javascript:GoToBattlePass();\">International Battle Pass</a>, each participating player has a separate Season MMR that lasts for the duration of the Battle Pass. At the end of the season, if you have 40 games played you'll be given the option to replace your Ranked MMR with whatever Season MMR you reach during the event."
 	"seasonal_all_draft_tooltip"				"Only the Ranked All Pick mode is available in Season Ranked Matchmaking."
 	"seasonal_ranked_leaderboards_button"		"View Friend/Global Leaderboards"
+
+	"seasonal_ranked_transfer_party"			"Transfer to Party Ranked MMR"
+	"seasonal_ranked_transfer_solo"				"Transfer to Solo Ranked MMR"
+	"seasonal_ranked_transfer_already"			"Already transferred."
+	"seasonal_ranked_transfer_not_enough_games"	"Can't transfer, under 40 games played."
+
+	"seasonal_ranked_transfer_confirmation_title"			"Transfer International Ranked MMR"
+	"seasonal_ranked_transfer_confirmation_solo"			"Are you sure you want to replace your Ranked Solo MMR with your International Solo MMR from this season? Once done this cannot be undone."
+	"seasonal_ranked_transfer_confirmation_party"			"Are you sure you want to replace your Ranked Party MMR with your International Ranked MMR from this season? Once done this cannot be undone."
+	"seasonal_ranked_transfer_confirmation_success"			"Successfully transferred your International Ranked MMR to your Ranked MMR."
+	"seasonal_ranked_transfer_confirmation_failure"			"Error when trying to transfer International Ranked MMR."
 
 	"competitive_team_identity_checkbox"	"Play as {s:team_identity_tag}"
 	"ranked_mmr_team_label"					"Team"
@@ -2567,8 +2751,8 @@
 	"dota_settings_statsdropdown"				"Stats Dropdown"
 	"dota_settings_spectatordropdown_sort"		"Change Sorting"
 	"dota_settings_spectatordropdown_close"		"Clear Category"
-	"dota_settings_spectatordropdown_kda"		"Kills/Deaths/Assists"
-	"dota_settings_spectatordropdown_lasthits_denies" "Last Hits/Denies"
+	"dota_settings_spectatordropdown_kda"		"Kills / Deaths / Assists"
+	"dota_settings_spectatordropdown_lasthits_denies" "Last Hits / Denies"
 	"dota_settings_spectatordropdown_level"		"Hero Level"
 	"dota_settings_spectatordropdown_xp_per_min" "XP Per Minute"
 	"dota_settings_spectatordropdown_gold"		"Current Gold"
@@ -2606,7 +2790,10 @@
 	"dota_alt_shows_neutral_spawn_boxes"		"Holding ALT Shows Neutral Spawnboxes"
 	"dota_alt_shows_tower_attack_range"			"Holding ALT Shows Tower Attack Range"
 	"dota_settings_rangefinder"					"Show Ability Rangefinder While Casting"
-	"dota_settings_alwaysshownames"				"Show Player Names Over Healthbar"
+	"dota_settings_name_over_healthbar"			"Display Names Over Healthbar"
+	"dota_settings_showheronames"				"Hero Names"
+	"dota_settings_alwaysshownames"				"Player Names"
+	"dota_settings_dontshownames"				"Nothing"
 	"dota_settings_showhitpoints"				"Show Hitpoints Over Player Healthbar"
 	"dota_settings_forceshophotkeys"			"Shop Always Uses Hotkeys"
 	"dota_settings_usebroadcastermenu"			"Use Broadcaster Stats"
@@ -2614,12 +2801,15 @@
 	"dota_settings_hud_color_normal"			"Default Colors"
 	"dota_settings_hud_color_colorblind"		"Colorblind Mode"
 	"dota_settings_hud_color_selffocus"			"Differentiate Ally Healthbars"
+	"dota_settings_hud_healthbar_disable_status_display"	"Disable Status Text"
+	"dota_settings_hud_disable_damage_numbers"	"Hide Damage Numbers"
 	"dota_settings_reducedflash"				"Reduced Flash"
 	"dota_settings_minimap"						"Minimap"
 	"dota_settings_minimap_preview"				"Preview"
 	"dota_settings_minimap_AltDown"				"Alt Preview"
 	"dota_settings_minimapsimplecolors"			"Use Simple Colors in Minimap"
 	"dota_settings_minimaphidebackground"		"Hide Minimap Background"
+	"dota_settings_minimapsimplebackground"		"Use Simple Minimap Background"
 	"dota_settings_minimapshowheroicon"			"Use Alt to show Hero icons"
 	"dota_settings_minimapalwaysshowname"		"Invert Alt Toggle"
 	"dota_settings_minimapflip"					"Show Minimap on the Right"
@@ -2679,6 +2869,7 @@
 	"dota_settings_ambientcreatures"			"Ambient Creatures"
 	"dota_settings_ambient_cloth"				"Ambient Cloth Simulation"
 	"dota_settings_normal_maps"					"Normal Maps"
+	"dota_settings_parallax_mapping"			"Ground Parallax"
 	"dota_settings_dashboard_renderquality"		"High Quality Dashboard"
 	"dota_settings_vsync"						"VSync"
 	"dota_settings_exp_lag_limiter"				"Experimental Input Lag Limiter"
@@ -2690,6 +2881,10 @@
 	"dota_settings_texturequality_low"			"Low"
 	"dota_settings_texturequality_med"			"Med"
 	"dota_settings_texturequality_high"			"High"
+	"dota_settings_grassquality"				"Grass"
+	"dota_settings_tree_wind"					"Tree Wind"
+	"dota_settings_fps_max"						"Maximum frames per second allowed"
+	"dota_settings_fps_max_tip"					"Extended values can be provided with the +fps_max launch option.\nValues out of range for the slider will disable the slider."
 	"dota_settings_mastervolume"				"Master Volume"
 	"dota_settings_gamevolume"					"Game Sounds"
 	"dota_settings_musicvolume"					"Music"
@@ -2734,6 +2929,7 @@
 	"dota_settings_enable_console"				"Enable console"
 	"dota_settings_enable_console_tooltip"		"Changes to this setting will not take effect until the next launch.\nIf you have launch options like -dev or -console that enable the console they override this setting."
 	"dota_settings_activate_window_on_match_found"	"Bring Dota 2 to front when match found"
+	"dota_settings_activate_window_on_hero_picking_start"	"Bring Dota 2 to front when pick phase begins"
 	"dota_settings_binding_options"				"Binding Options"
 	"dota_settings_allow_gui_key_to_bind"		"Allow Windows / Command key to be bound"
 	"dota_settings_button_code_is_scan_code"	"Bind keys based on keyboard position"
@@ -2744,6 +2940,9 @@
 	"dota_settings_minimap_misclick_time"		"Minimap Misclick Protection Time"
 	"dota_settings_ability_self_cast_timeout"	"Double-Tap Self Cast Timeout"
 	"dota_settings_camera_disable_zoom"			"Disable Camera Zoom"
+	"dota_settings_minimap_size"				"Minimap Size"
+	"dota_settings_minimap_size_smallest"		"Small"
+	"dota_settings_minimap_size_largest"		"Large"
 	"dota_settings_minimap_hero_size"			"Minimap Hero Size"
 	"dota_settings_minimap_hero_scalar"			"Dynamically Scale Hero Icons in Minimap"
 	"dota_settings_minimap_hero_spread"			"Spread Out Hero Icons"
@@ -2754,6 +2953,8 @@
 	"dota_settings_auto_cursor_scale"				"Automatically choose cursor size"
 	"dota_settings_cursor_scale"					"Cursor Size"
 	"dota_settings_cursor_scale_overridden"			"If the -cursor_scale_percent launch option is used it overrides cursor size settings"
+	"dota_settings_hud_query_panel"					"Unit query overrides hero control console"
+	"dota_settings_hud_query_panel_tooltip"			"Selecting another unit will show their details in the main HUD instead of in a separate display"
 
 	"DOTA_Keybind_ARROW"	"Arrow (Default)"
 	"DOTA_Keybind_WASD"		"WASD"
@@ -2852,6 +3053,7 @@
 	"DOTA_Settings_Tooltip_ALTTower"			"Show the Tower's attack range when ALT is held down."
 	
 	"DOTA_Settings_Tooltip_Bringtofront"		"If on the desktop when a match is found, bring the Dota 2 client to the front."
+	"DOTA_Settings_Tooltip_Bringtofront_Picking"		"If on the desktop when the hero picking phase begins, bring the Dota 2 client to the front."
 	
 	"DOTA_Settings_Tooltip_RangeFinder"			"Display a range indicator on the ground for spells."
 	"DOTA_Settings_Tooltip_Differentiate"		"Ally healthbars display as yellow to further differentiate them from your own green healthbar."
@@ -2971,6 +3173,7 @@
 	"DOTA_EquippedItem_RegularSetPrice"	"{s:equipped_econ_regular_set_price}"
 	"DOTA_EquippedItem_SetPrice"		"{s:equipped_econ_set_price}"
 	"DOTA_EquippedItem_TreasurePrice"	"{s:equipped_econ_treasure_price}"
+
 	"DOTA_HeroDemo_Button"				"Demo {s:econ_item_category_name}"
 	"DOTA_HeroDemo_Button_Tooltip"		"Launch into Demo mode to check out this item set or hero's abilities"
 	"DOTA_HeroDemo_Button_Return"		"Return to Demo"
@@ -3003,6 +3206,7 @@
 	"DOTA_EconItemSet_Tooltip_IsBundle" "This is a bundle containing other items"
 	"DOTA_EconItemSet_Tooltip_IsTreasure" "This is a treasure"
 	"DOTA_EconItemSet_Tooltip_MultipleStyles" "Has multiple styles"
+	"DOTA_EconItemSet_Tooltip_AutoStyle" "Active style determined by gameplay"
 	"DOTA_EconItemSet_Tooltip_MultipleTeams" "Has different styles for Radiant and Dire"
 	"DOTA_EconItemSet_Tooltip_HasEmptySocket" "Has empty sockets"
 	"DOTA_EconItemSet_Tooltip_HasCommonGem" "Has one or more gems"
@@ -3011,6 +3215,7 @@
 
 	"DOTA_EconItemSet_Tooltip_RaresTradeableImmediately" "Ultra-Rare is tradeable and marketable immediately"
 	"DOTA_EconItemSet_Tooltip_RaresTradeableJuly" "Ultra-Rare is tradeable and marketable after June 30th"
+	"DOTA_EconItemSet_Tooltip_RaresTradeableAugust" "Ultra-Rare is tradeable and marketable after August 1st"
 	"DOTA_EconItemSet_Tooltip_Exclusive_To_TI6_BattlePass_Owners" "Cache items are exclusive and will not be available for purchase elsewhere after The International."
 	"DOTA_EconItemSet_Tooltip_Prestige_Exclusive_To_TI6_BattlePass_Owners" "Prestige items are exclusive and will not be available for purchase elsewhere after The International."
 
@@ -3027,6 +3232,11 @@
 	"DOTA_HeroRole_LaneSupport"	"Lane Support"
 	"DOTA_HeroRole_Pusher"		"Pusher"
 	"DOTA_HeroRole_Initiator"	"Initiator"
+
+	"DOTA_HeroComplexity"		"Complexity"
+	"DOTA_HeroComplexity_Description_1"		"This hero's ability mechanics are fairly straightforward to execute."
+	"DOTA_HeroComplexity_Description_2"		"This hero's ability mechanics require a moderate degree of skill, coordination, and timing to execute."
+	"DOTA_HeroComplexity_Description_3"		"This hero's ability mechanics require a high degree of skill, coordination, and timing to execute."
 
 	"DOTA_HeroRole_Description_Carry"		"Will become more useful later in the game if they gain a significant gold advantage."
 	"DOTA_HeroRole_Description_Support"		"Can focus less on amassing gold and items, and more on using their abilities to gain an advantage for the team."
@@ -3066,6 +3276,10 @@
 	"DOTA_HeroLoadout_Roles"				"Roles"
 	"DOTA_HeroLoadout_Biography"			"Biography"
 
+	"DOTA_HeroLoadout_OwnedItems"			"Owned"
+	"DOTA_HeroLoadout_AvailableItems"		"Available"
+	"DOTA_HeroLoadout_ViewOnStore"			"(View On Store)"
+
 	"DOTA_HeroCustomize_Title"				"Customize Hero"
 	"DOTA_HeroCustomize_OwnedItems"			"Owned Items"
 	"DOTA_HeroCustomize_Slot"				"Slot"
@@ -3078,6 +3292,10 @@
 	"DOTA_HeroCustomize_Rarity"				"{s:preview_item_rarity}"
 	"DOTA_HeroCustomize_StyleLocked"		"Prerequisite Needed To Equip"
 	"DOTA_HeroCustomize_SelectItemsInSet"	"Select Set Items"
+
+	"DOTA_HeroCard_Suggested"				"Suggested"
+	"DOTA_HeroCard_AllHeroChallenge"		"All Hero Challenge"
+	"DOTA_HeroCard_DailyQuest"				"Daily Quest"
 
 	"DOTA_UIEconItem_StyleIndex"			"{i:style_index}"
 
@@ -3107,11 +3325,28 @@
 	"dota_practice_vs_bots_desc"	"Play a practice match versus Bots. This doesn't use matchmaking and you can leave the match at any time"
 	"dota_practice_vs_bots_difficulty"	"Bot Difficulty"
 
+	"dota_cannot_request_steamdatagram_ticket"	"Steam datagram ticket is missing, and we cannot request a new one at this time.  {s:reason}"
+
 	"dota_practice_vs_bots_team"			"Play as which team?"
 	"DOTA_practice_vs_bots_team_radiant"	"Radiant"
 	"DOTA_practice_vs_bots_team_dire"		"Dire"
 	"DOTA_practice_vs_bots_team_random"		"Random"
 
+	"DOTA_BotScripting_Title"				"Bot Scripts on the Workshop"
+	"DOTA_BotScripting_LastUpdated"			"Last Updated: <span class='Value'>{t:s:updated}</span>"
+	"DOTA_BotScripting_Subscribers"			"Subscribers: <span class='Value'>{i:subscribers}</span>"			
+	"DOTA_BotScripting_Favorites"			"Favorites: <span class='Value'>{i:favorites}</span>"			
+
+	"DOTA_BotScripting_SortScore"			"Score"
+	"DOTA_BotScripting_SortTrending"		"Trending"
+	"DOTA_BotScripting_SortLastUpdated"		"Last Updated"
+	"DOTA_BotScripting_SortPlaytime"		"Playtime"
+	
+	"DOTA_BotScripting_Subscribe"			"Subscribe"
+	"DOTA_BotScripting_Use"					"Use"
+	"DOTA_BotScripting_Unsubscribe"			"Unsubscribe?"
+
+	
 	"DOTA_EmoticonUpsell"	"Emoticons are unlocked by purchasing specific hero items or league tickets."
 
 	"DOTA_CurrentTime"		"{t:t:current_time}"
@@ -3206,7 +3441,7 @@
 	"dota_weekend_tourney_hub_rules_faq_button"				"Rewards / FAQ"
 	"dota_weekend_tourney_hub_schedule_division"			"Division"
 	"dota_weekend_tourney_hub_schedule_next_begins"			"Next Tournament Begins"
-	"dota_weekend_tourney_hub_schedule_last_week_info"		"Last week's Americas Tournament"
+	"dota_weekend_tourney_hub_schedule_last_week_info"		"Last week"
 	"dota_weekend_tourney_hub_schedule_last_week_players"	"Players"
 	"dota_weekend_tourney_hub_schedule_last_week_teams"		"Teams"
 	"dota_weekend_tourney_hub_schedule_last_week_winners"	"Cup winners"
@@ -3217,8 +3452,11 @@
 	"dota_weekend_tourney_hub_get_started"					"Get Started"
 	"dota_weekend_tourney_hub_friends_leaderboard_header"	"Friends Leaderboard"
 	"dota_weekend_tourney_hub_friends_recent_header"		"Recent Tournaments"
+	"dota_weekend_tourney_hub_no_recent_tournaments"		"No recent tournaments"
+	"dota_weekend_tourney_hub_no_leaderboard_data"		"Be the first of your friends to enter the Battle Cup!"
 	"dota_weekend_tourney_hub_battle_cup"					"Battle Cup"
 	"dota_weekend_tourney_hub_summer_2016"					"Summer 2016"
+	"dota_weekend_tourney_hub_fall_2016"					"Fall 2016"
 	"dota_weekend_tourney_hub_cup_wins"						"Cup Wins"
 	"dota_weekend_tourney_hub_my_stats"						"My Stats"
 	"dota_weekend_tourney_hub_current_tier"					"Current Tier"
@@ -3235,8 +3473,22 @@
 	"dota_weekend_tourney_hub_semifinals"					"Semifinals"
 	"dota_weekend_tourney_hub_quarterfinals"				"Quarter Finals"
 	"dota_weekend_tourney_hub_show_bracket"					"View Bracket"
+	"dota_weekend_tourney_hub_tier"						"Tier {d:tier}"
+	"DOTAWeekend_Tourney_Watch_Live"						"WATCH LIVE!"
+	"dota_weekend_tourney_hub_schedule_total_players"		"Total Players"
+	"dota_weekend_tourney_hub_schedule_signing_up"			"Signing Up"
+	"dota_weekend_tourney_hub_schedule_this_week_info"		"NOW OPEN"
+	"dota_weekend_tourney_hub_stats_header_label"		"Last week's stats"
+	"dota_weekend_tourney_hub_stats_worldwide_label"		"Worldwide"
+	"dota_weekend_tourney_hub_stats_players_label"			"Players"
+	"dota_weekend_tourney_hub_tier_n"					"Tier {i:tier}"
+	"dota_weekend_tourney_hub_tier_all"					"All tiers"
+	"dota_weekend_tourney_hub_join_now"		"Join Now"
 	"DOTA_Lobby_No_Players_Title"		"NO PLAYERS ON A TEAM"
 	"DOTA_Lobby_No_Players_Desc"		"You must have at least one player on the Radiant or Dire team."
+
+	
+	"DOTA_BattleCup_Loading"		"Loading"
 
 	"dota_match_result_won"			"Won"
 	"dota_match_result_lost"		"Lost"
@@ -3300,7 +3552,7 @@
 	"DOTA_Armory_Category_All"			"All"
 	"DOTA_Armory_Category_AllNew"		"All ({d:armory_new_items})"
 	"DOTA_Armory_Category_Other"		"Other"
-	"DOTA_Armory_Category_Event"		"The International 2016"
+	"DOTA_Armory_Category_Event"		"Fall 2016"
 	"DOTA_Armory_Category_Treasures"	"Treasures"
 	"DOTA_Armory_Category_Gifts"		"Gifts"
 	"DOTA_Armory_Category_Bundles"		"Bundles"
@@ -3406,6 +3658,7 @@
 	"DOTA_Effigy_CancelCustomize"				"Cancel Effigy Loadout"
 		
 	"dota_page_match_details_loading"				"Loading Match..."
+	"dota_page_match_details_not_found"				"Match Data Not Found"
 	"dota_page_match_details_victory"				"Winner: {s:winner}"
 
 	"dota_page_match_details_battle_pass_replay"	"This replay is available for an additional 3 months due to one of the players having a Battle Pass active during the match."
@@ -3417,15 +3670,20 @@
 	"dota_page_match_details_legend_deaths"			"D"
 	"dota_page_match_details_legend_assists"		"A"
 	"dota_page_match_details_legend_items"			"Items"
+	"dota_page_match_details_legend_backpack_items"		"Backpack"
 	"dota_page_match_details_legend_gold"			"Gold"
+	"dota_page_match_details_legend_permanent_buffs"	"Buffs"
 	"dota_page_match_details_legend_last_hits"		"LH"
 	"dota_page_match_details_legend_denies"			"DN"
 	"dota_page_match_details_legend_gold_per_min"	"GPM"
 	"dota_page_match_details_legend_xp_per_min"		"XPM"
-	"dota_page_match_details_legend_mmr"			"MMR"
 	"dota_page_match_details_legend_net_worth"		"Net"
 	"dota_page_match_details_radiant_score" 		"Score: <font color='#ffffff'><b>{d:radiant_team_score}</b></font>"
 	"dota_page_match_details_dire_score" 			"Score: <font color='#ffffff'><b>{d:dire_team_score}</b></font>"
+	"dota_page_match_details_legend_hero_damage"	"DMG"
+	"dota_page_match_details_legend_hero_healing"	"HEAL"
+	"dota_page_match_details_legend_tower_damage"	"BLD"
+	"dota_page_match_details_legend_mmr"			"MMR"
 
 	"dota_page_match_details_legend_winner_tooltip"			"Winning Team"
 	"dota_page_match_details_legend_kills_tooltip"			"Kills"
@@ -3439,6 +3697,10 @@
 	"dota_page_match_details_legend_xp_per_min_tooltip"		"Experience Per Minute"
 	"dota_page_match_details_legend_ability_build"			"Ability Build"
 	"dota_page_match_details_legend_experience"				"Experience"
+	"dota_page_match_details_legend_hero_damage_tooltip"	"Damage done to other Heroes"
+	"dota_page_match_details_legend_hero_healing_tooltip"	"Amount of Healing done to Teammates"
+	"dota_page_match_details_legend_tower_damage_tooltip"	"Damage done to towers and barracks"
+	"dota_page_match_details_legend_mmr_tooltip"			"Rank Change"
 	
 	"dota_page_match_details_header_league_name"	"League Name"
 	"dota_page_match_details_header_custom_game_map_name"	"Map Name"
@@ -3449,6 +3711,8 @@
 	
 	"dota_page_match_details_header_total"	"Total"
 
+	"dota_page_match_details_leave"		"Leave Match"
+	"dota_page_match_details_team_view"		"Back to Team View"
 	
 	"dota_page_match_details_radiant_kills"		"Radiant Heroes Killed"
 	"dota_page_match_details_dire_kills"		"Dire Heroes Killed"
@@ -3476,11 +3740,12 @@
 	"dota_page_match_details_replay_existence_disk_found_highlights"			"Watch Highlights"
 	"dota_page_match_details_replay_existence_wrong_engine"			"Source 1 Replays are unavailable in Source 2"
 
-	"dota_page_post_game_replay_you_will_be_notified"			"You will be notified when the Replay becomes available. It will be added to the Save for Later category in the Watch tab"
+	"dota_page_post_game_replay_you_will_be_notified"			"You will be notified when the Replay is available under the Save for Later section of the Watch tab"
 	"dota_page_post_game_replay_not_expected"					"Replay will not be available for this match."
 	"dota_page_post_game_replay_available_toast"				"A replay you requested is now available"
 	
 	"dota_page_post_game_play_style"				"Play Style in this Match"
+	"dota_page_post_game_vs_previous_local"			"vs YOUR AVERAGES FOR THIS HERO"
 	"dota_page_post_game_vs_previous"				"vs THEIR AVERAGES FOR THIS HERO"
 	"dota_page_post_game_performance_label"			"average"
 
@@ -3488,6 +3753,32 @@
 	"dota_page_post_game_player_net_worth"					"Player Net Worth"
 	"dota_page_post_game_player_level"						"Player Level"
 	"dota_page_post_game_player_items"						"Player Items"
+	"dota_page_post_game_support_items"						"Support Items"
+
+	"dota_page_post_game_stat_player_level"			"Lvl {i:level} "
+
+
+	"dota_post_game_radiant_victory"				"Radiant Victory"
+	"dota_post_game_dire_victory"					"Dire Victory"
+
+	"dota_post_game_radiant_team_name_victory"		"{s:radiant_team_name} Victory"
+	"dota_post_game_radiant_team_name"				"{s:radiant_team_name}"
+	"dota_post_game_dire_team_name_victory"			"{s:dire_team_name} Victory"
+	"dota_post_game_dire_team_name"					"{s:dire_team_name}"
+
+	"dota_post_game_stats_kills"			"Kills:"
+	"dota_post_game_stats_xpm"			"XPM:"
+	"dota_post_game_stats_gpm"			"GPM:"
+	"dota_post_game_stats_deaths"		"Deaths:"
+	"dota_post_game_stats_assists"		"Assists:"
+
+	"dota_post_game_bot"				"Bot"
+	"dota_post_game_stats_bot_difficulty_passive"	"Bot Difficulty: Passive"
+	"dota_post_game_stats_bot_difficulty_easy"		"Bot Difficulty: Easy"
+	"dota_post_game_stats_bot_difficulty_medium"	"Bot Difficulty: Medium"
+	"dota_post_game_stats_bot_difficulty_hard"		"Bot Difficulty: Hard"
+	"dota_post_game_stats_bot_difficulty_unfair"	"Bot Difficulty: Unfair"
+	
 
 	"dota_profile_content_tab_activity_feed" "Activity Feed"
 	"dota_profile_content_tab_recent_games" "Recent Games"
@@ -3543,6 +3834,7 @@
 
 	"dota_role_core"					"Core"
 	"dota_role_support"					"Support"
+	"dota_role_offlane"					"Offlane"
 
 	"dota_postgame_overview"		"Overview"
 	"dota_postgame_scoreboard"		"Scoreboard"
@@ -3632,7 +3924,9 @@
 	"DOTA_econ_item_details_reset_name"	"Reset to Original Name"
 	"DOTA_econ_item_details_edit_name"	"Create Custom Name"
 	"DOTA_econ_item_details_emoticons_label"	"Emoticons:"
-	"DOTA_econ_item_details_style_label"	"Style:"
+	"DOTA_econ_item_details_style_label"	"Styles:"
+	"DOTA_econ_item_details_autostyle_reason"	"Activates When {s:auto_style_reason}"
+	"DOTA_econ_item_details_autostyle_label"	"Active style will be determined by gameplay."
 	"DOTA_econ_item_details_gift_label" 	"Gift From:"
 	"DOTA_econ_item_details_original_item_name"	"{s:original_item_name}"
 	"DOTA_econ_item_details_item_name"			"{s:item_name}"
@@ -3647,6 +3941,7 @@
 	"DOTA_econ_item_details_apply_tool"		"{s:tool_use_name}"
 	"DOTA_econ_item_details_item_description"  "{s:item_description}"
 	"DOTA_econ_item_details_item_uneditable_description"  "{s:item_uneditable_description}"
+	"DOTA_econ_item_details_auto_style_description" "The styles on this item will change automatically based on game state."
 	"DOTA_econ_item_details_gem_type"		"{s:gem_type}"
 	"DOTA_econ_item_details_gem_strange_count" "{d:strange_count}"
 	"DOTA_econ_item_details_gem_description" "{s:gem_description}"
@@ -3661,6 +3956,11 @@
 	"DOTA_econ_item_details_reset_gem"		"Reset"
 	"DOTA_econ_item_details_gift_header"	"Gift"
 	"DOTA_econ_item_details_gift_clear_attributes"	"Clear Gift"
+	"DOTA_ItemRemoveGifter_Attributes_Title"	"Confirm Removal of Gift Information"
+	"DOTA_ItemRemoveGifter_Attributes"			"Permanently remove the gift information from this item?"
+	"DOTA_ItemChangeGifter_Attributes_Processing_Title"	"Removing Gift Information"
+	"DOTA_ItemChangeGifter_Attributes_Processing_Text"		"Please wait a moment as the item details are updated."
+	"DOTA_ItemRemoveGifter_Attributes_Succeeded"	"You have successfully removed the gift information from this item."
 	"DOTA_econ_item_details_bundle_header" "Items In Bundle"
 	"DOTA_econ_item_details_equip_header" "Equip State: {s:item_equip_state}"
 	"DOTA_econ_item_details_toggle_equip_state" "{s:item_toggle_equip_state}"
@@ -3672,8 +3972,11 @@
 	"DOTA_econ_item_details_style_available" "Select"
 	"DOTA_econ_item_details_style_locked"	"Locked"
 	"DOTA_econ_item_details_style_unlock" "Unlock"
+	"DOTA_econ_item_details_auto_style"		"Dynamic Style"
 	"DOTA_econ_item_details_tooltip_lock_reason_title" "Unlock Prerequisite(s):"
 	"DOTA_econ_item_details_tooltip_lock_reason"	"{s:style_lock_reason}"
+	"DOTA_econ_item_details_tooltip_auto_style_title" "Style Activates When:"
+	"DOTA_econ_item_details_tooltip_auto_style"	"{s:auto_style_reason}"
 	"DOTA_econ_item_details_properties_header"	"Properties"
 	"DOTA_econ_item_details_description_header"	"Description"
 	"DOTA_econ_item_details_description_reset"	"Reset"
@@ -3681,10 +3984,13 @@
 	"DOTA_econ_item_details_go_to_loadout"	"{s:item_owner_type} Loadout"
 	"DOTA_econ_item_details_modifiers"		"Modifiers"
 	"DOTA_econ_item_details_ability_icons"	"Ability Icons"
+	"DOTA_econ_item_details_dynamic_styles"	"Dynamic Styles"
+	"DOTA_econ_item_details_dynamic_styles_help"	"Dynamic Styles are automatically applied during gameplay."
 	"DOTA_econ_item_details_items_in_set"	"Items In Set"
 	"DOTA_econ_item_details_contained_within"	"Purchasing Options"
 	"DOTA_econ_item_details_owning_bundle_item_name"	"{s:item_owning_bundle_name}"
 	"DOTA_econ_item_details_unbundle"		"Unbundle"
+	"DOTA_econ_item_details_auto_style_reason"	"Active When {s:auto_style_reason}"
 
 	"DOTA_store_item_details_included"		"Included in this Bundle"
 	"DOTA_store_item_details_associated_league_name"	"{s:league_name}"
@@ -3841,6 +4147,7 @@
 	"Compendium_LevelupPts_Plural"		"{d:next_comp_level} Pts"
 	"Compendium_TestingBadLeagueID"		"Missing or invalid 'league_id' key in the Compendium datafile."
 
+	"DOTA_GlobalItems_CouriersAndWards"	"Couriers & Wards"
 	"DOTA_GlobalItems_Companions"	"Companions"
 	"DOTA_GlobalItems_Couriers"	"Couriers"
 	"DOTA_GlobalItems_Pets"	"Pets"
@@ -3866,15 +4173,50 @@
 	"NetGraph_Loss" "loss: {d:loss}%"
 	"NetGraph_BPS" "kbps: {d:kbps}"
 
-	"DOTA_HUD_NetGraph_Left_1" "FPS/Ping"
-	"DOTA_HUD_NetGraph_Left_2" "Loss/kbps"
+	"DOTA_HUD_NetGraph_Left_1" "FPS / Ping"
+	"DOTA_HUD_NetGraph_Left_2" "Loss / kbps"
 
-	"DOTA_HUD_NetGraph_Right_1" "{d:fps} / {d:ping}"
-	"DOTA_HUD_NetGraph_Right_2" "{d:loss} / {d:kbps}"
+	"DOTA_Hud_ChannelBar" "Channeling {s:seconds_left}"
+	"DOTA_Hud_StunBar" "{s:state}"
+	"DOTA_Hud_SpecItemHeroName"	"Lvl <font color='#FFFFFF'>{d:player_level}</font> {g:dota_hero_name:hero_id}"
+
+	"DOTA_Hud_Paused"							"Game is paused"
+	"DOTA_Hud_Unpausing"						"Game is unpausing"
 
 	"DOTA_ClientVersion"			"Version: <span class=\"VersionNumber\">{d:client_version_number}</span>"
 	"DOTA_GameplayVersion"	"Gameplay Version: <span class=\"VersionNumber\">{s:gameplay_version_number}</span>"
-	"DOTA_CurrentGameplayVersion"	"6.88b"
+	"DOTA_CurrentGameplayVersion"	"7.00"
+
+	"DOTA_Notifications_ViewAll"		"View All"
+	"DOTA_ChangeLog_View"					"View"
+	"DOTA_ChangeLog_Ti6BracketPredictions"	"Bracket Predictions for The International 2016"
+	"DOTA_ChangeLog_Ti6FantasyLeague"		"Fantasy Challenge for The International 2016"
+	"DOTA_ChangeLog_ImprovedSpectatorChat"	"Global Live Spectator Chat"
+	"DOTA_ChangeLog_Ti6MainEventPredictions"	"Tournament Predictions for The International 2016"
+	"DOTA_ChangeLog_Ti6PlayerCards"			"Player Cards for The International 2016"
+	"DOTA_ChangeLog_Ti6Casters"				"Casters for The International 2016"
+	"DOTA_ChangeLog_BattleCupRescheduled"			"The Battle Cup has been rescheduled"
+	"DOTA_ChangeLog_Ti6GroupStage"			"Group Stage for The International 2016 Announced"
+	"DOTA_ChangeLog_VRHub"					"Dota VR Hub Now Available"
+	"DOTA_ChangeLog_Ti6BracketPredictionsAvail"	"Bracket Predictions Now Open"
+	"DOTA_ChangeLog_MiniGameplayPatch"		"Minor Gameplay Patch"
+	"DOTA_ChangeLog_PostGame"		"New Post-Game Summary"
+	"DOTA_ChangeLog_UnderlordReleased"		"New Hero: Underlord"
+	"DOTA_ChangeLog_TeammateStats"		"Teammate Stats Now Available"
+	"DOTA_ChangeLog_LearnItems"			"Shop Items Page"
+
+	"DOTA_ChangeLog_BattleCupPartyBuilder"	"Battle Cup Party Builder"
+	"DOTA_ChangeLog_Halloween_Quest_Available" "Bonus Quest Path" 
+	"DOTA_ChangeLog_TI6Rollup"			"The International 2016 Battle Pass Summary"
+	"DOTA_ChangeLog_Fall2016Fantasy"	"The Fall 2016 Fantasy Challenge"
+	"DOTA_ChangeLog_Fall2016PlayerCards"	"Fall 2016 Player Cards"
+	"DOTA_ChangeLog_Fall2016Casters"	"Boston Major Casters"
+	"DOTA_ChangeLog_Fall2016MainEventPredictions"	"Boston Major Predictions"
+	"DOTA_ChangeLog_Fall2016BracketPrediction"	"Boston Major Bracket Predictions"
+	"DOTA_ChangeLog_MonkeyKingReleased"		"New Hero: Monkey King"
+
+	"DOTA_GlobalLiveSpectatorChat_Title"			"New Feature - Global Live Spectator Chat"
+	"DOTA_GlobalLiveSpectatorChat_Details"			"You don't need to be at KeyArena to take in the The International alongside a crowd of thousands. In-game spectator chat now has increased capacity, and can support large numbers of viewers in a single channel. You may also access the spectator chat channel in the new Live Game tab in the dashboard chat window."
 
 	"DOTA_Credits"			"Acknowledgements"
 	"DOTA_Credits_EnglishVoices"	"English Voice Cast"
@@ -3912,8 +4254,6 @@
 	"DOTA_Crafting_Treasure_Link"		"View Coin Treasure"
 
 	"DOTA_Crafting_Winter_2016"		"Winter 2016"
-
-
 	
 	"DOTA_Crafting_Confirm"			"Are you sure you want to craft these items into something new?"
 
@@ -3933,6 +4273,8 @@
 	"DOTA_Treasure_PurchasePW"			"Purchase {g:dota_item_name:item_def}"
 	"DOTA_Treasure_EventPurchase"		"Compendium Reward"
 	"DOTA_Treasure_CharmPurchase"		"Purchase Charm"
+	"DOTA_Treasure_InfuserPurchase"		"Purchase Infuser"
+	"DOTA_Treasure_InfusersOwned"		"Infusers Owned:"
 	"DOTA_Treasure_MarketPurchase"		"On the Market"
 	"DOTA_Treasure_SearchPlaceholder"	"Search for Treasures"
 	"DOTA_Treasure_ViewAll"				"View All Treasures"
@@ -3944,8 +4286,9 @@
 	"DOTA_Treasure_OpenQuantity"		"{d:owned_quantity}"
 	"DOTA_Treasure_Owned"				"Owned"
 	"DOTA_Treasure_Received"			"Received"
-	"DOTA_Treasure_Autographed"			"Autograph:"
+	"DOTA_Treasure_Autographed"			"Autograph"
 	"DOTA_Treasure_AutographName"		"{s:treasure_autograph_name}"
+	"DOTA_Treasure_AutographDetails"	"Items received from an Autographed treasure come with an attached Autograph Rune. A portion of the proceeds from an Autographed treasure go directly to the person that autographed it."
 	"DOTA_Treasure_BonusReward"			"Bonus Reward"
 	"DOTA_Treasure_HelpHeader"			"Each treasure contains {d:items_per_treasure} of these items"
 	"DOTA_Treasure_HelpHeaderPW"		"Current item available from this treasure"
@@ -3964,6 +4307,7 @@
 	"DOTA_Treasure_PurchaseEventLevels"		"Purchase Levels"
 	"DOTA_Treasure_ViewEvent"		"View Battle Pass"
 	"DOTA_Treasure_ClaimEventRewards"	"Claim Treasures"
+	"DOTA_Treasure_ViewTreasure"		"View Treasures"
 
 	"DOTA_Treasure_FilterAvailable"		"Available"
 	"DOTA_Treasure_FilterOwned"			"Unopened ({d:treasures_owned_count})"
@@ -3986,7 +4330,7 @@
 
 	"DOTA_AASystem_Green"		"Accumulated online game time: {s:playtime}. You are currently playing within healthy time-limits. Enjoy the game!"
 	"DOTA_AASystem_Yellow"		"Accumulated online game time: {s:playtime}. You have exceeded healthy game time limits. Please take care to rest!"
-	"DOTA_AASystem_Red"			"Accumulated online game time: {s:playtime}. You have exceeded healthy game time limits. It is recomended that you sign offline and rest!"
+	"DOTA_AASystem_Red"			"Accumulated online game time: {s:playtime}. You have exceeded healthy game time limits. It is recommended that you sign offline and rest!"
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Last time online: %s1\nLast IP Address: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"You are under 18. The anti addiction system is in effect.\nLast time online: %s1\nLast IP Address: %s2"
@@ -4049,7 +4393,7 @@
 	"DOTA_Workshop_BannerMarketingImage"					"Team Banner"
 	"DOTA_Workshop_BannerMarketingImage_Desc"				"A banner to be used in association with your team. Must be at least 932x128. You must have the rights to use this image."
 
-
+	"DOTA_HUD_Charms_CurrentStreak"		"Current Streak: {d:current_streak}"
 
 	"DOTA_Workshop_Ready"				"Ready"
 	"DOTA_Workshop_Optional"			"Optional"
@@ -4246,37 +4590,43 @@
 	"DOTA_Workshop_Attachment_Wing_Left2"		"Left Wing2 Middle"
 	"DOTA_Workshop_Attachment_Wing_Left3"		"Left Wing3 Outer"
 	
+	//Autofill Particle Attachments for models that use the default skeleton
+	"DOTA_Workshop_Attachment_Head_Particle_Autofill_Desc"	 "This attachment specifies the position for default head ambient particles. The bone for the head attachment has been filled in. You will have the option to reposition this attachment after compiling."
+
+	
 	
 //Autofill Attachments for Models with custom skeleton option
 
-	"DOTA_Workshop_Attachment_HitLocation_Autofill_Desc"		"Specifies where on the model incoming enemy projectiles should travel to. A good position is above the center of the model. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_HitLocation_Autofill_Desc"		"Specifies where on the model incoming enemy projectiles should travel to. A good position is above the center of the model. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 	
-	"DOTA_Workshop_Attachment_AttackPoint_Autofill_Desc"		"For ranged attack units, this specifies where their attack projectiles should start. For melee units, this is where we spawn hit effects, like blood splashes. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_AttackPoint_Autofill_Desc"		"For ranged attack units, this specifies where their attack projectiles should start. For melee units, this is where we spawn hit effects, like blood splashes. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 		
-	"DOTA_Workshop_Attachment_AttackPoint2_Autofill_Desc"		"When an offhand animation is used instead of the base attack, this attack point will be used to spawn hit effects & projectiles. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_AttackPoint2_Autofill_Desc"		"When an offhand animation is used instead of the base attack, this attack point will be used to spawn hit effects & projectiles. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 	
-	"DOTA_Workshop_Attachment_Mouth_Autofill_Desc"				"Specifies where the default particles for a creature's bite attack or mouth projectile attack should originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. If there is no mouth joint, use the head joint and then position the attachment onto the creature's mouth with the red tx arrow pointing forward. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_Mouth_Autofill_Desc"				"Specifies where the default particles for a creature's bite attack or mouth projectile attack should originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. If there is no mouth joint, use the head joint and then position the attachment onto the creature's mouth with the red tx arrow pointing forward. You will have the option to reposition this attachment after compiling."
 	
-	"DOTA_Workshop_Attachment_Eye_Autofill_Desc"			"Specifies where on the model to place default particle effects intended for each eye of a creature. The default skeleton bone for these attachments have been filled in.  If you are using a custom skeleton, you will need to change the bone names. If there are no eye joints, use the head joint and then position the attachments onto each of the creature's eyes with the red tx arrow pointing forward. You will have the option to reposition these attachments after compiling." 		
+	"DOTA_Workshop_Attachment_Eye_Autofill_Desc"			"Specifies where on the model to place default particle effects intended for each eye of a creature. The default skeleton bones for these attachments have been filled in.  If you are using a custom skeleton, you will need to change the bone names. If there are no eye joints, use the head joint and then position the attachments onto each of the creature's eyes with the red tx arrow pointing forward. You will have the option to reposition these attachments after compiling." 		
 		
+
+	"DOTA_Workshop_Attachment_Wing_Particle_Autofill_Desc"	"These attachments specify positions for default Wing Particle Effects. The default skeleton bones for wing attachments have been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition these attachments after compiling."
 	
-	"DOTA_Workshop_Attachment_Wing_Particle_Autofill_Desc"	"These attachments specify positions for default Wing Particle Effects. The default skeleton bone for wing attachments have been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition these attachments after compiling."
-	
-	"DOTA_Workshop_Attachment_Tail_Autofill_Desc"	"The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_Tail_Autofill_Desc"	"The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 	
 	"DOTA_Workshop_Attachment_RightHand"			"Right Hand Bone Name"
-	"DOTA_Workshop_Attachment_RightHand_Autofill_Desc"		"Specifies where the default ambient particles for a creature's right hand should originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_RightHand_Autofill_Desc"		"Specifies where the default ambient particles for a creature's right hand should originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 	
 	"DOTA_Workshop_Attachment_LeftHand"			"Left Hand Bone Name"
-	"DOTA_Workshop_Attachment_LeftHand_Autofill_Desc"		"Specifies where the default ambient particles for a creature's left hand should originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_LeftHand_Autofill_Desc"		"Specifies where the default ambient particles for a creature's left hand should originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
+	
+
 	
 	
 	//LYCAN ULT and WOLVES
 	"DOTA_Workshop_Attachment_Lycan_Ult_Jaw"		"Lower Jaw Particle Bone Name"
-	"DOTA_Workshop_Attachment_Lycan_Ult_Jaw_Autofill_Desc"	"This attachment determines where the Wolf's default saliva particles originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_Lycan_Ult_Jaw_Autofill_Desc"	"This attachment determines where the Wolf's default saliva particles originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 	
 	"DOTA_Workshop_Attachment_Lycan_Ult_Mane"		"Mane Particle Bone Name"
-	"DOTA_Workshop_Attachment_Lycan_Ult_Mane_Autofill_Desc"	"This attachment determines where the Wolf's default ambient mane particles originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone names. You will have the option to reposition this attachment after compiling."
+	"DOTA_Workshop_Attachment_Lycan_Ult_Mane_Autofill_Desc"	"This attachment determines where the Wolf's default ambient mane particles originate. The default skeleton bone for this attachment has been filled in. If you are using a custom skeleton, you will need to change the bone name. You will have the option to reposition this attachment after compiling."
 	
 	"DOTA_Workshop_Attachment_Tail1"				"Tail 1 Bone name"
 	"DOTA_Workshop_Attachment_Tail2"				"Tail 2 Bone name"
@@ -4311,7 +4661,7 @@
 
 	"DOTA_Workshop_Attachment_RightEye_Autofill_Default_Desc"		"Specifies where on the model to place default particle effects intended for the Right Eye of a creature. The default skeleton bone for this attachment has been filled in. You will have the option to reposition this attachment after compiling."
 	
-	"DOTA_Workshop_Attachment_Wing_Particle_Autofill_Default_Desc"	"Attachment for default Wing Particle Effects. The default skeleton bone for these attachments have been filled in. You will have the option to reposition attachments after compiling."
+	"DOTA_Workshop_Attachment_Wing_Particle_Autofill_Default_Desc"	"Attachments for default Wing Particle Effects. The default skeleton bones for these attachments have been filled in. You will have the option to reposition attachments after compiling."
 		
 	"DOTA_Workshop_Attachment_Head_Autofill_Default_Desc"	"The default skeleton bone for this attachment has been filled in. You will have the option to reposition this attachment after compiling."
 	
@@ -4377,6 +4727,7 @@
 	"DOTA_Workshop_Mat0Desc"			"This is the set of files that combine to texture your geometry files."
 
 	"DOTA_Workshop_Animation_Spawn"				"Spawn"
+	"DOTA_Workshop_Animation_Spawn2"			"Spawn 2"
 	"DOTA_Workshop_Animation_FlyingCourier_Spawn"		"Flying Spawn"
 	"DOTA_Workshop_Animation_Spawn_Desc"			"It may help to have the unit's face angled slightly upward to read better from above in game view."
 	"DOTA_Workshop_Animation_Idle"				"Idle"
@@ -4409,9 +4760,11 @@
 	"DOTA_Workshop_Animation_FlyingCourier_Die_Desc"	"If your flying courier crashes into the ground on death, let it remain still for a few seconds and then animate it slowly sinking into the ground."
 	"DOTA_Workshop_Animation_Die2"				"Alternate Die"
 	"DOTA_Workshop_Animation_Attack"			"Attack"
-	"DOTA_Workshop_Animation_Attack_Desc"			"Attack animations must match the timing of the unit's default animations."
+	"DOTA_Workshop_Animation_Attack_Desc"			"Custom attack animations must match the timing of the unit's default attack animations."
 	"DOTA_Workshop_Animation_AttackB"			"Alternate Attack"
 	"DOTA_Workshop_Animation_AttackB_Desc"			"An alternate attack animation to randomly play instead of the ATTACK animation."
+	"DOTA_Workshop_Animation_Attack_Bite"			"Alternate Bite Attack"
+	"DOTA_Workshop_Animation_Attack_Bite_Desc"		"An alternate bite attack animation to randomly play instead of the ATTACK animation."
 	"DOTA_Workshop_Animation_Attack2"			"Offhand Attack"
 	"DOTA_Workshop_Animation_Attack2_Desc" 			"An alternate attack animation to randomly play instead of the ATTACK animation. Hit effects / projectiles will spawn from the OFFHAND ATTACK POINT attachment instead of the base ATTACK POINT."
 	"DOTA_Workshop_Animation_Attack2B"			"Offhand Alternate Attack"
@@ -4498,6 +4851,8 @@
 	"DOTA_Workshop_Preview_Desc_DragonKnight_Dragon_Item"			"Elder Dragons can only use Valve's default skeleton, joint positions, cloth and animations. Attack and cast animations may not play correctly for in-game preview. You will be able to preview more animations on this page using the animation drop-down list, though animation layers and wing cloth will not be enabled. Animation layers and cloth will be added later by Valve if the item ships."
 	
 	"DOTA_Workshop_Preview_Desc_Lone_Druid_True_Form_Item"			"Lone Druid Trueforms can only use Valve's default skeleton, joint positions, cloth and animations. Attack and cast animations may not play correctly for in-game preview. You will be able to preview more animations on this page using the animation drop-down list, though animation layers and cloth will not be enabled. Animation layers and cloth will be added later by Valve if the item ships."
+	
+	"DOTA_Workshop_Preview_Desc_Visage_Familiar_Item"			"Visage Familiars can only use Valve's default skeleton, joint positions, and animations. Attack animations may not play correctly for in-game preview. You will be able to preview more animations on this page using the animation drop-down list, though animation layers will not be enabled. Animation layers will be added later by Valve if the item ships."
 
 
 
@@ -4520,6 +4875,9 @@
 	//Dragon Knight Dragon
 	"DOTA_Workshop_Dragon_Knight_Dragon_Mesh_Lod1_Desc"			"Elder Dragons can only use Valve's default skeleton, joint positions, cloth and animations. This is the .DMX or .FBX file that contains the skinned geometry for your item that will be displayed in-game. Please model a mouth that can open and weight the lower jaw to the jaw bone since the dragon needs to open its mouth for attacks."
 	"DOTA_Workshop_Dragon_Knight_Dragon_Mesh_Lod0_Desc"			"This is the .DMX or .FBX file that contains the higher resolution skinned geometry for your item. It will be used in portrait, loadout and showcase views. If this entry is blank, in-game geometry will be used instead."
+	
+	//Visage Familiar
+	"DOTA_Workshop_Visage_Familiar_Mesh_Lod1_Desc"			"Custom Familiars can only use Valve's default skeleton, joint positions and animations. This is the .DMX or .FBX file that contains the skinned geometry for your item that will be displayed in-game."
 
 	
 	//No Anim
@@ -4899,7 +5257,15 @@
 	"DOTA_Popup_CardPack_ErrorFailedToFindPack"		"Failed to find the Player Card Pack that you are trying to open."
 	"DOTA_Popup_CardPack_ErrorNotCardPack"			"Attempted to open an item that was not a Player Card Pack."
 	"DOTA_Popup_CardPack_ErrorFailedCardCreate"		"Failed to create Player Cards"
-	"DOTA_Popup_CardPack_ClickToOpen"				"Click pack to open"
+	"DOTA_Popup_CardPack_ClickToOpen"				"Click to open"
+	"DOTA_Popup_CardPack_Opening"					"Opening Pack..."
+	
+	"DOTA_Popup_CardPack_Model_TI6"					"Fall 2016 Battle Pass"
+	"DOTA_Popup_CardPack_Model_PackCount"			"Pack of Five"
+	"DOTA_Popup_CardPack_Model_MainTitle"			"Player Cards"
+	"DOTA_Popup_CardPack_Model_SubTitle"			"For use in <i>Fantasy</i> Challenge Game"
+	"DOTA_Popup_CardPack_Model_MoreInfo"			"Contains one <font color='#AEAEAE'>Silver</font> or <font color='#A97B2A'>Gold</font> card with Stats Bonuses"
+		
 
 	"DOTA_PlayerCardBonus"			"{s:bonus_name}: <font color='#FFFFFF'>{s:bonus_value}</font>"
 	"DOTA_PlayerCardGoldCount"		"{i:gold_count} Gold"
@@ -4909,14 +5275,16 @@
 	"DOTA_PlayerCardPlayer"							"Player"
 	"DOTA_PlayerCardTeam"							"Team"
 	"DOTA_PlayerCardAngleTI6"						"International 2016 Player Card"
+	"DOTA_PlayerCardAngleFall2016"					"Fall 2016 Player Card"
 	"DOTA_PlayerCardsRecycleConfirmTitle"			"Recycle Player Card?"
-	"DOTA_PlayerCardsRecycleConfirmBody"			"This will destroy this player card in exchange for {i:card_dust_amount} card dust.  Proceed?"
+	"DOTA_PlayerCardsRecycleConfirmBody"			"This will destroy this player card in exchange for {i:card_dust_amount} card dust.<br><br>Proceed?"
+	"DOTA_PlayerCardsRecycleConfirmBodyInUse"		"This will destroy this player card in exchange for {i:card_dust_amount} card dust.<br><br><font color='#ff0000'>This card is in use in a Fantasy Roster!</font><br><br>Proceed?"
 	"DOTA_PlayerCardsRecycleResultErrorTitle"		"Error Recycling Player Card"
 	"DOTA_PlayerCardsRecycleResultErrorUnknown"		"Unknown error when recycling player card.  Please try again."
 	"DOTA_PlayerCardsRecycleResultErrorFindCard"	"Error finding player card to recycle."
 	"DOTA_PlayerCardsRecycleResultErrorNotCard"		"Item to recycle was not a player card."
 	"DOTA_PlayerCardsRecycleResultErrorDustCreate"	"Failed to create dust when attempting to recycle player card."
-	"DOTA_PlayerCardsRecycleResultErrorLocked"		"This card has been used in a locked day's roster, and cannot be recycled."
+	"DOTA_PlayerCardsRecycleResultErrorLocked"		"This card has been used in a locked day's roster."
 	"DOTA_PlayerCardsRecycleResultSuccessTitle"		"Recycled Player Card"
 	"DOTA_PlayerCardsRecycleResultSuccess"			"Successfully recycled player card into {i:card_dust_amount} card dust."
 	"DOTA_PlayerCardsBuyPackResultErrorTitle"		"Error Buying Player Card Pack"
@@ -4931,89 +5299,119 @@
 	"DOTA_PlayerCardBonusStatName4"					"Tower Kills"
 	"DOTA_PlayerCardBonusStatName5"					"Roshan Kills"
 	"DOTA_PlayerCardBonusStatName6"					"Teamfight"
-	"DOTA_PlayerCardBonusStatName7"					"Wards Planted"
+	"DOTA_PlayerCardBonusStatName7"					"Obs Wards Planted"
 	"DOTA_PlayerCardBonusStatName8"					"Camps Stacked"
 	"DOTA_PlayerCardBonusStatName9"					"Runes Grabbed"
 	"DOTA_PlayerCardBonusStatName10"				"First Blood"
 	"DOTA_PlayerCardBonusStatName11"				"Stuns"
+	"DOTA_PlayerCardBonusTooltip"					"This stat is receiving a bonus from the player card"
+	
+	"DOTA_PlayerCard_RosterLabel"					"Active Roster"
+	"DOTA_PlayerCard_RosterDesc"					"Card is active in an upcoming fantasy roster"
+	
+	"DOTA_PlayerCard_LockedLabel"					"Locked Roster"
+	"DOTA_PlayerCard_LockedDesc"					"Card has been used in a previous fantasy roster."
+	
 
 	"DOTA_PlayerCardsOpenPack"						"Open Player Card Pack"
-	"DOTA_PlayerCardsPackCount"						"{i:pack_count} Unopened Packs"
+	"DOTA_PlayerCardsBuyPack"						"Buy Player Card Pack - {m:pack_price}"
+	"DOTA_PlayerCardsPackCount"						"{i:pack_count}"
+	"DOTA_PlayerCardsPackCountFrozen"				"{i:pack_count_frozen}"
+	"DOTA_PlayerCardsPackUnopenedPacks"				"Unopened Packs"
 	"DOTA_PlayerCardsDustCount"						"{i:dust_amount} Player Card Dust"
 	"DOTA_PlayerCardsDustCountCurrent"				"Currently have {i:dust_amount} Player Card Dust"
-	"DOTA_PlayerCardsBuyPack"						"Trade {i:dust_price} Dust for Pack"
+	"DOTA_PlayerCardsCreatePack"					"Trade {i:dust_price} Dust for Pack"
 	"DOTA_PlayerCardsRecycle"						"Recycle Card"
-	"DOTA_PlayerCardsRecycleQ"						"Recycle?"
-	"DOTA_PlayerCard_Fantasy"						"Use Your Player Cards in your Fantasy Team"
+	"DOTA_PlayerCardsRecycleQ"						"Recycle: <font color='#C899FF'>{i:dust_value} Dust</font>"
+	"DOTA_PlayerCard_FantasyLabel"					"Use Your Player Cards in your "
+	"DOTA_PlayerCard_TeamSelectionLabel"			"Select Team Effects"
+	"DOTA_PlayerCard_TeamSelectionTooltip"			"After you’ve collected a complete set of Player Cards for a team, you can select to use that team’s special TP effects and :pro_team: emoticon.<br><br>Collecting a complete set of Silver or Gold Player Cards for a team will unlock upgraded versions of that team's effects and emoticon."
+	"DOTA_PlayerCard_Fantasy"						"Fantasy Team"
 	"DOTA_PlayerCard_Return"						"Return to All Player Cards"
 	"DOTA_PlayerCard_Dupe"							"Duplicate Card"
-	"DOTA_PlayerCard_Dupe_Tooltip"					"You alrady have a version of this card, so it can safely be recycled for dust"
+	"DOTA_PlayerCard_Dupe_Tooltip"					"You already own this card, it can safely be recycled for dust"
 	"DOTA_PlayerCard_PacksRemaining"				"{i:packs_remaining} Packs Remaining"
 	"DOTA_PlayerCard_OpenAnother"					"Open Another Pack"
+	"DOTA_PlayerCard_StatInfo" 						"Gold and Silver Cards always have different Stat Bonuses, even if you already own one of that player.  Recycle with care."
 
-	"DOTA_FantasyDayHeader"							"Complete your Fantasy lineup for each day of The International"
+	"DOTA_PlayerCard_RecycleDisabled"				"This card cannot be recycled. It has already been used in a locked day's fantasy roster."
+
+	"DOTA_FantasyDayHeader"							"Complete your Fantasy lineup for each day of The Boston Major"
 	"DOTA_FantasyWildCard"							"Wild\nCard"
 	"DOTA_FantasyGroupStage"						"Group\nStage"
 	"DOTA_FantasyMainEvent"							"Main\nEvent"
-	"DOTA_FantasyLockTime"							"Selections lock each day at 8am PDT"
+	"DOTA_FantasyLockTime"							"Selections lock each day at 10:00 a.m. EST"
 	"DOTA_FantasyCores"								"Cores"
+	"DOTA_FantasyOfflane"							"Offlane"
 	"DOTA_FantasySupports"							"Supports"
 	"DOTA_FantasyScore"								"Score"
 	"DOTA_FantasySelectCard"						"Select Card"
 	"DOTA_FantasyChangeCard"						"Change Card"
 	"DOTA_FantasyLeaderboardHeaderFriends"			"Friends"
-	"DOTA_FantasyLeaderboardHeaderGlobal"			"Global"
+	"DOTA_FantasyLeaderboardHeaderGlobal"			"Global Top 100"
 	"DOTA_FantasyLeaderboardScore"					"Total Score"
 	"DOTA_FantasyLeaderboardFullFriends"			"View full friend leaderboard"
 	"DOTA_FantasyLeaderboardFullGlobal"				"View full global leaderboard"
 	"DOTA_FantasyScoreDay"							"Score For This Day"
-	"DOTA_FantasyScoreTotal"						"Event Total to Date"
+	"DOTA_FantasyScoreTotal"						"Total Score to Date"
+	"DOTA_FantasyScorePercentile"					"Percentile"
 	"DOTA_FantasyPosition"							"Fantasy Position"
 	"DOTA_FantasyHelp"								"Fantasy\nChallenge\nIntro\nand\nRules"
 	"DOTA_FantasyCoreTooltip"						"Core includes players in carry and mid roles"
+	"DOTA_FantasyOfflaneTooltip"					"Offlane includes players who take the off lane"
 	"DOTA_FantasySupportTooltip"					"Support includes players who support their Core players"
+	"DOTA_FantasyLockUntilTimeH"					"Locks in\n{i:lock_number} hours"
+	"DOTA_FantasyLockUntilTimeD"					"Locks in\n{i:lock_number} days"
 
 	"DOTA_FantasyHelpTitle1"						"Open Player Card Packs"
-	"DOTA_FantasyHelpText1"							"Each pack contains 5 cards, 1 of which is guaranteed Silver or Gold.  Silver player cards have three random stat bonuses.  Gold have five bonuses."
+	"DOTA_FantasyHelpText1"							"Each pack contains five cards, one of which is guaranteed Silver or Gold.  Silver player cards have three random stat bonuses.  Gold have five bonuses."
 	"DOTA_FantasyHelpTitle2"						"Put Player Cards into your Fantasy Roster"
-	"DOTA_FantasyHelpText2"							"For each day of The International, set a Fantasy Roster made up of 3 Core Player Cards and 2 Support Player Cards."
+	"DOTA_FantasyHelpText2"							"For each day of The Boston Major, set a Fantasy Roster made up of two Core Player Cards, one Offlane Player Card, and two Support Player Cards."
 	"DOTA_FantasyHelpTitle3"						"Score Fantasy Points"
-	"DOTA_FantasyHelpText3"							"Players Cards on your Roster score you fantasy points based on how well they do that day's matches at The International."
+	"DOTA_FantasyHelpText3"							"Players Cards on your Roster score you fantasy points based on how well they do in that day's matches at The Boston Major."
 	"DOTA_FantasyHelpTitle4"						"Earn Battle Points"
-	"DOTA_FantasyHelpText4"							"After The International concludes, you will earn Battle Points based on how many fantasy points you've scored relative to the rest of the community."
+	"DOTA_FantasyHelpText4"							"After The Boston Major concludes, you will earn Battle Points based on how many fantasy points you've scored relative to the rest of the community."
 
-	"DOTA_FantasyHelpDetailsHeader"					"Details"
+	"DOTA_FantasyHelpDetailsHeader"					"Fantasy Challenge Details"
 	"DOTA_FantasyHelpDetailsSub1"					"Scoring Stats"
-	"DOTA_FantasyHelpDetailsSub1Text1"				"0.3 points per Kill"
-	"DOTA_FantasyHelpDetailsSub1Text2"				"10 points minus 0.3 points per death"
-	"DOTA_FantasyHelpDetailsSub1Text3"				"0.003 points per Last Hit/Deny"
-	"DOTA_FantasyHelpDetailsSub1Text4"				"0.002 points per GPM"
-	"DOTA_FantasyHelpDetailsSub1Text5"				"1 point per killing blow on a Tower"
-	"DOTA_FantasyHelpDetailsSub1Text6"				"1 point per killing blow on Roshan"
-	"DOTA_FantasyHelpDetailsSub1Text7"				"5 points times teamfight participation percentage"
-	"DOTA_FantasyHelpDetailsSub1Text8"				"0.5 points per Observer Ward placed"
-	"DOTA_FantasyHelpDetailsSub1Text9"				"0.5 points per Camp Stacked"
-	"DOTA_FantasyHelpDetailsSub1Text10"				"0.25 points per Rune taken or bottled"
-	"DOTA_FantasyHelpDetailsSub1Text11"				"4 points for the killing blow on First Blood"
-	"DOTA_FantasyHelpDetailsSub1Text12"				"0.05 points per second of Stun"
+	"DOTA_FantasyHelpDetailsSub1Text1"				"+ 0.3 points per Kill"
+	"DOTA_FantasyHelpDetailsSub1Text2"				"+ 3 points minus 0.3 points per death"
+	"DOTA_FantasyHelpDetailsSub1Text3"				"+ 0.003 points per Last Hit/Deny"
+	"DOTA_FantasyHelpDetailsSub1Text4"				"+ 0.002 points per GPM"
+	"DOTA_FantasyHelpDetailsSub1Text5"				"+ 1 point per killing blow on a Tower"
+	"DOTA_FantasyHelpDetailsSub1Text6"				"+ 1 point per killing blow on Roshan"
+	"DOTA_FantasyHelpDetailsSub1Text7"				"+ 3 points times teamfight participation percentage"
+	"DOTA_FantasyHelpDetailsSub1Text8"				"+ 0.5 points per Observer Ward placed"
+	"DOTA_FantasyHelpDetailsSub1Text9"				"+ 0.5 points per Camp Stacked"
+	"DOTA_FantasyHelpDetailsSub1Text10"				"+ 0.25 points per Rune taken or bottled"
+	"DOTA_FantasyHelpDetailsSub1Text11"				"+ 4 points for the killing blow on First Blood"
+	"DOTA_FantasyHelpDetailsSub1Text12"				"+ 0.05 points per second of Stun"
 	"DOTA_FantasyHelpDetailsSub2"					"Player Cards"
-	"DOTA_FantasyHelpDetailsSub2Text1"				"Every Player Card Pack has 5 cards, including 1 Silver or Gold card"
-	"DOTA_FantasyHelpDetailsSub2Text2"				"Silver and Gold Card stat bonuses randomly range from +5% to +25%"
-	"DOTA_FantasyHelpDetailsSub2Text3"				"Silver Cards have three bonuses, Gold Cards have five bonuses"
-	"DOTA_FantasyHelpDetailsSub2Text4"				"Multiple cards of the same player cannot be used on the same day"
-	"DOTA_FantasyHelpDetailsSub2Text5"				"Each day's roster is unique, and a single player card can be used on any number of days"
+	"DOTA_FantasyHelpDetailsSub2Text1"				"Every Player Card Pack contains five cards, including one Silver or Gold card."
+	"DOTA_FantasyHelpDetailsSub2Text2"				"Silver and Gold Card stat bonuses randomly range from +5% to +25%."
+	"DOTA_FantasyHelpDetailsSub2Text3"				"Silver Cards have three bonuses, Gold Cards have five bonuses."
+	"DOTA_FantasyHelpDetailsSub2Text4"				"Multiple cards of the same player cannot be used on the same day."
+	"DOTA_FantasyHelpDetailsSub2Text5"				"Each day's roster is unique, and a single player card can be used on any number of days."
 	"DOTA_FantasyHelpDetailsSub3"					"Scoring Matches"
-	"DOTA_FantasyHelpDetailsSub3Text1"				"Matches at The International count towards fantasy points"
-	"DOTA_FantasyHelpDetailsSub3Text2"				"The highest scoring two games of a best-of-three count towards a player's score"
-	"DOTA_FantasyHelpDetailsSub3Text3"				"The highest scoring three games of a best-of-five count towards a player's score"
-	"DOTA_FantasyHelpDetailsSub3Text4"				"Rosters lock at the start of each day at 8am PDT"
+	"DOTA_FantasyHelpDetailsSub3Text1"				"Matches at The Boston Major count towards fantasy points."
+	"DOTA_FantasyHelpDetailsSub3Text2"				"The highest scoring two games of a best-of-three count towards a player's score."
+	"DOTA_FantasyHelpDetailsSub3Text3"				"The highest scoring three games of a best-of-five count towards a player's score."
+	"DOTA_FantasyHelpDetailsSub3Text4"				"Rosters lock at the start of each day at 10:00 a.m. EST."
+	"DOTA_FantasyHelpDetailsSub4"					"Player Card Packs"
+	"DOTA_FantasyHelpDetailsSub4Text1"				"Battle Pass owners receive 12 Player Card Packs."
+	"DOTA_FantasyHelpDetailsSub4Text2"				"Additional Player Card Packs can be directly purchased from the Player Cards page."
+	"DOTA_FantasyHelpDetailsSub4Text3"				"Player cards and Player Card Packs expire with the expiration of the Fall Battle Pass."
+	"DOTA_FantasyHelpDetailsSub5"					"Rewards"
+	"DOTA_FantasyHelpDetailsSub5Text1"				"The top 10% of all scoring Fantasy Teams receive 8,000 Battle Points"
+	"DOTA_FantasyHelpDetailsSub5Text2"				"The top 25% of all scoring Fantasy Teams receieve 4,000 Battle Points"
+	"DOTA_FantasyHelpDetailsSub5Text3"				"The top 50% of all scoring Fantasy Teams receieve 2,000 Battle Points"
 
 	"DOTA_FantasySelectHeader"						"Select a Player Card for this Slot"
 	"DOTA_FantasyTextFilter"						"Filter by Player Name"
-	"DOTA_FantasyDropdownFilter"					"All Teams"
+	"DOTA_FantasyDropdownFilter"					"ALL TEAMS"
 	
-
-
+	"DOTA_FantasyRosterLocked"						"Roster Locked"
+	
 	"DOTA_Event_Level"	"Level"
 
 	"DOTA_PreviewEmoticons_Title"		"Emoticons"
@@ -5025,6 +5423,7 @@
 	"DOTA_EventName_FallMajor2015"		"Fall 2015"
 	"DOTA_EventName_WinterMajor2016"	"Winter 2016 Battle Pass"
 	"DOTA_EventName_International2016"	"The International 2016 Battle Pass"
+	"DOTA_EventName_FallMajor2016"		"Fall 2016 Battle Pass"
 	
 	"DOTA_DB_SeasonPass_PrizePool"     "Current Prize Pool"
 
@@ -5038,6 +5437,10 @@
 
 	"DOTA_Generic_Popup_Title"				"{s:generic_popup_title}"
 	"DOTA_Generic_Popup_Body"				"{s:generic_popup_body}"
+	"GenericConfirmText_Label"				"Enter '{s:confirmation_code}' to confirm."
+
+	"DOTA_Home_Fall_BattlePass_NotOwned"				"The Fall 2016 Battle Pass is Here"
+	"DOTA_Home_Fall_BattlePass_NeedsActivate"		"You own a Fall 2016 Battle Pass"
 
 	"DOTA_Home_BattlePass_NotOwned"				"The International 2016 Battle Pass is Here"
 	"DOTA_Home_BattlePass_NotOwned_Button"		"Look Inside"
@@ -5048,6 +5451,7 @@
 	"DOTA_Home_BattlePass_Unclaimed_Singular"		"{d:unclaimed_rewards} Unclaimed Reward"
 	"DOTA_Home_BattlePass_Unclaimed_Plural"		"{d:unclaimed_rewards} Unclaimed Rewards"
 	"DOTA_Home_BattlePass_UnclaimedDescription"		"Click here to claim them from the reward path."
+	"DOTA_Home_BattlePass_ShortFilmContest"		"Short Film Contest"
 
 	"BattlePass_LevelUp_Header"		"Congratulations!"
 	"BattlePass_LevelUp_Body"		"Your Battle Pass has now reached:"
@@ -5245,6 +5649,7 @@
 	"DOTA_CacheTreasure_MissingCompendium_Fall2015"		"You must own a Fall Season Compendium 2015 in order to purchase these treasures."
 	"DOTA_CacheTreasure_MissingCompendium_Winter2016"		"You must own a Winter 2016 Battle Pass in order to purchase these treasures."
 	"DOTA_CacheTreasure_MissingCompendium_Spring2016"		"You must own an International 2016 Battle Pass in order to purchase this item."
+	"DOTA_CacheTreasure_MissingCompendium_Fall2016"		"You must own a Fall 2016 Battle Pass in order to purchase these treasures."
 	"DOTA_CacheTreasure_MissingCompendiumOK"	"More Details"
 	
 	"DOTA_SplashAd_FallMajorCompendium_Title"			"Get the Fall Season Compendium"
@@ -5291,6 +5696,24 @@
 	"FrontPage_Debut_Arcana_Zeus_Title"					"Tempest Helm of the Thundergod"
 	"FrontPage_Debut_Arcana_Zeus_Desc"					"The faithless shall tremble as true thunder rolls across the fields of battle!"
 	
+	"FrontPage_Debut_Underlord_Title"					"Underlord"
+	"FrontPage_Debut_Underlord_Header" 					"New Hero"
+	"FrontPage_Debut_Underlord_Desc"					"Conjure waves of abyssal flame to immolate enemies held paralyzed in your spiteful grip. Feast upon the carnage of battle, gaining strength as foes perish around you, their attacks diminished by your very presence. Tear a rift in reality to teleport yourself and your teammates across the map, delivering bloody retribution to any who would defy the will of Vrogros the Underlord."	
+
+	"FrontPage_Debut_Underlord_Cell_Desc"				"The abyssal invader steps through his Dark Rift, eager for new lands to conquer. Underlord arrives, bringing with him a new Post-Game Summary and the addition of Teammate Stats."
+	"FrontPage_New_Update"								"New Update"
+	"FrontPage_Update_Dark_Rift"						"Dark Rift Update"
+	
+	
+	"FrontPage_Debut_MonkeyKing_Desc"					"Always in search of a good fight, Monkey King travels atop the trees aiming to spring from leafy cover and surprise his enemies. Calling upon an army of monkey soldiers to overwhelm opponents, this agile trickster revels in the chaos of battle, ready to slam his legendary staff down on any hopes of escape."	
+	"FrontPage_Debut_Read_Comic"						"Read the Comic"
+	
+	"FrontPage_Fall_2016_BattlePass_Desc"               "Filled with quests, treasures, and rewards, the Fall 2016 Battle Pass is your companion for the Dota 2016 fall season."
+	"FrontPage_Fall_2016_Treasure2_Desc"                "Now available for Battle Pass owners to earn as a Battle Level reward or purchase in the Dota 2 store. Contains item sets for Lion, Silencer, Storm Spirit, Dark Seer, and Treant Protector, as well as escalating odds to unlock a Very Rare Spirit Breaker item set or Extremely Rare Juggernaut item set that includes a new critical attack animation."
+	"FrontPage_Fall_2016_New_Fall"                      "New for Fall"
+	"FrontPage_Fall_2016_Treasure3_Desc"                "Now available for Battle Pass owners to earn as a Battle Level reward or purchase in the Dota 2 store. Contains item sets for Ember Spirit, Templar Assassin, Lich, Bloodseeker, and Winter Wyvern, as well as escalating odds to unlock a Very Rare Undying item set that includes a special Flesh Golem or Extremely Rare Shadow Fiend item set."
+	"FrontPage_Fall_2016_Treasure4_Desc"                "Now available for Battle Pass owners to earn as a Battle Level reward or purchase in the Dota 2 store. Contains item sets for Wraith King, Meepo, Invoker, Nature's Prophet, and Luna, as well as escalating odds to unlock a Rare Lycan item set or Extremely Rare Alchemist item set that includes a new Unstable Concoction spell effect."
+	
 	"Debut_Arcana_Zeus_Title" 								"Tempest Helm of the Thundergod"
 	"Debut_Arcana_Zeus_Subtitle" 							"Item for Zeus"
 	"Debut_Arcana_Zeus_Lore" 								"Forged by the Hammers of Celestarr, this mighty helm feels at home resting across the brow of the Lord of Heaven himself."
@@ -5303,6 +5726,55 @@
 	"Debut_Arcana_Zeus_Feature6" 							"Animated chat emoticon"
 	"Debut_Arcana_Zeus_Feature7" 							"A tempest-cloud chariot to carry His Majesty"
 	"Debut_Arcana_Zeus_Exalted"								"Purchase by December 31st 2015, to receive as 'EXALTED' Quality"
+	
+	
+	
+	"Debut_Arcana_MonkeyKing_Title" 							"Great Sage's Reckoning"
+	"Debut_Arcana_MonkeyKing_Subtitle" 							"item for Monkey King"
+	"Debut_Arcana_MonkeyKing_Arcana_Subtitle" 							"Arcana item for Monkey King"
+	"Debut_Arcana_MonkeyKing_Lore" 								"Relive three epic trials from his earliest adventures with the Great Sage's Reckoning."
+	"Debut_Arcana_MonkeyKing_Equip" 							"When equipped, this item grants these custom upgrades to Monkey King"
+	"Debut_Arcana_MonkeyKing_Feature1" 							"New base model, texture, and all-new animations"
+	"Debut_Arcana_MonkeyKing_Feature2" 							"Dynamic Style that changes according to the level of Wukong's Ultimate"
+	"Debut_Arcana_MonkeyKing_Feature3" 							"A cloud-riding run animation when travelling vast distances in a short period of time"
+	"Debut_Arcana_MonkeyKing_Feature4" 							"Custom Portrait per Form, hero icon, minimap icon"
+	"Debut_Arcana_MonkeyKing_Feature5" 							"Altered Voice and additional voice responses for style changes and cloud animation"
+	"Debut_Arcana_MonkeyKing_Feature6" 							"Animated chat emoticon"
+	"Debut_Arcana_MonkeyKing_Feature7" 							"Arcana Loading Screen"
+	"Debut_Arcana_MonkeyKing_Feature7" 							"Custom Taunt"
+	"Debut_Arcana_MonkeyKing_Exalted"							"Purchase by January 31st 2017, to receive as 'EXALTED' Quality"
+	
+	"Debut_Arcana_MonkeyKing_Prev"						"Previous Form"
+	"Debut_Arcana_MonkeyKing_Next"						"Next Form"
+	
+	
+	"Debut_Arcana_MonkeyKing_Form1" 							"Form 1"
+	"Debut_Arcana_MonkeyKing_Form2" 							"Form 2"
+	"Debut_Arcana_MonkeyKing_Form3" 							"Form 3"
+	"Debut_Arcana_MonkeyKing_Form4" 							"Form 4"
+	
+	"Debut_Arcana_MonkeyKing_Form1_Name" 								"Timeless Tale"
+	"Debut_Arcana_MonkeyKing_Form2_Name" 								"Rumble in the Deep"
+	"Debut_Arcana_MonkeyKing_Form3_Name" 								"Immortal Path"
+	"Debut_Arcana_MonkeyKing_Form4_Name" 								"King's Crubible"
+	
+	
+	"Debut_Arcana_MonkeyKing_Form1_Lore" 								"The oldest tales say he hatched from a magic stone, bursting one day from a massive boulder that had borne silent witness to the entirety of creation. But only children and fools put stock in such things."
+	"Debut_Arcana_MonkeyKing_Form2_Lore" 								"To seek a weapon worthy of his talents, Sun Wukong called upon the King of the Eastern Seas, known to hoard many great treasures lost to the lands above. He would find it is not treasure alone hiding in the blackest depths."
+	"Debut_Arcana_MonkeyKing_Form3_Lore" 								"Not content to live as the greatest warrior of his own time, Sun Wukong traversed the path to the underworld to steal his name from the Book of Life and Death and become a living legend for all of time. But nothing comes without its price."
+	"Debut_Arcana_MonkeyKing_Form4_Lore" 								"Seeking to restore balance to nature and prevent further crimes, Sun Wukong's enemies conspired to lock him in a furnace, intending to purge his heavenly powers in the purifying flames of the Eternal Crucible. The flames only made him stronger."
+	
+	"FrontPage_700Subtitle" 										"A New Chapter is Beginning"
+	"FrontPage_700Subtitle2" 										"Find out more"
+	
+	"FrontPage_MonkeyKing1" 										"Monkey King has Arrived"
+	"FrontPage_MonkeyKing2" 										"New Hero to the Dota Universe"
+
+	"Debut_Arcana_MonkeyKing_NewHero"			"New Hero"
+	"Debut_Arcana_MonkeyKing_BaseStyle"			"Base"
+	"Debut_Arcana_MonkeyKing_OceanStyle"		"Ocean"
+	"Debut_Arcana_MonkeyKing_UnderworldStyle"	"Underworld"
+	"Debut_Arcana_MonkeyKing_FurnaceStyle"		"Furnace"
 
 	"FrontPage_VideoStream_Live"						"Live"
 	"FrontPage_VideoStream_Teams"						"{s:team_1} vs {s:team_2}"
@@ -5310,6 +5782,7 @@
 	"FrontPage_VideoStream_GameState_Series"			"{s:stage_name} - Game {i:game_number} / {i:games_total}"
 	"FrontPage_VideoStream_Watch"						"Watch In-Game"
 	"FrontPage_VideoStream_WatchInBrowser"				"Watch in Browser"
+	"FrontPage_VideoStream_PrevDayWatchInBrowser"		"Watch Earlier Matches in Browser"
 	"FrontPage_VideoStream_BroadcastInProgress"			"Broadcast is Currently in Progress"
 	"FrontPage_VideoStream_BroadcastWillResume"			"Broadcast will Resume when Matches are in Progress"
 	"FrontPage_VideoStream_WatchLiveInGame"				"Watch Live In-Game"
@@ -5320,8 +5793,16 @@
 	"FrontPage_VideoStream_UpcomingMatchSpoilerBlock"	"<span class=\"UpcomingMatchPrefix\">Next Match:</span> {s:stage_name}"
 	"FrontPage_VideoStream_ViewBrackets"				"View Current Brackets"
 
+	"FrontPage_VideoStream_Boston2016_Line1"				"Main Event: December 7 - December 10, 2016"
+	"FrontPage_VideoStream_Boston2016_Line2"				"Wang Theatre, Boston, United States"
+
+
 	"FrontPage_VideoStream_Manila2016_Line1"				"Main Event: June 6 - June 12, 2016"
 	"FrontPage_VideoStream_Manila2016_Line2"				"Mall of Asia Arena, Manila, Philippines"
+	
+	"FrontPage_VideoStream_International2016_Line1"		"<b><font color='#838383'>Wild Card:</font></b> Aug 2, 2016  <b><font color='#838383'>Group Stage:</font></b> Aug 3 - Aug 5, 2016"
+	"FrontPage_VideoStream_International2016_Line2"		"<b><font color='#838383'>Main Event:</font></b> Aug 8-Aug 13, 2016 <i><font color='#838383'>Key Arena - Seattle, WA</font></i>"
+	
 
 	"DOTA_ViolatorNew"									"NEW"
 
@@ -5378,8 +5859,8 @@
 	"DOTA_Compendium_SecondaryTabHeader_Overview"		"Overview"
 	"DOTA_Compendium_SecondaryTabHeader_Recap"			"Recap"
 	"DOTA_Compendium_SecondaryTabHeader_PlayerCards"	"Player Cards"
-	"DOTA_Compendium_SecondaryTabHeader_TI6Predictions"	"Predictions"
-	"DOTA_Compendium_SecondaryTabHeader_TI6Bracket"		"Bracket"
+	"DOTA_Compendium_SecondaryTabHeader_Predictions"	"Predictions"
+	"DOTA_Compendium_SecondaryTabHeader_Bracket"		"Bracket"
 	"DOTA_Compendium_SecondaryTabHeader_Fantasy"		"Fantasy Challenge"
 	"DOTA_Compendium_SecondaryTabHeader_Teams"			"Teams"
 	"DOTA_Compendium_SecondaryTabHeader_Players"		"Players"
@@ -5387,8 +5868,13 @@
 	"DOTA_Compendium_SecondaryTabHeader_Qualifiers"		"Qualifiers"
 	"DOTA_Compendium_SecondaryTabHeader_GroupStage"		"Group Stage"
 	"DOTA_Compendium_SecondaryTabHeader_Playoffs"		"Playoffs"
-	"DOTA_Compendium_SecondaryTabHeader_Predictions"	"Predictions"
-	"DOTA_Compendium_SecondaryTabHeader_TI6ComingSoon"		"The International 2016"
+	"DOTA_Compendium_SecondaryTabHeader_RegionalPredictions"	"Regional Predictions"
+	"DOTA_Compendium_SecondaryTabHeader_InvitePredictions"	"Invite Predictions"
+	"DOTA_Compendium_SecondaryTabHeader_Invites"		"Invites"
+	"DOTA_Compendium_SecondaryTabHeader_TI6ComingSoon"	"The International 2016"
+	"DOTA_Compendium_SecondaryTabHeader_FallComingSoon"	"The Boston Major"
+	"DOTA_Compendium_SecondaryTabHeader_TrueSight"		"True Sight"
+	"DOTA_Compendium_SecondaryTabHeader_Casters"		"Casters"
 	"DOTA_Compendium_SecondaryTabHeader_ManilaPredictions"	"Manila >>"
 	"DOTA_Compendium_MakePrediction"					"Make Prediction"
 	"DOTA_Compendium_ChangePrediction"					"Change Prediction"
@@ -5406,6 +5892,9 @@
 	"DOTA_Compendium_PredictionsStartIn"				"Predictions open in"
 	"DOTA_Compendium_PredictionsLockIn"					"Predictions lock in"
 	"DOTA_Compendium_PredictionsLocked"					"Predictions are locked"
+	"DOTA_Compendium_Invites_Countdown"					"{i:days} days \n{s:hours}:{s:minutes}:{s:seconds}"
+	"DOTA_Compendium_Invites_ToBeDetermined"			"TBD"
+	"DOTA_Compendium_Invites_OpenQualifiers"			"Open Qualifiers #{d:open_number}"
 	"DOTA_Compendium_Predictions_ResetTime"		"{i:reset_days}D {s:reset_hours}H {s:reset_minutes}M {s:reset_seconds}S"
 	"DOTA_Compendium_Rank"						"Rank"
 	"DOTA_Compendium_Prediction"				"Prediction"
@@ -5413,6 +5902,7 @@
 	"DOTA_Compendium_Votes"						"Votes"
 	"DOTA_Compendium_Currently"					"Current Result: <span class=\"ResultValue\">{s:result_value}</span>"
 	"DOTA_Compendium_Winter2016Finals"			"Grand Finals March 6th"
+	"DOTA_Compendium_InvitePredictions"			"Predict all 8 invites correctly to earn 2000 Battle Points"
 	"DOTA_Compendium_NA"			"Americas"
 	"DOTA_Compendium_EU"			"Europe"
 	"DOTA_Compendium_CN"			"China"
@@ -5434,9 +5924,15 @@
 	"DOTA_Compendium_Predictions_Third_CN_Team"		"Wildcard"
 	"DOTA_Compendium_Predictions_Third_SEA_Team"	"Wildcard"
 	"DOTA_Compendium_Predictions_Second_Qualifier" "Qualifier Team #2"
+	"DOTA_Compendium_DirectInvites"				"Direct Invites"
+	"DOTA_Compendium_RegionalQualifiers"		"Regional Qualifiers"
 	
 
-	"DOTA_Compendium_Predictions_Games_In_Tournament"		"Total number of <b>Games Played</b>"
+	"DOTA_Compendium_Predictions_Games_In_Tournament"		"Total number of <b>Games Played</b> in the main event"
+	"DOTA_Compendium_Predictions_Games_In_Tournament_b1"	"41 to 47"
+	"DOTA_Compendium_Predictions_Games_In_Tournament_b2"	"48 to 50"
+	"DOTA_Compendium_Predictions_Games_In_Tournament_b3"	"51 to 53"
+	"DOTA_Compendium_Predictions_Games_In_Tournament_b4"	"54 to 60"
 	"DOTA_Compendium_Predictions_Games_In_Tournament_a1"	"77 to 81"
 	"DOTA_Compendium_Predictions_Games_In_Tournament_a2"	"82 to 87"
 	"DOTA_Compendium_Predictions_Games_In_Tournament_a3"	"88 to 92"
@@ -5534,6 +6030,7 @@
 	"DOTA_Compendium_Predictions_Least_DPG"				"Hero with lowest <b>Death</b> avg<br /><i>(minimum 5 games played)</i>"
 	"DOTA_Compendium_Predictions_Most_CSPG"				"Hero with highest <b>Last Hit</b> avg<br /><i>(minimum 5 games played)</i>"
 	"DOTA_Compendium_Predictions_Most_GPM"				"Hero with highest <b>GPM</b> avg<br /><i>(minimum 5 games played)</i>"
+	"DOTA_Compendium_Predictions_Most_XPM"				"Hero with highest <b>XPM</b> avg<br /><i>(minimum 5 games played)</i>"
 	"DOTA_Compendium_Predictions_Most_Kills_Game"		"Hero with most <b>Kills</b> in a game"
 	"DOTA_Compendium_Predictions_Most_CS_Game"			"Hero with most <b>Last Hits</b> in a game"
 	
@@ -5545,6 +6042,7 @@
 	"DOTA_Compendium_Predictions_Shortest_Match"			"Team that wins the <b>Shortest</b> game"
 	"DOTA_Compendium_Predictions_Most_Flexible_Team"		"Team that picks the <b>Most</b> different heroes"
 	"DOTA_Compendium_Predictions_Least_Flexible_Team"		"Team that picks the <b>Fewest</b> different heroes"
+	"DOTA_Compendium_Predictions_Least_Flexible_Team_Min"		"Team that picks the <b>Fewest</b> different heroes (minimum 10 games played)"
 	"DOTA_Compendium_Predictions_KPG_Team"					"Team with highest <b>Kill</b> avg"
 	"DOTA_Compendium_Predictions_Longest_Team"				"Team with highest <b>Game Length</b> avg"
 
@@ -5740,7 +6238,7 @@
 	"DOTA_Compendium_Predictions_TPCancelledByTimeMid_a3"	"2"
 	"DOTA_Compendium_Predictions_TPCancelledByTimeMid_a4"	"3+"
 
-	"DOTA_Compendium_Predictions_FirstPlayerBuyBlink"		"First player to buy a blink dagger."
+	"DOTA_Compendium_Predictions_FirstPlayerBuyBlink"		"First player to buy a Blink Dagger."
 
 	"DOTA_Compendium_Predictions_BlinkDaggersByTimeMid"		"Total number of blink daggers purchased by 25:00."
 	"DOTA_Compendium_Predictions_BlinkDaggersByTimeMid_a1"	"0-2"
@@ -5752,6 +6250,10 @@
 	"DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a2"	"51-175"
 	"DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a3"	"176-300"
 	"DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a4"	"301+"
+
+	"DOTA_Compendium_Predictions_RewardsInfoHeader" "Rewards increase based on how many predictions you get correct."
+	"DOTA_Compendium_Predictions_RewardsInfoA"  "1-2  = 100pts<br />3-4 = 500pts<br />5-8 = 2,000pts"
+	"DOTA_Compendium_Predictions_RewardsInfoB"  "9-11 = 5,000pts<br />12-14= 10,000pts<br />15 = 20,000pts"
 
 	"DOTA_InGamePrediction_NoPredictionsSubmitted"		"No prediction submitted"
 	"DOTA_InGamePrediction_NoResultsYet"				"No Results Yet"
@@ -5827,6 +6329,11 @@
 	"DOTA_SeasonPass_Rewards_Treasure3"					"Winter Treasure III"
 	"DOTA_SeasonPass_Rewards_Treasure4"					"Winter Treasure IV"
 	
+	"DOTA_SeasonPass_Fall_Treasure1"					"Fall 2016 Treasure I"
+	"DOTA_SeasonPass_Fall_Treasure2"					"Fall 2016 Treasure II"
+	"DOTA_SeasonPass_Fall_Treasure3"					"Fall 2016 Treasure III"
+	"DOTA_SeasonPass_Fall_Treasure4"					"Fall 2016 Treasure IV"
+	
 	"DOTA_SeasonPass_Rewards_Coming_Soon"				"Coming Soon"
 	
 	"DOTA_SeasonPass_Rewards_Trophies"					"Trophies"
@@ -5856,15 +6363,16 @@
 	"DOTA_SeasonPassAchievement_Achievements_Points"	"{u:points}"
 	"DOTA_SeasonPass_Prediction_Remaining_Time"			"Locks in \n{i:reset_days}D {i:reset_hours}H {i:reset_minutes}M"
 
-	"DOTA_Wheel_ItemCategory"							"{s:category}"
-	"DOTA_Wheel_Set"									"Set"
+	"DOTA_Wheel_ItemCategory"						"{s:category}"
+	"DOTA_Wheel_Set"								"Set"
 	"DOTA_Wheel_Arcana"								"Arcana"
-	"DOTA_Wheel_Infuser"								"Infuser"
-	"DOTA_Wheel_Treasure"								"Treasure"
-	"DOTA_Wheel_Courier"								"Courier"
+	"DOTA_Wheel_Infuser"							"Infuser"
+	"DOTA_Wheel_Treasure"							"Treasure"
+	"DOTA_Wheel_Courier"							"Courier"
 	"DOTA_Wheel_Effigy"								"Effigy"
 	"DOTA_Wheel_ImmortalTreasure"					"Immortal"
-	"DOTA_Wheel_Announcer"					"Announcer"
+	"DOTA_Wheel_FallTreasure"						"Fall Treasure"
+	"DOTA_Wheel_Announcer"							"Announcer"
 	"DOTA_Wheel_Sorry"								"We are sorry, we cannot give you a reward at this time."
 	"DOTA_Wheel_Spin_Later"							"A connection to the Game coordinator could not be established. Please try again later."
 
@@ -5932,7 +6440,10 @@
 	"DOTA_Compendium_EventHasEnded"						"Winter 2016 Battle Pass has expired"
 	"DOTA_Compendium_EventEnds_Profile"					"Battle Pass expired"
 
-	"DOTA_TI6_BattlePass_EndDate"						"The International 2016 Battle Pass Event Ends August 13, 2016"
+	"DOTA_Fall2016_BattlePass_EndDate"					"The Fall Major 2016 Battle Pass Event Ends Monday January 2nd, 2017"
+	"DOTA_TI6_BattlePass_EndDate"						"The International 2016 Battle Pass Event Ends August 31, 2016"
+	"DOTA_TI6_BattlePass_EndDate_Purchase"				"Last day to purchase Battle Pass Levels is August 13, 2016"
+	"DOTA_TI6_BattlePass_Ended"							"The International 2016 Battle Pass has ended"
 	"DOTA_TI6_BattlePass_Level1Rewards"					"Level 1 Rewards"
 	"DOTA_TI6_BattlePass_Level225Rewards"				"Unlocks New Quest Path"
 	"DOTA_TI6_BattlePass_BattlePointLog"				"Battle Point Log"
@@ -6033,6 +6544,16 @@
 	"DOTA_SpringMajor2016_Achievement_30_Correct_Predictions_Name"			"Battle Prophet"
 	"DOTA_SpringMajor2016_Achievement_30_Correct_Predictions_Description"	"Correctly Guess 30 Regional Qualifier Battle Predictions"
 
+	"DOTA_SpringMajor2016_Achievement_10_Correct_Predictions_Group_Name"			"Group Stage Connoisseur"
+	"DOTA_SpringMajor2016_Achievement_10_Correct_Predictions_Group_Description"		"Correctly Guess 10 Group Stage Battle Predictions"
+
+	"DOTA_SpringMajor2016_Achievement_10_Correct_Predictions_Main_Event_Name"			"Game Genius"
+	"DOTA_SpringMajor2016_Achievement_10_Correct_Predictions_Main_Event_Description"		"Correctly Guess 10 Main Event Battle Predictions"
+	"DOTA_SpringMajor2016_Achievement_50_Correct_Predictions_Main_Event_Name"			"Perfect Predictor"
+	"DOTA_SpringMajor2016_Achievement_50_Correct_Predictions_Main_Event_Description"		"Correctly Guess 50 Main Event Battle Predictions"
+	"DOTA_SpringMajor2016_Achievement_100_Correct_Predictions_Main_Event_Name"			"Main Event Maestro"
+	"DOTA_SpringMajor2016_Achievement_100_Correct_Predictions_Main_Event_Description"		"Correctly Guess 100 Main Event Battle Predictions"
+
 		
 	"DOTA_SpringMajor2016_Achievement_Open_7_Treasure_I_Name"				"Treasure I Initiate"
 	"DOTA_SpringMajor2016_Achievement_Open_7_Treasure_I_Description"		"Open 6 Treasure I"
@@ -6055,6 +6576,98 @@
 	"DOTA_SpringMajor2016_Achievement_Open_7_Collectors_Cache_Description"		"Open 7 Collector's Caches"
 	"DOTA_SpringMajor2016_Achievement_Open_13_Collectors_Cache_Name"			"Cache Completionist"
 	"DOTA_SpringMajor2016_Achievement_Open_13_Collectors_Cache_Description"		"Open 13 Collector's Caches"
+
+	"DOTA_SpringMajor2016_Achievement_Open_1_Trove_Carafe_Name"				"Carafe Initiate"
+	"DOTA_SpringMajor2016_Achievement_Open_1_Trove_Carafe_Description"		"Open 1 Trove Carafe"
+	"DOTA_SpringMajor2016_Achievement_Open_5_Trove_Carafe_Name"				"Carafe Completionist"
+	"DOTA_SpringMajor2016_Achievement_Open_5_Trove_Carafe_Description"		"Open 5 Trove Carafes"
+
+	"DOTA_SpringMajor2016_Achievement_Open_1_Lockless_Luckvase_Name"			"Luckvase Initiate"
+	"DOTA_SpringMajor2016_Achievement_Open_1_Lockless_Luckvase_Description"		"Open 1 Lockless Luckvase"
+	"DOTA_SpringMajor2016_Achievement_Open_4_Lockless_Luckvase_Name"			"Luckvase Completionist"
+	"DOTA_SpringMajor2016_Achievement_Open_4_Lockless_Luckvase_Description"		"Open 4 Lockless Luckvase"
+
+
+	"DOTA_FallMajor2016_Achievement_Complete_1_Questline_Name"				"Stayed on the Path"
+	"DOTA_FallMajor2016_Achievement_Complete_1_Questline_Description"		"Complete the final Quest of any of the main Quest Paths"
+	"DOTA_FallMajor2016_Achievement_Complete_All_Questlines_Name"			"Triple Threat"
+	"DOTA_FallMajor2016_Achievement_Complete_All_Questlines_Description"	"Complete the final Quest of all three main Quest Paths"
+		  
+	"DOTA_FallMajor2016_Achievement_Complete_All_Quests_Name"				"Every Single One"
+	"DOTA_FallMajor2016_Achievement_Complete_All_Quests_Description"		"Complete all 45 Quests on the three main Quest Paths with at least 1 star"
+	"DOTA_FallMajor2016_Achievement_Complete_All_Quests_3_Star_Name"		"Going Star Crazy"
+	"DOTA_FallMajor2016_Achievement_Complete_All_Quests_3_Star_Description"		"Complete all 45 Quests on the three main Quest Paths with 3 stars"
+		  
+	"DOTA_FallMajor2016_Achievement_Win_A_Wager_Name"						"Still Got It"
+	"DOTA_FallMajor2016_Achievement_Win_A_Wager_Description"				"Win a wager"
+	"DOTA_FallMajor2016_Achievement_Win_6000xp_Wagering_Name"				"Hot Hand"	
+	"DOTA_FallMajor2016_Achievement_Win_6000xp_Wagering_Description"		"Win 6000 BP by wagering"
+	"DOTA_FallMajor2016_Achievement_Win_10000xp_Wagering_Name"				"No Such Thing as a Gamble"	
+	"DOTA_FallMajor2016_Achievement_Win_10000xp_Wagering_Description"		"Win 15000 BP by wagering"
+		  
+	"DOTA_FallMajor2016_Achievement_Tip_A_Player_Name"						"Commendable Notion"	
+	"DOTA_FallMajor2016_Achievement_Tip_A_Player_Description"				"Tip a player at the end of a game"
+	"DOTA_FallMajor2016_Achievement_Tip_10_Players_Name"					"Total Conscientiousness"	
+	"DOTA_FallMajor2016_Achievement_Tip_10_Players_Description"				"Tip 50 players across your games"
+
+	"DOTA_FallMajor2016_Achievement_Complete_4_Weekly_Missions_Name"		"Mission Ready"
+	"DOTA_FallMajor2016_Achievement_Complete_4_Weekly_Missions_Description" "Complete 4 weekly challenges"
+	"DOTA_FallMajor2016_Achievement_Complete_8_Weekly_Missions_Name"		"Not Such a Chore"
+	"DOTA_FallMajor2016_Achievement_Complete_8_Weekly_Missions_Description" "Complete 12 weekly challenges"
+	"DOTA_FallMajor2016_Achievement_Complete_12_Weekly_Missions_Name"		"I Do All I Can"
+	"DOTA_FallMajor2016_Achievement_Complete_12_Weekly_Missions_Description" "Complete 20 weekly challenges"
+		  
+	"DOTA_FallMajor2016_Achievement_Complete_10_Daily_Missions_Name"		"Comfort Picks"
+	"DOTA_FallMajor2016_Achievement_Complete_10_Daily_Missions_Description" "Complete 10 daily hero challenges"
+	"DOTA_FallMajor2016_Achievement_Complete_25_Daily_Missions_Name"		"Expanded Repertoire"
+	"DOTA_FallMajor2016_Achievement_Complete_25_Daily_Missions_Description" "Complete 40 daily hero challenges"
+	"DOTA_FallMajor2016_Achievement_Complete_50_Daily_Missions_Name"		"Play Them as They Come"
+	"DOTA_FallMajor2016_Achievement_Complete_50_Daily_Missions_Description" "Complete 75 daily hero challenges"
+
+	"DOTA_FallMajor2016_Achievement_Get_30_BattlePoints_Name"		"Battle Cup Hopeful"
+	"DOTA_FallMajor2016_Achievement_Get_30_BattlePoints_Description" "Earn 30 Battle Points in the Battle Cup"
+	"DOTA_FallMajor2016_Achievement_Get_100_BattlePoints_Name"		"Battle Cup Challenger"
+	"DOTA_FallMajor2016_Achievement_Get_100_BattlePoints_Description" "Earn 100 Battle Points in the Battle Cup"
+	"DOTA_FallMajor2016_Achievement_Get_250_BattlePoints_Name"		"Battle Cup Stalwart"
+	"DOTA_FallMajor2016_Achievement_Get_250_BattlePoints_Description" "Earn 250 Battle Points in the Battle Cup"
+
+
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_I_Name"					"Treasure I Initiate"
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_I_Description"			"Open 5 Treasure I"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_I_Name"				"Treasure I Completionist"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_I_Description"			"Open 10 Treasure I"
+		  
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_II_Name"				"Treasure II Initiate"
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_II_Description"			"Open 5 Treasure II"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_II_Name"				"Treasure II Completionist"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_II_Description"		"Open 10 Treasure II"
+		  
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_III_Name"				"Treasure III Initiate"
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_III_Description"		"Open 5 Treasure III"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_III_Name"				"Treasure III Completionist"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_III_Description"		"Open 10 Treasure III"
+
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_IV_Name"				"Treasure IV Initiate"
+	"DOTA_FallMajor2016_Achievement_Open_5_Treasure_IV_Description"			"Open 5 Treasure IV"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_IV_Name"				"Treasure IV Completionist"
+	"DOTA_FallMajor2016_Achievement_Open_10_Treasure_IV_Description"		"Open 10 Treasure IV"
+
+	"DOTA_FallMajor2016_Achievement_Use_2_Infusers_Name"				"Custom Mods"
+	"DOTA_FallMajor2016_Achievement_Use_2_Infusers_Description"			"Use 2 Fall Infusers"
+	"DOTA_FallMajor2016_Achievement_Use_5_Infusers_Name"				"Infuser User"
+	"DOTA_FallMajor2016_Achievement_Use_5_Infusers_Description"			"Use 5 Fall Infusers"
+	"DOTA_FallMajor2016_Achievement_Use_20_Infusers_Name"				"Particle Party"
+	"DOTA_FallMajor2016_Achievement_Use_20_Infusers_Description"		"Use 20 Fall Infusers"
+
+	"DOTA_FallMajor2016_Achievement_25_Correct_Predictions_Group_Name"			"Group Stage Connoisseur"
+	"DOTA_FallMajor2016_Achievement_25_Correct_Predictions_Group_Description"		"Correctly Guess 25 Group Stage Battle Predictions"
+
+	"DOTA_FallMajor2016_Achievement_10_Correct_Predictions_Main_Event_Name"			"Game Genius"
+	"DOTA_FallMajor2016_Achievement_10_Correct_Predictions_Main_Event_Description"		"Correctly Guess 10 Main Event Battle Predictions"
+	"DOTA_FallMajor2016_Achievement_30_Correct_Predictions_Main_Event_Name"			"Perfect Predictor"
+	"DOTA_FallMajor2016_Achievement_30_Correct_Predictions_Main_Event_Description"		"Correctly Guess 30 Main Event Battle Predictions"
+	"DOTA_FallMajor2016_Achievement_50_Correct_Predictions_Main_Event_Name"			"Main Event Maestro"
+	"DOTA_FallMajor2016_Achievement_50_Correct_Predictions_Main_Event_Description"		"Correctly Guess 50 Main Event Battle Predictions"
 
 	"DOTA_TI2016_Reward_Arcana_Vote_Initial"								"Political Capital: Vote for the Arcana"
 	"DOTA_TI2016_Reward_Arcana_Vote_Power"									"Sixteen Additional Arcana Votes"
@@ -6081,7 +6694,7 @@
 	"DOTA_TI2016_Reward_Wagering_Bonus_02" 									"Higher Roller - 500 Token Increase"
 	"DOTA_TI2016_Reward_Wagering_Bonus_03" 									"Highest Roller - 1000 Token Increase"
 	
-	
+	"DOTA_FallMajor2016_Reward_Blink_Effect"										"Blink Effect"
 
 	// HUD
 	"DOTA_Hud_Health"			"{u:health} <span class='MaxHealthLabel'>/ {u:max_health}</span>"
@@ -6089,12 +6702,15 @@
 	"DOTA_Hud_HealthRegen"		"{s:health_regen}"
 	"DOTA_Hud_ManaRegen"		"{s:mana_regen}"
 	"DOTA_Hud_BuybackCooldown"	"{s:buyback_cooldown}"
+	"DOTA_Hud_BuybackLabel"		"Buyback"
+	"DOTA_Hud_NoBuybackLabel"	"No Buyback"
 	"DOTA_Hud_XP"				"{d:r:current_xp} / {d:r:xp_to_level}"
 	"DOTA_Hud_Level_Up"			"Level up +{d:points_to_spend}"
 	"DOTA_Hud_Lifetime"			"{s:lifetime}"
 	"DOTA_Hud_AttackSpeed"		"Attack speed: {d:attack_speed} ({s:seconds_per_attack}s per attack)"
 	"DOTA_Hud_AttackDamage"		"Attack damage: {s:attack_damage}"
 	"DOTA_Hud_AttackRange"		"Attack Range: {d:attack_range}"
+	"DOTA_Hud_SpellDamageAmp"		"Spell Damage Amp: {s:spell_damage_amp}%"
 	"DOTA_Hud_PhysicalArmor"	"Physical Armor: {s:physical_armor}"
 	"DOTA_Hud_DamageResistance"	"Damage Resistance: {d:damage_resistance}%"
 	"DOTA_Hud_MagicResistance"	"Magical Damage Resistance: {d:magic_damage_resistance}%"
@@ -6107,9 +6723,10 @@
 	"DOTA_Hud_AgiTooltip_AttackSpeed"		"- Each point increases attack speed by 1"
 	"DOTA_Hud_IntTooltip_Mana"				"- Each point increases mana by 13"
 	"DOTA_Hud_IntTooltip_ManaRegen"			"- Each point increases mana regen by 0.04"
+	"DOTA_Hud_IntTooltip_SpellDamage"		"- Every 16 points increases spell damage by 1%"
 	"DOTA_Hud_Attribute_PointsPerLevel"		"- Points gained per Hero level: {s:points_gained}"
 	"DOTA_Hud_Attributes_Level"				"Attributes Level: {d:attributes_level}"
-	"DOTA_HUD_RespawnTime"					"Respawning in {d:respawn_time} seconds"
+	"DOTA_HUD_RespawnTime"					"{d:respawn_time}"
 	"DOTA_HUD_RespawnOutOfLives"			"Cannot respawn, team is out of lives"
 	"DOTA_HUD_GlyphCooldown"				"Cooldown: {s:cooldown_time}"
 	"DOTA_HUD_RadarCooldown"				"Cooldown: {s:cooldown_time}"
@@ -6129,7 +6746,7 @@
 	"DOTA_HUD_Shop_Item_Complete"			"Cost to Complete: {u:cost_to_complete}"
 
 	"DOTA_HUD_Wagering_Header"				"Choose Amount to Wager"
-	"DOTA_HUD_Wagering_HeaderUnowned"		"Activate a Winter Pass to Enable Wagering"
+	"DOTA_HUD_Wagering_HeaderUnowned"		"Activate a Battle Pass to Enable Wagering"
 	"DOTA_HUD_Wagering_TimeLeftHeader"		"Wagering Time:"
 	"DOTA_HUD_Wagering_TimeLeft"			"{i:wagering_time}s"
 	"DOTA_HUD_Wagering_YourCoins"			"Available Tokens: {d:your_coins}"
@@ -6147,7 +6764,22 @@
 	"DOTA_HUD_DVR_TotalTime"				"{s:total_time}" // "{t:d:total_time}"\
 	"DOTA_HUD_DVR_PlaybackSpeed"			"{s:playback_speed}x"
 	"DOTA_HUD_DVR_GoLive"					"GO LIVE"
-	
+
+	"DOTA_HUD_Scoreboard_SwapHero"			"Swap Hero"
+	"DOTA_HUD_Killcam_AttackDmg"			"Attack Damage"
+	"DOTA_HUD_Swap_Confirm_Header"			"Swap Hero?"
+	"DOTA_HUD_Swap_Confirm_Message"			"Do you wish to swap your hero for {s:swap_hero_name}?"
+	"DOTA_HUD_Killcam_KilledBy"				"Killed By:"
+	"DOTA_HUD_Spec_Items_Items"				"ITEMS"
+	"DOTA_HUD_InvokerSpellCard_Hide_Names"	"Hide Names"
+	"DOTA_HUD_InvokerSpellCard_Show_Names"	"Show Names"
+
+	"DOTA_HUD_GG_GameWillEnd"				"Game Will End"
+	"DOTA_HUD_GG_LoseIn"					"You will lose in"
+
+	"DOTA_HUD_Broadcaster_Title"			"SELECT A BROADCASTER"
+	"DOTA_HUD_Broadcaster_Channel"			"BROADCAST CHANNEL {i:channel_id}"
+
 	"DOTA_Compendium_Wagering_RemainingTokens"		"Remaining Tokens"
 	"DOTA_Compendium_Wagering_TokensResetIn"		"Tokens Reset In "
 	"DOTA_Compendium_Wagering_TokensResetIn_End"	""
@@ -6157,6 +6789,8 @@
 	"DOTA_Compendium_Wagering_TotalTokensWagered"	"Total Tokens Wagered"
 	"DOTA_Compendium_Wagering_TotalPointsTipped"	"Total Points Tipped"
 	"DOTA_Compendium_Wagering_AverageWinnings"		"Average Points Won"
+	
+	"DOTA_Compendium_Wagering_TotalTokensWagered_Rollup"	"Total Wagered"
 	
 	"DOTA_Compendium_Wagering_TokensOver"      "All Tokens have been distributed for this Battle Pass"
 	"DOTA_Compendium_Wagering_TokensPopup_Title"     "Bonus 2000 Token Refresh"	
@@ -6304,6 +6938,8 @@
 	"DOTA_DB_SeasonPass_TierTooltipGold"			"Gold Tier: <br> Upgraded Battle Pass Badge <br> Upgraded Profile Status <br> Upgraded Battle Pass Dashboard"
 	"DOTA_DB_SeasonPass_TierTooltipMax"				"Max Tier: <br> Upgraded Battle Pass Badge <br> Upgraded Profile Status <br> Upgraded Battle Pass Dashboard"
 	
+	"DOTA_DB_SeasonPass_Halloween2016_Expire"		"Path available from October 28 - November 14, 2016"
+	
 	"DOTA_DB_SeasonPass_CurrentQuest"				"Current Active Quest"
 	"DOTA_DB_SeasonPass_Level"						"Level"
 	"DOTA_DB_SeasonPass_PointsPerLevel"				"{i:points_per_level} Points = 1 Level"
@@ -6330,6 +6966,7 @@
 
 	
 	"DOTA_DB_SeasonPass_Winter_2016"			 "Winter 2016"
+	"DOTA_DB_SeasonPass_Fall_2016"				 "Fall 2016"
 	
 	"DOTA_DB_SeasonPass_Prestige_Rewards_Loadscreen" "Winter 2016 Loading Screen"
 	"DOTA_DB_SeasonPass_Prestige_Rewards_Emoticon"	"Winter 2016 Emoticon Pack"
@@ -6416,10 +7053,43 @@
 	
 	"DOTA_DB_SeasonPass_ti6_Prestige_Rewards_BattleCupTicket"	"Weekend Battle Cup Ticket (x5)<br><font color='#888888'>Level </font><font color='#A9372E'>137</font>"
 	"DOTA_DB_SeasonPass_ti6_Prestige_Rewards_Legion"	"<b>Legion Commander Prestige Item</b><br><font color='#888888'>Includes a new Quest path for Legion Commander</font><br><br><font color='#A9372E'>Level 225</font>"
-
+	
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Colleseum"		"Seasonal Terrain: Autumn<br><font color='#888888'>Level </font><font color='#96C68C'>1</font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_LoadScreens"		"Fall 2016 Battle Pass Loading Screen<br><font color='#888888'>Level </font><font color='#96C68C'>1</font> / <font color='#96C68C'>17</font> / <font color='#96C68C'>21</font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_BattleCupTicket"	"Weekend Battle Cup Ticket<br><font color='#888888'>Level </font><font color='#96C68C'>1</font> / <font color='#96C68C'>29</font>"
+	
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Infuser"	"Treasure Upgrade Infuser - Fall 2016<br><font color='#888888'>Level </font><font color='#96C68C'>22</font>"
+	
+	
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_LoadScreen1"		"Loading Screen I<br><font color='#888888'>Level </font><font color='#96C68C'>1</font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_LoadScreen2"		"Loading Screen II<br><font color='#888888'>Level </font><font color='#96C68C'>17</font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_LoadScreen3"		"Loading Screen III<br><font color='#888888'>Level </font><font color='#96C68C'>21</font>"
+	
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Emoticon"		"Fall 2016 Emoticon Pack<br><font color='#888888'>Level </font><font color='#96C68C'>2</font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Fountain"		"Fountain Healing Effect<br><font color='#888888'>Level <font color='#96C68C'>3</font> / <font color='#96C68C'>37</font> / <font color='#96C68C'>58</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_TP"		"Hero Teleport Effect <br><font color='#888888'>Level <font color='#96C68C'>4</font> / <font color='#96C68C'>31</font> / <font color='#96C68C'>52</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Courier" 			"Wibbley Courier <br><font color='#888888'>Level <font color='#96C68C'>7</font> / <font color='#96C68C'>20</font> / <font color='#96C68C'>40</font> / <font color='#96C68C'>60</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Ward"		"Starecrow Ward<br><font color='#888888'>Level </font><font color='#96C68C'>8</font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Blink"		"Blink Dagger Effect <br><font color='#888888'>Level <font color='#96C68C'>9</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Effigy"		"<b>Fall 2016 Effigy Block </b><br>
+														<i>Effigy Block I </i><font color='#888888'> Level <font color='#96C68C'>12</font></font><br>
+														<i>Effigy Block II </i><font color='#888888'> Level <font color='#96C68C'>26</font></font><br>
+														<i>Effigy Block III </i><font color='#888888'> Level <font color='#96C68C'>48</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Forcestaff"	"Force Staff Effect<br><font color='#888888'>Level </font><font color='#96C68C'>24</font>"														
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Forcestaff"	"Force Staff Effect<br><font color='#888888'>Level </font><font color='#96C68C'>24</font>"	
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Taunt"	"<br>Fall 2016 Taunt</b><br>
+															<i>Centaur Taunt: A Leg to Stand On</i><font color='#888888'> Level <font color='#96C68C'>14</font></font><br>
+															<i>Brewmaster Taunt: Drunken Antics </i><font color='#888888'> Level <font color='#96C68C'>28</font></font><br>"
+															
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Taunt_Centaur" "Centaur Taunt: A Leg to Stand On <font color='#888888'> Level <font color='#96C68C'>14</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Taunt_Brew"	"Brewmaster Taunt: Drunken Antics <font color='#888888'> Level <font color='#96C68C'>28</font></font>"
+	"DOTA_DB_SeasonPass_fall2016_Prestige_Rewards_Cyclone"		"Eul's Scepter Effect<br><font color='#888888'>Level </font><font color='#96C68C'>30</font>"
+	
 	"DOTA_DB_SeasonPass_HeroRole_Carry"		"Carry"
 	"DOTA_DB_SeasonPass_HeroRole_Support"		"Support"	
 	"DOTA_DB_SeasonPass_HeroRole_Solo"		"Solo"	
+	
+	
 	
 	
 	
@@ -6474,7 +7144,9 @@
 
 	"DOTA_BattlePassRewards_Intro"					"Behold the complete gallery of rewards you can earn with the Winter 2016 Battle Pass.<br><br>New rewards will be granted as you accrue Battle Points and increase your Battle Level. Earn more points by completing Quests and Challenges, winning wagers, and stacking up achievements.<br><br>While it is the rare and valorous hero who completes the collection, all who undertake the journey can see their progress here."
 
-	"DOTA_BattlePassRewards_TI6BP_Intro"	"Behold the complete gallery of rewards you can earn with <br>The International 2016 Battle Pass.<br><br><font color='#A9372E'>EARN NEW REWARDS</font> each time you increase your Battle Level.<br><br><font color='#A9372E'>INCREASE YOUR LEVEL</font> by completing Quests, winning in-game Wagers, and earning Achievements.<br><br><font color='#A9372E'>FAST-FORWARD</font> your progress—buy levels at any time while contributing to The International 2016 Prize Pool!"	
+	"DOTA_BattlePassRewards_TI6BP_Intro"	"Behold the complete gallery of rewards you can earn with <br>The International 2016 Battle Pass.<br><br><font color='#A9372E'>EARN NEW REWARDS</font> each time you increase your Battle Level.<br><br><font color='#A9372E'>INCREASE YOUR LEVEL</font> by completing Quests, winning in-game Wagers, and earning Achievements.<br><br><font color='#A9372E'>FAST-FORWARD</font> your progress—buy levels at any time while contributing to The International 2016 Prize Pool!"
+
+	"DOTA_Fall2016_BattlePassRewards_Intro"	"Behold the complete gallery of rewards you can earn with the Fall 2016 Battle Pass.<br><br><font color='#94D53F'>EARN NEW REWARDS</font> each time you increase your Battle Level.<br><br><font color='#94D53F'>INCREASE YOUR LEVEL</font> by completing Quests, winning in-game Wagers, and earning Achievements.<br><br>While it is the rare and valorous hero who completes the collection, all who undertake the journey can see their progress here."
 		
 	"DOTA_BattlePassRewards_Intro_Header"			"Battle Pass Rewards"
 	"DOTA_BattlePassRewards_InitialPurchase"		"Battle Pass Initial Purchase Rewards"
@@ -6483,7 +7155,7 @@
 	"DOTA_BattlePassRewards_Prestige"			"Battle Pass Level Rewards"
 	"DOTA_BattlePassRewards_Prestige_TI6_Text"	"Prestige Rewards cannot be directly purchased—they can only be acquired by increasing your Battle Level."
 	
-	"DOTA_BattlePassRewards_Prestige_Text"		"Unlike Treasure Rewards, which can be purchased, Prestige Rewards can only be acquired by increasing your Battle Level."
+	"DOTA_BattlePassRewards_Prestige_Text"		"Unlike Treasure Rewards, which can be purchased, Level Rewards can only be acquired by increasing your Battle Level."
 	
 	
 	"DOTA_BattlePassRewards_15Level_Text"		"Each treasure also has a very rare chance of instantly increasing your Battle Level by 15."
@@ -6493,7 +7165,11 @@
 
 	"DOTA_BattlePassRewards_RecycleNote"			"The contents of all Winter Treasures can be recycled for 500 Battle Points."
 	"DOTA_BattlePassRewards_RecycleNote_ti6"		"The contents of all Immortal Treasures can be recycled for <b>2000</b> Battle Points."
+	"DOTA_BattlePassRewards_RecycleNote_fall2016"	"The contents of all Fall 2016 Battle Pass Treasures can be recycled for <b>500</b> Battle Points."
+
 	"DOTA_BattlePassRewards_QuestNote"			"Complete the final Quest on a Quest Path to receive that Path's reward. <br>Complete all fifteen Quests on the Path at Three-Star difficulty to unlock a special style for the reward."
+	"DOTA_BattlePassRewards_QuestNote_fall2016"			"Complete the final Quest on a Quest Path to receive that Path's reward. <br>Complete the Quest Path with at least 40 Stars to unlock a special style for the reward."
+
 	"DOTA_BattlePassRewards_SpinWheel_Text_ti6"	"As you increase your Battle Level, you'll earn spins on Rylai's Wheel of Battle Blessing—with Hero Sets, Couriers, and Treasures in the mix, the maiden has gone mad with munificence!"
 	"DOTA_BattlePassRewards_LinaBlaze_Text_ti6"	"As Battle Pass owners collectively accomplish the Community Challenge objectives, you'll be granted additional fireballs to drop in Lina's Battle Blaze, where you can win additional Battle Points."
 	
@@ -6505,7 +7181,9 @@
 	"DOTA_BattlePassRewards_Windranger"
 
 	"DOTA_BattleCup_Champion_Stage"			"Champion"
-	"DOTA_BattleCup_Tier"			"Tier {d:tier}"
+	"DOTA_BattleCup_Tier"			"{d:tier}"
+	"DOTA_BattleCup_Name"			"Name"
+	"DOTA_BattleCup_Score"			"Tier Cup Score"
 
 	"DOTA_Compendium_View_Brackets"			"View Brackets"
 	
@@ -6531,7 +7209,11 @@
 	"DOTA_CompendiumRecap_OverviewTeamDetails"	"8 Invited teams and 8 Qualified teams."
 	"DOTA_CompendiumRecap_Story1Header"		"Frankfurt Report"
 	"DOTA_CompendiumRecap_ReadMore"			"Read more..."
+	"DOTA_MoviePurchaseCompendium"			"Purchase the Fall Major Battle Pass to have access to True Sight the moment it goes live and add it to your video library."
+	"DOTA_MovieStreamCountdown"				"Stream goes live in {s:hours}:{s:minutes}:{s:seconds} and will play every two hours for the following 24hs."
+	"DOTA_MovieStreamOver"					"True Sight stream is over. It is now available on your Steam Video library."
 	"DOTA_CompendiumRecap_Story1Body"		"In November 2015, sixteen of the world's best teams competed in the Frankfurt Major, the first Valve Major event held outside of The International, for a total prize pool of $3,000,000.  Eight teams received direct invites to the event—seven of the top eight teams from The International 2015, and Vega Squadron, who had just come from a convincing first place finish at ESL One New York in which they took down the daunting trio of EG, Secret, and IG. 
+	
 	
 Another eight teams punched their tickets by advancing through the Regional Qualifiers, most notably team Monkey Business (later renamed to OG) securing first place in the European Qualifiers, and Team Unknown finishing second in the Americas Qualifier after surviving the Open qualifiers, where over 500 teams competed for a single spot.
 
@@ -6565,6 +7247,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	
 	"DOTA_CompendiumCasters_Language"			"Language"
 	"DOTA_CompendiumCasters_Desc"				"The Winter Major will be broadcast in several languages.\nHere are the commentators, interviewers, and other on-camera staff in each language."
+	"DOTA_CompendiumCastersTI_Desc"				"The International 2016 will be broadcasted in English, Russian and Chinese.\nHere are the commentators, interviewers, and other on-camera staff in each language."
 
 	"DOTA_CompendiumTeam_Invited"				"Direct Invite"
 	"DOTA_CompendiumTeam_First"					"First Appearance"
@@ -6605,12 +7288,16 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_EconItemSearchPrefix_Hidden"			"hidden"
 	"DOTA_EconItemSearchPrefix_Recent"			"recent"
 	"DOTA_EconItemSearchPrefix_Giftable"		"giftable"
+	"DOTA_EconItemSearchPrefix_SocketRequiredHero"	"socket_required_hero"
+	"DOTA_EconItemSearchPrefix_SocketGemItemDef"	"socket_gem_item_def"
+	"DOTA_EconItemSearchPrefix_Sale"	"sale"
 
 	"DOTA_StoreBrowse_AnyHero"	"Any"
 	"DOTA_StoreBrowse_HeroName"	"{g:dota_hero_name:hero_id}"
 	"DOTA_StoreBrowse_Search_Results"		"Found {d:search_result_count} Results"
 	"DOTA_StoreBrowse_Search_Placeholder"	"Enter keywords to search."
 	"DOTA_StoreBrowse_Category_ProGear"	"Pro Gear"
+	"DOTA_StoreBrowse_Category_Sale"	"On Sale"
 
 	"DOTA_StoreItem_InBundle"	"In Bundle"
 	"DOTA_StoreItem_InTreasure"	"In Treasure"
@@ -6624,6 +7311,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_HeroSetItemCount"	"{d:set_item_count} Items"
 	"DOTA_HeroLoadout_Instructions" "Hover to Preview, Click to Equip"
 	"DOTA_HeroLoadout_BaseSet"	"Default"
+	"DOTA_HeroLoadout_UnknownSet"	"Customized Set"
+	"DOTA_HeroLoadout_FullSets"		"Full Sets"
 
 	"DOTA_SplashAd687_Title" "Gameplay Update is LIVE"
 	"DOTA_SplashAd687_Text"	"Includes changes to Ranked All Pick, the addition of a minimap Scan ability, seven new items, and a host of gameplay balance adjustments."
@@ -6641,11 +7330,27 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_SplashAd_Immortal_Gardens_ItemName" "Immortal Gardens Terrain"
 	"DOTA_SplashAd_Immortal_Gardens_Title" "Limited Availability"
 	"DOTA_SplashAd_Immortal_Gardens_Title_Support" "Unlock it before The International ends. This item will never be tradeable or purchasable on the marketplace."
+	
+	"DOTA_SplashAd_LegionCommander_Level_Label" "Level"
+	"DOTA_SplashAd_LegionCommander_Reward_Label" "Reward"	
+	"DOTA_SplashAd_LegionCommander_ItemName" "Legion Commander Prestige Item"
+	"DOTA_SplashAd_LegionCommander_Title" "Limited Availability"
+	"DOTA_SplashAd_LegionCommander_Title_Support" "Unlock it before The International ends. This item will never be tradeable or purchasable on the marketplace."
+	
+	"DOTA_SplashAd_EventEndReminder_Title1" "Last Chance"
+	"DOTA_SplashAd_EventEndReminder_Title2" "Available until August 13th"
+	"DOTA_SplashAd_EventEndReminder"	"The International Main Event is nearly upon us, and the ability to purchase Battle Pass Levels and the Collector's Cache will end when the Grand Finals conclude on August 13th, 2016. This will be the last opportunity to acquire these exclusive items that are not tradable or purchasable on the marketplace."
+	"DOTA_SplashAd_PurchaseCache"	"Purchase Collector's Cache"
 
 	"DOTA_SplashAd_TI6_Immortals_2_Title" "Immortal Treasure II"
 	"DOTA_SplashAd_TI6_Immortals_2_Available" "Now Available"
 	"DOTA_SplashAd_TI6_Immortals_2_Escalating" "This treasure features escalating odds"
 	"DOTA_SplashAd_TI6_Immortals_2_Escalating_Desc" "Each Immortal Treasure II you open increases your chances of receiving the corresponding rare, very rare, or ultra-rare items."
+
+	"DOTA_SplashAd_TI6_Immortals_3_Title" "Immortal Treasure III"
+	"DOTA_SplashAd_TI6_Immortals_3_Available" "Now Available"
+	"DOTA_SplashAd_TI6_Immortals_3_Escalating" "This treasure features escalating odds"
+	"DOTA_SplashAd_TI6_Immortals_3_Escalating_Desc" "Each Immortal Treasure III you open increases your chances of receiving the corresponding rare, very rare, or ultra-rare items."
 
 	"DOTA_SplashAd_TI6_Weekend_Battle_Bundle" "Battle Level Bundle"
 	"DOTA_SplashAd_TI6_Weekend_Sale_Title" "Weekend Sale"
@@ -6656,12 +7361,30 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_SplashAd_TI6_Weekend_Limit"   "Limit one per customer"
 	"DOTA_SplashAd_TI6_Weekend_BattlePassOwnershipRequired"   "Must Own Battle Pass"
 
+	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_Autographs_Title" "Autographed Treasures Now Available"
+	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_Autographs_Message" "Support your favorite <a href=\"event:UIPopupButtonClicked( DOTAShowCompManila2016CastersPage() )\">broadcast talent from The International 2016</a>!"
+	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_LocklessLuckvase" "Lockless Luckvase"
+	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_TroveCarafe" "Trove Carafe"
+
+	"DOTA_SplashAd_TI6_Immortals_3_Escalating" "This treasure features escalating odds"
+	"DOTA_SplashAd_TI6_Immortals_3_Escalating_Desc" "Each Immortal Treasure III you open increases your chances of receiving the corresponding rare, very rare, or ultra-rare items."
+
+	"DOTA_SplashAd_WarhammerTreasure_Title" "Warhammer: Treasure of the Old World"
+	"DOTA_SplashAd_WarhammerTreasure_Message" "Contains thirteen Warhammer-themed sets from the Dota 2 Workshop."
+
+	"DOTA_SplashAd_Title_Fall_2016_Treasure_3"	"Fall 2016 Treasure III"
+	"DOTA_SplashAd_Title_Fall_2016_Treasure_4"	"Fall 2016 Treasure IV"
+	
 	"DOTA_ApplyingEventLevels_Title" "Unlocking Levels"
 	"DOTA_ApplyingEventLevels_Text" "Applying Battle Pass Levels to your account."
 
 	"DOTA_Spring2016_QuestIntroTitleLabel"			"The International 2016 Battle Pass Quests"
 	"DOTA_Spring2016_QuestIntroCampaignTitleLabel"	"The Three Faces"
 	"DOTA_Spring2016_QuestIntroLore"				"They poured from the crumbling garrison upon the hillside, a horde of foul creatures crashing against the towering walls of Quath. Not one in twenty cleared the gate's descent, but to defeat so few took bitter toll. Surrounded still by greater horrors, the Elders seek salvation in the rituals of the Aldwyn Scrolls."
+	
+	"DOTA_Fall2016_QuestIntroTitleLabel"			"Fall 2016 Battle Pass Quests"
+	"DOTA_Fall2016_QuestIntroCampaignTitleLabel"	"The Battle's Approach"
+	"DOTA_Fall2016_QuestIntroLore"				"Disrupt your enemy's battle plans to make them fear the fog on the Path of the Saboteur. Control the map and guide the flow of battle to ensure your team's rapid rise on the Path of the Protector. Gather increasing items of mythic power to spearhead the final thrust on the Path of the Dominator."
 	
 	"DOTA_Spring2016_Community_Challenge_IntroTitle"		"All Together Now"
 	"DOTA_Spring2016_Community_Challenge_IntroText"		"Throughout the duration of the Battle Pass, a series of Community Quests will be available to all pass owners. Completing the challenge objectives in your winning matches will contribute to the community progress bar."
@@ -6694,11 +7417,17 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTAArcanaVote_PreviousResults"		"Previous Round"
 	"DOTAArcanaVote_NextResults"			"Next Round"
 
-	"DOTA_CompendiumRecap_OverviewDetails_TI6"	"August 8th - August 13th, 2016"
-	"DOTA_CompendiumRecap_OverviewVenueDetails_TI6"	"Key Arena - Seattle, United States"
-	"DOTA_CompendiumRecap_OverviewFormatDetails_TI6"	"Seeding Stage: 4 groups of 4 teams. Top 2 of each go to Upper Bracket."
-	"DOTA_CompendiumRecap_OverviewFormatDetailsCont_TI6"	"Main Event: 16 teams Double Elimination."
+	"DOTA_CompendiumRecap_OverviewDetails_TI6"	"Wildcards: August 2nd, 2016 \nGroup Stage: August 3rd - August 5th, 2016\nMain Event: August 8th - August 13th, 2016"
+	"DOTA_CompendiumRecap_OverviewVenueDetails_TI6"	"KeyArena - Seattle, United States"
+	"DOTA_CompendiumRecap_OverviewFormatDetails_TI6"	"Wildcard: Four teams in a best-of-three double elimination playoff. Top two advance to Group Stage.\nGroup Stage: Two best-of-two groups of eight teams. Top four teams in each group advance to Upper Bracket, bottom four advance to Lower Bracket."
+	"DOTA_CompendiumRecap_OverviewFormatDetailsCont_TI6"	"Main Event: 16 teams in best-of-three double elimination playoff. Lower bracket first round is best-of-one, Grand Finals are best-of-five."
 	"DOTA_CompendiumRecap_OverviewTeamDetails_TI6"	"8 Invited teams and 8 Qualified teams."
+
+	"DOTA_CompendiumRecap_OverviewDetails_Boston"	"Group Stage: December 3rd - December 4th, 2016\nMain Event: December 7th - December 10th, 2016"
+	"DOTA_CompendiumRecap_OverviewVenueDetails_Boston"	"Wang Theatre - Boston, United States"
+	"DOTA_CompendiumRecap_OverviewFormatDetails_Boston"	"16 teams in best-of-three single-elimination playoff. Grand Finals are best-of-five."
+	"DOTA_CompendiumRecap_OverviewFormatDetailsCont_Boston"	"Seeding will be determined in the group stage."
+	
 	
 	"DOTA_BattlePass_PrizePool"  					"25% of all Battle Pass sales go directly to The International 2016 prize pool."
 	
@@ -6734,10 +7463,16 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TotalLevels" "Total Levels"
 	"DOTA_TotalPrice" "Total Price"
 	"DOTA_ApplyLevelsFailedMessage" "We were unable to apply the levels to your account.\n\nThis is likely due to a loss of connection to the Dota Game Coordinator. The levels will remain as items in your Armory where you can apply them manually, or they will be automatically applied once the connection is restored."
+	"DOTA_BattlePassLevelPurchaseUnavailable_Title" "Battle Pass Ended"
+	"DOTA_BattlePassLevelPurchaseUnavailable_Message" "Levels are no longer available for purchase for this Battle Pass."
 
 	"DOTA_SeasonPass_Spring2016_Rewards_Expire"					"The International 2016 Battle Pass Event ends on:"
 	"DOTA_SeasonPass_Spring2016_Rewards_Expired"					"The International 2016 Battle Pass expired on:"
-	"DOTA_SeasonPass_Spring2016_Rewards_Expire_Date"				"August 13th, 2016"
+	"DOTA_SeasonPass_Spring2016_Rewards_Expire_Date"				"August 31st, 2016"
+	
+	"DOTA_SeasonPass_Fall2016_Rewards_Expire"					"The Fall 2016 Battle Pass Event ends on:"
+	"DOTA_SeasonPass_Fall2016_Rewards_Expired"					"The Fall 2016 Battle Pass expired on:"
+	"DOTA_SeasonPass_Fall2016_Rewards_Expire_Date"				"January 2nd, 2017"
 
 	"DOTA_GoToCurrentLevel"			"Go To My Current Level"
 	"DOTA_ClaimLevelRewardsFailed"	"Failed to claim a reward at this level. This is likely due to a loss of connection to the Dota Game Coordinator. Try again later!\n\nError Code: {d:error_code}"
@@ -6803,8 +7538,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"dota_spring2016_purchase_learn_more"						"Learn More"
 	"dota_spring2016_purchase_preview"							"Preview Battle Pass"
 
+	"DOTA_TournamentGroup_Rank"         "Rank"
 	"DOTA_TournamentGroup_Team"			"Team"
-	"DOTA_TournamentGroup_GamesPlayed"	"Games Played"
+	"DOTA_TournamentGroup_GamesPlayed"	"Games"
 	"DOTA_TournamentGroup_Record"		"Record"
 	"DOTA_TournamentGroup_Score"		"Points"
 
@@ -6830,4 +7566,163 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_TI6_CollectorsCache_HeaderText" "Earn Battle Points as you purchase Collector's Caches."
 	"DOTA_TI6_CollectorsCache_FooterText" "Cache items are exclusive and will not be available for purchase elsewhere after The International."
+
+	"DOTA_AutographedTreasures_Title"	"Autographed Treasures"
+	"DOTA_AutographedTreasures_SubHead"	"SUPPORT YOUR FAVORITE DOTA PERSONALITIES"
+	"DOTA_AutographedTreasures_Description"	"Select a personality while purchasing an Autographed Treasure. The item you receive will feature their autograph, and a portion of the proceeds will go to them."
+
+	"DOTA_SpectatorLobby_AnyLanguage"		"Any"
+	"DOTA_SpectatorLobby_WatchLiveMatch"	"<span class=\"WatchingLive\">LIVE</span> Match"
+	"DOTA_SpectatorLobby_WatchMatchReplay"	"Match <span class=\"WatchingReplay\">REPLAY</span>"
+	"DOTA_SpectatorLobby_WatchStream"		"Live <span class=\"WatchingStream\">STREAM</span>"
+	"DOTA_SpectatorLobby_WatchNone"			"Deciding..."
+	"DOTA_SpectatorLobby_UnableToJoin"		"Unable to join the lobby. {s:error_message}"
+	"DOTA_SpectatorLobby_UnableToCreate"		"Unable to create a lobby at this time."
+	"DOTA_SpectatorLobby_FailedToLeave"		"Unable to leave this lobby."
+
+	"DOTA_SpectatorLobbyWatchingResult_Success"	"Success"
+	"DOTA_SpectatorLobbyWatchingResult_NoGameDetails"	"Unable to get information about the selected match. Try again later."
+	"DOTA_SpectatorLobbyWatchingResult_NoLobby"	"You are not currently in a spectator lobby."
+	"DOTA_SpectatorLobbyWatchingResult_NotConnected"	"You are not currently connected to the Game Coordinator. Try again later."
+	"DOTA_SpectatorLobbyWatchingResult_NotLobbyLeader"	"Only the lobby leader can change what the lobby is watching."
+	"DOTA_SpectatorLobbyWatchingResult_Timeout"	"Timed out trying to connect to the Game Coordinator. Try again later."
+	"DOTA_SpectatorLobbyWatchingResult_GCRejected"	"The Game Coordinator refused your request to change what the lobby is watching."
+	"DOTA_SpectatorLobbyWatchingResult_Failed"	"Failed to change what the lobby is watching."
+
+	"DOTA_SpectatorLobbyBrowser_Join"	"Join a Spectator Lobby"
+	"DOTA_SpectatorLobbyBrowser_Error"	"Unable to load spectator lobbies. Try again later."
+
+	"DOTA_SpectatorLobby_Create" "Create a Spectator Lobby"
+	"DOTA_SpectatorLobby_Public_Title" "Public"
+	"DOTA_SpectatorLobby_Public_Description" "Anyone can join"
+	"DOTA_SpectatorLobby_Private_Title" "Private"
+	"DOTA_SpectatorLobby_Private_Description" "Password protected"
+
+	"DOTA_FriendCount_Singular"	"1 Friend"
+	"DOTA_FriendCount_Plural"	"{d:friend_count} Friends"
+
+	"DOTA_DownloadingReplay"	"Downloading Replay..."
+	"DOTA_DecompressingReplay"	"Decompressing Replay..."
+
+	"DOTA_VR_Muted"					"Muted"
+	"DOTA_VR_BackToMenu"			"BACK TO MAIN MENU"
+	"DOTA_VR_AimAtScreen"			"Aim at the screen to start."
+	"DOTA_VR_WatchDota"				"Watch Dota"
+	"DOTA_VR_TournamentMatches"		"Tournament Matches"
+	"DOTA_VR_FriendMatches"			"Friend Matches"
+	"DOTA_VR_MyMatches"				"My Matches"
+	"DOTA_VR_ComingSoon"			"COMING SOON"
+	"DOTA_VR_NextHero"				"NEXT HERO"
+	"DOTA_VR_PrevHero"				"PREV HERO"
+	"DOTA_VR_LeaveLobby"			"LEAVE LOBBY"
+	"DOTA_VR_LobbyLeader"			"Lobby Leader"
+	"DOTA_VR_LobbyMembers"			"Lobby Members ({d:member_count})"
+	"DOTA_VR_PrivateLobby"			"Private Lobby"
+	"DOTA_VR_PublicLobby"			"Public Lobby"
+	"DOTA_VR_LobbyPassword"			"Lobby Password"
+	"DOTA_VR_HeroLoadoutButton"		"HERO\nSHOWCASE"
+	"DOTA_VR_WatchAReplay"			"WATCH A REPLAY"
+	"DOTA_VR_TriggerExplore"		"Press trigger to explore inside the map"
+	"DOTA_VR_SelectAppearance"		"Select Appearance"
+	"DOTA_VR_EnterPassword"			"Enter Lobby Password"
+	"DOTA_VR_Volume"				"Volume"
+	"DOTA_VR_LobbyVoiceChat"		"Lobby Voice Chat"
+	"DOTA_VR_CasterVoice"			"Caster Voice"
+	"DOTA_VR_Microphone"			"Microphone"
+	"DOTA_VR_OpenMic"				"Open Mic"
+	"DOTA_VR_PushToTalk"			"Push Grip To Talk"
+	"DOTA_VR_PushToTalkSplit"		"Press grip button\nto talk"
+	"DOTA_VR_AudioSettings"			"AUDIO SETTINGS"
+	"DOTA_VR_Controls_BackToLobby"		"BACK TO\nLOBBY"
+	"DOTA_VR_Controls_Appearance"		"APPEARANCE"
+	"DOTA_VR_Controls_Scale"			"SCALE"
+	"DOTA_VR_Controls_DirectedCamera"	"DIRECTED\nCAMERA"
+	"DOTA_VR_Controls_Recenter"			"RECENTER"
+	"DOTA_VR_Controls_Teleport"			"TELEPORT"
+	"DOTA_VR_Downloads"				"DOWNLOADS"
+	"DOTA_VR_LiveGames"				"LIVE GAMES"
+	"DOTA_VR_Replays"				"REPLAYS"
+	"DOTA_VR_Controller_PushToTalk"	"Grip to\nTalk"
+	"DOTA_VR_Controller_RotateHero"	"Grip to\nRotate Hero"
+	"DOTA_VR_PurchasingUnavailable_Title" "Purchasing Unavailable"
+	"DOTA_VR_PurchasingUnavailable_Message" "Purchasing items is not currently supported in the Dota VR Hub."
+	"DOTA_VR_ContextMenuHeroSlot_Instructions" "Click to Equip"
+	"DOTA_VR_EquippedItems"	"Equipped Items"
+	"DOTA_VR_StorePreview"	"Store Preview"
+	"DOTA_VR_DemoTitle"	"{s:demo_name} Demo"
+	"DOTA_VR_DemoGameInfo"	"Upper Bracket Semifinals - Game 1"
+
+	"DOTA_GameItems_Shops"			"Shops"
+	"DOTA_GameItems_AllShops"		"All Shops"
+	"DOTA_GameItems_ItemDetails"	"Item Details"
+	"DOTA_GameItems_AvailableAtMainShop"	"Available at Home Shop"
+	"DOTA_GameItems_AvailableAtSideShop"	"Available at Side Shop"
+	"DOTA_GameItems_AvailableAtSecretShop"	"Available at Secret Shop"
+	"DOTA_GameItems_RequiresSecretShop"		"Requires Secret Shop"
+
+	"DOTA_XboxDVR_Title"		"Performance Recommendation"
+	"DOTA_XboxDVR_Explain"		"Your operating system has Xbox Game DVR enabled which has been reported to cause performance problems in games such as reduced or capped fps, crashing, or freezing.\n\nWould you like to learn how Xbox Game DVR can be disabled on your system?"
+	
+	"DOTA_XboxDVR_Fix"			"Your computer has Xbox Game DVR enabled. These features have been reported to cause performance problems in games such as reduced FPS, crashing, or freezing.\n\nWould you like to disable these features?"
+
+	"DOTA_DVRDisabled_Title"	"Changes Applied"
+	"DOTA_DVRDisabled_Msg"		"This will take effect after your next system reboot."
+
+	"DOTA_HUD_TimeTooltip"					"{s:day_night} {d:hour} {s:am_pm}"
+	"DOTA_HUD_SharedContentSharedBy"		"Shared By: {s:shared_names}"
+
+	"DOTA_HUD_SharedUnits"		"When enabled, allow {s:player_name} to issue orders to non-hero units under your control."
+	"DOTA_HUD_SharedHero"		"When enabled, allow {s:player_name} to issue orders to your Hero."
+	"DOTA_HUD_DisableHelp"		"When disabled, prevent {s:player_name} from using certain abilities on your Hero."
+	"DOTA_HUD_AltAttribHint"	"Hold ALT to view attributes"
+
+	"DOTA_HUD_UpgradeCourier"	"Upgrade Courier"
+
+	"DOTA_TrueSight_Episode2"		"Episode 2"
+	"DOTA_TrueSight_Countdown"		"Premieres in {i:hours}H {i:minutes}M"
+	"DOTA_TrueSight_WatchLive"		"Watch Live Now"
+	"DOTA_TrueSight_AvailableNow"	"Available Now"
+
+	"DOTA_TrueSight_EnglishSubtitled"		"English (Subs)"
+
+	"DOTA_SavedSets_Create_Title"			"Create Custom Set"
+	"DOTA_SavedSets_Edit_Title"				"Edit Custom Set"
+	"DOTA_SavedSets_SetName"				"Set Name:"
+	"DOTA_SavedSets_SetItems"				"Set Items:"
+
+	"DOTA_SavedSets_Confirm_Title"			"Delete Saved Set"
+	"DOTA_SavedSets_Confirm_Description"	"Are you sure you'd like to delete the saved set '{s:saved_set_name}' for {g:dota_hero_name:hero_id}? The items from the set will not be deleted."
+	"DOTA_SavedSets_Delete"					"Delete"
+	"DOTA_SavedSets_Create"					"Create"
+	"DOTA_SavedSets_Save"					"Save"
+
+	"DOTA_HUD_Pregame_TeamComposition_Title"	"Team Composition"
+	"DOTA_HUD_Pregame_TeamComposition_MeleeHeroes"	"Melee: <span class=\"AttackStyle\">{d:melee_count}</span>"
+	"DOTA_HUD_Pregame_TeamComposition_RangedHeroes"	"Ranged: <span class=\"AttackStyle\">{d:ranged_count}</span>"
+
+	"DOTA_HeroInspect_BanDescription"	"Nominate a Hero for Banning"
+	"DOTA_HeroInspect_PickDescription"	"Choose your Hero"
+
+	"DOTA_InvokerSpellCard_Title"	"Spells"
+
+	"DOTA_MinimapLane_Top"		"Top Lane"
+	"DOTA_MinimapLane_Mid"		"Mid Lane"
+	"DOTA_MinimapLane_Bottom"	"Bottom Lane"
+	"DOTA_MinimapLane_Jungle"	"Jungle"
+
+	"DOTA_MinimapLane_Dire"				"(Dire)"
+	"DOTA_MinimapLane_DireSafe"			"(Dire Safe Lane)"
+	"DOTA_MinimapLane_DireOfflane"		"(Dire Offlane)"
+	"DOTA_MinimapLane_Radiant"			"(Radiant)"
+	"DOTA_MinimapLane_RadiantSafe"		"(Radiant Safe Lane)"
+	"DOTA_MinimapLane_RadiantOfflane"	"(Radiant Offlane)"
+
+	"DOTA_PlayerMMR"	"MMR: {s:player_mmr}"
+	"DOTA_BattlePassLevel" "Battle Level: {d:battle_pass_level}"
+
+	"DOTA_KillGraph_Title"		"Health Graph"
+	"DOTA_KillGraph_Damage"		"{i:value} Damage"
+	"DOTA_KillGraph_Healing"	"{i:value} Healing"
+
+	"DOTA_StatBranch_Title"	"Select a talent"
 }

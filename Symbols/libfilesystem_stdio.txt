@@ -31,33 +31,35 @@
  CommandLine
  CreateNewThreadPool
  DevMsg(char const*, ...)
- DevWarning(char const*, ...)
  EarlyInit_Tier0
  GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
  GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
  KeyValuesSystem
  LOG_GENERAL
+ LengthOfMatchingPaths
  LoggingSystem_IsChannelEnabled
  LoggingSystem_Log
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
  Msg
+ Plat_DebugPrint
+ Plat_DebugString
  Plat_ExitProcess
+ Plat_FileSize
  Plat_FloatTime
  Plat_GetEnv
- Plat_GetModuleFilename
- Plat_GetModuleProcAddress
  Plat_GetOSType
  Plat_IsHighDPI
- Plat_IsInDebugSession
+ Plat_IsInDebugSessionRaw
  Plat_LoadModule
- Plat_LoadModuleRaw
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_TickDiffMicroSec
  Plat_TickDiffMicroSecF
  Plat_TickDiffMilliSecF
  Plat_TranslateSymbolicLinks
+ Plat_UnloadModule
+ Plat_ctime
  Plat_getwd
  RandomInt
  SteamAPI_GetHSteamPipe
@@ -79,9 +81,64 @@
  ThreadInterlockedExchange64
  ThreadSetPriority
  ThreadSleep
+ V_AreSlashesCorrect
+ V_FixDoubleSlashes
+ V_FixSlashes
+ V_GetErrno
+ V_GetFileExtension
+ V_IsAbsolutePath
+ V_IsFakePath
+ V_MakeAbsoluteVPKPathName
+ V_RemoveDotSlashes
+ V_SetErrno
+ V_StripFilename
+ V_StripTrailingSlash
+ V_UTF16ToUTF8
+ V_UnqualifiedFileName
+ V_atof
+ V_atoi
+ V_fclose
+ V_ferror
+ V_fflush
+ V_fopen
+ V_fprintf
+ V_fread
+ V_fseeki64
+ V_ftelli64
+ V_fwrite
+ V_qsort
+ V_qsort_s
+ V_setvbuf
+ V_snprintf
+ V_snwprintf
+ V_sscanf
+ V_stricmp_fast
+ V_stristr_fast(char const*, char const*)
+ V_strlower_fast
+ V_strtod
+ V_strtoi64
+ V_strtoui64
+ V_strupper_fast
+ V_vsnprintf
+ V_vsnprintfRet
+ V_vsnprintfSize
  Warning
- _DefaultRuneLocale
  _Unwind_Resume
+ _V_AppendSlash
+ _V_ComposeFileName
+ _V_ExtractFileExtension
+ _V_ExtractFilePath
+ _V_FileBase
+ _V_FixupPathName
+ _V_GetFirstDir
+ _V_MakeAbsolutePath
+ _V_SetExtension
+ _V_StringAfterPrefix
+ _V_StripExtension
+ _V_StripLastDir
+ _V_strncat
+ _V_strncpy
+ _V_strnicmp_fast
  __bzero
  __cxa_atexit
  __cxa_begin_catch
@@ -90,42 +147,22 @@
  __cxa_guard_acquire
  __cxa_guard_release
  __cxa_pure_virtual
- __dynamic_cast
  __error
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
- __stderrp
  __tolower
  __toupper
- abort
  alphasort$INODE64
- atof
- atoi
  chmod
  closedir
- ctime
- dlclose
- dlsym
  dyld_stub_binder
- fclose
- ferror
- fflush
  flock
- fopen
- fprintf
- fputs
- fread
  free
- fseek
- ftell
- fwrite
  g_Tier1_CRC32Table
  g_VProfCurrentProfile
  g_pMemAlloc
  g_pThreadPool
- getcwd
  memchr
  memcpy
  memmove
@@ -133,7 +170,6 @@
  memset_pattern16
  mkdir
  opendir$INODE64
- printf
  pthread_getspecific
  pthread_mutex_destroy
  pthread_mutex_init
@@ -142,14 +178,11 @@
  pthread_mutexattr_init
  pthread_mutexattr_settype
  pthread_setspecific
- qsort
  raise
  readdir$INODE64
  rename
  rewind
  scandir$INODE64
- sprintf
- sscanf
  stat$INODE64
  std::terminate()
  strcasecmp
@@ -158,20 +191,12 @@
  strcmp
  strcpy
  strlen
- strncat
- strncmp
  strrchr
  strstr
- strtod
- strtol
- strtoull
  typeinfo for CThread
  typeinfo for std::bad_alloc
  unlink
- vsnprintf
- vswprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
- wcscpy
  wcslen

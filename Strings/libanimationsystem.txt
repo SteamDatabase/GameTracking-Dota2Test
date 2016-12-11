@@ -20,7 +20,6 @@
   `p 
  %short : Animations loaded but no animation data found
  %short : animtable hash too small: %double elements / %double buckets
- %short : has sequence references, needs recompile
  %short : seqtable hash too small: %double elements / %double buckets
  0P@@0`00@p@@
  @       @@
@@ -38,8 +37,9 @@
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
+!( 0xF & ( uintp( in.m_flMatVal ) | uintp( out.m_flMatVal ) ) )
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!0RB`
+!(RB`
 !IsInitialized()
 !IsRelevantFieldType( pFieldType )
 !IsSingleFieldRestricted()
@@ -52,6 +52,9 @@
 !m_bInitialized
 !m_bStoredSubKey
 !m_freeOnDestruct || m_listsAreFreed
+!m_pAllocator
+!m_slaves.IsEmpty()
+!m_targets.IsEmpty()
 !multilist || ML
 !pContext
 !pExternalAllocation
@@ -72,6 +75,7 @@
 #include is NULL 
 $1HcT1
 $Hc3H
+$XD;long double
 $ffffff.
 %16.16s(%short):  %short
 %16.16s:  %short
@@ -99,7 +103,7 @@ $ffffff.
 %double : 
 %double : %short
 %double conditions
-%double hops:  %short -> 
+%double hops:  
 %double layers
 %double parameters
 %ffff.
@@ -113,10 +117,11 @@ $ffffff.
 %short : %short
 %short : param %short %short : %float
 %short = '%short', 
+%short failed expected table or string, i.e. <%short> as arg, got <%short> on model: %short
 %short failed to load
+%short failed, couldn'unsigned short load KeyValues data from specified string on model: %short
 %short failed: expected an array of floats for pose parameters
 %short failure, expected int or string as argument
-%short unable to grow buffer to fit string
 %short:  [%.2f %.2f]
 %short:  transition using unknown node name %short:%double or %short:%double, discarding
 %short: "%short" failed ignoring activity %double, expected float for parameter "%short" on model: %short
@@ -137,11 +142,13 @@ $ffffff.
 %short: "%short" failed, ikLock %double, expected table on model: %short
 %short: "%short" failed, invalid "%short" = %double, poseParamY cannot be specified without signed char valid poseParamX, on model: %short
 %short: "%short" failed, invalid "%short" = %double, valid range [0, %double] on model: %short
+%short: "%short" failed, sequence MaxFrame is %double on model: %short
 %short: "%short" failed, unknown "%short" = "%short" on model: %short
 %short: "%short" failed, unknown poseParameter "%short" = "%short" on model: %short
 %short: "%short" parameter not specified, using "%short"
 %short: "%short" parameter specified but isn'unsigned short signed char string, ignoring and using "%short"
 %short: "%short" parameter specified but isn'unsigned short signed char string, ignoring and using default type
+%short: %short
 %short: %short = %short, not found on model: %short
 %short: %short = true specified, ignoring %short = %float
 %short: %short already specified
@@ -210,6 +217,7 @@ $ffffff.
 %short: sequence "%short" failed, invalid "%short" = %double, valid range [0, %double] on model: %short
 %short: sequence "%short" failed, unknown "%short" = "%short" on model: %short
 %short: sequence "%short", bad "%short" at index %double, mandatory parameter "%short" missing on model: %short
+%short: string format requested %double chars
 %short: unexpected %short parameter: %short, bad %short element %double
 %short: unknown %short specified: %short, bad %short element %double
 %short: unknown block %short on model: %short
@@ -230,7 +238,6 @@ $ffffff.
 (GetChar()) == (0)
 (Hc{(1
 ([A\A]A^A_]
-([A\A]A^A_]A
 ([A^A_]
 (double+ C
 (ffff.
@@ -241,22 +248,21 @@ $ffffff.
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (null)
 (s_pThisModuleBindingPointer != NULL)
-(size_t)hResource % 4 == 0
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-(uBHcK
+(uEHcK
 )d7 C
 )fff.
 )ffffff.
 )long/ C
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 +0~!L
++C ~%~
 +C$A9E
-+C(~%~
-+CH~[D
 +CX~!D
 +fff.
 +short ~"
 ,@Nct
+,E9|	
 ,ffff.
 -animdecodecachemem
 -sse2
@@ -299,14 +305,19 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bonesetup/channel_operators.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/keyvalues3.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/kv3transfer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animationophistory.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animstategraph.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/model.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/animationsystem/compression.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/variant.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/modellib/ianimstategraph.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/introspectedtypemanager.h
@@ -342,7 +353,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbinaryblock.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
@@ -368,36 +378,38 @@ $ffffff.
 0[A\A^A_]
 0[A^]
 0fffff.
+0x%016llX
 1 1 1
 1fffff.
 29K }
+2JcL!
 2dtri
 33333333I9
 4$[A\A^A_]
+40A;wchar_t
 49K }
 49S |}
 4Hc{41
 6[A\A^A_]
-6~Lfffff.
 8Hc>H
 8HcCh
 8Hct2
 8[A\A]A^A_]
 8[A^A_]
 92tBH
-9Aht:H
-9Cht 
+9Aht3H
+9F(t6H
 9Hc8A
 9Hc>A
 9Hc>H
 9S |signed char
 9S |unsigned int
-:tFL9
 ;Hc>H
 ;L9'u
 ;L97u
 ;Y(uTI
 ;YHu`I
+;Z u$I
 <$L9?u
 <(9{ |jI
 <BAD_KEY>
@@ -405,14 +417,15 @@ $ffffff.
 <Hc{<1
 <INcd
 <NULL>
+<fff.
 <ffffff.
-=ffff.
+<unknown>
 =unsigned long long;Ic
 >fffff.
 ?CPostConnectCallback
+?EBoneSetup
 ?[A^]
 ?ffffff.
-@ P@@
 @$Hc{$1
 @(Hc{(1
 @,Hc{,1
@@ -424,7 +437,6 @@ $ffffff.
 @8Hc{81
 @<Hc{<1
 @@@0@
-@@@PP@ P 
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @CThreadSpinLock::CThreadSpinLock(int)
 @CThreadSpinRWLock::LockForRead()
@@ -442,7 +454,9 @@ $ffffff.
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @PHc{P1
+@PP@ P 
 @THc{T1
+@V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
@@ -456,15 +470,13 @@ $ffffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_VirtualAlloc
@@ -474,9 +486,41 @@ $ffffff.
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
 @_ThreadYield
+@_V_FixSlashes
+@_V_GetErrno
+@_V_GetFileExtension
+@_V_SetErrno
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_acosf
+@_V_asinf
+@_V_atan2f
+@_V_atod
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_expf
+@_V_logf
+@_V_powf
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_swscanf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_StringAfterPrefix
+@__V_strncat
+@__V_strncpy
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -486,36 +530,23 @@ $ffffff.
 @___cxa_guard_release
 @___cxa_pure_virtual
 @___dynamic_cast
-@___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
-@___sincosf_stret
+@___sincos_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
 @_acos
-@_asin
 @_atan2
-@_atan2f
-@_atof
 @_atoi
-@_cos
-@_exp
 @_floorf
-@_free
 @_frexpf
 @_g_pMemAlloc
-@_log
-@_malloc
 @_memchr
 @_memcmp
 @_memcpy
 @_memmove
 @_memset
 @_memset_pattern16
-@_pow
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -523,28 +554,21 @@ $ffffff.
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
 @_raise
-@_sin
 @_sscanf
 @_strchr
 @_strcmp
 @_strcpy
 @_strlen
-@_strncat
 @_strstr
-@_strtod
-@_strtol
-@_swscanf
-@_vsnprintf
 @_wcslen
-@_wcstof
-@_wcstol
 @`Hc{`1
 @`p@ P`
 @dyld_stub_binder
 @ffff.
+@ffffff.
 @loader_path
-@r4Mc
-@r<Mc
+@r4Ic
+@r8Ic
 @rpath/libanimationsystem.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -560,6 +584,8 @@ A$Hc{$1
 A(Hc{(1
 A+D$$Hc
 A+D$(~ D
+A+EH~ZD
+A+Eh~
 A+G0~
 A+GH~
 A+GP~
@@ -567,6 +593,7 @@ A+Gp~
 A+t$8~
 A+u@~
 A+uX~
+A+uX~UI
 A+ux~
 A+w8~
 A+wX~
@@ -575,30 +602,34 @@ A+wchar_t(~)L
 A+wchar_t@~
 A+wchar_t`~
 A,LcK,1
-A9D$0u8H
+A9D$0u0H
+A9Eht/A
+A9Q8A
 A9T$ }
 A9V |fA
 A9V }	
 A9V }	A
+A9\unsigned char
 A9]H} 
+A9]ht
 A9]unsigned char} 
 A;4$|
 A;D$ ~
 A;EXt.H
-A;G ~
 A;\$ u$L
 A;\$@|
 A;\$P|
+A;\$p
 A;]D}|I
 A;]Xu6I
 A;]`u
 A;]long long|
-A;]p|
 A;^(u
 A;^`u
+A;^hu*
 A;_ u
 A;_hu
-A;t$Xu.I
+A;t$Xu0I
 A;|$4H
 ACT_INVALID
 ANIMATION_PROCESSING_CLIENT_INTERPOLATION
@@ -616,6 +647,8 @@ ANIMATION_SNAPSHOT_MAX
 ANIMATION_SNAPSHOT_SERVER_SIMULATION
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARAp0p
+ARBRB`
+ARBTBRB]ARBRAp
 ARB]ARA
 ARB]ARAp
 ARB]ARB]ARB]ARB]ARB]ARA
@@ -633,12 +666,12 @@ ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBTBRB]ARBRAp
 ASARBSAXBTBRBRBRAp
-ATBRAp
 ATBRBRBRBSAXBRB`
 ATBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 ATBRB]ARAp
 ATBRB]ARBRAp
 ATBRB]Ap
+ATCRAp
 ATCUARBRB[ATAp
 ATTACHMENT_INFLUENCE_FLAGS_NONE
 ATTACHMENT_INFLUENCE_FLAGS_ROOT_TRANSFORM
@@ -674,6 +707,9 @@ AddEventTypeFlags
 Adds or merges the pose parameter range of the specified pose paramater
 Adds the the specified type flags for specified event on the sequence
 Afffff.
+Aim constraint always need at least two targets
+AimConstraint: %short - Cannot Find Aim Up Target Attachment: %short
+AimConstraint: %short - Cannot Find Aim Up Target Bone
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
 AlignValue( m_nBytesFree, 16 ) == m_nBytesFree
 AlignValue( nBlockSize, 16 ) == nBlockSize
@@ -728,7 +764,6 @@ AttachmentData_t
 AttachmentInfluenceFlags_t
 Attempted to ConvertToCopiedData for unsupported type (%double)
 BLEND_PREALIGNED|
-BRBRB`
 Bad %short on sequence %s.%short[%double] expected signed char table on model: %short
 Bad %short on sequence %s.%short[%double] failed on model: %short
 Bad %short on sequence %short couldn'unsigned short compute nodeId for "%short" on model: %short
@@ -761,9 +796,11 @@ BuilderModelBoneFlexDriver_t
 Burst Randomize
 Burst Scale
 C [A^]
+C(yTI
 C+t58~:L
-C+unsigned short! ~?H
 C+unsigned short&`~
+C,[A\A^A_]
+CAimConstraint
 CAnimContainer
 CAnimContainer_Imp
 CAnimResourceSequence
@@ -771,6 +808,7 @@ CAnimationBucket
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (1)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (2)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (3)
+CAnimationDecodeContext::Init was called twice!
 CAnimationGraphVariant_t &CAnimationGraphVariant_t::operator=(const CAnimationGraphVariant_t &)
 CAnimationGroupTypeManager
 CAnimationHelper
@@ -810,7 +848,6 @@ CAtomicManipulator<CResourceArray<AnimationRetargetChainData_t> >
 CAtomicManipulator<CResourceArray<AnimationRetargetElementData_t> >
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
-CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationResource> > > >
@@ -896,6 +933,7 @@ CAtomicManipulator<CUtlVector<CCompressor<int>*, CUtlMemory<CCompressor<int>*, i
 CAtomicManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CAtomicManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CAtomicManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CAtomicManipulator<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > >
 CAtomicManipulator<CUtlVector<CUtlVector<char const*, CUtlMemory<char const*, int> >, CUtlMemory<CUtlVector<char const*, CUtlMemory<char const*, int> >, int> > >
 CAtomicManipulator<CUtlVector<CUtlVector<int, CUtlMemory<int, int> >, CUtlMemory<CUtlVector<int, CUtlMemory<int, int> >, int> > >
@@ -999,7 +1037,6 @@ CCompressedStaticVector3
 CCompressedStaticVector4D
 CCompressor
 CCompressorGroup
-CDHcL2
 CDataManager<CBoneCache, bonecacheparams_t, CBoneCache*, CThreadFastMutex>
 CDataManagerBase
 CDefaultAccessor
@@ -1028,6 +1065,7 @@ CLIENT: Activity %double is %short
 CMaterialDrawDescriptor
 CModelVScriptCompile
 CModelVScriptCompile::CModelVScriptCompile(const CModel *, HSCRIPT)
+CMorphConstraint
 CNWaySequence
 COLORCORRECTION_VERSION_1
 CONSTRAINT_TYPE_2_BONE_IK
@@ -1036,15 +1074,19 @@ CONSTRAINT_TYPE_HELPER_BONE
 CONSTRAINT_TYPE_INVALID
 CONSTRAINT_TYPE_JIGGLE_BONE
 CONSTRAINT_TYPE_MAX
+CONSTRAINT_TYPE_MORPH
 CONSTRAINT_TYPE_ORIENT
 CONSTRAINT_TYPE_POINT
 CONSTRAINT_TYPE_ROTATION
+CONSTRAINT_TYPE_TILT_TWIST
 CONSTRAINT_TYPE_TWIST
+COrientConstraint
 CPhysSurfaceProperties
 CPhysSurfacePropertiesAudio
 CPhysSurfacePropertiesGame
 CPhysSurfacePropertiesPhysics
 CPhysSurfacePropertiesSoundNames
+CPointConstraint
 CReferenceCleanupTraversal
 CRenderMesh
 CRenderSkeleton
@@ -1093,22 +1135,27 @@ CSchemaClassBinding<BaseConstraint_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverControl_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverList_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriver_t>
+CSchemaClassBinding<CAimConstraint>
 CSchemaClassBinding<CAttachment>
-CSchemaClassBinding<CBaseConstraint>
 CSchemaClassBinding<CBuilderModelInfo>
 CSchemaClassBinding<CCompressorGroup>
 CSchemaClassBinding<CHitBox>
 CSchemaClassBinding<CHitBoxSet>
 CSchemaClassBinding<CHitBoxSetList>
 CSchemaClassBinding<CMaterialDrawDescriptor>
+CSchemaClassBinding<CMorphConstraint>
+CSchemaClassBinding<COrientConstraint>
 CSchemaClassBinding<CPhysSurfaceProperties>
 CSchemaClassBinding<CPhysSurfacePropertiesAudio>
 CSchemaClassBinding<CPhysSurfacePropertiesGame>
 CSchemaClassBinding<CPhysSurfacePropertiesPhysics>
 CSchemaClassBinding<CPhysSurfacePropertiesSoundNames>
+CSchemaClassBinding<CPointConstraint>
 CSchemaClassBinding<CRenderMesh>
 CSchemaClassBinding<CRenderSkeleton>
 CSchemaClassBinding<CSceneObjectData>
+CSchemaClassBinding<CTiltTwistConstraint>
+CSchemaClassBinding<CTwistConstraint>
 CSchemaClassBinding<CVPhysXLevelData>
 CSchemaClassBinding<CVPhysXMesh>
 CSchemaClassBinding<CVPhysXSurfacePropertiesList>
@@ -1214,7 +1261,6 @@ CSchemaManipulator<CResourceArray<AnimationRetargetChainData_t> >
 CSchemaManipulator<CResourceArray<AnimationRetargetElementData_t> >
 CSchemaManipulator<CResourceArray<AttachmentData_t> >
 CSchemaManipulator<CResourceArray<BaseConstraint_t> >
-CSchemaManipulator<CResourceArray<CPhysSurfaceProperties> >
 CSchemaManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationResource> > > >
@@ -1300,6 +1346,7 @@ CSchemaManipulator<CUtlVector<CCompressor<int>*, CUtlMemory<CCompressor<int>*, i
 CSchemaManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CSchemaManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CSchemaManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CSchemaManipulator<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > >
 CSchemaManipulator<CUtlVector<CUtlVector<char const*, CUtlMemory<char const*, int> >, CUtlMemory<CUtlVector<char const*, CUtlMemory<char const*, int> >, int> > >
 CSchemaManipulator<CUtlVector<CUtlVector<int, CUtlMemory<int, int> >, CUtlMemory<CUtlVector<int, CUtlMemory<int, int> >, int> > >
@@ -1329,6 +1376,8 @@ CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_animationsystem
 CSchemaRegistration_modellib
@@ -1348,6 +1397,7 @@ CSchemaUtlVectorManipulator<CUtlVector<CCompressor<int>*, CUtlMemory<CCompressor
 CSchemaUtlVectorManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> >, CHitBox>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >, CHitBoxSet>
 CSchemaUtlVectorManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >, CMaterialDrawDescriptor>
+CSchemaUtlVectorManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> >, CPhysSurfaceProperties*>
 CSchemaUtlVectorManipulator<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >, CUtlString>
 CSchemaUtlVectorManipulator<CUtlVector<CUtlVector<char const*, CUtlMemory<char const*, int> >, CUtlMemory<CUtlVector<char const*, CUtlMemory<char const*, int> >, int> >, CUtlVector<char const*, CUtlMemory<char const*, int> > >
 CSchemaUtlVectorManipulator<CUtlVector<CUtlVector<int, CUtlMemory<int, int> >, CUtlMemory<CUtlVector<int, CUtlMemory<int, int> >, int> >, CUtlVector<int, CUtlMemory<int, int> > >
@@ -1377,7 +1427,7 @@ CSeqResourceCmdSequence
 CSeqResourceMultiSequence
 CSeqResourceS1Sequence
 CSequenceGroupTypeManager
-CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>
+CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
 CStrongHandle
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
@@ -1393,12 +1443,11 @@ CTier0AppSystem<IAnimationSystem>
 CTier1AppSystem<IAnimationSystem, 0>
 CTier2AppSystem<IAnimationSystem, 0>
 CTier3AppSystem<IAnimationSystem, 0>
+CTiltTwistConstraint
 CTransform
+CTwistConstraint
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlHashDict<short, true, false>::CUtlHashDict(int, int, int) [T = short, bCaseInsensitive = true, bDupeStrings = false]
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
@@ -1424,10 +1473,15 @@ C`[A^]
 Cannot %short - unknown type
 Cannot %short signed char class with no binding: '%short' (Missing $SchemaFile, DLL not loaded, or needs REFERENCE_LIB_SCHEMA_INFORMATION)
 Cannot %short signed char non-class type: '%short'
+Cannot allocate abstract class
+Cannot allocate abstract class %short
+Cannot construct abstract class
+Cannot copy abstract class
+Cannot deallocate abstract class
+Cannot destruct abstract class
 Cannot determine resource type for handle '%short' - schema data not loaded for the referred-to type?
 Cannot run script: NULL script name
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
-ClassIntrospectionHandle_t FindDiskDataClassForResourceType(ResourceType_t)
 ClearFlag
 Clears the flags given the specified flag mask
 Collision Group Hash
@@ -1444,6 +1498,8 @@ ConfigurationSystem_001
 ConstraintSlave_t
 ConstraintTarget_t
 ConstraintType_t
+ContainsCRLF()
+ContainsCRLF() == bContainsCRLF
 Count
 Cp;unsigned charcomplex |
 Cp[A^]
@@ -1463,29 +1519,27 @@ D$0Hc@
 D$0Jc
 D$0JcD
 D$8D9
-D$PE1
-D$PI)
-D$PIc
 D$XHc
-D$XI)
+D$xHc
+D9%Sp
+D9%wchar_t*
 D98u31
 D9h0H
-D9kht
 D9s }
 D9sXu
+D;... u$H
 D;9u}
+D;=PW
 D;`(|
 D;`PL
+D;cx|
 D;hT}"H
-D;kp|
-D;phu+
-D;q`u!H
-D;short u
-D;short(|
+D;qhu!H
 D;x0H
 D;xT}"H
 D;xX|
 D;{ |nH
+D;{(|
 D<PfA
 D>,Hc
 DATAL
@@ -1494,15 +1548,13 @@ DHc{D1
 Data manager 'used' memory incorrect
 Debug bone name for interpolation spew of CAnimationState.
 DebugTextureInfo001
-Deferred
 DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
 DevWarning(char const*, ...)
+Dffff.
 DmeSurfaceAudioParams
 DmeSurfaceAudioSounds
 DmeSurfacePhysicsParams
-DmeSurfaceProperties
-DmeSurfacePropertyList
 DmeVPhysXLevel
 DmeVPhysXMesh
 Do Not Cast Shadows
@@ -1511,7 +1563,6 @@ DoIncludeScript failed: %short
 DotaCardGameClient_001
 Double-save to Member '%short'
 Duration
-E(yMH
 E0Hc|
 E9e
 E9t$pL
@@ -1519,7 +1570,6 @@ E;__int128 ~0
 E;e8u
 E;eX|
 E;fHu
-E;l$(
 E;l$8u
 E;l$P
 E;t$8L
@@ -1530,12 +1580,14 @@ E;u8u
 E;uD}\A
 E;uPu$I
 E;uX|
+E;|$(L
 E;|$8u
 E;|$8u"
 E;}8u
 E;}8|
+E;~P|
 E;~X|
-EBoneSetup
+EINAu"H
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CCompressor
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CCompressor
@@ -1544,8 +1596,6 @@ ERROR: CAtomicManipulator::Copy() Cannot copy CCompressor(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CCompressor
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
-ERROR: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
-ERROR: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
 ERROR: Problem allocating permanent data for resource in file '%short'. See above for reason(short)
 EconItemToolModel_001
 Encountered too many releases for resource "%short"
@@ -1562,14 +1612,15 @@ F Hcz 1
 F [A^]
 F$Hcz$1
 F(Hcz(1
-F(IcN4H
 F([A^]
 F,Hcz,1
 F0Hc@
 F4Hcz41
 F8Hcz81
+F;double*(u/J
 F<Hcz<1
 FCVAR_NEVER_AS_STRING
+FDHcL:
 FIELD_BOOLEAN
 FIELD_CHARACTER
 FIELD_CLASSPTR
@@ -1592,6 +1643,7 @@ FIELD_INTEGER
 FIELD_INTEGER64
 FIELD_INTERVAL
 FIELD_MATRIX3X4_WORLDSPACE
+FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR
 FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR
 FIELD_NETWORK_QUANTIZED_FLOAT
 FIELD_NETWORK_QUANTIZED_VECTOR
@@ -1640,6 +1692,7 @@ FLAG_PHYSICS|
 FLAG_PROCEDURAL|
 FLAG_RETARGET_SRC|
 FLAG_RIGIDLENGTH|
+FL[A^]
 FPHczP1
 FTHczT1
 F`Hcz`1
@@ -1649,27 +1702,27 @@ Fade long long signed char::* Distance
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
 Failed to call CBaseIntrospectedTypeManager::Init
 Failed to call CBaseIntrospectedTypeManager::SetDiskDataBinding
-Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in: '%short'
+Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in extref block.'
 Failed to run initial animationsystem script
+Failed to save unsupported class
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
 Find signed char named animation index for the model
 Find signed char named pose parameter index for the model
 Find signed char named sequence index for the model
 Find signed char named weightlist index for the model
 FindDistance
-FixupResourceName: Illegal full path passed in ("%short")!
-FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FlattenedSerializersVersion001
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
+Fp[A^]
 From Class Binding
 From Enum Binding
 Ft[A^]
 G(HcW4H
 G8H	p(]
-G;unsigned short,(u%K
 G@Hc_(H
+GA#D$
 GAMECONSOLE
 GL[A\A^A_]
 GameResourceServiceClientV001
@@ -1701,6 +1754,8 @@ GetPoseSettingValue
 GetRagdollBoneWeights
 GetSequence
 GetSequenceList
+GetTableRaw() != nullptr
+GetType() == KEYVALUES3_TYPE_TABLE
 Given signed char name or signed char sequence handle, returns an instance of the sequence class
 Given signed char pose parameter array, return the highest frame number for the sequence
 H	p(]
@@ -1710,9 +1765,9 @@ H91t8H
 H91tRH
 H;A(usH
 H;A(uuH
-HAnimation
-HAnimationDecodeDesc CAnimationDecodeContext::AddAnimationDecodeDesc(HModel, float, const uint32 *, int, const CAnimationDecodeOp *, int, const float *, int, LODGroupMask_t)
-HAnimationGroup
+HAnimationDecodeDesc CAnimationDecodeContext::AddAnimationDecodeDesc(HModel, float, const uint32 *, int, const CAnimationDecodeOp *, int, const float *, int, LODGroupMask_t, uint32)
+HAnimationGroup_Internal
+HAnimation_Internal
 HIGHDPI
 HKeySymbol KeyValues::GetNameSymbol() const
 HKeySymbol KeyValues::GetNameSymbolCaseSensitive() const
@@ -1721,7 +1776,7 @@ HSCRIPT CModelVScriptCompile::GetSequence(const ScriptVariant_t &) const
 HSCRIPT CVariantBase<CVariantDefaultAllocator>::operator HSCRIPT__ *() const [CValueAllocator = CVariantDefaultAllocator]
 HSequence
 HSequence CAnimationStateGraphLayer::FindTransitionSequence(CAnimationStateGraph *, const IAnimationStateGraphOwner *, HSequence, HSequence, bool)
-HSequenceGroup
+HSequenceGroup_Internal
 H[A\A]A^A_]
 H[A^A_]
 H__ZdaPv
@@ -1733,7 +1788,6 @@ Hc:Lc4
 Hc@(H9
 Hc@LI
 HcG(H
-HcGhH
 HcH(H
 HcH\H
 HcHdH
@@ -1750,9 +1804,9 @@ HcP$H
 HcP(H
 HcPhH
 HcQDHcH(H
-HcR(Ic6H
+HcS0H
+HcS8H
 HcSDHcp(1
-HcShHk
 Hcp 1
 Hcq(1
 Hcr,H
@@ -1816,17 +1870,24 @@ Ic4$A
 Ic4$H
 IcD$PH
 IcD$hH
+IcFhH
+IcF|H
 IcG(Hc
+IcGtH
+IcGxH
 IcL$DHcP(1
-IcU0H
-IcU8H
-IcU`H
+IcT$hH
+IcU(H
+IcUhHk
 Ic\$ H
+Ic\$(D9
 Ic^(H
 Ic^PH
 Ic_ H
 Ic_(D
+Ic_(H
 Icz(H
+Impl().m_AdditionalClusters.FindAndFastRemove( pCluster )
 IncludeScript stack overflow
 InfoForResourceTypeCAnimationGroupResource
 InfoForResourceTypeCAnimationResource
@@ -1847,6 +1908,7 @@ Internal_GetSubKey() == dat
 Invalid fieldtype_t
 Invalid parameter %short for %short = "%short"
 Invalid state graph param type '%short'
+IsAllGreaterThan( tolerance, diff )
 IsAnimation
 IsAutoplay
 IsDelta
@@ -1870,44 +1932,39 @@ IsValidIndex(elem) && IsValidList(list)
 IsValidIndex(int)
 IsValidList(list)
 Jc41H
-JcD(0H
-JcD(4H
-JcD80H
-JcD84H
 KV Conditional Evaluation Error
 Kc4.H
-KcD&4H
-KcD&8H
 KcL/(H
 KeyValueCache001
 KeyValueText
+KeyValueTextString
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
+KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstTrueSubKey()
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextTrueSubKey()
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
 KeyValues3 *CKeyValues3Table::MemberData(int)
+KeyValues3 *KeyValues3::FindOrCreateMember(const char *, KeyValues3LowercaseHash_t)
 KeyValues3 *KeyValues3::GetArrayElement(int)
 KeyValues3::GetElement - Bad index %double (count = %double)
 KeyValues::FindKey called on NULL pointer!
 KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
-L# Hc
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 L$(Lc
 L$0Hc
 L$XJc
+L; Lc$
 LINUX
 LOWVIOLENCE
 Lc#D;long double
-Lc=Z$
 LcC(H
 Lc`TI
 LccLC
 LckLC
-Lfff.
 LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
@@ -1925,6 +1982,7 @@ MDiskDataForResourceType
 MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle_t
 MDmElementType
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
+MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_IS_OCCLUDER
 MESH_DRAW_FLAGS_NONE
 MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT
@@ -1937,7 +1995,6 @@ MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
-MINAu?H
 MKV3TransferName
 MNetworkSerializeAs
 MNoScatter
@@ -1945,6 +2002,7 @@ MODEL_BONE_FLEX_INVALID
 MODEL_BONE_FLEX_TX
 MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPreSerializationCallback
 MPropertyFriendlyName
@@ -1962,16 +2020,16 @@ Mc7D;u
 Mc<$J
 McN8M
 Mce8M
-Mcl$(E9
 Mcn0M
+Mcu0D9
 McwHG
-Mc}0D9
 Mc~XM
 Member function called on NULL KeyValues
 MeshDrawPrimitiveFlags_t
 MeshSystem001
 MeshTranslucencyType_t
 MeshUtils001
+Mffff.
 Missing mandatory parameter "%short"
 Model %short: group %short: missing referenced sequence "%short"
 Model %short: sequence/animation name collision found "%short"
@@ -2046,13 +2104,11 @@ Ordered object did not begin in signed char zeroed state
 Out of bounds from nodeId %double, valid range [ %double, -1 ] or [ 1, %double ]
 Out of range %short on sequence %s.%short[%double] on model: %short
 OyMIc
-P 0 P
-P0@P0@
 PHc{P1
 POSIX
 PPL;}
+PPPP@@
 P[A\A^A_]
-P[A^]
 P` 000P0@PP
 PanoramaTextServices001
 PanoramaUIClient001
@@ -2078,6 +2134,8 @@ PermModelInfo_t::FLAG_TRANSLUCENT_TWO_PASS
 PermModelInfo_t::FlagEnum
 PermRenderMeshData_t
 Pffff.
+Pffffff.
+PhL;u
 PhysFeModelDesc_t
 PhysSoftbodyDesc_t
 Physics
@@ -2091,14 +2149,14 @@ Quaternion
 QuaternionIsNormalized( m_dataChannel[ nChannel ].m_data.m_pQuaternion[ nIndex ], s_flQuatNormEps )
 QueuedLoaderVersion001
 QyOIc
+RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
-RBRCp
 RBRGp
 RBSAXAp
-RESOURCE_TYPE_ANIMATION
-RESOURCE_TYPE_ANIMATION_GROUP
-RESOURCE_TYPE_SEQUENCE_GROUP
+RESOURCE_TYPE_ANIMATION_GROUP_INTERNAL
+RESOURCE_TYPE_ANIMATION_INTERNAL
+RESOURCE_TYPE_SEQUENCE_GROUP_INTERNAL
 RGp8p8p
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -2111,7 +2169,7 @@ Release
 RemoveEventTypeFlags
 Removes the the specified type flags for specified event on the sequence
 RenderBufferBinding_t
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayoutField_t
@@ -2128,10 +2186,8 @@ Resource "%short" requested unknown animation decompressor "%short"
 Resource %short
 ResourceCompilerSystem001
 ResourceHandleUtils001
-ResourceId_t UpdateResourceIdForUGC(const char *, UGCHandle_t, ResourceId_t, const CResourceRefTable *, char *, int)
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ResourceType_t GetResourceTypeOfWeakHandle(const CSchemaType *)
 RetargetSrc.%llX.%short
 Returns an array of floats which are the bone weights for weightlist 0 on the sequence
@@ -2140,6 +2196,7 @@ Returns an array of int'short which are the indices of all of the sequences this
 Returns an array representing the maxiumum bounding box of the sequence, form: { min = <Vector>, max = <Vector }
 Returns signed char table representing the animation event at the specified index, form: { frame = <float>, cycle = <float>, event = <int>, type = <int> }
 Returns signed char table representing the asset info or nil if there is no asset info on the sequence.  The table is of the form: { name = <string>, schemaType = <string>, searchName = <string>, sourceFile = <string>, lineNumber = <int> }
+Returns the KeyValueText on signed char sequence as signed char string
 Returns the KeyValueText on signed char sequence as signed char table
 Returns the cyclerate (cycles per second) for the sequence given the specified (optional) pose parameters
 Returns the distance for the specified distance for the sequence given the specified (optional) pose parameters.
@@ -2186,10 +2243,10 @@ RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
 RyPIc
-SATAp
 SATISFIED
 SAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 SBRAp
+SBRGp8p
 SBTBRBRG
 SEQ_CMD_Add
 SEQ_CMD_Blend
@@ -2235,6 +2292,7 @@ Script_GetModel
 Script_GetNextSequence
 Script_GetRagdollBoneWeights
 Script_KeyValueText
+Script_KeyValueTextString
 Script_MaxFrame
 Script_Movement
 Script_MovementAndDuration
@@ -2277,7 +2335,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -2288,7 +2346,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StatsService_001
 Surface Prop Hash
 SurfacePropertiesList
@@ -2305,29 +2363,28 @@ TAUBRAp
 TBRARATAp
 TBRA`5B`AATAp
 TBRAp
-TBRBRA
 TBRBRAp
-TBRBSATAp
 TBSATAp
 TBSAp
 TBSBp
 TBTAp
 TBXATAp
-TBXBRBp
-TB]ARBRBRBRAp
-TB`5A`FA`=ASATAp
-TB`<BRBRBRB`>BRB`=ARBSATBTATAp
+TB]ARA
+TB`5A`GB`=ASATAp
+TB`<BRBRB`>BRBRBSATBTATAp
+TB`=Bp
 TB`>ATAp
 TB`?ATAp
 TBpXp
 TCRAp
+TCRBRA
+TCRBRDXBRBp
 TCRBTBp
 TCRB`AATAp
 TCTBRBRBSATAp
 TCUATAp
-TCWARATAp
+TCWBp
 TC^BRBRAp
-TC^BRBRB^BRBRB^BRBRAp
 TC^BRBRB^BRBRB^BRBRB^BRBRB^BRBRB^BRBRB^BRBRBp
 TC^BRBRB^BRBRB^BRBRBp
 TC^BRBRB^BRBRBp
@@ -2335,16 +2392,14 @@ TC^BRB^BRAp
 TC^BRB^BRB^BRB^BRAp
 TC^BRB^BRBp
 TC^BRBp
-TC`/ATAp
-TCp(p
-TDRBRBRBRAp
-TD`=Bp
-TGRBRDp
+TC`0ATAp
+TCp8p
+THRBRBRBRAp
 TV8L)
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -2430,14 +2485,18 @@ VScriptDbg
 VScriptManager010
 VStringTokenSystem001
 VUUUH
+V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
 Vector
 Vector2D
 Vector4D
 Velocity
 VisBuilder_001
 VpropBreakablePartData_t
+W%A|	
+WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Missing data block for file: %short
 WARNING: Missing introspection manifest for file: %short
+WARNING: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
 WARNING: Problems encounted with external references in resource '%short'. See above for reason(short)
 WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
 WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
@@ -2449,6 +2508,7 @@ WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
+XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB]ARBRB]ARAp
 XBRB`
 XBRBp
@@ -2458,6 +2518,7 @@ XBTBRBRBRBSAXBRAp
 XBTBRB]ARBRAp
 XHc{X1
 X[A\A]A^A_]
+X[A^A_]
 Yfffff.
 Zfff.
 [A\A]A^A_]
@@ -2465,11 +2526,12 @@ Zfff.
 [A\A^A_]
 [A^A_]
 [A^A_]A
-[A^]A
 [Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
 [unsigned short,fD
 \$$C9\
+\$HHc
 \80E1
+^fffff.
 _0IcG
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
@@ -2487,15 +2549,13 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_VirtualAlloc
@@ -2505,13 +2565,45 @@ _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
 _ThreadYield
+_V_FixSlashes
+_V_GetErrno
+_V_GetFileExtension
+_V_SetErrno
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_acosf
+_V_asinf
+_V_atan2f
+_V_atod
+_V_atof
+_V_atoi
+_V_cosf
+_V_expf
+_V_logf
+_V_powf
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_swscanf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstod
+_V_wcstoi64
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __UNKNOWN__
 __Unwind_Resume
+__V_StringAfterPrefix
+__V_strncat
+__V_strncpy
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -2521,11 +2613,8 @@ ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
 ___dynamic_cast
-___error
-___exp10
 ___gxx_personality_v0
-___maskrune
-___sincosf_stret
+___sincos_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___tolower
@@ -2544,24 +2633,18 @@ __stubs
 __text
 __unwind_info
 _acos
-_asin
 _atan2
-_atan2f
-_atof
 _atoi
 _class
 _floorf
-_free
 _frexpf
 _g_pMemAlloc
-_malloc
 _memchr
 _memcmp
 _memcpy
 _memmove
 _memset
 _memset_pattern16
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -2574,18 +2657,13 @@ _strchr
 _strcmp
 _strcpy
 _strlen
-_strncat
 _strnlen
 _strstr
-_strtod
-_strtol
-_swscanf
-_vsnprintf
 _wcslen
-_wcstof
-_wcstol
-`6ATAp
+`=ARA`6ATAp
 `[A\A^A_]
+`[A^]
+```````P
 `unsigned char[A\A^A_]
 activities
 addlayer
@@ -2605,18 +2683,21 @@ auto CKeyValues3Context::FreeKV_Internal(KeyValues3 *)::(anonymous class)::opera
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto CRetargetBiped::ConvertAnimation(CAnimationResult &)::(anonymous class)::operator()() const
 auto CRetargetBiped::ConvertAnimation(CTransform *)::(anonymous class)::operator()() const
+auto CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *)::(anonymous class)::operator()() const
 autoplay
+bContainsCRLF
 bindPose
 bitNum < (uint32)this->GetNumBits()
 bitNum >= 0 && bitNum < this->GetNumBits()
 blend
 blendlayer
 bonemask %double : channel %double : pattern %double : count %double
-bool CAnimContainer_Imp::AppendAnimGroup(const CModel *, int, HAnimationGroup)
-bool CAnimContainer_Imp::BuildAnimGroupList(const CModel *, HAnimationGroup, int)
+bool CAnimContainer_Imp::AppendAnimGroup(const CModel *, int, HAnimationGroup_Internal)
+bool CAnimContainer_Imp::BuildAnimGroupList(const CModel *, HAnimationGroup_Internal, int)
 bool CAnimationBlendList::AddSequence(HSequence, float)
 bool CAnimationStateTransition::IsSatisified(const CAnimationStateGraph *) const
 bool CAnimationStateTransitionCondition::IsSatisfied() const
+bool CBitVecT<CFixedBitVecBase<3> >::IsBitSet(int) const [BASE_OPS = CFixedBitVecBase<3>]
 bool CBitVecT<CVarBitVecBase<unsigned short, 1024> >::IsBitSet(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 1024>]
 bool CBitVecT<CVarBitVecBase<unsigned short, 32> >::IsBitSet(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
 bool CBoneSetup::GetAllUserData(int, void *)
@@ -2626,12 +2707,15 @@ bool CCmdSequence::InitCmdFromScript(IScriptVM *, ScriptVariant_t &, int, int)
 bool CCmdSequence::InitCmdsFromScript(IScriptVM *, ScriptVariant_t &, int)
 bool CGraphCompiler::ParseTransitionStateGraphLayer(IAnimationStateGraphBuilder *, IScriptVM *, const ScriptVariant_t &, const char *)
 bool CGraphCompiler::ParseTransitionStateGraphLayers(IAnimationStateGraphBuilder *, IScriptVM *, const ScriptVariant_t &, const char *)
+bool CKV3TransferSaveContext::PrepareTargetForClass(KeyValues3 *, KV3TransferClassBehavior_t, const char *)
+bool CModel::CalcProceduralBones(matrix3x4a_t *, CVarBitVec *, const float *) const
 bool CModelVScriptCompile::CreateTransitionGraph(HSCRIPT)
 bool CModelVScriptCompile::CreateTransitionStateGraph(HSCRIPT)
 bool CModelVScriptCompile::Init()
 bool CModelVScriptCompile::ParseTransitionGraphNode(IScriptVM *, const ScriptVariant_t &, int, const char *)
 bool CModelVScriptCompile::ParseTransitionGraphTransition(IScriptVM *, const ScriptVariant_t &, int, int, const char *)
 bool CModelVScriptCompile::ParseTransitionGraphTransitions(IScriptVM *, const ScriptVariant_t &, int, const char *)
+bool CMorphConstraint::CacheModelData(const CModel *)
 bool CNWaySequence::InitActivities(IScriptVM *, HSCRIPT)
 bool CNWaySequence::InitAutoLayers(IScriptVM *, HSCRIPT)
 bool CNWaySequence::InitIkLocks(IScriptVM *, HSCRIPT)
@@ -2657,7 +2741,6 @@ buffer
 bulletimpact
 candidates.Count() >= 1
 chain
-char *_V_strncat(char *, const char *, int, int)
 char&&|&PD9
 character
 climbable
@@ -2674,7 +2757,6 @@ const char *CFmtStrN<256, false>::Format(const char *, ...) [SIZE_BUF = 256, QUI
 const char *CFmtStrN<256, false>::sprintf(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 contact
@@ -2694,7 +2776,6 @@ deltaAngle
 deltaMovement
 density
 description
-destBufferSize >= 0
 distances.Count() > 0
 duration
 dyld_stub_binder
@@ -2717,6 +2798,7 @@ ff. restrict
 fff.
 ffff.
 fffff.
+fffff. restrict
 ffffff
 ffffff.
 fieldtype_t
@@ -2733,6 +2815,7 @@ float64
 float\IcFX1
 floatcomplex [A\A^A_]
 floor
+found %double paths
 found path from %short to %short %double hops
 frame
 framecacheable
@@ -2752,10 +2835,7 @@ graph:  %short: condition name = '%short' : condition = '%short' on model: %shor
 graph:  %short: param name = '%short' : type = '%short' on model: %short
 hAnimGroup != ANIMATION_GROUP_HANDLE_INVALID
 hHc{h1
-hResource->m_nDeferredCount < hResource->m_nRefCount
-hResource->m_nDeferredCount <= hResource->m_nRefCount
-hResource->m_nDeferredCount > 0
-hResource->m_nDeferredCount >= 0
+hMesh0.IsValid()
 hResource->m_nRefCount > 0
 hSeq != m_hSequence
 hSeqGroup != SEQUENCE_GROUP_HANDLE_INVALID
@@ -2777,15 +2857,13 @@ impactsoft
 in1 != out
 index
 index == 0
-info.m_pReplacementString == 0
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int >= 0 && int < this->GetNumDWords()
-int CAnimContainer_Imp::AppendSeqGroup(const CModel *, int, HSequenceGroup, int)
-int CAnimContainer_Imp::EstimateHashSize(const PermModelData_t *)
+int CAnimContainer_Imp::AppendSeqGroup(const CModel *, int, HSequenceGroup_Internal, int)
+int CAnimContainer_Imp::EstimateHashSize()
 int CAnimationState::GetBonesInWorldSpace(const matrix3x4_t &, int, matrix3x4_t *, const uint32 *)
 int CAnimationState::SetBonesFromWorldSpace(const matrix3x4_t &, int, const matrix3x4_t *)
 int CAnimationStateGraphLayer::FindStateBySequence(HSequence) const
+int CDisjointSetForest::Find(int)
 int CKeyValues_Data::Internal_GetInt()
 int CModelVScriptCompile::CreateWeightlist(const char *, HSCRIPT)
 int CSchemaInheritanceIterator::PopulateTraversal_R(ClassIntrospectionHandle_t, ClassIntrospectionHandle_t, uint32, bool, bool)
@@ -2798,22 +2876,17 @@ int CUtlString::FormatV(const char *, __va_list_tag *)
 int CVariantBase<CVariantDefaultAllocator>::operator int() const [CValueAllocator = CVariantDefaultAllocator]
 int FIELD_TYPE_ALIGNMENT(fieldtype_t)
 int FIELD_TYPE_SIZE(fieldtype_t)
-int ResourceRelease(ResourceHandle_t, bool, uintp, ResourceLeakTrackingGroup_t)
+int ResourceRelease(ResourceHandle_t, uintp, ResourceLeakTrackingGroup_t)
 int TokenAlias_t::ComputeAliasCount() const
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
 int16 CAnimTransitionGraph::FindOrAddNode(const char *)
 int16 CAnimTransitionGraph::GetNodeTransition(int16, int16) const
 int16 SymToNodeId(CUtlSymbol)
 int32
 int64
-int64 V_atoi64(const char *)
 integer
 interrupting %short to advance to %short
 invalid
-invalid input pointer
 iv_debugbone
 iygIc
 jfff.
@@ -2822,9 +2895,11 @@ js_object
 js_raw_args
 js_value
 jumpfactor
+keyvalues
 kneeDir
 layer.m_nOrder < MAX_TRANSITIONING_SEQUENCES
 layers
+lfff.
 lfffff.
 libanimationsystem.dylib
 lineNumber
@@ -2833,8 +2908,8 @@ local
 long long	IcO
 long long[A\A]A^A_]
 long long[A^A_]
+long long\9w(~WHc
 looping
-m_AdditionalClusters.FindAndFastRemove( pCluster )
 m_Blobs.IsPeeked()
 m_Capsules
 m_CollisionAttributeIndices
@@ -2859,6 +2934,8 @@ m_IKRuleZeroFrameArray
 m_InitPose
 m_InteractAs
 m_InteractAsStrings
+m_InteractExclude
+m_InteractExcludeStrings
 m_InteractWith
 m_InteractWithStrings
 m_LinearLimit
@@ -2897,6 +2974,8 @@ m_bAllZeros
 m_bAlphaBlendedMaterial
 m_bAutoplay
 m_bBonesInWorldSpace
+m_bCacheAttempted
+m_bCacheOk
 m_bCalculatePoseParameters
 m_bClimbable
 m_bCylepose
@@ -3161,6 +3240,7 @@ m_nElementType
 m_nElementUniqueID
 m_nEndFrame
 m_nEntIndex
+m_nEntityIndex
 m_nFadeMax
 m_nFadeMin
 m_nFadeTime
@@ -3209,6 +3289,9 @@ m_nReserved
 m_nReserved2
 m_nRetargetStyle
 m_nRotateMotion
+m_nSlaveAxis
+m_nSlaveBoneList.IsEmpty()
+m_nSlaveChannel
 m_nSrcResult
 m_nStartFrame
 m_nStartIndex
@@ -3217,6 +3300,7 @@ m_nSubCycles
 m_nSurfaceProp
 m_nSurfacepropertyIndices
 m_nTailFrame
+m_nTargetAxis
 m_nTargetUpBoneHash
 m_nTotalElementCount
 m_nTranslateMotion
@@ -3303,6 +3387,7 @@ m_sOptions
 m_sPoseParameter
 m_sReferenceSequence
 m_sSurfaceProperty
+m_sTargetMorph
 m_sceneObjects
 m_scrapeRough
 m_scrapeSmooth
@@ -3312,6 +3397,7 @@ m_sequenceParams
 m_shape
 m_skeleton
 m_slaves
+m_slaves.Count() == m_nSlaveBoneList.Count()
 m_solverIterationCount
 m_spheres
 m_srcToRef.m_retargets.Count() == m_refToDst.m_retargets.Count()
@@ -3395,8 +3481,6 @@ m_walkStepRight
 magnitudeSqr
 matrix3x4_t
 matrix3x4a_t
-maxLen > 0
-maxLen >= sizeof( *pDest )
 maxspeedfactor
 missing all pose parameters
 model
@@ -3414,6 +3498,7 @@ nArguments == 1
 nArguments == 2
 nArguments == 3
 nArguments == 5
+nAxis >= X_AXIS && nAxis <= Z_AXIS
 nBestIndex != -1
 nBlockSize <= 128 * 1024
 nBlockSize >= 16 * sizeof( MemoryBlock_t )
@@ -3421,6 +3506,7 @@ nBone < nCount
 nBoneMergeCount == 1 && pBoneMerge[0].m_nDestIndex == 0
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
+nClassBehavior == KV3TRANSFER_CLASS_UNIMPLEMENTED
 nCmd == CInternalOperation::CMD_TRANSFORM
 nCount <= nMax
 nCount > 0
@@ -3435,26 +3521,34 @@ nIndex == nGroup
 nIndex >= 0 && nIndex < nMemberCount
 nMaxChars > 0
 nNodeCount == m_xNodeNameTable.GetNumStrings()
+nParent == nTopParent
 nParentBone < 0 || BitVec_IsBitSet( m_pReadableBones, nParentBone )
 nParentBone < 0 || FloatsAreEqual( flScale, 1.0f, e-3 )
 nParentBone >= -1
+nParentBoneIndex >= 0
 nResourceType != RESOURCE_TYPE_NONE
+nResourceType == DeduceResourceTypeFromResourceName( pReferencedResourceName )
 nResult == m_nCurrentResultOffset
 nRootMostDestBone < nDestTransformCount
 nSize != 0
+nSubtreeTipBone >= 0 && nSubtreeTipBone < nBoneCount
+nTargets > 1
 nToSym < nNodeCount
 nTraversalOffset == 0
 nWeightCount == flBoneWeightArray.Count()
 no layers
+no samples
 noblend
 numframes
 nwaysequence
+ol3 float
+ol4 float
+ol> float
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
 option
-outStrings.Count() == 0
 oymHc
 p Hc{ 1
 p$Hc{$1
@@ -3494,6 +3588,7 @@ pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
 pLayerIndices[ layer.m_nOrder ] == INVALID_LAYER_ORDER
 pLayerIndices[ m_transitioningLayers[ int ].m_nOrder ] == INVALID_LAYER_ORDER
+pMemberName && pMemberName[0] != '\0'
 pModel
 pModel->GetAnimationStateOffset( ANIMATION_STATE_TYPE_BONE_TRANSFORMS ) == 0
 pModel->boneFlags( nParent ) & ModelSkeletonData_t::FLAG_ANIMATION
@@ -3501,15 +3596,13 @@ pName
 pOutAnimEventList
 pParamClass && pParamClass->GetClass()
 pParentSpaceTransforms
+pPolymorphicClassName && pPolymorphicClassName[0] != '\0'
 pPool->m_SpaceUsed < 0xFFFF
 pPrevClusterInFreeList != NULL
 pQuaternions
-pReferencedResourceName != NULL
-pReferencedResourceName == NULL
 pResult->State() == VISIT_INFO_STATE_COMPLETE
 pReturn
 pSchemaSystem != NULL
-pSearch
 pSeq != nullptr
 pSeq == pSeqConst
 pSrcChannel->m_nElementIndexArray.Count() > 0
@@ -3522,14 +3615,15 @@ pSubkey->m_pPeer == NULL
 pXRERA
 pXRERAp
 pXRERAp0p0p
+pXRERBRBRBRAp
 pXRESC
 pXRESF
+pXRESFp0p
 pXRESG
 pXRESGp8p
 pXRETBRAp
 pXp8p
 p[A\A^A_]
-p[A^]
 parameters
 parsing position from state '%short' failed
 peakframe
@@ -3541,6 +3635,7 @@ poseParamY
 poseparameter
 posetocycle
 position
+pp@@@
 pppp 
 ppppP
 q.IsValid()
@@ -3552,8 +3647,9 @@ r2ffff.
 r5fffff.
 r7fff.
 r@fffff.
+rAff.
+rEff.
 rEfffff.
-rMfffff.
 rXffffff.
 radius
 radr://5614542
@@ -3589,6 +3685,7 @@ sequences
 short_src
 size < 1024 * 1024
 size >= 0
+skel_constraints_enable
 slerp
 snapped
 source
@@ -3626,6 +3723,7 @@ static bool CMemberScriptBinding0<IVSSequence *, HSCRIPT__ *(IVSSequence::*)(), 
 static bool CMemberScriptBinding0<IVSSequence *, bool (IBaseSequence::*)(), bool>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = bool (IBaseSequence::*)(), FUNCTION_RETTYPE = bool]
 static bool CMemberScriptBinding0<IVSSequence *, bool (ISequence::*)(), bool>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = bool (ISequence::*)(), FUNCTION_RETTYPE = bool]
 static bool CMemberScriptBinding0<IVSSequence *, const char *(ISequence::*)(), const char *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = const char *(ISequence::*)(), FUNCTION_RETTYPE = const char *]
+static bool CMemberScriptBinding0<IVSSequence *, const char *(IVSSequence::*)(), const char *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = const char *(IVSSequence::*)(), FUNCTION_RETTYPE = const char *]
 static bool CMemberScriptBinding0<IVSSequence *, float (ISequence::*)(), float>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = float (ISequence::*)(), FUNCTION_RETTYPE = float]
 static bool CMemberScriptBinding0<IVSSequence *, int (IBaseSequence::*)(), int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = int (IBaseSequence::*)(), FUNCTION_RETTYPE = int]
 static bool CMemberScriptBinding0<IVSSequence *, int (ISequence::*)(), int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = IVSSequence *, FUNC_TYPE = int (ISequence::*)(), FUNCTION_RETTYPE = int]
@@ -3652,6 +3750,7 @@ static bool CMemberScriptBinding5<CModelVScriptCompile *, int (CModelVScriptComp
 static bool CNonMemberScriptBinding2<bool (*)(const char *, HSCRIPT__ *), bool, const char *, HSCRIPT__ *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [FUNC_TYPE = bool (*)(const char *, HSCRIPT__ *), FUNCTION_RETTYPE = bool, FUNC_ARG_TYPE_1 = const char *, FUNC_ARG_TYPE_2 = HSCRIPT__ *]
 static const char *_VScriptCastHelper<const char *>::Cast(const ScriptVariant_t &)
 static const int CAnimCompressorRegistry::GetDecoderIndex(const char *)
+static float CTiltTwistConstraint::ComputeTwistAroundAxisInRadians(matrix3x4a_t &, int, float)
 static int CScriptCreatableSequence::FindBone(const CModel *, const ScriptVariant_t &, const char *)
 static void AnimResourceActivity_t::Schema_VerifyBindingIsRegistered()
 static void AnimResourceAnimDesc_t::Schema_VerifyBindingIsRegistered()
@@ -3691,6 +3790,7 @@ static void BaseConstraint_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverList_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
+static void CAimConstraint::Schema_VerifyBindingIsRegistered()
 static void CAttachment::Schema_VerifyBindingIsRegistered()
 static void CBaseConstraint::Schema_VerifyBindingIsRegistered()
 static void CBuilderModelInfo::Schema_VerifyBindingIsRegistered()
@@ -3701,14 +3801,20 @@ static void CHitBoxSet::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSetList::Schema_VerifyBindingIsRegistered()
 static void CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered()
 static void CModelVScriptCompile::VScriptRegister()
+static void CMorphConstraint::Schema_VerifyBindingIsRegistered()
+static void COrientConstraint::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfaceProperties::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesAudio::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesGame::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesPhysics::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesSoundNames::Schema_VerifyBindingIsRegistered()
+static void CPointConstraint::Schema_VerifyBindingIsRegistered()
 static void CRenderMesh::Schema_VerifyBindingIsRegistered()
 static void CRenderSkeleton::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectData::Schema_VerifyBindingIsRegistered()
+static void CStudioConstraintBones::ComputeTwistConstraint(matrix3x4a_t *, const CModel *, const CTwistConstraint *)
+static void CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
+static void CTwistConstraint::Schema_VerifyBindingIsRegistered()
 static void CVPhysXLevelData::Schema_VerifyBindingIsRegistered()
 static void CVPhysXMesh::Schema_VerifyBindingIsRegistered()
 static void CVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
@@ -3766,16 +3872,15 @@ strnlen
 subtract
 surfacePropertyName
 t$8[A\A^A_]
-t$H9[8u
-t$HIc
 t$`F;|6(|
+t$`void<H
 t.HcC(I9
 t.fffff.
 t68L)
 t6JcL
 t80E1
 t8A9G8~2H
-tCffff.
+t8IcF
 tEIcD$
 tMIc|2
 tMff.
@@ -3799,11 +3904,11 @@ typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
 u,...*H
 u,G	|
-u-...+1
 u.z,1
 u8z61
 u9A;^8u
-u:fff.
+u9z71
+u;fff.
 uCLc=
 uGetResourceManifest
 uMHcC
@@ -3815,37 +3920,41 @@ uint32 CModel::GetAnimationStateOffset(AnimationStateType_t) const
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
 uint64
 uint64 CKeyValues_Data::Internal_GetUint64()
-ukziA
 unknown
 unknown_variant_type
 unsigned
 unsigned char[A\A]A^A_]
+unsigned char[A^A_]
 unsigned charcomplex ;C`|
+unsigned short  E1
 unsigned short Hc4
 unsigned short Ic0
 unsigned short#HcK(H
 unsigned short#IcO(H
 unsigned short%4Lk
 unsigned short%ffff.
+unsigned short&9C0u!I
 unsigned short&H9[8tUH
 unsigned short(IcN(H9
 unsigned short)A#F
 unsigned short)A#G
+unsigned short,A#D$
 unsigned short,fff.
 unsigned short-L9`
 unsigned short/ffffff.
 unsigned short<fff.
-unsigned short=IcE
 unsigned short>4E1
 unsigned short?ffffff.
+unsigned short[ff.
 unsigned short^8L)
-unsigned short^fffff.
+uqzoA
 utlstringtoken
-uuA+^
 v.GetType() == FIELD_CSTRING
 v0[A^]
 vPMc~8M
 vP[A^]
+vScale.IsValid()
+vX[A^]
 vagrp
 values[int].IsValid()
 vanim
@@ -3859,7 +3968,7 @@ virtual Activity CAnimationSystem::ActivityList_RegisterPrivateActivity(const ch
 virtual Activity CSeqResourceCmdSequence::GetActivityType(int) const
 virtual Activity CSeqResourceS1Sequence::GetActivityType(int) const
 virtual CDataManagerBase::~CDataManagerBase()
-virtual bool CAnimContainer_Imp::AppendAnimations(const CModel *, const PermModelData_t *)
+virtual bool CAnimContainer_Imp::AppendAnimations(const CModel *, HAnimationGroup_Internal *, int)
 virtual bool CAnimContainer_Imp::GetMaxBounds(int, Vector *, Vector *)
 virtual bool CAnimationSystem::ActivityList_RegisterSharedActivity(const char *, Activity)
 virtual bool CAnimationSystem::ComputeRootToBoneMergeBoneTransform(HModel, int, const bone_merge_list_t *, int, const CTransform *, matrix3x4a_t *)
@@ -3882,6 +3991,7 @@ virtual bool CDefaultIntrospectedTypeManager<482955714934, AnimationGroupResourc
 virtual bool CScriptCreatableSequence::InitActivitiesFromScript(IScriptVM *, ScriptVariant_t &)
 virtual bool CSeqResourceCmdSequence::GetAllSequences(CUtlVector<HSequence> &) const
 virtual bool CVConCommandMessageAnim::MessageData(uint32, uint16, uint32, byte *)
+virtual bool IResourceTypeManager::IsStreamingDataAlreadyLoaded(ResourceHandle_t)
 virtual const char *CAnimResourceSequence::GetActivityName(int) const
 virtual const char *CSeqResourceCmdSequence::GetActivityName(int) const
 virtual const char *CSeqResourceS1Sequence::GetActivityName(int) const
@@ -3951,8 +4061,6 @@ virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::Allocate() 
 virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<AttachmentData_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Allocate() [T = CResourceArray<BaseConstraint_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Allocate() [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::AllocateAndCopy(const void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Allocate() [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -4126,8 +4234,6 @@ virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Copy(void *,
 virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Deallocate(void *) [T = CResourceArray<AttachmentData_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Copy(void *, const void *) [T = CResourceArray<BaseConstraint_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Deallocate(void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Copy(void *, const void *) [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Deallocate(void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Copy(void *, const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Deallocate(void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -4240,10 +4346,14 @@ virtual void CBaseIntrospectedTypeManager::AllocateResource(ResourceHandle_t, Re
 virtual void CBoneSetup::FreeResult(int)
 virtual void CCmdSequence::PostInit()
 virtual void CExtrefTraversal::VisitRelevantField(void *, CSchemaType *, FieldIntrospectionHandle_t)
+virtual void CMorphConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
 virtual void CNWaySequence::DoAnimation(CAnimationBucket &, float, float) const
-virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, bool, FieldIntrospectionHandle_t)
+virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, FieldIntrospectionHandle_t)
 virtual void CSeqResourceCmdSequence::PostInit()
 virtual void CSeqResourceS1Sequence::PostInit()
+virtual void CTiltTwistConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
+virtual void CTiltTwistConstraint::FillInPermData(BaseConstraint_t *, CResourceStream *) const
+virtual void CTiltTwistConstraint::InitFromPermData(const BaseConstraint_t *)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
 virtual void ConVar::ChangeStringValue(const char *, float)
 virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
@@ -4271,6 +4381,7 @@ void CAnimationChannelResult::Init(const CAnimDataChannel *)
 void CAnimationChannelResult::ZeroData()
 void CAnimationDecodeCache::Init()
 void CAnimationDecodeCache::MoveToMostRecentlyUsed(uint16)
+void CAnimationDecodeContext::Init(AnimationProcessingType_t, CUtlScratchMemoryPool *)
 void CAnimationGraphVariant_t::Convert(AnimStateGraphParameterType_t)
 void CAnimationHelper::FrameAdvance(matrix3x4a_t &, float, AnimationEventOccurrences_t *)
 void CAnimationResult::Add(const ChannelWeightlist_t *, const CAnimationResult &, float)
@@ -4319,19 +4430,22 @@ void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
 void CSchemaFieldIterator::Advance()
 void CSchemaFieldIterator::Reset()
+void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
 void CSeqResourceS1Sequence::LocalPoseParameter(const CModel *, const SeqResourceMultiFetch_t *, const float *, int &, float &, int &, float &) const
 void CSimpleSequenceTransitioner<CAnimationHelper>::AddCurrentSequenceToTransition() [T = CAnimationHelper]
 void CStrongHandle<InfoForResourceTypeCAnimationGroupResource>::Shutdown() [TResourceInfoData = InfoForResourceTypeCAnimationGroupResource]
 void CStrongHandle<InfoForResourceTypeCModel>::Shutdown() [TResourceInfoData = InfoForResourceTypeCModel]
 void CStrongHandle<InfoForResourceTypeCMorphSet>::Shutdown() [TResourceInfoData = InfoForResourceTypeCMorphSet]
-void CStrongHandle<InfoForResourceTypeCSequenceGroupResource>::Shutdown() [TResourceInfoData = InfoForResourceTypeCSequenceGroupResource]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
+void CStrongHandle<ResourceBindingVoid_t>::Shutdown() [TResourceInfoData = ResourceBindingVoid_t]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, &CUtlMemoryPoolBase::FreeList_t::pNext>::Push(T *) [T = CUtlMemoryPoolBase::FreeList_t, POINTER_TYPE = CUtlMemoryPoolBase::FreeList_t, CONTAINER_TYPE = CUtlMemoryPoolBase::FreeList_t, LINKED_LIST_PTR = &CUtlMemoryPoolBase::FreeList_t::pNext]
 void CUtlBinaryBlock::SetLength(int)
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::AssumeMemory(void *, int, int, int)
 void CUtlBuffer::GetString(char *, int)
+void CUtlBuffer::Put(const void *, int)
+void CUtlBuffer::SetBufferType(bool, bool)
 void CUtlLinkedList<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short>, unsigned short>]
 void CUtlLinkedList<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short>, unsigned short>]
 void CUtlLinkedList<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short>, unsigned short> >::Unlink(I) [T = CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlMultiList<CDataManagerBase::resource_lru_element_t, unsigned short>::List_t, unsigned short>, unsigned short>]
@@ -4355,6 +4469,7 @@ void CUtlScratchMemoryPool::Init(int, void *)
 void CUtlString::SetDirect(const char *, int)
 void CVarBitVecBase<unsigned short, 32>::ReallocInts(int) [CountType = unsigned short, FIXED_BIT_SIZE = 32]
 void CallPostConnect()
+void ComputeSubtree(const Graph_t *, int, BitVec_t *) [Graph_t = ModelSkeletonData_t, BitVec_t = CVarBitVec]
 void ConVar_Register(int64, IConCommandBaseAccessor *)
 void ConVar_Unregister()
 void ConnectInterfaces(CreateInterfaceFn *, int)
@@ -4371,11 +4486,13 @@ void KeyValues::ParseIncludedKeys(const char *, const char *, IBaseFileSystem *,
 void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CKeyValuesTokenReader &, GetSymbolProc_t)
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void MathLib_Init()
+void MatrixInvert_Aligned(const matrix3x4a_t &, matrix3x4a_t &)
 void QuaternionAngles(const Quaternion &, QAngle &)
 void QuaternionAngles(const Quaternion &, RadianEuler &)
 void QuaternionAverageExponential(Quaternion &, int, const Quaternion *, const float *)
 void QuaternionConjugate(const Quaternion &, Quaternion &)
 void QuaternionInvert(const Quaternion &, Quaternion &)
+void QuaternionMatrix(const Quaternion &, const Vector &, const Vector &, matrix3x4_t &)
 void QuaternionMatrix(const Quaternion &, const Vector &, matrix3x4_t &)
 void QuaternionMatrix(const Quaternion &, matrix3x4_t &)
 void QuaternionMatrixOrientationOnly(const Quaternion &, matrix3x4_t &)
@@ -4387,9 +4504,7 @@ void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = HandleCaller_t]
 void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = TraverseCaller]
 void ScriptFuncDescriptor_t::AddParameterType(ScriptDataType_t)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
-void _V_strncpy(char *, const char *, int)
 void wchar_t'H
 void@[A^]
 void@wchar_t'H
@@ -4412,16 +4527,15 @@ weightlist
 worldspace
 xYA9^
 xfade
-xfff.
 xx9B8
 xyA9^
 yxxxH
+|  E1
 |$<Hi
 |$XIcL$hH
+|( E1
 |fff.
-|jffff.
 }HA;EP}
-}Xv9H
 ~$IcF
 ~&ffffff.
 ~-ff.
@@ -4429,4 +4543,6 @@ yxxxH
 ~0fff.
 ~D	 float
 ~Ffff.
+~Ufffff.
 ~[ff.
+~aHcG

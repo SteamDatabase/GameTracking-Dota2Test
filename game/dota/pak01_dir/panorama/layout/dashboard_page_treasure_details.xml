@@ -189,7 +189,10 @@
 				</Panel>
 				
 				<Panel id="AutographRow" class="TreasureDetailsRow">
-					<Label id="AutographPrefix" text="#DOTA_Treasure_Autographed" />
+					<Panel id="AutographPrefix" onmouseover="UIShowTextTooltip( #DOTA_Treasure_AutographDetails )" onmouseout="UIHideTextTooltip()" >
+						<Panel class="InfoIcon" />
+						<Label text="#DOTA_Treasure_Autographed" />
+					</Panel>
 					<DropDown id="TreasureAutographDropDown" />
 				</Panel>
 				
@@ -204,7 +207,7 @@
 						</Panel>
 					</Button>
 					
-					<DropDown id="TreasureQuantityDropDown" class="ColoredButton">
+					<DropDown id="TreasureQuantityDropDown" class="ColoredButton QuantityDropDown">
 						<!-- Filled in dynamically -->
 					</DropDown>
 					
@@ -236,8 +239,25 @@
 						<Label id="CharmsOwnedCount" text="{d:charms_owned_count}" />
 					</Panel>
 				</Panel>
+
+				<Panel id="InfuserPurchaseRow" class="TreasureDetailsRow">
+					<Button id="InfuserPurchaseButton" class="PurchaseButton ColoredButton" onactivate="DOTAPurchaseSelectedInfuser()">
+						<Panel id="InfuserButtonContents" >
+							<Label text="#DOTA_Treasure_InfuserPurchase" />
+							<Label id="InfuserButtonPrice" text="{s:infuser_price}" />
+						</Panel>
+					</Button>
+
+					<DropDown id="InfuserQuantityDropDown" class="ColoredButton QuantityDropDown">
+						<!-- Filled in dynamically -->
+					</DropDown>					
+				</Panel>
+
+				<Panel id="InfusersOwnedRow" class="TreasureDetailsRow">
+					<Label id="InfusersOwnedLabel" text="#DOTA_Treasure_InfusersOwned" />
+					<Label id="InfusersOwnedCount" text="{d:infusers_owned_count}" />
+				</Panel>
 			</Panel>
-			
 			
 			<Panel id="EventPurchase">
 				<Panel class="EventPurchaseHeader">
@@ -269,24 +289,6 @@
 				</Button>
 			</Panel>
 
-			<Panel id="TreasureHelp">
-				<Panel id="TreasureHelpHeaderRow">
-					<Panel id="TreasureHelpIcon">
-						<Label text="i" />
-					</Panel>
-					<Label id="TreasureHelpHeader" text="#DOTA_Treasure_HelpHeader" />
-					<Label id="TreasureHelpHeaderPW" text="#DOTA_Treasure_HelpHeaderPW" />
-					<Label id="TreasureHelpHeaderPWNotPurchasable" text="#DOTA_Treasure_HelpHeaderPWNotPurchasable" />
-				</Panel>
-			
-				<Panel id="TreasureHelpDetails">
-					<Label id="TreasureHelpNormalItems" />
-					<Label id="TreasureHelpRareItems" text="#DOTA_Treasure_HelpRares" />
-					<!--Label id="TreasureHelpRareItemsPW" text="#DOTA_Treasure_HelpRaresPW" /-->
-				</Panel>
-			
-			</Panel>
-			
 			<Panel id="OwnedTreasures">
 				<Panel id="OwnedTreasuresCount">
 					<Panel class="OwnedTreasuresCountContents">
@@ -306,6 +308,24 @@
 						<Label text="#DOTA_Treasure_Gift" />
 					</Button>
 				</Panel>
+			</Panel>
+
+			<Panel id="TreasureHelp">
+				<Panel id="TreasureHelpHeaderRow">
+					<Panel id="TreasureHelpIcon">
+						<Label text="i" />
+					</Panel>
+					<Label id="TreasureHelpHeader" text="#DOTA_Treasure_HelpHeader" />
+					<Label id="TreasureHelpHeaderPW" text="#DOTA_Treasure_HelpHeaderPW" />
+					<Label id="TreasureHelpHeaderPWNotPurchasable" text="#DOTA_Treasure_HelpHeaderPWNotPurchasable" />
+				</Panel>
+			
+				<Panel id="TreasureHelpDetails">
+					<Label id="TreasureHelpNormalItems" />
+					<Label id="TreasureHelpRareItems" text="#DOTA_Treasure_HelpRares" />
+					<!--Label id="TreasureHelpRareItemsPW" text="#DOTA_Treasure_HelpRaresPW" /-->
+				</Panel>
+			
 			</Panel>
 		
 			<Panel id="ViewControls">

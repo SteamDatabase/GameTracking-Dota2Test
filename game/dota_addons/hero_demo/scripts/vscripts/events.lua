@@ -133,14 +133,14 @@ function CHeroDemo:OnMaxLevelButtonPressed( eventSourceIndex, data )
 
 	for i = 0, DOTA_MAX_ABILITIES - 1 do
 		local hAbility = hPlayerHero:GetAbilityByIndex( i )
-		if hAbility and hAbility:CanAbilityBeUpgraded () == ABILITY_CAN_BE_UPGRADED and not hAbility:IsHidden() then
+		if hAbility and hAbility:CanAbilityBeUpgraded () == ABILITY_CAN_BE_UPGRADED and not hAbility:IsHidden() and not hAbility:IsAttributeBonus() then
 			while hAbility:GetLevel() < hAbility:GetMaxLevel() do
 				hPlayerHero:UpgradeAbility( hAbility )
 			end
 		end
 	end
 
-	hPlayerHero:SetAbilityPoints( 0 )
+	hPlayerHero:SetAbilityPoints( 4 )
 	self:BroadcastMsg( "#MaxLevel_Msg" )
 end
 
@@ -238,13 +238,13 @@ end
 --------------------------------------------------------------------------------
 function CHeroDemo:OnDummyTargetButtonPressed( eventSourceIndex, data )
 	local hPlayerHero = PlayerResource:GetSelectedHeroEntity( data.PlayerID )
-	table.insert( self.m_tEnemiesList, CreateUnitByName( "npc_dota_target_dummy", hPlayerHero:GetAbsOrigin(), true, nil, nil, self.m_nENEMIES_TEAM ) )
-	local hUnit = self.m_tEnemiesList[ #self.m_tEnemiesList ]
-	hUnit:SetControllableByPlayer( self.m_nPlayerID, false )
-	FindClearSpaceForUnit( hUnit, hPlayerHero:GetAbsOrigin(), false )
-	hUnit:Hold()
-	hUnit:SetIdleAcquire( false )
-	hUnit:SetAcquisitionRange( 0 )
+	table.insert( self.m_tEnemiesList, CreateUnitByName( "npc_dota_hero_target_dummy", hPlayerHero:GetAbsOrigin(), true, nil, nil, self.m_nENEMIES_TEAM ) )
+	local hDummy = self.m_tEnemiesList[ #self.m_tEnemiesList ]
+	hDummy:SetAbilityPoints( 0 )
+	hDummy:SetControllableByPlayer( self.m_nPlayerID, false )
+	hDummy:Hold()
+	hDummy:SetIdleAcquire( false )
+	hDummy:SetAcquisitionRange( 0 )
 	self:BroadcastMsg( "#SpawnDummyTarget_Msg" )
 end
 

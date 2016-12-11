@@ -10,9 +10,14 @@
 			<Panel class="BattleCupVictoryIcon" />
 			<Label class="PageHeader" text="#WeekendTourney_Title" />
 			<Label class="PageHeaderSub" text="#WeekendTourney_SetupPage_Subtitle" />
-			<Button id="FaqButton" class="ControlButton" onactivate="BrowserGoToDOTAURL( battlecup ) DOTAPlayPanelCloseButtonClicked(true)">
-				<Label class="ControlButtonLabel" text="#WeekendTourney_FAQButton" />	
-			</Button>
+			<Panel id="HeaderButtons" class="LeftRightFlow">
+				<Button id="HubButton" class="ControlButton" onactivate="DOTAShowBPFall2016WeekendTourneyHubPage() DOTAPlayPanelCloseButtonClicked(true)">
+					<Label class="ControlButtonLabel" text="#WeekendTourney_HUBButton" />	
+				</Button>
+				<Button id="FaqButton" class="ControlButton" onactivate="BrowserGoToDOTAURLAnchor( battlecup, top ) DOTAPlayPanelCloseButtonClicked(true)">
+					<Label class="ControlButtonLabel" text="#WeekendTourney_FAQButton" />	
+				</Button>
+			</Panel>
 		</Panel>	
 		<Panel id="PageBodyContainer">
 
@@ -43,9 +48,12 @@
 				
 					<!-- Ping Row -->
 					<Panel class="SetupSectionContainer" id="RegionPingRow">
+						<Panel id="RegionContentContainer">
 							<Panel id="RegionPingTimes">
 							<!-- dynamically generated -->
 							</Panel>
+							<Panel class="InfoIcon" id="InfoIconPings" onmouseover="UIShowTextTooltip( #WeekendTourney_RegionPingsTooltip )" onmouseout="UIHideTextTooltip()"/>
+						</Panel>
 					</Panel>
 				</Panel>		
 						
@@ -57,10 +65,20 @@
 						<!-- Whoever writes decides what should go in the tooltip text that would go here can re-enable this
 							<Panel class="InfoIcon" onmouseover="UIShowTextTooltip( #WeekendTourney_PartyUpTooltip )" onmouseout="UIHideTextTooltip()"/>
 						-->
-
-						<Button id="JoinDivisionChatButton" class="TeamIdentityTypeAdjustButton TeamSelectMenuItem" onactivate="DOTAWeekendTourneyJoinChatChannel()" >
-							<Label text="#WeekendTourney_JoinDivisionChat" />
-						</Button>
+						<Label id="TierNotUsedInThisDivisionLabel" text="#WeekendTourney_TierNotInThisDivision" />
+						<Panel id="PartyUpButtonContainer" >
+							<Button id="PartyBuilderToggleButton" >
+									<Panel id="FindTeamIcon" />
+									<Panel id="PartyBuilderMessageBusySpinner" class="Spinner" hittest="true" onactivate=""/>
+									<Label id="PartyBuilderStartSoloLabel" text="#WeekendTourney_PartyBuilderSoloButton" />
+									<Label id="PartyBuilderStartPartyLabel" text="#WeekendTourney_PartyBuilderPartyButton" />
+									<Label id="PartyBuilderSearchingLabel" text="#WeekendTourney_PartyBuilderSearching" />
+							</Button>
+							<Button id="PartyBuilderAddMoreButton" onactivate="DOTAWeekendTourneyPartyBuilderAdd()" onmouseover="UIShowTextTooltip( #WeekendTourney_PartyBuilderPartyAdd )" onmouseout="UIHideTextTooltip()" />
+							<Button id="JoinDivisionChatButton" class="TeamIdentityTypeAdjustButton TeamSelectMenuItem" onactivate="DOTAWeekendTourneyJoinChatChannel()" >
+								<Label text="#WeekendTourney_JoinDivisionChat" />
+							</Button>
+						</Panel>
 					</Panel>
 					<Panel class="SetupSectionBody">
 						<Panel class="LeftRightFlow">
@@ -75,9 +93,11 @@
 								</Panel>
 								<!--<Label id="IndividualTier" class="SubHead" text="#Individual Player Tiers" /> commenting out for now-->
 							</Panel>
-							<Panel id="TeamHasIneligibleMemberContainer">
+							<Panel id="TeamHasBlockingMemberContainer">
 								<Label id="AnyPlayerIneligibleLabel" text="#WeekendTourney_TeamMemberNotEligible" />
 								<Label id="LocalPlayerIneligibleLabel" text="#WeekendTourney_LocalPlayerNotEligible" />
+								<Label id="AnyPlayerPlayedTooRecentlyLabel" text="#WeekendTourney_TeamMemberPlayedTooRecently" />
+								<Label id="LocalPlayerPlayedTooRecentlyLabel" text="#WeekendTourney_LocalPlayerPlayedTooRecently" />
 							</Panel>
 							<Panel id="TeamSkillLevelContainer">
 								<Panel class="LeftRightFlow">
@@ -175,6 +195,7 @@
 						<Label class="SetupSectionHeader" text="#WeekendTourney_BuyInHeader" />
 						<Label id="TeamBuyInSubHead" text="#WeekendTourney_TeamBuyInSubhead" />
 						<Label id="TeamBuyInCurrent" text="#WeekendTourney_TeamBuyInCurrent" />
+						<Panel class="InfoIcon" id="InfoIconEntry" onmouseover="UIShowTextTooltip( #WeekendTourney_TeamEntryTooltip )" onmouseout="UIHideTextTooltip()"/>
 					</Panel>
 					<Panel class="SetupSectionBody">
 						<Panel class="LeftRightFlow">
@@ -216,8 +237,9 @@
 						</Panel>
 
 						<!-- If not doing econ stuff, block this section out and catch clicks -->
-						<Panel id="NoBuyInRequiredContainer" hittest="true" acceptsfocus="false" onactivate=";">
-							<Label text="#WeekendTourney_NoBuyInRequiredBeta" />
+						<Panel id="BuyInCoverContainer" hittest="true" acceptsfocus="false" onactivate=";">
+							<Label id="NoBuyInRequiredLabel" text="#WeekendTourney_NoBuyInRequiredBeta" />
+							<Label id="NoBuyInOffseasonLabel" text="#WeekendTourney_NoBuyInOffSeason" />
 						</Panel>
 					</Panel>
 				</Panel>

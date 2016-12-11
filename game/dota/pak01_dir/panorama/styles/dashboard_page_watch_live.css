@@ -889,12 +889,12 @@ Label.PlayerName
 
 .FlatButton:hover
 {
-    background-color: #202626;
+	background-color: #202626;
 }
 
 .FlatButton:hover Label
 {
-    color: #737e7e;
+	color: #737e7e;
 }
 
 .FlatButton:enabled {
@@ -961,6 +961,20 @@ Label.PlayerName
 .FlatButton.Blue:enabled:hover {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2b4b75 ), to( #9ccaf4 ) );
 }
+
+
+.FlatButton.Gold:enabled {
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #6d6629 ), to( #c2c35b ) );
+	border-top: 1px solid #baba59;
+	border-right: 1px solid #97984a;
+	border-left: 1px solid #97984a;
+	border-bottom: 1px solid #514b1e;
+}
+
+.FlatButton.Gold:enabled:hover {
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #908737 ), to( #e8e86e ) );
+}
+
 
 .NeedsTicket #WatchInGame,
 .NeedsTicket #WatchFullscreen,
@@ -1092,6 +1106,20 @@ Label.PlayerName
 	visibility: collapse;
 }
 
+#BattleCupBracket
+{
+	visibility: collapse;
+}
+
+.IsBattleCup #BattleCupBracket
+{
+	visibility: visible;
+}
+
+#BattleCupBracket.FlatButton
+{
+	width: 220px;
+}
 
 /* MESSAGES */
 
@@ -1278,70 +1306,6 @@ Label#DetailsBigSubtitleDetails
 {
 	color:#BBBBBBFF;
 	font-size: 18px;
-}
-
-#DetailsUpvote
-{
-	flow-children:right;
-	margin-right:20px;
-	horizontal-align: right;
-	vertical-align: top;
-	z-index: 500;
-}
-
-.LeagueMatch #DetailsUpvote,
-.NonLeagueMatch #DetailsUpvote
-{
-	visibility: collapse;
-}
-
-#DetailsThumbsUp
-{
-	width:32px;
-	height:32px;
-
-	background-image: url("s2r://panorama/images/control_icons/thumbs_up_png.vtex");
-	background-size: contain;
-
-	margin-right:5px;
-}
-
-#DetailsDownvoteIcon, #DetailsUpvoteIcon {
-	width:20px;
-	height:20px;
-
-	background-image: url("s2r://panorama/images/control_icons/arrow_vote_psd.vtex");
-	background-size: contain;
-	wash-color: #708786;
-
-	margin-top: 10px;
-	margin-right:5px;
-}
-
-#DetailsDownvoteIcon
-{
-	transform: rotateZ( 180deg );
-	margin-right:8px;
-}
-#DetailsDownvoteIcon:hover , #DetailsUpvoteIcon:hover {
-	wash-color: #cccccc;
-}
-
-.NonLeagueMatch #DetailsThumbsUp
-{
-	visibility: collapse;
-}
-
-#DetailsUpvoteLabel
-{
-	margin-top:12px;
-	vertical-align:middle;
-	flow-children: right;
-}
-
-.NonLeagueMatch #DetailsUpvoteLabel
-{
-	visibility: collapse;
 }
 
 #DetailsWatchLater

@@ -18,8 +18,10 @@
 						<TextButton id="UnclaimedButton" text="#DOTA_UnclaimedRewardsCount" />
 						<Label id="GoToCurrentLevelLabel" text="#DOTA_GoToCurrentLevel" allowtextselection="false" onactivate="Spring2016RewardListScrollToCurrentLevel( RewardsList )" />
 					</Panel>
-					<Panel id="EventEnds" class="LeftRightFlow">
-						<Label id="EventEndsLabel" text="#DOTA_TI6_BattlePass_EndDate"/>
+					<Panel id="EventEnds" class="TopBottomFlow">
+						<!--<Label id="EventEndsLabel" text="#DOTA_TI6_BattlePass_EndDate"/>-->
+						<!--<Label id="PurchaseEndsLabel" text="#DOTA_TI6_BattlePass_EndDate_Purchase"/>-->
+						<Label id="EventEndedLabel" text="#DOTA_TI6_BattlePass_Ended" />
 					</Panel>
 					<Button id="BackJump" class="JumpLevels" onactivate="Spring2016RewardListScrollForwardLevels( RewardsList, -100 )">
 						<Label text="100"/>
@@ -62,23 +64,23 @@
 						<Label id="PointsNeeded" class="StatValue" text="{d:xp_to_next_level}"/>
 						<ProgressBar id="TilNextLevel" class=""/>
 						<Label id="PointsDesc" class="StatSub" text="#DOTA_DB_SeasonPass_PointsPerLevel"/>
-						<Button id="BattlePassPointLog" class="StatSub" onactivate="DOTAShowBattlePassLog()">
+						<Button id="BattlePassPointLog" class="StatSub" onactivate="DOTAShowBattlePassLog( EVENT_ID_INTERNATIONAL_2016 )">
 							<Label text="#DOTA_TI6_BattlePass_BattlePointLog"/>
 						</Button>
 						<Label id="PrizePoolNumber" class="MonoNumbersFont" text="${d:prize_pool}"/>
 						<Label id="PrizeLabel" class="StatSub" text="#DOTA_DB_SeasonPass_PrizePool"/>
 					</Panel>
 					<Panel id="LevelButtons" class="TopBottomFlow">
-						<Button id="PurchaseBattlePassButton" class="ButtonBattlePass" onactivate="DOTAShowBPSpring2016PurchasePage( false )">
+						<Button id="PurchaseBattlePassButton" class="ButtonBattlePass" disabled="true" onactivate="DOTAShowBPSpring2016PurchasePage( false )">
 							<Label text="#DOTA_TI6_BattlePass_Purchase"/>
 						</Button>
-						<Button id="PurchaseLevelsButton" class="ButtonBattlePass" onactivate="DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2016 )">
+						<Button id="PurchaseLevelsButton" class="ButtonBattlePass" disabled="true" onactivate="DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2016 )">
 							<Panel id="PurchaseLevelsContainer" class="LeftRightFlow">
 								<Panel class="PointsIcon"/>
 								<Label text="#DOTA_TI6_BattlePass_PurchaseLevels"/>
 							</Panel>
 						</Button>						
-						<Button id="GiftBattlePassButton" class="ButtonBattlePass" onactivate="DOTAShowBPSpring2016PurchasePage( true )">
+						<Button id="GiftBattlePassButton" class="ButtonBattlePass" disabled="true" onactivate="DOTAShowBPSpring2016PurchasePage( true )">
 							<Label text="#DOTA_TI6_BattlePass_Gift"/>
 						</Button>
 						<Button id="ActivateBattlePassButton" class="ButtonBattlePass" onactivate="DOTAActivateEventFromArmory( EVENT_ID_INTERNATIONAL_2016 )">

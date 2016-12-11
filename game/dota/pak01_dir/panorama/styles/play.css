@@ -43,7 +43,7 @@ DOTAPlay.MatchingRestriction #LowPrioritySection
 	border: 0px;
 	
 	width: 0px;
-	opacity: 0.0f;
+	opacity: 0.0;
 	height: 40px;
 	transition-property: width, opacity;
 	transition-duration: .2s;
@@ -61,7 +61,7 @@ DOTAPlay.MatchingRestriction #LowPrioritySection
 .CanReturnToWeekendTourney #SearchReturnToWeekendTourneyButton
 {
 	
-	opacity: 1.0f;
+	opacity: 1.0;
 	width: 40px;
 }
 
@@ -142,12 +142,16 @@ DOTAPlay.CanAbandonTourney #AbandonTourneyLabel
 	vertical-align:bottom;
 	horizontal-align: right;
 
-	visibility: collapse;
+	opacity: 0;
+	
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-delay: 0.3s;
 }
 
 DOTAPlay.CanSafeLeaveGame #SafeLeaveButton
 {
-	visibility: visible;
+	opacity: 1;
 }
 
 
@@ -228,7 +232,7 @@ DOTAPlay.CanSafeLeaveGame #SafeLeaveButton
 	height: 49px;
 	transition-property: width, brightness;
 	transition-duration: .2s;
-	margin: 0px 400px 21px 0px;
+	margin: 0px 340px 21px 0px;
 	
 
 	visibility: collapse;
@@ -265,17 +269,36 @@ DOTAPlay.Connecting #DisconnectButton
 	visibility: collapse;
 }
 
+.StateParticipatingInTourney DOTAPlay.CanReturnToWeekendTourney.CanDisconnect #DisconnectButton
+{
+	width: 270px;
+	transition-property: width;
+	transition-duration: .2s;
+	min-width: 270px;
+}
+
 #ReconnectButton
 {
-	visibility: collapse;
 	vertical-align: bottom;
 	horizontal-align: right;
 	height: 49px;
+	opacity: 0;
+	
+	transition-property: opacity, background-color, box-shadow, border;
+	transition-duration: 0.2s;
+	transition-delay: 0.3s, 0s;	
 }
 
 DOTAPlay.CanReconnect #ReconnectButton
 {
-	visibility: visible;
+	opacity: 1;
+}
+
+.StateParticipatingInTourney DOTAPlay.CanReturnToWeekendTourney.CanReconnect #ReconnectButton
+{
+	width: 270px;
+	transition-property: width;
+	transition-duration: .2s;
 }
 
 DOTAPlay.Connecting #ReconnectButton
@@ -363,6 +386,8 @@ DOTAPlay.ReconnectInProgress .ReconnectSpinner
 	visibility: collapse;
 	color: red;
 }
+
+
 
 .QueueDeadlineTooLate #WeekendTourneyQueueDeadlineTooLateLabel
 {
@@ -672,6 +697,33 @@ DOTAPlay.MatchingRestriction #FXSearching
 	height: 100%;
 }
 
+#JoinPlaytestButton
+{
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-bottom: 76px;
+	hue-rotation: 300deg;
+	saturation: 15;
+	visibility: collapse;
+}
+
+.MainBranch.PlaytestActive #JoinPlaytestButton
+{
+	visibility: visible;
+}
+
+/* The .PlayButton at the end is so we're more specific than the above. Gross, but it works. */
+DOTAPlay.FindingMatch #JoinPlaytestButton.PlayButton,
+DOTAPlay.Connecting #JoinPlaytestButton.PlayButton,
+DOTAPlay.InReadyUp #JoinPlaytestButton.PlayButton,
+DOTAPlay.ReturningToQueue #JoinPlaytestButton.PlayButton,
+DOTAPlay.PlayButtonHidden #JoinPlaytestButton.PlayButton,
+DOTAPlay.SlideOutVisible #JoinPlaytestButton.PlayButton,
+.FindMsgInFlight #JoinPlaytestButton.PlayButton
+{
+	visibility: collapse;
+}
+
 #SearchWeekendTourneyDeadlineMissed
 {
 	color: red;
@@ -954,7 +1006,7 @@ DOTAPlay.LANLobby #SearchSettings
 	opacity: 1.0;
 	font-size: 30px;
 	font-weight: thin;
-	color: #w;
+	//color: #w;
 	text-shadow: 0px 0px 6px 1.0 #c1c0ff;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -1350,6 +1402,8 @@ Label
 {
 	width: 100%;
 	margin-bottom: 8px;
+
+	visibility: collapse;
 }
 
 // This is the locked state
@@ -1483,6 +1537,16 @@ DOTAPlay.SectionVisible_SeasonalRanked.EligibleForSeasonalRanked .SeasonalRanked
 	color: white;
 }
 
+.SeasonalRankedTransfer #SeasonalRankedGameModes
+{
+	visibility: collapse;
+}
+
+.SeasonalRankedTransfer #SeasonalRankedSectionContent .InfoBlock
+{
+	visibility: collapse;
+}
+
 ToggleButton:disabled:selected .TickBox
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #222222 ), to( #333333 ) );
@@ -1575,6 +1639,22 @@ DOTAPlay.SeasonalPartyMMRNoData #SeasonalPartyMMRNoData
 	font-weight: lighter;
 }
 
+#SeasonalRankedSection TextButton Label
+{
+	color: #B1CBC6;
+}
+
+#SeasonalRankedSection TextButton:disabled Label
+{
+	color: #717B76;
+}
+
+#SeasonalRankedSection TextButton:enabled:hover Label
+{
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
 #SeasonalRankedLeaderboardsButton
 {
 	horizontal-align: center;
@@ -1584,15 +1664,16 @@ DOTAPlay.SeasonalPartyMMRNoData #SeasonalPartyMMRNoData
 	margin-right: 10px;
 }
 
-#SeasonalRankedLeaderboardsButton Label
+#SeasonalSoloMMRTransfer
 {
-	color: #B1CBC6;
+	margin-top: 4px;
+	margin-bottom: 12px;
 }
 
-#SeasonalRankedLeaderboardsButton:hover Label
+#SeasonalPartyMMRTransfer
 {
-	text-decoration: underline;
-	color: #FFFFFF;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 #RankedSectionHeader
@@ -2336,15 +2417,10 @@ DOTAPlay.RankedMode #UnrankedGameModes
 	flow-children: down;
 }
 
-.RelBranch #WeekendTourneyButton
-{
-	visibility: collapse; /* Hide this to prevent confusion */
-}
-
 .ExpandWeekendTourney #WeekendTourneyButton
 {
 	background-color: green;
-	background-image: url("s2r://panorama/images/weekend_tourney/battle_cup_tooltip_backer_psd.vtex");
+	background-image: url("s2r://panorama/images/weekend_tourney/battle_cup_tooltip_backer_play_psd.vtex");
 	background-size: 100% 100%;
 	box-shadow: black -4px -4px 8px 8px;
 	transition-property: brightness;
@@ -2731,14 +2807,14 @@ DOTAPlay.MatchDenied_LowPriorityParty #PlayButton:hover
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-delay: 0.0s;
+	transition-delay: 0.3s;
 	transition-timing-function: ease-in;
 
 	tooltip-position: top;
 	tooltip-body-position: 100% 50%;
 	tooltip-arrow-position: 96% 50%;
 
-	visibility: collapse;
+	opacity: 0;
 }
 
 .Warning
@@ -2783,6 +2859,7 @@ DOTAPlay.CanDisconnect .LeaverConsequences
 
 .LeaverConsequence_Safe #LeaverConsequences
 {
+	opacity: 1;
 	visibility: visible;
 }
 
@@ -2801,6 +2878,7 @@ DOTAPlay.Connecting #LeaverConsequences
 
 .LeaverConsequence_Warning #LeaverConsequences_Warning
 {
+	opacity: 1;
 	visibility: visible;
 }
 

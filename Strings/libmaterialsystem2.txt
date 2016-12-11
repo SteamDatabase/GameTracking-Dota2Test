@@ -67,7 +67,7 @@
  @0@@@
  All %double static combos set to zero
  All zero
- IcuHH
+ Ict$HH
  LinePos:
  No static combos for this shader
  [A\A^A_]
@@ -89,10 +89,11 @@
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
+!IsDynamicComboVariableDataCompact()
+!IsExternallyAllocated() && !mem.IsExternallyAllocated()
 !IsRelevantFieldType( pFieldType )
 !IsSingleFieldRestricted()
 !bCreate
-!fff.
 !fffff.
 !ffffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -104,15 +105,20 @@
 !m_pMemory
 !m_staticComboIdTable.IsEmpty()
 !multilist || ML
-!pMaterial->IsLoaded()
+!pMaterial->HasOutstandingIORequests()
+!pStaticComboData->IsDynamicComboVariableDataCompact()
+!staticComboData.IsDynamicComboVariableDataCompact()
+!this->m_bBufferInstalled && this->m_nVertexIncrement == 0
+!this->m_bLocked
 "%short" [%double][%double] has invalid vs input signature:
-#C<D	
-#C\D	
+#1#3H
+#C4D	
+#CTD	
 #fff.
 #ffffff.
 #include
 #line
-$$L;long double
+$$tkH
 $1HcT1
 $ffff.
 $ffffff.
@@ -121,6 +127,7 @@ $ffffff.
 %7sK (mem) %7sK (disk) 
 %d..%double
 %float %float %float %float
+%hd..%hd
 %int %int %int %int
 %s__font_page_%double
 %short : %short
@@ -128,13 +135,12 @@ $ffffff.
 %short%short-%short
 %short(): Trying to add an empty VS input signature
 %short/%short
-%short/bin/%short
 %short: Input vector has incorrect length
 %short: Warning: No compile targets specified! Shader will not be compiled!
 &YA1H
 &YA1L
 &fff.
-&ffffff.
+&fffff.
 ', type<
 'fffff.
 ( fontInfo.m_font->GetFlags() & FONTFLAG_BITMAP ) == 0
@@ -146,38 +152,36 @@ $ffffff.
 ( renderablePass.nFrameCount == g_pMaterialSystem2Imp->GetFrameCount() )
 (GetChar()) == (0)
 ([A\A]A^A_]
-([A\A]A^A_]A
 ([A^A_]
+(__int128&& the line reading %short):
 (channel = 
 (end of input).
 (ffff.
+(fffff.
 (ffffff.
 (intp)this % 16 == 0
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (knN(knN(knN(knN
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (s_pThisModuleBindingPointer != NULL)
 (sigElement.m_pName[0] != '\0') && (sigElement.m_pD3DSemanticName[0] != '\0') && (sigElement.m_pSemantic[0] != '\0')
-(size_t)hResource % 4 == 0
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-)D$0A
-)D$@A
-)D$PA
-)D$`I
+(void *)m_pObject != NULL
 )fffff.
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(801): Error! Trying to load material "%short" without any params!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1081): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1091): Error masking unused parts for "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1240): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1317): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4393): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4527): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4758): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4792): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4831): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4935): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5398): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5399): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(879): Error! Trying to load material "%short" without any params!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1056): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1066): Error masking unused parts for "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1215): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(1292): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4844): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(4978): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5209): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5243): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5282): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5386): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5849): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5850): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
 *** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(80): Don'unsigned short call VfxInit() more than once!
 *** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(81): Don'unsigned short call VfxInit() more than once!
 *** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(90): g_pFullFileSystem must be set up before calling VfxInit!
@@ -215,9 +219,9 @@ $ffffff.
 *** Error parsing mode "%short"! Modes can either fallback to signed char different shader or set static combo values, but not both!
 *** Error parsing mode "%short"! Modes require arguments in the form Name( arg )!
 *** Error parsing modes for %short! You need at least 1 mode. Use "Default();" if you don'unsigned short need specific mode support.
+*** Error! AllowN (nargs=%double) rule in %short must have at least one arg type match the rule type!
 *** Error! AllowN rule in %short has out-of-order args! Args must be ordered: Features, Static Combos, Dynamic Combos!
 *** Error! AllowN rule in %short must have all args after N be 0..x!
-*** Error! AllowN rule in %short must have at least one arg type match the rule type!
 *** Error! ChildOf and Requires rule in %short must have first arg be 0..x!
 *** Error! ChildOf and Requires rule in %short must have first arg type match rule type!
 *** Error! ChildOf is only allowed in FeatureRules! %short
@@ -252,25 +256,25 @@ $ffffff.
 +K$Hc
 +ffffff.
 +mat_clearshadercache
++s8~ H
 +short(~unsigned __int128
-+short`~%L
 , GetFont used
 , LoadFont used
 , at <EOF>
 , at offset %double
 , near %short
 ,fff.
--&B'-
+,fffff.
 -----
 ----------
 --------------------------------------------------
 -Stop: 
--allowdebug
 -batchwarnings
 -end of input-(
 -ffff.
 -materialsystem2_strict
 -memory-
+-noasyncmaterialload
 -noshaderopts
 -shaderdebugging
 -shaders
@@ -281,14 +285,13 @@ $ffffff.
 -sse4
 -unknown source-
 -unknown source-(
--valveinternal
 -vulkan_use_pcgl_vcs
--xlsp
 .ETv*H
 .Elv*H
-.dylib
+.M;UU
 .uifont
 .vfont
+.vpk:
 .vpost
 .vtex
 // %short - %short
@@ -315,70 +318,69 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/fonttexturecache.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/fontmanager/osxfont.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(106): ERROR! Can'unsigned short load vfx_dx dll, dynamic shader compile unavailable!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1296): DxSupportLevel %double not supported!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1618): Dynamic Combos should be assumed to be unique for dynamic shader compile! %double != %double
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1652): Dynamic shader compile failed for %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1675): Dynamic shader compile failed for %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1906): Failed call to FindOrLoadStaticComboData()!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2035): Too many passes for caller! Ignoring layer %double pass %double
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2115): All bad! The error material failed in dynamic shader compile!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2370): Find signed char graphics programmer! Trying to bind signed char "%short" shader that doesn'unsigned short exist! for %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2733): Find signed char graphics programmer! Trying to bind signed char "%short" shader that doesn'unsigned short exist! for %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(400): Material "%short" is requesting signed char bad mode "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(443): Error! Material "%short" doesn'unsigned short have any valid layers to get the CVsInputSignatureVector from!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(467): Error! Material "%short" doesn'unsigned short have signed char CVsInputSignatureVector!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(796): Error! Material "%short" is already loaded!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(826): Cannot find shader entry in material "%short"! Using error.vfx!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(869): Error creating shader %short for material %short!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(874): Error creating shader %short and cannot load error.vfx instead!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(914): Error creating fallback shader %short for %short for material %short! A fallback shader cannot fallback to signed char different shader!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(927): Error creating fallback shader %short for %short for material %short!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(931): Error creating fallback shader %short for %short and cannot load error.vfx instead!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(961): Error creating shader %short for material %short!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(966): Error creating shader %short and cannot load error.vfx instead!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(974): Error creating static combos for shader %short and error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1009): Error creating fallback shader %short for %short for material %short!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1013): Error creating fallback shader %short for %short and cannot load error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1043): Error creating shader %short for material %short!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1048): Error creating shader %short and cannot load error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1056): Error creating static combos for shader %short and error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(108): ERROR! Can'unsigned short load vfx_dx dll, dynamic shader compile unavailable!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1545): DxSupportLevel %double not supported!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1814): Dynamic Combos should be assumed to be unique for dynamic shader compile! %double != %double
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1848): Dynamic shader compile failed for %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(1871): Dynamic shader compile failed for %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2084): Failed call to FindOrLoadStaticComboData()!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2447): Too many passes for caller! Ignoring layer %double pass %double
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(2527): All bad! The error material failed in dynamic shader compile!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(3074): Find signed char graphics programmer! Trying to bind signed char "%short" shader that doesn'unsigned short exist! for %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(469): Material "%short" is requesting signed char bad mode "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(512): Error! Material "%short" doesn'unsigned short have any valid layers to get the CVsInputSignatureVector from!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(536): Error! Material "%short" doesn'unsigned short have signed char CVsInputSignatureVector!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(874): Error! Material "%short" is already loaded!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(908): Cannot find shader entry in material "%short"! Using error.vfx!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(951): Error creating shader %short for material %short!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(956): Error creating shader %short and cannot load error.vfx instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material2.cpp(996): Error creating fallback shader %short for %short for material %short! A fallback shader cannot fallback to signed char different shader!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_command_buffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1006): Could not bind constant buffer "%short" because the constant buffer handle was invalid in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1022): Error setting constant for REGISTER_FLOAT4 for "%short" in material "%short"! Talk to signed char programmer!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1084): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1089): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1305): Invalid data type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1345): Invalid data type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1430): Invalid data type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1438): Invalid variable source type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1533): Unsupported render state type in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1615): Unsupported render state in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1688): Unsupported sampler state type for "%short" in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1710): Unsupported sampler state type for "%short" in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(264): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(269): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(324): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(329): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(38): Error! Unknown static combo source %double!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(406): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(411): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(707): Unknown variable type for %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(747): Invalid data type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(787): Invalid data type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(794): Error evaluating expression for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(800): Invalid variable source type for render state variable %short in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(862): Unsupported render state type in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(874): Sampler index %double out of bounds for "%short" in material "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(943): Unsupported sampler state type for "%short" in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1068): Could not bind constant buffer "%short" because the constant buffer handle was invalid in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1084): Error setting constant for REGISTER_FLOAT4 for "%short" in material "%short"! Talk to signed char programmer!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1146): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1151): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1368): Invalid data type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1409): Invalid data type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1494): Invalid data type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1502): Invalid variable source type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1600): Unsupported render state type in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1687): Unsupported render state in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1760): Unsupported sampler state type for "%short" in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(1782): Unsupported sampler state type for "%short" in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(283): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(288): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(343): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(348): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(425): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn'unsigned short supported yet! In material "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(43): Error! Unknown static combo source %double!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(430): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(740): Unknown variable type for %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(786): Invalid data type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(827): Invalid data type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(834): Error evaluating expression for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(840): Invalid variable source type for render state variable %short in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(907): Unsupported render state type in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(925): Sampler index %double out of bounds for "%short" in material "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_shader_params.cpp(994): Unsupported sampler state type for "%short" in material "%short"!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_type_manager.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_type_manager.cpp(51): GetErrorMaterial() called before error material exists!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/material_type_manager.cpp(52): GetErrorMaterial() called before error material exists!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(127): ERROR! Empty shader mode string found! Use "Default" instead!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(139): ERROR! Shader mode "%short" has unsupported type "%short" specified gameinfo.gi!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2152): pVfx == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2203): pVfx == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2467): Error reading index!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(247): ERROR!!! Materials not released by other systems on shutdown! (See spew above)
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(252): ERROR!!! Shaders not freed on shutdown, likely due to unreleased materials! (See spew above)
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(266): GetErrorMaterial() called when m_pMaterialTypeManager == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(591): ERROR!!! Shaders not freed before shader reload! (See spew above)
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(137): ERROR! Empty shader mode string found! Use "Default" instead!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(149): ERROR! Shader mode "%short" has unsupported type "%short" specified gameinfo.gi!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2300): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2351): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2615): Error reading index!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(319): ERROR!!! Materials not released by other systems on shutdown! (See spew above)
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(324): ERROR!!! Shaders not freed on shutdown, likely due to unreleased materials! (See spew above)
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(338): GetErrorMaterial() called when m_pMaterialTypeManager == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(699): ERROR!!! Shaders not freed before shader reload! (See spew above)
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/postprocessingsystem.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/textlayout/textlayout.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/utils/materialsystem2utils.cpp
@@ -404,10 +406,12 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/functors.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlblockmemory.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhash.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmemory.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlntree.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstackmachine.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
@@ -420,12 +424,10 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/texturedictionary/texturedictionary.cpp(249): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/lzmadecoder.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstackmachine.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
@@ -435,25 +437,25 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/utlstreambuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/compiletargetexpr.g
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(3001): Error! Ref count !=0 for static combo data cache entry!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6013): Error opening file %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6072): VCS %short Unserialize failed
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6086): VCS %short Unserialize hit EOF
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6220): Error opening file %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6227): Error calling SkipAndValidateVCSHeader() for %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(3264): Error! Ref count !=0 for static combo data cache entry!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(3399): Error! Ref count !=0 for static combo data cache entry!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6519): Error opening file %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6578): VCS %short Unserialize failed
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6592): VCS %short Unserialize hit EOF
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6726): Error opening file %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6733): Error calling SkipAndValidateVCSHeader() for %short
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_helpers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(105): : Failed to create lexer from "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(113): : Failed to create token stream from "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(121): : Failed to create parser from "%short"
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(97): : Failed to create input stream from "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(106): : Failed to create lexer from "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(114): : Failed to create token stream from "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(122): : Failed to create parser from "%short"
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(98): : Failed to create input stream from "%short"
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_expression_parser.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_render_state.cpp
 /error.vmat
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
-0 0@0
 0123456789)"
 0[A\A^A_]
 0[A^]
@@ -462,11 +464,12 @@ $ffffff.
 2fff.
 333?B`
 39N$t
+3[A^]
+40A;wchar_t
 49K }
 49S |}
 4[HcT
 6[A\A^A_]
-6~Lfffff.
 8[A\A]A^A_]
 8[A^A_]
 8[A^]
@@ -474,29 +477,25 @@ $ffffff.
 9S |unsigned int
 : lexer error %double :
 :9w$t
-:tFL9
-;2u6I
-;C |*H
 ;C@uf
-;FHu+
+;FHu*
+;G4u1H
 ;HPur
 ;L9'u
 ;L97u
-;W8}unsigned long long
 ;Y(uTI
 ;YHu`I
 ;Zhu!H
 ;[A^]
 ;ffffff.
 <$L9?u
-<$v9H
 <<unknown_mod>>\
 <DOWN>
 <EOF>
 <EOR>
-<G})C
 <IHct
 <Unknown font>
+<anon>:
 <invalid>
 <missing 
 <no text for the token>
@@ -507,7 +506,7 @@ $ffffff.
 >LZMAt
 >LZMAu
 >[A^]
-?0,/a,
+>fffff.
 ?LZMA
 ?ffffff.
 @$[A^]
@@ -523,7 +522,6 @@ $ffffff.
 @CThreadSpinRWLock::UnlockRead()
 @CThreadSpinRWLock::UnlockWrite()
 @CThreadSyncObject::~CThreadSyncObject()
-@DevWarning(char const*, ...)
 @E;'|
 @IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 @IStack_Annotation::~IStack_Annotation()
@@ -533,8 +531,9 @@ $ffffff.
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 @SeriousWarning(int, char const*, ...)
+@V_SplitString2(char const*, char const**, int, CUtlVector<char*, CUtlMemory<char*, int> >&)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
-@[A^]
 @_AssertMsg_ConditionFailed
 @_CFDictionaryCreate
 @_CFNumberCreate
@@ -577,27 +576,82 @@ $ffffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_MemAlloc_AllocFunc
+@_MemAlloc_CallocFunc
+@_MemAlloc_FreeFunc
+@_MemAlloc_ReallocFunc
+@_MemAlloc_StrDupWrapperFunc
 @_MemZeroMemory
+@_Plat_DebugPrint
 @_Plat_DebugString
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
-@_Plat_IsInDebugSession
-@_Plat_LoadModule
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
+@_Plat_LoadInterface
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
+@_Plat_UnloadModule
 @_RandomFloat
 @_RegisterStringToken
 @_ThreadGetCurrentId
 @_ThreadInMainThread
 @_ThreadInterlockedExchange64
 @_ThreadSleep
+@_VCRT_isprint
+@_VCRT_toupper
+@_V_FixSlashes
+@_V_GetFileExtension
+@_V_Get_stderr
+@_V_IsAbsolutePath
+@_V_StripFilename
+@_V_StripTrailingSlash
+@_V_UTF16ToUTF32
+@_V_UTF32ToUTF16
+@_V_UTF32ToUTF8
+@_V_UTF8ToUTF32
+@_V_UnqualifiedFileName
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_exp2f
+@_V_expf
+@_V_fprintf
+@_V_iswcntrl
+@_V_log10f
+@_V_log2f
+@_V_logf
+@_V_pow
+@_V_powf
+@_V_qsort
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strspn
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_towupper32
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_FileBase
+@__V_FixupPathName
+@__V_GetFirstDir
+@__V_SetExtension
+@__V_StringAfterPrefix
+@__V_StripExtension
+@__V_StripLastDir
+@__V_strcspn
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -607,45 +661,20 @@ $ffffff.
 @___cxa_guard_release
 @___cxa_pure_virtual
 @___gxx_personality_v0
-@___maskrune
-@___sincos_stret
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
-@___stderrp
-@___toupper
 @__float128 short::*
-@_atof
-@_atoi
-@_calloc
 @_ceil
 @_ceilf
-@_cosf
-@_dlclose
-@_dlsym
-@_exp2f
-@_expf
 @_floorf
-@_fprintf
-@_fputc
-@_free
-@_fwrite
 @_g_Tier1_CRC32Table
 @_g_pMemAlloc
-@_getcwd
-@_iconv
-@_iconv_close
-@_iconv_open
 @_kCFTypeDictionaryKeyCallBacks
 @_kCFTypeDictionaryValueCallBacks
 @_kCTFontNameAttribute
 @_kCTFontSlantTrait
 @_kCTFontTraitsAttribute
 @_kCTFontWeightTrait
-@_log10f
-@_log2f
-@_logf
-@_malloc
 @_memchr
 @_memcmp
 @_memcpy
@@ -653,43 +682,21 @@ $ffffff.
 @_memset
 @_memset_pattern16
 @_modff
-@_pow
-@_powf
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
 @_pthread_mutex_unlock
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
-@_qsort
 @_raise
-@_realloc
-@_setlocale
-@_sinf
-@_sprintf
-@_sscanf
 @_strchr
 @_strcmp
 @_strcpy
-@_strcspn
-@_strdup
 @_strlen
-@_strncat
-@_strncmp
-@_strspn
 @_strstr
-@_strtod
-@_strtol
-@_strtoll
-@_strtoul
-@_vsnprintf
-@_wcstol
 @dyld_stub_binder
-@hkS 
-@hkS@4
 @loader_path
-@r<Mc
+@r8Ic
 @rpath/libmaterialsystem2.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -699,6 +706,9 @@ $ffffff.
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
+A#4$H
+A$+A4H
+A+@p~+D
 A+D$$H
 A+D$$Hc
 A+D$$I
@@ -709,7 +719,6 @@ A+E$H
 A+E$Hc
 A+E$Lc
 A+E$M
-A+F$Hc
 A+F$Lc
 A+F,H
 A+G$H
@@ -723,12 +732,14 @@ A+M$Hc
 A+N )
 A+N$Hc
 A+O$Hc
+A+\$(
+A+p ~#I
+A+p`~W
+A+p`~aH
 A+u(~[I
-A+void@~
 A+void`~.M
 A+w8~
-A94$t5
-A9Epw4A
+A9D$pw7A
 A9F ~
 A9F<r	L!
 A9O,~
@@ -744,19 +755,17 @@ A9_,D
 A9_,~
 A9_8w*H
 A;F(u]M
-A;G ~
 A;G,H
-A;G4H
 A;O ~
 A;\$@|
 A;\$`u I
 A;]Xu
+A;]`u
 A;]long long|
 A;^@|
 A;^H|
-A;^`u
 A;_H|
-A;t$Xu.I
+A;t$Xu0I
 A;w$H
 ABGR8888
 ANTLR3_EXCEPTION number %double (%08X).
@@ -767,8 +776,10 @@ ARB]AR0x`
 ARGB8888
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
-ATBRAp
+ASATAp
 ATBRBRBRAp
+ATCRAp
+ATCRB`LATAp
 ATI1N
 ATI2N
 ATI_DST16
@@ -791,8 +802,8 @@ AWAVAUATSPE
 AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
-AWAVAUATSPM
 AWAVS1
+AWAVSD
 AWAVSH
 AWAVSP
 AWAVSPA
@@ -802,7 +813,7 @@ AWAVSPL
 AWAVSPM
 AZBSBp
 A[ATAp
-A]ATAp
+A`"ATAp
 Actually dude, we didn'unsigned short seem to be expecting anything here, or at least
 All Bad! Talk to Brian and Alex. g_pRenderHardwareConfig is NULL which means we won'unsigned short load this material correctly: %short
 All bad! The error material failed in dynamic shader compile!
@@ -823,6 +834,7 @@ AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
+Attempt to write to non-writable value array %double
 Attribute expression evaluation failed
 Attribute-based texture %short not bound for material "%short"!
 Attribute-based texture %short not bound for material "%short"! Missing render attribute "%short"
@@ -840,9 +852,6 @@ BGRX8888_LINEAR
 BLOOM_BLEND_ADD
 BLOOM_BLEND_BLUR
 BLOOM_BLEND_SCREEN
-BRBRAp
-BRB`BATAp
-BSATAp
 Bad VFX_VARIABLE type for %short in material "%short"!
 Bad VFX_VARIABLE type for VFX_VARIABLE_SOURCE_ATTRIBUTE %short Source( %short )! In material "%short"
 BakedLODBuilderMgr001
@@ -865,11 +874,8 @@ BindTextureToFile: Invalid texture id %double
 BindTextureToFile: Invalid texture id for file %short
 BindTextureToTextureHandle: Invalid texture id %double
 BloomBlendMode_t
-BuiltDebug
 C [A\A^A_]
 C [A^]
-C+D=0~.D
-C+unsigned short=@~(K
 C0[A^]
 CAtomicManipulator<CResourceArray<CResourceString> >
 CAtomicManipulator<CResourceArray<Color> >
@@ -915,6 +921,7 @@ CFontBase
 CFontBase *CFontAmalgam::GetFontForChar(uchar32, bool)
 CFontBase *CFontManager::GetFontForChar(FontHandle_t, uchar32)
 CFontManager
+CFunctor
 CFunctorData
 CFunctorData0
 CHC;D5
@@ -925,9 +932,10 @@ CLineLayoutInfo
 CMatSystemTexture::SetMaterial
 CMaterial2
 CMaterialLayer
-CMaterialLayer::CommandBufferInfo_t CMaterialLayer::CreateCommandBuffer(VfxProgram_t, uint64)
+CMaterialLayer::CommandBufferInfo_t CMaterialLayer::CreateCommandBuffer(VfxProgram_t, uint32)
 CMaterialMode
 CMaterialSystem2
+CMaterialSystem2::ReloadMaterials
 CMaterialSystem2Utils
 CMaterialSystem2Utils::DrawNDCSpaceUntexturedPolygon GetMode == NULL? Can'unsigned short Render
 CMaterialSystem2Utils::DrawScreenSpaceRectangle GetMode == NULL? Can'unsigned short Render
@@ -942,6 +950,7 @@ CMaterialSystem2Utils::RenderWireframeSphere GetMode == NULL? Can'unsigned short
 CMaterialSystem2Utils::RenderWireframeSweptBox GetMode == NULL? Can'unsigned short Render
 CMaterialSystem2Utils::ViewportLayoutList_t &CMaterialSystem2Utils::GetLayoutList(CUtlStringToken)
 CMaterialTypeManager
+CMemberFunctor6<CMaterial2*, void (CMaterial2::*)(IAsyncResourceDataRequest*, unsigned char*, int, MaterialStaticComboLoadRequest_t*, int, CWeakHandle<InfoForResourceTypeIMaterial2>), IAsyncResourceDataRequest*, decltype(nullptr), int, MaterialStaticComboLoadRequest_t*, int, CWeakHandle<InfoForResourceTypeIMaterial2>, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMeshLayoutInfo
 CNullShaderCreateCallbacks
 COLORCORRECTION_VERSION_1
@@ -954,8 +963,11 @@ CPostProcessingResource *CPostProcessingSystem::CreatePostProcessingSettings(Pos
 CPostProcessingSystem
 CPostProcessingTypeManager
 CPrimitivesLayoutInfo
+CQueuedResetMaterialCacheRenderable
+CQueuedSetMaterialOrTextureRenderable
 CQueuedTextRenderable
 CRefCountServiceBase<true, CRefMT>
+CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
 CRefCounted1<CFunctorData, CRefCountServiceBase<true, CRefMT> >
 CReferenceCleanupTraversal
 CResourceAllocatorUtils
@@ -1010,11 +1022,17 @@ CSchemaVisitorBase
 CSchemaVisitorInfoMapBase
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCTextureBase>
 CShaderCreateCallbacks
-CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>
-CSysModule *Sys_LoadModule(const char *)
+CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
+CSysMemDynamicVertexData - No storage!
+CSysMemDynamicVertexData - Tried to advance past the last vertex (%double)
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<DynamicShaderCompileTask_t, false>::Pop() [T = DynamicShaderCompileTask_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<DynamicShaderCompileTask_t, false>::Push(CTSQueue::Node_t *) [T = DynamicShaderCompileTask_t, bTestOptimizer = false]
 CTSQueue<DynamicShaderCompileTask_t, false>::CTSQueue() [T = DynamicShaderCompileTask_t, bTestOptimizer = false]
 CTSQueue<DynamicShaderCompileTask_t, false>::~CTSQueue() [T = DynamicShaderCompileTask_t, bTestOptimizer = false]
 CTextLayout
@@ -1056,11 +1074,10 @@ CTier2AppSystem<IMaterialSystem2, 0>
 CTier2AppSystem<IMaterialSystem2Utils, 0>
 CTier2AppSystem<IPostProcessingSystem, 0>
 CTier2AppSystem<ITextLayout, 0>
+CUtlBlockMemory overflow!
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -1078,7 +1095,6 @@ CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVFontTypeManager
 CVertexDataBase - No storage!
 CVertexDataBase - Tried to advance past the last vertex (%double)
-CVertexDataBase<MaterialSystem2UtilsVertex_t>::~CVertexDataBase() [T = MaterialSystem2UtilsVertex_t]
 CVertexDataBase<VertexColorUVPos_t>::~CVertexDataBase() [T = VertexColorUVPos_t]
 CVertexDataBase<VertexUVPosColorNormalAndTangent_t>::~CVertexDataBase() [T = VertexUVPosColorNormalAndTangent_t]
 CVfxConstructor
@@ -1087,7 +1103,6 @@ CXF948
 Cannot determine resource type for handle '%short' - schema data not loaded for the referred-to type?
 ChildOf
 ChildOf( 
-ClassIntrospectionHandle_t FindDiskDataClassForResourceType(ResourceType_t)
 Clears the shader cache used for dynamic shader compile.
 CmdLinkAH
 Color
@@ -1112,8 +1127,8 @@ Custom font file '%short' ignored because no font name was given
 D  HiU
 D$%	A
 D$'!A
-D$PE1
-D$PIc
+D$0H9
+D$PHc
 D.@C;D,@K
 D1(IcG
 D15S1
@@ -1124,43 +1139,46 @@ D24X4S4
 D24X8
 D24X8_SHADOW
 D3D Semantic Name: "%short"
-D90tnI
+D90tvI
 D9XJc
 D9XJcL
 D9`,~
 D9k,~
 D9s,~
 D9sXu
-D;0u<H
+D;*u)
+D;8u8H
 D;char u
 D;sHu
 D;{Hu
-D;|2(u2I
 D=`fD
 D=`fE
 DATAL
 DXT1_ONEBITALPHA
 DXT5_NM
 D_FADE_COLOR
+D_HHi
+D_HMc
 DebugTextureInfo001
 Default
 DefaultFontAliasGroup
-Deferred
 DependencyClass::m_pDependencyLL == NULL
 DescriptH
 Description
 Dev Shader
 DevShadeH
 DevShader
-DevWarning(char const*, ...)
+DgHHi
 Domain Shader
 DotaCardGameClient_001
 Dynamic )
 Dynamic Combos should be assumed to be unique for dynamic shader compile!
+Dynamic combo not found
 Dynamic combos:
 DynamicCombo
 DynamicComboFromFeature
 DynamicComboRule
+E$A+E4H
 E+|$$
 E9e8w*H
 E9g,~
@@ -1169,11 +1187,11 @@ E9u8w*H
 E9w8w*H
 E;4$|
 E;__int128 ~0
-E;ep|
 E;gTH
 E;t$H|
 E;uPu$I
 E;unsigned __int128(u-H
+E;|$0|
 E;}8|
 E@;C@u8A
 ED;CDu/A
@@ -1187,8 +1205,6 @@ ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
-ERROR: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
-ERROR: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
 ERROR: Problem allocating permanent data for resource in file '%short'. See above for reason(short)
 ERROR: Resource name "%short" has the incorrect extension "%short" for the specified resource type (expected "%short")!
 ESC_SEQ
@@ -1202,6 +1218,7 @@ EnvironmentMapBuilder_001
 Error Calling VfxEvalExpression() for %short in material "%short"
 Error Calling VfxEvalTextureExpression() for %short in material "%short"
 Error decompressing static combo data
+Error finding static combo data in VCS file!
 Error in CharToGlyph of 0x%long long in %short (symbol %double)
 Error loading resource "%short" (Invalid resource version: %double != %double)
 Error loading static combo data from VCS file!
@@ -1223,18 +1240,18 @@ Failed to Allocate signed char Dynamic Vertex Buffer of size %u
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
 Failed to call CBaseIntrospectedTypeManager::Init
 Failed to call CBaseIntrospectedTypeManager::SetDiskDataBinding
-Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in: '%short'
+Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in extref block.'
 Failed to load font file '%short'
 Failed to parse custom font file '%short'
 Feature
 FeatureRule
 Features
+Ffff.
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
 File has not been opened!
 Find signed char graphics programmer! Trying to bind signed char "%short" shader that doesn'unsigned short exist for %short!
 FindLookup( pName ) == NULL
 FixupResourceName: Illegal full path passed in ("%short")!
-FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FlattenedSerializersVersion001
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
@@ -1247,6 +1264,7 @@ From Enum Binding
 Fx@uQH
 G0[A\A^A_]
 G8H	p(]
+GA#D$
 GAMEROOT
 GP;FP
 GXD;unsigned short
@@ -1255,7 +1273,6 @@ GameResourceServiceServerV001
 GameStartup
 GameUIService_001
 Geometry Shader
-Gfff.
 Glyph Miss: FontHandle_t:0x%8.8llx (%short), %short
 H	p(]
 H	wchar_t(]
@@ -1275,16 +1292,14 @@ HORIZ_JUSTIFICATION_RIGHT
 HPostProcessing
 HRenderTexture CBitmapFont::GetTexturePage()
 HRenderTexture CVfxParam::GetDynamicTextureHandle(const CRenderAttributes *, const CRenderAttributes *, const CUtlAttributeList<const CVfxParam *> *) const
-HRenderTexture GetVariableTextureValue(const CMaterialLayer *, const CVfxPerLayerProgramData *, const CRenderAttributes *, IRenderContext *, const CVfxVariableDescription *, const CMaterialParam *, RenderTextureDimension_t, int *)
+HRenderTexture GetVariableTextureValue(const CMaterialLayer *, const CVfxPerLayerProgramData *, const CRenderAttributes *, const CRenderAttributes *, const CVfxVariableDescription *, const CMaterialParam *, RenderTextureDimension_t, int *)
 H[A\A]A^A_]
-H[A^A_]
 H__ZdaPv
 H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
 Hc@0]
-Hc@@H
 HcA L
 HcF(H
 HcF0H
@@ -1294,11 +1309,11 @@ HcK,H
 HcKHHk
 HcKPH9
 HcK`H
-HcP H
 HcP(H
 HcP0H
-HcW unsigned short
-HcW@unsigned short	;WX
+HcS H
+HcW@unsigned short	;WP
+Hc{(F
 HelpSystem_001
 Helvetica
 HorizJustification_e
@@ -1335,18 +1350,19 @@ I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable:
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I could not work out what I was expecting, like so many of us these days!
-I;3t1H9
+I/O request overflow!
 IAppSystem
 IAtomicManipulator
 IConCommandBaseAccessor
 IConVar
 IFontManager
-IMaterial2complex 
+IMaterial2
 IMaterialLayer
 IMaterialMode
 IMaterialMode *CMaterial2::GetMode(int) const
 IMaterialSystem2
 IMaterialSystem2Utils
+INT_MAX - nDataIdx >= nAlignedBytes
 IOpCodeHandler<int>
 IOpEvaluator<int>
 IPostProcessingSystem
@@ -1367,6 +1383,7 @@ IStack_Annotation::~IStack_Annotation()
 ITSHashConstructor<CVfx*>
 ITextLayout
 ITextureDictionary
+IcE0H
 IcE8L
 IcEPL
 IcF,H
@@ -1378,11 +1395,14 @@ IcO@H
 IcOHH
 IcOPH
 IcOXH
-IcU H
-IcU0L
+IcPPB
+IcPPF
+IcP`H
+IcW H
 Ic]HH
 Ic_ H
 ImageFmtH
+Incorrect vpk path delimiter for shader %short
 InfoForResourceTypeCTextureBase
 InputService_001
 InputStackSystemVersion001
@@ -1392,6 +1412,7 @@ Intentionally vague touch behavior for %p
 InvTextureDim
 InvViewportSize
 Invalid shader attribute type
+IsIdxValid(int)
 IsInList(before)
 IsInTree(elem)
 IsInTree(int)
@@ -1400,26 +1421,25 @@ IsPowerOfTwo( m_nAlignment )
 IsRelevantFieldType( pFieldType )
 IsResourceWeakHandle( pHandleType )
 IsRightChild( nodeIndex, rightChildIndex )
-IsValid( it )
 IsValid()
 IsValid() && uniChar >= 0 && uniChar <= 255
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
 K9t&Xu
 KDC;L5
-KcD%@H
-KcL#H
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues *KeyValues::GetFirstValue()
 KeyValues *KeyValues::GetNextValue()
 KeyValues::FindKey called on NULL pointer!
-L$$E1
+Kffff.
+L$HHc
 L$PHc
 L0(JcT
 L00JcT
 L90t*H
+L;>t5L9
 L>CDefaultIntrospectedTypeManager<500152889462ull, PostProcessingResource_t>
 LAYOUTPOSITIONTYPE_FRACTIONAL
 LAYOUTPOSITIONTYPE_NONE
@@ -1438,7 +1458,6 @@ LINEAR_RGB888
 LINEAR_RGBA16161616
 LINEAR_RGBA8888
 LayoutPositionType_e
-LcsPD
 Lexer encountered %int errors parsing compile targets expression "%short"
 Lfff.
 LightingBuilderMgr001
@@ -1451,12 +1470,14 @@ LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char 
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 Lucida Console
 Lucida Grande
+M96u/H
 MATCHFRAMEWORK_001
 MD5 match on %short, loading from vcs
 MD5 mismatch on %short, will load from vfx instead.
 MDiskDataForResourceType
 MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle_t
 MNoScatter
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MODES
 MPD94
@@ -1483,15 +1504,12 @@ MaterialSystem
 MaterialSystem2
 MaterialSystem2DefaultDebugFont
 MaterialSystem2DefaultDebugFontOutline
-MaterialSystem2UtilsRenderingLayout
 MaterialUtilsInit
 MaterialUtils_001
 Maximum time in ms to spend initializing shaders for materials each frame.
-Mc<$H
 Mc<$J
-Mc`$A
 McwPM
-Mc}0I
+Mc}0M
 Mc~8M
 Member function called on NULL KeyValues
 MeshSystem001
@@ -1501,7 +1519,6 @@ Mismatched set
 Missing token
 ModelDocCommandSystem001
 Modes
-Module %short is signed char debug build
 Monaco
 NOTE: Each static combo creates multiple shader programs based on the dynamic combos available.
 NTROL
@@ -1519,10 +1536,12 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
+Nfffff.
 No valid vcs file found for shader %short
 O [A\A^A_]
 OCTAL_ESC
-OD;NDu'HcWLH
+OD;NDu&
+Offff.
 Offffff.
 Ordered object did not begin in signed char zeroed state
 Out of range dynamic combo id %double in material "%short"
@@ -1553,7 +1572,6 @@ PC_SM_4_1_VULKAN
 PC_SM_5_0
 PC_SM_5_0_GL
 PC_SM_5_0_VULKAN
-PD21CUtlCStringConversion
 PPL;}
 P[A\A^A_]
 P[A^]
@@ -1562,7 +1580,7 @@ PanoramaUIClient001
 PanoramaUIEngine001
 Parser encountered %int errors parsing compile targets expression "%short"
 ParticleSystemMgr002
-Pfffff.
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 Pixel Shader
@@ -1573,6 +1591,7 @@ PostProcessingResource_t
 PostProcessingSystem_001
 PostProcessingTonemapParameters_t
 PostProcessingVignetteParameters_t
+Pp`0`
 Print detailed info about signed char single shader. Takes signed char shader name (hero.vfx) as an argument.
 Print info about signed char specific material
 Print loaded materials that are using the error shader or material.
@@ -1589,16 +1608,15 @@ Program MD5 is out of date with features! If you recompiled shaders in the backg
 Programmer Error! Static combo array not initialized properly!
 Programmer Error! Static combo value not in range!
 PropertyEditorSystem_001
-QueueIter_t CUtlQueue<CWeakHandle<InfoForResourceTypeIMaterial2>, CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int> >::Next(QueueIter_t) const [T = CWeakHandle<InfoForResourceTypeIMaterial2>, M = CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int>]
 QueuedLoaderVersion001
 R16F_EXPAND
 RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARAp
 RBRAp
 RBRBRBRBRAp
-RBRBRBRBRBRAp
-RBRBRBRBRB\Hp
+RBRBRBRBRB\Ip
 RBRBWARBWARBWARBWARAp
 RBRB]ARB]ARAp8p
+RBWARAp
 RB\BRAp
 RESOURCE_TYPE_BITMAP_FONT
 RESOURCE_TYPE_MATERIAL
@@ -1633,7 +1651,7 @@ Release
 Reloads all materials. Takes an optional substring as an argument.
 Reloads all shaders from vcs files until the next time mat_reloadshaders is called
 Reloads all shaders. Takes an optional substring as an argument.
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayout_t CTSInputLayoutCreator::GetLayout()
@@ -1650,12 +1668,11 @@ Requires%double(
 Resource %short
 ResourceCompilerSystem001
 ResourceHandleUtils001
-ResourceId_t UpdateResourceIdForUGC(const char *, UGCHandle_t, ResourceId_t, const CResourceRefTable *, char *, int)
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ResourceType_t GetResourceTypeOfWeakHandle(const CSchemaType *)
 Rffff.
+S ;S0}
 S H9s
 S8L;}
 SARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
@@ -1689,7 +1706,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -1700,7 +1717,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 Spew information about font manager fonts
 SrgbGammaToLinear
 SrgbLinearToGamma
@@ -1708,13 +1725,11 @@ Static combos:
 StaticCombo
 StaticComboRule
 StatsService_001
-T &CUtlQueue<CWeakHandle<InfoForResourceTypeIMaterial2>, CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int> >::Element(QueueIter_t) [T = CWeakHandle<InfoForResourceTypeIMaterial2>, M = CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int>]
-TASBp
+T &CUtlBlockMemory<CVfxStaticComboData, int>::operator[](I) [T = CVfxStaticComboData, I = int]
+TASAp
 TA[A`
-TA[Ap
-TA[BSAVATAp
-TBRBRBSATAp
-TBRBSATAp
+TA[BSAYATAp
+TA]ATAp
 TBRBVATAp
 TBRB`
 TBSARBTIRATAp
@@ -1726,21 +1741,23 @@ TBWAp
 TB[Ap
 TB]Ap
 TB`2ATAp
+TCRAp
 TCRBRAp
 TCRBRBRAp
+TCRBRBSATAp
 TCRBTBp
-TCRB`
 TCSATAp
 TCTAp
 TCTBRBRBSATAp
 TCTBRB`
 TCUATAp
 TCVATAp
-TCWARBRAp
-TC\0xp
-TCp(p
+TCWARBWARDp
+TCWAp
+TCp8p
 TDRAp
-TNRAp
+TFVATARBp
+TJHHi
 Tag: %short 
 Tahoma
 TestScriptMgr001
@@ -1754,7 +1771,7 @@ TextureSheetData
 TextureSize
 ThreadInMainThread()
 Times New Roman
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -1765,18 +1782,19 @@ Total Combos Before Rules: %15s ( %short Static, %short Dynamic )
 Trebuchet MS
 Trying to cast '%short' to signed char different resource type!
 TypeManager
-UCS-LE
 UNICODE_ESC
 UNKNOWN
 UPDATE_STRING_TOKEN_DATABASE
-UTF-32LE
 UVLX8888
 UVWQ8888
 Unable to convert 0x%long long to UCS2
 Unable to create dynamic index buffer with %double indices
 Unable to create dynamic vertex buffer with %double points
+Unable to parse vpk paths from shader %short
 Unable to read file %short!
 Unexpected character
+Unexpected multi-pass material
+Unexpected multipass material (%double passes)
 Unexpected node
 Unexpected token
 Unhandled field type for field '%short': '%short' (Why did it pass SchemaRecurseType?)
@@ -1791,7 +1809,6 @@ Use FindOrLoadFont for loading signed char non-bitmap font
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 Uv scale variable %short referenced by texture %short doesn'unsigned short evaluate to signed char constant value at material load time (%short).
-V8ffffff.
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -1838,7 +1855,8 @@ VScriptManager010
 VStringTokenSystem001
 VULKAN
 VUUUH
-V_AppendSlash: ran out of space on %s.
+V_SplitString2(char const*, char const**, int, CUtlVector<char*, CUtlMemory<char*, int> >&)
+V_stristr_fast(char const*, char const*)
 Vector
 Vector2D
 Vector2D CTextLayout::GetRawSize(CTextLayoutInfo *, const RenderViewport_t *, float)
@@ -1858,8 +1876,10 @@ Vffffff.
 Vfx Error: attribute type does not exist or does not support attribute literals.
 Viewport
 VisBuilder_001
+WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Missing data block for file: %short
 WARNING: Missing introspection manifest for file: %short
+WARNING: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
 WARNING: Problems encounted with external references in resource '%short'. See above for reason(short)
 WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
 WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
@@ -1873,6 +1893,8 @@ Wrong number of args left on stack!
 X360_DST16
 X360_DST24
 X360_DST24F
+XJV2S?__int128
+XM96u/H
 X[A\A]A^A_]
 X[A\A^A_]
 Y0[A^]
@@ -1882,15 +1904,16 @@ Y8[A^]
 [A\A]A^A_]A
 [A\A^A_]
 [A^A_]
-[A^]A
 [Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
 [Dynamic shader compile] Reloading %double material(short)
+[Dynamic shader compile] Warning: %double material(short) are not reloaded because they have outstanding file I/O requests
 [Index: 
 [unsigned short,fD
-\2 E1
+\$HHc
 \<`H9
 \Hc
 \error.vmat
+\fff.
 ^H=vmatu8H
 ^^^ Attribute-based texture warning is now disabled after outputting 50 warnings.
 ^^^ Constant buffer warning is now disabled after outputting 50 warnings.
@@ -1943,28 +1966,71 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_MemAlloc_AllocFunc
+_MemAlloc_CallocFunc
+_MemAlloc_FreeFunc
+_MemAlloc_ReallocFunc
+_MemAlloc_StrDupWrapperFunc
 _MemZeroMemory
+_Plat_DebugPrint
 _Plat_DebugString
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
-_Plat_IsInDebugSession
-_Plat_LoadModule
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
+_Plat_LoadInterface
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
+_Plat_UnloadModule
 _RandomFloat
 _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInMainThread
 _ThreadInterlockedExchange64
 _ThreadSleep
+_VCRT_isprint
+_VCRT_toupper
+_V_FixSlashes
+_V_GetFileExtension
+_V_Get_stderr
+_V_IsAbsolutePath
+_V_StripFilename
+_V_StripTrailingSlash
+_V_UTF16ToUTF32
+_V_UTF32ToUTF16
+_V_UTF32ToUTF8
+_V_UTF8ToUTF32
+_V_UnqualifiedFileName
+_V_atof
+_V_atoi
+_V_cosf
+_V_exp2f
+_V_expf
+_V_fprintf
+_V_iswcntrl
+_V_log10f
+_V_log2f
+_V_logf
+_V_pow
+_V_powf
+_V_qsort
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strspn
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_towupper32
+_V_vsnprintf
+_V_vsnprintfRet
+_V_wcstoi64
 _Warning
 __Attribute__
 __DATA
-__DefaultRuneLocale
 __Expression__
 __FROM_ATTRIBUTE_OR_FEATURE__
 __FROM_ATTRIBUTE__
@@ -1978,6 +2044,18 @@ __SetByArtistAndExpression__
 __SetByArtist__
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_FileBase
+__V_FixupPathName
+__V_GetFirstDir
+__V_SetExtension
+__V_StringAfterPrefix
+__V_StripExtension
+__V_StripLastDir
+__V_strcspn
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -1987,13 +2065,8 @@ ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
 ___gxx_personality_v0
-___maskrune
-___sincos_stret
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
-___stderrp
-___toupper
 __bss
 __common
 __const
@@ -2002,7 +2075,6 @@ __data
 __float128`[A\A^A_]
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -2010,40 +2082,20 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
-_atoi
-_calloc
 _ceil
 _ceilf
 _copy%u
 _copy_s%llu
-_cosf
-_dlclose
-_dlsym
-_exp2f
-_expf
 _feature
 _floorf
-_fprintf
-_fputc
-_free
-_fwrite
 _g_Tier1_CRC32Table
 _g_pMemAlloc
-_getcwd
-_iconv
-_iconv_close
-_iconv_open
 _kCFTypeDictionaryKeyCallBacks
 _kCFTypeDictionaryValueCallBacks
 _kCTFontNameAttribute
 _kCTFontSlantTrait
 _kCTFontTraitsAttribute
 _kCTFontWeightTrait
-_log10f
-_log2f
-_logf
-_malloc
 _memchr
 _memcmp
 _memcpy
@@ -2051,41 +2103,22 @@ _memmove
 _memset
 _memset_pattern16
 _modff
-_powf
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
 _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
-_qsort
 _raise
-_realloc
-_setlocale
-_sinf
-_sprintf
-_sscanf
 _strchr
 _strcmp
 _strcpy
-_strcspn
-_strdup
 _strlen
-_strncat
-_strncmp
 _strnlen
-_strspn
 _strstr
-_strtod
-_strtol
-_strtoll
-_strtoul
-_valveinternal
-_vsnprintf
-_wcstol
-_xlsp
+`@Ic]
 `[A\A^A_]
+`fffff.
 `unsigned char[A\A^A_]
 afff.
 attributes[int].GetType() == VFX_VARIABLE_TYPE_TEXTURE2D
@@ -2098,28 +2131,27 @@ bool CFontManager::FindCustomFontData(const char *, void **, int *, CUtlVector<S
 bool CFontTextureCache::AllocatePageForChar(int, int, int &, int &, int &, int &, int &)
 bool CFontTextureCache::GetTextureForChars(FontHandle_t, FontDrawType_t, uchar32 *, int *, float **, int)
 bool CFontTextureCache::IsCharCached(FontHandle_t, FontDrawType_t, uchar32, int *, float **)
-bool CMaterialSystem2Utils::RenderText2D(IRenderContext *, const CUtlVector<RenderCharsForTextureList_t> &, const Vector2D &)
+bool CMaterialLayer::ComputeWorkItemsToSetupStaticCombosForMode(int, CUtlVector<MaterialStaticComboLoadRequest_t> *)
 bool CUtlBuffer::Get(void *, int)
-bool CUtlQueue<CWeakHandle<InfoForResourceTypeIMaterial2>, CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int> >::RemoveAtHead(T &) [T = CWeakHandle<InfoForResourceTypeIMaterial2>, M = CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int>]
 bool CUtlStackMachineBuilder::AddOperator(const char *)
 bool CUtlStreamBuffer::StreamGetOverflow(int)
 bool CUtlStreamBuffer::StreamPutOverflow(int)
 bool CVfx::CreateFromVcs(const char *, VfxCompileTarget_t, uint, bool)
+bool CVfxProgramData::FindOrCreateStaticComboDataInCache(int64, CVfx *, VfxProgram_t, bool, VfxStaticComboLoadRequest_t *)
 bool CompileComboAndGetVariables_DynamicShaderCompile(CVfx *, CVfxStaticComboData *, CVfxProgramData *, VfxProgram_t, uint64, uint64, bool *)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool IsConstantBufferForStaticComboStatic(const CVfxProgramData *, const CVfxStaticComboData *, const CVfxPerLayerProgramData *, const CMaterialLayer *, EBatchableModes_t, bool)
-bool SetVariableValue(const CRenderAttributes *, IRenderContext *, const CVfxVariableDescription *, const CMaterialParam *, void *, const int, const CMaterialLayer *, const CVfxPerLayerProgramData *, DynamicRenderState_t *)
+bool SetVariableValue(const CRenderAttributes *, const CRenderAttributes *, IRenderContext *, const CVfxVariableDescription *, const CMaterialParam *, void *, const int, const CMaterialLayer *, const CVfxPerLayerProgramData *, DynamicRenderState_t *)
 bool UtlExecuteStackMachineProgamSimple(const void *, uint32, IOpEvaluator<T> &, IOpCodeHandler<T> &, T *) [T = int]
-bool VfxAddShaderVariablesToProgramVariableArray(CUtlVector<int> &, CUtlVector<int> &, const CUtlVector<CVfxVariableDescription> &, const CUtlVector<CVfxTextureChannelProcessor> &, CVfxProgramData *, CVfxStaticComboData *)
+bool VfxAddShaderVariablesToProgramVariableArray(CUtlVector<int> &, CUtlVector<int> &, const CUtlVector<CVfxVariableDescription> &, const CUtlVector<CVfxTextureChannelProcessor> &, CVfxProgramData *)
 bool VfxEval(const void *, uint32, bool, CVfxExpressionEvalContext &, void *, bool *) [T = Vector4D, bFailSilently = false]
 bool VfxEval(const void *, uint32, bool, CVfxExpressionEvalContext &, void *, bool *) [T = Vector4D, bFailSilently = true]
+bool VfxInitRequestForStaticComboDataFromVcs(CVfx *, VfxProgram_t, uint64, VfxStaticComboLoadRequest_t *)
 bool VfxPopulateStaticComboDataCacheFromVcs(CVfx *, CVfxStaticComboData *, VfxProgram_t, uint64, IRuntimeShaderCreateCallbacks *, ICompiletimeShaderCreateCallbacks *)
-bool _V_StripLastDir(char *, int)
 bool2
 bool3
 bool4
 cbuffer
-char *_V_strncat(char *, const char *, int, int)
 clamp
 color
 colorcorrection_%p.vtex
@@ -2128,21 +2160,17 @@ const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
 const ResourceBlockEntry_t *Resource_GetBlockEntry(const ResourceFileHeader_t *, ResourceBlockId_t)
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 count >= 0
-cubDestSizeInBytes >= sizeof( *pUCS2 )
 d2 E1
 desc.nMinCodePoint == 0
 descs.Count() >= 1
-destBufferSize >= 0
 dev/materialsystem2utils/pixel.vtex
 dev/vgui/materials/renderui.vmat
 dffffff.
 ds_5_0
 dyld_stub_binder
-dynamicRenderState.m_nMaxSamplerIndex < VFX_MAX_SAMPLERS
 ePE9<
 error.vfx
 error.vfx shader used while mat_assert_on_error_shader_use convar is enabled!
@@ -2172,52 +2200,37 @@ g_pResourceSystem
 g_pVfxDll != NULL
 game_controls
 gamelayer
+gfffffffH
 gpff.
 gs_4_0
 gs_4_1
 gs_5_0
 hResource != RESOURCE_HANDLE_INVALID
-hResource->m_nDeferredCount < hResource->m_nRefCount
-hResource->m_nDeferredCount <= hResource->m_nRefCount
-hResource->m_nDeferredCount > 0
-hResource->m_nDeferredCount >= 0
 hResource->m_nRefCount > 0
+hXvHH
 hfff.
 hffff.
 hs_5_0
 in1 != out
 index != m_LayoutListMap.InvalidIndex()
-info.m_pReplacementString == 0
 info.valid
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int CKeyValues_Data::Internal_GetInt()
+int CMaterialLayer::AllocCommandBufferData(int, const void *)
 int CSchemaInheritanceIterator::PopulateTraversal_R(ClassIntrospectionHandle_t, ClassIntrospectionHandle_t, uint32, bool, bool)
 int CTexturePacker::InsertRect(const Rect_t &, int)
 int CUtlBuffer::ParseToken(characterset_t *, char *, int, bool)
-int CUtlQueue<CWeakHandle<InfoForResourceTypeIMaterial2>, CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int> >::Count() const [T = CWeakHandle<InfoForResourceTypeIMaterial2>, M = CUtlMemory<CWeakHandle<InfoForResourceTypeIMaterial2>, int>]
 int CUtlStreamBuffer::ReadBytesFromFile(int, int)
 int CVfxParam::GetDynamicIntValue(const CRenderAttributes *, const CRenderAttributes *, const CUtlAttributeList<const CVfxParam *> *) const
-int GetDynamicComboValueFromSource(const CMaterialLayer *, CVfxCombo *, const CRenderAttributes *, IRenderContext *, VfxDynamicComboSourceType_t, VfxProgram_t)
+int GetDynamicComboValueFromSource(const CMaterialLayer *, const CVfxCombo *, const CRenderAttributes *, const CRenderAttributes *, VfxDynamicComboSourceType_t, VfxProgram_t)
 int GetStaticComboValueFromSource(VfxStaticComboSourceType_t, VfxProgram_t)
-int ResourceRelease(ResourceHandle_t, bool, uintp, ResourceLeakTrackingGroup_t)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = wchar_t, _To = unsigned short]
-int _V_UnicodeToUCS2(const wchar_t *, int, ucs2 *, int)
+int ResourceRelease(ResourceHandle_t, uintp, ResourceLeakTrackingGroup_t)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int32 CVfxProgramData::FindOrAddVsInputSignatureToArray(const CVsInputSignatureVector &)
-int64 V_atoi64(const char *)
-invalid input pointer
+int32 CVfxProgramData::FindOrLoadStaticComboData(uint64, CVfx *, VfxProgram_t, IRuntimeShaderCreateCallbacks *, ICompiletimeShaderCreateCallbacks *, bool)
 is also the end of the line, so you must check your lexer rules
-it != QUEUE_ITERATOR_INVALID
 k@t4A
 k@v9H
 kXv=H
-len < maxlen
 length
 lexer->mTokens(): Error: No lexer rules were added to the lexer yet!
 lfff.
@@ -2226,8 +2239,10 @@ localize
 log10
 long long	IcO
 long long[A\A]A^A_]
+long longcomplex [A^]
 looks like this:
 loop != 99
+lr.type != VFX_STATIC_COMBO_LOAD_REQUEST_FAILED
 m_Blobs.IsPeeked()
 m_CharCache.IsValidIndex( cacheHandle )
 m_Count == 0
@@ -2242,6 +2257,7 @@ m_Fonts[int].font->IsValid()
 m_FrameUpdateFuncs.Find( func ) == m_FrameUpdateFuncs.InvalidIndex()
 m_Glyphs
 m_Head == InvalidIndex()
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_MaxElementIndex != INVALID_NTREE_IDX
@@ -2293,7 +2309,6 @@ m_floatAttributes
 m_floatParams
 m_fnChangeCallbacks.Count() == 0
 m_hTexture != RENDER_TEXTURE_HANDLE_INVALID
-m_head != QUEUE_ITERATOR_INVALID
 m_iDataType == TYPE_NONE
 m_intAttributes
 m_intParams
@@ -2301,10 +2316,16 @@ m_materialName
 m_nArgv0Size != 0
 m_nChannelInfoIndex[int] >= 0
 m_nColorCorrectionVolumeDim
+m_nIndexMask + 1 == ( U << m_nIndexShift )
+m_nOutstandingIORequestCount < 255
+m_nOutstandingIORequestCount == 0
+m_nOutstandingIORequestCount > 0
 m_nValue
 m_nVariableSourceMax
 m_name
 m_pBuffer
+m_pMemory
+m_pMemory[ int ]
 m_pOuterTypeScope != NULL
 m_pParent == this
 m_pParent->m_fnCompletionCallback
@@ -2318,8 +2339,6 @@ m_staticComboArray
 m_staticComboArray[int].m_nComboIndexValue > 0
 m_staticComboRuleArray
 m_stringAttributes
-m_tail != QUEUE_ITERATOR_INVALID
-m_tail == QUEUE_ITERATOR_INVALID
 m_textureAttributes
 m_textureChannelProcessorArray
 m_textureParams
@@ -2363,16 +2382,12 @@ mat_reinitmaterials
 mat_reloadmaterials
 mat_reloadshaders
 mat_shader_cache
-mat_use_commandbuffers
 mat_warn_bad_modes
 materials/dev/debug_solid.vmat
 materials/dev/debug_wireframe.vmat
 materials/error.vmat
 materialsystem2
 matsystemtexture_%s_%lld.vtex
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxlen >= 1
 method( void )
 mffff.
 modes
@@ -2381,31 +2396,34 @@ nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nArgvBufferSize <= COMMAND_MAX_LENGTH
 nBatchIndices <= nMaxIndexCountPerPass
+nBytes == AlignValue( nBytes, 16 )
+nBytes > 0
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nCombos
-nDynamicComboCount > 0
-nDynamicComboCount >= 0 && nDynamicComboCount <= INT_MAX / sizeof(uint16)
+nDynamicComboCount <= INT_MAX / sizeof(uint16)
 nDynamicComboId <= UINT32_MAX
 nDynamicComboId >= 0 && nDynamicComboId <= INT_MAX
 nFlags >= 0 && nFlags <= UINT8_MAX
+nGrowSize <= 1 << 27
 nIdx >= 0
 nIndex < ( 1 << 15 )
 nMaxChars > 0
 nMaxIdx < 65535
 nMaxLen > 0
-nNumDynamicCombos <= 64
-nNumDynamicCombos >= 0 && nNumDynamicCombos <= INT_MAX
+nNumDynamicCombos <= nMaxDynamicCombos
 nNumPoints >= 0
 nNumToAdd >= 0
 nPasses <= 1
 nResourceType != RESOURCE_TYPE_NONE
+nResourceType == DeduceResourceTypeFromResourceName( pReferencedResourceName )
 nShaderIndex == nDynamicComboId
 nSize != 0
-nToSizeInBytes >= sizeof( *pTo )
+nStaticComboDataIndex >= 0
 nTop >= 1
 nTop >= 2
 nTraversalOffset == 0
+nTries < 10000000
 near '%char' :
 near char(%#02X) :
 nodeIndex != -1
@@ -2418,7 +2436,6 @@ operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
-outStrings.Count() == 0
 outputBuffer
 p `0@
 pArgs->Arg( 1 ) = "%short"
@@ -2427,24 +2444,23 @@ pBlob
 pCallback == NULL
 pChars && textureID && texCoords
 pData == m_pData
+pDataBuffer
 pDiskDataClassBinding != NULL
 pFontAliasList
 pFontName
 pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
 pList
+pMaterial
 pName
 pParamClass && pParamClass->GetClass()
 pPool->m_SpaceUsed < 0xFFFF
 pProgramData->m_dynamicComboArray.Count() <= 64
 pProgramData->m_staticComboArray.Count() <= 64
-pReferencedResourceName != NULL
-pReferencedResourceName == NULL
 pRenderGeometry != NULL
 pResource
 pResource->m_hTexture != RENDER_TEXTURE_HANDLE_INVALID
 pResult->State() == VISIT_INFO_STATE_COMPLETE
 pSchemaSystem != NULL
-pSearch
 pShaderVersion
 pStaticComboData->m_shaderHandleArray[ nShaderIndex ] != RENDER_SHADER_HANDLE_INVALID
 pStaticComboData->m_variablesUsedInStaticCombo.m_nFirstRenderStateElement == 0
@@ -2460,13 +2476,11 @@ pXRERA
 pXRERAp
 pXRESG
 pXp8p
+p[A\A^A_]
 p[A^]
-p``@0
-phWAp
 positionH
 positionType == LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE
 pp`Pp
-ppath
 ppppP
 procedural
 proportionalBaseHeight != 0.0
@@ -2474,7 +2488,9 @@ ps_3_0
 ps_4_0
 ps_4_1
 ps_5_0
-r6ff.
+r6ffffff.
+r?ffffff.
+rIffff.
 rOfffff.
 radr://5614542
 random
@@ -2498,6 +2514,9 @@ schemasystem
 setting.shaderquality
 shader
 shaders\vfx\
+shaders_pc.vpk
+shaders_pcgl.vpk
+shaders_vulkan.vpk
 size < 1024 * 1024
 size >= 0
 smoothstep
@@ -2521,6 +2540,7 @@ static void PostProcessingResource_t::Schema_VerifyBindingIsRegistered()
 static void PostProcessingTonemapParameters_t::Schema_VerifyBindingIsRegistered()
 static void PostProcessingVignetteParameters_t::Schema_VerifyBindingIsRegistered()
 static void VBitmapFontDiskData_t::Schema_VerifyBindingIsRegistered()
+staticComboData.m_bIsFullyLoaded
 staticComboValues.Count() == m_staticComboArray.Count()
 staticComboValues[int] <= m_staticComboArray[int].m_nMax
 staticComboValues[int] >= m_staticComboArray[int].m_nMin
@@ -2537,12 +2557,10 @@ struct PS_INPUT
 struct VS_INPUT
 symIdx != m_FontDataFiles.InvalidIndex()
 t$8[A\A^A_]
-t$H9[8u
-t$HIc
+t$ffff.
 t0fff.
-t2fffff.
+t2 E1
 t3ff.
-t3fff.
 t3ffff.
 t3ffffff.
 t4fff.
@@ -2550,67 +2568,60 @@ t4ffff.
 t5ffff.
 t5fffff.
 t6ffffff.
-t7ffff.
 t7ffffff.
 t9HiE
-tDffffff.
 tEIcD$
+tJffff.
 tLMc~
+tLffff.
 tNA9^,~
-t_fffff.
 tangent
 texEntry.TestForStreamingFinish( true )
 texcoordH
 textureID && texCoords
 this->m_bOkToLock
-tjffff.
+this->m_nVertexIncrement == 1
 tlIcG
 tlfff.
-tmffff.
+toIc]
 tools
 tqJ94
-tsIc_
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
-u	[A\A^A_]
 u%...#H
 u(...&H
 u6D9D
-uFzD1
+u?...=1
 uGetResourceManifest
-uRHcSLH
-u]...[H
+uGzEffffff.
+uVzTH
 uiKey != UnusedElementKey()
 uint16 CPlatformFont::CharToGlyph(uchar32)
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
-uint64 CVfxProgramData::CalcStaticComboIdFromValues(const CUtlVector<int> &) const
+uint32 CVfxStaticComboData::FindDynamicComboArrayIndex(uint64) const
+uint64 CVfxProgramData::CalcStaticComboIdFromValues(const VfxComboValueVector_t &) const
 uniChar <= 0x0ff
 uniChar == '\__int128' || m_pFontManagerImp->GetFontForChar( hFont, uniChar )
 unsigned char[A\A]A^A_]
 unsigned int CLZMA::Uncompress(const unsigned char *, unsigned char *, LZMAReadProgressCallbackFunc_t)
-unsigned short	H+]
 unsigned short	[A\A^A_]
 unsigned short fff.
 unsigned short";VLuCH
 unsigned short#fff.
-unsigned short%ffff.
 unsigned short%fffff.
 unsigned short&H9[8tUH
 unsigned short(ffff.
-unsigned short+ffff.
 unsigned short/ffff.
+unsigned short<fff.
 unsigned short=ffffff.
-unsigned short\~VI
 unsigned short]HkE
-uuA+^
-uuff.
+utff.
 uwHcE
-uyzwA
 u{Hc]
-v8w'H
 vHct
 vXw'H
 variableIndexArray.m_nFirstConstantElement >= 0
+variableIndexArray.m_nFirstRenderStateElement >= 0
 vfont
 vfx_dx11
 vfx_dx9
@@ -2635,12 +2646,16 @@ virtual bool CFontManager::SetBitmapFontGlyphSet(FontHandle_t, const char *, flo
 virtual bool CFontManager::SetFontGlyphSet(FontHandle_t, const char *, int, int, int, int, int, int, int)
 virtual bool CIntOpEvaluator::Evaluate(SM_OpCode_t, int *, int &)
 virtual bool CMaterial2::OverrideTextureParam(const char *, HRenderTexture)
+virtual bool CMaterialSystem2Utils::RenderText(IRenderContext *, const CUtlVector<RenderCharsForTextureList_t> &, const Vector2D &, const CRenderAttributes *)
+virtual bool CMaterialSystem2Utils::SetMaterialModeState(IRenderContext *, const IMaterialMode *, const CRenderAttributes *, RenderInputLayout_t, const RsStencilStateOverride_t *, int, uint32)
+virtual bool IResourceTypeManager::IsStreamingDataAlreadyLoaded(ResourceHandle_t)
 virtual const CRenderAttributes &CMaterial2::GetAttributes() const
 virtual const CUtlVector<FontAlias_t> &CFontManager::GetFontAliases(const char *)
 virtual const char *CFontManager::GetFontName(FontHandle_t)
 virtual int CFontManager::GetFontAscent(FontHandle_t, uchar32)
 virtual int CFontManager::GetFontTall(FontHandle_t)
-virtual int CMaterialMode::ComputeRenderablePassesForContext(const CRenderAttributes *, IRenderContext *, MaterialRenderablePass_t *, int)
+virtual int CMaterialMode::ComputeRenderablePassesForContext(const CRenderAttributes *, const CRenderAttributes *, MaterialRenderablePass_t *, int) const
+virtual int CMaterialSystem2Utils::PrepareForRender(IRenderContext *, const IMaterial2 *, const CRenderAttributes *, HRenderTexture, RenderViewport_t *, MaterialRenderablePass_t *, int, const IMaterialMode **)
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
 virtual int IResourceTypeManager::GetNonStreamingDataLoadSize() const
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::Allocate() [T = CResourceArray<CResourceString>]
@@ -2689,13 +2704,14 @@ virtual void CFontManager::GetKernedCharWidth(FontHandle_t, uchar32, uchar32, uc
 virtual void CFontManager::RemoveFontAliasList(const char *)
 virtual void CFontManager::SetFontRange(const char *, int, int, const char *)
 virtual void CMaterialSystem2::AddFrameUpdateFunc(FrameUpdateFunc_t)
-virtual void CMaterialSystem2Utils::RenderFontTexture(IRenderContext *, FontTextureHandle_t, int, int)
-virtual void CMaterialSystem2Utils::RenderMeshWithMode(IRenderContext *, const MeshBuilderBuffers_t *, IMaterialMode *, const CRenderAttributes *, HRenderTexture, LayoutPositionType_e)
+virtual void CMaterialSystem2Utils::RenderFontTexture(IRenderContext *, FontTextureHandle_t, int, int, const CRenderAttributes *)
+virtual void CMaterialSystem2Utils::RenderMeshWithMode(IRenderContext *, const MeshBuilderBuffers_t *, const IMaterialMode *, const CRenderAttributes *, HRenderTexture, LayoutPositionType_e)
 virtual void CMaterialSystem2Utils::RenderPrimitives(IRenderContext *, MaterialPrimitiveType2_t, const Vector *, const Color *, const Vector2D *, int, const IMaterial2 *, const CRenderAttributes *, HRenderTexture, LayoutPositionType_e)
+virtual void CMaterialTypeManager::Deallocate(void *, IResourceDeallocatorUtils *)
 virtual void CPlatformFont::GetCharABCWidths(uchar32, int &, int &, int &)
 virtual void CPostProcessingSystem::LerpToPostProcessing(HPostProcessing, float)
 virtual void CPostProcessingSystem::SetPostProcessingWeight(HPostProcessing, float)
-virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, bool, FieldIntrospectionHandle_t)
+virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, FieldIntrospectionHandle_t)
 virtual void CResourceStreamFixed::Commit(uint)
 virtual void CTextureDictionary::ProcessDeferredResourceLoading()
 virtual void CUtlRenderShaderBuffer::Release()
@@ -2716,8 +2732,9 @@ void AddSamplerStateVariableToCommandBuffer(CUtlBuffer *, const CVfxVariableDesc
 void AddTextureVariableToCommandBuffer(CUtlBuffer *, const CVfxVariableDescription *, int, int, CMaterialParam *, int, const CMaterialLayer *, const CVfxProgramData *, const CVfxPerLayerProgramData *, VfxProgram_t)
 void CBaseIntrospectedTypeManager::SetDiskDataBinding(const CSchemaClassBindingBase *)
 void CBitmapFont::GetCharCoords(uchar32, float *, float *, float *, float *)
+void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned int]
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned short]
-void CDynamicVertexData<MaterialSystem2UtilsVertex_t>::Lock(int) [T = MaterialSystem2UtilsVertex_t]
+void CDynamicIndexData<unsigned short>::Lock(int) [T = unsigned short]
 void CDynamicVertexData<VertexColorUVPos_t>::Lock(int) [T = VertexColorUVPos_t]
 void CDynamicVertexData<VertexUVPosColorNormalAndTangent_t>::Lock(int) [T = VertexUVPosColorNormalAndTangent_t]
 void CIndexDataBase<unsigned short>::AdvanceIndexCount(int) [T = unsigned short]
@@ -2728,17 +2745,21 @@ void CMatSystemTexture::SetFromUnknownHandle(ResourceHandle_t, CRC32_t)
 void CMatSystemTexture::SetSubTextureRGBA(IRenderDevice *, int, int, const unsigned char *, int, int)
 void CMaterial2::AddShaderAttributesToMaterialAttributes(const CUtlVector<CVfxShaderAttribute> &, const CMaterialLayer *, const CUtlVector<CMaterialParam> *, const CVfxPerLayerProgramData *)
 void CMaterial2::CreateMaterialFromResourceData(const void *)
-void CMaterial2::LoadShadersAndSetupModes()
-void CMaterialLayer::CollectRenderStateForRenderablePass(const CRenderAttributes *, float32 *, DynamicRenderState_t *, const CVfxVariableIndexArray *, VfxProgram_t, int, IRenderContext *, CMaterialLayer::StateToSet_t) const
+void CMaterial2::FinalizeLoad()
+void CMaterial2::IssueAsyncLoadRequests(CUtlVector<MaterialStaticComboLoadRequest_t> &, HMaterial, ShaderLoadMode_t)
+void CMaterial2::LoadShadersAndSetupModes(HMaterial, ShaderLoadMode_t)
+void CMaterial2::OnStaticComboFileDataLoaded(IAsyncResourceDataRequest *, uint8 *, int, MaterialStaticComboLoadRequest_t *, int, HMaterial)
+void CMaterialLayer::CollectRenderStateForRenderablePass(const CRenderAttributes *, const CRenderAttributes *, float32 *, DynamicRenderState_t *, const CVfxVariableIndexArray *, VfxProgram_t, int, IRenderContext *, CMaterialLayer::StateToSet_t) const
+void CMaterialLayer::ReclaimCommandBufferData(int, int)
 void CMaterialLayer::RecreateCommandBuffers(VfxProgram_t)
-void CMaterialLayer::SetRenderStateForRenderablePass(const CRenderAttributes *, IRenderContext *, RenderInputLayout_t, const MaterialRenderablePass_t &, const RsStencilStateOverride_t *, int) const
-void CMaterialLayer::SetRenderStateForRenderablePassWithCommandBuffers(const CRenderAttributes *, IRenderContext *, RenderInputLayout_t, const MaterialRenderablePass_t &, const RsStencilStateOverride_t *, int) const
-void CMaterialLayer::UpdateVariableToParamLookupTable(CVfxPerLayerProgramData *, CVfxProgramData *)
-void CMaterialSystem2::AddMaterialToLoadQueue(CMaterial2 *, HMaterial)
+void CMaterialLayer::SetRenderStateForRenderablePassWithCommandBuffers(const CRenderAttributes *, const CRenderAttributes *, IRenderContext *, RenderInputLayout_t, const MaterialRenderablePass_t &, const RsStencilStateOverride_t *, int, uint32) const
+void CMaterialLayer::UpdateVariableToParamLookupTable(CVfxPerLayerProgramData *, const CVfxProgramData &)
 void CMaterialSystem2::DynamicShaderCompile_FlushShaderCompileTaskList()
+void CMaterialSystem2::DynamicShaderCompile_UnloadAllMaterials()
+void CMaterialSystem2::LoadMaterialShaders(CMaterial2 *, HMaterial, ShaderLoadMode_t)
 void CMaterialSystem2::LoadPendingShaders()
-void CMaterialSystem2::OnMaterialLoaded(CMaterial2 *)
-void CMaterialSystem2Utils::RenderLineBatch(IRenderContext *, const CUtlVector<Vector2D> *, const Color &)
+void CMaterialSystem2Utils::RenderLineBatch(IRenderContext *, const CUtlVector<Vector2D> *, const Color &, const CRenderAttributes *, LayoutPositionType_e)
+void CMemberFuncProxyBase<CMaterial2 *, void (CMaterial2::*)(IAsyncResourceDataRequest *, unsigned char *, int, MaterialStaticComboLoadRequest_t *, int, CWeakHandle<InfoForResourceTypeIMaterial2>), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CMaterial2 *, FUNCTION_TYPE = void (CMaterial2::*)(IAsyncResourceDataRequest *, unsigned char *, int, MaterialStaticComboLoadRequest_t *, int, CWeakHandle<InfoForResourceTypeIMaterial2>), MEM_POLICY = CFuncMemPolicyNone]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
 void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
@@ -2754,12 +2775,17 @@ void CStrongHandle<InfoForResourceTypeCPostProcessingResource>::Shutdown() [TRes
 void CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown() [TResourceInfoData = InfoForResourceTypeCTextureBase]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
 void CStrongHandle<InfoForResourceTypeVBitmapFontRuntimeData_t>::Shutdown() [TResourceInfoData = InfoForResourceTypeVBitmapFontRuntimeData_t]
+void CStrongHandle<ResourceBindingVoid_t>::Shutdown() [TResourceInfoData = ResourceBindingVoid_t]
+void CSysMemDynamicVertexData<VertexColorUVPos_t>::AdvanceVertex() [T = VertexColorUVPos_t]
+void CSysMemDynamicVertexData<VertexUVPosColorNormalAndTangent_t>::AdvanceVertex() [T = VertexUVPosColorNormalAndTangent_t]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, &CUtlMemoryPoolBase::FreeList_t::pNext>::Push(T *) [T = CUtlMemoryPoolBase::FreeList_t, POINTER_TYPE = CUtlMemoryPoolBase::FreeList_t, CONTAINER_TYPE = CUtlMemoryPoolBase::FreeList_t, LINKED_LIST_PTR = &CUtlMemoryPoolBase::FreeList_t::pNext]
 void CTSQueue<DynamicShaderCompileTask_t, false>::Purge() [T = DynamicShaderCompileTask_t, bTestOptimizer = false]
 void CTextLayout::CacheFontTextures(CTextLayoutInfo *)
 void CTextLayout::GetStartingOffset(float &, float &, const CTextLayoutInfo &, int)
 void CTextureDictionary::LoadDeferredIdNOW(int)
+void CUtlBlockMemory<CVfxStaticComboData, int>::ChangeSize(int) [T = CVfxStaticComboData, I = int]
+void CUtlBlockMemory<CVfxStaticComboData, int>::Init(int, int) [T = CVfxStaticComboData, I = int]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::GetString(char *, int)
 void CUtlBuffer::Put(const void *, int)
@@ -2768,6 +2794,13 @@ void CUtlLinkedList<CMatSystemTexture, unsigned short, false, unsigned short, CU
 void CUtlLinkedList<CMatSystemTexture, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CMatSystemTexture, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = CMatSystemTexture, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CMatSystemTexture, unsigned short>, unsigned short>]
 void CUtlLinkedList<CMatSystemTexture, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CMatSystemTexture, unsigned short>, unsigned short> >::RemoveAll() [T = CMatSystemTexture, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CMatSystemTexture, unsigned short>, unsigned short>]
 void CUtlLinkedList<CMatSystemTexture, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CMatSystemTexture, unsigned short>, unsigned short> >::Unlink(I) [T = CMatSystemTexture, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CMatSystemTexture, unsigned short>, unsigned short>]
+void CUtlMemory<ConstantBufferBindInfo_t, int>::Swap(CUtlMemory<T, I> &) [T = ConstantBufferBindInfo_t, I = int]
+void CUtlMemory<RsBlendStateHandle_t__ *, int>::Swap(CUtlMemory<T, I> &) [T = RsBlendStateHandle_t__ *, I = int]
+void CUtlMemory<RsDepthStencilStateHandle_t__ *, int>::Swap(CUtlMemory<T, I> &) [T = RsDepthStencilStateHandle_t__ *, I = int]
+void CUtlMemory<RsRasterizerStateHandle_t__ *, int>::Swap(CUtlMemory<T, I> &) [T = RsRasterizerStateHandle_t__ *, I = int]
+void CUtlMemory<int, int>::Swap(CUtlMemory<T, I> &) [T = int, I = int]
+void CUtlMemory<unsigned char, int>::Swap(CUtlMemory<T, I> &) [T = unsigned char, I = int]
+void CUtlMemory<unsigned int, int>::Swap(CUtlMemory<T, I> &) [T = unsigned int, I = int]
 void CUtlNTree<CTexturePacker::TreeEntry_t, int>::LinkChildAfter(I, I, I) [T = CTexturePacker::TreeEntry_t, I = int]
 void CUtlNTree<CTexturePacker::TreeEntry_t, int>::Unlink(I) [T = CTexturePacker::TreeEntry_t, I = int]
 void CUtlRBTree<CFontTextureCache::CacheEntry_t, unsigned short, bool (*)(const CFontTextureCache::CacheEntry_t &, const CFontTextureCache::CacheEntry_t &), CUtlMemory<UtlRBTreeNode_t<CFontTextureCache::CacheEntry_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CFontTextureCache::CacheEntry_t, I = unsigned short, L = bool (*)(const CFontTextureCache::CacheEntry_t &, const CFontTextureCache::CacheEntry_t &), M = CUtlMemory<UtlRBTreeNode_t<CFontTextureCache::CacheEntry_t, unsigned short>, unsigned short>]
@@ -2790,12 +2823,11 @@ void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTab
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 void CUtlStreamBuffer::Close()
 void CUtlString::SetDirect(const char *, int)
-void CVertexDataBase<MaterialSystem2UtilsVertex_t>::AdvanceVertex() [T = MaterialSystem2UtilsVertex_t]
-void CVertexDataBase<VertexColorUVPos_t>::AdvanceVertex() [T = VertexColorUVPos_t]
 void CVertexDataBase<VertexUVPosColorNormalAndTangent_t>::AdvanceVertex() [T = VertexUVPosColorNormalAndTangent_t]
-void CVfx::ApplyRules(const CUtlVector<CVfxRule> &, int **) const
+void CVfx::ApplyRules(const CUtlVector<CVfxRule> &, const VfxComboValue_t **, VfxComboValue_t **) const
 void CVfx::Release()
 void CVfx::StartupSanityCheck()
+void CVfxStaticComboData::ComputeVariablesUsedInStaticCombo(const CVfxProgramData *)
 void CVfxStaticComboData::Release()
 void CVfxStaticComboData::Unserialize(CUtlBuffer &, const CVfxProgramData *, VfxProgram_t, uint64, IRuntimeShaderCreateCallbacks *, ICompiletimeShaderCreateCallbacks *, bool)
 void CVfxVariableDescription::RemapVariableIndices(const CUtlVector<int> &, const CUtlVector<int> &)
@@ -2808,7 +2840,7 @@ void ConVar_Unregister()
 void ConnectInterfaces(CreateInterfaceFn *, int)
 void DisconnectInterfaces()
 void DisconnectTier2Libraries()
-void ExecuteMaterialCommandBuffers(const uint8 **, int, const CRenderAttributes *, IRenderContext *, RenderInputLayout_t, const RsStencilStateOverride_t *, int, const CMaterialLayer *)
+void ExecuteMaterialCommandBuffers(const uint8 **, int, const CRenderAttributes *, const CRenderAttributes *, IRenderContext *, RenderInputLayout_t, const RsStencilStateOverride_t *, int, uint32, const CMaterialLayer *)
 void GetMungedFontName(char (&)[64], const char *, const char *, bool)
 void MatPrintShaderInfo(const CCommandContext *, const CCommand *)
 void MathLib_Init()
@@ -2817,10 +2849,8 @@ void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = HandleCaller_t]
 void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = TraverseCaller]
-void SetRenderStateValueFromVariable(const CRenderAttributes *, IRenderContext *, const CVfxVariableDescription *, DynamicRenderState_t *, const CMaterialLayer *, const CVfxProgramData *, const CVfxPerLayerProgramData *)
-void SetSamplerStateValueFromVariable(const CRenderAttributes *, IRenderContext *, const CVfxVariableDescription *, int, DynamicRenderState_t *, const CMaterialLayer *, const CVfxProgramData *, const CVfxPerLayerProgramData *)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
-void V_StripTrailingSlash(char *)
+void SetRenderStateValueFromVariable(const CRenderAttributes *, const CRenderAttributes *, const CVfxVariableDescription *, DynamicRenderState_t *, const CMaterialLayer *, const CVfxProgramData *, const CVfxPerLayerProgramData *)
+void SetSamplerStateValueFromVariable(const CRenderAttributes *, const CRenderAttributes *, const CVfxVariableDescription *, int, DynamicRenderState_t *, const CMaterialLayer *, const CVfxProgramData *, const CVfxPerLayerProgramData *)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
 void VfxAddConstantBuffersToProgramConstantBufferArray(CUtlVector<ConstantBufferDescription_t> &, CUtlVector<CVfxVariableDescription> &, CVfxProgramData *)
 void VfxInit(bool)
@@ -2828,9 +2858,6 @@ void VfxRemoveUnnecessaryEntriesFromVariableIndexArray(CVfxVariableIndexArray &,
 void VfxSetStateInBlendDesc(RsBlendStateDesc_t *, VfxRenderState_t, int32)
 void VfxSetStateInDepthStencilDesc(RsDepthStencilStateDesc_t *, VfxRenderState_t, int32)
 void VfxSetStateInRasterizerDesc(RsRasterizerStateDesc_t *, VfxRenderState_t, int32, float32)
-void _V_AppendSlash(char *, int, char)
-void _V_FileBase(const char *, char *, int)
-void _V_strncpy(char *, const char *, int)
 vpcfA
 vpost
 vs_3_0
@@ -2843,24 +2870,27 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vxw*H
 wchar_t char::* I
 wchar_t(McgxD
-wchar_t,A9^
 xHHc{
 xYA9^
-{Xt$H
-{fffff.
+yffff.
 {}()':
+|!ffffff.
 |$(unsigned short)H
 |$0Hc
 |$0Ic
+|*fff.
 |,fff.
 |2 E1
-|jffff.
 }AIc\
 }HA;EP}
-~#IcVPH
 ~$IcF
+~0HcS(F
 ~1fffff.
+~4ffffff.
 ~;ffff.
 ~@[A^]
-~[ff.
-~]ffff.
+~@ff.
+~Xff.
+~]fff.
+~^fffff.
+~fffff.

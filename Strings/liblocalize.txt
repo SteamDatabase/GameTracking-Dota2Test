@@ -1,15 +1,12 @@
-        
+     
                 %
     pp@
-   @ 
  [A\A^A_]
  ffff.
 !!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
-!( m_nFlags & FCVAR_NEVER_AS_STRING )
 !("ConstructStringVArgsInternal_Impl() - Found signed char %short# escape sequence whose index was more than the number of args.")
-!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!@`MB`3ATAp
+!8`PB`3ATAp
 !bCreate
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
 !m_bStoredSubKey
@@ -17,23 +14,17 @@
 "Tokens"
 "lang"
 #fff.
-%int %int %int %int
 %language%
 %short*.txt
 %uJM9
 ([A\A]A^A_]
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
-(uBHcK
+(uEHcK
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
-,/$`,
--&B'-
 -all_languages
 -ccsyntax
 -textlanguage
-.ETv*H
-.Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
@@ -46,8 +37,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
@@ -56,10 +45,7 @@
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 0000`PP
-6~Lfffff.
 8[A\A]A^A_]
-8[A^A_]
-?0,/a,
 @CThreadEvent::CThreadEvent(bool)
 @CThreadEvent::Set()
 @CThreadRWLock::LockForWrite()
@@ -68,7 +54,8 @@
 @CThreadSyncObject::~CThreadSyncObject()
 @DevMsg(char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-@[A\A^A_]
+@V_UnicodeCaseCompare(char const*, char const*, int, EStringConvertErrorPolicy)
+@V_stristr_fast(char const*, char const*)
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
 @_CommandLine
@@ -77,43 +64,49 @@
 @_LOG_GENERAL
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
 @_Plat_ExitProcess
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MessageBox
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_SteamAPI_GetHSteamPipe
 @_SteamAPI_GetHSteamUser
 @_SteamInternal_CreateInterface
+@_V_IsAbsolutePath
+@_V_UTF16ToUTF32
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF16
+@_V_UTF32ToUTF8
+@_V_UTF8ToUTF16
+@_V_UTF8ToUTF32
+@_V_atoi
+@_V_iswspace
+@_V_qsort_s
+@_V_snprintf
+@_V_snwprintf
+@_V_stricmp_fast
+@_V_vsnprintfRet
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
+@__V_wcsncpy_bytes
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
 @___cxa_call_unexpected
 @___cxa_pure_virtual
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
 @__float128 short::*
-@_atof
-@_atoi
-@_free
 @_g_pMemAlloc
-@_iconv
-@_iconv_close
-@_iconv_open
-@_malloc
 @_memchr
 @_memcpy
 @_memmove
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -121,15 +114,11 @@
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
 @_raise
-@_sscanf
 @_strchr
 @_strcmp
 @_strlen
-@_strncat
 @_strrchr
 @_strstr
-@_swprintf
-@_vsnprintf
 @_wcschr
 @_wcscmp
 @_wcscpy
@@ -145,10 +134,7 @@
 @typeinfo for std::bad_alloc
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
-@vtable for __cxxabiv1::__vmi_class_type_info
-A;G ~
 A;\$@|
-A;]long long|
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 AWAVATS
 AWAVATSA
@@ -156,7 +142,6 @@ AWAVATSH
 AWAVATSI
 AWAVAUATSH
 AWAVAUATSP
-AWAVAUATSPA
 AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
@@ -167,8 +152,6 @@ AWAVSPA
 AWAVSPH
 AWAVSPI
 AWAVSPM
-AZBSCRAp
-A[ATAp
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -184,7 +167,6 @@ BenchmarkService001
 BinaryProperties_GetValue
 CBaseAppSystem<ILocalize>
 CDefaultAccessor
-CEmptyConVar
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CLocalize
@@ -202,25 +184,18 @@ CThreadSyncObject::~CThreadSyncObject()
 CTier0AppSystem<ILocalize>
 CTier1AppSystem<ILocalize, 0>
 CTier2AppSystem<ILocalize, 0>
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 ConCommand
 ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
 Conditional Error: %short
 ConfigurationSystem_001
 Count
 CreateInterface
-D9sXu
 DebugTextureInfo001
 DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
 DotaCardGameClient_001
-E9<$}
 E;uPu$I
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
@@ -234,12 +209,11 @@ FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Full paths not allowed in localization file specificaton %short
 G$IcO
-G8H	p(]
+GA#D$
 GAMECONSOLE
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
-H	p(]
 H	wchar_t(]
 H!wchar_t(]
 HIGHDPI
@@ -261,7 +235,6 @@ I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable:
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 IAppSystem
 IConCommandBaseAccessor
-IConVar
 ILocalize
 ILocalize::AddFile() failed to load file "%short".
 IQuickTime001
@@ -283,9 +256,10 @@ List all loaded localization files.
 Loaded localization files:
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-Lt|u2
 MATCHFRAMEWORK_001
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MXGJJ98X76
 MapListService_001
 MaterialUtils_001
 MeshSystem001
@@ -315,7 +289,7 @@ RBRBRAp
 RBRBRBRBRAp
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -324,9 +298,7 @@ RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
-SATAp
+ResourceSystem013
 SATBp
 STEAMAPPLIST_INTERFACE_VERSION001
 STEAMAPPS_INTERFACE_VERSION008
@@ -335,9 +307,9 @@ STEAMHTTP_INTERFACE_VERSION002
 STEAMINVENTORY_INTERFACE_V001
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
-STEAMREMOTESTORAGE_INTERFACE_VERSION013
-STEAMSCREENSHOTS_INTERFACE_VERSION002
-STEAMUGC_INTERFACE_VERSION008
+STEAMREMOTESTORAGE_INTERFACE_VERSION014
+STEAMSCREENSHOTS_INTERFACE_VERSION003
+STEAMUGC_INTERFACE_VERSION009
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
 STEAMVIDEO_INTERFACE_V001
@@ -352,7 +324,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -363,32 +335,27 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StatsService_001
 SteamClient017
-SteamController003
+SteamController004
 SteamFriends015
 SteamMatchMaking009
 SteamMatchMakingServers002
 SteamNetworking005
 SteamUser019
 SteamUtils008
-TBRBSATCp
 TCSATAp
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
 Tokens
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
-UCS-4LE
-UCS-LE
-UTF-32LE
-UTF-8
 UserInfoChangeService_001
 VApplication001
 VAvi001
@@ -422,11 +389,12 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
+V_UnicodeCaseCompare(char const*, char const*, int, EStringConvertErrorPolicy)
+V_stristr_fast(char const*, char const*)
 VisBuilder_001
 WIN32
 WINDOWS
 WINXP
-Warning:  %short = '%short' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
@@ -450,31 +418,45 @@ _KeyValuesSystem
 _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
 _Plat_ExitProcess
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MessageBox
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _SteamAPI_GetHSteamPipe
 _SteamAPI_GetHSteamUser
 _SteamInternal_CreateInterface
+_V_IsAbsolutePath
+_V_UTF16ToUTF32
+_V_UTF16ToUTF8
+_V_UTF32ToUTF16
+_V_UTF32ToUTF8
+_V_UTF8ToUTF16
+_V_UTF8ToUTF32
+_V_atoi
+_V_iswspace
+_V_qsort_s
+_V_snprintf
+_V_snwprintf
+_V_stricmp_fast
+_V_vsnprintfRet
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
+__V_wcsncpy_bytes
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
 ___cxa_call_unexpected
 ___cxa_pure_virtual
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
 __bss
@@ -484,7 +466,6 @@ __cstring
 __data
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -492,19 +473,11 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
-_atoi
 _english.txt
-_free
 _g_pMemAlloc
-_iconv
-_iconv_close
-_iconv_open
-_malloc
 _memchr
 _memcpy
 _memmove
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -512,34 +485,23 @@ _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _raise
-_sscanf
 _strchr
 _strcmp
 _strlen
-_strncat
 _strnlen
 _strrchr
 _strstr
-_swprintf
-_vsnprintf
 _wcschr
 _wcscmp
 _wcscpy
 _wcslen
 _wcsncpy
-`[A\A^A_]
 `unsigned char[A\A^A_]
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
-char *_V_strncat(char *, const char *, int, int)
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
-const char *V_stristr_fast(const char *, const char *)
 const wchar_t *CKeyValues_Data::Internal_GetWString(const wchar_t *, wchar_t *, size_t)
 count >= 0
-cubDestSizeInBytes >= sizeof( *pUCS2 )
-cubDestSizeInBytes >= sizeof( *pUTF8 )
-cubDestSizeInBytes >= sizeof( *pUnicode )
-destBufferSize >= 0
 dump_localization_files
 dyld_stub_binder
 english
@@ -547,27 +509,7 @@ false
 ffff.
 fffff.
 ffffff.
-in != out
-info.m_pReplacementString == 0
-int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = wchar_t, DecFn = &(anonymous namespace)::V_UTF32ToUChar32, EncLenFn = &(anonymous namespace)::V_UChar32ToUTF32Len, EncFn = &(anonymous namespace)::V_UChar32ToUTF32]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int V_snprintf(char *, int, const char *, ...)
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = char, _To = unsigned short]
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = unsigned short, _To = char]
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = unsigned short, _To = wchar_t]
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = wchar_t, _To = unsigned short]
-int _V_UCS2ToUTF8(const ucs2 *, char *, int)
-int _V_UCS2ToUnicode(const ucs2 *, wchar_t *, int)
-int _V_UTF8ToUCS2(const char *, int, ucs2 *, int)
-int _V_UnicodeToUCS2(const wchar_t *, int, ucs2 *, int)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
-invalid input pointer
 korean
 liblocalize.dylib
 long long[A\A]A^A_]
@@ -577,17 +519,11 @@ m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_FirstFree == InvalidIndex()
 m_NumElements == 0
 m_Root == InvalidIndex()
-m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
-m_pParent == this
 m_pParent->m_fnCompletionCallback
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxLenInBytes >= sizeof( *pDest )
 mffff.
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
-nToSizeInBytes >= sizeof( *pTo )
 numFormatParameters <= ARRAYSIZE( formatParams )
 operator delete(void*)
 operator delete[](void*)
@@ -599,7 +535,6 @@ pCallback == NULL
 pName
 pPool->m_SpaceUsed < 0xFFFF
 pSchemaSystem != NULL
-pSearch
 radr://5614542
 resource/valve_%language%.txt
 s_nConnectionCount > 0
@@ -614,24 +549,16 @@ static bool CLocalize::FastValueLessFunc(const CLocalize::fastvalue_t &, const C
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 std::terminate()
 strnlen
-t$H9[8u
+subject.OU
 tlfff.
 typeinfo for std::bad_alloc
 uGetResourceManifest
-uRHc;H
 unicodeBufferSize >= 0
 unknown
-unsigned short	H+]
-unsigned short&H9[8tUH
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
 virtual void CLocalize::ConstructString(wchar_t *, int, LocalizeStringIndex_t, KeyValues *)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
-virtual void ConVar::ChangeStringValue(const char *, float)
-virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
-virtual void ConVar::InternalSetFloatValue(float)
-virtual void ConVar::InternalSetIntValue(int)
-virtual void ConVar::InternalSetValue(const char *)
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned short]
 void CKeyValues_Data::Internal_ClearData()
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
@@ -653,10 +580,6 @@ void DisconnectInterfaces()
 void DisconnectTier2Libraries()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void _V_strncpy(char *, const char *, int)
-void _V_wcsncpy(wchar_t *, const wchar_t *, int)
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-}HA;EP}
 ~=ffffff.

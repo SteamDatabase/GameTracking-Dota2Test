@@ -45,13 +45,12 @@
  LoggingSystem_ResetBackdoorLoggingState
  LoggingSystem_SetChannelFlags
  LoggingSystem_SetChannelVerbosity
+ Plat_DebugPrint
  Plat_ExitProcess
  Plat_FloatTime
  Plat_GetModuleFilename
- Plat_GetModuleProcAddress
- Plat_IsInDebugSession
+ Plat_IsInDebugSessionRaw
  Plat_IsRunningOnCustomerMachine
- Plat_LoadModuleRaw
  Plat_MSTime
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_WindowToOsSpecificHandle
@@ -73,10 +72,17 @@
  ThreadInterlockedExchange64
  ThreadSetDebugNameS2
  ThreadSleep
+ V_UTF32ToUTF8
+ V_qsort_s
+ V_snprintf
+ V_stricmp_fast
+ V_vsnprintf
+ V_vsnprintfRet
  Warning
- _DefaultRuneLocale
  _GetCallStack_Fast
  _Unwind_Resume
+ _V_FileBase
+ _V_strncpy
  __bzero
  __cxa_atexit
  __cxa_begin_catch
@@ -86,12 +92,9 @@
  __cxa_pure_virtual
  __error
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
  accept
- atof
- atoi
  bind
  close
  dyld_stub_binder
@@ -104,13 +107,11 @@
  memmove
  memset_pattern16
  poll
- printf
  raise
  recv
  send
  shutdown
  socket
- sscanf
  std::terminate()
  strchr
  strcmp
@@ -118,7 +119,6 @@
  strlen
  typeinfo for CThread
  typeinfo for std::bad_alloc
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info

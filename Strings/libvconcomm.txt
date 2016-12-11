@@ -1,4 +1,4 @@
-        
+	fffff.
   (%short, v. %3d) '%short'
  A;\$H
  [A\A^A_]
@@ -7,8 +7,7 @@
  open 
 !!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
-!( m_nFlags & FCVAR_NEVER_AS_STRING )
-!H`hBSBp `'AYATATAp
+!@`gBSBp `'AYATATAp
 !V_stricmp( message.m_Name, m_Pipes[ nPipe ].m_Name.Get() )
 !bCreate
 !fffff.
@@ -17,15 +16,13 @@
 !m_Pipes[int].m_pHelper
 !m_bStoredSubKey
 #fff.
-$ADONfA
-%int %int %int %int
 'ffff.
 ( error_value != SOCKET_ERROR ) && ( error_value != WSAENOTCONN )
 ([A\A]A^A_]
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
 +C$A9E
 ,[A^]
 -consoleapp
@@ -34,8 +31,6 @@ $ADONfA
 -vconmaxlisten
 -vconport
 -vconsole
-.ETv*H
-.Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
@@ -50,8 +45,6 @@ $ADONfA
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
@@ -65,9 +58,7 @@ $ADONfA
 0000`PP
 0x%016llX
 49S |}
-6~Lfffff.
 8[A\A]A^A_]
-8[A^A_]
 9S |signed char
 <Unknown Shutdown Context>
 =============== End VConsole Buffered Messages ===============
@@ -106,7 +97,7 @@ $ADONfA
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-@[A\A^A_]
+@M96u/H
 @[A^]
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
@@ -128,13 +119,12 @@ $ADONfA
 @_LoggingSystem_ResetBackdoorLoggingState
 @_LoggingSystem_SetChannelFlags
 @_LoggingSystem_SetChannelVerbosity
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
-@_Plat_IsInDebugSession
+@_Plat_IsInDebugSessionRaw
 @_Plat_IsRunningOnCustomerMachine
-@_Plat_LoadModuleRaw
 @_Plat_MSTime
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_WindowToOsSpecificHandle
@@ -146,10 +136,17 @@ $ADONfA
 @_ThreadInterlockedExchange64
 @_ThreadSetDebugNameS2
 @_ThreadSleep
+@_V_UTF32ToUTF8
+@_V_qsort_s
+@_V_snprintf
+@_V_stricmp_fast
+@_V_vsnprintf
+@_V_vsnprintfRet
 @_Warning
-@__DefaultRuneLocale
 @__GetCallStack_Fast
 @__Unwind_Resume
+@__V_FileBase
+@__V_strncpy
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -159,12 +156,9 @@ $ADONfA
 @___cxa_pure_virtual
 @___error
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
 @_accept
-@_atof
-@_atoi
 @_bind
 @_close
 @_g_Tier1_CRC32Table
@@ -176,18 +170,15 @@ $ADONfA
 @_memmove
 @_memset_pattern16
 @_poll
-@_printf
 @_raise
 @_recv
 @_send
 @_shutdown
 @_socket
-@_sscanf
 @_strchr
 @_strcmp
 @_strcpy
 @_strlen
-@_vsnprintf
 @_wcslen
 @dyld_stub_binder
 @loader_path
@@ -205,11 +196,10 @@ A9V }	A
 A9W }
 A;F@|6H
 A;FH|6H
-A;G ~
 A;GH|6H
 A;O ~
 A;\$@u I
-A;]long long|
+ADONfA
 AINFf
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
@@ -221,19 +211,15 @@ AWAVAUATSH
 AWAVAUATSP
 AWAVAUATSPA
 AWAVAUATSPD
-AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
-AWAVSH
 AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
 AWAVSPL
 AWAVSPM
-AZBSC
-A[ATAp
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -251,7 +237,6 @@ CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. S
 CConCommandMemberAccessor<CVConComm>
 CDL;long double
 CDefaultAccessor
-CEmptyConVar
 CFGVf
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
@@ -265,7 +250,12 @@ CSocketConnection object was not properly cleaned up.
 CSocketConnection::~CSocketConnection()
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<VConCommMessage_t *, false>::Pop() [T = VConCommMessage_t *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<VConCommMessage_t *, false>::Push(CTSQueue::Node_t *) [T = VConCommMessage_t *, bTestOptimizer = false]
 CTSQueue<VConCommMessage_t *, false>::CTSQueue() [T = VConCommMessage_t *, bTestOptimizer = false]
 CTSQueue<VConCommMessage_t *, false>::~CTSQueue() [T = VConCommMessage_t *, bTestOptimizer = false]
 CThread::CThread()
@@ -290,9 +280,6 @@ CTier2AppSystem<IVConComm, 0>
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlString::SetDirect does not support resizing strings in place.
 CVARf
 CVConBasePipeHost
@@ -324,8 +311,6 @@ Cannot recover from failed socket shutdown.
 Cannot recover from failure in closesocket()
 ConCommand
 ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
 ConfigurationSystem_001
 Connection will timeout in %double seconds...
 Could not unregister helper, not registered to this VConsolePipe_t!
@@ -334,7 +319,6 @@ CreateInterface
 D$0Hc
 D$0fD
 D$HtY
-D9sXu
 D;char u
 D;short@u
 D;{ u
@@ -357,11 +341,10 @@ FlattenedSerializersVersion001
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
-G8H	p(]
+GA#D$
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
-H	p(]
 H	wchar_t(]
 H!wchar_t(]
 H[A\A]A^A_]
@@ -379,7 +362,6 @@ IAppSystem
 ICommandCallback
 ICommandCompletionCallback
 IConCommandBaseAccessor
-IConVar
 IConVarListener
 IConfigValueRegistrationListener
 ILoggingListener
@@ -412,7 +394,9 @@ LoggingSystem_IsChannelEnabled(int, LoggingVerbosity_t)
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+M96u/H
 MATCHFRAMEWORK_001
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MODMf
 Make VConsole Foreground(): ReturnToWindow:0x%p, Timeout:%double, UseHostPath:%double
@@ -449,6 +433,7 @@ PhysicsBuilderMgr001
 PostProcessingSystem_001
 PropertyEditorSystem_001
 QueuedLoaderVersion001
+RAp p
 RBRAp
 RBRBRBRAp
 RCPPt6H
@@ -456,7 +441,7 @@ RCPPuq9
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Rejecting registering message '%short'. Already registered to an alternate handler.
 Release
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -465,8 +450,7 @@ RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 SATAp
 SBp SATAp
 SBp p
@@ -493,7 +477,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -504,20 +488,19 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StakRaw8H
 StatsService_001
 TBRBRBRAp
 TBSAVBRBRBSARBTAp
 TCRAp
-TCRBSATAp
 TCRBWAp
 TCUAp
 TNRPt
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -527,8 +510,6 @@ Unknown protocol.
 Unrecognized return value from Winsock recv.
 Unrecognized return value from Winsock send.
 UserInfoChangeService_001
-V8ff.
-V8ffffff.
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -581,10 +562,10 @@ VScriptManager010
 VStringTokenSystem001
 VisBuilder_001
 Waiting For VConsole To Connect...
-Warning:  %short = '%short' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
+X(unsigned short/L
 Xbox VDP is not supported on this platform.
 [A\A]A^A_]
 [A\A^A_]
@@ -615,13 +596,12 @@ _LoggingSystem_RegisterLoggingChannel
 _LoggingSystem_ResetBackdoorLoggingState
 _LoggingSystem_SetChannelFlags
 _LoggingSystem_SetChannelVerbosity
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
-_Plat_IsInDebugSession
+_Plat_IsInDebugSessionRaw
 _Plat_IsRunningOnCustomerMachine
-_Plat_LoadModuleRaw
 _Plat_MSTime
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_WindowToOsSpecificHandle
@@ -633,13 +613,20 @@ _ThreadGetCurrentId
 _ThreadInterlockedExchange64
 _ThreadSetDebugNameS2
 _ThreadSleep
+_V_UTF32ToUTF8
+_V_qsort_s
+_V_snprintf
+_V_stricmp_fast
+_V_vsnprintf
+_V_vsnprintfRet
 _Warning
 __DATA
-__DefaultRuneLocale
 __GetCallStack_Fast
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_FileBase
+__V_strncpy
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -649,7 +636,6 @@ ___cxa_guard_release
 ___cxa_pure_virtual
 ___error
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
 __bss
@@ -667,8 +653,6 @@ __stubs
 __text
 __unwind_info
 _accept
-_atof
-_atoi
 _bind
 _close
 _g_Tier1_CRC32Table
@@ -680,21 +664,17 @@ _memcpy
 _memmove
 _memset_pattern16
 _poll
-_printf
 _raise
 _recv
 _send
 _shutdown
 _socket
-_sscanf
 _strchr
 _strcmp
 _strcpy
 _strlen
 _strnlen
-_vsnprintf
 _wcslen
-`[A\A^A_]
 `unsigned char[A\A^A_]
 arg%double
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
@@ -722,17 +702,11 @@ ffff.
 fffff.
 ffffff.
 global
-info.m_pReplacementString == 0
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int CSocketConnection::GetFirstAvailableListeningEndpoint()
 int CSocketTransportCompatible::ReadMessages()
 int CSocketTransportCompatible::WriteMessages()
 int CUtlBuffer::ParseToken(characterset_t *, char *, int, bool)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 invalid
-invalid input pointer
 libvconcomm.dylib
 m_ConnectionType == CT_INDETERMINATE && m_SocketProtocol == SP_INDETERMINATE
 m_ConnectionType == CT_SERVER
@@ -742,6 +716,7 @@ m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_EndpointStates[int] == SSTATE_UNINITIALIZED && m_EndpointSockets[int] == InvalidSocketHandle
 m_FirstFree == InvalidIndex()
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_ListeningSocketState == SSTATE_LISTENING && m_ConnectionType == CT_SERVER
@@ -754,17 +729,12 @@ m_MessageDataInfosMutex.AssertOwnedByCurrentThread()
 m_NumElements == 0
 m_Pipes[int].m_nVersion == nVersion
 m_Root == InvalidIndex()
-m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
 m_nArgv0Size != 0
 m_pCurrentOutgoingMessage->m_nMessageLength > 0
 m_pOwner && m_CompletionFunc
 m_pOwner && m_Func
-m_pParent == this
 m_pParent->m_fnCompletionCallback
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxlen >= 1
 mffff.
 nArgvBufferSize <= COMMAND_MAX_LENGTH
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
@@ -776,6 +746,7 @@ nMessageID == VCONMSG_TOVCON_PIPE_CREATE
 nMessageSize > 0
 nPipe == m_PipeMap.Count()
 nSize != 0
+nTries < 10000000
 nVersion
 numAllowedConnections > 0 && numAllowedConnections <= MAX_SERVER_CONNECTIONS
 operator delete(void*)
@@ -788,7 +759,6 @@ pHVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBp
 pName
 pSchemaSystem != NULL
 pTarget == ( pData + nDataLength )
-p`0P `
 pipe.m_bOpen
 radr://5614542
 recv_return_value > 0
@@ -805,7 +775,6 @@ socketProtocol == SP_TCP
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 std::terminate()
 strnlen
-t$H9[8u
 t3ffff.
 tMff.
 typeinfo for CThread
@@ -813,7 +782,6 @@ typeinfo for std::bad_alloc
 uGetResourceManifest
 uint16 CVConBasePipeHost::PipeVersion(VConsolePipe_t)
 unsigned char[A\A]A^A_]
-unsigned short&H9[8tUH
 uwHcE
 vc_exit %short
 vcon_pipe_dump
@@ -826,11 +794,6 @@ virtual void CConCommandMemberAccessor<CVConComm>::CommandCallback(const CComman
 virtual void CVConsoleLoggingListener::Log(const LoggingContext_t *, const tchar *)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
-virtual void ConVar::ChangeStringValue(const char *, float)
-virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
-virtual void ConVar::InternalSetFloatValue(float)
-virtual void ConVar::InternalSetIntValue(int)
-virtual void ConVar::InternalSetValue(const char *)
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
@@ -859,11 +822,8 @@ void DisconnectInterfaces()
 void DisconnectTier2Libraries()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void _V_FileBase(const char *, char *, int)
-void _V_strncpy(char *, const char *, int)
 vstdlib
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 {}()':
-}HA;EP}

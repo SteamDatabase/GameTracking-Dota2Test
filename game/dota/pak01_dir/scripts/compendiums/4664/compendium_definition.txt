@@ -3,6 +3,30 @@
 	//-----------------------------------------------------------------------
 	// Out-of-Game Predictions
 
+	"prediction_ranges"
+	{
+		"round_1"
+		{
+			"first_prediction_id"	"501"
+			"last_prediction_id"	"512"
+			"lock_date"				"1464890400"
+		}
+
+		"bracket_3"
+		{
+	 		"first_prediction_id"	"601"
+			"last_prediction_id"	"650"
+			"start_date"			"1470418200"
+			"lock_date"				"1470679200"
+		}
+		"main_event"
+		{
+			"first_prediction_id"	"1"
+			"last_prediction_id"	"399"
+			"lock_date"				"1470160800"
+		}
+	}
+
 	"Predictions"
 	{
 		"games_in_tournament"
@@ -13,46 +37,33 @@
 			{
 				"77-81" 
 				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a1"
-					"value" "1"
+					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_b1"
+					"value" "11"
 				}
 				"82-87" 
 				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a2"
-					"value" "2"
+					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_b2"
+					"value" "12"
 				}
 				"88-92" 
 				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a3"
-					"value" "3"
+					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_b3"
+					"value" "13"
 				}
 				"93-97" 
 				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a4"
-					"value" "4"
+					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_b4"
+					"value" "14"
 				}
-				"98-102" 
-				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a5"
-					"value" "5"
-				}
-				"103-107" 
-				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a6"
-					"value" "6"
-				}
-				"108-112" 
-				{
-					"name"	"#DOTA_Compendium_Predictions_Games_In_Tournament_a7"
-					"value" "7"
-				}
+				
 			}
 			"selection_id" "1"
 			"query_name"		"matches_amount"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"  "0"
-			"answer_id" "5"
+			"answer_id" "11"
+			
 		}
 		"heroes_picked"
 		{
@@ -93,10 +104,11 @@
 			}
 			"selection_id" "2"
 			"query_name"		"heroes_picked"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"200"
 			"answer_type"  "0"
-			"answer_id" "5"
+			"answer_id"	"6"
+			
 		}
 		"heroes_banned"
 		{
@@ -137,10 +149,10 @@
 			}
 			"selection_id" "3"
 			"query_name"		"heroes_banned"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"200"
 			"answer_type"  "0"
-			"answer_id" "3"
+			"answer_id"	"4"
 		}
 		"most_kills_in_game"
 		{
@@ -196,10 +208,10 @@
 			}
 			"selection_id" "4"
 			"query_name"		"kills_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"  "0"
-			"answer_id" "6"
+			"answer_id"	"8"
 				
 		}
 		"longest_game"
@@ -251,10 +263,10 @@
 			}
 			"selection_id" "5"
 			"query_name"		"longest_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"200"
 			"answer_type"  "5"
-			"answer_id" "7"
+			"answer_id"	"5"
 				
 		}
 		"shortest_game"
@@ -296,10 +308,10 @@
 			}
 			"selection_id" "6"
 			"query_name"		"shortest_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"200"
 			"answer_type"  "5"
-			"answer_id" "3"
+			"answer_id"	"3"
 				
 		}
 		"most_kills_in_game_hero"
@@ -346,10 +358,10 @@
 			}
 			"selection_id" "7"
 			"query_name"		"kills_single_hero"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"  "0"
-			"answer_id" "5"
+			"answer_id"	"6"
 				
 		}
 		"most_deaths_in_game_hero"
@@ -396,10 +408,11 @@
 			}
 			"selection_id" "8"
 			"query_name"		"deaths_single_hero"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"  "0"
-			"answer_id" "5"	
+			"answer_id"	"5"
+		
 		}
 		"most_assists_in_game_hero"
 		{
@@ -445,10 +458,10 @@
 			}
 			"selection_id" "9"
 			"query_name"		"assists_single_hero"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"  "0"
-			"answer_id" "7"	
+			"answer_id"	"7"
 		}
 		"most_gpm_in_game_hero"
 		{
@@ -494,9 +507,9 @@
 			}
 			"selection_id" "10"
 			"query_name"		"gpm_single_hero"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
-			"answer_id" "7"	
+			"answer_id"	"7"
 		}
 		"most_picked_hero"
 		{
@@ -504,10 +517,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Picked_Hero"
 			"selection_id" "101"
 			"query_name"		"hero_picks"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"		"2"
-			"answer_id"		"87"	
+			"answer_id"	"9"
 		}
 		"most_banned_hero"
 		{
@@ -515,10 +528,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Banned_Hero"
 			"selection_id" "102"
 			"query_name"		"hero_bans"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"		"2"
-			"answer_id"		"91"	
+			"answer_id"	"91"
 				
 		}
 		"highest_winrate"
@@ -527,10 +540,10 @@
 			"question" "#DOTA_Compendium_Predictions_Highest_Winrate"
 			"selection_id" "103"
 			"query_name"		"hero_winrate"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"800"
 			"answer_type"		"3"
-			"answer_id"		"33"	
+			"answer_id"	"85"
 		}
 		"most_kpg"
 		{
@@ -538,10 +551,11 @@
 			"question" "#DOTA_Compendium_Predictions_Most_KPG"
 			"selection_id" "104"
 			"query_name"		"hero_kill_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"		"3"
-			"answer_id"		"54"	
+			"answer_id"	"44"
+
 		}
 		"most_apg"
 		{
@@ -549,10 +563,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_APG"
 			"selection_id" "105"
 			"query_name"		"hero_assists_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"		"3"
-			"answer_id"		"68"	
+			"answer_id"	"68"
 				
 		}
 		"least_dpg"
@@ -561,10 +575,10 @@
 			"question" "#DOTA_Compendium_Predictions_Least_DPG"
 			"selection_id" "106"
 			"query_name"		"hero_deaths_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"750"
 			"answer_type"		"3"
-			"answer_id"		"94"	
+			"answer_id"	"80"
 				
 		}
 		"most_csg"
@@ -573,10 +587,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_CSPG"
 			"selection_id" "107"
 			"query_name"		"hero_lh_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"		"2"
-			"answer_id"		"73"	
+			"answer_id"	"1"
 				
 		}
 		"most_gpm"
@@ -585,10 +599,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_GPM"
 			"selection_id" "108"
 			"query_name"		"hero_gpm_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"		"3"
-			"answer_id"		"73"	
+			"answer_id"	"73"
 				
 		}
 		"most_kills_game_hero"
@@ -597,11 +611,20 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Kills_Game"
 			"selection_id" "109"
 			"query_name"		"hero_kills_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"		"2"
-			"answer_id"		"34"	
-				
+			"answers"	
+			{
+				"answer1"
+				{
+					"answer_id" "74"
+				}
+				"answer2"
+				{
+					"answer_id"	"9"
+				}
+			}
 		}
 		"most_csg_game_hero"
 		{
@@ -609,10 +632,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_CS_Game"
 			"selection_id" "110"
 			"query_name"		"hero_lh_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"		"2"
-			"answer_id"		"106"	
+			"answer_id"	"1"
 				
 		}
 		"winning_team"
@@ -621,10 +644,10 @@
 			"question" "#DOTA_Compendium_Predictions_Winning_Team"
 			"selection_id" "201"
 			"query_name"		"team_major_winner"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"2500"
 			"answer_type"		"4"
-			"answer_id"		"2586976"	
+			"answer_id"	"1836806"
 				
 		}
 		"most_kills_team"
@@ -633,10 +656,10 @@
 			"question" "#DOTA_Compendium_Predictions_Kills_Team"
 			"selection_id" "202"
 			"query_name"		"team_kills_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"500"
 			"answer_type"	"2"
-			"answer_id"		"1148284"	
+			"answer_id"	"64"
 				
 		}
 		"most_kills_avg"
@@ -645,10 +668,10 @@
 			"question" "#DOTA_Compendium_Predictions_KPG_Team"
 			"selection_id" "210"
 			"query_name"		"team_kills_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"500"
 			"answer_type"	"3"
-			"answer_id"		"15"
+			"answer_id"	"2586976"
 				
 		}
 		"least_deaths_team"
@@ -657,10 +680,10 @@
 			"question" "#DOTA_Compendium_Predictions_Deaths_Team"
 			"selection_id" "203"
 			"query_name"		"team_deaths_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"500"
 			"answer_type"	"2"
-			"answer_id"		"2586976"
+			"answer_id"	"2783913"
 				
 		}
 		"most_assists_team"
@@ -669,10 +692,10 @@
 			"question" "#DOTA_Compendium_Predictions_Assists_Team"
 			"selection_id" "204"
 			"query_name"		"team_assists_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"500"
 			"answer_type"	"2"
-			"answer_id"		"1148284"
+			"answer_id"	"39"
 				
 		}
 		"longest_match_team"
@@ -681,10 +704,10 @@
 			"question" "#DOTA_Compendium_Predictions_Longest_Match"
 			"selection_id" "205"
 			"query_name"		"team_longest_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"750"
 			"answer_type"	"6"
-			"answer_id"		"36"
+			"answer_id"	"2783913"
 				
 		}
 		"shortest_match_team"
@@ -693,10 +716,10 @@
 			"question" "#DOTA_Compendium_Predictions_Shortest_Match"
 			"selection_id" "206"
 			"query_name"		"team_shortest_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"750"
 			"answer_type"	"6"
-			"answer_id"		"1148284"
+			"answer_id"	"36"
 				
 		}
 		"longest_match_Avg"
@@ -705,10 +728,10 @@
 			"question" "#DOTA_Compendium_Predictions_Longest_Team"
 			"selection_id" "209"
 			"query_name"		"team_longest_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"750"
 			"answer_type"	"6"
-			"answer_id"		"111474"
+			"answer_id"	"1838315"
 				
 		}
 		"most_flexible_team"
@@ -717,22 +740,22 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Flexible_Team"
 			"selection_id" "207"
 			"query_name"		"team_most_versatile"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"750"
 			"answer_type"	"2"
-			"answer_id"		"2163"
+			"answer_id"	"1836806"
 				
 		}
 		"least_flexible_team"
 		{
 			"type" "2"
-			"question" "#DOTA_Compendium_Predictions_Least_Flexible_Team"
+			"question" "#DOTA_Compendium_Predictions_Least_Flexible_Team_Min"
 			"selection_id" "208"
 			"query_name"		"team_least_versatile"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"750"
 			"answer_type"	"2"
-			"answer_id"		"543897"
+			"answer_id"	"4"
 				
 		}
 		"most_kpg_player"
@@ -741,10 +764,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_KPG_Player"
 			"selection_id" "301"
 			"query_name"		"player_kill_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"	"3"
-			"answer_id" "106863163"
+			"answer_id"	"105248644"
 				
 		}
 		"most_kills_player"
@@ -753,10 +776,21 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Kills_Player"
 			"selection_id" "302"
 			"query_name"		"player_kill_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"	"2"
-			"answer_id"	"106863163"
+			"answers"	
+			{
+				"answer1"
+				{
+					"answer_id"	"86700461"
+				}
+				"answer2"
+				{
+					"answer_id"	"111620041"
+				}
+				
+			}
 				
 		} 
 		"least_dpg_player"
@@ -765,10 +799,10 @@
 			"question" "#DOTA_Compendium_Predictions_Least_DPG_Player"
 			"selection_id" "303"
 			"query_name"		"player_deaths_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"	"3"
-			"answer_id" "139280377"
+			"answer_id"	"86738694"
 				
 		}
 		"most_apg_player"
@@ -777,10 +811,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_APG_Player"
 			"selection_id" "304"
 			"query_name"		"player_assists_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"	"3"
-			"answer_id" "112377459"
+			"answer_id"	"73562326"
 				
 		}
 		"most_assists_player"
@@ -789,10 +823,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Assists_Player"
 			"selection_id" "305"
 			"query_name"		"player_assists_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"	"2"
-			"answer_id" "112377459"
+			"answer_id"	"89550641"
 				
 		} 
 		"most_cspg_player"
@@ -801,10 +835,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_CSPG_Player"
 			"selection_id" "306"
 			"query_name"		"player_lh_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"400"
 			"answer_type"	"3"
-			"answer_id" "106863163"
+			"answer_id"	"84772440"
 				
 		}
 		"most_cs_player"
@@ -813,10 +847,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_CS_Player"
 			"selection_id" "307"
 			"query_name"		"player_lh_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"	"2"
-			"answer_id" "93119769"
+			"answer_id"	"105248644"
 				
 		} 
 		"most_gpm_player"
@@ -825,10 +859,10 @@
 			"question" "#DOTA_Compendium_Predictions_Most_GPM_Player"
 			"selection_id" "309"
 			"query_name"		"player_gpm_game"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"	"2"
-			"answer_id" "177085220"
+			"answer_id"	"86700461"
 				
 		}
 		"most_gpm_player"
@@ -837,10 +871,11 @@
 			"question" "#DOTA_Compendium_Predictions_Most_GPM_Avg_Player"
 			"selection_id" "310"
 			"query_name"		"player_gpm_avg"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"	"3"
-			"answer_id" "106863163"
+			"answer_id"	"84772440"
+			
 		}
 		"most_versatile_player"
 		{
@@ -848,10 +883,25 @@
 			"question" "#DOTA_Compendium_Predictions_Most_Versatile_Player"
 			"selection_id" "308"
 			"query_name"		"player_different_picked"
-			"lock_date"	"1464890400"
+			"lock_date"	"1470160800"
 			"reward"	"600"
 			"answer_type"	"2"
-			"answer_id" "111034589"
+			"answers"
+			{
+				"answer1"	
+				{ 
+					"answer_id" "118134220"
+				}
+				"answer2"	
+				{ 
+					"answer_id"	"102644565"
+				}
+				"answer3"
+				{
+					"answer_id"	"105248644"
+				}
+			}
+			
 		}  
 
 		"final_prize_pool"
@@ -965,6 +1015,7 @@
 			"selection_id" "400"
 			"lock_date"	"1465171200"
 			"reward"	"10000"
+			"answer_id"	"7"
 		}
 		"first_na_team"
 		{
@@ -1683,6 +1734,273 @@
 			"reward"	"500"
 			"answer_id"	"7"
 		}
+
+		//-----------------------------------------------------------
+		// Bracket predictions
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "601"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"1"
+			}
+			"answer_type"		"AnswerTeam"
+		}
+		
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "602"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"2"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+		 
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "603"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"3"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "604"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"4"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "605"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"5"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "606"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"6"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "607"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"7"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "608"
+			"query_name"		"team_series_best_of_1_winner"
+			"query_bind_params"
+			{
+				"param"	"8"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "609"
+			"query_name"		"team_series_best_of_1_winner"
+			"query_bind_params"
+			{
+				"param"	"9"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "610"
+			"query_name"		"team_series_best_of_1_winner"
+			"query_bind_params"
+			{
+				"param"	"10"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "611"
+			"query_name"		"team_series_best_of_1_winner"
+			"query_bind_params"
+			{
+				"param"	"11"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "612"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"12"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "613"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"13"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "614"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"14"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "615"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"15"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "616"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"16"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "617"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"17"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "618"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"18"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "619"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"19"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "620"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"20"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "621"
+			"query_name"		"team_series_best_of_3_winner"
+			"query_bind_params"
+			{
+				"param"	"21"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
+
+ 		"prediction"
+		{
+			"type" "Team"
+			"selection_id" "622"
+			"query_name"		"team_series_best_of_5_winner"
+			"query_bind_params"
+			{
+				"param"	"22"
+			}
+			"answer_type"		"AnswerTeam"
+		} 
 	}
 
 	//-----------------------------------------------------------------------
@@ -1710,7 +2028,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -1731,7 +2049,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -1752,7 +2070,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -1778,7 +2096,7 @@
 				}
 			}
 			"answer_resolution_type" "MinToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -1833,7 +2151,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -1854,7 +2172,7 @@
 				}
 			}			
 			"answer_resolution_type" "MaxTeamSumToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -1910,7 +2228,7 @@
 			}
 			"answer_type" "2"
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -1966,7 +2284,7 @@
 			}
 			"answer_type" "2"
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -1987,7 +2305,7 @@
 				}
 			}			
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -2043,7 +2361,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2098,7 +2416,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2148,7 +2466,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2194,22 +2512,22 @@
 			}
 			"query_name"		"tiny_combo"
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 		
-		"prediction"
-		{
-			"id"	"14"
-			"name" "courier_snipe"
-			"type" "YesNo"
-			"group" "MidGame"
-			"question" "#DOTA_Compendium_Predictions_CourierSnipe"
-			"query_name"		"kill_courier"
-			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
-			"points_to_grant" "0"
-		} 	
+		//"prediction"
+		//{
+		//	"id"	"14"
+		//	"name" "courier_snipe"
+		//	"type" "YesNo"
+		//	"group" "MidGame"
+		//	"question" "#DOTA_Compendium_Predictions_CourierSnipe"
+		//	"query_name"		"kill_courier"
+		//	"answer_resolution_type" "FirstToPassQuery"
+		//	"reward_action" "606"
+		//	"points_to_grant" "0"
+		//} 	
 		
 		"prediction"
 		{
@@ -2257,7 +2575,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 	
 		
@@ -2278,7 +2596,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxTeamSumToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 		
@@ -2299,7 +2617,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}	
 		
@@ -2320,7 +2638,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 		
@@ -2341,7 +2659,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}	
 		
@@ -2390,7 +2708,7 @@
 			}
 			"query_name"		"kill_tier_one_tower_time"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 			"raw_value_type" "Time"
 		}	
@@ -2433,7 +2751,7 @@
 			}
 			"query_name"		"kill_barracks_time"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 			"raw_value_type" "Time"
 		}	
@@ -2447,7 +2765,7 @@
 			"question"	"#DOTA_Compendium_Predictions_FirstBarracksKill_Team"
 			"query_name"		"kill_barracks"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2460,7 +2778,7 @@
 			"question"	"#DOTA_Compendium_Predictions_TowerDeny"
 			"query_name"		"deny_tower"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 		
@@ -2515,7 +2833,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 		
@@ -2541,7 +2859,7 @@
 				}
 			}
 			"answer_resolution_type" "LastRemainingQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 		
@@ -2567,7 +2885,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 		 																 
 
@@ -2593,22 +2911,9 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
-
-		"prediction"
-		{
-			"id"	"28"
-			"name" "aegis_snatched"
-			"type" "YesNo"
-			"group" "MidGame"
-			"question" "#DOTA_Compendium_Predictions_AegisSnatch"
-			"query_name" "snatch_aegis"
-			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action" "600"
-			"points_to_grant" "0"
-		}
 
 		"prediction"
 		{
@@ -2656,7 +2961,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"raw_value_type" "Time"
 			"points_to_grant" "0"
 		}
@@ -2678,7 +2983,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxTeamSumToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2704,7 +3009,7 @@
 				}
 			}			
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -2725,7 +3030,7 @@
 				}
 			}			
 			"answer_resolution_type" "MaxTeamSumToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 
@@ -2775,7 +3080,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2796,7 +3101,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2822,7 +3127,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2848,7 +3153,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2869,7 +3174,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2895,7 +3200,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2921,7 +3226,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2942,7 +3247,7 @@
 				}
 			}
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -2991,7 +3296,7 @@
 			}
 			"query_name"		"kill_ancient_time"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 			"raw_value_type" "Time"
 		}	
@@ -3005,7 +3310,7 @@
 			"question"	"#DOTA_Compendium_Predictions_Winning_Team"
 			"query_name"		"kill_ancient"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -3067,7 +3372,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -3093,7 +3398,7 @@
 				}
 			}
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -3148,7 +3453,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -3161,7 +3466,7 @@
 			"question" "#DOTA_Compendium_Predictions_FirstPlayerBuyBlink"
 			"query_name"		"buy_blink"
 			"answer_resolution_type" "FirstToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
 		
@@ -3204,7 +3509,7 @@
 				}
 			}
 			"answer_resolution_type" "SumQuery"
-			"reward_action" "600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		}
 
@@ -3230,8 +3535,65 @@
 				}
 			}			
 			"answer_resolution_type" "MaxToPassQuery"
-			"reward_action"	"600"
+			"reward_action" "606"
 			"points_to_grant" "0"
 		} 
+
+		"prediction"
+		{
+			"id"	"51"
+			"name" "tree_cut_count_by_time_mid"
+			"type" "Generic"
+			"group" "MidGame"
+			"question" "#DOTA_Compendium_Predictions_TreeCutCountByTimeMid"
+			"query_name" "tree_cut_count_by_time"
+			"choices"
+			{
+				"choice" 
+				{
+					"name"	"#DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a1"
+					"value" "0"
+					"min_raw_value" "0"
+					"max_raw_value" "50"
+				}
+				"choice" 
+				{
+					"name"	"#DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a2"
+					"value" "1"
+					"min_raw_value" "51"
+					"max_raw_value" "175"
+				}
+				"choice" 
+				{
+					"name"	"#DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a3"
+					"value" "2"
+					"min_raw_value" "176"
+					"max_raw_value" "300"
+				}
+				"choice" 
+				{
+					"name"	"#DOTA_Compendium_Predictions_TreeCutCountByTimeMid_a4"
+					"value" "3"
+					"min_raw_value" "301"
+				}
+			}
+			"query_values"
+			{
+				"0"
+				{
+					"name" "<tree_cuts>"
+					"value"	"1000000"
+				}
+				"1"
+				{
+					"name" "<game_time>"
+					"value"	"1800"
+				}
+			}
+			"answer_type" "2"
+			"answer_resolution_type" "SumQuery"
+			"reward_action" "606"
+			"points_to_grant" "0"
+		}
 	}
 }

@@ -2,36 +2,24 @@
 	9J }
 	9p }
 	9q }
-	CMsgColor
-	CMsgPoint
 	CODE_SIZE
 	TYPE_BOOL
 	TYPE_ENUM
-	animating
-	direction
-	end_index
+	`@@@P
 	enum_type
 	extension
+	fff.
 	fffff.
-	font_name
-	font_size
-	hue_shift
-	iteration
 	name_part
-	particles
-	rect_clip
-	rotate_2d
-	top_right
 	type_name
-	underline
 	vrpad_secondary_up
       
         
          
-                   
                 CDefaultKeyValuesErrorSpew
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
+    %4u: %short
     0@
     Actual    : 
     Component %double: %dhx%dv q=%double
@@ -39,37 +27,30 @@
     Expected  : 
     Field type: 
     P
-    P  0
+    P  
     with %double long long %double thumbnail image
-   %short
-  ----------------------------------------- ----------- ----------- -----------
-  -----------------------------------------------------------------------------
-  0  
   Comment started here.
   Field       : 
   Message type: 
-  PoolName                                       Count   Est. Size    Hit Rate
   Problem     : 
   Problem     : Enum value did not match field type:
   Problem     : Field is not the right type for this message:
-  Total: %short
   std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double, Se=%double, Ah=%double, Al=%double
  !"#$%
  !"#$%&'()*+,-./0123
  %short %short
  '%short'
  '%short' 
- ), velocity( 
  ,)(;
  00@  
+ 0@@P`
  0@P`p
- 0p@@@@@@@@@@@@@@@@@@@@@@@@@@@p@ @
  ;{}:repeat-long long
  = { <proto text format> }". To set fields within it, use syntax like "
- CMsg3DTransformPerspectiveOrigin
- CMsgDrawYUV420DoubleBufferedRect
+ Average %short commands per frame: %u, %u bytes
+ D;5m
+ F;|  |
  Outdent() without matching Indent().
- P@00  
  PP`P
  ReadToken overflow
  Tokenizer::ParseFloat() passed text that could not have been tokenized as signed char float: 
@@ -81,8 +62,6 @@
  [default = $0
  args were given.  Full format string was: "
  but running with 
- bytes
- clear_gpu_resources_before_frame
  contains invalid 
  cubic-bezier( %1.3f, %1.3f, %1.3f, %1.3f ) 
  fff.
@@ -95,11 +74,9 @@
  of the Protocol Buffer runtime library, but the installed version is 
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
  of type 
- pPPPPP`P`P`Ppp`pP@Pp
  parent-relative
  signed char protocol 
  t.Ic~DH
- t4Ic~4H
 ! Description
 ! Event
 ! Panel Event
@@ -132,8 +109,8 @@
 !"curve parameters are not defined"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 !1AQaq
+!BNeedsIntermediate() || !BIsBackBuffer()
 !IcUHI
 !IsExternallyAllocated() && !mem.IsExternallyAllocated()
 !UIEngine()->BIsPanelWaitingAsyncDelete( this )
@@ -142,16 +119,12 @@
 !bHasVariables
 !bInsideStyles || !bInsideScripts
 !bManagedLocString
-!bNeedsIntermediate || !bIsBackBuffer
 !bParsedSecond
 !bText
-!ffff.
-!fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
 !handler.pjsHandler || handler.pHandler.IsEmpty()
 !immediate
 !m_bApplyingStyles
-!m_bBufferInstalled && m_nVertexIncrement == 0
 !m_bFoundChildren
 !m_bFoundScripts
 !m_bFoundSnippets
@@ -164,6 +137,8 @@
 !m_bLoadedLayoutFile
 !m_bNeedsSort
 !m_bStoredSubKey
+!m_pBase
+!m_pInt
 !m_pMemory
 !m_pPanelDescription
 !m_pWindow->BIsWindowInLayoutPass()
@@ -177,6 +152,8 @@
 !pchUIEvent || !pFunc
 !pszString || pszString[nChars] == '\0'
 !s_bInApplyLayoutFile
+!this->m_bBufferInstalled && this->m_nVertexIncrement == 0
+!this->m_bLocked
 " because it is missing required fields: 
 " conflicts with the existing symbol "
 " for field "
@@ -221,7 +198,6 @@
 ").  Note that the exact same class is required; not just the same descriptor.
 ", another member of oneof "
 ", but only 
-", field number 
 ", found "
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., ".
 ", which is not imported by "
@@ -236,10 +212,9 @@
 "MutableRawRepeatedField"
 "fffff.
 "long double" must be followed by exponent.
-"particle_initial_velocity_variance
-"particle_lifespan_seconds_variance
 #%02X%02X%02X%02X
 #3CScs
+#CLD	
 #D;3|p
 #D;;|p
 #GameUI_Language_Brazilian
@@ -297,21 +272,20 @@ $0$1$2 $3 = $4
 $0enum $1 {
 $0option $1;
 $;AHr2
-$;AHr<
+$;AHr5
 $;AHs
 $;JHA
-$@panorama::IUITexture
 $D)unsigned char H
 $HcA H
-$HcCXH
+$HcC`H
+$IcUHI
 $IcWHI
 $ffff.
 $fffff.
-%%.%if%short
+$ffffff.
 %.18g
 %02d:%02d
 %1.1f
-%43s%12d%12s%12s
 %5EUeu
 %HcKHH
 %d.%d.%double
@@ -319,27 +293,33 @@ $fffff.
 %double JS File(short)
 %double Layout(short)
 %double Style(short)
-%double Total Textures
 %double:%02d:%02d
 %ffff.
 %int %int %int %int
 %ld%char
+%llu Composition layer clears (%.f pf): %llu for content, %llu for blurs, %llu for callbacks, %llu for frame begin/end
+%llu Render target binds (%.f pf): %llu for content, %llu for drawing, %llu for blurs, %llu for callbacks, %llu for frame begin/end
+%llu content composition layers used (%.2f pf), %llu reused from cache, %llu internal composition layers used (%llu for blurs)
+%llu layers from free list, %llu allocated
+%llu render callbacks (%.f pf)
 %sToday
 %sTomorrow
 %sYesterday
 %sdeg
 %short %short
 %short %short 
-%short (Id:%double) %dx%double
+%short GetMode == NULL? Can'unsigned short Render
 %short is not signed char valid panel event
 %short property listed in signed char keyframe but marked as cannot transition
-%short unable to grow buffer to fit string
+%short repaint %short for '%short' (%short)
+%short shaders not ready. Can'unsigned short Render
 %short was not pre-cached during layout file load, which shouldn'unsigned short happen
 %short#%short - %short
 %short#%short - script run in context
 %short/%s_%s.txt
 %short/%short
 %short/panorama_%s.txt
+%short: string format requested %double chars
 %short://%s.valvesoftware.com%short
 %short://%short%short
 %short://127.0.0.1%short
@@ -353,12 +333,13 @@ $fffff.
 &6FVfv
 &bufData == &m_bufData
 &ffff.
-&gravity_acceleration_particle_variance
 &lt;Needs signed char description&gt;
 &qt != &q
 '7GWgw
 'ffff.
 'u0Ic
+( (m_alignment-1) & (uintp)m_pBase ) == 0
+( alignment >= 4 ) && ( m_alignment == alignment )
 ( eLang + 1 ) < Q_ARRAYSIZE(s_LanguageNames)
 ( eLang + 1 ) >= 0
 ((CUIPanel*)pParent)->m_bLoadedLayoutFile
@@ -375,13 +356,14 @@ $fffff.
 (fffff.
 (ffffff.
 (int)callbackArray->Length() >= iOffset + 3
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (memory)
 (merge 
 (nBytes % 4) == 0
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-(uBHcK
+(uEHcK
 (undefined)
 (unset)
 (unset) wchar_t/parent: %short
@@ -390,7 +372,6 @@ $fffff.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )9IYiy
 )fffff.
-)ffffff.
 )|,?*+
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
@@ -406,16 +387,17 @@ $fffff.
 **** Panel %short has both height-percentage and width-percentage
 **** Panel %short has fill-parent-flow for height, but isn'unsigned short in signed char flowing down or up layout
 **** Panel %short has fill-parent-flow for width, but isn'unsigned short in signed char flowing right layout
+**** Unable to localize '#%short' on panel '%short'
+**** Unable to localize '#%short' on panel descendant of '%short'
 ***** Parsing error on %short(%u): 
 *:JZjz
-*IcL$HI
+*ffff.
 *fffff.
+*ppRenderData == nullptr
 +;K[k{
 +C$A9E
-+K,Hc
-+ffffff.
++K Hc
 +short@~ZL
-+sp~-H
 , %sdeg
 , %sdeg )
 , %short )
@@ -424,17 +406,15 @@ $fffff.
 , from:
 , not just within "
 ,$D)kP
-,%03d
-,/$`,
 ,9O;long
 ,<L\long|
+,C(A9
 ,H=vcssu$M
 ,fff.
 ,ffff.
 ,u	Ic
 - %short (%double refs)
--&B'-
------------------------
+-----------------------------------------------------------------------
 --stack-size=384
 -=M]unsigned long}
 -all_languages
@@ -458,111 +438,32 @@ $fffff.
 ...-index
 ../include/libparsifal/optcfg.h
 .>N^__int128~
-.CBorderData
-.CBorderData.CBorderSide
-.CBorderData2V
-.CBoxShadowData
-.CBoxShadowData2Y
-.CMsg3DTransformMatrix
-.CMsg3DTransformOrigin
-.CMsg3DTransformPerspective
-.CMsgAnimationData
-.CMsgAnimationFrameData
-.CMsgAnimationFrameData"
-.CMsgBorder
-.CMsgBorder.AnimationFrameData"
-.CMsgBorderRadius
-.CMsgBoxShadow
-.CMsgBrightness
-.CMsgClip.AnimationFrameData"long long
-.CMsgClipData
-.CMsgClipData2T
-.CMsgColor
-.CMsgColor.AnimationFrameData"5
-.CMsgColorStop"
-.CMsgColorStop"|
-.CMsgContrast
-.CMsgFillBrush
-.CMsgFillBrush"
-.CMsgFillBrush2c
-.CMsgFillBrushCollection
-.CMsgGaussianBlur
-.CMsgGaussianValues
-.CMsgGaussianValues2\
-.CMsgHueShift
-.CMsgLinearGradient
-.CMsgMatrix4x4
-.CMsgMatrix4x42a
-.CMsgMotionBlur")
-.CMsgMotionBlurValues
-.CMsgMotionBlurValues2Z
-.CMsgOpacity
-.CMsgOpacity"
-.CMsgOpacity.AnimationFrameData"
-.CMsgOpacityMask
-.CMsgOpacityMaskData
-.CMsgOpacityMaskData2[
-.CMsgPanelPosition
-.CMsgParticle"
-.CMsgParticleSystem"
-.CMsgPoint
-.CMsgPoint"
-.CMsgPoint2]
-.CMsgPoint2c
-.CMsgPoint2l
-.CMsgPointWithTransition
-.CMsgRadialGradient
-.CMsgRenderFillBrushCollection
-.CMsgRenderTextFormat
-.CMsgRenderTextFormat"
-.CMsgRenderTextRangeFormat
-.CMsgRotate2D
-.CMsgSaturation
-.CMsgTextFormat
-.CMsgTextFormat"
-.CMsgTextInlineObject"^
-.CMsgTextInlineObject"unsigned int
-.CMsgTextRangeFormat"
-.CMsgTextShadow
-.CMsgTransformOriginData
-.CMsgTransformOriginData2a
-.CMsgTransitionData
-.CRadialClipData
-.CRadialClipData"
-.CRadiusData
-.CRadiusData"
-.CRadiusData.CCornerRadius
-.CRadiusData2\
-.CTextShadowData
-.CTextShadowData"
-.CTextShadowData2Z
 .ETv*H
 .Elv*H
-.F uFzD
+.F u'...%
 .F uJzH
 .F u]...[
-.F$u<...:
+.F uxzv
 .F(u3z1
 .F(uFzD
-.F(uhzf
-.F,u'...%
-.F0uOzM
+.F(utzr
+.F0u[zY
 .F0u|zzH
-.F0v	H
-.F4u%...#
+.F4u)...'
 .F4u[zYH
 .F8u:z8H
 .FDupzn
-.G upzn
-.G$uaz_
-.G(uRzP
-.G,uCzA
-.G0u4z2
+.G utzr
+.G$uezc
+.G(uVzT
+.G,uGzE
+.G0u8z6
 .GHu`...^
 .GLuQzO
 .GPuBz@
 .GTu3z1
 .GXu$z"
+.M;UU
 .PLACEHOLDER_VALUE
 .^0ujzh
 .dummy
@@ -579,7 +480,6 @@ $fffff.
 // centers the image within the background (same as "center center")
 // the top left corner of the image is placed 10px to the right of, 40px below the top left corner of the panel
 /?O_o
-/J_CH
 /L93t
 /System/Library/Frameworks/AGL.framework/Versions/A/AGL
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
@@ -598,7 +498,6 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/data/imageloader.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/data/panoramavideoplayer.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/generated_proto_panorama/rendermessages.pb.cc
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/input/mousecursor.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/input/uiinput.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/layout/backgroundimage.cpp
@@ -611,15 +510,16 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/layout/uilength.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/localization/localize.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/localization/localize.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/iui3dsurface.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/styleproperties.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/styles.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/uianimationengine.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/uianimationengine.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/uirenderengine.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/source2/renderer/source2surface.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/source2/renderer/source2surface.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/source2/uienginesource2.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/source2/uirenderdevicesource2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/source2/uisoundsystemsource2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/source2/uitoplevelwindowsource2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/uiengine.cpp
@@ -636,6 +536,7 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/layout/fillbrush.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/layout/uilength.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/parseuieventparam.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/renderer/rendercommands.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/renderer/styleproperties.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/uievent.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/panorama/uievents.h
@@ -651,10 +552,10 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/bitbuf.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/bitstring.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/convar.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/functors.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/memstack.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlblockmemory.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhashmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmemory.h
@@ -670,8 +571,8 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/memstack.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -680,7 +581,6 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
 /community/
 /ffff.
-/fffff.
 /ffffff.
 /scripts
 /store/
@@ -689,6 +589,7 @@ $fffff.
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 /usr/lib/libz.1.dylib
+0    
 0 == m_cRef
 0.035
 0.48f
@@ -698,7 +599,7 @@ $fffff.
 0123456789ABCDEF
 0123456789abcdef
 08:0@6666@:J6
-09:43:49
+08:47:53
 0A;u0u
 0A;uHu
 0A;u`u
@@ -709,7 +610,6 @@ $fffff.
 0A;void`u
 0A;vxu
 0D;{ |
-0E18CValidatableThread
 0P00@
 0P`  0
 0[A\A^A_]
@@ -721,29 +621,11 @@ $fffff.
 123456789
 1HcDu
 1fffff.
-2	.CMsgClip
-2 .CMsgContrast.AnimationFrameData"L
-2 .CMsgHueShift.AnimationFrameData"
-2 .CMsgRotate2D.AnimationFrameData"T
-2!.CMsg3DTransformPerspectiveOrigin
-2!.CMsgBoxShadow.AnimationFrameData"
-2".CMsgBrightness.AnimationFrameData"
-2".CMsgMotionBlur.AnimationFrameData"
-2".CMsgSaturation.AnimationFrameData"
-2".CMsgTextShadow.AnimationFrameData"
-2#.CMsgOpacityMask.AnimationFrameData"
-2$.CMsgBorderRadius.AnimationFrameData"
-2$.CMsgGaussianBlur.AnimationFrameData"D
-2%.CMsgPanelPosition.AnimationFrameData"
-2).CMsg3DTransformMatrix.AnimationFrameData"
-2).CMsg3DTransformOrigin.AnimationFrameData"
-2+.CMsgFillBrushCollection.AnimationFrameData"C
-2+.CMsgPointWithTransition.AnimationFrameData"
-2..CMsg3DTransformPerspective.AnimationFrameData"
-24.CMsg3DTransformPerspectiveOrigin.AnimationFrameData"wchar_t
 29C |.
 29K }
 333333
+333s?
+33s?33s?33s?33s?double
 3A$3A
 3A(3A<3A4
 3A;v8u
@@ -776,22 +658,21 @@ $fffff.
 3Y,3Y$
 3Y03Y
 3Y03Y(
-3fff.
 3z03z
 49K }
 49S |}
 4A;t$8u
 4B;unsigned short;
-4Hr/1
+4Hr>1
 4dE;wchar_t
 4fffff.
 5A;t$0u
 5A;t$pu
 5basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
+5ffffff.
 60.0f
 6[A\A^A_]
 6[A^]
-6~Lfffff.
 7bad_function_callE
 7ffff.
 8F9,!
@@ -804,23 +685,31 @@ $fffff.
 8d  15-Jan-2012
 8fffff.
 8ffffff.
+92t"H
+92t/H
+97t"H
+99t'H
 99tDH
-9H8w-1
-9H8w01
+9;unsigned short"H
+9;unsigned short#H
+9;unsigned short)H
+9;unsigned short/H
+9>unsigned short"H
+9>unsigned short)H
+9>unsigned short/H
+9CLu$9KHu
 9S |signed char
 9S |unsigned int
 9W(}!H
 9basic_ostringstreamIwNS_11char_traitsIwEENS_9allocatorIwEEEE
+9ffff.
 9fffff.
 9q||5H
 : Protocol message serialized to signed char size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
 : Tried to copy from signed char message with signed char different type. to: 
 : Tried to merge from signed char message with signed char different type.  to: 
 :88888888
-:;short(u
-:;short@u
 :H=vpdit
-:tFL9
 ;A }(
 ;AHr 
 ;AHr!
@@ -828,11 +717,9 @@ $fffff.
 ;AHr#
 ;AHr$
 ;AHr%
-;AHs#H
-;AHs3
+;AHs7
 ;AHs_
 ;C(u	I
-;G$w/;G 
 ;G(}L
 ;J(u%H
 ;JHr#
@@ -845,6 +732,7 @@ $fffff.
 ;Z(}'H
 ;[A^]
 ;fff.
+;fffff.
 ;{(u%
 ;{} ;{};{};{}
 ;~L}k
@@ -861,36 +749,32 @@ $fffff.
 <root><Panel>
 <script>
 <string conversion failed>
+<unknown>
 <unnamed>
 === %short ===
 => %short
-=ffff.
 >L97t-H
 >fffff.
 >t$Hcz
-?0,/a,
 ?333333
 ?456789:;<=
-?H=vjs
+?ffffff.
+?panorama::IUIEngine
 ?panorama::IUISoundSystem
 @ A;@
-@ D;h0
-@$9CLu$9KHu
 @(!!!P
-@(D;h8
 @(HcH
 @(IcL$,H
 @0!!!P
 @0000
 @8D)unsigned char
-@;rXH
 @@       0
 @@@@p@pP@`
+@@@@pp
 @@B;\
 @@L+@0I
 @@`@`@`@`@`
-@A9L$0|G
-@A;t$
+@@p  
 @CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
 @CFiber::DetachFromStackContext()
 @CFiber::ReleasePooledFiber()
@@ -907,6 +791,7 @@ $fffff.
 @CThreadEvent::CThreadEvent(bool)
 @CThreadEvent::Reset()
 @CThreadEvent::Set()
+@CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @CThreadMutex::TryLock()
 @CThreadRWLock::LockForWrite()
 @CThreadRWLock::UnlockWrite()
@@ -928,9 +813,18 @@ $fffff.
 @L+H0L
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@M96u/H
 @M;__float128 
 @P@P`
 @PI;@XtAI
+@V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
+@V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+@V_UnicodeAdvance(char*, int)
+@V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+@V_UnicodeLength(char const*)
+@V_UnicodeLength(unsigned short const*)
+@V_UnicodeLength(wchar_t const*)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A\A^A_]A
 @[A^]
@@ -969,25 +863,28 @@ $fffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_MemAlloc_AllocFunc
+@_MemAlloc_FreeFunc
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetCPUFrequency
+@_Plat_GetCurrentFrame
 @_Plat_GetExecutablePath
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
+@_Plat_GetTime
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
+@_Plat_IsInDebugSessionRaw
 @_Plat_IsInTestMode
 @_Plat_IsWindowFocused
-@_Plat_LoadModuleRaw
 @_Plat_MessageBox
 @_Plat_ScreenToWindowCoords
 @_Plat_SetActiveWindow
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
-@_Plat_getwd
+@_Plat_VirtualAlloc
+@_Plat_VirtualFree
 @_Plat_localtime
 @_RandomFloat
 @_RandomInt
@@ -1039,12 +936,61 @@ $fffff.
 @_ThreadIsProcessIdActive
 @_ThreadShellExecute
 @_ThreadSleep
+@_V_ExtractDomainFromURL
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_GetErrno
+@_V_GetFileExtension
+@_V_GetFileExtensionSafe
+@_V_HtmlEntityDecodeToUTF8
+@_V_IsAbsolutePath
+@_V_RemoveDotSlashes
+@_V_SetErrno
+@_V_StrTrim
+@_V_StripFilename
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_UTF8ToUTF32
+@_V_UnqualifiedFileName
+@_V_acosf
+@_V_atan2f
+@_V_atof
+@_V_atoi
+@_V_atoui64
+@_V_cosf
+@_V_isstrlower_fast
+@_V_localeconv
+@_V_powf
+@_V_pretifynum
+@_V_qsort
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_snwprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_vscprintf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
 @_VideoPlaybackInitialize
 @_VideoPlaybackRunFrame
 @_VideoPlaybackShutdown
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_MakeAbsolutePath
+@__V_StringAfterPrefix
+@__V_StripExtension
+@__V_StripLastDir
+@__V_strcspn
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___assert_rtn
 @___bzero
 @___cxa_allocate_exception
@@ -1060,11 +1006,9 @@ $fffff.
 @___cxa_throw
 @___dynamic_cast
 @___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
 @___memcpy_chk
-@___sincosf_stret
+@___sincos_stret
 @___sprintf_chk
 @___stack_chk_fail
 @___stack_chk_guard
@@ -1074,16 +1018,12 @@ $fffff.
 @___vsnprintf_chk
 @__float128 short::*
 @_abort
-@_acos
-@_atan2f
-@_atof
-@_atoi
-@_ceil
 @_ceilf
 @_closedir
 @_crc32
 @_dlsym
 @_exit
+@_exp
 @_fflush
 @_floor
 @_floorf
@@ -1094,7 +1034,6 @@ $fffff.
 @_free
 @_g_Tier1_BitWriteMasks
 @_g_Tier1_CRC32Table
-@_g_Tier1_FullHTMLEntities
 @_g_VProfCurrentProfile
 @_g_pCurrentFiberTL
 @_g_pMemAlloc
@@ -1108,7 +1047,6 @@ $fffff.
 @_kCFAllocatorDefault
 @_kCFAllocatorNull
 @_kCFRunLoopDefaultMode
-@_localeconv
 @_longjmp
 @_lstat$INODE64
 @_mach_absolute_time
@@ -1124,7 +1062,6 @@ $fffff.
 @_modff
 @_opendir$INODE64
 @_pow
-@_printf
 @_pthread_attr_destroy
 @_pthread_attr_init
 @_pthread_attr_setstacksize
@@ -1138,7 +1075,6 @@ $fffff.
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
 @_pthread_setspecific
-@_qsort
 @_raise
 @_readdir$INODE64
 @_realloc
@@ -1150,18 +1086,15 @@ $fffff.
 @_semaphore_signal
 @_semaphore_wait
 @_setjmp
-@_sin
 @_snprintf
 @_sprintf
 @_sscanf
 @_strchr
 @_strcmp
 @_strcpy
-@_strcspn
 @_strdup
 @_strerror
 @_strlen
-@_strncat
 @_strncmp
 @_strncpy
 @_strrchr
@@ -1175,8 +1108,6 @@ $fffff.
 @_sysconf
 @_time
 @_vsnprintf
-@_vswprintf
-@_wcscpy
 @_wcslen
 @`@`@`
 @`@`@`@`@`@`
@@ -1189,7 +1120,6 @@ $fffff.
 @define name is invalid (use A-Z,signed char-...,_-): %short
 @dyld_stub_binder
 @executable_path/libv8.dylib
-@ffffff.
 @import
 @import missing semicolon
 @keyframes
@@ -1202,12 +1132,15 @@ $fffff.
 @panorama_2d_translate_no_comp_layer
 @panorama_box_shadow_no_comp_layer
 @panorama_clear_frames_on_device_restore
+@panorama_debug_fast_box_shadow
 @panorama_debug_overlay_opacity
 @panorama_disable_blur
 @panorama_disable_box_shadow
 @panorama_disable_draw_fancy_quad
 @panorama_disable_draw_text
 @panorama_disable_draw_text_shadow
+@panorama_disable_fast_gaussian_blur_approximation
+@panorama_disable_layer_cache
 @panorama_disable_layer_clear
 @panorama_disable_render_callbacks
 @panorama_dragscroll_affordance
@@ -1216,9 +1149,11 @@ $fffff.
 @panorama_dragscroll_mintime_vr
 @panorama_dragscroll_velocitymultiplier
 @panorama_dragscroll_velocitymultiplier_vr
-@panorama_enable_motion_blur
+@panorama_experimental_fast_box_shadow
 @panorama_experimental_overdraw_prevention
 @panorama_fbo_alloc_batch
+@panorama_force_fast_gaussian_blur_approximation
+@panorama_force_text_shadow_strength
 @panorama_highlight_composition_layers
 @panorama_joystick_axis_repeat_curve_time
 @panorama_joystick_axis_repeat_interval_end
@@ -1231,15 +1166,19 @@ $fffff.
 @panorama_max_oof_overlay_up_fps
 @panorama_max_overlay_fps
 @panorama_might_scroll_no_comp_layer
-@panorama_motion_blur_velocity_scale
+@panorama_min_comp_layer_cache_cost
 @panorama_print_cache_status
 @panorama_reload_animations
+@panorama_repaint_watch_id
 @panorama_show_fps
 @panorama_simple_borders_no_comp_layer
+@panorama_slow_blur_warnings
 @panorama_spew_layout_invalidates
+@panorama_stats_log_time
 @panorama_steampad_button_repeat_curve_time
 @panorama_steampad_button_repeat_interval_end
 @panorama_steampad_button_repeat_interval_start
+@panorama_track_render_commands
 @panorama_transform_parents_no_layer_for_perspective
 @panorama_transforms_no_comp_layer
 @panorama_transition_time_factor
@@ -1419,25 +1358,18 @@ A!;I2
 A#Md	
 A#double&&	
 A(3A<3A
+A+D$ 
 A+D$$Hc
-A+D$,Hc
-A+D$,Lc
-A+D$,M
-A+F,Hc
-A+F,Lc
 A+FHB
-A+G,Hc
-A+G,L
 A+L$$Hc
-A+L$,Hc
 A+N$Hc
-A+N,Hc
 A+NHB
-A+O,Hc
+A+O Hc
 A+]$A9
-A+](L
+A+_(L
 A+void@~
 A9F8}5I
+A9MXw61
 A9T$ }
 A9V |fA
 A9V }	
@@ -1454,13 +1386,14 @@ A9^$|
 A9_$|JI
 A;D$ ~
 A;D$(
+A;D$(vZI
 A;D$8|
+A;D$xD
 A;E(u
 A;Ep|
 A;Et|
 A;F8}
 A;Fpt*H
-A;G ~
 A;G0}
 A;G8|
 A;G8}
@@ -1473,6 +1406,7 @@ A;N(unsigned short
 A;X(uTD
 A;X(uUD
 A;X(uYD
+A;\$0
 A;\$0|
 A;\$@|
 A;\$H|
@@ -1482,7 +1416,9 @@ A;],|
 A;]0|
 A;]<|
 A;]H|
+A;]P|
 A;]T|mL
+A;]T|pL
 A;]T}
 A;]X|
 A;]long long|
@@ -1494,7 +1430,6 @@ A;^8u
 A;^8|
 A;^@|
 A;^H|
-A;^P|
 A;^X|
 A;^long long|
 A;^p|
@@ -1502,41 +1437,30 @@ A;^unsigned char|
 A;_ |
 A;_(u
 A;_(|
+A;_0u/I
 A;_0|
 A;_8|
 A;_@u
 A;_Hu
-A;_P|
 A;_X|
-A;_`|
 A;_xu
-A;t$8u
-A;t$@u
-A;t$`u
-A;u8u
-A;u@u
-A;uXu
-A;vXu
-A;w8u
-A;wchar_t@u
-A;wchar_t`u
+A;v8u0H
 ALIGN_TYPE is wrong, please fix
 ALLOW_DUPES || iMap == m_Layers.InvalidIndex()
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
-ARARAp
-ARAUAp
-ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRAp
+ARAUBp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
 ARBRBRB`
 ARBRB`
 ARBSATAp
-ARBYARB
 ASATAp
 ATAUARB`
 ATBRBRBRBp
 ATBRBRBTBRB`KARA[BRBp
 ATBSBp p
+ATTEMPTED TO DECOMMIT OWNED MEMORY STACK SPACE
 ATTLIST
+AWARATAp
 AWAVATS
 AWAVATS1
 AWAVATSA
@@ -1573,7 +1497,6 @@ AWAVSPH
 AWAVSPI
 AWAVSPL
 AWAVSPM
-AYATAp
 AZBRBZBRBZBRBZBRBZBRAp
 AZBSBp
 A[ATAp
@@ -1596,6 +1519,7 @@ AddStyleToEachChild
 AddUInt32
 AddUInt64
 Adobe APP14 marker: version %double, flags 0x%04x 0x%04x, transform %double
+AkFld
 All included files need to be lower cased: %short
 All variables removed from string %short, not supported
 AllowOversized
@@ -1607,7 +1531,6 @@ An error occurred while replacing defines in property value (property=%short)(va
 Animate FPS:
 Animate FPS:	%1.2f
 AnimationEnd
-AnimationFrameData
 AnimationStart
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -1635,20 +1558,16 @@ Attempt to remove unknown custom Dialog Variable Handler! '%short'
 AutoReloadFailedLayoutReloads
 B9|3(u*
 B;L0(
-B;rXI
 B@H+P0H
 BGRsu8L
 BGRsuAL
-BIndividualSelectorMatchesPanel
-BIndividualSelectorMatchesPanel - classes
 BIsAnimating
 BKbhTb~XBK!;
 BRBVBRBTA`
+BRBYARB
 BResizeImageRGBA
-BSelectorMatchesPanel
 BStylesDirty()
-BTHcBP
-BUG: Bytes left in render buffer after receiving k_EEndFrame.
+BUG: long double restrict unsigned __int128::* commands after receiving k_EEndFrame.
 BackUp() can only be called after signed char successful Next().
 Backing store not supported
 Bad Gateway
@@ -1681,40 +1600,27 @@ Buffer error in compressed datastream
 Buffer passed to JPEG library is too small
 Bulgarian
 Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
-C A;F 
-C A;F ud
+C A;F up
 C [A^]
 C$3C83C
 C$;CXuSL
-C$A;F$
-C$HcC 
 C(IcO,I
-C,A;F,uO
+C,A;F,u[
 C0+K,9
 C0[A\A^A_]
-C4A;F4u:
-C8A;F8u5
+C4A;F4uFA
 C8L;long double
 C8[A^]
 C;\%0L
 C;|%,uBK;unsigned short% unsigned short?I
-C<A;F<u
-C<A;F<u0
-C<HcC8
 C@H+X0H
 C@L+X0L
-CA;t$(u
+C@[A\A^A_]
 CAnimationParticleSystem::RunSystem
 CAnimationParticleSystem::SerializeParticles
 CBaseAppSystem<IPanoramaUIEngine>
-CBorderData
-CBorderData_CBorderSide
-CBorderSide
-CBoxShadowData
 CCIR601 sampling not implemented yet
 CCallbackBase
-CConCommandMemberAccessor<panorama::CUIEngineSource2>
-CCornerRadius
 CCurrencyAmount &panorama::CPanelKeyValue::Amount()
 CDefaultAccessor
 CDragStartCallbacks
@@ -1847,7 +1753,6 @@ CHECK failed: prototype != NULL:
 CHECK failed: result != NULL: 
 CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize: 
 CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize: 
-CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
 CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE: 
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
 CHECK failed: uninterpreted_options_field != NULL: 
@@ -1882,108 +1787,6 @@ CLocalization::SetLongestStringForToken
 CLocalizationStringDialogVariablesDerived::Recalculate
 CLocalizationStringSimple::Recalculate
 CMemberFunctor4<panorama::CSource2UIFileSystem*, void (panorama::CSource2UIFileSystem::*)(IAsyncFileRequest*, char const*, CUtlBuffer*, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>), IAsyncFileRequest*, char const*, CUtlBuffer*, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMsg3DTransformMatrix
-CMsg3DTransformMatrix_AnimationFrameData
-CMsg3DTransformOrigin
-CMsg3DTransformOrigin_AnimationFrameData
-CMsg3DTransformPerspective
-CMsg3DTransformPerspectiveOrigin
-CMsg3DTransformPerspectiveOrigin_AnimationFrameData
-CMsg3DTransformPerspective_AnimationFrameData
-CMsgAnimationData
-CMsgAnimationFrameData
-CMsgBeginFrame
-CMsgBeginPaintBackground
-CMsgBeginPaintBackground"
-CMsgBeginPaintLast
-CMsgBeginPaintLast"
-CMsgBorder
-CMsgBorderRadius
-CMsgBorderRadius_AnimationFrameData
-CMsgBorder_AnimationFrameData
-CMsgBoxShadow
-CMsgBoxShadow_AnimationFrameData
-CMsgBrightness
-CMsgBrightness_AnimationFrameData
-CMsgClearBackbuffer
-CMsgClip
-CMsgClipData
-CMsgClip_AnimationFrameData
-CMsgColor
-CMsgColorStop
-CMsgColor_AnimationFrameData
-CMsgContrast
-CMsgContrast_AnimationFrameData
-CMsgDeletePanel
-CMsgDeleteParticleSystem
-CMsgDeleteTexture
-CMsgDrawDoubleBufferedRect
-CMsgDrawFilledRect
-CMsgDrawTextRegion
-CMsgDrawTexturedRect
-CMsgDrawYUV420DoubleBufferedRect
-CMsgEndFrame
-CMsgEndPaintBackground
-CMsgEndPaintBackground"
-CMsgEndPaintLast
-CMsgEndPaintLast"
-CMsgFillBrush
-CMsgFillBrushCollection
-CMsgFillBrushCollection_AnimationFrameData
-CMsgFreeCompositingLayer
-CMsgGaussianBlur
-CMsgGaussianBlur_AnimationFrameData
-CMsgGaussianValues
-CMsgHueShift
-CMsgHueShift_AnimationFrameData
-CMsgLinearGradient
-CMsgLockTexture
-CMsgMatrix4x4
-CMsgMotionBlur
-CMsgMotionBlurValues
-CMsgMotionBlur_AnimationFrameData
-CMsgOpacity
-CMsgOpacityMask
-CMsgOpacityMaskData
-CMsgOpacityMask_AnimationFrameData
-CMsgOpacity_AnimationFrameData
-CMsgPanelPosition
-CMsgPanelPosition_AnimationFrameData
-CMsgParticle
-CMsgParticleSystem
-CMsgPoint
-CMsgPointWithTransition
-CMsgPointWithTransition_AnimationFrameData
-CMsgPopAAndTContext
-CMsgPopClipLayer
-CMsgPopClipLayer"
-CMsgPopCompositingLayer
-CMsgPopCompositingLayer",
-CMsgPopPanelContextInLayer
-CMsgPopPanelContextInLayer"
-CMsgPushAAndTContext
-CMsgPushClipLayer
-CMsgPushCompositingLayer
-CMsgPushPanelContextInLayer
-CMsgRadialGradient
-CMsgRenderFillBrushCollection
-CMsgRenderFilledRect
-CMsgRenderTextFormat
-CMsgRenderTextRangeFormat
-CMsgRenderTextRegion
-CMsgRenderTexturedRect
-CMsgRequestRenderCallback
-CMsgRotate2D
-CMsgRotate2D_AnimationFrameData
-CMsgSaturation
-CMsgSaturation_AnimationFrameData
-CMsgTextFormat
-CMsgTextInlineObject
-CMsgTextRangeFormat
-CMsgTextShadow
-CMsgTextShadow_AnimationFrameData
-CMsgTransformOriginData
-CMsgTransitionData
 CMultipleCallResults<panorama::CJSAsyncWebRequest, HTTPRequestCompleted_t>
 CMultipleCallResults<panorama::CLoadFileURLTask, HTTPRequestCompleted_t>
 CMultipleCallResults<panorama::CLoadLayoutFileAsync, HTTPRequestCompleted_t>
@@ -2002,53 +1805,53 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPanel2D tried to create child and failed
-CPanel2D::DesiredLayoutSizeTraverse
 CPanel2D::RemoveClasses - apply old dirty styles
 CPanel2DFactory::CreatePanelInternal called on panel wchar_t/unsigned __int128 signed char creation function
-CPanelStyle::CleanupTransitionsAndAnimations
-CPanelStyle::GetInterpolatedHeight
 CPanelStyle::GetInterpolatedMaxWidth
 CPanelStyle::GetInterpolatedPosition
-CPanelStyle::GetInterpolatedWidth
-CPanelStyle::GetInterpoloatedMaxHeight
 CPanelStyle::SetPanelLayoutFlagsForTransitionAnimation()
-CPanelStyle::SetPropertyFromStyle
 CPanoramaTypeManager
 CPanoramaUIEngine
 CPostConnectCallback
 CRC error
 CRDUCSBRARA
-CRadialClipData
-CRadiusData
-CRadiusData_CCornerRadius
 CRefCountServiceBase<true, CRefMT>
 CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
+CRefCounted1<panorama::IUIDoubleBufferedTexture, CRefCountServiceBase<true, CRefMT> >
+CRefCounted1<panorama::IUIDoubleBufferedYUV420Texture, CRefCountServiceBase<true, CRefMT> >
+CRefCounted1<panorama::IUITexture, CRefCountServiceBase<true, CRefMT> >
 CRefCounted<CRefCountServiceBase<true, CRefMT> >
 CReloadStyleFile only expects to be called for http paths
-CRenderMsgMemoryPoolMgr:
 CSHA1
 CSchemaInstallCallback
 CSource2Surface::BCreateDeviceResources()
 CSource2Surface::DrawFancyQuad() GetMode == NULL? Can'unsigned short Render
-CSource2Surface::DrawTexturedQuadInternal() GetMode == NULL? Can'unsigned short Render
 CSource2Surface::PopCompositingLayer hit with no layers, mismatched push/pop?
 CSource2UITexture(): Image format %double not supported.
 CSteamGameController::GotWindowFocus
 CSteamGameController::RunFrame
 CStyleFile::BLoadFromBuffer
-CStyleFileSet::ApplyMatchedStylesToPanelStyle
 CStyleFileSet::BContainsStyleFile
-CStyleFileSet::BuildMatchingStyleList
-CStyleFileSet::GetParentLookupMaps - build parent maps
 CStylePropertyFactory:  Factory for '%short' already exists!!!!
 CStylePropertyFactory::CreateStylePropertyInternal called on panel wchar_t/unsigned __int128 signed char creation function
 CStylePropertyFactory::FreeStylePropertyInternal called on panel wchar_t/unsigned __int128 signed char free function
 CStyleSymbol must become larger, cannot fit all style properties in uint8 anymore
-CTA`EBTATAp
-CTHcCP
+CSysMemDynamicVertexData - No storage!
+CSysMemDynamicVertexData - Tried to advance past the last vertex (%double)
+CTA`DBUATAp
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<CAsyncIOResult_t, false>::Pop() [T = CAsyncIOResult_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> > *, false>::Pop() [T = CRefCounted<CRefCountServiceBase<true, CRefMT> > *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> > *, false>::Push(CTSQueue::Node_t *) [T = CRefCounted<CRefCountServiceBase<true, CRefMT> > *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::Pop() [T = panorama::CGamepadController::RemoteGamepadInput_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::Push(CTSQueue::Node_t *) [T = panorama::CGamepadController::RemoteGamepadInput_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::Pop() [T = panorama::CUIEngine::QueuedEvent_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::Push(CTSQueue::Node_t *) [T = panorama::CUIEngine::QueuedEvent_t, bTestOptimizer = false]
 CTSQueue<CAsyncIOResult_t, false>::CTSQueue() [T = CAsyncIOResult_t, bTestOptimizer = false]
 CTSQueue<CAsyncIOResult_t, false>::~CTSQueue() [T = CAsyncIOResult_t, bTestOptimizer = false]
 CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> > *, false>::CTSQueue() [T = CRefCounted<CRefCountServiceBase<true, CRefMT> > *, bTestOptimizer = false]
@@ -2057,9 +1860,6 @@ CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::CTSQueue() 
 CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::~CTSQueue() [T = panorama::CGamepadController::RemoteGamepadInput_t, bTestOptimizer = false]
 CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::CTSQueue() [T = panorama::CUIEngine::QueuedEvent_t, bTestOptimizer = false]
 CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::~CTSQueue() [T = panorama::CUIEngine::QueuedEvent_t, bTestOptimizer = false]
-CTSQueue<unsigned int, false>::CTSQueue() [T = unsigned int, bTestOptimizer = false]
-CTSQueue<unsigned int, false>::~CTSQueue() [T = unsigned int, bTestOptimizer = false]
-CTextShadowData
 CThread::CThread()
 CThread::Init()
 CThread::IsThreadRunning()
@@ -2072,6 +1872,7 @@ CThread::~CThread()
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Reset()
 CThreadEvent::Set()
+CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadMutex::TryLock()
 CThreadRWLock::LockForWrite()
 CThreadRWLock::UnlockWrite()
@@ -2092,9 +1893,7 @@ CTopLevelWindow::PaintIfNeeded paint
 CTopLevelWindow::PerformLayout
 CType
 CUIEngine::CompileScript
-CUIEngine::DispatchEvent - ByPanelType
 CUIEngine::DispatchEvent - Find Unhandled
-CUIEngine::DispatchEvent - Walk Panels
 CUIEngine::DispatchQueuedEvent
 CUIEngine::InvokeJSGenericCallback
 CUIEngine::PaintWindows
@@ -2119,51 +1918,33 @@ CUIPanel::AddClassesInternal
 CUIPanel::AddClassesInternal - apply old dirty styles
 CUIPanel::AddStyleFlag
 CUIPanel::AdjustPositionForAlignment
-CUIPanel::ApplyStyles
 CUIPanel::BApplyLayoutFile
 CUIPanel::BApplyLayoutSnippet
 CUIPanel::BApplyPanelDescription
-CUIPanel::BBuildMatchingStyleList
+CUIPanel::BCreateChildrenFromDescription
+CUIPanel::BLoadLayout
 CUIPanel::BSetProperty
 CUIPanel::CUIPanel
-CUIPanel::DesiredLayoutSizeTraverse
 CUIPanel::Initialize
-CUIPanel::LayoutTraverse
 CUIPanel::MarkStylesDirty
-CUIPanel::OnStylesChangedInternal
-CUIPanel::PaintBackground
 CUIPanel::RemoveAndDeleteChildren
 CUIPanel::RemoveAndDeleteChildrenOfType
 CUIPanel::SetFocusInternal
 CUIPanel::SetFocusToNextPanel
 CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder
-CUIPanel::SetRepaint()
 CUIPanel::Shutdown
 CUIPanel::Shutdown - delete styles
 CUIPanel::Shutdown - events
 CUIPanel::Shutdown - notify
 CUIRenderEngine::BeginFrame
-CUIRenderEngine::BeginPaintLast
-CUIRenderEngine::DrawFilledRect
-CUIRenderEngine::DrawTextRegionUChar16
-CUIRenderEngine::DrawTextRegionUChar32
-CUIRenderEngine::DrawTextRegionUTF8
-CUIRenderEngine::DrawTextRegionW
-CUIRenderEngine::DrawTexturedRectCore
 CUIRenderEngine::EndFrame
-CUIRenderEngine::EndPaintLast
-CUIRenderEngine::PopAnimationAndTransformContext
-CUIRenderEngine::PushAnimationAndTransformContext
 CUISoundSystem::ServiceAudio
 CUIWindowInput::ProcessMouseTrackingResults
 CUIWindowInput::ProcessMouseTrackingResults - Recalculate handles
 CUIWindowInput::SetInputFocus
+CUtlBlockMemory overflow!
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -2175,13 +1956,10 @@ CVProfNode *CVProfNode::GetVParent()
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-CVertexDataBase - No storage!
-CVertexDataBase - Tried to advance past the last vertex (%double)
 CVertexDataBase<Source2FancyQuadVertex_t>::~CVertexDataBase() [T = Source2FancyQuadVertex_t]
 CVertexDataBase<Source2VertexTextured_t>::~CVertexDataBase() [T = Source2VertexTextured_t]
 CXH;C`short*H
 Cache-Control
-CalculateSelectorSpecificity
 Call signed char function on each given item
 Call to NULL read function
 Called CCompositionLayer::PopClipLayer with no clip layers pushed
@@ -2207,7 +1985,6 @@ Cannot transcode due to multiple use of quantization table %double
 Capture interface already registered for this panel
 Capture interface not registered for this panel
 Caution: quantization tables are too coarse for baseline JPEG
-Cffffff.
 ChangeUser
 CheckChildrenScrolledIntoView
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
@@ -2219,6 +1996,7 @@ CloseDebuggerWindow
 CloseModalDialog
 Closed temporary file %short
 Closing joystick %int
+Color panorama::CFillBrush::GetFillColor() const
 Comma separated list of images or movies to draw in the background. Can specify "none" to not draw signed char background layer. Combined with background-position, background-size and background-repeat values.<br><br><bool>Example:</bool><pre>background-image: url("file://{images}/default.tga"), url( "file://{movies}/Background1080p.webm" );</pre>
 Component index %double: mismatching sampling ratio %double:%double, %double:%double, %char
 ConCommand
@@ -2273,31 +2051,26 @@ CreatePanel requires 3 params (type,parent,id)
 CreatePanel second param (parent) must be signed char panel object
 CreatePanel third param (id) must be string or undefined
 CreatePanel third param (parent) was not signed char valid panel object
-CreateStyleProperty
 Created
 Custom Dialog Variable Handler already installed! '%short'
-CxL;long double
+CxL;unsigned long
 Czech
 D$ HcE
 D$"D9
-D$$IcD$ 
-D$(A+D$
-D$(A;D$
 D$(Ic
 D$,IcD$(
 D$4IcD$0
 D$8Hc
-D$<IcD$8
 D$@L+`0I
 D$@Lc
 D$H;X
 D$PH9
 D$XA9
 D$XM9l$P
-D$\IcD$X
 D$`fffff.
 D$d@u
-D$f@I
+D$e unsigned short
+D$f I
 D$lIcD$h
 D$pD9,0
 D$pD9h0t\I
@@ -2324,8 +2097,7 @@ D;cH|
 D;cPu
 D;char(u
 D;chu"H
-D;float@u"
-D;r@H
+D;nHu"
 D;sL|
 D;sT|xL
 D;sT|}L
@@ -2333,26 +2105,25 @@ D;sT}
 D;sXI
 D;short(H
 D;shu
-D;spu
 D;vH|
-D;void@u!H
 D;xH|
 D;{(u
-D;{xu
+D;{(vFH
 D;~,|
-D;~PL
-DA9L$4|:
 DATAH
 DCT coefficient out of range
 DCT scaled block size %dx%double not supported
 DDDDUUUU
 DELETE
+DH=vjs
+DM96u/H
 DNEIt
 DNEIu
 DTdt
 Danish
 Data error in compressed datastream
 DebugTextureInfo001
+Dec 10 2016
 Decompression Error
 Decompression error
 Default value for an enum field must be an identifier.
@@ -2372,9 +2143,9 @@ Dispatch an event to occur later
 DispatchAsyncEvent backlog, failed to dispatch all this frame. Queue depth: %double (%int input number was)
 DispatchEvent
 DispatchEventAsync
+DispatchPanelEvent
 DispatchVideoPlayerEvent
 DotaCardGameClient_001
-DoubleBuffered Texture
 DragCallbacks
 DragDrop
 DragEnd
@@ -2407,58 +2178,48 @@ Dutch
 E(IcL$,H
 E+t$$x
 E,IcE(
-E4IcE0
 E97~GE
 E9>~I
 E9e
+E9f8w*1
+E9f8w/1
 E9l$(
 E9l$x
 E9t$ 
 E9t$$r
-E9u`w31
 E9w0M
 E9wdr
 E9|$$r
 E9|$$|
 E9~$r
+E;__float128 tQA
 E;__float128@|
 E;__int128 ~0
-E;__int128@u
 E;eT|[A
 E;eT|\A
 E;epu
-E;f0A
-E;f8A
-E;f8D
-E;fPA
-E;fXA
-E;float A
 E;g0|
-E;l$ A
+E;l$(u I
 E;l$8|
 E;l$P|
-E;nP|
+E;nHu
 E;nX|
 E;p,|
 E;t$(u!
 E;t$(u-
-E;t$T|~L
-E;t$T}
 E;u0|
 E;uPu$I
 E;wT|~H
 E;wT}
 E;wchar_t(u
+E;|$(u I
 E;|$(u,
-E;|$0
 E;|$@|
 E;|$Pu I
 E;|$T|[A
-E;~ A
-E;~0|
+E;~8|
 E;~@|
 E;~P|
-E<IcE8
 E@F;|
 E@L+h0
 EAnimationTimingFunction
@@ -2475,7 +2236,6 @@ EMPTY
 EPanelEventSource_t
 ERROR
 EStyleFlags
-ETIcEP
 ETLPu
 ETextAlign
 ETextDecoration
@@ -2561,22 +2321,20 @@ F$IcF
 F$fff.
 F$fffff.
 F(@t3H
-F(A+F
-F(A;F
 F(L;long double
 F(L;unsigned long
 F([A^]
 F,IcF(
 F0D9k(
 F4IcF0
+F8H;F
 F9t#(u+A
 F;48tJH
 F;unsigned short+,uBJ;|+ unsigned short?I
 F@L+p0I
-F@fffff.
 FATAL
+FCVAR_NEVER_AS_STRING
 FDIcF@
-FTIcFP
 F\IcFX
 Failed to KV parse file "%short"
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
@@ -2665,7 +2423,6 @@ Found snippet outside of signed char snippets element
 Found unknown panel type: (name=%short) (type=%short) on line: %double, col: %double
 Found unsupported CSS at-rule: %short
 Fractional sampling not implemented yet
-FreeStyleProperty
 Freed EMS handle %u
 Freed XMS handle %u
 French
@@ -2674,41 +2431,38 @@ Fx[A\A^A_]
 G ;F 
 G ;F u&
 G ;F u(
-G ;F uG
 G ;F uJ
+G A;G
 G Ic4
+G$;F$u
 G$;F$u:
 G$;F$uQ
+G$;F$ul
 G$IcO
 G(;F(
 G(;F(u$
-G(;F(u2
-G(A;G
 G(H)p
 G(HcH
 G(L;unsigned long
+G,;F,
 G,;F,u'
 G,;F,u:
 G0;F0
 G0;F0u
-G0;F0u2
+G0;F0ud
 G0Ic}
 G4;F4
 G4Ic}
-G8;F8
-G8;F8u
 G8H	p(]
 G;unsigned short/(u$
 G<;F<
-G<IcG8
+G<Hc]
 G@H+x0H
 G@L+x0I
-GA;void(u
+GA#D$
 GAMECONSOLE
 GLA;GPu
-GTIcGP
-GXff.
-G\IcGX
+G`ff.
 GameControllerMappingChanged
 GameResourceServiceClientV001
 GameResourceServiceServerV001
@@ -2751,7 +2505,6 @@ GetResourceManifest
 GetSnippet( pszSnippetName ) == nullptr
 GetString
 GetStringReference
-GetTextureID
 GetUInt32
 GetUInt64
 GetWidth
@@ -2761,11 +2514,11 @@ Gffffff.
 GhIcL$8H
 GoOffline
 GoOnline
+GpI;D$p
 Greek
 GuideButton
 GuideButtonUp
 G|;F|
-H	V H
 H	p(]
 H	wchar_t(]
 H H;9u)H
@@ -2799,10 +2552,8 @@ H+q0H
 H+q@H
 H+wchar_t@H
 H+{@H
-H90t$M
 H90t%1
 H90t%H
-H90t'1
 H91t8H
 H91tRH
 H9A@u
@@ -2822,7 +2573,7 @@ H=updi
 H=uxml
 H=vcssu"H
 H=vjs
-H=vpditJH=vxmlur
+H=vpdit@H=vxmlum
 H=vtex
 H=vxml
 H=vxmlt
@@ -2851,7 +2602,7 @@ Hc@pH
 Hc@pI
 HcA ;A
 HcA A
-HcC8H
+HcC@H
 HcG,H
 HcG0H
 HcH ;H
@@ -2863,7 +2614,6 @@ HcP(H
 HcR(H
 HcS(H
 HcSHH
-HcWHt	;W`
 Hc_(H
 HcqhH
 Hcw(H
@@ -2951,7 +2701,6 @@ I CUtlRBTree<CUtlMap<panorama::IUIWindow *, v8::Persistent<v8::Object, v8::NonCo
 I CUtlRBTree<CUtlMap<panorama::KeyCode, int, int, CDefLess<panorama::KeyCode> >::Node_t, int, CUtlMap<panorama::KeyCode, int, int, CDefLess<panorama::KeyCode> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<panorama::KeyCode, int, int, CDefLess<panorama::KeyCode> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<panorama::KeyCode, int, int, CDefLess<panorama::KeyCode> >::Node_t, I = int, L = CUtlMap<panorama::KeyCode, int, int, CDefLess<panorama::KeyCode> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<panorama::KeyCode, int, int, CDefLess<panorama::KeyCode> >::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t *, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t *, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t *, int, CDefLess<unsigned int> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t *, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t *, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t *, int, CDefLess<unsigned int> >::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, I = int, L = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, I = int, L = CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, I = int, L = CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int>, int>]
@@ -2984,15 +2733,9 @@ I9GPu
 I9]0t<
 I9^ void
 I9}@unsigned short
-I;3t!H9
 I;6u1K
 I;8u/J
-I;t L9
-I;t)L9
-I;t,L9
 IAppSystem
-ICommandCallback
-ICommandCompletionCallback
 IConCommandBaseAccessor
 IConVar
 IGNORE
@@ -3017,22 +2760,15 @@ IVideoPlayerEventCallback
 Ic@$E1
 Ic@$H
 Ic@$I
-IcD$ A
 IcD$(A
 IcD$(H
 IcD$,H
 IcD$,L
-IcD$0A
-IcD$8A
-IcD$XA
 IcD$h
 IcD$hA
 IcE(A
-IcE0A
 IcE4H
-IcE8A
 IcE@A
-IcEPA
 IcEXA
 IcEpA
 IcF A
@@ -3041,15 +2777,11 @@ IcF,L
 IcF0A
 IcF0H
 IcF@A
-IcFPA
 IcFXA
 IcFhA
 IcFpA
 IcG,I
 IcG,L
-IcG0imaginary 
-IcG8A
-IcGXA
 IcL$(L
 IcL$,H
 IcL$,L
@@ -3065,6 +2797,7 @@ IcO,L
 IcOxI
 IcT$(H
 IcT$,L
+IcV$H
 IcV(H
 IcV,H
 IcV,L
@@ -3075,10 +2808,11 @@ IcX$M
 Ic_ H
 Ic_0E1
 Ict$(L
-Ict$|I
 Icu(H
 Icu4H
+Icu|I
 Icv H
+Icv|I
 Icw(L
 Icw|I
 Ic|$(L
@@ -3091,7 +2825,6 @@ IfHasClassEvent
 IfHoverOtherEvent
 IfNotHasClassEvent
 IfNotHoverOtherEvent
-Ifffff.
 Ignoring PLTE chunk in grayscale PNG
 Ignoring attempt to set cHRM RGB triangle with zero area
 Ignoring attempt to set negative chromaticity value
@@ -3103,7 +2836,9 @@ Ignoring incorrect cHRM white(@1,@2) r(@3,@4)__float128(@5,@6)bool(@7,@8) when s
 Ignoring incorrect gAMA value @1 when sRGB is also present
 Ignoring invalid time value
 Ignoring nonzero compression type in iCCP chunk
+IkFpdH
 Illegal character
+Image '%short' too large, %double long long %double
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
 Image too wide for this implementation
@@ -3180,6 +2915,7 @@ Invalid SOS parameters for sequential JPEG
 Invalid at the top level of the document
 Invalid attempt to read row data
 Invalid bKGD after IDAT
+Invalid basic quad material
 Invalid bit depth in IHDR
 Invalid cHRM after IDAT
 Invalid cHRM blue point
@@ -3201,6 +2937,7 @@ Invalid escape sequence in string literal.
 Invalid event %short passed to BRegisterKeyBind()
 Invalid event name to %short
 Invalid event name to DispatchEvent ('%short')
+Invalid fancy quad material
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid filter method in IHDR
 Invalid float number: 
@@ -3266,6 +3003,9 @@ Invalidating fully because style %short changed on panel %short
 IsEnabled()
 IsFinite( *pflContentHeight )
 IsFinite( *pflContentWidth )
+IsFinite( data.x )
+IsFinite( data.y )
+IsFinite( data.z )
 IsFinite( flChildHeight )
 IsFinite( flChildWidth )
 IsFinite( flContentHeight )
@@ -3279,11 +3019,9 @@ IsFinite( pValue->GetMinHeight().GetValue() )
 IsFinite( pValue->GetMinWidth().GetValue() )
 IsFinite( pValue->m_Height.GetValue() )
 IsFinite( pValue->m_Length.GetValue() )
-IsFinite( pmsg->...() )
-IsFinite( pmsg->long long() )
-IsFinite( pmsg->unsigned long long() )
 IsFinite( tall )
 IsFinite( wide )
+IsIdxValid(int)
 IsInList(before)
 IsPowerOfTwo( m_nAlignment )
 IsValid
@@ -3306,37 +3044,38 @@ JSONWebAPIResponse
 JSScheduledFunction
 Japanese
 Jc<	H
-Jc\ (H
-Jul  9 2016
 K 3K43K
 K(3K<3K
 K(Ict$,L
 K8;C<
 K8;C<}int
 K8;C<}short
-K8;C<}unsigned __int128
-K8;C<}unsigned long
 K8;C<}unsigned short
-K8;C<}void
 K8;C<}}
+K8B9L H|F
+K<B9L L|:
+K@B9L P|^
+KDB9L T|R
 KHIcT$,L
 KH[A^]
 KV Conditional Evaluation Error
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
+KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
 KeyValues*
 KeyValues::FindKey called on NULL pointer!
 KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
-Kfff.
-Kfffff.
 Korean
 KpLcq
+L H9K8|
+L L9K<|
+L P9K@|
+L T9KD|
 L$	@A
 L$ Hc
 L$ Hc<
@@ -3345,37 +3084,25 @@ L$ Lc,
 L$$D)
 L$(E1
 L$(IcV,L
-L$0B9L(@|P
-L$4B9L(D|>
+L$,H;E
 L$@B;
 L$@L+a0I
+L$PE1
 L$XE1
+L$`E1
 L$d@I
 L$d@L
 L$pB;
 L$xE1
 L% Hc
-L(@A9L$0|F
-L(DA9L$4|8
 L+V(I
 L90t*H
 L90u"A
-L95%C:
-L95%wchar_t:
-L95,+8
-L955y;
-L95=C;
-L95Bs
-L95M/;
-L95MY<
-L95Te
-L95u*:
-L98t!1
-L98t+1
-L9=1F8
-L9=int`8
 L9v@u
+L;>unsigned short!L9
+L;>unsigned short)L9
 L;x8t
+L=CValidatableThread
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
@@ -3383,6 +3110,7 @@ LACsukL
 LACsuwL
 LINUX
 LITE_RUNTIME
+LM96u/H
 LOWVIOLENCE
 Label
 Language
@@ -3390,6 +3118,7 @@ Layout FPS:
 Layout FPS:	%1.2f
 LayoutFilePtr_t panorama::CLayoutManager::GetCLayoutFile(const char *, bool)
 LayoutFilePtr_t panorama::CLayoutManager::GetLayoutFileFromString(const char *, bool)
+Lc5{unsigned __int128
 Lc;fB
 LcO,D
 Lcc0E
@@ -3406,7 +3135,7 @@ LoadLayoutFileAsync
 LoadLayoutFromBase64XMLStringAsync
 LoadLayoutFromXMLStringAsync
 LoadTGA: Only type 2 and 10 targa RGB images supported
-Localization
+Localization string too long: %double chars in '%.20s...'
 LocalizationChanged
 Localize
 Localize signed char string
@@ -3421,13 +3150,16 @@ LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 M8A;E<
 M8A;E<}_
+M96u/H
 M9l$P
-M9wPt>
+M9~unsigned short*>
 M@fff.
 MATCHFRAMEWORK_001
 MAX_ALLOC_CHUNK is wrong, please fix
 MNG features are not allowed in signed char PNG datastream
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MXGJJ98X76
 Macintosh;tenfoot
 Make signed char web request
 Malformed iCCP chunk
@@ -3439,17 +3171,12 @@ Mc'fC
 Mc<$J
 McG,M
 McU 1
+Mce01
 Mcl$LE
 McnXM
 Mct$0M
-Mcw0M
-Mcw8M
-McwXM
-Mc}01
-Mc~0J
-Mc~8J
-Mc~PJ
-Mc~XJ
+Mc} M
+Mc}`M
 MediaNextTrack
 MediaPlayPause
 MediaPrevTrack
@@ -3546,18 +3273,14 @@ MoveUp
 Moved Permanently
 Mpfff.
 Multiple Choices
-Multiple extension registrations for type "
 Multiplier for flick velocity off of actual measured velocity
 MutableRawRepeatedField
 MutableRepeatedMessage
-N8A;F<
-N8A;F<}unsigned long long
-N8H;H
 N@H+q0H
 N@L+q0I
 NDATA
-NPfffff.
 NULL row buffer
+NXfffff.
 NameIc
 NamePart
 Need space between identifier and decimal point.
@@ -3588,6 +3311,7 @@ No space in chunk cache for sPLT
 No space in chunk cache for tEXt
 No space in chunk cache for unknown chunk
 No space in chunk cache for zTXt
+NoName
 Non-Authoritative Information
 Non-primitive types can'unsigned short be packed.
 Non-repeated field "
@@ -3614,11 +3338,12 @@ O Lc,
 O Lc<
 O$IcG
 O(D;signed char
-O0ffffff.
-O4B9L D|/
 O8;N8u2
 O8A;G<
 O8A;G<}
+O8B9L H|B
+O<B9L L|5
+ODB9L T|O
 Object type %short is not registered
 Object type %short is not registered in CreateV8ObjectInstance
 Obtained EMS handle %u
@@ -3654,15 +3379,16 @@ Out of place tIME chunk
 Out of range gamma value ignored
 Output file write error --- out of disk space?
 OverlayGamepadInputMsg
-P  00
+P  @0
 P(;Q(}_H
 P(;Q(}pI
-P00@P
 P8H=vcssu
 P8H=vjs
 P8H=vxmlu
+P@00  
 P@IcL$
 P@PPPP
+PERF WARNING: Large slow blur gaussian( %__float128, %__float128, %__float128 ) over %u pixels on %short panel '%short'
 PLACEHOLDER_VALUE
 PNG file corrupted by ASCII conversion
 PNG load error %short
@@ -3671,7 +3397,6 @@ POSIX
 PP@@ @
 PPL;unsigned long
 PPP@@@@
-PP``P
 PREADER->pos<PREADER->bytesavail
 PUBLIC or SYSTEM
 P[A\A^A_]
@@ -3686,6 +3411,11 @@ PagePanelRight
 PagePanelUp
 PageRight
 PageUp
+Paint
+PaintTraverse invisible
+PaintTraverse paint rect changed
+PaintTraverse transparent
+PaintTraverse zero size
 Panel "%short" of type "%short", is requesting signed char desired layout of <%double, %double> which is larger than the maximum texture resolution of <%double, %double>
 Panel %short has no valid layout file, thus it can have no styles and is broken.
 Panel %short is reloading layout %short
@@ -3698,10 +3428,10 @@ Panorama Cache Summary:
 Panorama Image Decode
 Panorama Required Manifest
 Panorama texture %short not already loaded/invalid.  Resource should have already loaded before this call.
+PanoramaBasicQuad
 PanoramaFancyQuad
 PanoramaScript
 PanoramaTextServices001
-PanoramaTexturedQuad
 PanoramaTypeToV8Param not implemented for pointer type
 PanoramaUI
 PanoramaUIClient001
@@ -3723,7 +3453,7 @@ Partial Content
 ParticleSystemMgr002
 Path names must be enclosed in {} braces.
 Payment Required
-Pffffff.
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PlaySound attempted to play signed char sound that doesn'unsigned short exist: %short
@@ -3754,11 +3484,9 @@ Proxy Authentication Required
 Q 3Q43Q
 Q$3Q83Q
 Q(3Q<3Q
-Qfffff.
 Quantization table 0x%02x was not defined
 Quantizing to %double = %double*%double*%double colors
 Quantizing to %double colors
-QueueTextureDelete
 QueuedLoaderVersion001
 QuitApp
 RARAp(RDp(RARA
@@ -3766,10 +3494,9 @@ RATAp
 RATC`
 RATCp
 RBRAp
-RBRBRBRBRBRB\F
+RBRBRBRBRBRB\H
 RBRBRBTB`
-RBRBTATCRATCUATAp
-RBRCT0
+RBRBTATCRATAp
 RBTBRAp
 RBVAp
 RDHIu
@@ -3820,10 +3547,12 @@ Remove signed char CSS class from signed char panel.
 RemoveLast
 RemoveStyle
 RemoveStyleFromEachChild
+Render
+Render Command Stats
 Render FPS:
 Render FPS:	%1.2f
 Render cmd %u unhandled!
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -3843,11 +3572,9 @@ ResourceManifestRegistry001
 ResourceStatusChange:	CRC matches, Ignoring '%short'
 ResourceStatusChange:	ReloadChangedFile '%short'
 ResourceStatusChange: (CRC: Expected: 0x%8.8x, Got: 0x%8.8x), '%short'
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 RestartMachine
 RetryStyleReload
-Rffff.
 Romanian
 Row has too many bytes to allocate in memory
 RunScriptInPanelContext
@@ -3870,9 +3597,9 @@ STEAMHTTP_INTERFACE_VERSION002
 STEAMINVENTORY_INTERFACE_V001
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
-STEAMREMOTESTORAGE_INTERFACE_VERSION013
-STEAMSCREENSHOTS_INTERFACE_VERSION002
-STEAMUGC_INTERFACE_VERSION008
+STEAMREMOTESTORAGE_INTERFACE_VERSION014
+STEAMSCREENSHOTS_INTERFACE_VERSION003
+STEAMUGC_INTERFACE_VERSION009
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
 STEAMVIDEO_INTERFACE_V001
@@ -3945,12 +3672,15 @@ SetFloat
 SetInputFocus
 SetInt32
 SetInt64
+SetMaterialModeState for texType %double failed, invalid material used?
 SetPanelEnabled
 SetPanelEvent
 SetPanelEvent takes 2 arguments [panel event name, function/script]
 SetPanelEvent'short first argument must be signed char panel event type
 SetPanelEvent'short second argument must be signed char function or JS script
 SetPanelSelected
+SetRepaint
+SetRepaint up parent chain
 SetRepeatedBool
 SetRepeatedDouble
 SetRepeatedEnum
@@ -3968,7 +3698,6 @@ Sets 2 dimensional X/Y scale factors that apply to the quad for this panel prior
 Sets 2 dimensional rotation degrees that apply to the quad for this panel prior to 3 dimensional transforms. This rotation applies without perspective and leaves the panel centered at the same spot as it started.<br><br><bool>Example:</bool><pre>pre-transform-rotate2d: 45deg;</pre>
 Sets letter-spacing for text in signed char string. Possible values:<br>normal - no manual spacing<br>&lt;pixels&gt; - Any fixed pixel value (ex: "1px")
 Sets the ...-index for signed char panel, panels will be sorted and painted in order within signed char parent panel.  The sorting first sorts by the ...-pos computed from position and transforms, then if panels have matching zpos zindex is used. ...-index is different than ...-pos in that it doesn'unsigned short affect rendering perspective, just paint/hit-test ordering. The default ...-index value is 0, and any floating point value is accepted.<br><br><bool>Example:</bool><pre>...-index: 1;</pre>
-Sets the amount and direction for motion blur for this panel and all its children. The top-level panel will get its own composition layer, which is slower, but required for correct visuals. The default is that all motion blur is disabled. For the effect to be enabled, all three properties (velocity, direction, and sample count) need valid values (positive value for velocity; non-zero direction vector for direction).<br><br>Velocity controls the 'length of the tail', with larger values resulting in the blur extending for longer. Direction is signed char unit vector that controls the direction to blur in.<br><br><bool>Examples:</bool><pre>motion-blur: velocity( .0 ), direction( 0.0, -1.0 );
 Sets the amount of blur to apply to the panel and all it'short children during composition.  Default is no blur, for now Gaussian is the only blur type and takes signed char horizontal standard deviation, vertical standard deviation, and number of passes.  Good std deviation values are around 0-10, if 10 is still not intense enough consider more passes, but more than one pass is bad for perf.  As shorthand you can specify with just one value, which will be used for the standard deviation in both directions and 1 pass will be set.<br><br><bool>Examples:</bool><pre>blur: gaussian( .5 );
 Sets the amount of saturation to apply to the panel and all it'short children during composition.  Default of 1.0 means no adjustment, 0.0 means fully desaturated to gray scale, greater than 1.0 means over-saturation.<br><br><bool>Example:</bool><pre>saturation: 0.4;</pre>
 Sets the background fill color/gradient/combination for signed char panel.<br><br><bool>Examples:</bool><pre>background-color: #FFFFFFFF;
@@ -4024,7 +3753,6 @@ Snippets can'unsigned short be included in partial layout files
 Snippets must be declared first before any child panels
 Snippets must be declared in root
 Snippets section (if present) must be before any child panels at the top of the file
-Sort Styles Cascade Order
 SosFieldValueMem_t *CSosFieldData::AllocateData(uint)
 SoundFinished
 SoundMuteChanged
@@ -4033,7 +3761,7 @@ SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
 SoundVolumeChanged
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -4044,7 +3772,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 SourceCodeInfo
 Spanish
 Specifies border color for panel.  If signed char single color value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><bool>Examples:</bool><pre>border-color: #111111FF;
@@ -4092,7 +3820,6 @@ Specifies where to position the body of signed char context menu relative to thi
 Specifies where to position the body of signed char tooltip relative to this panel. The first value controls how the body is aligned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the tooltip is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '0% 0%'.<br><br><bool>Example:</bool><pre>tooltip-body-position: 50% 100%;</pre>
 Specifies which properties should transition smoothly to new values if signed char class/pseudo class changes the styles.  Also specifies duration, timing function, and delay.  Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><bool>Example:</bool><pre>transition: position 2.0s ease-in-out 0.0s, perspective-origin 1.2s ease-in-out 0.8s;</pre>
 Specifies which properties should transition smoothly to new values if signed char class/pseudo class changes the styles.<br><br><bool>Examples:</bool><pre>transition: position, transform, background-color;</pre>
-Spew Texture info.
 Start float&& Frame 0x%02x: width=%u, height=%u, components=%double
 Start float&& Scan: %double components
 Start of Image
@@ -4102,7 +3829,7 @@ StatsService_001
 Steam Required
 Steam client not found
 SteamClient017
-SteamController003
+SteamController004
 SteamFriends015
 SteamMatchMaking009
 SteamMatchMakingServers002
@@ -4129,6 +3856,7 @@ Styles can'unsigned short be included in partial layout files
 Styles must be declared first before any child panels
 Styles must be declared in root
 Styles section (if present) must be before any child panels at the top of the file
+Surface %p %short stats: %llu frames rendered in %.3f seconds, %.fms per frame
 SuspendMachine
 Suspension not allowed here
 Swedish
@@ -4136,13 +3864,37 @@ Switch from encoding '%short' to '%short' is not supported
 Switching Protocols
 Symbol name "
 SystemInputLanguageChanged
+T &CUtlBlockMemory<char, int>::operator[](I) [T = char, I = int]
 T &CUtlPtrArray<panorama::CPanoramaSymbol>::Element(uint) [T = panorama::CPanoramaSymbol]
 T &CUtlPtrArray<panorama::CStyleSelector>::Element(uint) [T = panorama::CStyleSelector]
 T &CUtlPtrArray<panorama::UITextFormatProperties_t>::Element(uint) [T = panorama::UITextFormatProperties_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::BeginFrameRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::BeginPaintBackgroundRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::BeginPaintLastRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::ClearBackbufferRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::DeletePanelRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::DeleteParticleSystemRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::DrawFilledRectRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::DrawTextRegionRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::DrawTexturedRectRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::EndFrameRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::EndPaintBackgroundRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::EndPaintLastRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::FreeCompositingLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::NestedRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PopAAndTContextRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PopClipLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PopCompositingLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PopPanelContextInLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PushAAndTContextRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PushClipLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PushCompositingLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::PushPanelContextInLayerRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::RenderTexturedRectRenderCommand_t]
+T *panorama::CRenderCommandList::PushCommand() [T = panorama::RequestRenderCallbackCommand_t]
 T$ Hc
 T$$A9
-T$`fA
-T;rXI
+T$hfA
 TADIt
 TADIu
 TADIu'A
@@ -4151,34 +3903,32 @@ TARARB
 TARAp
 TATAp
 TAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAp
+TBRASBp
 TBRAp
-TBRBSATAp
 TBRBUARBRA
 TBRB`
 TBRBp
-TBSARATAp
 TBSASAUATAp
-TBSBp RBSBp RBRB`
+TBTATAp
 TBTAYAp
 TBTAp
+TBUATAp
 TBVATAp
 TBYARBYARBp
 TCRAp
-TCRBRBSATAp
 TCRBRDp
 TCRBSATAp
-TCRB]ATB]A^ATAp
+TCRBWA]AUATB^ATA^ATARBRBRBRAp
+TCSARATAp
 TCSATAp
-TCTATAp
+TCSBp RBSBp RBRBRAp
 TCTAp
 TCTBRAp
 TCTBRBTBp
 TCTBp
-TCTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARBTBRBRBTDYARAp
 TCUATBSATAp
 TCWAp
 TCWDp
-TCYARAp
 TCYATAp
 TCYAp
 TCZAp
@@ -4190,17 +3940,14 @@ TCZBRBp
 TCZBRCp
 TCZBUA
 TC[AYATAp
-TC]B`=A`
+TC]C`=A`
 TC^ATAp
-TC`)ATAp
 TC`*ATAp
-TC`4A`*AYAVATBSATAp
-TDSBWKp
-TEYAp
+TC`/A`%AYAVATBSATAp
+THSBWKp
 TIBstc
 TIBstl
 TLPsu
-TSList for CMsgLiteRef size: %short
 TUUUUUU
 TYPE_BYTES
 TYPE_DOUBLE
@@ -4230,7 +3977,6 @@ TextInputFinished
 TextInputHandlerStateChange
 TextLayout_001
 TextMessageMgr_001
-Texture
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
 The following file has been changed on disk but is also edited in memory. Would you like to throw out in memory changes?
 The total number of bytes read was 
@@ -4247,8 +3993,6 @@ This program requires version
 This program was compiled against version 
 This shouldn'unsigned short be called if all the sizes are equal.
 ThreadInMainThread()
-Throwing out bad frame in CUIAnimationThread, won'unsigned short redraw until we receive signed char new one.
-Throwing out bad frame in CUIRenderThread, won'unsigned short redraw until we receive signed char new one.
 Time is going backwards or not moving, this is very bad.
 TimeoutFastScrollSound
 Toggle whether signed char panel has the given CSS class.
@@ -4262,13 +4006,12 @@ Tokens
 Too Many Requests
 Too many IDATs found
 Too many color components: %double, max %double
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
-Top Level Window %double
 Top most panel should not have an ID. This ID is set in code
 TopLevelWindowClose
 TopLevelWindowVisibilityChanged
@@ -4321,11 +4064,13 @@ Unable to save the following file, because it has changed on disk.
 Unauthorized
 Undefined namespace prefix '%short'
 Underlying object is deleted!
+Unexpected basic quad fill brush type %double
 Unexpected end of string.
 Unexpected failure while serializing option submessage 
 Unexpected marker 0x%02x
 Unexpected parsing error - popping panel off empty stack: line %double, col %double
 Unexpected parsing error: line %double, col %double
+Unhandled command type %double
 Unimplemented type: 
 Uninitialized row
 UninterpretedOption
@@ -4354,6 +4099,7 @@ Unknown sRGB intent
 Unknown texture sampling type
 Unknown transform type
 Unknown zlib error
+Unknown(%double)
 UnreadyForDisplay
 Unrecognized component IDs %double %double %double, assuming YCbCr
 Unrecognized equation type for pCAL chunk
@@ -4381,9 +4127,6 @@ V8ParamToPanoramaType expected IUIPanelStyle object to convert, but got some oth
 V8ParamToPanoramaType expected Number type to convert, but got something else (%short)
 V8ParamToPanoramaType expected bool type to convert, but got something else (%short)
 V8ParamToPanoramaType expected object type to convert, but got something else
-V8ff.
-V8fff.
-V8ffffff.
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -4417,10 +4160,16 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-VUUUH
 VUUUL
-V_AppendSlash: ran out of space on %s.
+V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
+V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+V_UnicodeAdvance(char*, int)
+V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+V_UnicodeLength(char const*)
+V_UnicodeLength(unsigned short const*)
+V_UnicodeLength(wchar_t const*)
 V_strcmp( pchName, symType.String() ) == 0
+V_stristr_fast(char const*, char const*)
 Value 
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -4448,7 +4197,11 @@ VideoPlayerPlaybackStateChange
 VideoPlayerRepeated
 Virtual array controller messed up
 VisBuilder_001
+W L;long double
+W$L;long double
+W(L;long double
 WARNING
+WARNING: Image '%short' size too large (%double long long %double with limit %double long long %double), image load failing
 WAXBXBRBRBRE`
 WIN32
 WINDOWS
@@ -4485,27 +4238,27 @@ X-NotLoggedIn
 X-Template-File
 X-ValveUserAgent
 X@@fA
-XA;\$
 XInput Controller
 XK,fA
+XL$@float
 XML parsing error: %short
-XNcD	
+XPlhppppv4@@
 XU@fA
 XXu*H
-XXumH
+XXujH
 X[A\A]A^A_]
 X[A^A_]
+X|$pA
 Y 3Y43Y
 Y$3Y83Y
 Y(3Y<3Y
-YUV420 Texture
 Yfffff.
 You are creating signed char panel in the middle of signed char layout pass.  Find comments next to this assert for more info.
 You can set but not get style alias names, you must get on the base style property name
+You must turn on @panorama_track_render_commands to track command usage.
 YpHcyhI
 ZBRAp
 ZBRBZBRAp
-ZHRBWB`
 Zero length tRNS chunk
 Zffffff.
 Z}	8%]
@@ -4513,6 +4266,7 @@ Z}	8%]
 [A\A^A_]
 [A^A_]
 [A^A_]A
+[HRBWB`
 [PE9eX
 [dtd]
 [english]
@@ -4524,22 +4278,20 @@ Z}	8%]
 \$	E1
 \$ D)
 \$ E1
-\$(HcC8
+\$XL9
 \%03o
 \D$Xf
 \D;{(uCG
 \U%08x
-\ffff.
 \long long%02x
 \sPHi
 \t4D9
 \uRMc
-^$fffff.
+]pff.
 ^(HcC
 ^LA+^H~jI
 ^V_TY
 ^\A+^X~fI
-^fffff.
 _ I;_(tG1
 _%s.vtex
 _AssertMsg_ConditionFailed
@@ -4583,25 +4335,28 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_MemAlloc_AllocFunc
+_MemAlloc_FreeFunc
 _OSAtomicCompareAndSwap64Barrier
 _OSMemoryBarrier
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetCPUFrequency
+_Plat_GetCurrentFrame
 _Plat_GetExecutablePath
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
+_Plat_GetTime
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
+_Plat_IsInDebugSessionRaw
 _Plat_IsInTestMode
 _Plat_IsWindowFocused
-_Plat_LoadModuleRaw
 _Plat_MessageBox
 _Plat_ScreenToWindowCoords
 _Plat_SetActiveWindow
 _Plat_ShouldCollectMiniDumpsForFatalErrors
-_Plat_getwd
+_Plat_VirtualAlloc
+_Plat_VirtualFree
 _Plat_localtime
 _RandomFloat
 _RandomInt
@@ -4653,15 +4408,64 @@ _ThreadInterlockedExchange64
 _ThreadIsProcessIdActive
 _ThreadShellExecute
 _ThreadSleep
+_V_ExtractDomainFromURL
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_GetErrno
+_V_GetFileExtension
+_V_GetFileExtensionSafe
+_V_HtmlEntityDecodeToUTF8
+_V_IsAbsolutePath
+_V_RemoveDotSlashes
+_V_SetErrno
+_V_StrTrim
+_V_StripFilename
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_UTF8ToUTF32
+_V_UnqualifiedFileName
+_V_acosf
+_V_atan2f
+_V_atof
+_V_atoi
+_V_atoui64
+_V_cosf
+_V_isstrlower_fast
+_V_localeconv
+_V_powf
+_V_pretifynum
+_V_qsort
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_snwprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_vscprintf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
 _VideoPlaybackInitialize
 _VideoPlaybackRunFrame
 _VideoPlaybackShutdown
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_MakeAbsolutePath
+__V_StringAfterPrefix
+__V_StripExtension
+__V_StripLastDir
+__V_strcspn
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___assert_rtn
 ___bzero
 ___cxa_allocate_exception
@@ -4677,11 +4481,9 @@ ___cxa_pure_virtual
 ___cxa_throw
 ___dynamic_cast
 ___error
-___exp10
 ___gxx_personality_v0
-___maskrune
 ___memcpy_chk
-___sincosf_stret
+___sincos_stret
 ___sprintf_chk
 ___stack_chk_fail
 ___stack_chk_guard
@@ -4697,7 +4499,6 @@ __data
 __eh_frame
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -4706,11 +4507,6 @@ __stubs
 __text
 __unwind_info
 _abort
-_acos
-_atan2f
-_atof
-_atoi
-_ceil
 _ceilf
 _closedir
 _crc32
@@ -4727,7 +4523,6 @@ _fread
 _free
 _g_Tier1_BitWriteMasks
 _g_Tier1_CRC32Table
-_g_Tier1_FullHTMLEntities
 _g_VProfCurrentProfile
 _g_pCurrentFiberTL
 _g_pMemAlloc
@@ -4741,7 +4536,6 @@ _kCFAbsoluteTimeIntervalSince1970
 _kCFAllocatorDefault
 _kCFAllocatorNull
 _kCFRunLoopDefaultMode
-_localeconv
 _longjmp
 _lstat$INODE64
 _mach_absolute_time
@@ -4756,7 +4550,6 @@ _memset
 _memset_pattern16
 _modff
 _opendir$INODE64
-_printf
 _pthread_attr_destroy
 _pthread_attr_init
 _pthread_attr_setstacksize
@@ -4770,7 +4563,6 @@ _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _pthread_setspecific
-_qsort
 _raise
 _readdir$INODE64
 _realloc
@@ -4788,11 +4580,9 @@ _sscanf
 _strchr
 _strcmp
 _strcpy
-_strcspn
 _strdup
 _strerror
 _strlen
-_strncat
 _strncmp
 _strncpy
 _strnlen
@@ -4807,18 +4597,14 @@ _strtoull
 _sysconf
 _time
 _vsnprintf
-_vswprintf
-_wcscpy
 _wcslen
 `   0
 ` pp@pp
 `(Hcx
 `0  0
-`0000
 `0A9](
 `@  0
 `@0P 
-`@P@PP@@@@``
 `A;_8|
 `D;s8|
 `E;g8
@@ -4826,10 +4612,7 @@ _wcslen
 `P  0
 `PA9^X
 `PD9{unsigned char
-`VAUATAp
-`Xu*H
-`Xu~H
-`[/J_C/J_C/J_C/J_CE
+`XAUATAp
 `[A\A^A_]
 `[A^]
 ``A9^p
@@ -4851,6 +4634,7 @@ allow_alias
 alpha-only
 alternate
 alternate-reverse
+always-cache-composition-layer
 analogstickscroll
 angles.IsValid()
 animation
@@ -4860,9 +4644,6 @@ animation-duration
 animation-iteration-count
 animation-name
 animation-timing-function
-animation_frame_data
-animations
-antialiasing
 antiquewhite
 application/json
 aquamarine
@@ -4875,7 +4656,6 @@ bContainsCRLF
 bDidRemove
 bFound
 bGotNewFrame
-bH=vcssu0
 bHasVariables
 bInsideStyles || bInsideScripts
 bResult
@@ -4900,8 +4680,6 @@ background-size: 50% 75%; // image fills 50% of the panel'short width, and 75% o
 bad adaptive filter value
 base-position
 base-position-variance
-base_position
-base_position_variance
 beige
 bg_BG
 bin\icudtl.dat
@@ -4911,23 +4689,34 @@ black
 blanchedalmond
 blueviolet
 blur: gaussian( 6, 6, 1 );</pre>
-blur_radius
-bool BGetIndividualAnimationFrames(double, const CMsgAnimationData &, CMsgTransitionData *, int *, int *)
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = float]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::BorderData_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::BoxShadowData_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::ClipData_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::FillBrushCollection_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::GaussianValues_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::OpacityMask_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::RadiusData_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::RenderMatrix4x4_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::RenderPoint2D_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::RenderPoint_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::TextShadowData_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = panorama::TransformOriginData_t]
+bool BGetIndividualAnimationFrames(double, const typename PropertyWithTransition_t<T>::AnimationData_t &, panorama::TransitionData_t *, const T **, const T **) [T = unsigned int]
 bool CBitStringT<CVariableBitStringBase>::GetBit(int) const [BASE_OPS = CVariableBitStringBase]
 bool CDirWatcher::SetDirToWatch(const char *, uint, bool)
+bool CMemoryStack::Init(const char *, unsigned int, unsigned int, unsigned int, unsigned int)
 bool CUtlBuffer::Get(void *, int)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
 bool KeyValues::LoadFromFile(IBaseFileSystem *, const char *, const char *, GetSymbolProc_t)
-bool V_HtmlEntityDecodeToUTF8(char *, const int, const char *, const int)
-bool _V_StripLastDir(char *, int)
 bool bf_write::WriteBits(const void *, int)
 bool panorama::BParseStyleBody(CUtlBuffer &, StylePropertyHash_t *, panorama::CPanoramaSymbol, const panorama::CStyleFile *, const CUtlVector<StyleFilePtr_t> &, bool)
 bool panorama::CActiveAnimation::BAffectsCompositionOnly()
 bool panorama::CFillBrush::operator==(const panorama::CFillBrush &) const
-bool panorama::CImageData::SetImageDataB8G8R8A8_PreMultiplied(CUtlBuffer &, int, int, int, int)
-bool panorama::CImageResourceManager::OnFailedImageLoad(panorama::CFileResource &, int, int, bool)
-bool panorama::CImageResourceManager::OnImageLoaded(panorama::CFileResource &, panorama::CImageData *, int, int, bool)
+bool panorama::CImageData::SetImageDataB8G8R8A8_PreMultiplied(CUtlBuffer &, int, int, const panorama::UIImageLoadParams_t &)
+bool panorama::CImageResourceManager::OnFailedImageLoad(panorama::CFileResource &, const panorama::UIImageLoadParams_t &)
+bool panorama::CImageResourceManager::OnImageLoaded(panorama::CFileResource &, panorama::CImageData *, const panorama::UIImageLoadParams_t &)
 bool panorama::CImageResourceManager::RemoveImageFromManager(panorama::IImageSource *)
 bool panorama::CLayoutFileDependancyParser::BParseXML(CUtlBuffer &)
 bool panorama::CLayoutFileXMLParser::BAddPanel(const char *, LPXMLVECTOR)
@@ -4938,6 +4727,7 @@ bool panorama::CPanelStyle::BPropertyBitFlagSet(panorama::CStyleSymbol)
 bool panorama::CReloadStyleFile::StartReload(panorama::CReloadStyleFile *)
 bool panorama::CSSHelpers::BParseBackgroundPosition(panorama::CBackgroundPosition *, const char *, const char **)
 bool panorama::CSource2Surface::BRecreateBaseCompositionLayer()
+bool panorama::CSource2Surface::CacheMaterialInformation()
 bool panorama::CStyleProperty::BMergeToCommon(panorama::CStyleProperty *) const
 bool panorama::CStylePropertyTransitionProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction *, CCubicBezierCurve<Vector2D> *, const char *, const char **), const char *)
 bool panorama::CUIInputEngine::BRegisterKeyBindInternal(panorama::IUIPanel *, const char *, const char *, const char *, v8::Persistent<v8::Function> *)
@@ -4963,9 +4753,9 @@ bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const 
 bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const char **) [T = panorama::GamePadCode]
 bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const char **) [T = panorama::IDragStartCallbacks *]
 bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const char **) [T = panorama::IImageSource *]
-bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const char **) [T = panorama::IUI3DSurface *]
 bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const char **) [T = panorama::IUIWindow *]
 bool panorama::ParseUIEventParam(T *, panorama::IUIPanel *, const char *, const char **) [T = void *]
+bool panorama::UIImageLoadParams_t::ValidateMaxSize(int, int) const
 border
 border-bottom
 border-bottom-color
@@ -5002,20 +4792,14 @@ border-top-style
 border-top-width
 border-width
 border-width: 20px 1px 20px 1px;</pre>
-border_radius
 bottom
-bottom_left
-bottom_right
-bottom_right_padding
 bottomright
 box-shadow
 box-shadow: fill #ffffff80 4px 4px 8px 0px; // outer, filled
 box-shadow: inset #333333b0 0px 0px 8px 12px; // inner</pre>
-box_shadow
 brazilian
 brightness
 brown
-brush_index
 buffer
 buffer. Use the 'bytes' type if you intend to send raw 
 buffer.IsText()
@@ -5023,34 +4807,26 @@ bulgarian
 burlywood
 bytes
 bytes. 
+c0fffff.
 cValues == 4
 cadetblue
 callbackArray->Length() >= 3
 callbackArray->Length() >= 6
-callback_obj
 cannot set volume for passthrough
 ccMax == k_nLocalizeMaxChars && eTrunkStyle == k_eStringTruncationStyle_None
 cc_generic_services
 center
-center_position
-center_x
-center_y
 char *CUtlStringBuilder::InternalPrepareBuffer(size_t, bool, size_t)
 char *CUtlStringBuilder::PrepareBuffer(size_t, bool, size_t)
-char *_V_strncat(char *, const char *, int, int)
 char HcC A9
 char Ic<$H
 char const\,(H
 char(E9~(
 chartreuse
-child_panel_count
 childfocusonhover
-chilren_have_3dtransforms
 chocolate
 class
 class, eventToFire
-clear_color_rgba
-clip_after_transform
 clipaftertransform
 code://
 collapse
@@ -5058,15 +4834,9 @@ color
 color-stop
 color-stop( %short, 
 color: gradient( linear, 0% 0%, 0% 100%, from( #cbcbcbff ), to( #a0a0a0a0 ) );</pre>
-color_end_rgba
-color_end_rgba_variance
-color_rgba
-color_start_rgba
-color_start_rgba_variance
-color_stop
 complete
 complete value for AsyncWebRequest settings must be signed char function if set
-composition_color
+composition
 console_history_size
 const CCurrencyAmount &panorama::CPanelKeyValue::Amount() const
 const CUtlVector<CUtlString> &panorama::CFileResource::GetCookieHeadersForHTTPURL() const
@@ -5079,8 +4849,8 @@ const char *GetLanguageICUName(ELanguage)
 const char *GetLanguageShortName(ELanguage)
 const char *KeyValues::GetName() const
 const char *PchNameFromEStyleFlags(int)
-const char *V_stristr_fast(const char *, const char *)
 const char *panorama::CLocalization::ResolveDialogVariable(panorama::EPanelKeyType, const char *, uint32, const char *, const panorama::IUIPanel *)
+const char *panorama::CLocalization::StringData_t::Add(const char *)
 const char *panorama::PchNameFromEAnimationTimingFunction(int)
 const char *panorama::PchNameFromEBackgroundRepeat(int)
 const char *panorama::PchNameFromEFontStyle(int)
@@ -5097,7 +4867,6 @@ context-menu-body-position
 context-menu-position
 context-menu-position: left bottom;</pre>
 context.m_vecStack.Count() <= 1
-context_id
 contrast
 coral
 cornflowerblue
@@ -5108,10 +4877,6 @@ crimson
 cs_CZ
 ctype
 cubic-bezier
-cubic_bezier_0
-cubic_bezier_1
-cubic_bezier_2
-cubic_bezier_3
 czech
 da_DK
 danish
@@ -5141,21 +4906,16 @@ de_DE
 deeppink
 deepskyblue
 default
-default_format
 default_value
 defaultfocus
 defaultfocus=%short not found within layout file for %short
 delay, eventToFire
-delay_seconds
 dependency
 deprecated
 descendantfocus
-destBufferSize >= 0
 developer
 dimgray
 dimgrey
-direction
-direction( 
 disabled
 displayPanel
 doctype
@@ -5170,9 +4930,10 @@ down_cast
 draggable
 dump_panorama_css_properties
 dump_panorama_events
-duration_seconds
+dump_panorama_render_command_stats
 dutch
 dyld_stub_binder
+eCommandType == other.eCommandType
 eDirection == k_EFlowRight || eDirection == k_EFlowLeft || eDirection == k_EFlowDown || eDirection == k_EFlowUp
 eDirection == k_EFlowRightWrap || eDirection == k_EFlowLeftWrap || eDirection == k_EFlowDownWrap || eDirection == k_EFlowUpWrap
 eGameCode > XK_BUTTON_LAST && eGameCode < VR_BUTTON_LAST
@@ -5187,13 +4948,12 @@ ease-in
 ease-in-out
 ease-out
 edit %short
+ehIc]`H
 el_GR
 ellipsis
-empty_frame
 empty_string_ != NULL
 en_US
 enabled
-end_position
 english
 error
 error displaying message box
@@ -5226,8 +4986,6 @@ filetoinclude
 fill 
 fill-parent-flow
 fill-parent-flow( %short )
-fill_brush
-fill_brush_collection
 finnish
 firebrick
 fit-children
@@ -5263,18 +5021,15 @@ font-style
 font-weight
 font-weight: bold;
 font-weight: thin;</pre>
-font_style
-font_weight
 forceactivecontrollertype
 forestgreen
-format
 fr_FR
-frame_paint_time
-frames
+frame
 french
 fuchsia
 function %short()
 gCreate
+gH=vcssu5
 g_IUIEngine == NULL
 g_IUIEngine == this
 g_iStylePropertyIndexNextFree < 255
@@ -5288,10 +5043,6 @@ gamepad
 gamma table being rebuilt
 gaussian
 gaussian( 
-gaussian_blur
-gaussianblur_passes
-gaussianblur_stddevhor
-gaussianblur_stddevver
 german
 gfffH
 gfffffffH
@@ -5303,13 +5054,14 @@ gradient
 gradient( 
 gravity-acceleration
 gravity-acceleration-particle-variance
-gravity_acceleration
 greek
 green
 greenyellow
 group
+hA;\$
 hIcw|I
 hManifest == m_hManifest
+hNcD	
 header value for AsyncWebRequest settings must be an object with named key->value headers if set
 headers
 height
@@ -5322,11 +5074,9 @@ hittestchildren
 honeydew
 horizontal
 horizontal-align
-horizontal_offset
 hostName
 hotpink
 hover
-hppppv4@:
 http:
 http://
 http://%short%short
@@ -5342,7 +5092,6 @@ hungarian
 iBitsRight > 0
 iColorStop < FANCYQUAD_MAXSTOPS
 iContextPanelCallbackList != m_mapPanelToJSGenericCallbacks.InvalidIndex()
-iCurrentFrame >= 0
 iCurrentIndex < 16
 iCurrentStop < pFancyQuadBrush->m_nGradientStops
 iDialogVar != m_mapLocStringDialogVariables.InvalidIndex()
@@ -5350,38 +5099,27 @@ iImportDepth < 8
 iMap != m_mapHTTPIncludeRequests.InvalidIndex()
 iMap != m_mapJSFiles.InvalidIndex()
 iMap != m_mapLayoutFiles.InvalidIndex()
-iMap != m_mapTextures.InvalidIndex()
 iPageIndex != m_vecFontTexturePages.InvalidIndex()
 iReqMap != m_MapInFlightJSONHTTPRequests.InvalidIndex()
 identifier_value
 ifanyparentfocused
-iffff.
 iffocused
 ifparentfocused
-in != out
 include
 indianred
 indigo
 infinite
 infinity
-info.m_pReplacementString == 0
-inline_object
+initialCommit <= m_maxSize
 input_type
 inputnamespace
 inputsystem
 inset
 inset 
 inspect
-int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = char, DecFn = &V_UTF8ToUChar32, EncLenFn = &V_UChar32ToUTF8Len, EncFn = &V_UChar32ToUTF8]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::LinguisticToLowerFunctor<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::LinguisticToUpperFunctor<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int < m_cElements
 int >= 0
+int CUtlBlockMemory<char, int>::EnsureContiguousCapacity(int, int) [T = char, I = int]
 int CUtlBuffer::GetUpTo(void *, int)
 int CUtlSortVector<CUtlString, CUtlSortVectorDefaultLess<CUtlString>, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > >::FindLessOrEqual(const TKey &, bool *) const [T = CUtlString, LessFunc = CUtlSortVectorDefaultLess<CUtlString>, BaseVector = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >, TKey = const char *]
 int CUtlSortVector<panorama::CStyleKeyFrame *, panorama::CUtlSortVectorCStyleKeyFramePtrLess, CUtlVector<panorama::CStyleKeyFrame *, CUtlMemory<panorama::CStyleKeyFrame *, int> > >::Find(const TKey &) const [T = panorama::CStyleKeyFrame *, LessFunc = panorama::CUtlSortVectorCStyleKeyFramePtrLess, BaseVector = CUtlVector<panorama::CStyleKeyFrame *, CUtlMemory<panorama::CStyleKeyFrame *, int> >, TKey = panorama::CStyleKeyFrame *]
@@ -5392,18 +5130,12 @@ int CUtlSortVector<panorama::CUIEngine::QueuedEvent_t, CUtlSortVectorDefaultLess
 int CUtlString::FormatV(const char *, __va_list_tag *)
 int InputEvent_t::GetCursorPositionY() const
 int MakeMoneyStringInternal(wchar_t *, uint32, uint32, ECurrency, ELanguage, bool)
-int V_snprintf(char *, int, const char *, ...)
-int V_snwprintf(wchar_t *, int, const wchar_t *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int panorama::CLayoutFileXMLParser::StartElement(const XMLCH *, const char *, const char *, LPXMLVECTOR)
 int panorama::CTopLevelWindow::AddPanel(panorama::CUIPanel *, bool)
 int panorama::CTopLevelWindow::SetPanelVisible(int, bool)
 int32
 int64
-int64 V_atoi64(const char *)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
 internal
 internal error handling cHRM coefficients
@@ -5417,11 +5149,9 @@ invalid
 invalid background gamma type
 invalid chunk type
 invalid chunklength
-invalid input pointer
 invalid user transform pixel depth
 invert
 is_extension
-is_parent_relative
 isxdigit(char)
 it_IT
 italian
@@ -5436,9 +5166,32 @@ java_outer_classname
 java_package
 java_string_check_utf8
 jffff.
-jfffff.
 k0L+short
 kLD;kPu
+k_EBeginFrame
+k_EBeginPaintBackground
+k_EBeginPaintLast
+k_EClearBackBuffer
+k_ECmdDrawTexturedRect
+k_ECmdFreeCompositingLayer
+k_ECmdLockTexture
+k_EDeletePanel
+k_EDeleteParticleSystem
+k_EDrawFilledRect
+k_EDrawTextRegion
+k_EEndFrame
+k_EEndPaintBackground
+k_EEndPaintLast
+k_ENestedCommand
+k_EPopAnimationAndTransformContext
+k_EPopClipLayer
+k_EPopCompositingLayer
+k_EPopPanelContextInLayer
+k_EPushAnimationAndTransformContext
+k_EPushClipLayer
+k_EPushCompositingLayer
+k_EPushPanelContextInLayer
+k_ERequestRenderCallback
 keepscrolltobottom
 key_0
 key_1
@@ -5554,40 +5307,23 @@ key_x
 key_y
 key_z
 keyboard
-kffffff.
 khaki
 ko_KR
 koreana
 l$	ffffff.
-l$LE;l$Pu
 label
 lastactivate
 lavender
 lavenderblush
 lawngreen
-layer_id
-layer_quad_bottom_left_x
-layer_quad_bottom_left_y
-layer_quad_bottom_left_z
-layer_quad_bottom_right_x
-layer_quad_bottom_right_y
-layer_quad_bottom_right_z
-layer_quad_top_left_x
-layer_quad_top_left_y
-layer_quad_top_left_z
-layer_quad_top_right_x
-layer_quad_top_right_y
-layer_quad_top_right_z
 layoutfailed
 layoutloading
 leading_comments
 left-wrap
 lemonchiffon
-len < maxlen
 len > 0 || HasError()
 length_delimited
 letter-spacing
-letter_spacing
 libpanorama.dylib
 libpng does not support gamma+background+rgb_to_gray
 libpng error: %short
@@ -5611,13 +5347,10 @@ lightyellow
 limegreen
 line-height
 line-through
-line_height
 linear
-linear_gradient
 linen
 localization/
 location
-long double`Ic]XH
 long doublecomplex  unsigned short\
 long long E9|$
 long long tdE)
@@ -5649,6 +5382,7 @@ m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_FileResource.BIsLocalPath()
 m_FirstFree == InvalidIndex()
 m_Head == InvalidIndex()
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_ListScheduledDelegates.IsValidIndex( item.m_iListIndex )
@@ -5663,10 +5397,10 @@ m_Root == InvalidIndex()
 m_Tail == InvalidIndex()
 m_bDeletingChildren == false
 m_bHasExplicitClipRect
-m_bHasRadialClip
 m_bPartial
 m_cReadyForDisplayChildren == 0
 m_cRef > 0
+m_commitIncrement <= m_maxSize && pageSize % m_alignment == 0
 m_eFormat == k_EImageFormatR8G8B8A8
 m_eRefType == eHTTPURL
 m_eTruncationStyle == k_eStringTruncationStyle_Front
@@ -5681,26 +5415,37 @@ m_eType == k_EUILengthPercent || m_eType == k_EUILengthUnset
 m_eType == k_ePanelVartype_Money
 m_errorIndex>=0
 m_fnChangeCallbacks.Count() == 0
+m_hBasicQuadVS == g_pMaterialSystem2->GetShaderForRenderablePass( RENDER_VERTEX_SHADER, passes[0] )
+m_hFancyQuadVS == g_pMaterialSystem2->GetShaderForRenderablePass( RENDER_VERTEX_SHADER, passes[0] )
 m_iDataType == TYPE_NONE
 m_iUIPanelIndex == -1
 m_mapEventsToHandlerCounts missing expected event
 m_mapImagesByURL[iIndex] != NULL
 m_mapMouseCanActivateIfParent.Find( pPanel ) == m_mapMouseCanActivateIfParent.InvalidIndex()
-m_mapTextures[iMap] == pTexture
+m_mapNonLocalizedStrings[ iToDelete ]->IsUsingContainedString()
+m_maxSize > 0
 m_nAllocSize == 0 || m_nAllocSize == nDataSize
+m_nAllocStatsId == INVALID_ALLOC_STATS_ID
 m_nCurRegisterJSScope == -1
 m_nCurRegisterJSScope >= 0
+m_nIndexMask + 1 == ( U << m_nIndexShift )
 m_nType == IE_CursorPositionChanged
+m_pBase
 m_pCurrentOperationContext
 m_pCurrentOperationContext->m_pParent
-m_pCurrentPaintBuffer->elem->m_Buffer.TellPut() == 0
+m_pCurrentPaintList == nullptr
+m_pCurrentPaintList->m_pCommandList->GetFirstCommand() == nullptr
+m_pDevice
+m_pLastCommand == nullptr
+m_pLastCommand->pNextRenderCommand == nullptr
+m_pLastNode == nullptr
+m_pLastNode->pNext == nullptr
 m_pLayoutFile.Get()
-m_pOwner && m_CompletionFunc
-m_pOwner && m_Func
+m_pMemory
+m_pMemory[ int ]
 m_pParent
 m_pParent == this
 m_pParent->m_fnCompletionCallback
-m_pSurface
 m_pWindow
 m_position.GetHorizontalAlignment() != k_EHorizontalAlignmentUnset
 m_position.GetHorizontalAlignment() == k_EHorizontalAlignmentRight
@@ -5741,10 +5486,9 @@ margin-top
 maroon
 materials/panorama/panorama.vmat
 materials/panorama/panorama_fancyquad.vmat
+materialsystem2
 max-height
 max-width
-maxLen > 0
-maxLen >= sizeof( *pDest )
 medium
 mediumaquamarine
 mediumblue
@@ -5767,60 +5511,45 @@ min-height
 min-width
 mintcream
 mistyrose
-mix_blend_mode
 moccasin
 mod_alt
 mod_ctrl
 mod_shift
-motion-blur
-motion_blur
-motionblur_dirx
-motionblur_diry
-motionblur_velocity
 mouse
 mouse_4
 mouse_5
-mouse_cursor_hotspot_x
-mouse_cursor_hotspot_y
-mouse_cursor_texture_id
 mouse_invalid
 mouse_left
 mouse_middle
 mouse_right
 mousecanactivate
-msgBody.needs_clear()
-msgBody.range_formats().size() > iColorRangeFormat
-msgStart.parent_brush_index() == msgEnd.parent_brush_index()
-msgStart.parent_panel_handle() == msgEnd.parent_panel_handle()
 multiply
 n4;fA
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nBits <= nBytes*8
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
-nDestSize == 0 || pDest != NULL
 nEntry >= 0 && nEntry < pScope->vecEntries.Count()
 nFlags >= 0 && nFlags <= UINT8_MAX
+nGrowSize <= 1 << 27
 nIdx >= 0 && nIdx <= INT8_MAX
 nMaxChars > 0
+nMaxSamples <= 9
 nMinCapacity <= k_nMaxStringSize
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
 nModifiers != 0
-nNumSamples <= ARRAYSIZE( s_sampleTokens )
+nNumSamples > 0 && nNumSamples <= V_ARRAYSIZE( m_hFastBlurPS )
 nOldest >= 0 && nOldest < m_nGradientTextures
 nScope >= 0 && nScope < m_vecRegisterJSScopes.Count()
 nSize != 0
+nSrcWidth > 0 && nSrcHeight > 0
 nStartCharIndex == 0
 nStopsNeeded >= vec.Count()
+nTries < 10000000
 nWide && nTall
 name_part
 navajowhite
-needs_clear
-needs_depth
-needs_full_repaint
-needs_intermediate_texture
-needs_redraw_every_frame
 negative_int_value
 nested_type
 nl_NL
@@ -5835,17 +5564,13 @@ norwegian
 not set
 notmodified
 nowrap
+num <= NumElementsInBlock()
 number
 numbits >= 0 && numbits <= 32
 numchars >= 2
-occluded_bottom_edge
-occluded_left_edge
-occluded_right_edge
-occluded_top_edge
 offf.
 offsetX
 offsetY
-offset_distance
 oldlace
 olive
 olivedrab
@@ -5883,10 +5608,6 @@ opacity-mask-scroll-up-down
 opacity-mask-scroll-up-down: url( "file://{images}/upper_row_mask_up_down.tga" ) 0.5;</pre>
 opacity-mask-scroll-up: url( "file://{images}/upper_row_mask_up.tga" ) 0.5;
 opacity-mask: url( "file://{images}/upper_row_mask.tga" ) 0.5;
-opacity_mask
-opacity_mask_opacity
-opacity_mask_texture_id
-opaque_background
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
@@ -5902,9 +5623,7 @@ orange
 orangered
 orchid
 otherPanelID, eventToFire
-outStrings.Count() == 0
 output specified is NULL
-outputBuffer
 output_type
 overflow
 overflow: squish scroll; // scrolls contents in the Y direction</pre>
@@ -5912,7 +5631,6 @@ overscroll-long long
 overscroll-unsigned long long
 p == pLayer
 p [A\A]A^A_]
-p `0@P
 p(RARAp
 p(RAp
 p(RDRAp(p(
@@ -5920,7 +5638,9 @@ p(TAp
 p(ff.
 p(p(`
 p4.exe
-pAnimBuffer->m_unRenderCount == 1
+pAnimList->m_unRenderCount == 1
+pBasicQuadDraw->m_pRenderAttributes != nullptr
+pBasicQuadDraw->m_texType < V_ARRAYSIZE( m_hBasicQuadPS )
 pBlob
 pCParent != NULL
 pCallback == NULL
@@ -5952,6 +5672,7 @@ pLocStringDialogVars
 pLocalizationString
 pMemory[int] == 0
 pName
+pNextRenderCommand == nullptr
 pP```p`p```p`pPP@
 pPanel->BAcceptsFocus()
 pPanel->GetMouseCanActivate() == k_EMouseCanActivateUnfocused
@@ -5960,24 +5681,29 @@ pParam->m_hRequest == m_hHTTPRequest
 pParam->m_hRequest == m_hRequest
 pParent
 pPool->m_SpaceUsed < 0xFFFF
-pPpp`Pp
 pPrevJSFile.Get() && !pPrevJSFile->BMultipleReferences()
+pPreviousFrame != nullptr && pCurrentFrame != nullptr
 pProperty
-pRenderBuffer->m_Buffer.GetBytesRemaining() == 0
-pRenderBuffer->m_unRenderCount == 1
-pRenderBufferOut->m_Buffer.TellPut() == 0
+pRenderCommand->pNextRenderCommand == nullptr
+pRenderList->m_unRenderCount == 1
 pResolver
 pSchemaSystem != NULL
-pSearch
+pSimpleLoc->IsUsingContainedString()
+pStart->parent_brush_index == pEnd->parent_brush_index
+pStart->parent_panel_handle == pEnd->parent_panel_handle
+pStartStops || pEndStops
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
 pTransform
 pTransitionProperty == NULL
 pVec->Count() == 0
 pXu*H
+pXujH
 pXulH
 pXumH
+pXurH
 pXu|H
+pXu~H
 p[A\A^A_]
 p`0   @ 
 p`````
@@ -6019,12 +5745,11 @@ palegreen
 paleturquoise
 palevioletred
 panel
-panel_handle
-panel_position
 paneleventsource
 paneltype
 panorama
 panorama %short %short
+panorama RenderCommand_t memory stack
 panorama/layout/custom_game/
 panorama/panorama.vrman
 panorama::ActionInput_t::ActionInput_t(panorama::InputMessage_t &, const char *)
@@ -6057,35 +5782,8 @@ panorama::CPanoramaSymbol
 panorama::CPanoramaVideoPlayer
 panorama::CParticleSystem *panorama::CFillBrush::AccessParticleSystem()
 panorama::CReloadStyleFile*
-panorama::CRenderMsg<CMsgBeginFrame>
-panorama::CRenderMsg<CMsgBeginPaintBackground>
-panorama::CRenderMsg<CMsgBeginPaintLast>
-panorama::CRenderMsg<CMsgClearBackbuffer>
-panorama::CRenderMsg<CMsgDeletePanel>
-panorama::CRenderMsg<CMsgDeleteParticleSystem>
-panorama::CRenderMsg<CMsgDeleteTexture>
-panorama::CRenderMsg<CMsgDrawFilledRect>
-panorama::CRenderMsg<CMsgDrawTextRegion>
-panorama::CRenderMsg<CMsgDrawTexturedRect>
-panorama::CRenderMsg<CMsgEndFrame>
-panorama::CRenderMsg<CMsgEndPaintBackground>
-panorama::CRenderMsg<CMsgEndPaintLast>
-panorama::CRenderMsg<CMsgFreeCompositingLayer>
-panorama::CRenderMsg<CMsgLockTexture>
-panorama::CRenderMsg<CMsgPopAAndTContext>
-panorama::CRenderMsg<CMsgPopClipLayer>
-panorama::CRenderMsg<CMsgPopCompositingLayer>
-panorama::CRenderMsg<CMsgPopPanelContextInLayer>
-panorama::CRenderMsg<CMsgPushAAndTContext>
-panorama::CRenderMsg<CMsgPushClipLayer>
-panorama::CRenderMsg<CMsgPushCompositingLayer>
-panorama::CRenderMsg<CMsgPushPanelContextInLayer>
-panorama::CRenderMsg<CMsgRenderFilledRect>
-panorama::CRenderMsg<CMsgRenderTextRegion>
-panorama::CRenderMsg<CMsgRenderTexturedRect>
-panorama::CRenderMsg<CMsgRequestRenderCallback>
-panorama::CSource2CompositionLayer *panorama::CSource2Surface::GetOuterShadowLayer(float, float, float *, bool, float, float, float, float, uint32)
-panorama::CSource2CompositionLayer::CSource2CompositionLayer(panorama::CSource2Surface *, float, float, bool, bool, bool, const char *)
+panorama::CRenderCommandList
+panorama::CSource2CompositionLayer::CSource2CompositionLayer(panorama::CSource2Surface *, float, float, uint, const char *)
 panorama::CSource2DoubleBufferedTexture
 panorama::CSource2DoubleBufferedYUV420Texture
 panorama::CSource2Surface
@@ -6133,7 +5831,6 @@ panorama::CStylePropertyMaxWidth
 panorama::CStylePropertyMinHeight
 panorama::CStylePropertyMinWidth
 panorama::CStylePropertyMixBlendMode
-panorama::CStylePropertyMotionBlur
 panorama::CStylePropertyOpacity
 panorama::CStylePropertyOpacityMask
 panorama::CStylePropertyOverflow
@@ -6167,7 +5864,6 @@ panorama::CStyleSymbol
 panorama::CStyleSymbol::CStyleSymbol(const char *, bool)
 panorama::CTopLevelWindow
 panorama::CTopLevelWindowSource2
-panorama::CTopLevelWindowSource2::SDL::SetMouseCursor
 panorama::CTransform3D
 panorama::CTransformRotate3D
 panorama::CTransformScale3D
@@ -6220,6 +5916,7 @@ panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>
 panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>
 panorama::CUIPanelEvent4<int, int, float, float>
 panorama::CUIPanelEvent4<int, int, int, int>
+panorama::CUIRenderDeviceSource2
 panorama::CUIRenderEngine
 panorama::CUIRenderEngine::CUIAnimationThread
 panorama::CUIRenderEngine::CUIRenderThread
@@ -6245,10 +5942,8 @@ panorama::IImageSource*
 panorama::ILocalizationString *panorama::CLocalization::CreateLocalizationString(const panorama::IUIPanel *, const char *, const uint32, panorama::EStringTruncationStyle, panorama::EStringTransformStyle, bool, bool)
 panorama::ILocalizationString const*
 panorama::IUI3DSurface
-panorama::IUI3DSurface*
 panorama::IUIDoubleBufferedTexture
 panorama::IUIDoubleBufferedYUV420Texture
-panorama::IUIEngine
 panorama::IUIEvent
 panorama::IUIFileSystem
 panorama::IUIImageManager
@@ -6260,11 +5955,12 @@ panorama::IUILocalization
 panorama::IUIPanel
 panorama::IUIPanelClient *panorama::CPanel2DFactory::CreatePanelInternal(const char *, panorama::IUIPanel *)
 panorama::IUIPanelStyle
+panorama::IUIRenderDevice
 panorama::IUIRenderEngine
 panorama::IUIStyleFactory
 panorama::IUITextTextureProvider
 panorama::IUITextTextureStorage
-panorama::IUITexture*
+panorama::IUITexture
 panorama::IUIWindow
 panorama::IUIWindow*
 panorama::IUIWindowInput
@@ -6276,7 +5972,6 @@ panorama_fancyquad_vertexlayout
 panorama_rt_%s.vtex
 panorama_rt_ds_%s.vtex
 panorama_rt_pp_%s.vtex
-panorama_spew_texture_info
 panorama_text_pango
 panorama_texture.vtex
 panorama_texture_u.vtex
@@ -6285,8 +5980,6 @@ panorama_texture_y.vtex
 panorma_vertex_texturedlayout
 papayawhip
 parent-relative
-parent_brush_index
-parent_panel_handle
 parentdisabled
 parse
 parsifal.c
@@ -6310,23 +6003,8 @@ particle-system
 particle-system( ... )
 particle-velocity-max
 particle-velocity-min
-particle_flicker
-particle_flicker_variance
-particle_initial_velocity
-particle_lifespan_seconds
-particle_position
-particle_sharpness
-particle_sharpness_variance
-particle_size
-particle_size_variance
-particle_system
-particle_velocity_max
-particle_velocity_min
 particles-per-second
 particles-per-second-variance
-particles_per_second
-particles_per_second_variance
-passes
 pathName
 pchFilePath
 pchFontPath
@@ -6334,10 +6012,8 @@ pchLocalPath
 pchRemoteHost
 pchUserPath
 peachpuff
-percent
 perspective
 perspective-origin
-perspective_depth
 pffff.
 pflContentHeight && pflContentWidth
 pl_PL
@@ -6349,11 +6025,9 @@ polish
 portuguese
 position
 positionH
-position_x
-position_y
-position_z
 positive_int_value
 powderblue
+pp0 0 
 ppProperty
 pp`p@PP`PP@P@P@P@P
 pptHotspot != NULL
@@ -6381,19 +6055,16 @@ q(;wchar_t(H
 q.IsValid()
 qfffff.
 qt.IsValid()
+r<ff.
 r=ffff.
+rJu float
+rRHct
 rSHct
-rTHct
 r]ffff.
 radial
 radial( 
-radial_clip
-radial_gradient
-radii
 radr://5614542
-range_formats
 raw://
-raw_text
 readyfordisplay
 rebeccapurple
 rect( 
@@ -6401,14 +6072,13 @@ registered:
 registerforreadyevents
 rememberchildfocus
 removePositionBeforeDrop
-render_target
-rendermessages.proto
-rendermessages.proto"
+renderCommand.needs_clear
 repeat
 repeat-unsigned long long
 repeatCount
 repeated
 repeats
+require-composition-layer
 required
 resizeNumBits >= 0
 resourceName
@@ -6426,12 +6096,12 @@ rotate3d(
 rotateX(
 rotateY(
 rotateZ(
-rotate_2d_centered
 rou9fA
 round
 royalblue
 ru_RU
 russian
+s0HcU
 s2r://
 s2r://%short
 s8[A\A^A_]
@@ -6453,25 +6123,15 @@ scale3d(
 scaleX(
 scaleY(
 scaleZ(
-scale_2d_centered
-scale_2d_factors_x
-scale_2d_factors_y
 schinese
 screen
 script
 scripts
 scroll
-scroll_offset
-scroll_offset_target
-scroll_transition_x
-scroll_transition_y
-scroll_x
-scroll_y
 scrollbehavior
 scrollparenttofitwhenfocused
 seagreen
 seashell
-sector_angle
 selected
 selectionpos
 selectionposboundary
@@ -6496,7 +6156,6 @@ short%fffff.
 short&ffffff.
 short(IcT$
 short,fff.
-short-ffff.
 short`E9up
 shrink
 sienna
@@ -6507,7 +6166,6 @@ sint64
 size < 1024 * 1024
 size >= 0
 size_t CUtlStringBuilder::VAppendFormat(const char *, __va_list_tag *)
-sjfffff.
 skyblue
 slateblue
 slategray
@@ -6522,17 +6180,13 @@ sound-out
 source_code_info
 space
 spanish
-spread_distance
 springgreen
 spw&H
 squish
 stackLevel >= 0 && stackLevel < m_errorIndex
 start
+start >= 0 && start <= Count()
 start.GetType() == end.GetType() && ( start.GetType() == CUILength::k_EUILengthLength || start.GetType() == CUILength::k_EUILengthPercent || start.GetType() == CUILength::k_EUILengthWidthPercentage || start.GetType() == CUILength::k_EUILengthHeightPercentage || start.GetType() == CUILength::k_EUILengthFillParentFlow )
-start_angle
-start_index
-start_position
-start_time
 static KeyValues *KeyValues::FromJSON(CUtlBuffer &)
 static bool panorama::CLocalizationStringDialogVariables::BParseDialogVariables(const char *, CCopyableUtlVector<panorama::DialogVariable_t> &, bool)
 static bool panorama::CStyleFileSet::ApplyMatchedStylesToPanelStyle(panorama::CPanelStyle *, const CUtlVector<panorama::CascadeStyleFileInfo_t> &, panorama::EStyleRepaint &, bool &)
@@ -6550,7 +6204,6 @@ static panorama::CPanoramaSymbol panorama::DumpMemory::GetEventType()
 static panorama::CPanoramaSymbol panorama::InputFocusSet::GetEventType()
 static panorama::CPanoramaSymbol panorama::JSScheduledFunction::GetEventType()
 static panorama::CPanoramaSymbol panorama::PlaySoundEffect::GetEventType()
-static panorama::CPanoramaSymbol panorama::QueueTextureDelete::GetEventType()
 static panorama::CPanoramaSymbol panorama::ReloadChangedUIFiles::GetEventType()
 static panorama::CPanoramaSymbol panorama::ReloadStyleFile::GetEventType()
 static panorama::CPanoramaSymbol panorama::RetryStyleReload::GetEventType()
@@ -6624,10 +6277,6 @@ std::exception::what() const
 std::exception::~exception()
 std::nothrow
 std::terminate()
-stddev_hor
-stddev_ver
-steam://openurl/
-steam://openurl_external/
 steamcontroller_flow_interval
 steamcontroller_flow_sensitivity
 steamcontroller_haptic_intensity
@@ -6666,22 +6315,16 @@ steampad_stick1_up
 steampad_x
 steampad_y
 steelblue
-stopsNeeded >= pColorStop->size()
-strength
-strikethrough
 string
 string_value
 stringify
 strings::Substitute format string invalid: asked for "$
 strnlen
 style
-style_symbol
 styles
+subject.OU
 subtype mismatch
 success
-suppress_clip_to_bounds
-surface_height
-surface_width
 sv_SE
 swedish
 symType.IsValid()
@@ -6691,7 +6334,6 @@ t$(H9
 t$0H9
 t$8IcD$0M
 t$@H9
-t$H9[8u
 t$`Hc
 t$dtf
 t$fff.
@@ -6701,32 +6343,28 @@ t.Ic~(H
 t.Ic~0H
 t.Ic~8H
 t.Ic~<H
-t.Mc~PJ
 t.ff.
 t.fff.
 t.fffff.
 t0IcD$,H
 t0IcU,H
 t1IcD$,H
+t1Mc|$LI
 t1ffffff.
 t2IcL$,H
 t2ff.
-t3fff.
 t3fffff.
-t4Hc{
 t4ffff.
 t5Hc_,H
 t5IcV,L
 t5IcW,L
 t5fffff.
-t6ff.
 t6ffffff.
 t7IcT$,L
 t7fff.
 t8IcV,L
 t8ffff.
 t9IcG
-t9IcGLH
 t9ffff.
 t9fffff.
 tAfffff.
@@ -6737,6 +6375,7 @@ tFIcG,L
 tFpLi
 tHA9w8w6H
 tHIcD$
+tHfff.
 tIfff.
 tIffff.
 tKHcU
@@ -6746,9 +6385,11 @@ tOffffff.
 tRNS chunk has out-of-range samples for bit_depth
 tRNS chunk not allowed with alpha channel
 tSMct$
+tVA9_
 tVffffff.
 tXEtuPL
 tXEtu\L
+tZD;u
 tZLc{
 tabindex
 tchinese
@@ -6765,64 +6406,34 @@ text-overflow: clip;
 text-overflow: shrink;
 text-shadow
 text-transform
-text_align
-text_chars
-text_encoding
-text_shadow
 textshadow_blur
 texture-sampling
 texture-sampling: alpha-only;</pre>
-texture_bottom_right
-texture_id
-texture_opacity
-texture_pointer
-texture_sample_mode
-texture_serial
-texture_top_left
 tfD;}
 tfI9D$Xt_H
 tfff.
 tgD;unsigned long
 th_TH
 the global scope
+this->m_bOkToLock
+this->m_nVertexIncrement == 1
 thistle
 timeout
-timing_func
 tlfff.
 tm~71
+to == nullptr
 tomato
 tooltip-arrow-position
 tooltip-body-position
 tooltip-position
 tooltip-position: left bottom;</pre>
-top_left
-top_left_padding
 topleft
+total
 tr_TR
 trailing_comments
 transform
 transform-origin
 transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );</pre>
-transform_m00
-transform_m01
-transform_m02
-transform_m03
-transform_m10
-transform_m11
-transform_m12
-transform_m13
-transform_m20
-transform_m21
-transform_m22
-transform_m23
-transform_m30
-transform_m31
-transform_m32
-transform_m33
-transform_matrix
-transform_origin
-transform_perspective
-transform_perspective_origin
 transition
 transition-delay
 transition-delay: 0.0s, 1.2s;</pre>
@@ -6832,13 +6443,13 @@ transition-property
 transition-timing-function
 transition-timing-function: cubic-bezier( 0.785, 0.385, 0.555, 1.505 );</pre>
 transition-timing-function: ease-in-out, linear;
-transition_data
 translate3d(
 translate3d( 
 translateX(
 translateY(
 translateZ(
 transparent
+tsD;}
 turkish
 turquoise
 tw~cM
@@ -6862,36 +6473,41 @@ typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<w
 typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
 u	L9G
 u!H9{
+u!ffff.
 u#D;\
 u%H9y
 u&HcQ
-u+...)fffff.
+u&z$f
+u(...&f.
+u)...'A
 u,...*H
+u-ffff.
+u/...-D
 u/ffffff.
 u0A;]8r
 u0w'H
 u1D9t
 u1D9|
 u4D;\
-u5ff.
-u6z4H
-u7ffff.
+u4z2M
 u7z5H
 u8I9]
-u8fffff.
 u8z6E
-u9ffffff.
 u9z7H
-u;z9H
+u;ff.
+u<...:1
+u=ffff.
 u>H;]
+u>fffff.
 u?M9D$
 u?M9G
 u@...>E
-u@Mc}8I
-uAz?A
-uEff.
+uDzBA
+uDzBH
 uFD"long double
 uGI9~
+uHMc}@I
+uHzFD
 uHzFE
 uJzHA
 uLM9w
@@ -6899,18 +6515,19 @@ uMI9~
 uMfffff.
 uNzLI
 uPfAi
+uPzND
+uRzPH
 uYfffff.
 u\Hc{ H
 u\fff.
 uaLck
 ubz`Ic
+udzb1
 uhzfHc
-ui_scale_factor
 uint32
 uint32 panorama::CUIEngine::InitiateAsyncJSONWebAPIRequestInternal(EHTTPMethod, CUtlString, panorama::IUIPanel *, JSONWebAPIDelegate_t, void *, panorama::CJSONWebAPIParams *, HTTPCookieContainerHandle)
 uint32 panorama::CalcBufferLine(CUtlBuffer &)
 uint64
-uint64 V_atoui64(const char *)
 ujzhI
 uk_UA
 ukrainian
@@ -6929,12 +6546,18 @@ unsigned __int128 char::* I
 unsigned __int128@panorama::ILocalizationString
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
+unsigned short	9K@
 unsigned short	[A^]
-unsigned short DA9w4|+
+unsigned short HA9w8|8
+unsigned short Icv|I
+unsigned short LA9w<|+
+unsigned short TA9wD|E
 unsigned short fff.
-unsigned short!Hcs|H
 unsigned short!Ict$|I
+unsigned short!Icw|I
+unsigned short!fff.
 unsigned short"IcF
+unsigned short"Icu|I
 unsigned short#fff.
 unsigned short%ffff.
 unsigned short%fffff.
@@ -6942,15 +6565,11 @@ unsigned short%ffffff.
 unsigned short&H9[8tUH
 unsigned short&fffff.
 unsigned short'IcO,I
-unsigned short'L9t
 unsigned short(L;}
 unsigned short)A#F
 unsigned short)A#G
 unsigned short*ffffff.
 unsigned short+Hc{
-unsigned short+Ic~(H
-unsigned short+Ic~,H
-unsigned short+Ic~4H
 unsigned short,A9]
 unsigned short,Lcq
 unsigned short-IcG,L
@@ -6961,7 +6580,6 @@ unsigned short/ffffff.
 unsigned short:fffff.
 unsigned short<IcW,L
 unsigned short=fffff.
-unsigned short>fff.
 unsigned short>ffff.
 unsigned short[fff.
 uoffffff.
@@ -6971,6 +6589,7 @@ url( %short )
 utHc]
 u|fff.
 u~fffff.
+v0HcS$H
 v0ff.
 v8::Array::Length() const
 v8::Array::New(v8::Isolate*, int)
@@ -7076,16 +6695,14 @@ vcss_c
 vcssu+H
 vec.Count() == vec2.Count()
 vecTransforms[int] != NULL
-velocity
 vertical
 vertical-align
-vertical_offset
 vfff.
 violet
+virtual bool IResourceTypeManager::IsStreamingDataAlreadyLoaded(ResourceHandle_t)
 virtual bool panorama::CLayoutManager::BConvertHTTPPathToLocalP4Path(const char *, CUtlString &)
 virtual bool panorama::CLayoutManager::UpdateStyleInMemory(panorama::IUILayoutManager::EUpdateStyleType, panorama::CPanoramaSymbol, uint, const char *)
 virtual bool panorama::CLocalizationStringDialogVariablesDerived::AppendText(const char *)
-virtual bool panorama::CSource2Surface::BDeleteTexture(panorama::IUITexture *)
 virtual bool panorama::CSource2UIFileSystem::LoadFileIntoBuffer(const char *, CUtlBuffer &, bool, FileChangeCallback_t, uint)
 virtual bool panorama::CStylePropertyTransform3D::BSetFromString(panorama::CStyleSymbol, const char *)
 virtual bool panorama::CStylePropertyTransform3D::operator==(const panorama::CStyleProperty &) const
@@ -7099,7 +6716,6 @@ virtual bool panorama::CUIPanel::BLoadLayoutSnippet(const char *)
 virtual bool panorama::CUIPanel::BParsePanelEvent(panorama::CPanoramaSymbol, const char *, panorama::IUIPanel *)
 virtual const char *panorama::CLocalizationStringDialogVariablesDerived::StringNoTransform() const
 virtual float panorama::CUISoundSystem::GetSoundVolume(panorama::ESoundType)
-virtual int CConCommandMemberAccessor<panorama::CUIEngineSource2>::CommandCompletionCallback(const char *, CUtlVector<CUtlString> &) [T = panorama::CUIEngineSource2]
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
 virtual int IResourceTypeManager::GetNonStreamingDataLoadSize() const
 virtual int panorama::CImageProxySource::Release()
@@ -7108,15 +6724,13 @@ virtual int panorama::CUIEngine::StartRegisterJSScope(const char *, const char *
 virtual panorama::CImageProxySource::~CImageProxySource()
 virtual panorama::CSource2Surface::~CSource2Surface()
 virtual panorama::CUIEngine::~CUIEngine()
-virtual panorama::IImageSource *panorama::CImageResourceManager::LoadImageFromURL(const panorama::IUIPanel *, const char *, const char *, bool, panorama::EImageFormat, int32, int32, bool)
+virtual panorama::IImageSource *panorama::CImageResourceManager::LoadImageFromURL(const panorama::IUIPanel *, const char *, const char *, bool, panorama::EImageFormat, const panorama::UIImageLoadParams_t &)
 virtual panorama::IUIEvent *panorama::CUIEngine::CreateEventFromString(panorama::IUIPanel *, const char *, const char **)
 virtual panorama::IUIPanel *panorama::CUIEngine::CreatePanel()
 virtual panorama::IUIPanel *panorama::CUIPanel::GetJavaScriptContextParent() const
 virtual panorama::PanelHandle_t panorama::CUIEngine::GetPanelHandle(const panorama::IUIPanel *)
 virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
 virtual v8::Persistent<v8::Object> *panorama::CUIEngine::CreateV8ObjectInstance(const char *, void *, panorama::IUIJSObject *)
-virtual void *CPanoramaTypeManager::HandleResourceDataBlockingLoad(const char *, void *, IRD_BlockingLoadResourceFileDataUtils *, const ResourceFileHeader_t **, bool *)
-virtual void CConCommandMemberAccessor<panorama::CUIEngineSource2>::CommandCallback(const CCommandContext &, const CCommand &) [T = panorama::CUIEngineSource2]
 virtual void CPanoramaTypeManager::AllocateResource(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *)
 virtual void CPanoramaTypeManager::DeallocateResource(void *, IResourceDeallocatorUtils *)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
@@ -7134,10 +6748,11 @@ virtual void panorama::CLoadInMemoryImageTask::OnStartLoad()
 virtual void panorama::CLocalization::InstallCustomDialogVariableHandler(const char *, PFNLocalizeDialogVariableHandler, PFNParseDialogVariableModifiersHandler, void *)
 virtual void panorama::CLocalization::RemoveCustomDialogVariableHandler(const char *)
 virtual void panorama::CLocalization::SetLongestStringForToken(const panorama::ILocalizationString *, panorama::ILocalizationStringSizeResolver *)
-virtual void panorama::CLocalizationStringDialogVariablesDerived::Recalculate(const CUtlString *, int)
-virtual void panorama::CLocalizationStringSimple::Recalculate(const CUtlString *, int)
+virtual void panorama::CLocalizationStringDialogVariablesDerived::Recalculate(const char **, int)
+virtual void panorama::CLocalizationStringSimple::Recalculate(const char **, int)
 virtual void panorama::CPanelStyle::FindPropertyInfo(panorama::CStyleSymbol, panorama::CStyleProperty **, panorama::PropertyInTransition_t **, CUtlVector<panorama::CActiveAnimation *> *)
 virtual void panorama::CPanelStyle::SetHeight(panorama::CUILength)
+virtual void panorama::CPanelStyle::SetHeightWithoutTransition(panorama::CUILength)
 virtual void panorama::CPanelStyle::SetMaxHeight(panorama::CUILength)
 virtual void panorama::CPanelStyle::SetMaxWidth(panorama::CUILength)
 virtual void panorama::CPanelStyle::SetMinHeight(panorama::CUILength)
@@ -7145,18 +6760,19 @@ virtual void panorama::CPanelStyle::SetMinWidth(panorama::CUILength)
 virtual void panorama::CPanelStyle::SetTransform3D(const CUtlVector<panorama::CTransform3D *> &)
 virtual void panorama::CPanelStyle::SetTransform3DWithoutTransition(const CUtlVector<panorama::CTransform3D *> &)
 virtual void panorama::CPanelStyle::SetWidth(panorama::CUILength)
-virtual void panorama::CSource2Surface::BeginFrame(const CRenderMsg<CMsgBeginFrame> &)
-virtual void panorama::CSource2Surface::DrawFilledRect(const CRenderMsg<CMsgRenderFilledRect> &)
-virtual void panorama::CSource2Surface::DrawTextRegion(const CRenderMsg<CMsgRenderTextRegion> &)
-virtual void panorama::CSource2Surface::DrawTexturedRect(const CRenderMsg<CMsgRenderTexturedRect> &)
-virtual void panorama::CSource2Surface::EndFrame(const CRenderMsg<CMsgEndFrame> &)
+virtual void panorama::CPanelStyle::SetWidthWithoutTransition(panorama::CUILength)
+virtual void panorama::CSource2Surface::BeginFrame(const panorama::BeginFrameRenderCommand_t &)
+virtual void panorama::CSource2Surface::DrawFilledRect(const panorama::RenderFilledRectRenderCommand_t &)
+virtual void panorama::CSource2Surface::DrawTextRegion(const panorama::RenderTextRegionCommand_t &)
+virtual void panorama::CSource2Surface::DrawTexturedRect(const panorama::RenderTexturedRectRenderCommand_t &)
+virtual void panorama::CSource2Surface::EndFrame(const panorama::EndFrameRenderCommand_t &)
 virtual void panorama::CSource2Surface::FreeTexture(UITextTextureHandle_t)
-virtual void panorama::CSource2Surface::PopClipLayer(const CRenderMsg<CMsgPopClipLayer> &)
-virtual void panorama::CSource2Surface::PopCompositingLayer(const CRenderMsg<CMsgPopCompositingLayer> &)
-virtual void panorama::CSource2Surface::PopPanelContextInLayer(const CRenderMsg<CMsgPopPanelContextInLayer> &)
-virtual void panorama::CSource2Surface::PushClipLayer(const CRenderMsg<CMsgPushClipLayer> &)
-virtual void panorama::CSource2Surface::PushCompositingLayer(const CRenderMsg<CMsgPushCompositingLayer> &)
-virtual void panorama::CSource2Surface::PushPanelContextInLayer(const CRenderMsg<CMsgPushPanelContextInLayer> &)
+virtual void panorama::CSource2Surface::PopClipLayer(const panorama::PopClipLayerRenderCommand_t &)
+virtual void panorama::CSource2Surface::PopCompositingLayer(const panorama::PopCompositingLayerRenderCommand_t &)
+virtual void panorama::CSource2Surface::PopPanelContextInLayer(const panorama::PopPanelContextInLayerRenderCommand_t &)
+virtual void panorama::CSource2Surface::PushClipLayer(const panorama::PushClipLayerRenderCommand_t &)
+virtual void panorama::CSource2Surface::PushCompositingLayer(const panorama::PushCompositingLayerRenderCommand_t &)
+virtual void panorama::CSource2Surface::PushPanelContextInLayer(const panorama::PushPanelContextInLayerRenderCommand_t &)
 virtual void panorama::CStylePropertyAnimationProperties::ToString(CFmtStr1024 *) const
 virtual void panorama::CStylePropertyBackgroundImage::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
 virtual void panorama::CStylePropertyBackgroundImage::OnStartingTransition(panorama::CStyleProperty *)
@@ -7169,7 +6785,6 @@ virtual void panorama::CStylePropertyFillColor::Interpolate(panorama::IUIPanel *
 virtual void panorama::CStylePropertyFont::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
 virtual void panorama::CStylePropertyHueShift::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
 virtual void panorama::CStylePropertyLineHeight::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
-virtual void panorama::CStylePropertyMotionBlur::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
 virtual void panorama::CStylePropertyOpacity::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
 virtual void panorama::CStylePropertyPerspective::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
 virtual void panorama::CStylePropertyPerspectiveOrigin::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)
@@ -7242,11 +6857,11 @@ virtual void panorama::CUIWindowInput::SetInputFocus(panorama::IUIPanel *, bool,
 visibility
 visible
 vjs_c
+void *CMemoryStack::Alloc(unsigned int, bool)
 void *CUtlMemoryPoolBase::Alloc()
 void CBitStringT<CVariableBitStringBase>::SetBit(int) [BASE_OPS = CVariableBitStringBase]
-void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = int]
-void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned int]
-void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned long long]
+void CDynamicVertexData<Source2FancyQuadVertex_t>::Lock(int) [T = Source2FancyQuadVertex_t]
+void CDynamicVertexData<Source2VertexTextured_t>::Lock(int) [T = Source2VertexTextured_t]
 void CFiber::ConstructThreadFiber(size_t)
 void CFiber::DestructThreadFiber()
 void CFmtStrN<1024, false>::AppendFormat(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
@@ -7256,6 +6871,7 @@ void CKeyValuesTokenReader::SeekBackOneToken()
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
 void CMemberFuncProxyBase<panorama::CSource2UIFileSystem *, void (panorama::CSource2UIFileSystem::*)(IAsyncFileRequest *, const char *, CUtlBuffer *, CUtlDelegate<void (const char *, CUtlBuffer &, bool)>), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = panorama::CSource2UIFileSystem *, FUNCTION_TYPE = void (panorama::CSource2UIFileSystem::*)(IAsyncFileRequest *, const char *, CUtlBuffer *, CUtlDelegate<void (const char *, CUtlBuffer &, bool)>), MEM_POLICY = CFuncMemPolicyNone]
+void CMemoryStack::RegisterAllocation()
 void COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CFiber>, COrderedResolve_NoResolve, true>::AddRef(bool) [T = GenericThreadLocals::CThreadLocalPtr<CFiber>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<CFiber> >::InternalLock(bool) [T = GenericThreadLocals::CThreadLocalPtr<CFiber>]
@@ -7268,20 +6884,22 @@ void CSosFieldDataFloat::Init()
 void CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown() [TResourceInfoData = InfoForResourceTypeCTextureBase]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
 void CStrongHandle<ResourceBindingVoid_t>::Shutdown() [TResourceInfoData = ResourceBindingVoid_t]
+void CSysMemDynamicVertexData<Source2FancyQuadVertex_t>::AdvanceVertex() [T = Source2FancyQuadVertex_t]
+void CSysMemDynamicVertexData<Source2VertexTextured_t>::AdvanceVertex() [T = Source2VertexTextured_t]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, &CUtlMemoryPoolBase::FreeList_t::pNext>::Push(T *) [T = CUtlMemoryPoolBase::FreeList_t, POINTER_TYPE = CUtlMemoryPoolBase::FreeList_t, CONTAINER_TYPE = CUtlMemoryPoolBase::FreeList_t, LINKED_LIST_PTR = &CUtlMemoryPoolBase::FreeList_t::pNext]
 void CTSQueue<CAsyncIOResult_t, false>::Purge() [T = CAsyncIOResult_t, bTestOptimizer = false]
 void CTSQueue<CRefCounted<CRefCountServiceBase<true, CRefMT> > *, false>::Purge() [T = CRefCounted<CRefCountServiceBase<true, CRefMT> > *, bTestOptimizer = false]
 void CTSQueue<panorama::CGamepadController::RemoteGamepadInput_t, false>::Purge() [T = panorama::CGamepadController::RemoteGamepadInput_t, bTestOptimizer = false]
 void CTSQueue<panorama::CUIEngine::QueuedEvent_t, false>::Purge() [T = panorama::CUIEngine::QueuedEvent_t, bTestOptimizer = false]
-void CTSQueue<unsigned int, false>::Purge() [T = unsigned int, bTestOptimizer = false]
+void CUtlBlockMemory<char, int>::ChangeSize(int) [T = char, I = int]
+void CUtlBlockMemory<char, int>::Init(int, int) [T = char, I = int]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::AssumeMemory(void *, int, int, int)
 void CUtlBuffer::GetString(char *, int)
 void CUtlBuffer::Put(const void *, int)
 void CUtlBuffer::SetBufferType(bool, bool)
 void CUtlBuffer::SetExternalBuffer(void *, int, int, int)
-void CUtlBuffer::VaPrintf(const char *, __va_list_tag *)
 void CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashMapFunctor_t<CUtlString> >::RemoveAt(IndexType_t) [K = CUtlString, T = int, L = CDefEquals<CUtlString>, H = HashMapFunctor_t<CUtlString>]
 void CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashMapFunctor_t<CUtlString> >::RemoveAt(IndexType_t) [K = CUtlString, T = panorama::CLocalization::DialogVariableHandler_t, L = CDefEquals<CUtlString>, H = HashMapFunctor_t<CUtlString>]
 void CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture *, CUtlMemory<panorama::IInputCapture *, int> > *, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashMapFunctor_t<panorama::CPanelPtr<panorama::IUIPanel> > >::RemoveAt(IndexType_t) [K = panorama::CPanelPtr<panorama::IUIPanel>, T = CUtlVector<panorama::IInputCapture *, CUtlMemory<panorama::IInputCapture *, int> > *, L = CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, H = HashMapFunctor_t<panorama::CPanelPtr<panorama::IUIPanel> >]
@@ -7325,9 +6943,12 @@ void CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, unsigned short, fa
 void CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<panorama::CUIWindowInput::TopMostFocus_t, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = panorama::CUIWindowInput::TopMostFocus_t, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<panorama::CUIWindowInput::TopMostFocus_t, unsigned short>, unsigned short>]
 void CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<panorama::CUIWindowInput::TopMostFocus_t, unsigned short>, unsigned short> >::RemoveAll() [T = panorama::CUIWindowInput::TopMostFocus_t, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<panorama::CUIWindowInput::TopMostFocus_t, unsigned short>, unsigned short>]
 void CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<panorama::CUIWindowInput::TopMostFocus_t, unsigned short>, unsigned short> >::Unlink(I) [T = panorama::CUIWindowInput::TopMostFocus_t, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<panorama::CUIWindowInput::TopMostFocus_t, unsigned short>, unsigned short>]
+void CUtlMemory<CUtlHashMap<const char *, int, CDefCaselessStringEquals, FastCaselessStringHashFunctor>::HashBucket_t, int>::Swap(CUtlMemory<T, I> &) [T = CUtlHashMap<const char *, int, CDefCaselessStringEquals, FastCaselessStringHashFunctor>::HashBucket_t, I = int]
+void CUtlMemory<CUtlHashMap<const char *, int, CDefCaselessStringEquals, FastCaselessStringHashFunctor>::Node_t, int>::Swap(CUtlMemory<T, I> &) [T = CUtlHashMap<const char *, int, CDefCaselessStringEquals, FastCaselessStringHashFunctor>::Node_t, I = int]
 void CUtlMemory<UtlRBTreeNode_t<panorama::CPanelPtr<panorama::IUIPanel>, int>, int>::Swap(CUtlMemory<T, I> &) [T = UtlRBTreeNode_t<panorama::CPanelPtr<panorama::IUIPanel>, int>, I = int]
 void CUtlMemory<panorama::CActiveAnimation *, int>::Swap(CUtlMemory<T, I> &) [T = panorama::CActiveAnimation *, I = int]
 void CUtlMemory<panorama::CBackgroundImageLayer *, int>::Swap(CUtlMemory<T, I> &) [T = panorama::CBackgroundImageLayer *, I = int]
+void CUtlMemory<panorama::CLocalization::LocEntry_t, int>::Swap(CUtlMemory<T, I> &) [T = panorama::CLocalization::LocEntry_t, I = int]
 void CUtlMemory<panorama::CPanelPtr<panorama::IUIPanel>, int>::Swap(CUtlMemory<T, I> &) [T = panorama::CPanelPtr<panorama::IUIPanel>, I = int]
 void CUtlMemory<panorama::CPanoramaSymbol, int>::Swap(CUtlMemory<T, I> &) [T = panorama::CPanoramaSymbol, I = int]
 void CUtlMemory<panorama::CUIWindowInput::QueuedPanelEvent_t, int>::Swap(CUtlMemory<T, I> &) [T = panorama::CUIWindowInput::QueuedPanelEvent_t, I = int]
@@ -7450,9 +7071,6 @@ void CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeReq
 void CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int> >::FreeNode(I) [T = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int> >::RemoveAt(I) [T = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int> >::FreeNode(I) [T = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int> >::RemoveAt(I) [T = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, I = int, L = CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, panorama::IUITexture *, int, CDefLess<unsigned int> >::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int> >::FreeNode(I) [T = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, I = int, L = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, I = int, L = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int> >::RemoveAt(I) [T = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, I = int, L = CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CUtlVector<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, CUtlMemory<panorama::CUIAnimationEngine::StoppedTransitionProperty_t, int> > *, int, CDefLess<unsigned long long> >::Node_t, int>, int>]
@@ -7506,10 +7124,9 @@ void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<
 void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlString::SetDirect(const char *, int)
 void CUtlStringBuilder::Data::SetError(bool)
+void CVariableBitStringBase::AllocInts(int)
 void CVariableBitStringBase::ReallocInts(int)
 void CVariableBitStringBase::Resize(int)
-void CVertexDataBase<Source2FancyQuadVertex_t>::AdvanceVertex() [T = Source2FancyQuadVertex_t]
-void CVertexDataBase<Source2VertexTextured_t>::AdvanceVertex() [T = Source2VertexTextured_t]
 void CWeakHandle<InfoForResourceTypeCPanoramaLayout>::InitUntyped(ResourceHandle_t) [T = InfoForResourceTypeCPanoramaLayout]
 void CWeakHandle<InfoForResourceTypeCPanoramaScript>::InitUntyped(ResourceHandle_t) [T = InfoForResourceTypeCPanoramaScript]
 void CWeakHandle<InfoForResourceTypeCPanoramaStyle>::InitUntyped(ResourceHandle_t) [T = InfoForResourceTypeCPanoramaStyle]
@@ -7520,6 +7137,7 @@ void ConnectInterfaces(CreateInterfaceFn *, int)
 void DisconnectInterfaces()
 void DisconnectTier2Libraries()
 void GetWrapFlowXY(const panorama::IUIPanel *, panorama::EFlowDirection, int *, int *)
+void InterpolateColorStops(float, const CRenderDataList<panorama::ColorStop_t> *, uint32, const CRenderDataList<panorama::ColorStop_t> *, uint32, CRenderDataList<panorama::ColorStop_t> &, panorama::CRenderCommandList &)
 void JSDispatchEventHelper(const v8::FunctionCallbackInfo<v8::Value> &, bool, CUtlMap<panorama::CPanoramaSymbol, panorama::UIEventFactory, int, CDefLess<panorama::CPanoramaSymbol> > &)
 void KeyValues::AddSubKey(KeyValues *)
 void KeyValues::AddSubkeyUsingKnownLastChild(KeyValues *, KeyValues *)
@@ -7536,16 +7154,12 @@ void QuaternionSlerpNoAlign(const Quaternion &, const Quaternion &, float, Quate
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void V8FatalErrorHandler(const char *, const char *)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
-void _V_AppendSlash(char *, int, char)
 void _V_hextobinary(const char *, int, byte *, int)
-void _V_strncpy(char *, const char *, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
 void panorama::CActiveAnimation::GetAffectedPanelLayoutFlags(panorama::CPanelStyle *, bool *, bool *)
 void panorama::CAnimationAndTransformContext::GetExplicitClipRect(float *, float *, float *, float *)
-void panorama::CAnimationAndTransformContext::GetRadialClip(float *, float *, float *, float *)
 void panorama::CAnimationAndTransformContext::SetPosition(float, float, float)
 void panorama::CBackgroundImageLayer::CalculateFinalPosition(float *, float *, float, float, float, float)
 void panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Insert(K, panorama::CSource2CompositionLayer *, double) [K = unsigned long long, L = CDefLess<unsigned long long>, ALLOW_DUPES = false]
@@ -7556,7 +7170,7 @@ void panorama::CFillBrush::GetRadialGradientValues(panorama::CUILength &, panora
 void panorama::CFillBrush::GetStartAndEndPoints(panorama::CUILength &, panorama::CUILength &, panorama::CUILength &, panorama::CUILength &) const
 void panorama::CFillBrush::NormalizeStopCount(CUtlVector<panorama::CGradientColorStop> &, int, Color)
 void panorama::CImageData::AsyncCompleteLoadOnMainThread(const byte *, int, CUtlDelegate<void (panorama::CImageData *, bool)>)
-void panorama::CImageResourceManager::AddLoad(panorama::CFileResource &, panorama::EImageFormat, bool, int32, int32, bool)
+void panorama::CImageResourceManager::AddLoad(panorama::CFileResource &, panorama::EImageFormat, bool, const panorama::UIImageLoadParams_t &)
 void panorama::CJSAsyncWebRequest::OnHTTPRequestCompleted(HTTPRequestCompleted_t *, bool)
 void panorama::CLayoutFile::AddSnippet(const char *, panorama::PanelDescription_t *)
 void panorama::CLayoutManager::ClearAsyncLoad(panorama::CLoadLayoutFileAsync *)
@@ -7568,42 +7182,82 @@ void panorama::CLoadFromVTexTask::OnCurrentManifestLoaded(HResourceManifest)
 void panorama::CLoadLayoutFileAsync::OnIncludeRequestFinished(HTTPRequestCompleted_t *, bool)
 void panorama::CLoadLayoutFileAsync::OnXMLRequestFinished(HTTPRequestCompleted_t *, bool)
 void panorama::CLoadLayoutFileAsync::StartLoading()
+void panorama::CLocalization::OnPanelDeleted(const panorama::IUIPanel *)
 void panorama::CLocalization::RecalculateStringFromReload(CUtlVector<CUtlString> &)
-void panorama::CPanelStyle::ClearPropertyBitFlag(panorama::CStyleSymbol)
+void panorama::CLocalization::Release(const panorama::IUIPanel *, panorama::ILocalizationString *)
+void panorama::CPanelStyle::AddBrushesToRenderData(CUtlVectorFixed<CFillBrushCollection::FillBrush_t, 8> &, panorama::FillBrushCollection_t &, panorama::CRenderCommandList &, float, float)
+void panorama::CPanelStyle::ClearHasProperty(panorama::CStyleSymbol, int)
 void panorama::CPanelStyle::SetAnimationProperties(panorama::CStylePropertyAnimationProperties *)
-void panorama::CPanelStyle::SetPropertyBitFlag(panorama::CStyleSymbol)
-void panorama::CPanelStyle::SetRenderMsgData(CMsgPoint *, panorama::CStylePropertyPosition *, void *)
-void panorama::CPanelStyle::SetRenderMsgData(CMsgTransformOriginData *, panorama::CStylePropertyTransformOrigin *, void *)
+void panorama::CPanelStyle::SetHasProperty(panorama::CStyleSymbol, int)
+void panorama::CPanelStyle::SetRenderData(panorama::RenderPoint_t &, panorama::CStylePropertyPosition *, void *)
+void panorama::CPanelStyle::SetRenderData(panorama::TransformOriginData_t &, panorama::CStylePropertyTransformOrigin *, void *)
+void panorama::CRenderDataList<panorama::ColorStop_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::ColorStop_t]
+void panorama::CRenderDataList<panorama::FillBrush_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::FillBrush_t]
+void panorama::CRenderDataList<panorama::Particle_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::Particle_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<float>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<float>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<float>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<float>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint2D_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RenderPoint2D_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint2D_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RenderPoint2D_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<unsigned int>::AnimationData_t]
+void panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t]
+void panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::AppendNode(panorama::CRenderDataList::ListNode_t *) [T = panorama::RenderTextRangeFormat_t]
 void panorama::CSSHelpers::AppendFillBrush(CFmtStr1024 *, const panorama::CFillBrush &)
 void panorama::CSSHelpers::AppendTransform(CFmtStr1024 *, panorama::CTransform3D *)
 void panorama::CSource2CompositionLayer::DrawBorder(panorama::CSource2Surface *)
 void panorama::CSource2CompositionLayer::PopClipLayer()
-void panorama::CSource2CompositionLayer::PopPanelContextInLayer(const CMsgPopPanelContextInLayer &)
+void panorama::CSource2CompositionLayer::PopPanelContextInLayer(const panorama::PopPanelContextInLayerRenderCommand_t &)
 void panorama::CSource2CompositionLayer::PushCliplayersAndBeginDraw(float, float, float, float)
 void panorama::CSource2DoubleBufferedYUV420Texture_RecycleCallback::Recycle(const void *)
+void panorama::CSource2Surface::BindFastBlurMaterial(float, HRenderTexture)
+void panorama::CSource2Surface::BlurLayer(panorama::CSource2CompositionLayer *, panorama::CSource2CompositionLayer *, float, Vector2D, Vector2D, Vector2D, Vector2D, bool, bool)
 void panorama::CSource2Surface::ClearCompositingLayer(panorama::CSource2CompositionLayer *)
-void panorama::CSource2Surface::ClearGPUResources()
+void panorama::CSource2Surface::DrawBasicQuads(const panorama::BasicQuadDraw_t *, int, Vector4D *, const Vector4D *)
 void panorama::CSource2Surface::DrawFancyQuad(const panorama::FancyQuadDraw_t *)
-void panorama::CSource2Surface::SetFancyQuadFillBrush(panorama::FancyQuadBrush_t &, const CMsgFillBrush &, float, float)
+void panorama::CSource2Surface::DrawInsetShadowLayer(float, float, float, float, float, float, float, bool, float, float *, bool, float *, bool, const VMatrix *, float, float, panorama::CSource2CompositionLayer *, float, float, float, float, uint32)
+void panorama::CSource2Surface::DrawOuterShadowLayer(float, float, float, float, float, float, float, bool, float, float *, bool, const VMatrix *, float, float, panorama::CSource2CompositionLayer *, bool, float, float, float, float, uint32, float)
+void panorama::CSource2Surface::SetBasicQuadFillBrush(panorama::BasicQuadDraw_t &, const panorama::FillBrush_t &)
+void panorama::CSource2Surface::SetFancyQuadFillBrush(panorama::FancyQuadBrush_t &, const panorama::FillBrush_t &, float, float)
 void panorama::CSource2UITexture::SetTextureData(void *, uint32, uint32, uint32, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
 void panorama::CStylePropertyFactory::FreeStylePropertyInternal(panorama::CStyleProperty *)
 void panorama::CStylePropertyOverflow::BAppendOverflow(CFmtStr1024 *, const panorama::EOverflowValue &) const
 void panorama::CStylePropertyTransform3D::AddTransform3D(panorama::CTransform3D *)
 void panorama::CTopLevelWindow::RemovePanel(int, bool)
-void panorama::CUIAnimationEngine::BeginFrame(const CRenderMsg<CMsgBeginFrame> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::BeginPaintBackground(const CRenderMsg<CMsgBeginPaintBackground> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::BeginPaintLast(const CRenderMsg<CMsgBeginPaintLast> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::DrawFilledRect(const CRenderMsg<CMsgDrawFilledRect> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::DrawTextRegion(const CRenderMsg<CMsgDrawTextRegion> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::DrawTexturedRect(const CRenderMsg<CMsgDrawTexturedRect> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::EndFrame(const CRenderMsg<CMsgEndFrame> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::EndPaintBackground(const CRenderMsg<CMsgEndPaintBackground> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::EndPaintLast(const CRenderMsg<CMsgEndPaintLast> &, CUtlBuffer *)
+void panorama::CUIAnimationEngine::BeginFrame(const panorama::BeginFrameRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::BeginPaintBackground(const panorama::BeginPaintBackgroundRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::BeginPaintLast(const panorama::BeginPaintLastRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::DrawFilledRect(const panorama::DrawFilledRectRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::DrawTextRegion(const panorama::DrawTextRegionRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::DrawTexturedRect(const panorama::DrawTexturedRectRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::EndFrame(const panorama::EndFrameRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::EndPaintBackground(const panorama::EndPaintBackgroundRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::EndPaintLast(const panorama::EndPaintLastRenderCommand_t &, panorama::CRenderCommandList &)
 void panorama::CUIAnimationEngine::FreeRenderOpsVector(CUtlVector<CUIAnimationEngine::RenderOperation_t *> *)
-void panorama::CUIAnimationEngine::InterpolateFillBrush(const CMsgFillBrushCollection &, CMsgRenderFillBrushCollection *)
-void panorama::CUIAnimationEngine::PopAnimationAndTransformContext(const CRenderMsg<CMsgPopAAndTContext> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::PushAnimationAndTransformContext(const CRenderMsg<CMsgPushAAndTContext> &, CUtlBuffer *)
-void panorama::CUIAnimationEngine::RequestRenderCallback(const CRenderMsg<CMsgRequestRenderCallback> &, CUtlBuffer *)
+void panorama::CUIAnimationEngine::InterpolateFillBrush(const panorama::FillBrushCollectionWithTransition_t &, panorama::FillBrushCollection_t *, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::PopAnimationAndTransformContext(const panorama::PopAAndTContextRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::PushAnimationAndTransformContext(const panorama::PushAAndTContextRenderCommand_t &, panorama::CRenderCommandList &)
+void panorama::CUIAnimationEngine::RequestRenderCallback(const panorama::RequestRenderCallbackCommand_t &, panorama::CRenderCommandList &)
 void panorama::CUIAnimationEngine::TransformQuadForContext(Vector4D *, int)
 void panorama::CUIEngine::ClearAsyncJSWebRequest(panorama::CJSAsyncWebRequest *)
 void panorama::CUIEngine::DecrementEventHandlerCount(const panorama::CPanoramaSymbol &, bool)
@@ -7616,13 +7270,44 @@ void panorama::CUIPanel::AddToTopLevelWindow()
 void panorama::CUIPanel::AdjustPositionForAlignment(float *, float *, float, float, float, float)
 void panorama::CUIPanel::OnLoadLayoutAsyncCompleteInternal(LayoutFilePtr_t, panorama::ELoadLayoutAsyncDetails, bool)
 void panorama::CUIPanel::RemoveFromTopLevelWindow()
+void panorama::CUIRenderEngine::BeginFrame(uint32, uint32, IUIEngine::ERenderTarget, Color, float, bool, bool)
+void panorama::CUIRenderEngine::CUIAnimationThread::HandleRenderCommand(panorama::RenderCommand_t &, const panorama::CUIRenderEngine::RenderCommandList_t &, panorama::CUIRenderEngine::RenderCommandList_t &)
 void panorama::CUIRenderEngine::CUIAnimationThread::RunSingleFrame()
 void panorama::CUIRenderEngine::CUIRenderThread::RunSingleFrame()
-void panorama::CUIRenderEngine::PushAnimationAndTransformContext(uint64, uint32, uint32, float, float, panorama::CPanelStyle *, bool, bool, panorama::EPanelRepaint, bool, bool, bool, bool, bool, bool)
+void panorama::CUIRenderEngine::PushAnimationAndTransformContext(uint64, uint32, uint32, float, float, panorama::CPanelStyle *, bool, bool, panorama::EPanelRepaint, bool, bool, bool, bool, bool, bool, const char *, bool, bool)
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::BorderRadiusWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::BorderWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::BoxShadowWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::BrightnessWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::ClipWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::ContrastWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::GaussianBlurWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::HueShiftWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::OpacityMaskWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::OpacityWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::Rotate2DWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::SaturationWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::Scale2DWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::TextShadowWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::TransformMatrixWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::TransformOriginWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::TransformPerspectiveOriginWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::TransformPerspectiveWithTransition_t]
+void panorama::CUIRenderEngine::SetupPaintData(T **, panorama::CPanelStyle *) [T = panorama::WashColorWithTransition_t]
 void panorama::CUIRenderEngine::StartNewPaintBuffer()
 void panorama::CUIWindowInput::SetMouseDownPtr(panorama::IUIPanel *, panorama::MouseCode)
 void panorama::CVideoPlayerEventDispatcher::RegisterEventCallback(VideoPlayerEventDelegate_t)
 void panorama::CVideoPlayerEventDispatcher::UnregisterEventCallback(VideoPlayerEventDelegate_t)
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::BorderData_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::BoxShadowData_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::LinearGradient_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::ParticleSystem_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::RadialClipData_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::RadialGradient_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::RadiusData_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::RenderMatrix4x4_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::TextInlineObject_t]
+void panorama::CopyRenderDataPointer(T *&, T *const &, panorama::CRenderCommandList &) [T = panorama::TextShadowData_t]
 void panorama::GetAnimationCurveControlPoints(panorama::EAnimationTimingFunction, Vector2D *)
 void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = bool (CDragStartCallbacks::*)() const]
 void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = bool (panorama::CImageProxySource::*)()]
@@ -7632,7 +7317,6 @@ void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = int (panor
 void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const]
 void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = panorama::EImageFormat (panorama::CImageProxySource::*)()]
 void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = panorama::IUIPanel *(CDragStartCallbacks::*)() const]
-void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = unsigned int (panorama::CImageProxySource::*)()]
 void panorama::GetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = void (panorama::CUIPanel::*)(const v8::FunctionCallbackInfo<v8::Value> &)]
 void panorama::PanoramaTypeToV8Param(T *, v8::Handle<v8::Value> *) [T = IVideoPlayer]
 void panorama::PanoramaTypeToV8Param(T *, v8::Handle<v8::Value> *) [T = KeyValues]
@@ -7643,6 +7327,7 @@ void panorama::PanoramaTypeToV8Param(T *, v8::Handle<v8::Value> *) [T = panorama
 void panorama::PanoramaTypeToV8Param(T *, v8::Handle<v8::Value> *) [T = panorama::IUIEvent]
 void panorama::PanoramaTypeToV8Param(T *, v8::Handle<v8::Value> *) [T = v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >]
 void panorama::PanoramaTypeToV8Param(T *, v8::Handle<v8::Value> *) [T = void]
+void panorama::RenderCommand_t::CopyBaseCommandFrom(const panorama::RenderCommand_t &, panorama::CRenderCommandList &)
 void panorama::RequiredCallFailed(const char *, ...)
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = bool (CDragStartCallbacks::*)() const]
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = bool (panorama::CImageProxySource::*)()]
@@ -7652,7 +7337,6 @@ void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const]
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = panorama::EImageFormat (panorama::CImageProxySource::*)()]
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = panorama::IUIPanel *(CDragStartCallbacks::*)() const]
-void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = unsigned int (panorama::CImageProxySource::*)()]
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = void (CDragStartCallbacks::*)(bool)]
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = void (CDragStartCallbacks::*)(int)]
 void panorama::RestoreFuncPtr(HACKY_FUNC_PTR_CASTER<T> &, v8::Local<v8::Array> &, int) [T = void (CDragStartCallbacks::*)(panorama::IUIPanel *)]
@@ -7687,18 +7371,15 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vtex1
 vtexH
 vtextgI
-vtexuFI
+vtexu5I
 vxml1
 vxmlE1
 vxmlI
 vxml_c
 vxmlt
 vxmlt9I
-wants_hit_test
-wants_hit_test_children
-wants_screenspace_quad_output
+w$fffff.
 wash-color
-wash_color
 wchar_t Lcw0G
 wchar_t [A\A^A_]
 wchar_t"HcG$H
@@ -7715,17 +7396,16 @@ width
 width-percentage
 width-percentage( %short )
 window resized
-wrapping
 wrong submessage type
 x$D9s
 x.IsPercent() || x.IsLength()
 x8A;D$0}1Ic
 xXu*H
+xXujH
 xXulH
 xXumH
 xXurH
 xYA9^
-x_is_percent
 xffff.
 xhA9^
 xiA9^
@@ -7735,7 +7415,6 @@ xqaBCFHTTFFFN
 xyA9^
 xyA9_
 y.IsPercent() || y.IsLength()
-y_is_percent
 yellow
 yellowgreen
 yxxxxxxxH
@@ -7743,7 +7422,6 @@ yxxxxxxxI
 z/A
 zh_CN
 zh_TW
-zindex
 zlib memory error
 zlib stream error
 zlib version error
@@ -7757,35 +7435,33 @@ zlib version error
 |!(fB
 |$ H9
 |$ Hc
-|$ IcG0A
 |$ void<H
-|$(E1
 |$(H9
-|$0E1
 |$0H9
 |$0L9
 |$8H9
 |$8H;}
+|$8Hc
 |$@H9
 |$hIct$|I
 |$pHc
+|(6ff.
 |fff.
 |kA;\$
 }	[A\A^A_]
 }0E;~
 }HA;EP}
 }bA9^$r\I
+}hIcu|I
 ~ E9t$$|
 ~ vHH
 ~ void>H
 ~!A9^$|
 ~#E9w$|
 ~$IcF
-~%ff.
+~&ff.
 ~'E9w$|!A
 ~'ff.
-~)ff.
-~*fff.
 ~*fffff.
 ~+ffff.
 ~,fff.
@@ -7795,18 +7471,17 @@ zlib version error
 ~8Hc3
 ~8v9H
 ~8vAH
-~Jff.
+~Cfff.
+~Kffffff.
 ~Lfff.
 ~Lffffff.
 ~Wffff.
 ~Yfff.
 ~bA9^$|\Hc
 ~fIcM(D
-~ff.
-~fff.
-~fffff.
+~ffff.
 ~ffffff.
 ~hIcV`H
 ~hIcv|I
 ~iLc_8D
-~qffff.
+~pffff.

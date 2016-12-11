@@ -257,7 +257,6 @@
 !( height % 4 )
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( width % 4 )
-!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 !1AQaq
 !?47"?
 !?A5!?
@@ -320,6 +319,7 @@ $;X r
 $>bool(%>8
 $?tk(?>
 $?void)$?
+$@Scaleform::GFx::Text::StyleManager
 $B;D9(
 $HcL$
 $IMECandidateListFont
@@ -362,7 +362,6 @@ $y_sse2
 %s.setImageSubstitutions() failed for #%double element - subString should be specified
 %s.setImageSubstitutions() failed: parameter should be either 'null', object or array
 %sGFxShaders-%08x.cache
-%short unable to grow buffer to fit string
 %short%short%s.%short
 %short/%s.swf
 %short/%sfontmapping.cfg
@@ -372,6 +371,7 @@ $y_sse2
 %short/images/avatars/default_32.png
 %short/images/avatars/default_64.png
 %short: %short
+%short: string format requested %double chars
 %short::CreateNewObject returned NULL during creation of %short class instance.
 %sse2
 %wchar_t?u4w?
@@ -419,12 +419,10 @@ $y_sse2
 (*%short*), 
 (*MARK) must have an argument
 (*VERB) not recognized or malformed
-(-nW^
-(5vW^
+(-PI&
 (8HXhx
 (<unsigned short>I
 (=ef5=
-(=~W^
 (>20*>
 (>tII
 (>~@)>O
@@ -461,7 +459,7 @@ $y_sse2
 (scolor * color.a + scolor2 * color.r)
 (scolor * color.a)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-(uBHcK
+(uEHcK
 (u{zyH
 )!@#$%^&*(
 )9IYiy
@@ -518,7 +516,6 @@ $y_sse2
 +mse16x16_wmt
 +mv_ref_
 ,$D)kP
-,/$`,
 ,9O;long
 ,<L9k
 ,<L\long|
@@ -533,7 +530,6 @@ $y_sse2
 ,v_wmt
 ,|?H0|?
 ,}?K0}?
--&B'-
 -- action record:  
 ---------------Tag type = %double, Tag length = %double
 ---------------Tag type = %double, Tag length = %double, offset = %double
@@ -553,7 +549,6 @@ $y_sse2
 -half_pixel_step
 -ignoreswf
 -newlayout
--noexitprocess
 -noscaleform
 -oldlayout
 -sfmutex
@@ -564,15 +559,17 @@ $y_sse2
 -update_probs
 -v_wmt
 -void?Hov?
+.%ZpV
+.-Ef_
+.-HT_
+.-r;E
+.-~uV
 ...&?0Xz?
 ...;H,~uI
 ...?k {?pH{?
+.5Sf_
 .;S 2;Bl5;
 .=&T/=
-.=7n'
-.=DdT
-.=ScT
-.=dYN
 .>@;0>~
 .>N^__int128~
 .?g1.?KN.?+k.?
@@ -646,12 +643,14 @@ $y_sse2
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/movieslot.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp(499): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp(517): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_integration.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_movie.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_movieslot.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_renderer.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_renderer.cpp(547): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_renderer.cpp(84): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_renderer.cpp(539): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_renderer.cpp(79): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_textobj.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_value.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_vtex.cpp
@@ -662,7 +661,6 @@ $y_sse2
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -828,7 +826,6 @@ $y_sse2
 6ffff.
 6v?xFv?
 6~?e9~?
-6~Lfffff.
 7&F|If
 716x16var_sse2
 7<p?9<
@@ -903,7 +900,6 @@ $y_sse2
 :fff.
 :left_sse2
 :ssse3
-:tFL9
 :tm_ss
 :top_sse2
 :u?SCu?
@@ -918,6 +914,7 @@ $y_sse2
 ;C u2D;K$u,
 ;C(tI
 ;C@t3
+;CPostConnectCallback
 ;G u3;W$u.
 ;G u4;W$u/
 ;G>M.T>7
@@ -999,7 +996,6 @@ $y_sse2
 >uv_sse2
 >vert_variance
 >{?MR{?
-?0,/a,
 ?16x_h_sse2
 ?>ZN@>K
 ??qd@?t3A?7
@@ -1061,6 +1057,8 @@ $y_sse2
 @Scaleform::GFx::AS3::InstanceTraits::fl_text::CSMSettings
 @Scaleform::Render::ContextImpl::ContextData_ImplMixin<Scaleform::Render::TreeContainer::NodeData, Scaleform::Render::TreeNode::NodeData>
 @Scaleform::Render::TreeCacheNode
+@V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+@V_UnicodeCaseConvert(wchar_t const*, wchar_t*, int, int, EStringConvertErrorPolicy)
 @[A\A^A_]
 @[A^]
 @\_^H
@@ -1092,22 +1090,20 @@ $y_sse2
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_MemAlloc_AllocFunc
+@_MemAlloc_FreeFunc
 @_OpenAComponent
 @_Plat_CheckSDL
+@_Plat_DebugPrint
 @_Plat_DebugString
 @_Plat_ExitProcess
 @_Plat_FloatTime
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MSTime
 @_Plat_ScreenToWindowCoords
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
-@_Plat_UnloadSDL
-@_Plat_getwd
 @_SteamAPI_GetHSteamPipe
 @_SteamAPI_GetHSteamUser
 @_SteamAPI_RegisterCallResult
@@ -1117,9 +1113,45 @@ $y_sse2
 @_SteamInternal_CreateInterface
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_GetErrno
+@_V_GetFileExtension
+@_V_IsAbsolutePath
+@_V_SetErrno
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_UTF8ToUTF32
+@_V_UnqualifiedFileName
+@_V_atof
+@_V_atoi
+@_V_atoi64
+@_V_qsort_s
+@_V_snprintf
+@_V_snwprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_swscanf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_vsnwprintf
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
 @__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_ExtractFilePath
+@__V_MakeAbsolutePath
+@__V_StripExtension
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
+@__V_wcsncpy_bytes
 @___assert_rtn
 @___bzero
 @___cxa_atexit
@@ -1362,7 +1394,6 @@ $y_sse2
 @_strcpy
 @_strcspn
 @_strlen
-@_strncat
 @_strncmp
 @_strncpy
 @_strrchr
@@ -1373,23 +1404,15 @@ $y_sse2
 @_strtol
 @_strtoul
 @_strtoull
-@_swprintf
-@_swscanf
 @_sysconf
 @_tan
 @_tanf
 @_time
 @_usleep
-@_vsnprintf
 @_vsprintf
-@_vswprintf
 @_wcschr
-@_wcscpy
 @_wcslen
 @_wcsncmp
-@_wcsncpy
-@_wcstof
-@_wcstol
 @`@@0`
 @`P0PPP
 @dyld_stub_binder
@@ -1480,7 +1503,6 @@ A;F uFH
 A;F8r/H
 A;F8sDA
 A;F@tFH
-A;G ~
 A;G4r
 A;G8|
 A;I8v$A
@@ -1805,6 +1827,7 @@ BUTTON_CLICK_MAJOR
 BUTTON_CLICK_MINOR
 BUTTON_MOUSE_OVER
 BYAWA\AWBp
+B\ATARARARARARARARARARARARARARARARARARARARF[ASBRC[Cp
 B\BRBRBRB\BRAVA`
 B]ARBRAp
 B`#A`
@@ -1941,7 +1964,6 @@ CONTEXT_MENU
 CONTROL
 CP+CL
 CP[A\A^A_]
-CPostConnectCallback
 CRATA
 CRATASBp
 CRATB`
@@ -1965,6 +1987,8 @@ CScaleformSysAlloc
 CScaleformTextClipboard
 CScaleformTranslatorAdapter
 CScaleformUI
+CScaleformUI::Shutdown()::CRender2DShutdownCallback
+CScaleformUI::Shutdown()::CRenderHALShutdownCallback
 CScaleformUI::Value_GetMember: trying to find signed char member by name (%short) under signed char null object
 CScaleformUIFunctionHandlerObject
 CSchemaInstallCallback
@@ -1982,9 +2006,6 @@ CUAXAp
 CURSOR_CHANGE
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -1999,7 +2020,6 @@ CX[A\A^A_]
 CX[A^]
 CXu$H
 C\;CX
-C\ATARARARARARARARARARARARARARARARARARARARF[ASBRC[Cp
 C`#A`
 C`;C0H
 C`[A\A^A_]
@@ -2203,6 +2223,7 @@ DIFFERENCE
 DISPLAY
 DISPLAYING
 DISPLAY_STATUS_WINDOW
+DN9Scaleform6Render4FontE
 DNEIt
 DNEIu
 DOCTYPE
@@ -2287,9 +2308,7 @@ E PVWH
 E PVWSf
 E PVWf
 E#gLuG
-E%GS"
 E+float A9
-E5oS"
 E8)X(I
 E8D)`(I
 E8D)p(I
@@ -2307,18 +2326,17 @@ E9|$$r
 E9~$r
 E9~@void*I
 E;__int128 ~0
+E;__int128(u6
 E;eHr>E
 E;fHr>E
 E;gx|
 E;l$H
 E;t$Hr;E
-E;u(u5
 E;uHr@E
 E;uPu$I
 E;unsigned char,r
 E;}Hr6E
 E<G&Iw
-E=cS"
 E>*AF>W
 E>>tF>
 EDGEAA_DISABLE
@@ -2558,6 +2576,7 @@ G<;F<u>
 G=#8K=
 G>uAI>
 G@IcOlH
+GA#D$
 GAMECONSOLE
 GB unsigned short%A
 GB@unsigned short&A
@@ -2834,9 +2853,9 @@ I CUtlRBTree<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegat
 I CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
@@ -3386,7 +3405,7 @@ KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues *KeyValues::GetFirstTrueSubKey()
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextTrueSubKey()
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
@@ -3471,6 +3490,10 @@ L9zHu
 L9{HH
 L9~@H
 L9~HH
+L;%%-Q
+L;%B-Q
+L;%^-Q
+L;%u-Q
 L;T$@
 L;T$XuIA
 L;__int128`r
@@ -3552,6 +3575,7 @@ LOWVIOLENCE
 LV?$vV?
 L\?qz]?]
 LangBar
+Lc5kj 
 Lc7Hc_LI
 Lc;fB
 LcCHD
@@ -3664,6 +3688,7 @@ MIN_VALUE
 MITER
 MN?vdN?]{N?>
 MNG features are not allowed in signed char PNG datastream
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MOUSE_DOWN
 MOUSE_FOCUS_CHANGE
@@ -3675,6 +3700,7 @@ MOUSE_UP
 MOUSE_WHEEL
 MULTIPLY
 MV_Other
+MXGJJ98X76
 MXu	H
 MXu:H
 MXuhH
@@ -4129,8 +4155,8 @@ RAp8RARARBp
 RBRARASARBRA
 RBRATATATBSBp
 RBRAp
-RBRBRAp
 RBRBRB
+RBRBRBRAp
 RBRBRBRBRASBSBSDTBRBWARAYB`
 RBRBRBRBRB
 RBRBRBRBRBRAp
@@ -4283,7 +4309,7 @@ RemoveInputConsumer
 RemoveKeyInputConsumer
 RemoveMouseInputConsumer
 RemoveStatusWindow
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderPipelineManagement
@@ -4304,8 +4330,7 @@ Resource for font id = %double is not found in text field id = %double, def text
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 Responder
 Right
 Rinit_
@@ -4329,7 +4354,6 @@ SARBRBSAp
 SARBRB]ARBRB]ASARBRBRBRBSARBRBRBRBRBRBRBSARBRBRBSARBRBRBSARBRBSARBRBSARBRBRBTAp
 SARBRGp
 SARB`
-SATAp
 SAVA[B`
 SA]A`
 SBRARCTARBRBRBRBRBRBRBRBRBRBRBRBRARAp
@@ -4405,9 +4429,9 @@ STEAMHTTP_INTERFACE_VERSION002
 STEAMINVENTORY_INTERFACE_V001
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
-STEAMREMOTESTORAGE_INTERFACE_VERSION013
-STEAMSCREENSHOTS_INTERFACE_VERSION002
-STEAMUGC_INTERFACE_VERSION008
+STEAMREMOTESTORAGE_INTERFACE_VERSION014
+STEAMSCREENSHOTS_INTERFACE_VERSION003
+STEAMUGC_INTERFACE_VERSION009
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
 STEAMVIDEO_INTERFACE_V001
@@ -5415,7 +5439,6 @@ Scaleform::GFx::SwfShapeCharacterDef
 Scaleform::GFx::Task
 Scaleform::GFx::Text::CSSHandler<wchar_t>
 Scaleform::GFx::Text::EditorKit
-Scaleform::GFx::Text::StyleManager
 Scaleform::GFx::Text::TextStyleParserHandler<wchar_t>
 Scaleform::GFx::Text::TextStyleParserHandlerBase
 Scaleform::GFx::TextClipboard
@@ -5613,7 +5636,6 @@ Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::AS3VideoSupport, 6>
 Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::VideoDecoder, 6>
 Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::VideoPlayer::SyncObject, 6>
 Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::VideoReader, 6>
-Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::VideoReaderConfig, 6>
 Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::VideoSound, 6>
 Scaleform::RefCountBaseNTS<Scaleform::GFx::Video::VideoSoundSystem, 6>
 Scaleform::RefCountBaseNTS<Scaleform::Render::Bundle, 67>
@@ -5757,7 +5779,6 @@ Scaleform::Render::FilterBundle
 Scaleform::Render::FilterEffect
 Scaleform::Render::FilterPrimitive
 Scaleform::Render::FilterSet
-Scaleform::Render::Font
 Scaleform::Render::FontCacheHandleManager
 Scaleform::Render::GL::DepthStencilSurface
 Scaleform::Render::GL::HAL
@@ -6058,7 +6079,7 @@ SoundService_001
 SoundSystem001
 SoundTransform
 Sounds
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -6069,7 +6090,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 Spcre_
 SpreadMethod
 Sprite
@@ -6095,7 +6116,7 @@ StatsService_001
 StatusEvent
 StatusWindow
 SteamClient017
-SteamController003
+SteamController004
 SteamFriends015
 SteamMatchMaking009
 SteamMatchMakingServers002
@@ -6128,7 +6149,10 @@ T$@I9
 T$@M9
 T$@~kI
 T$XD)
+T-AGZ
 T2?Zp2?
+T=$}P
+T=^+L
 T?.GT?
 TABSTOPS
 TAB_CHILDREN_CHANGE
@@ -6154,7 +6178,7 @@ TAWBSBSBSBp
 TAWBp
 TA`5BYATBZATAp
 TAp `
-TBRASATBUAVATAp
+TBRARBRBRBRBSATBUAVATAp
 TBRAp
 TBRBRAYATAp
 TBRBRBRASBp
@@ -6173,11 +6197,9 @@ TBVBRBRBVBRBRBTBRBTBRBWASATAp
 TBWARBRBRB]A\BWAWARBp
 TCRBRBRAp
 TCRBRDp
-TCRBSATAp
 TCSARBRBSARBRBRBSARBRBSARBRBSARBRBSARBRBSARBRBRBRBRBRJRBRAp
 TCTAp
 TCTBRBZAp
-TCTBp
 TCUAp
 TDpP`)B`
 TEXTAUTOSZ_FIT
@@ -6420,7 +6442,7 @@ Token '{0}' in path '{1}' was not resolved to signed char valid Object! This may
 Too many IDATs found
 Too many bytes for PNG signature
 Too many color components: %double, max %double
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -6595,7 +6617,8 @@ VTable ind:
 VTableIndClosure
 VUUUH
 VUUUL
-V_AppendSlash: ran out of space on %s.
+V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+V_UnicodeCaseConvert(wchar_t const*, wchar_t*, int, int, EStringConvertErrorPolicy)
 Vector
 Vector$String
 Vector$double
@@ -6618,8 +6641,11 @@ V}?N]}?
 V~?cX~?
 W A+W
 W%	short;M@
-W%xD]
+W%!UN
+W%XON
+W%signed char|#
 W)?h.+?'
+W-mCK
 W0AkF
 W8;2t
 W8t!H9
@@ -6678,8 +6704,10 @@ Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
 Wrong JPEG library version: library is %double, caller expects %double
-X%87Q
-X%gC1
+X%ZcM
+X%aL
+X%|XM
+X-R`M
 X0L9x8u
 X360_DST16
 X360_DST24
@@ -6713,9 +6741,12 @@ Xffffff.
 Xiph.Org libVorbis 1.3.4
 Xiph.Org libVorbis I 20140122 (Turpak
 Xmalloc
-Y%!vE
-Y%EdE
-Y=l8W
+Y%'?J
+Y%/WS
+Y%^FJ
+Y-nS
+Y5!}M
+Y5E}M
 Y>|-Z>
 YARBp
 YCreateInterface
@@ -6846,7 +6877,6 @@ Z|?4^|?Mb|?bf|?tj|?
 ^(E)~ I
 ^([A\A^A_]
 ^(t11
-^-$G5
 ^1_exportbundle
 ^8[A^]
 ^>|6`>...
@@ -6908,22 +6938,20 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_MemAlloc_AllocFunc
+_MemAlloc_FreeFunc
 _OpenAComponent
 _Plat_CheckSDL
+_Plat_DebugPrint
 _Plat_DebugString
 _Plat_ExitProcess
 _Plat_FloatTime
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MSTime
 _Plat_ScreenToWindowCoords
 _Plat_ShouldCollectMiniDumpsForFatalErrors
-_Plat_UnloadSDL
-_Plat_getwd
 _ResourceLib_Images
 _SteamAPI_GetHSteamPipe
 _SteamAPI_GetHSteamUser
@@ -6935,6 +6963,34 @@ _SteamInternal_CreateInterface
 _TA+_P
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_GetErrno
+_V_GetFileExtension
+_V_IsAbsolutePath
+_V_SetErrno
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_UTF8ToUTF32
+_V_UnqualifiedFileName
+_V_atof
+_V_atoi
+_V_atoi64
+_V_qsort_s
+_V_snprintf
+_V_snwprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_swscanf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_vsnwprintf
+_V_wcstod
+_V_wcstoi64
 _Video_Heap
 _Warning
 __AS3__.vec
@@ -6943,6 +6999,14 @@ __DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_ExtractFilePath
+__V_MakeAbsolutePath
+__V_StripExtension
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
+__V_wcsncpy_bytes
 ___assert_rtn
 ___bzero
 ___cxa_atexit
@@ -6991,7 +7055,6 @@ __gcc_except_tab__TEXT
 __got
 __ilog
 __int128 < m_Vector.Count()
-__int128 >= 0
 __int128"HcU
 __int128(A)^ I
 __int128>\	r>
@@ -7357,7 +7420,6 @@ _strcmp
 _strcpy
 _strcspn
 _strlen
-_strncat
 _strncmp
 _strncpy
 _strnlen
@@ -7369,8 +7431,6 @@ _strtok
 _strtol
 _strtoul
 _strtoull
-_swprintf
-_swscanf
 _sysconf
 _tanf
 _target
@@ -7854,16 +7914,10 @@ _vpx_reset_mmx_state
 _vpx_scale_rtcd
 _vpx_validate_mmaps
 _vpx_yv12_copy_y_c
-_vsnprintf
 _vsprintf
-_vswprintf
 _wcschr
-_wcscpy
 _wcslen
 _wcsncmp
-_wcsncpy
-_wcstof
-_wcstol
 _width
 _with_rect
 _xmouse
@@ -8084,7 +8138,6 @@ bool InvokeClosureHelper(GFxValue *, GFxValue *, unsigned int, GFxValue *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
 bool KeyValues::LoadFromFile(IBaseFileSystem *, const char *, const char *, GetSymbolProc_t)
 bool StripHTML(wchar_t *, const int, const wchar_t *, const int)
-bool _V_ExtractFilePath(const char *, char *, int)
 bool bf_write::WriteBits(const void *, int)
 bool!?~U"?dG#?
 bool>SQp>
@@ -8142,7 +8195,6 @@ center
 change
 changeList
 channelsNumber
-char *_V_strncat(char *, const char *, int, int)
 char += U * vec4(0.0, -0.392, 2.017, 0.0);
 char += V * vec4(1.596, -0.813, 0.0, 0.0);
 char char::* L
@@ -8222,7 +8274,6 @@ const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
 const Vector &CVariantBase<CVariantDefaultAllocator>::operator const Vector &() const [CValueAllocator = CVariantDefaultAllocator]
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 const wchar_t *CKeyValues_Data::Internal_GetWString(const wchar_t *, wchar_t *, size_t)
@@ -8318,8 +8369,6 @@ descendants
 descent
 describeType
 description
-destBufferSize >= 0
-destSize >= 1
 determinant
 developer
 device
@@ -8958,7 +9007,6 @@ imeComposition
 img://
 imgps://
 implementsInterface
-in != out
 in float vbatch;
 in vec2 atc;
 in vec2 tc0;
@@ -8989,7 +9037,6 @@ indexInRun
 indexOf
 inflate
 inflatePoint
-info.m_pReplacementString == 0
 init_dequantizer
 inline
 inner
@@ -9003,31 +9050,16 @@ insertChildBefore
 insideCutoff
 instance{0}
 insufficient memory
-int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = wchar_t, DecFn = &(anonymous namespace)::V_UTF32ToUChar32, EncLenFn = &(anonymous namespace)::V_UChar32ToUTF32Len, EncFn = &(anonymous namespace)::V_UChar32ToUTF32]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
 int < NUM_YV12_BUFFERS
 int CKeyValues_Data::Internal_GetInt()
 int CUtlString::FormatV(const char *, __va_list_tag *)
 int CVariantBase<CVariantDefaultAllocator>::operator int() const [CValueAllocator = CVariantDefaultAllocator]
 int InputEvent_t::GetCursorPositionY() const
 int VTEX_GetArrayCount(const VTEX_Header_t *)
-int V_snprintf(char *, int, const char *, ...)
-int V_snwprintf(wchar_t *, int, const wchar_t *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
-int V_vsnwprintf(wchar_t *, int, const wchar_t *, __va_list_tag *)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int overH
 int64
 int64 CVariantBase<CVariantDefaultAllocator>::operator long long() const [CValueAllocator = CVariantDefaultAllocator]
-int64 V_atoi64(const char *)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
 int?E@int?
 intc%double
@@ -9064,7 +9096,6 @@ invalid distance code
 invalid distance too far back
 invalid distances set
 invalid escape sequence in character class
-invalid input pointer
 invalid literal/length code
 invalid literal/lengths set
 invalid range in character class
@@ -9292,9 +9323,6 @@ matrix_d
 matrix_tx
 matrix_ty
 maxChars
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxLenInBytes >= sizeof( *pDest )
 maxLevel
 maxScrollH
 maxScrollV
@@ -9436,8 +9464,6 @@ numberOfFramePools
 numbers out of order in {} quantifier
 numbits >= 0 && numbits <= 32
 nv_walsh4x4_
-o5A/O
-o5d&O
 oC fI
 oD$ float
 oD$(A
@@ -9512,7 +9538,6 @@ out vec4 fcolor;
 out vec4 fucxadd;
 out vec4 fucxmul;
 out vec4 vcolor;
-outStrings.Count() == 0
 outer
 outline
 outsideCutoff
@@ -9521,7 +9546,7 @@ overlay
 p SAp
 p TBRASB`
 p [A\A]A^A_]
-p `0@P
+p `0@
 p!`!q!signed char!r!bool!short!char!unsigned short!double!u!long double!void!float!wchar_t!__float128!long long!unsigned char!unsigned long long!int!...!unsigned int!{!k!|!long!}!unsigned long!~!__int128!
 p(RBSARBRBSAp
 p(ff.
@@ -9557,7 +9582,6 @@ pPRDRDRDRDRDRDRDRDRDRDRDRDRDRDRCSCSCSISDp
 pP`0  P 
 pPool->m_SpaceUsed < 0xFFFF
 pSchemaSystem != NULL
-pSearch
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
 p[A\A^A_]
@@ -10062,6 +10086,7 @@ subAudioTrack
 subSoundTransform
 subString
 sub_pixel_step
+subject.OU
 subpattern name expected
 subpattern name is too long (maximum 32 characters)
 subpixel
@@ -10088,7 +10113,6 @@ t$ E1
 t$ fffff.
 t$0H9
 t$@fA
-t$H9[8u
 t$HD9
 t$HD;p0
 t$Hffff.
@@ -10372,7 +10396,6 @@ uNzLfA
 uPE+uTE+uLH
 uPfAi
 uRD+}
-uRHc;H
 uWD9A
 uWD9^
 uWD9g
@@ -10454,8 +10477,7 @@ unset_functions
 unshift
 unsigned
 unsigned __int128 KPBf
-unsigned __int128-A/O
-unsigned __int128-double&O
+unsigned __int128=`*V
 unsigned __int128\$@float
 unsigned __int128\$pf
 unsigned __int128{@HcU
@@ -10785,8 +10807,8 @@ void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const
 void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FreeNode(I) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAt(I) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
@@ -10812,10 +10834,6 @@ void L9u
 void MathLib_Init()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
-void _V_AppendSlash(char *, int, char)
-void _V_strncpy(char *, const char *, int)
-void _V_wcsncpy(wchar_t *, const wchar_t *, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
@@ -10952,6 +10970,7 @@ yvalue
 z/float
 z1f
 zB>sEC>
+zDN9Scaleform15RefCountBaseNTSINS_3GFx5Video17VideoReaderConfigELi6EEE
 zig_zag
 zlib memory error
 zlib stream error

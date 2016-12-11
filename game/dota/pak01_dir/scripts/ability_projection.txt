@@ -6,6 +6,19 @@
 		"priority"	"50"
 		"picksound"		"Hero_Enigma.Pick"
 	}
+		
+	"zuus_thundergods_wrath"
+	{
+		"notevalue"	"17"
+		"priority"	"100"	
+
+		"min_duration"	"2.0"
+
+		// todo
+		"omni"		"1"	// ignore on-screen
+		
+		"display_in_top_layer"	"1"
+	}
 
 	"witch_doctor_death_ward"
 	{
@@ -40,19 +53,6 @@
 		"notevalue_away_to_home"	"23"
 		"priority"	"100"
 		"min_duration"	"3.14"
-		"display_in_top_layer"	"1"
-	}
-	
-	"zuus_thundergods_wrath"
-	{
-		"notevalue"	"17"
-		"priority"	"100"	
-
-		"min_duration"	"2.0"
-
-		// todo
-		"omni"		"1"	// ignore on-screen
-		
 		"display_in_top_layer"	"1"
 	}
 
@@ -117,14 +117,6 @@
 	{
 		"notevalue"	"33"
 		"priority"	"100"	  
-		"display_in_top_layer"	"1"
-	}
-
-	"alchemist_chemical_rage"
-	{
-		"notevalue"	"34"
-		"priority"	"100"
-		"min_duration"	"10.0"	
 		"display_in_top_layer"	"1"
 	}
 
@@ -280,13 +272,6 @@
 		"min_duration"	"2.5"
 	}
 
-	"weaver_time_lapse"
-	{
-		"notevalue"	"98"
-		"priority"	"50"
-		"min_duration"	"2.5"
-	}
-
 	"leshrac_split_earth"
 	{
 		"notevalue"	"55"
@@ -422,7 +407,7 @@
 	"razor_static_link"
 	{
 		"notevalue_home_to_away"	"85"
-		"notevalue_away_to_home"	"120"
+		"notevalue_away_to_home"	"63"		// used to be 120
 		"priority"	"100" 
 		"display_in_top_layer"	"1"
 	}
@@ -438,7 +423,7 @@
 	"queenofpain_sonic_wave"
 	{
 		"notevalue_home_to_away"	"83"
-		"notevalue_away_to_home"	"121"
+		"notevalue_away_to_home"	"64"		// used to be 121
 		"priority"	"100"
 		"min_duration"	"3.0"	
 		"display_in_top_layer"	"1"
@@ -472,20 +457,11 @@
 		"min_duration"	"3.0"
 	}
 
-	"windrunner_windrun"
+	"windrunner_powershot"
 	{
 		"notevalue"	"79"
 		"priority"	"50"
-	}
-
-	"techies_remote_mines"
-	{
-		"notevalue"	"78"
-		"priority"	"100"
-		"display_in_top_layer"	"1"
-		"min_duration"	"2.5"
-		
-		"omni"		"1"	// ignore on-screen
+		"min_duration"	"2.0"
 	}
 
 	"techies_land_mines"
@@ -514,32 +490,9 @@
 		"min_duration"	"4.0"
 	}
 
-	"ember_spirit_sleight_of_fist"
-	{
-		"notevalue"	"8"
-		"priority"	"100"
-		"display_in_top_layer"	"1"
-		"min_duration"	"3.0"
-	}
-
-	"wisp_relocate"
-	{
-		"notevalue"	"9"
-		"priority"	"50"
-		"min_duration"	"3.0"
-	}
-
 	"night_stalker_darkness"
 	{
 		"notevalue"	"11"
-		"priority"	"100"
-		"display_in_top_layer"	"1"
-		"min_duration"	"8.0"
-	}
-
-	"storm_spirit_static_remnant"
-	{
-		"notevalue"	"15"
 		"priority"	"100"
 		"display_in_top_layer"	"1"
 		"min_duration"	"8.0"
@@ -553,17 +506,18 @@
 		"min_duration"	"3.0"
 	}
 
-	"brewmaster_primal_split"
+	"earth_spirit_magnetize"
 	{
-		"notevalue"	"1"
-		"priority"	"100"
-		"display_in_top_layer"	"1"
-		"min_duration"	"4.0"
-	}
+		"notevalue"	"65"
+		"priority"	"50"
+	}	
 
-	//"earth_spirit_magnetize"
-	//{
-	//	"notevalue"	"2"
-	//	"priority"	"50"
-	//}	
+	"oracle_fortunes_end"
+	{
+		"notevalue_home_to_away"	"67"
+		"notevalue_away_to_home"	"68"
+		"priority"	"100"
+		"min_duration"	"1.5"
+		"display_in_top_layer"	"1"
+	}	
 }

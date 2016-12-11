@@ -15,18 +15,16 @@
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
  Msg
+ Plat_DebugPrint
  Plat_ExitProcess
  Plat_GetDefaultMonitorIndex
  Plat_GetDesktopResolution
  Plat_GetEnv
- Plat_GetModuleFilename
- Plat_GetModuleProcAddress
  Plat_GetOSType
  Plat_GetWindowClientSize
  Plat_GetWindowMonitorIndex
  Plat_IsHighDPI
- Plat_IsInDebugSession
- Plat_LoadModuleRaw
+ Plat_IsInDebugSessionRaw
  Plat_LoadSDL
  Plat_MSTime
  Plat_MilliSecTickDiff
@@ -36,6 +34,7 @@
  Plat_ScreenToWindowCoords
  Plat_SetupFPUControlWord
  Plat_ShouldCollectMiniDumpsForFatalErrors
+ Plat_UnloadModule
  Plat_WindowToOsSpecificHandle
  Plat_WindowToScreenCoords
  RegisterStringToken
@@ -50,23 +49,46 @@
  T operator new[](unsigned long)
  T strnlen
  ThreadGetCurrentId
+ V_FixSlashes
+ V_GetErrno
+ V_SetErrno
+ V_StripFilename
+ V_UTF16ToUTF8
+ V_UTF8ToUTF32
+ V_atof
+ V_atoi
+ V_powf
+ V_qsort_s
+ V_snprintf
+ V_sscanf
+ V_stricmp_fast
+ V_strlower_fast
+ V_strtod
+ V_strtoi64
+ V_tier0_memset
+ V_vsnprintfRet
+ V_vsnprintfSize
+ V_wcstoi64
  Warning
- _DefaultRuneLocale
  _Unwind_Resume
+ _V_FileBase
+ _V_SetExtension
+ _V_StripExtension
+ _V_strncat
+ _V_strncpy
+ _V_strnicmp_fast
  __bzero
  __cxa_atexit
  __cxa_begin_catch
  __cxa_call_unexpected
+ __cxa_guard_abort
+ __cxa_guard_acquire
+ __cxa_guard_release
  __cxa_pure_virtual
- __error
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
  __tolower
- atof
- atoi
- dlclose
  dyld_stub_binder
  g_VProfCurrentProfile
  g_pMemAlloc
@@ -75,22 +97,14 @@
  memmove
  memset
  memset_pattern16
- pow
- printf
  pthread_mutex_destroy
  raise
- sscanf
  std::terminate()
  strchr
  strcmp
  strlen
- strncat
- strtod
- strtol
  typeinfo for std::bad_alloc
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  wcslen
- wcstol

@@ -2,33 +2,18 @@
 	9J }
 	9p }
 	9q }
-	CMsgColor
-	CMsgPoint
 	CODE_SIZE
 	PENSSL_
 	TYPE_BOOL
 	TYPE_ENUM
 	add_lock
-	animating
-	direction
 	ed_mem_
-	end_index
 	enum_type
 	extension
-	font_name
-	font_size
-	hue_shift
-	iteration
 	mem_
 	name_part
-	particles
-	rect_clip
-	rotate_2d
-	top_right
 	type_name
-	underline
-        
-                
+                CPostConnectCallback
     Actual    : 
     Expected  : 
     Field type: 
@@ -40,8 +25,6 @@
   Problem     : Field is not the right type for this message:
  '%short'
  = { <proto text format> }". To set fields within it, use syntax like "
- CMsg3DTransformPerspectiveOrigin
- CMsgDrawYUV420DoubleBufferedRect
  Outdent() without matching Indent().
  Tokenizer::ParseFloat() passed text that could not have been tokenized as signed char float: 
  Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
@@ -52,7 +35,6 @@
  [default = $0
  args were given.  Full format string was: "
  callback
- clear_gpu_resources_before_frame
  contains invalid 
  ex_data
  ffff.
@@ -67,17 +49,14 @@
  retry_
  signed char protocol 
  t.Ic~DH
- t4Ic~4H
  thread=%lu, file=%short, line=%double, info="
  type
 !!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
-!( m_nFlags & FCVAR_NEVER_AS_STRING )
 !allback_ctrl
 !dup_chain
-!ffff.
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
 !multilist || ML
@@ -128,7 +107,6 @@
 ").  Note that the exact same class is required; not just the same descriptor.
 ", another member of oneof "
 ", but only 
-", field number 
 ", found "
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., ".
 ", which is not imported by "
@@ -141,8 +119,6 @@
 "MutableRawRepeatedField"
 "data
 "long double" must be followed by exponent.
-"particle_initial_velocity_variance
-"particle_lifespan_seconds_variance
 "reason
 "rintf
 "wpending
@@ -165,7 +141,6 @@ $hift
 %019lu
 %5lu file=%short, line=%double, 
 %d.%d.%double
-%int %int %int %int
 %ld bytes leaked in %double chunks
 %s_sorted
 %short(%double): OpenSSL internal error, assertion failed: %short
@@ -178,7 +153,6 @@ $hift
 &YA1H
 &YA1L
 &fffff.
-&gravity_acceleration_particle_variance
 &long long	nY
 &strhash
 &um_items
@@ -206,7 +180,6 @@ $hift
 )strings
 )unc_error_string
 )unload_strings
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *?#1*?#1
 *_state_table
 *eek_
@@ -233,87 +206,7 @@ $hift
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 ...(;unsigned long long(H
 ...==...imaginary ==G
-.C0w}E1
-.CBorderData
-.CBorderData.CBorderSide
-.CBorderData2V
-.CBoxShadowData
-.CBoxShadowData2Y
-.CMsg3DTransformMatrix
-.CMsg3DTransformOrigin
-.CMsg3DTransformPerspective
-.CMsgAnimationData
-.CMsgAnimationFrameData
-.CMsgAnimationFrameData"
-.CMsgBorder
-.CMsgBorder.AnimationFrameData"
-.CMsgBorderRadius
-.CMsgBoxShadow
-.CMsgBrightness
-.CMsgClip.AnimationFrameData"long long
-.CMsgClipData
-.CMsgClipData2T
-.CMsgColor
-.CMsgColor.AnimationFrameData"5
-.CMsgColorStop"
-.CMsgColorStop"|
-.CMsgContrast
-.CMsgFillBrush
-.CMsgFillBrush"
-.CMsgFillBrush2c
-.CMsgFillBrushCollection
-.CMsgGaussianBlur
-.CMsgGaussianValues
-.CMsgGaussianValues2\
-.CMsgHueShift
-.CMsgLinearGradient
-.CMsgMatrix4x4
-.CMsgMatrix4x42a
-.CMsgMotionBlur")
-.CMsgMotionBlurValues
-.CMsgMotionBlurValues2Z
-.CMsgOpacity
-.CMsgOpacity"
-.CMsgOpacity.AnimationFrameData"
-.CMsgOpacityMask
-.CMsgOpacityMaskData
-.CMsgOpacityMaskData2[
-.CMsgPanelPosition
-.CMsgParticle"
-.CMsgParticleSystem"
-.CMsgPoint
-.CMsgPoint"
-.CMsgPoint2]
-.CMsgPoint2c
-.CMsgPoint2l
-.CMsgPointWithTransition
-.CMsgRadialGradient
-.CMsgRenderFillBrushCollection
-.CMsgRenderTextFormat
-.CMsgRenderTextFormat"
-.CMsgRenderTextRangeFormat
-.CMsgRotate2D
-.CMsgSaturation
-.CMsgTextFormat
-.CMsgTextFormat"
-.CMsgTextInlineObject"^
-.CMsgTextInlineObject"unsigned int
-.CMsgTextRangeFormat"
-.CMsgTextShadow
-.CMsgTransformOriginData
-.CMsgTransformOriginData2a
-.CMsgTransitionData
-.CRadialClipData
-.CRadialClipData"
-.CRadiusData
-.CRadiusData"
-.CRadiusData.CCornerRadius
-.CRadiusData2\
-.CTextShadowData
-.CTextShadowData"
-.CTextShadowData2Z
-.ETv*H
-.Elv*H
+.G(wz1
 .GetResourceManifest
 .PLACEHOLDER_VALUE
 .create
@@ -335,7 +228,6 @@ $hift
 /System/Library/Frameworks/Security.framework/Versions/A/Security
 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/generated_proto_panorama_text_base/rendermessages.pb.cc
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/generated_proto_panorama_text_base/uifontfile_format.pb.cc
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/steamextra/common/uifontfile.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/panorama/text/textlayoutdrawcache.cpp
@@ -355,7 +247,6 @@ $hift
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
@@ -396,39 +287,17 @@ $hift
 1free
 1length
 1type
-2	.CMsgClip
-2 .CMsgContrast.AnimationFrameData"L
-2 .CMsgHueShift.AnimationFrameData"
-2 .CMsgRotate2D.AnimationFrameData"T
-2!.CMsg3DTransformPerspectiveOrigin
-2!.CMsgBoxShadow.AnimationFrameData"
-2".CMsgBrightness.AnimationFrameData"
-2".CMsgMotionBlur.AnimationFrameData"
-2".CMsgSaturation.AnimationFrameData"
-2".CMsgTextShadow.AnimationFrameData"
-2#.CMsgOpacityMask.AnimationFrameData"
-2$.CMsgBorderRadius.AnimationFrameData"
-2$.CMsgGaussianBlur.AnimationFrameData"D
-2%.CMsgPanelPosition.AnimationFrameData"
-2).CMsg3DTransformMatrix.AnimationFrameData"
-2).CMsg3DTransformOrigin.AnimationFrameData"
-2+.CMsgFillBrushCollection.AnimationFrameData"C
-2+.CMsgPointWithTransition.AnimationFrameData"
 2,.CUIFontFilePackagePB.CUIEncryptedFontFilePB
-2..CMsg3DTransformPerspective.AnimationFrameData"
-24.CMsg3DTransformPerspectiveOrigin.AnimationFrameData"wchar_t
 2d_ASN1_OBJECT
 2i_ASN1_OBJECT
 2obj_cleanup_defer
 3A;v8u
 3A;vpu
-3fff.
 4A;t$8u
 4B;unsigned short;
 5A;t$0u
 5A;t$pu
 6-9'6-9'
-6~Lfffff.
 8[A\A]A^A_]
 8[A^A_]
 91t+H
@@ -439,7 +308,6 @@ $hift
 :88888888
 :H;>u
 :char|wchar_t{
-:tFL9
 ;A }(
 ;C(u	I
 ;J(u%H
@@ -459,6 +327,7 @@ $hift
 >8$4,8$4,
 >H;:u
 >^//q^//q
+?Stack part of OpenSSL 1.0.1e 11 Feb 2013
 @(HcH
 @(IcL$,H
 @@B;\
@@ -489,22 +358,31 @@ $hift
 @_LoggingSystem_RegisterLoggingChannel
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
 @_Plat_GetModuleProcAddress
-@_Plat_IsInDebugSession
+@_Plat_IsInDebugSessionRaw
 @_Plat_LoadModule
-@_Plat_LoadModuleRaw
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
-@_Plat_getwd
 @_RegisterStringToken
 @_SDL_setenv
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_StripFilename
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_qsort_s
+@_V_stricmp_fast
+@_V_vsnprintfRet
 @_Warning
 @__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_MakeAbsolutePath
+@__V_strncpy
 @___assert_rtn
 @___bzero
 @___cxa_allocate_exception
@@ -528,8 +406,6 @@ $hift
 @___toupper
 @_abort
 @_alphasort$INODE64
-@_atof
-@_atoi
 @_ceilf
 @_fclose
 @_feof
@@ -638,7 +514,6 @@ $hift
 @_pango_layout_set_width
 @_pango_layout_set_wrap
 @_pango_layout_xy_to_index
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -659,7 +534,6 @@ $hift
 @_strcpy
 @_strerror
 @_strlen
-@_strncat
 @_strncpy
 @_strtod
 @_strtof
@@ -715,7 +589,6 @@ $hift
 @typeinfo for std::exception
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
-@vtable for __cxxabiv1::__vmi_class_type_info
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
 A9F8}5I
@@ -726,7 +599,6 @@ A9^$|
 A;D$(
 A;E(u
 A;F8}
-A;G ~
 A;G0}
 A;G8}
 A;H(t.M
@@ -738,26 +610,20 @@ A;\$H|
 A;],|
 A;]H|
 A;]X|
-A;]long long|
 A;^ |
 A;^(|
 A;^,|
-A;^0|
 A;^8|
 A;^@|
 A;^H|
-A;^P|
 A;^X|
 A;^long long|
 A;^p|
 A;^unsigned char|
 A;_ |
 A;_(|
-A;_0|
 A;_8|
-A;_P|
 A;_X|
-A;vXu
 A;void(u
 AD Time Stamping
 AD_DVCS
@@ -792,7 +658,6 @@ AES-256-XTS
 ANSI X9.62
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARATAp
-ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRB`
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
 ARBRBSATAp
 ASN.1 part of OpenSSL 1.0.1e 11 Feb 2013
@@ -821,8 +686,6 @@ AWAVSPA
 AWAVSPH
 AWAVSPI
 AWAVSPL
-AZBSBp
-A[ATAp
 Acceptable OCSP Responses
 AddBool
 AddDouble
@@ -836,7 +699,6 @@ AddUInt32
 AddUInt64
 Ag*__float128*
 Already saw decimal point or exponent; can'unsigned short have another one.
-AnimationFrameData
 AnimationSystemUtils_001
 AnimationSystem_001
 Any Extended Key Usage
@@ -862,7 +724,6 @@ BakedLODBuilderMgr001
 Basic OCSP Response
 BenchmarkService001
 Big Number part of OpenSSL 1.0.1e 11 Feb 2013
-BinaryProperties_GetValue
 Biometric Info
 Boolean default must be true or false.
 Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
@@ -898,13 +759,7 @@ CAST5-CFB
 CAST5-ECB
 CAST5-OFB
 CBaseAppSystem<panorama::IUITextServices>
-CBorderData
-CBorderData_CBorderSide
-CBorderSide
-CBoxShadowData
-CCornerRadius
 CDefaultAccessor
-CEmptyConVar
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CHECK failed: !checkpoints_.empty(): 
@@ -1016,115 +871,12 @@ CHECK failed: prototype != NULL:
 CHECK failed: result != NULL: 
 CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize: 
 CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize: 
-CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
 CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE: 
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
 CHECK failed: uninterpreted_options_field != NULL: 
 CHECK failed: value.size() <= kint32max: 
 CL;CPu
 CMS routines
-CMsg3DTransformMatrix
-CMsg3DTransformMatrix_AnimationFrameData
-CMsg3DTransformOrigin
-CMsg3DTransformOrigin_AnimationFrameData
-CMsg3DTransformPerspective
-CMsg3DTransformPerspectiveOrigin
-CMsg3DTransformPerspectiveOrigin_AnimationFrameData
-CMsg3DTransformPerspective_AnimationFrameData
-CMsgAnimationData
-CMsgAnimationFrameData
-CMsgBeginFrame
-CMsgBeginPaintBackground
-CMsgBeginPaintBackground"
-CMsgBeginPaintLast
-CMsgBeginPaintLast"
-CMsgBorder
-CMsgBorderRadius
-CMsgBorderRadius_AnimationFrameData
-CMsgBorder_AnimationFrameData
-CMsgBoxShadow
-CMsgBoxShadow_AnimationFrameData
-CMsgBrightness
-CMsgBrightness_AnimationFrameData
-CMsgClearBackbuffer
-CMsgClip
-CMsgClipData
-CMsgClip_AnimationFrameData
-CMsgColor
-CMsgColorStop
-CMsgColor_AnimationFrameData
-CMsgContrast
-CMsgContrast_AnimationFrameData
-CMsgDeletePanel
-CMsgDeleteParticleSystem
-CMsgDeleteTexture
-CMsgDrawDoubleBufferedRect
-CMsgDrawFilledRect
-CMsgDrawTextRegion
-CMsgDrawTexturedRect
-CMsgDrawYUV420DoubleBufferedRect
-CMsgEndFrame
-CMsgEndPaintBackground
-CMsgEndPaintBackground"
-CMsgEndPaintLast
-CMsgEndPaintLast"
-CMsgFillBrush
-CMsgFillBrushCollection
-CMsgFillBrushCollection_AnimationFrameData
-CMsgFreeCompositingLayer
-CMsgGaussianBlur
-CMsgGaussianBlur_AnimationFrameData
-CMsgGaussianValues
-CMsgHueShift
-CMsgHueShift_AnimationFrameData
-CMsgLinearGradient
-CMsgLockTexture
-CMsgMatrix4x4
-CMsgMotionBlur
-CMsgMotionBlurValues
-CMsgMotionBlur_AnimationFrameData
-CMsgOpacity
-CMsgOpacityMask
-CMsgOpacityMaskData
-CMsgOpacityMask_AnimationFrameData
-CMsgOpacity_AnimationFrameData
-CMsgPanelPosition
-CMsgPanelPosition_AnimationFrameData
-CMsgParticle
-CMsgParticleSystem
-CMsgPoint
-CMsgPointWithTransition
-CMsgPointWithTransition_AnimationFrameData
-CMsgPopAAndTContext
-CMsgPopClipLayer
-CMsgPopClipLayer"
-CMsgPopCompositingLayer
-CMsgPopCompositingLayer",
-CMsgPopPanelContextInLayer
-CMsgPopPanelContextInLayer"
-CMsgPushAAndTContext
-CMsgPushClipLayer
-CMsgPushCompositingLayer
-CMsgPushPanelContextInLayer
-CMsgRadialGradient
-CMsgRenderFillBrushCollection
-CMsgRenderFilledRect
-CMsgRenderTextFormat
-CMsgRenderTextRangeFormat
-CMsgRenderTextRegion
-CMsgRenderTexturedRect
-CMsgRequestRenderCallback
-CMsgRotate2D
-CMsgRotate2D_AnimationFrameData
-CMsgSaturation
-CMsgSaturation_AnimationFrameData
-CMsgTextFormat
-CMsgTextInlineObject
-CMsgTextRangeFormat
-CMsgTextShadow
-CMsgTextShadow_AnimationFrameData
-CMsgTransformOriginData
-CMsgTransitionData
 COLORCORRECTION_VERSION_1
 CONF lib
 CPPTYPE_BOOL
@@ -1137,15 +889,10 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
-CPostConnectCallback
 CRLReason
 CRYPTO lib
-CRadialClipData
-CRadiusData
-CRadiusData_CCornerRadius
 CSPName
 CSchemaInstallCallback
-CTextShadowData
 CTextTextureCache::GetTextureRegion - allocate new space
 CTextTextureCache::GetTextureRegion - search free space
 CTextTextureCache::GetTextureRegion - split free space
@@ -1159,18 +906,13 @@ CUIFontFilePB
 CUIFontFilePackagePB
 CUIFontFilePackagePB_CUIEncryptedFontFilePB
 CUIFontPackage::CUIFontPackage(const char *)
-CUITextLayoutPango::BInitialize
 CUITextLayoutPango::Draw
 CUITextLayoutPango::DrawRun
 CUITextLayoutPango::DrawRun - Glyph render
 CUITextLayoutPango::GetCharacterCoordinates
 CUITextLayoutPango::GetCharacterRangeCoordinates
-CUITextLayoutPango::GetRequiredSize
 CUITextLayoutPango::HitTestPoint
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -1186,13 +928,9 @@ Can'unsigned short
 Can'unsigned short get here.
 Can'unsigned short get here: failed to get default value as string
 Cannot allocate buffer larger than kint32max for 
-Cffffff.
 ClearField
 Cn77Yn77Y
 Code Signing
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
 ConfigurationSystem_001
 ContainsCRLF()
 ContainsCRLF() == bContainsCRLF
@@ -1212,7 +950,6 @@ D$lIcD$h
 D$pD9h0t\I
 D9Q(}
 D9s$|
-D9sXu
 D9{$|
 D;H(|
 D;I(|9L9
@@ -1267,15 +1004,8 @@ E,IcE(
 E-mail Protection
 E9l$(
 E9w0M
-E;f0A
-E;f8A
-E;f8D
-E;fPA
-E;fXA
 E;float A
-E;l$ A
 E;p,|
-E;~ A
 E;~ |
 E@F;|
 E@L+h0
@@ -1342,7 +1072,6 @@ FDIcF@
 FILE pointer
 FIPS routines
 FONTCONFIG_PATH
-FTIcFP
 FT_New_Face
 F\IcFX
 Failed creating texture for panorama text
@@ -1387,9 +1116,7 @@ FtIcFp
 G Ic4
 G(HcH
 G(L;unsigned long
-G8H	p(]
 G@H+x0H
-G@IcF H
 G@L+x0I
 GOST 28147-89
 GOST 28147-89 Cryptocom ParamSet
@@ -1434,9 +1161,7 @@ GetString
 GetStringReference
 GetUInt32
 GetUInt64
-H	p(]
 H H;9u)H
-H!wchar_t(]
 H$$lH$$l
 H+A0H
 H+A0I
@@ -1517,7 +1242,6 @@ I9}@unsigned short
 IAppSystem
 ICC or token signature
 IConCommandBaseAccessor
-IConVar
 IDEA-CBC
 IDEA-CFB
 IDEA-ECB
@@ -1545,7 +1269,6 @@ IcF(A
 IcF,L
 IcF0A
 IcF@A
-IcFPA
 IcFXA
 IcFhA
 IcFpA
@@ -1612,17 +1335,13 @@ K(Ict$,L
 K8;C<
 K8;C<}int
 K8;C<}short
-K8;C<}unsigned __int128
-K8;C<}unsigned long
 K8;C<}unsigned short
-K8;C<}void
 K8;C<}}
 KHIcT$,L
 KH[A^]
-K`A;N`
+KXA;NX
 KcL>$H
 KeyValueCache001
-Kfff.
 L$ Hc
 L$ Hc<
 L$ L+
@@ -1632,11 +1351,7 @@ L$@L+a0I
 L&&jL&&jl66Zl66Z~??A~??A
 L8(+L8 A9
 L8,+L8$D9
-L95$~
-L95-9
-L95E 
-L95HD
-L95}signed char
+L95='	
 L9v@u
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -1646,7 +1361,6 @@ Label
 Layout byte index %u out of range (%u text bytes)
 Layout char index %u out of range (%u text chars)
 LcO,D
-Lfff.
 LightingBuilderMgr001
 LocalKeySet
 Localize_001
@@ -1657,6 +1371,7 @@ M8A;E<}_
 MATCHFRAMEWORK_001
 MD5-SHA1
 MIME MHS
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 Management
 MapListService_001
@@ -1664,10 +1379,6 @@ MarkColorRange
 MaterialUtils_001
 Mc<$J
 McG,M
-Mc~0J
-Mc~8J
-Mc~PJ
-Mc~XJ
 MeshSystem001
 MeshUtils001
 Message extensions cannot have required fields.
@@ -1692,11 +1403,8 @@ Microsoft Universal Principal Name
 Missing field: FileDescriptorProto.name.
 Missing name.
 ModelDocCommandSystem001
-Multiple extension registrations for type "
 MutableRawRepeatedField
 MutableRepeatedMessage
-N8A;F<
-N8A;F<}unsigned long long
 N@H+q0H
 N@L+q0I
 NONPIC_relocated
@@ -1819,7 +1527,6 @@ Protocol message was modified concurrently during serialization.
 Proxy Certificate Information
 P~AeS~AeS
 Q3`bS
-Qfffff.
 QueuedLoaderVersion001
 R)){R)){
 RAND lib
@@ -1873,7 +1580,7 @@ Release
 ReleaseLast
 ReleaseMessage
 RemoveLast
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -1883,13 +1590,11 @@ Repeated fields can'unsigned short have default values.
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 S(Ict$,L
 S/MIME
 S/MIME Capabilities
 S@H+Z0H
-SATAp
 SEED-CBC
 SEED-CFB
 SEED-ECB
@@ -1948,7 +1653,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -1959,9 +1664,8 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 SourceCodeInfo
-Stack part of OpenSSL 1.0.1e 11 Feb 2013
 StatsService_001
 String field
 String literals cannot cross line boundaries.
@@ -1976,7 +1680,6 @@ T8(+T8 A9
 T8,+T8$A9
 T8,+T8$D9
 TBRAp
-TBRBSATAp
 TBRBUARAp
 TBRB[ATAp
 TBRB`
@@ -2017,7 +1720,7 @@ This program requires version
 This program was compiled against version 
 This shouldn'unsigned short be called if all the sizes are equal.
 Time Stamping
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -2078,7 +1781,6 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-V_AppendSlash: ran out of space on %s.
 Value 
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -2099,7 +1801,6 @@ WARNING
 WAXBXBRBRBRE`
 WBR	unsigned int
 Warning parsing text-format 
-Warning:  %short = '%short' is infinite, clamping value.
 Warning: Unused import: "
 WorkshopSetup001
 WorldRendererBuilderMgr001
@@ -2136,6 +1837,7 @@ X509v3 Subject Key Identifier
 X9-57
 X9.57
 X9.57 CM ?
+XPj4@@
 X[A\A]A^A_]
 X[A^A_]
 Z--wZ--wchar_t
@@ -2158,7 +1860,6 @@ ZwKiZwKi
 ^LA+^H~jI
 ^V_TY
 ^\A+^X~fI
-^fffff.
 _ I;_(tG1
 _AES_cbc_encrypt
 _AES_decrypt
@@ -2440,27 +2141,36 @@ _OPENSSL_wipe_cpu
 _OSAtomicCompareAndSwap64Barrier
 _OSMemoryBarrier
 _OpenSSLDie
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetEnv
-_Plat_GetModuleFilename
 _Plat_GetModuleProcAddress
-_Plat_IsInDebugSession
+_Plat_IsInDebugSessionRaw
 _Plat_LoadModule
-_Plat_LoadModuleRaw
 _Plat_ShouldCollectMiniDumpsForFatalErrors
-_Plat_getwd
 _RegisterStringToken
 _SDL_setenv
 _STACK_version
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
 _UI_Font_New_Face_Override
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_StripFilename
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_qsort_s
+_V_stricmp_fast
+_V_vsnprintfRet
 _Warning
 __DATA
 __DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_MakeAbsolutePath
+__V_strncpy
 ___assert_rtn
 ___bzero
 ___cxa_allocate_exception
@@ -2504,8 +2214,6 @@ _asn1_Finish
 _asn1_GetSequence
 _asn1_add_error
 _asn1_const_Finish
-_atof
-_atoi
 _bn_add_words
 _bn_cmp_part_words
 _bn_cmp_words
@@ -2655,7 +2363,6 @@ _pango_layout_set_text
 _pango_layout_set_width
 _pango_layout_set_wrap
 _pango_layout_xy_to_index
-_printf
 _private_AES_set_decrypt_key
 _private_AES_set_encrypt_key
 _pthread_mutex_destroy
@@ -2699,7 +2406,6 @@ _strcmp
 _strcpy
 _strerror
 _strlen
-_strncat
 _strncpy
 _strnlen
 _strtod
@@ -2721,7 +2427,6 @@ _word
 `[A^]
 ``A9^p
 `p p`
-`unsigned char[A\A^A_]
 aRecord
 a_object.c
 aaControls
@@ -2776,10 +2481,7 @@ algorithm
 alloc
 allow_alias
 alue_one
-animation_frame_data
-animations
 ansi-X9-62
-antialiasing
 anyExtendedKeyUsage
 anyPolicy
 archiveCutoff
@@ -2801,8 +2503,6 @@ bSuccess == FcTrue
 b_print.c
 bad asn1 object header
 bad get asn1 object call
-base_position
-base_position_variance
 basicConstraints
 basicOCSPResponse
 bf-cbc
@@ -2813,7 +2513,6 @@ bignum routines
 bio_lib.c
 biometricInfo
 bitNum >= 0 && bitNum < this->Size()
-blur_radius
 bn(%double,%double)
 bn_lib.c
 bn_print.c
@@ -2823,15 +2522,6 @@ bool CUIFontPackage::BGetFontNameAndData(int, CUtlString &, CUtlBuffer *)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool panorama::CUIFontLoaderLinux::RegisterFile(const char *, const char *)
 bool panorama::CUITextLayoutPango::BInitialize(const void *, int, int, panorama::EPanoramaTextEncoding, const IUITextServices::TextLayoutParams_t *)
-border
-border_radius
-bottom
-bottom_left
-bottom_right
-bottom_right_padding
-box_shadow
-brightness
-brush_index
 bsearch_
 bss_file.c
 buf_str.c
@@ -2865,7 +2555,6 @@ cNAMERecord
 caIssuers
 caRepository
 callback
-callback_obj
 called signed char function that was disabled at compile-time
 called signed char function you should not call
 camellia-128-cbc
@@ -2893,9 +2582,6 @@ cast5-ecb
 cast5-ofb
 cbc_encrypt
 cc_generic_services
-center_position
-center_x
-center_y
 certBag
 certicom-arc
 certificate extensions
@@ -2903,36 +2589,21 @@ certificateIssuer
 certificatePolicies
 certificateRevocationList
 challengePassword
-char *_V_strncat(char *, const char *, int, int)
 char(E9~(
 characteristic-two-field
-child_panel_count
-chilren_have_3dtransforms
 cleanup_all_ex_data
-clear_color_rgba
 clearance
 cleartext track 2
 clientAuth
-clip_after_transform
 codeSigning
-color
-color_end_rgba
-color_end_rgba_variance
-color_rgba
-color_start_rgba
-color_start_rgba_variance
-color_stop
 comba
 common libcrypto routines
 commonName
-composition_color
 configuration file routines
 connect
 const T &CUtlPtrArray<panorama::UITextFormatProperties_t>::Element(uint) const [T = panorama::UITextFormatProperties_t]
 content types
 contentType
-context_id
-contrast
 count >= 0
 countersignature
 countryName
@@ -2946,10 +2617,6 @@ cryptlib.c
 cryptocom
 cryptopro
 ctype
-cubic_bezier_0
-cubic_bezier_1
-cubic_bezier_2
-cubic_bezier_3
 cxBitmap <= alphaTarget.m_rect.m_iRight - alphaTarget.m_iPadding - alphaTarget.m_rect.m_iLeft
 dHcL
 dITRedirect
@@ -2964,9 +2631,7 @@ debug_malloc
 debug_malloc2
 decrypt
 decrypt_key
-default_format
 default_value
-delay_seconds
 deltaCRL
 deltaRevocationList
 dependency
@@ -2989,7 +2654,6 @@ des-ede3-cfb8
 des-ede3-ofb
 des-ofb
 description
-destBufferSize >= 0
 destinationIndicator
 destroy_callback
 desx-cbc
@@ -3024,7 +2688,6 @@ dsaWithSHA1
 dsaWithSHA1-old
 dsa_with_SHA224
 dsa_with_SHA256
-duration_seconds
 dyld_stub_binder
 dynamic
 dynlock
@@ -3042,11 +2705,9 @@ ecdsa-with-SHA512
 ecdsa-with-Specified
 ed_mem_
 elete
-ellipsis
 elliptic curve routines
 emailAddress
 emailProtection
-empty_frame
 empty_string_ != NULL
 en_US
 encrypt
@@ -3054,7 +2715,6 @@ encrypt_key
 encrypted track 2
 encrypted_contents
 encrypted_font_files
-end_position
 engine
 engine routines
 enhancedSearchGuide
@@ -3094,8 +2754,6 @@ fffff.
 ffffff.
 field
 filesystem
-fill_brush
-fill_brush_collection
 fips2
 fixed32
 fixed64
@@ -3104,13 +2762,8 @@ float
 float == NULL || dynamic_cast<To>(float) != NULL
 float@LcV(H
 font_file_name
-font_style
-font_weight
 fopen
 fopen('
-format
-frame_paint_time
-frames
 fread
 freetype
 freshestCRL
@@ -3119,10 +2772,6 @@ friendlyCountryName
 friendlyName
 func(%lu)
 functions
-gaussian_blur
-gaussianblur_passes
-gaussianblur_stddevhor
-gaussianblur_stddevver
 generate cryptogram
 generationQualifier
 generic cryptogram
@@ -3143,12 +2792,10 @@ gost89
 gost89-cnt
 gost94
 gost94cc
-gravity_acceleration
 group
 hIc\$
 heck_defer
 heck_infinite_end
-height
 hex2bn
 hex_digit_to_int
 hmac-md5
@@ -3165,11 +2812,8 @@ holdInstructionNone
 holdInstructionReject
 homePostalAddress
 homeTelephoneNumber
-horizontal
-horizontal_offset
 houseIdentifier
 howfatal
-hppppv4@:
 iA5StringSyntax
 iIndex >= 0 && iIndex < m_pFontPackagePB->encrypted_font_files_size()
 id-DHBasedMac
@@ -3416,25 +3060,17 @@ idea-ofb
 identified-organization
 identifier_value
 ifff.
-iffff.
 implementation
 in2bn
 inaryProperties_GetValue
 ind_type
 infinity
-info.m_pReplacementString == 0
 ing_callback
 inhibitAnyPolicy
 initials
-inline_object
 input_type
-inset
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int < m_cElements
 int >= 0
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
 int32
 int64
@@ -3443,7 +3079,6 @@ int_thread_get (err.c)
 internal error
 international-organizations
 internationaliSDNNumber
-invalid input pointer
 invalidityDate
 ioctlsocket
 ipsec3
@@ -3453,7 +3088,6 @@ ipsecTunnel
 ipsecUser
 is_extension
 is_mem_check_on
-is_parent_relative
 issuer capabilities
 issuerAltName
 issuingDistributionPoint
@@ -3469,42 +3103,24 @@ java_multiple_files
 java_outer_classname
 java_package
 java_string_check_utf8
-jfffff.
 joint-iso-itu-unsigned short
 keyBag
 keyUsage
-kffffff.
 lZrNlZrN
 label
 lastModifiedBy
 lastModifiedTime
-layer_id
-layer_quad_bottom_left_x
-layer_quad_bottom_left_y
-layer_quad_bottom_left_z
-layer_quad_bottom_right_x
-layer_quad_bottom_right_y
-layer_quad_bottom_right_z
-layer_quad_top_left_x
-layer_quad_top_left_y
-layer_quad_top_left_z
-layer_quad_top_right_x
-layer_quad_top_right_y
-layer_quad_top_right_z
 leading_comments
 leaks
 leanse
 leanup
 lear_flags
 length_delimited
-letter_spacing
 lffffff.
 lhash part of OpenSSL 1.0.1e 11 Feb 2013
 lhash.c
 lib(%lu)
 libpanorama_text_pango.dylib
-line_height
-linear_gradient
 listen
 ln2nid
 localKeyID
@@ -3538,13 +3154,11 @@ m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
 m_NumElements == 0
 m_Root == InvalidIndex()
 m_Tail == InvalidIndex()
-m_fnChangeCallbacks.Count() == 0
 m_listTextOpacityMaskLRU.Count() > 0
 m_nZeroFillBufferSize > 0
 m_pFontPackagePB
 m_pFontPackagePB->package_version() == 1
 m_pParent
-m_pParent == this
 m_pTextServices == NULL
 m_pTextureProvider != NULL
 m_pTextureProvider == NULL
@@ -3557,8 +3171,6 @@ map key must name signed char scalar or string field.
 map type is only allowed for fields with signed char message type.
 map type is only allowed for repeated fields.
 map_key must not name signed char repeated field.
-maxLen > 0
-maxLen >= sizeof( *pDest )
 md2WithRSAEncryption
 md4WithRSAEncryption
 md5-sha1
@@ -3583,15 +3195,7 @@ mime-mhs
 mime-mhs-bodies
 mime-mhs-headings
 missing asn1 eos
-mix_blend_mode
 mobileTelephoneNumber
-motion_blur
-motionblur_dirx
-motionblur_diry
-motionblur_velocity
-mouse_cursor_hotspot_x
-mouse_cursor_hotspot_y
-mouse_cursor_texture_id
 msCTLSign
 msCodeCom
 msCodeInd
@@ -3608,11 +3212,6 @@ nFlags >= 0 && nFlags <= UINT8_MAX
 nSRecord
 nameConstraints
 name_part
-needs_clear
-needs_depth
-needs_full_repaint
-needs_intermediate_texture
-needs_redraw_every_frame
 negative
 negative_int_value
 nested asn1 error
@@ -3642,21 +3241,11 @@ obj_dat.c
 obj_lib.c
 object
 object identifier routines
-occluded_bottom_edge
-occluded_left_edge
-occluded_right_edge
-occluded_top_edge
 od_word
-offset_distance
 onBasis
 oneof_decl
 oneof_index
 op_info
-opacity
-opacity_mask
-opacity_mask_opacity
-opacity_mask_texture_id
-opaque_background
 opendir
 opentype_font_data
 operator delete(void*)
@@ -3688,7 +3277,6 @@ pCallback == NULL
 pHH1QHH
 pHhXpHhX
 pHl\tHl\unsigned short
-pName
 pSchemaSystem != NULL
 pTextLayout
 p[A\A^A_]
@@ -3696,8 +3284,6 @@ package
 package_version
 packed
 pagerTelephoneNumber
-panel_handle
-panel_position
 panorama/fonts/fonts.conf
 panorama::CTextLayoutDrawCache
 panorama::CTextTextureCache
@@ -3708,27 +3294,10 @@ panorama::IUITextLayoutDrawCache
 panorama::IUITextServices
 panorama::IUITextTextureCache
 params
-parent_brush_index
-parent_panel_handle
 parse
 parsing
 part_words
-particle_flicker
-particle_flicker_variance
-particle_initial_velocity
-particle_lifespan_seconds
-particle_position
-particle_sharpness
-particle_sharpness_variance
-particle_size
-particle_size_variance
-particle_system
-particle_velocity_max
-particle_velocity_min
-particles_per_second
-particles_per_second_variance
 passed signed char null parameter
-passes
 password based MAC
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
@@ -3746,10 +3315,8 @@ pbeWithSHA1AndDES-CBC
 pbeWithSHA1AndRC2-CBC
 penSSLDie
 pending
-percent
 personalSignature
 personalTitle
-perspective_depth
 photo
 physicalDeliveryOfficeName
 pilot
@@ -3778,10 +3345,6 @@ pointer
 pointer != NULL
 policyConstraints
 policyMappings
-position
-position_x
-position_y
-position_z
 positive_int_value
 postOfficeBox
 postalAddress
@@ -3824,14 +3387,9 @@ r#ff.
 r99Kr99K
 rEt#L
 rFC822localPart
-radial_clip
-radial_gradient
-radii
 radr://5614542
 rand2
 random number generator
-range_formats
-raw_text
 rc2-40-cbc
 rc2-64-cbc
 rc2-cbc
@@ -3854,19 +3412,14 @@ reateInterface
 ree_strings
 registered: 
 registeredAddress
-render_target
-rendermessages.proto
-rendermessages.proto"
 repeated
 required
 resizeNumBits >= 0
 rfc822Mailbox
-right
 ripemd160
 ripemd160WithRSA
 roleOccupant
 roomNumber
-rotate_2d_centered
 rsa routines
 rsaEncryption
 rsaOAEPEncryptionSET
@@ -3885,21 +3438,11 @@ s_nDLLIdentifier >= 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 safeContentsBag
-saturation
 sb11Sb11S*
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
 sc2bn
-scale_2d_centered
-scale_2d_factors_x
-scale_2d_factors_y
-scroll_offset
-scroll_offset_target
-scroll_transition_x
-scroll_transition_y
-scroll_x
-scroll_y
 sdsiCertificate
 searchGuide
 secp112r1
@@ -3935,7 +3478,6 @@ sect409k1
 sect409r1
 sect571k1
 sect571r1
-sector_angle
 secure device signature
 security
 seeAlso
@@ -4109,7 +3651,6 @@ sn2nid
 snmpv2
 socket
 source_code_info
-spread_distance
 sservice
 ssl_cert
 ssl_ctx
@@ -4118,10 +3659,6 @@ ssl_sess_cert
 ssl_session
 stack.c
 start
-start_angle
-start_index
-start_position
-start_time
 stateOrProvinceName
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 static void panorama::CUITextLayoutPango::Initialize()
@@ -4153,19 +3690,13 @@ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
 std::exception::~exception()
 std::terminate()
-stddev_hor
-stddev_ver
 store
 street
 streetAddress
-strength
-strikethrough
 string
 string_value
 strings::Substitute format string invalid: asked for "$
-style
 style != k_EFontStyleUnset
-style_symbol
 subjectAltName
 subjectDirectoryAttributes
 subjectInfoAccess
@@ -4175,9 +3706,6 @@ subtreeMinimumQuality
 subtype mismatch
 supportedAlgorithms
 supportedApplicationContext
-suppress_clip_to_bounds
-surface_height
-surface_width
 surname
 system lib
 system library
@@ -4185,20 +3713,17 @@ t$ H9
 t$(H9
 t$0H9
 t$@H9
-t$H9[8u
 t.Ic~ H
 t.Ic~$H
 t.Ic~(H
 t.Ic~0H
 t.Ic~8H
 t.Ic~<H
-t.Mc~PJ
 t.fffff.
 t0IcD$,H
 t0IcU,H
 t1IcD$,H
 t2IcL$,H
-t4Hc{
 t5Hc_,H
 t5IcV,L
 t5IcW,L
@@ -4210,6 +3735,7 @@ tFIcG,L
 tIHcO
 tLMc~
 tNIcF
+tVA9_
 targetInformation
 tderr
 teffffff.
@@ -4220,17 +3746,6 @@ test_flags
 text format contains deprecated field "
 textEncodedORAddress
 textNotice
-text_align
-text_chars
-text_encoding
-text_shadow
-texture_bottom_right
-texture_id
-texture_opacity
-texture_pointer
-texture_sample_mode
-texture_serial
-texture_top_left
 tfI9D$Xt_H
 the global scope
 thread=%lu, 
@@ -4238,36 +3753,11 @@ thread_id
 thread_state
 time stamp routines
 timeStamping
-timing_func
 title
 tlfff.
 tofff.
-top_left
-top_left_padding
 tpBasis
 trailing_comments
-transform_m00
-transform_m01
-transform_m02
-transform_m03
-transform_m10
-transform_m11
-transform_m12
-transform_m13
-transform_m20
-transform_m21
-transform_m22
-transform_m23
-transform_m30
-transform_m31
-transform_m32
-transform_m33
-transform_matrix
-transform_origin
-transform_perspective
-transform_perspective_origin
-transition
-transition_data
 trdup
 trustRoot
 twIc_
@@ -4293,7 +3783,6 @@ uLM9w
 uMI9~
 ub_word
 ub_words
-ui_scale_factor
 uifontfile_format.proto
 uifontfile_format.proto"C
 uint32
@@ -4316,12 +3805,8 @@ unsigned short Hcu
 unsigned short!Hcs
 unsigned short"IcF
 unsigned short#HcC
-unsigned short&H9[8tUH
 unsigned short'IcO,I
 unsigned short+Hc{
-unsigned short+Ic~(H
-unsigned short+Ic~,H
-unsigned short+Ic~4H
 unsigned short,Mcu
 unsigned short-I+G
 unsigned short-IcG,L
@@ -4345,18 +3830,9 @@ vXIc}(L
 valid
 value
 varint
-velocity
 version
-vertical
-vertical_offset
 virtual panorama::UITextOpacityMaskData_t *panorama::CTextLayoutDrawCache::GetTextOpacityMask(const void *, int, int, panorama::EPanoramaTextEncoding, const char *, panorama::UITextLayoutProperties_t *, const char **, float, void *)
 virtual panorama::UITextTextureRegion_t panorama::CTextTextureCache::GetTextureRegion(int32, int32)
-virtual void ConCommandBase::Create(const char *, const char *, int64)
-virtual void ConVar::ChangeStringValue(const char *, float)
-virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
-virtual void ConVar::InternalSetFloatValue(float)
-virtual void ConVar::InternalSetIntValue(int)
-virtual void ConVar::InternalSetValue(const char *)
 virtual void panorama::CTextLayoutDrawCache::DeleteOldestEntry()
 virtual void panorama::CTextTextureCache::FreeTextureRegion(const panorama::UITextTextureRegion_t &)
 virtual void panorama::CUITextLayoutPango::SetFontStyle(uint32, uint32, panorama::EFontStyle)
@@ -4394,18 +3870,12 @@ void DisconnectInterfaces()
 void DisconnectTier2Libraries()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void _V_AppendSlash(char *, int, char)
-void _V_strncpy(char *, const char *, int)
 void panorama::CTextLayoutDrawCache::SetTextServices(panorama::IUITextServices *)
 void panorama::CTextLayoutDrawCache::SetTextureStorage(panorama::IUITextTextureStorage *)
 void panorama::CTextTextureCache::SetTextureProvider(panorama::IUITextTextureProvider *)
 void;;Mv;;M
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-wants_hit_test
-wants_hit_test_children
-wants_screenspace_quad_output
 wap-wsg
 wap-wsg-idm-ecid-wtls1
 wap-wsg-idm-ecid-wtls10
@@ -4418,15 +3888,12 @@ wap-wsg-idm-ecid-wtls6
 wap-wsg-idm-ecid-wtls7
 wap-wsg-idm-ecid-wtls8
 wap-wsg-idm-ecid-wtls9
-wash_color
 wchar_t(L;unsigned long
 weak_dependency
 weight != k_EFontWeightUnset
 whirlpool
-width
 wipe_cpu
 words
-wrapping
 wrong submessage type
 x$D9s
 x121Address
@@ -4442,17 +3909,12 @@ x509_store
 x8A;D$0}1Ic
 xXu*H
 xXulH
-xXurH
 xXusH
-xXuwH
-x_is_percent
 xhA9^
 xqaBCFHTTFFFN
-y_is_percent
 yfff.
 yxxxxxxxH
 yxxxxxxxI
-zindex
 zlib compression
 {8tuH
 |$ H9
@@ -4465,12 +3927,9 @@ zlib compression
 |$PA;\$X|
 |>>B|>>Bq
 }	[A\A^A_]
-}HA;EP}
 ~!A9^$|
 ~!ff.
 ~#ffff.
-~)ff.
-~*fff.
 ~1fffff.
 ~8vAH
 ~L8(float

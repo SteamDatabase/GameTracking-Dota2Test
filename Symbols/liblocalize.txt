@@ -15,13 +15,11 @@
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
  Msg
+ Plat_DebugPrint
  Plat_ExitProcess
- Plat_GetModuleFilename
- Plat_GetModuleProcAddress
  Plat_GetOSType
  Plat_IsHighDPI
- Plat_IsInDebugSession
- Plat_LoadModuleRaw
+ Plat_IsInDebugSessionRaw
  Plat_MessageBox
  Plat_ShouldCollectMiniDumpsForFatalErrors
  SteamAPI_GetHSteamPipe
@@ -37,31 +35,41 @@
  T operator new(unsigned long)
  T operator new[](unsigned long)
  T strnlen
+ V_IsAbsolutePath
+ V_UTF16ToUTF32
+ V_UTF16ToUTF8
+ V_UTF32ToUTF16
+ V_UTF32ToUTF8
+ V_UTF8ToUTF16
+ V_UTF8ToUTF32
+ V_UnicodeCaseCompare(char const*, char const*, int, EStringConvertErrorPolicy)
+ V_atoi
+ V_iswspace
+ V_qsort_s
+ V_snprintf
+ V_snwprintf
+ V_stricmp_fast
+ V_stristr_fast(char const*, char const*)
+ V_vsnprintfRet
  Warning
- _DefaultRuneLocale
  _Unwind_Resume
+ _V_strncat
+ _V_strncpy
+ _V_strnicmp_fast
+ _V_wcsncpy_bytes
  __bzero
  __cxa_atexit
  __cxa_begin_catch
  __cxa_call_unexpected
  __cxa_pure_virtual
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
- atof
- atoi
  dyld_stub_binder
- free
  g_pMemAlloc
- iconv
- iconv_close
- iconv_open
- malloc
  memchr
  memcpy
  memmove
- printf
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -69,20 +77,15 @@
  pthread_mutexattr_init
  pthread_mutexattr_settype
  raise
- sscanf
  std::terminate()
  strchr
  strcmp
  strlen
- strncat
  strrchr
  strstr
- swprintf
  typeinfo for std::bad_alloc
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
- vtable for __cxxabiv1::__vmi_class_type_info
  wcschr
  wcscmp
  wcscpy

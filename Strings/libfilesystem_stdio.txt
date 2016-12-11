@@ -14,6 +14,7 @@
 !"CFileTracker::GetFileInfos - overflowed list!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( request.flags & FSASYNC_FLAGS_NULLTERMINATE )
+!(p0`
 !V_IsAbsolutePath( m_pFileName )
 !V_IsAbsolutePath( pFilename )
 !fffff.
@@ -41,11 +42,10 @@
 %s_dir.vpk
 %s_flt.vpk
 %short %20s %30s = %8.2fms (call count = %double)
-%short unable to grow buffer to fit string
 %short%short:%short
 %short, %short, %short
 %short/%short
-%short/bin/%short
+%short: string format requested %double chars
 ( __int128 - 1 ) * nBlockSize < num
 ( nSearchPathIndex >= 0 ) && ( nSearchPathIndex < m_SearchPaths.Count() )
 ( pHandle->m_pFileSystem == NULL ) && ( pHandle->m_nFindDataIndex == FILESYSTEM_INVALID_FIND_HANDLE )
@@ -57,9 +57,10 @@
 ([A^A_]
 (ffff.
 (intp)this % 16 == 0
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
-(uBHcK
+(uEHcK
 (vpk) 
 )fffff.
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
@@ -70,7 +71,6 @@
 ---FS%short:  close %short %p %int (%.3f)
 ---FS%short:  read %short %int %p (%.3f)
 ---FS%short:  write %short %int %p
--allowdebug
 -disable_auto_vpk_loading
 -fff.
 -fs_log
@@ -79,11 +79,8 @@
 -log_opened_files
 -noasync
 -onethreadpool
--valveinternal
--xlsp
 .ETv*H
 .Elv*H
-.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/filesystem/basefilesystem.cpp
@@ -98,6 +95,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/filesystem/iasyncfilesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlblockmemory.h
@@ -109,11 +107,9 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vstdlib/jobthread.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stringpool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -130,23 +126,21 @@
 0:Off, 1:Any, 2:Sync only
 0:Off, 1:Warn main thread, 2:Warn other threads
 0[A\A^A_]
+1ffff.
 29K }
-4$A;\$
 4$w+H
 49K }
 49S |}
-6~Lfffff.
 7L9s unsigned short*H
-8"tAM
 8[A\A]A^A_]
 8[A^A_]
 9S |signed char
 9S |unsigned int
 :done
 :error
-:tFL9
 ;A;_@u
 <(9{ |jI
+<Invalid file time %lld>
 <NULL>
 @@   
 @CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
@@ -177,10 +171,10 @@
 @CVProfNode::ExitScope()
 @CVProfNode::GetSubNode(char const*, int, char const*, int)
 @DevMsg(char const*, ...)
-@DevWarning(char const*, ...)
 @GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
 @GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
@@ -191,25 +185,28 @@
 @_EarlyInit_Tier0
 @_KeyValuesSystem
 @_LOG_GENERAL
+@_LengthOfMatchingPaths
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
+@_Plat_DebugString
 @_Plat_ExitProcess
+@_Plat_FileSize
 @_Plat_FloatTime
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
+@_Plat_IsInDebugSessionRaw
 @_Plat_LoadModule
-@_Plat_LoadModuleRaw
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_TickDiffMicroSec
 @_Plat_TickDiffMicroSecF
 @_Plat_TickDiffMilliSecF
 @_Plat_TranslateSymbolicLinks
+@_Plat_UnloadModule
+@_Plat_ctime
 @_Plat_getwd
 @_RandomInt
 @_SteamAPI_GetHSteamPipe
@@ -221,9 +218,63 @@
 @_ThreadInterlockedExchange64
 @_ThreadSetPriority
 @_ThreadSleep
+@_V_AreSlashesCorrect
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_GetErrno
+@_V_GetFileExtension
+@_V_IsAbsolutePath
+@_V_IsFakePath
+@_V_MakeAbsoluteVPKPathName
+@_V_RemoveDotSlashes
+@_V_SetErrno
+@_V_StripFilename
+@_V_StripTrailingSlash
+@_V_UTF16ToUTF8
+@_V_UnqualifiedFileName
+@_V_atof
+@_V_atoi
+@_V_fclose
+@_V_ferror
+@_V_fflush
+@_V_fopen
+@_V_fprintf
+@_V_fread
+@_V_fseeki64
+@_V_ftelli64
+@_V_fwrite
+@_V_qsort
+@_V_qsort_s
+@_V_setvbuf
+@_V_snprintf
+@_V_snwprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_strupper_fast
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_AppendSlash
+@__V_ComposeFileName
+@__V_ExtractFileExtension
+@__V_ExtractFilePath
+@__V_FileBase
+@__V_FixupPathName
+@__V_GetFirstDir
+@__V_MakeAbsolutePath
+@__V_SetExtension
+@__V_StringAfterPrefix
+@__V_StripExtension
+@__V_StripLastDir
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -232,42 +283,22 @@
 @___cxa_guard_acquire
 @___cxa_guard_release
 @___cxa_pure_virtual
-@___dynamic_cast
 @___error
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
-@___stderrp
 @___tolower
 @___toupper
 @__float128 short::*
-@_abort
 @_alphasort$INODE64
-@_atof
-@_atoi
 @_chmod
 @_closedir
-@_ctime
-@_dlclose
-@_dlsym
-@_fclose
-@_ferror
-@_fflush
 @_flock
-@_fopen
-@_fprintf
-@_fputs
-@_fread
 @_free
-@_fseek
-@_ftell
-@_fwrite
 @_g_Tier1_CRC32Table
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
 @_g_pThreadPool
-@_getcwd
 @_memchr
 @_memcpy
 @_memmove
@@ -275,7 +306,6 @@
 @_memset_pattern16
 @_mkdir
 @_opendir$INODE64
-@_printf
 @_pthread_getspecific
 @_pthread_mutex_destroy
 @_pthread_mutex_init
@@ -284,14 +314,11 @@
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
 @_pthread_setspecific
-@_qsort
 @_raise
 @_readdir$INODE64
 @_rename
 @_rewind
 @_scandir$INODE64
-@_sprintf
-@_sscanf
 @_stat$INODE64
 @_strcasecmp
 @_strcat
@@ -299,24 +326,15 @@
 @_strcmp
 @_strcpy
 @_strlen
-@_strncat
-@_strncmp
 @_strrchr
 @_strstr
-@_strtod
-@_strtol
-@_strtoull
 @_unlink
-@_vsnprintf
-@_vswprintf
-@_wcscpy
 @_wcslen
 @dyld_stub_binder
 @echo off
 @echo on
 @loader_path
 @loader_path/libsteam_api.dylib
-@p @ 0`
 @paHFCH
 @paHFCL
 @r	fA
@@ -339,7 +357,6 @@ A9\$8
 A9\$L
 A9^$|
 A;D$ ~
-A;G ~
 A;\$@|
 A;] u
 A;]long long|
@@ -352,7 +369,6 @@ AWAVATSI
 AWAVAUATSH
 AWAVAUATSP
 AWAVAUATSPA
-AWAVAUATSPD
 AWAVAUATSPE
 AWAVAUATSPH
 AWAVAUATSPI
@@ -383,7 +399,7 @@ AsyncOpenedFile_t
 AsyncOpenedFile_t *CAsyncOpenedFiles::Get(FSAsyncFile_t)
 AsyncRequestStatus_t CAsyncRequestBase::ValidateSubmittedRequest(bool)
 Attempted to mount VPK "%short" but the VPK it lives inside ("%short") must be mounted first!
-B\B`4E`_Gp8p
+B\B`4E`aGp8p
 Bad Outer in CAsyncRequestBase::AbortAfterServicing
 Bad Outer in CAsyncRequestBase::DeleteOuter
 Bad Outer in CAsyncRequestBase::GetInterfaceBase
@@ -399,11 +415,9 @@ BenchmarkService001
 BinaryProperties_GetValue
 Blocked change to read-only path %short!
 Buffer not big enough to hold requested File IO
-BuiltDebug
 C [A^]
 C0;C@u
-C;L=(ukH
-C<[A^]
+C;L=(ubH
 CAsyncFileRequest
 CAsyncFileRequest::GetProfilingInfo called with bad buffer size (%double passed, expecting %llu)
 CAsyncFileSystem
@@ -433,6 +447,7 @@ CBaseFileSystem::Size
 CBaseFileSystem::Tell
 CBaseFileSystem::Write
 CCountedStringPool
+CD[A^]
 CDefaultAccessor
 CEmptyConVar
 CFileAsyncAppendFileJob
@@ -470,7 +485,10 @@ CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const
 CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
 CStdFilesystemFile
 CStdioFile
-CSysModule *Sys_LoadModule(const char *)
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
+CTSQueue::Node_t *CTSQueue<CAsyncIOResult_t, false>::Push(CTSQueue::Node_t *) [T = CAsyncIOResult_t, bTestOptimizer = false]
 CThread::CThread()
 CThread::Init()
 CThread::IsThreadRunning()
@@ -504,9 +522,6 @@ CUGCFileHandle
 CUtlBlockMemory overflow!
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlFixedMemory overflow!
 CUtlFixedMemory::Iterator_t CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> >::Next(const CUtlFixedMemory::Iterator_t &) const [T = UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long>]
 CUtlLinkedList overflow! (exhausted index range)
@@ -537,10 +552,11 @@ CpaHFCH
 CpaHFCL
 CreateFile
 CreateInterface
-D!0fA
+D$8Mct$
 D$@ffff.
 D$@ffffff.
-D9s8|*H
+D)0fA
+D9s@|*H
 D9sXu
 DEFAULT_WRITE_PATH
 DataOffset
@@ -548,7 +564,6 @@ DebugTextureInfo001
 DependencyClass::m_pDependencyLL == NULL
 Destroying signed char search path with remaining auto loaded VPK files! Use RemoveSearchPathInternal()
 DevMsg(char const*, ...)
-DevWarning(char const*, ...)
 DirectoryEntries
 DotaCardGameClient_001
 E ffffff.
@@ -589,6 +604,7 @@ EnvironmentMapBuilder_001
 EventSystem001
 Exceeded limit of number of vpk files supported (%double)!
 F ffffff.
+FAJb1
 FPIcNtH)
 FS:  Tried to Close NULL file handle!
 FS:  Tried to EndOfFile NULL file handle!
@@ -728,29 +744,33 @@ JobStatus_t CJob::Execute()
 KV Conditional Evaluation Error
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues Error: %short in file %short
 KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
 L/0E1
 LINUX
 LOWVIOLENCE
+Lc%Xw
+Lc5+O
 Length
-Lfff.
 LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 Loose
+M96u/H
 M;f8u
 MATCHFRAMEWORK_001
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MXGJJ98X76
 MapListService_001
 MaterialUtils_001
 Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
+Mffffff.
 ModelDocCommandSystem001
-Module %short is signed char debug build
 Multiple Requests: %double
 Mutex Should have protected use while processing
 N([A^]
@@ -774,6 +794,7 @@ PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
 Path ID:
+PhL;u
 PhL;unsigned long
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
@@ -781,12 +802,11 @@ PostProcessingSystem_001
 PpL;long double
 PreloadDirectoryEntries
 PropertyEditorSystem_001
-Qfff.
 QueuedLoaderVersion001
 RBRAp
 RBRBRBRAp
 RBRBRBRBRBRBRBRB\0
-RB\ATAp
+RB]ATAp
 ReadFile
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -797,7 +817,7 @@ RecursiveLoadFromBuffer:  recursion overflow
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
 Removing VPK file: %short
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -807,9 +827,7 @@ Requested non-existent write path %short!
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
-SATAp
+ResourceSystem013
 SERVICING_IO
 STATUS_UNDEFINED
 STEAMAPPLIST_INTERFACE_VERSION001
@@ -819,9 +837,9 @@ STEAMHTTP_INTERFACE_VERSION002
 STEAMINVENTORY_INTERFACE_V001
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
-STEAMREMOTESTORAGE_INTERFACE_VERSION013
-STEAMSCREENSHOTS_INTERFACE_VERSION002
-STEAMUGC_INTERFACE_VERSION008
+STEAMREMOTESTORAGE_INTERFACE_VERSION014
+STEAMSCREENSHOTS_INTERFACE_VERSION003
+STEAMUGC_INTERFACE_VERSION009
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
 STEAMVIDEO_INTERFACE_V001
@@ -843,7 +861,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -854,10 +872,10 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StatsService_001
 SteamClient017
-SteamController003
+SteamController004
 SteamFriends015
 SteamMatchMaking009
 SteamMatchMakingServers002
@@ -867,27 +885,27 @@ SteamUtils008
 T &CUtlBlockMemory<unsigned char, int>::operator[](I) [T = unsigned char, I = int]
 T &CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> >::operator[](intp) [T = UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long>]
 T CThreadSafeRefCountedObject<CWhitelistSpecs *>::GetInMainThread() [T = CWhitelistSpecs *]
-TBRBRBRAp
 TBRBRBRBRAWB`
+TBTATBRATAp
 TBTATBp
 TBTAp
-TBWATATAp
-TB\ATA
 TB]ARBSATAp
-TB`%A`
-TCRBSATAp
+TB`'A`
+TCRBRBRAp
 TCSARAp
 TCSBp p
-TCTATBp
-TCWARATAp
-TC\ATARAp
-TC\ATARB\ATARBRB\ATA\ATARBRB\ATAp
+TCTAp
+TCXARATAp
+TCXATATAp
+TC]ATAp
+TC]ATBRAp
+TC]ATBRB]ATBRBRB]ATB]ATBRBRB]ATAp
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
 ThreadInMainThread()
 Times Opened: %3i		Accumulated Time: %10.5fms		Average Time per Open: %13.8fms		File: %short
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -909,7 +927,6 @@ Unknown job state
 Unknown version %double for vpk %short
 Use native FS or STDIO
 UserInfoChangeService_001
-V8ffffff.
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -943,7 +960,6 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-V_AppendSlash: ran out of space on %s.
 V_AreSlashesCorrect( pFileName )
 V_CheckDoubleSlashes(pFileName) == false
 V_CheckDoubleSlashes(pFullPath) == false
@@ -952,11 +968,13 @@ V_CheckDoubleSlashes(pOldPath) == false
 V_CheckDoubleSlashes(pPath) == false
 V_CheckDoubleSlashes(pRelativePath) == false
 V_CheckDoubleSlashes(pWildCard) == false
+V_stristr_fast(char const*, char const*)
 ValueIsPowerOfTwo( nAlignment )
 Version
 VisBuilder_001
 WARNING: File might be corrupt or missing - '%short'
 WARNING: Local content might be corrupt or missing files
+WARNING: Local content might be corrupt or missing files. Not reporting to Steam due to disabled reporting.
 WIN32
 WINDOWS
 WINXP
@@ -979,7 +997,6 @@ ZIP_PreloadHeader
 [A\A^A_]
 [A^A_]
 [unsigned short,fD
-\# E1
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
@@ -993,25 +1010,28 @@ _GetResourceManifests
 _InstallSchemaBindings
 _KeyValuesSystem
 _LOG_GENERAL
+_LengthOfMatchingPaths
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
+_Plat_DebugString
 _Plat_ExitProcess
+_Plat_FileSize
 _Plat_FloatTime
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
+_Plat_IsInDebugSessionRaw
 _Plat_LoadModule
-_Plat_LoadModuleRaw
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_TickDiffMicroSec
 _Plat_TickDiffMicroSecF
 _Plat_TickDiffMilliSecF
 _Plat_TranslateSymbolicLinks
+_Plat_UnloadModule
+_Plat_ctime
 _Plat_getwd
 _RandomInt
 _SteamAPI_GetHSteamPipe
@@ -1023,12 +1043,66 @@ _ThreadInMainThread
 _ThreadInterlockedExchange64
 _ThreadSetPriority
 _ThreadSleep
+_V_AreSlashesCorrect
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_GetErrno
+_V_GetFileExtension
+_V_IsAbsolutePath
+_V_IsFakePath
+_V_MakeAbsoluteVPKPathName
+_V_RemoveDotSlashes
+_V_SetErrno
+_V_StripFilename
+_V_StripTrailingSlash
+_V_UTF16ToUTF8
+_V_UnqualifiedFileName
+_V_atof
+_V_atoi
+_V_fclose
+_V_ferror
+_V_fflush
+_V_fopen
+_V_fprintf
+_V_fread
+_V_fseeki64
+_V_ftelli64
+_V_fwrite
+_V_qsort
+_V_qsort_s
+_V_setvbuf
+_V_snprintf
+_V_snwprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_strupper_fast
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_AppendSlash
+__V_ComposeFileName
+__V_ExtractFileExtension
+__V_ExtractFilePath
+__V_FileBase
+__V_FixupPathName
+__V_GetFirstDir
+__V_MakeAbsolutePath
+__V_SetExtension
+__V_StringAfterPrefix
+__V_StripExtension
+__V_StripLastDir
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -1037,13 +1111,10 @@ ___cxa_guard_abort
 ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
-___dynamic_cast
 ___error
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
-___stderrp
 ___tolower
 ___toupper
 __bss
@@ -1054,7 +1125,6 @@ __data
 __gcc_except_tab__TEXT
 __got
 __int128 * nBlockSize >= num
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1062,32 +1132,15 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_abort
 _alphasort$INODE64
-_atof
-_atoi
 _chmod
 _closedir
-_ctime
-_dlclose
-_dlsym
-_fclose
-_ferror
-_fflush
 _flock
-_fopen
-_fprintf
-_fputs
-_fread
 _free
-_fseek
-_ftell
-_fwrite
 _g_Tier1_CRC32Table
 _g_VProfCurrentProfile
 _g_pMemAlloc
 _g_pThreadPool
-_getcwd
 _memchr
 _memcpy
 _memmove
@@ -1095,7 +1148,6 @@ _memset
 _memset_pattern16
 _mkdir
 _opendir$INODE64
-_printf
 _pthread_getspecific
 _pthread_mutex_destroy
 _pthread_mutex_init
@@ -1104,14 +1156,11 @@ _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _pthread_setspecific
-_qsort
 _raise
 _readdir$INODE64
 _rename
 _rewind
 _scandir$INODE64
-_sprintf
-_sscanf
 _stat$INODE64
 _strcasecmp
 _strcat
@@ -1119,21 +1168,11 @@ _strchr
 _strcmp
 _strcpy
 _strlen
-_strncat
-_strncmp
 _strnlen
 _strrchr
 _strstr
-_strtod
-_strtol
-_strtoull
 _unlink
-_valveinternal
-_vsnprintf
-_vswprintf
-_wcscpy
 _wcslen
-_xlsp
 `[A\A^A_]
 `unsigned char[A\A^A_]
 async
@@ -1155,18 +1194,14 @@ bool CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long>
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
 bool KeyValues::LoadFromFile(IBaseFileSystem *, const char *, const char *, GetSymbolProc_t)
-bool _V_ExtractFilePath(const char *, char *, int)
-bool _V_StripLastDir(char *, int)
 buffer
 centralDirectorySize
-char *_V_strncat(char *, const char *, int, int)
 chmod
 commentLength
 compressedSize
 compressionMethod
 console.log
 const char *CBaseFileSystem::FindFirstHelper(const char *, const char *, FileFindHandle_t *, bool, int *)
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"
 copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"
@@ -1194,8 +1229,6 @@ copy "%short" "%short"
 count >= 0
 crc32
 dat->m_pPeer == NULL
-destBufferSize >= 0
-destSize >= 1
 diskNumberStart
 dyld_stub_binder
 echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -1220,7 +1253,7 @@ filetoinclude
 flags
 fs_clear_open_duplicate_times
 fs_debug
-fs_debug: %short
+fs_debug: 
 fs_dump_open_duplicate_times
 fs_monitor_read_from_pack
 fs_report_long_reads
@@ -1229,8 +1262,6 @@ fs_warning_mode
 g_FileSystem_Async.ValidateRequestPtr( pRequest->GetBase() )
 goto done
 if "%%fs_target%%" == "" goto error
-info.m_pReplacementString == 0
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int CBaseFileSystem::FastFindFile(const CBaseFileSystem::CSearchPath *, const char *)
 int CFileHandle::Read(void *, int)
 int CFileHandle::Read(void *, int, int)
@@ -1240,24 +1271,17 @@ int CFileTracker::GetUnverifiedCRCFiles(CUnverifiedCRCFile *, int)
 int CPackedStore::ReadData(CPackedStoreFileHandle &, void *, int)
 int CUGCFileHandle::Read(void *, int, int)
 int CUtlString::FormatV(const char *, __va_list_tag *)
-int V_snprintf(char *, int, const char *, ...)
-int V_snwprintf(wchar_t *, int, const wchar_t *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int64 CFileHandle::Seek(int64, int)
 int64 CFileHandle::Size()
 int64 CFileHandle::Tell()
 internalFileAttribs
 intp CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> >::GetIndex(const CUtlFixedMemory::Iterator_t &) const [T = UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long>]
-invalid input pointer
 kffff.
 l0 E1
 lastModifiedDate
 lastModifiedTime
-len < maxlen
 libfilesystem_stdio.dylib
-long  E1
 long long E9|$
 long long"A9^
 long long'E9t$
@@ -1270,6 +1294,7 @@ m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_Files.Find( pFilename ) == m_Files.InvalidIndex()
 m_FirstFree == InvalidIndex()
 m_Head == InvalidIndex()
+m_Head.value.pNode != End()
 m_Memory.IsIdxValid( Index )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + nMaxSize - 1 )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
@@ -1286,12 +1311,13 @@ m_errorIndex>=0
 m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
 m_map.IsValidIndex( iEntry )
-m_nIndexMask + 1 == ( 1 << m_nIndexShift )
+m_nIndexMask + 1 == ( U << m_nIndexShift )
 m_nNumRequestsOutstanding == 0
 m_nPosition < m_nLength
 m_nPosition >= 0
-m_nSuspendCount == 0
-m_nSuspendCount > 0
+m_nSuppressAsyncFileRequestFlush > 0
+m_nSuspendCount[ nPriority ] > 0
+m_nSuspendCount[nPriority] == 0
 m_pEventToSetWhenComplete == NULL
 m_pHead == m_pTail && m_nQueueSize == 0
 m_pMemory
@@ -1304,9 +1330,6 @@ m_pThreadPool != g_pThreadPool
 m_status.Load() < JOB_OK
 materials/overviews/
 materials/vgui/hud/
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxlen >= 1
 mffff.
 mkdir "%%fs_target%%"
 mkdir "%%fs_target%%\bin"
@@ -1317,6 +1340,7 @@ nCentralDirectoryEntries_Total
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nFlags >= 0 && nFlags <= UINT8_MAX
+nGrowSize <= 1 << 27
 nIndex < BaseClass::Count()
 nIndex >= 0
 nMaxChars > 0
@@ -1325,6 +1349,7 @@ nOutTitleSizeInBytes >= sizeof(pTitleBuff[0])
 nPathIndex >= 0
 nRead == nNumBytes
 nSize != 0
+nTries < 10000000
 newState > pRequest->m_RequestState
 numberOfTheDiskWithStartOfCentralDirectory
 numberOfThisDisk
@@ -1333,6 +1358,7 @@ operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
+p @ 0`
 pBaseRequest
 pBuffer != NULL
 pCallback == NULL
@@ -1362,7 +1388,6 @@ pRequest->GetBase()->m_pGroup == NULL
 pRequest->GetRequestState() == ASYNC_REQUEST_STATE_COMPOSING
 pRequestBase->m_pSyncThreadEvent == NULL
 pSchemaSystem != NULL
-pSearch
 pSearchSpec != NULL && V_strlen( pSearchSpec ) < MAX_FILEPATH && pAddCallback != NULL && pDoneCallback != NULL
 pSearchSpec != NULL && strlen( pSearchSpec ) < sizeof( m_FileSpec )
 pSubkey != NULL
@@ -1374,7 +1399,6 @@ paHFCtBH
 paHFCtDH
 pak%short%02d.vpk
 pak%short%02d_dir.vpk
-ppath
 radr://5614542
 relativeOffsetOfLocalHeader
 request.nBytes >=0
@@ -1402,19 +1426,21 @@ static CStdioFile *CStdioFile::FS_fopen(const char *, const char *, int64 *)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 std::terminate()
 strnlen
+subject.OU
 sxHcE
-t$H9[8u
 t$fff.
 t9L9c
 tHIcD$
 tLMc~
 tMff.
+tVA9_
 tlfff.
 tlffffff.
 total == size
 typeinfo for CThread
 typeinfo for std::bad_alloc
 u&IcF
+u,IcF
 u1D9t
 uGetResourceManifest
 uncompressedSize
@@ -1433,11 +1459,11 @@ versionNeededToExtract
 virtual CAsyncGroupRequest::~CAsyncGroupRequest()
 virtual CDirectoryEntryInfo_t *CAsyncSearchRequest::GetResult(int)
 virtual CFileHandle::~CFileHandle()
-virtual CSysModule *CBaseFileSystem::LoadModule(const char *, const char *, bool)
 virtual FileHandle_t CBaseFileSystem::OpenEx(const char *, const char *, unsigned int, const char *)
 virtual IAsyncFileRequest *CAsyncGroupRequest::GetAsyncFileRequest(int32)
 virtual IAsyncRequestBase *CAsyncGroupRequest::GetAsyncRequest(int32)
 virtual IAsyncSearchRequest *CAsyncGroupRequest::GetAsyncSearchRequest(int32)
+virtual PlatModule_t CBaseFileSystem::LoadModule(const char *, const char *, bool)
 virtual SearchPathStateHandle_t CBaseFileSystem::SaveSearchPathState(const char *) const
 virtual bool CAsyncFileRequest::GetProfilingInfo(uint64 *, int)
 virtual bool CAsyncFileSystem::BlockUntilAsyncIOComplete(const IAsyncRequestBase *)
@@ -1453,6 +1479,7 @@ virtual bool CBaseFileSystem::IsFileInReadOnlySearchPath(const char *, const cha
 virtual bool CBaseFileSystem::IsFileWritable(const char *, const char *)
 virtual bool CBaseFileSystem::Precache(const char *, const char *)
 virtual bool CBaseFileSystem::ReadFile(const char *, const char *, CUtlBuffer &, int, int, FSAllocFunc_t)
+virtual bool CBaseFileSystem::ReadToBuffer(FileHandle_t, CUtlBuffer &, int, FSAllocFunc_t)
 virtual bool CBaseFileSystem::RemoveFile(const char *, const char *)
 virtual bool CBaseFileSystem::RemoveSearchPath(const char *, const char *)
 virtual bool CBaseFileSystem::RenameFile(const char *, const char *, const char *)
@@ -1471,7 +1498,7 @@ virtual void *CAsyncFileSystem::AllocateBuffer(size_t, const char *, int)
 virtual void CAsyncFileRequest::DescribeRequest(CUtlString *)
 virtual void CAsyncFileSystem::ReleaseAsyncRequest(const IAsyncRequestBase *)
 virtual void CAsyncFileSystem::ReleaseBuffer(void *)
-virtual void CAsyncFileSystem::ResumeAllAsyncIO()
+virtual void CAsyncFileSystem::ResumeAllAsyncIO(AsyncRequestPriority_t)
 virtual void CAsyncGroupRequest::AddAsyncRequest(IAsyncRequestBase *)
 virtual void CAsyncGroupRequest::DescribeRequest(CUtlString *)
 virtual void CAsyncSearchRequest::SetSearchFilespec(const char *)
@@ -1482,6 +1509,7 @@ virtual void CBaseFileSystem::EnableWhitelistFileTracking(bool)
 virtual void CBaseFileSystem::RemoveSearchPaths(const char *)
 virtual void CBaseFileSystem::RestoreSearchPathState(SearchPathStateHandle_t)
 virtual void CBaseFileSystem::SetSearchPathReadOnly(const char *, const char *, bool)
+virtual void CBaseFileSystem::SuppressAsyncFileRequestFlushOnPathChange(bool)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
 virtual void ConVar::ChangeStringValue(const char *, float)
@@ -1586,11 +1614,6 @@ void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void LogFileOpen(const char *, const char *, const char *)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void V_StripTrailingSlash(char *)
-void _V_AppendSlash(char *, int, char)
-void _V_FileBase(const char *, char *, int)
-void _V_strncpy(char *, const char *, int)
-vpk:H
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
@@ -1604,18 +1627,14 @@ xhA9^
 {paHFCtAH
 {paHFCt]H
 {uoE1
-|!ffffff.
 |$0E;|$@u#L
-|Cffffff.
-|jffff.
 }HA;EP}
 ~ E9t$$|
 ~ [A\A^A_]
-~-ff.
+~-H9H@unsigned short'H
 ~0H9H@unsigned short*H
 ~0M9u@unsigned short*H
 ~7I9_@t1H
-~>H9H@t8H
 ~>ffffff.
 ~Pffff.
 ~bA9^$|\Hc

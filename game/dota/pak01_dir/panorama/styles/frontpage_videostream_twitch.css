@@ -1,5 +1,5 @@
 
-FrontpageVideoStreamTwitch
+DOTAFrontpageVideoStreamTwitch
 {
 	flow-children: down;
 }
@@ -166,11 +166,11 @@ FrontpageVideoStreamTwitch
 
 #NotStreamingContainer
 {
-	background-image: url("s2r://panorama/images/front_page/manila_2016_bg_png.vtex");
+	background-image: url("s2r://panorama/images/front_page/boston_2016_bg_png.vtex");
 	background-size: cover;
 }
 
-FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
+DOTAFrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 {
 	opacity: 1.0;
 }
@@ -188,7 +188,7 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 	height: 200px;
 
 	margin-left: -10px;
-	background-image: url("s2r://panorama/images/front_page/manila_2016_logo_small_png.vtex");
+	background-image: url("s2r://panorama/images/front_page/boston_2016_logo_small_png.vtex");
 
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -210,9 +210,24 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 	brightness: 2.0;
 }
 
+.Season_International2016 #LogoImage
+{
+	background-image: url("s2r://panorama/images/compendium/international_logo_psd.vtex");
+}
+
+.Season_International2016 #NotStreamingContainer
+{
+	background-image: url("s2r://panorama/images/front_page/ti6_video_bg_psd.vtex");
+}
+
+.Season_International2016 .BroadcastStatus
+{
+	color: #A9372E;
+}
+
 .BroadcastStatus
 {
-	color: #f18227;
+	color: #5a9124;
 	text-transform: uppercase;
 	text-align: center;
 	horizontal-align: center;
@@ -223,6 +238,7 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 {	
 	visibility: collapse;
 }
+
 .BroadcastLive #BroadcastInProgress
 {
 	visibility: visible;
@@ -234,30 +250,59 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 	flow-children: down;
 }
 
-#WatchInBrowserLink
+#BroadcastWillResume
+{
+	horizontal-align: center;
+	flow-children: down;
+}
+
+.WatchInBrowserLink
 {
 	margin-top: 5px;
 	flow-children: right;
 	horizontal-align: center;
 }
-#WatchInBrowserLink > .ExpandIcon
+.WatchInBrowserLink > .ExpandIcon
 {
 	width: 18px;
 	height: 18px;
 }
-#WatchInBrowserLink > Label
+.WatchInBrowserLink > Label
 {
 	text-transform: uppercase;
 	color: #888;
 	vertical-align: middle;
 }
-#WatchInBrowserLink:hover
+.WatchInBrowserLink:hover
 {
 	brightness: 2.0;
 }
-#WatchInBrowserLink:active
+.WatchInBrowserLink:active
 {
 	brightness: 1.5;
+}
+
+.WatchInBrowserLink.PreviousMatches
+{
+	visibility: collapse;
+}
+
+.HasPreviousDayURL .WatchInBrowserLink.PreviousMatches
+{
+	visibility: visible;
+	margin-top: 30px;
+	box-shadow: -4px -4px 8px 8px black;
+	transition-property: brightness;
+	transition-duration: .2s;
+}
+
+.HasPreviousDayURL .WatchInBrowserLink.PreviousMatches > Label
+{
+	color: white;
+	margin-top: 4px;
+	margin-right: 8px;
+	margin-bottom: 2px;
+	
 }
 
 #InlineVideoPanel
@@ -287,7 +332,7 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 	color: #5a5a5a;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /* We mostly just reuse the PopupButton style, but override a few small bits */
@@ -368,6 +413,7 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 
 #WatchInBrowserButton
 {
+	width: 150px;
 	flow-children: right;
 	width: fit-children;
 	height: 40px;
@@ -388,12 +434,18 @@ FrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 
 #WatchInBrowserButton Label
 {
+	width: 100px;
+	height: 100%;
 	text-transform: uppercase;
 	color: #ccc;
 	vertical-align: center;
+	text-align: center;
 	margin-right: 4px;
-	margin-left: 11px;
+	margin-left: 4px;
 	margin-top: 3px;
+	font-size: 14px;
+	text-overflow: clip;
+    line-height: 14px;
 }
 
 #WatchInBrowserButton > .ExpandIcon

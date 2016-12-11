@@ -47,16 +47,14 @@
  Msg
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
+ Plat_DebugPrint
  Plat_ExitProcess
  Plat_FloatTime
  Plat_GetCPUFrequency
  Plat_GetEnv
- Plat_GetModuleFilename
- Plat_GetModuleProcAddress
  Plat_GetOSType
  Plat_IsHighDPI
- Plat_IsInDebugSession
- Plat_LoadModuleRaw
+ Plat_IsInDebugSessionRaw
  Plat_MSTime
  Plat_ShouldCollectMiniDumpsForFatalErrors
  R typeinfo name for std::__1::bad_function_call
@@ -77,9 +75,38 @@
  ThreadGetCurrentId
  ThreadInterlockedExchange64
  ThreadSleep
+ V_GetErrno
+ V_SetErrno
+ V_UTF16ToUTF8
+ V_UTF32ToUTF8
+ V_acosf
+ V_asinf
+ V_atan2f
+ V_atod
+ V_atof
+ V_atoi
+ V_cosf
+ V_expf
+ V_logf
+ V_powf
+ V_qsort
+ V_qsort_s
+ V_sinf
+ V_snprintf
+ V_sscanf
+ V_stricmp_fast
+ V_strtod
+ V_strtoi64
+ V_tanf
+ V_vscprintf
+ V_vsnprintf
+ V_vsnprintfRet
+ V_vsnprintfSize
+ V_wcstoi64
  Warning
- _DefaultRuneLocale
  _Unwind_Resume
+ _V_strncat
+ _V_strncpy
  __assert_rtn
  __bzero
  __cxa_allocate_exception
@@ -95,25 +122,18 @@
  __cxa_throw
  __dynamic_cast
  __error
- __exp10
  __gxx_personality_v0
- __maskrune
  __sincos_stret
- __sincosf_stret
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __tolower
  acos
- asin
  atan2
- atan2f
- atof
  atoi
  ceilf
  cos
  dyld_stub_binder
- exp
  exp2f
  expf
  fflush
@@ -126,7 +146,6 @@
  g_VProfCurrentProfile
  g_pMemAlloc
  g_pThreadPool
- log
  log2f
  memchr
  memcmp
@@ -138,7 +157,6 @@
  operator new(unsigned long, std::nothrow_t const&)
  pow
  powf
- printf
  pthread_getspecific
  pthread_mutex_destroy
  pthread_mutex_init
@@ -147,7 +165,6 @@
  pthread_mutexattr_init
  pthread_mutexattr_settype
  pthread_setspecific
- qsort
  raise
  sched_yield
  sin
@@ -213,7 +230,6 @@
  strcpy
  strerror
  strlen
- strncat
  strspn
  strtod
  strtof
@@ -235,4 +251,3 @@
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  wcslen
- wcstol

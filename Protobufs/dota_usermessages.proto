@@ -100,6 +100,12 @@ enum EDotaUserMessages {
 	DOTA_UM_MatchMetadata = 557;
 	DOTA_UM_MatchDetails = 558;
 	DOTA_UM_QuestStatus = 559;
+	DOTA_UM_SuggestHeroPick = 560;
+	DOTA_UM_SuggestHeroRole = 561;
+	DOTA_UM_KillcamDamageTaken = 562;
+	DOTA_UM_SelectPenaltyGold = 563;
+	DOTA_UM_RollDiceResult = 564;
+	DOTA_UM_FlipCoinResult = 565;
 }
 
 enum DOTA_CHAT_MESSAGE {
@@ -224,6 +230,7 @@ enum DOTA_REPLAY_STATE_EVENT {
 	DOTA_REPLAY_STATE_EVENT_GAME_START = 1;
 	DOTA_REPLAY_STATE_EVENT_STARTING_HORN = 2;
 	DOTA_REPLAY_STATE_EVENT_FIRST_BLOOD = 3;
+	DOTA_REPLAY_STATE_EVENT_SHOWCASE = 4;
 }
 
 enum EDotaEntityMessages {
@@ -252,6 +259,7 @@ enum DOTA_PARTICLE_MESSAGE {
 	DOTA_PARTICLE_MANAGER_EVENT_FROZEN = 12;
 	DOTA_PARTICLE_MANAGER_EVENT_CHANGE_CONTROL_POINT_ATTACHMENT = 13;
 	DOTA_PARTICLE_MANAGER_EVENT_UPDATE_ENTITY_POSITION = 14;
+	DOTA_PARTICLE_MANAGER_EVENT_SET_FOW_PROPERTIES = 15;
 }
 
 enum DOTA_OVERHEAD_ALERT {
@@ -272,6 +280,8 @@ enum DOTA_OVERHEAD_ALERT {
 	OVERHEAD_ALERT_LAST_HIT_CLOSE = 14;
 	OVERHEAD_ALERT_LAST_HIT_MISS = 15;
 	OVERHEAD_ALERT_MAGICAL_BLOCK = 16;
+	OVERHEAD_ALERT_INCOMING_DAMAGE = 17;
+	OVERHEAD_ALERT_OUTGOING_DAMAGE = 18;
 }
 
 enum DOTA_POSITION_CATEGORY {
@@ -350,6 +360,7 @@ enum EPlayerVoiceListenState {
 
 enum EProjectionEvent {
 	ePE_FirstBlood = 0;
+	ePE_Killstreak_godlike = 1;
 }
 
 message CDOTAUserMsg_AIDebugLine {
@@ -383,9 +394,9 @@ message CDOTAUserMsg_CombatLogShowDeath {
 
 message CDOTAUserMsg_BotChat {
 	optional uint32 player_id = 1;
-	optional string format = 2;
 	optional string message = 3;
 	optional string target = 4;
+	optional bool team_only = 5;
 }
 
 message CDOTAUserMsg_CombatHeroPositions {
@@ -405,6 +416,7 @@ message CDOTAUserMsg_MiniKillCamInfo {
 		optional uint32 attacker = 1;
 		optional int32 total_damage = 2;
 		repeated .CDOTAUserMsg_MiniKillCamInfo.Attacker.Ability abilities = 3;
+		optional string attacker_name = 4;
 	}
 
 	repeated .CDOTAUserMsg_MiniKillCamInfo.Attacker attackers = 1;
@@ -507,6 +519,8 @@ message CDOTAUserMsg_CreateLinearProjectile {
 	optional int32 handle = 6;
 	optional .CMsgVector2D acceleration = 7;
 	optional float max_speed = 8;
+	optional float fow_radius = 9;
+	optional bool sticky_fow_reveal = 10;
 }
 
 message CDOTAUserMsg_DestroyLinearProjectile {
@@ -743,6 +757,12 @@ message CDOTAUserMsg_ParticleManager {
 		optional .CMsgVector position = 2;
 	}
 
+	message SetParticleFoWProperties {
+		optional int32 fow_control_point = 1;
+		optional int32 fow_control_point2 = 2;
+		optional float fow_radius = 3;
+	}
+
 	required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];
 	required uint32 index = 2;
 	optional .CDOTAUserMsg_ParticleManager.ReleaseParticleIndex release_particle_index = 3;
@@ -759,6 +779,7 @@ message CDOTAUserMsg_ParticleManager {
 	optional .CDOTAUserMsg_ParticleManager.UpdateParticleSetFrozen update_particle_set_frozen = 15;
 	optional .CDOTAUserMsg_ParticleManager.ChangeControlPointAttachment change_control_point_attachment = 16;
 	optional .CDOTAUserMsg_ParticleManager.UpdateEntityPosition update_entity_position = 17;
+	optional .CDOTAUserMsg_ParticleManager.SetParticleFoWProperties set_particle_fow_properties = 18;
 }
 
 message CDOTAUserMsg_OverheadEvent {
@@ -1170,5 +1191,43 @@ message CDOTAUserMsg_QuestStatus {
 	optional uint32 query = 6;
 	optional float fail_gametime = 7;
 	optional uint32 item_id = 8;
+}
+
+message CDOTAUserMsg_SuggestHeroPick {
+	required uint32 player_id = 1;
+	optional uint32 hero_id = 2;
+}
+
+message CDOTAUserMsg_SuggestHeroRole {
+	required uint32 player_id = 1;
+	optional string hero_role = 2;
+}
+
+message CDOTAUserMsg_KillcamDamageTaken {
+	required uint32 player_id = 1;
+	optional uint32 damage_taken = 2;
+	optional uint32 item_type = 3;
+	optional uint32 item_id = 4;
+	optional string hero_name = 5;
+	optional string damage_color = 6;
+}
+
+message CDOTAUserMsg_SelectPenaltyGold {
+	required uint32 player_id = 1;
+	optional sint32 cost = 2;
+}
+
+message CDOTAUserMsg_RollDiceResult {
+	optional uint32 player_id = 1;
+	optional uint32 channel_type = 2;
+	optional uint32 roll_min = 3;
+	optional uint32 roll_max = 4;
+	optional uint32 result = 5;
+}
+
+message CDOTAUserMsg_FlipCoinResult {
+	optional uint32 player_id = 1;
+	optional uint32 channel_type = 2;
+	optional bool result = 3;
 }
 

@@ -39,18 +39,15 @@
  PasteboardGetItemIdentifier
  PasteboardPutItemFlavor
  PasteboardSynchronize
+ Plat_DebugPrint
  Plat_DebugString
  Plat_ExitProcess
  Plat_FloatTime
- Plat_GetModuleFilename
- Plat_GetModuleProcAddress
  Plat_GetOSType
  Plat_IsHighDPI
- Plat_IsInDebugSession
- Plat_LoadModuleRaw
+ Plat_IsInDebugSessionRaw
  Plat_MSTime
  Plat_ShouldCollectMiniDumpsForFatalErrors
- Plat_getwd
  T BinaryProperties_GetValue
  T CreateInterface
  T GetResourceManifestCount
@@ -63,9 +60,36 @@
  T strnlen
  ThreadGetCurrentId
  ThreadInterlockedExchange64
+ V_FixDoubleSlashes
+ V_FixSlashes
+ V_GetErrno
+ V_SetErrno
+ V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+ V_UTF16ToUTF8
+ V_UTF32ToUTF8
+ V_UTF8ToUTF32
+ V_atof
+ V_atoi
+ V_qsort_s
+ V_snprintf
+ V_sscanf
+ V_stricmp_fast
+ V_stristr_fast(char const*, char const*)
+ V_strlower_fast
+ V_strtod
+ V_strtoi64
+ V_vsnprintf
+ V_vsnprintfRet
+ V_vsnprintfSize
+ V_wcstod
+ V_wcstoi64
  Warning
- _DefaultRuneLocale
  _Unwind_Resume
+ _V_ComposeFileName
+ _V_MakeAbsolutePath
+ _V_strncat
+ _V_strncpy
+ _V_strnicmp_fast
  __CFConstantStringClassReference
  __bzero
  __cxa_atexit
@@ -75,13 +99,10 @@
  __cxa_guard_acquire
  __cxa_guard_release
  __cxa_pure_virtual
- __error
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
  __tolower
- atof
  atoi
  closedir
  dyld_stub_binder
@@ -98,7 +119,6 @@
  memset
  memset_pattern16
  opendir$INODE64
- printf
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -116,16 +136,10 @@
  strcmp
  strcpy
  strlen
- strncat
  strncpy
- strtod
- strtol
  time
  typeinfo for std::bad_alloc
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  wcslen
- wcstof
- wcstol

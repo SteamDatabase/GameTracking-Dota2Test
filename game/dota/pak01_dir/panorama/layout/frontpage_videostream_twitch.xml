@@ -5,7 +5,7 @@
 		<include src="s2r://panorama/styles/dashboard_page_home.vcss_c" />		
 	</styles>
 
-	<FrontpageVideoStreamTwitch>
+	<DOTAFrontpageVideoStreamTwitch>
 
 		<Panel id="Header">
 			<Label id="Live" text="#FrontPage_VideoStream_Live"/>
@@ -32,27 +32,33 @@
 
 					<Panel id="BroadcastInProgress">
 						<Label class="BroadcastStatus" text="#FrontPage_VideoStream_BroadcastInProgress" />
-						<Button id="WatchInBrowserLink" onactivate="FrontpageVideoStreamExpand()">
+						<Button class="WatchInBrowserLink" onactivate="FrontpageVideoStreamExpand()">
 							<Label text="#FrontPage_VideoStream_WatchInBrowser" />
+							<Panel class="ExpandIcon" />
+						</Button>					
+					</Panel>
+					<Panel id="BroadcastWillResume">
+						<Label class="BroadcastStatus" text="#FrontPage_VideoStream_BroadcastWillResume" />
+						<Button class="WatchInBrowserLink PreviousMatches ButtonBevel" onactivate="FrontpageVideoStreamPreviousExpand()">
+							<Label text="#FrontPage_VideoStream_PrevDayWatchInBrowser" />
 							<Panel class="ExpandIcon" />
 						</Button>
 					</Panel>
-					<Label id="BroadcastWillResume" class="BroadcastStatus" text="#FrontPage_VideoStream_BroadcastWillResume" />
 				</Panel>
 			</Panel>
 		</Panel>
 
 		<Panel id="Footer">
 			<Panel class="FooterText">
-				<Label text="#FrontPage_VideoStream_Manila2016_Line1" />
-				<Label text="#FrontPage_VideoStream_Manila2016_Line2" />
+				<Label text="#FrontPage_VideoStream_Boston2016_Line1" html="false"/>
+				<Label text="#FrontPage_VideoStream_Boston2016_Line2" html="false"/>
 			</Panel>
 			<Panel class="FillWidth" />
 			
 			<Button id="WatchInBrowserButton" onactivate="FrontpageVideoStreamExpand()" onmouseover="UIShowTextTooltip( #FrontPage_VideoStream_WatchInBrowser )" onmouseout="UIHideTextTooltip()">
 				<Label text="#FrontPage_VideoStream_WatchInBrowser" />
-				<Panel class="ExpandIcon" />
+				<!--<Panel class="ExpandIcon" />-->
 			</Button>
 		</Panel>
-	</FrontpageVideoStreamTwitch>
+	</DOTAFrontpageVideoStreamTwitch>
 </root>

@@ -27,6 +27,7 @@
 	dedicated
 	enum_type
 	extension
+	fffff.
 	from_port
 	host_name
 	is_replay
@@ -57,13 +58,17 @@
    Cannot communicate with gameservers when routers are not accessible.
    Cannot communicate with routers or gameservers without network config.
    Must be able to access %short
+  +%double load balance penalty.
   Comment started here.
+  Connection gap %.0fms.
   Field       : 
   Message type: 
+  Migration target.
   Offline in %ds.
   Problem     : 
   Problem     : Enum value did not match field type:
   Problem     : Field is not the right type for this message:
+  Requested migration.
   at depth %double items %double
   possible match %double of %double:  %short %s.%short
  #GameUI_Disconnect_ExitingEngine
@@ -173,6 +178,7 @@
 !multilist || ML
 !networksystem_protomessages.proto"0
 !node->IsLeafNode()
+!pClient->m_vecRelaySessions.HasElement( sess )
 !pIChan || !pIChan->HasQueuedPackets()
 !pList->m_bExcludedFromSerializerRegistry
 !pSerializer->m_bExcludedFromSerializerRegistry
@@ -254,7 +260,6 @@
 ##GameUI_Disconnect_ReliableOverflow
 ##GameUI_Disconnect_SnapshotOverflow
 #Bidirectional_Messages_LowFrequency
-#E;'uq
 #GameUI_ClientConsistencyFail
 #GameUI_ClientDifferentMap
 #GameUI_ClientNoMap
@@ -311,6 +316,7 @@ $NETWORK_DISCONNECT_STEAM_VACBANSTATE
 $ffff.
 $r[vJA
 $rbvQA
+$yRH
 % 5d % 5d % 5d: %-20s [%double]: 0x%p array size adjusted from %double to %double elements
 % 5d % 5d % 5d: %-20s [%double]: 0x%p decoding (stream: %short local: %short) %short field %short %short %short %short
 % 5d % 5d % 5d: %-20s [%double]: 0x%p decoding FAKE field %short %short: %short
@@ -370,29 +376,72 @@ $rbvQA
 %s0x%p Gathering field offsets in %short, storing in 0x%p
 %s0x%p rebuild %short::%short at %u
 %sApplying %short
+%sConnection quality distribution:
+%sConnection quality histogram: (%double measurement intervals)
 %sCull fields for %short
 %sCulled %short::%short
 %sCurrent rates:
-%sDropped   :%11s pkts%7.2f%%
-%sDuplicate :%11s pkts%7.2f%%
-%sLifetime totals received from remote host %.1fs ago:
-%sLifetime totals:
-%sNo lifetime totals received from remote host
+%sLatency variance histogram not available
+%sLatency variance histogram: (%double total measurements)
+%sLifetime stats received from remote host %.1fs ago:
+%sLifetime stats:
+%sNo connection quality distribution available.  (%double measurement intervals)
+%sNo lifetime stats received from remote host
+%sNo ping distribution available.  (%double samples)
 %sNo rate stats received from remote host
-%sOutOfOrder:%11s pkts%7.2f%%
-%sPing:%5sms  Dropped:%4s%%  WeirdSeq:%4s%%
+%sPing distribution:
+%sPing histogram: (%double total samples)
+%sPing:%sms    long long signed char::* latency variance: %sms
 %sProcess includes/excludes %short
+%sQuality:%5s%%  (Dropped:%4s%%  WeirdSeq:%4s%%)
 %sRate stats received from remote host %.1fs ago:
-%sRecv wchar_t seq:%11s pkts
-%sRecv:%11s pkts %15s bytes
 %sRecv:%6.1f pkts/sec%6.1f K/sec
-%sSent:%11s pkts %15s bytes
 %sSent:%6.1f pkts/sec%6.1f K/sec
-%sSeqLurch  :%11s pkts%7.2f%%
+%sTotals
 %sconsider %short at depth %double
 %sexcluding %short::%short due to MNetworkNoBase
 %sfound leafmost nobase at %short
 %sfound offset %u in %short at path '%short'
+%short      0-25  :%5d  %.0f%%
+%short      300+  :%5d  %.0f%%
+%short     100  :%5d  %.0f%%   (All packets received in order)
+%short     25-50  :%5d  %.0f%%
+%short     5%% of pings <= %4dms
+%short     50-75  :%5d  %.0f%%
+%short     75-100 :%5d  %.0f%%
+%short     99+  :%5d  %.0f%%
+%short     <1  :%7d  %.0f%%
+%short     <50  :%5d  %.0f%%
+%short    1-2  :%7d  %.0f%%
+%short    100-125 :%5d  %.0f%%
+%short    125-150 :%5d  %.0f%%
+%short    150-200 :%5d  %.0f%%
+%short    2-5  :%7d  %.0f%%
+%short    200-300 :%5d  %.0f%%
+%short    5-10 :%7d  %.0f%%
+%short    50%% of intervals >= %3d%%
+%short    50%% of pings <= %4dms
+%short    50-75 :%5d  %.0f%%
+%short    75%% of intervals >= %3d%%
+%short    75%% of pings <= %4dms
+%short    75-90 :%5d  %.0f%%
+%short    90-95 :%5d  %.0f%%
+%short    95%% of intervals >= %3d%%
+%short    95%% of pings <= %4dms
+%short    95-97 :%5d  %.0f%%
+%short    97-99 :%5d  %.0f%%
+%short    98%% of intervals >= %3d%%
+%short    98%% of pings <= %4dms
+%short    >20  :%7d  %.0f%%
+%short    Dropped   :%11s pkts%7.2f%%
+%short    Duplicate :%11s pkts%7.2f%%
+%short    OutOfOrder:%11s pkts%7.2f%%
+%short    Recv wchar_t seq:%11s pkts
+%short    Recv:%11s pkts %15s bytes
+%short    Sent:%11s pkts %15s bytes
+%short    SeqLurch  :%11s pkts%7.2f%%
+%short    dead  :%5d  %.0f%%   (Expected to receive something but didn'unsigned short)
+%short   10-20 :%7d  %.0f%%
 %short %short
 %short %short %short
 %short - Argument expected (message ID or name).
@@ -425,7 +474,6 @@ $rbvQA
 %short sent all three pings: front, back, and end-to-end.  This is redundant.
 %short sent front ping %double and end-to-end ping %double, which doesn'unsigned short make sense
 %short unable to find field
-%short unable to grow buffer to fit string
 %short#%double (%short)
 %short%short %short::%short recursively
 %short%short found %short in path %short
@@ -451,6 +499,7 @@ $rbvQA
 %short:  Invalid split packet message type %u, expected %u
 %short:  Invalid split packet protocol got %u, current protocol is %u
 %short:  NetChan QoS flow %short: %4dms latency, %5d/%5d dropped (%.f%%)
+%short:  NetChan Setting Timeout to %4.2f seconds
 %short:  compressing reliable (%u -> %u bytes)
 %short:  corrupted packet %int at %int
 %short:  couldn'unsigned short find serializer %short
@@ -495,6 +544,7 @@ $rbvQA
 %short:  value %u: count %double
 %short: %short %short
 %short: %short exists only in %short
+%short: string format requested %double chars
 %short:%double
 %short:%double choked packets
 %short:%double reliable sequence
@@ -521,6 +571,8 @@ $rbvQA
 &NETWORK_DISCONNECT_STEAM_AUTHCANCELLED
 &NETWORK_DISCONNECT_TEMPENTMSG_OVERFLOW
 &YA1L
+&fff.
+&ffffff.
 &k_ESteamDatagramMsg_DataClientToRouter
 &k_ESteamDatagramMsg_DataRouterToClient
 &k_ESteamDatagramMsg_DataRouterToServer
@@ -565,6 +617,7 @@ $rbvQA
 (ffffff.
 (int)s_mapSharedClusterData.Count() == g_SteamDatagramNetwork.m_vecRouterClusters.Count()
 (intp)this % 16 == 0
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (merge 
@@ -635,7 +688,7 @@ $rbvQA
 ,NETWORK_DISCONNECT_STEAM_LOGGED_IN_ELSEWHERE
 ,ffffff.
 ,k_ESteamDatagramMsg_GameserverSessionRequest
-- %double Recieve Buffers in use (%llu bytes)
+- %double Receive Buffers in use (%llu bytes)
 - %double Scratch Buffers in use (%llu bytes)
 - Config: %short, %int connections
 - Data:    net total out  %.f, in %.f kB/short
@@ -747,7 +800,6 @@ $rbvQA
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/steamdatagram/steamdatagram_shared.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
@@ -772,10 +824,10 @@ $rbvQA
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vstdlib/jobthread.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemalib/schemaiterator.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/clientlib/../steamdatagram_internal.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/clientlib/../steamdatagram_network.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/clientlib/csteamdatagramclient.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/clientlib/csteamdatagramclient.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/clientlib/csteamdatagramserver.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/percentile_generator.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/steamdatagram_network.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/steamdatagram/steamdatagramnetwork.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/bitbuf.cpp
@@ -788,7 +840,6 @@ $rbvQA
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/netadr.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbinaryblock.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
@@ -802,6 +853,7 @@ $rbvQA
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
+0 < flPct && flPct < 1.0f
 0-100 Randomly discard N pct of packets instead of sending
 0-100 Randomly discard N pct of packets received
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -824,11 +876,12 @@ $rbvQA
 0[A^]
 0`0p`00
 0`@0`@0`00`@0`00`@0`00`00`00`00`00p0@p@P
+0ffffff.
 0k_ESteamDatagramMsg_GameserverSessionEstablished
 0x%p assigned %double to '%short'
-10139
-10238
-10360
+10171
+10270
+10392
 127.0.0.1
 127.0.0.H
 1ffff.
@@ -844,6 +897,7 @@ $rbvQA
 2&.CMsgSteamDatagramGameServerAuthTicket
 2(.CMsgSteamDatagramDataCenterState.Server"
 2(.CMsgSteamDatagramLinkInstantaneousStats
+2).CMsgSteamDatagramRouterHealth.DataCenter
 2,.CMsgSteamDatagramDataCenterState.DataCenter
 21.CBidirMsg_RelayPacket.SignedDestinationAddress_t
 21.CMsgSteamDatagramGameServerAuthTicket.ExtraField
@@ -854,30 +908,29 @@ $rbvQA
 3A;v8u
 3A;vpu
 3ffffff.
-4@ffffff.
 4A;t$8u
 4B;unsigned short;
-4M9|2
 5A;t$0u
 5A;t$pu
 6[A\A^A_]
-6~Lfffff.
-7fffff.
+89C(unsigned short
+8IcL9 H
 8[A\A]A^A_]
 8[A^A_]
 8fffff.
-9A;>u
+8ffffff.
 9C<r(
 9W(}!H
+9t90u
 : Protocol message serialized to signed char size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
 : Tried to copy from signed char message with signed char different type. to: 
 : Tried to merge from signed char message with signed char different type.  to: 
 :88888888
 :L9'unsigned short
 :ffffff.
-:tFL9
 ;0}:H
 ;A }(
+;A0tBI
 ;C(u	I
 ;J(u%H
 ;K(u*I
@@ -889,12 +942,14 @@ $rbvQA
 ;S(u-I
 ;VX|!I
 ;W`u)
+;Z u/H
 ;Z(}'H
 ;[A^]
 ;{(u%
 <$D;8r!
 <$L9?u
 <-- [%short] split packet seq #%double packet %4i/%4i size %4i mtu %4i from %short%short
+<33s?H
 <EOF>
 <fff.
 <fffff.
@@ -917,6 +972,7 @@ $rbvQA
 ?ffffff.
 ?u3Hk
 ?u6Hk
+?wSIcD
 @ @ @@
 @#@t0
 @(HcH
@@ -965,8 +1021,11 @@ $rbvQA
 @L+H0L
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
+@M96u/H
 @M;__float128 
 @PI;@XtAI
+@V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A\A^A_]A
 @[A^]
@@ -983,22 +1042,19 @@ $rbvQA
 @_LoggingSystem_RegisterLoggingChannel
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetEnv
 @_Plat_GetLocalTime
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetTime
-@_Plat_IsInDebugSession
+@_Plat_IsInDebugSessionRaw
 @_Plat_IsInTestMode
-@_Plat_LoadModuleRaw
 @_Plat_MSTime
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_TickDiffMilliSecF
 @_Plat_USTime
-@_Plat_getwd
 @_RandomFloat
 @_RandomInt
 @_RandomSeed
@@ -1021,9 +1077,35 @@ $rbvQA
 @_ThreadSetDebugNameS2
 @_ThreadSetPriority
 @_ThreadSleep
+@_V_FixSlashes
+@_V_StripTrailingWhitespace
+@_V_UTF32ToUTF8
+@_V_atan2f
+@_V_atof
+@_V_atoi
+@_V_atoi64
+@_V_atoui64
+@_V_cosf
+@_V_fmodf
+@_V_qsort
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strtoi64
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_MakeAbsolutePath
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___assert_rtn
 @___bzero
 @___cxa_allocate_exception
@@ -1038,23 +1120,17 @@ $rbvQA
 @___cxa_throw
 @___dynamic_cast
 @___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___stderrp
 @__float128 short::*
-@_atan2f
-@_atof
 @_atoi
 @_bind
 @_ceilf
 @_close
 @_fclose
 @_fflush
-@_fmodf
 @_fopen
 @_fprintf
 @_fread
@@ -1081,15 +1157,12 @@ $rbvQA
 @_memmove
 @_memset
 @_poll
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
 @_pthread_mutex_unlock
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
-@_qsort
-@_qsort_r
 @_raise
 @_recvfrom
 @_remove
@@ -1106,7 +1179,6 @@ $rbvQA
 @_strcpy
 @_strerror
 @_strlen
-@_strncat
 @_strstr
 @_strtod
 @_strtof
@@ -1115,19 +1187,15 @@ $rbvQA
 @_strtoul
 @_strtoull
 @_vsnprintf
-@_wcstof
-@_wcstol
 @_write
 @dyld_stub_binder
 @fffff.
 @loader_path
 @loader_path/libsteam_api.dylib
+@r4Ic
 @r4Mc
-@r7Mc
 @r8Ic
-@r8Mc
-@r9Mc
-@r<Mc
+@r9Ic
 @rpath/libnetworksystem.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -1166,6 +1234,8 @@ $rbvQA
 @unsigned short+Hc{0H
 @unsigned short+Hc{PH
 @unsigned short+Ic~0H
+@void std::__1::__sort<std::__1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__1::__less<unsigned char, unsigned char>&)
+@void std::__1::__sort<std::__1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, std::__1::__less<unsigned short, unsigned short>&)
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
@@ -1177,8 +1247,8 @@ A+@ }
 A+A }
 A+D$ }
 A+G }
-A+H D
 A+H }
+A+H }#A
 A+I }	M
 A+L$ }/Hc
 A+M }9Hc
@@ -1186,7 +1256,6 @@ A+O }
 A+P }
 A+u0~
 A+|$ }<Hc
-A9E0|
 A9F8}5I
 A9\$$
 A9\$0
@@ -1195,14 +1264,14 @@ A9^$r
 A9^$|
 A9^(s.H
 A9_(short*H
+A;4$u
 A;D$(
 A;D$<
 A;E(u
-A;E0t*H
 A;F |
 A;F8|
 A;F8}
-A;G ~
+A;Fp|
 A;G0}
 A;G8}
 A;H(t.M
@@ -1215,6 +1284,7 @@ A;\$(|
 A;\$@|
 A;\$H|
 A;],|
+A;]0u
 A;]H|
 A;]X|
 A;]long long|
@@ -1238,13 +1308,13 @@ A;_(|
 A;_,|
 A;_0|
 A;_8|
-A;_@u
 A;_@|
 A;_H|
 A;_P|
 A;_X|
+A;_p|
 A;t$0u
-A;t$Xu.I
+A;t$Xu0I
 A;u@u
 A;v0u
 A;vPu
@@ -1256,8 +1326,8 @@ APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
 ARBR0
 ARBRAp
-ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRATAp
-ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBSATB`]ATAp
+ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRATAp
+ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBSATB`^ATAp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRB`
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
 ARBRBRBRBRB`
@@ -1303,6 +1373,8 @@ AZBSDp
 A[ATAp
 Abandoning attempt to contact %s.  %short
 Abandoning attempt to establish session on %s.  %short
+Abandoning attempt to migrate to %short, relay is shutting down soon.
+Abandoning migration to %s.  We obtained signed char session on this relay, but decided to use %short as the primary instead.
 Activates/deactivates net message validation
 AddBool
 AddDouble
@@ -1344,6 +1416,7 @@ Average Memory Usage Per Entity   :  %8.3f bytes
 Average Number of Field Paths     :  %8.3f
 B(A;F
 B8Lcb
+B;D; H
 B;L0(
 B@H+P0H
 BPA;F
@@ -1365,23 +1438,26 @@ BuildDeltaProperties fieldDataBuf
 Builtin
 Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
 C ;B 
+C A;E ~
 C [A^]
 C$;CXuSL
-C$???
 C(A;F(
 C(A;F(uVA
 C(H;B(D
 C(IcO,I
 C,A;F,uH
 C0+K,9
-C0A9G
 C0H;B0t
 C0[A\A^A_]
-C4;C 
 C8A;F8
-C9D'(
+C9D4 
 C;<u
-C;D< 
+C;D% trM
+C;D. u
+C;D/ L
+C;D5 u
+C;D7 
+C;D> L
 C<;C,
 C@H+X0H
 C@L+X0L
@@ -1397,7 +1473,6 @@ CAtomicManipulator<RadianEuler>
 CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
-CAtomicManipulator<color32>
 CAtomicManipulator<matrix3x4_t>
 CAtomicManipulator<matrix3x4a_t>
 CBaseAppSystem<INetworkSystem>
@@ -1590,7 +1665,6 @@ CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE:
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
 CHECK failed: uninterpreted_options_field != NULL: 
 CHECK failed: value.size() <= kint32max: 
-CHandle
 CHandle<
 CIDR address range '%short' in data center '%short' not accepted; address low bits outside of prefix mask must be 0
 CLC_Messages
@@ -1626,6 +1700,8 @@ CMsgSteamDatagramGameserverSessionRequest
 CMsgSteamDatagramLinkInstantaneousStats
 CMsgSteamDatagramLinkLifetimeStats
 CMsgSteamDatagramNoSession
+CMsgSteamDatagramRouterHealth
+CMsgSteamDatagramRouterHealth_DataCenter
 CMsgSteamDatagramRouterPingReply
 CMsgVector
 CMsgVector2D
@@ -1764,6 +1840,7 @@ CSVCMsg_Print
 CSVCMsg_SendTable
 CSVCMsg_SendTable_sendprop_t
 CSVCMsg_ServerInfo
+CSVCMsg_ServerSteamID
 CSVCMsg_SetPause
 CSVCMsg_SetView
 CSVCMsg_Sounds
@@ -1788,7 +1865,6 @@ CSchemaManipulator<RadianEuler>
 CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
-CSchemaManipulator<color32>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
 CSchemaRegistration
@@ -1800,9 +1876,20 @@ CStackPair::CStackPair(const CFieldPath &, CFlattenedSerializer *, uint8 *, uint
 CSteamDatagramTransportClient::RecvDatagram
 CSteamDatagramTransportClient::SendDatagram
 CSteamDatagramTransportClient::Think
+CSteamDatagramTransportGameserver::Client *SteamDatagramTransport::CSteamDatagramTransportGameserver::LocateClient(CSteamID, const sockaddr &, uint16, uint64)
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<CNetworkFieldChangedEventQueueChangeInfo_t, false>::Push(CTSQueue::Node_t *) [T = CNetworkFieldChangedEventQueueChangeInfo_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, false>::Pop() [T = CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, false>::Push(CTSQueue::Node_t *) [T = CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<ReceivedData_t *, false>::Pop() [T = ReceivedData_t *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<ReceivedData_t *, false>::Push(CTSQueue::Node_t *) [T = ReceivedData_t *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<loopback_t *, false>::Pop() [T = loopback_t *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<loopback_t *, false>::Push(CTSQueue::Node_t *) [T = loopback_t *, bTestOptimizer = false]
 CTSQueue<CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, false>::CTSQueue() [T = CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, bTestOptimizer = false]
 CTSQueue<CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, false>::~CTSQueue() [T = CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::QueuedMessage_t, bTestOptimizer = false]
 CTSQueue<ReceivedData_t *, false>::CTSQueue() [T = ReceivedData_t *, bTestOptimizer = false]
@@ -1853,9 +1940,6 @@ CUtlBinaryBlock
 CUtlBinaryBlock &CUtlBinaryBlock::operator=(const CUtlBinaryBlock &)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -1890,9 +1974,11 @@ Cffffff.
 ChangeAccessorFieldPathIndex_t
 Check your Internet connection, and make sure your browser can access the following URL:
 ClearField
-Client %short on same router %short, session ID changed.
 Client Messages
 Cluster %short has invalid router address '%short'
+Cluster '%short' has signed char selection penalty of %dms for load balancing purposes.  (As per %short).
+Cluster '%short' no longer has signed char selection penalty for load balancing purposes.  (As per %short).
+Cluster '%short' selection penalty for load balancing purposes changed from %dms to %dms.  (As per %short).
 CmdLinkAH
 Code of relay cluster to use.  If not empty, we will only use relays in that cluster.  E.g. 'iad'
 Color
@@ -1920,15 +2006,14 @@ Couldn'unsigned short parse default value "
 Couldn'unsigned short resolve offset %double in %short at path %short
 Couldn'unsigned short resolve offset %double in %short at path (%double = '%short')
 Count
-Cp[A^]
 CreateInterface
 CreateSimpleThread failed
 Creating channel for %short:%double as NET_CATEGORY_PEER_TO_PEER
 D$ L9
+D$ fA
 D$$ff.
 D$(Ic
 D$,A;D$
-D$,A;D$0~
 D$,IcD$(
 D$0E1
 D$0H9
@@ -1936,41 +2021,44 @@ D$0L9
 D$4IcD$0
 D$<A;D$,
 D$@L+`0I
-D$PE1
-D$PIc
-D$VIc
+D$HH9
+D$RIc
 D$XA9
-D$XfA
+D$XIc
 D$lIcD$h
 D$pD9h0t\I
+D%0Lc
 D9 u41
-D95uU
+D9%U3
+D93s*H
+D9=-I
 D9D>0u
 D9Q(}
+D9d; unsigned short?1
 D9sXu
+D9t:0t
 D;... u*I
-D;8u/I
+D;...@u$H
+D;8u+
 D;H(|
 D;I(|9L9
 D;`,|
 D;`8|
 D;cH|
 D;hX}
+D;iX}
 D;k u
 D;k,|
-D;long long(}
 D;r u$H
-D;r u/H
 D;r@u(H
 D;sXI
 D;vH|
 D;vxu*I
 D;xH|
 D;zXu$H
-D;{ u'
 D;{<|
 D;~,|
-D<0Lc
+D< Lc
 DEFAULT_WRITE_PATH
 DIALOG_ASKCONNECT
 DIALOG_ENTRY
@@ -1996,26 +2084,24 @@ DependencyClass::m_pDependencyLL == NULL
 DescriptorProto
 DescriptorProtosH
 DevMsg(char const*, ...)
-Dffff.
 Didn'unsigned short find quality metrics for old primary?
 Discarding inactive session on %s.  %short
 Display info about signed char message (by classname or id)
 Don'unsigned short bother compressing packets below this size.
+Don'unsigned short know how else to talk to %s.  Destroying client session.
 Don'unsigned short poke net_flood_report_url more often than once per N seconds
 DotaCardGameClient_001
 Drops next __int128 packets on client
 Dump UDP packets summary to console
 Dump non-loopback udp only
 Duplicate entry %short already exists in field dict!
-E A;E
+E A9G
 E#@t3H
 E$IcE 
 E(IcL$,H
 E,IcE(
-E0A9F
-E4A;E 
+E09C0|
 E8Ic]
-E9.s*H
 E9f }
 E9l$(
 E9t$$r
@@ -2023,10 +2109,12 @@ E9up~T
 E9w$|
 E9w0M
 E9|$$r
+E9|$$|
 E;.|kH
 E;E(H
 E;__float128 A
 E;f0A
+E;f8A
 E;fHA
 E;fPD
 E;float A
@@ -2038,7 +2126,6 @@ E;uXu
 E;uxu
 E;~ A
 E;~8A
-E;~@u
 E;~HA
 E;~xu
 E<IcE8
@@ -2065,7 +2152,7 @@ Encountered too many releases for resource "%short"
 End of input was reached and '[' was not matched by ']'
 End of input was reached and '{' was not matched by '}'
 End-of-file inside block comment.
-End-to-end connection: %short
+End-to-end connection to data center '%short': %short
 EngineServiceMgr001
 Entities
 Enum type "
@@ -2122,11 +2209,12 @@ F(@t3H
 F(L;long double
 F(L;unsigned long
 F([A^]
+F,A;F0~21
 F,IcF(
 F0D9k(
 F3,0I
 F4IcF0
-F9l80L
+F9d0 t61
 F;4(tjH
 F<IcF8
 F@H+F8H
@@ -2147,6 +2235,7 @@ Failed to fetch network config from CDN.  Using local network config, which migh
 Failed to find the registered delegate/eventid combination
 Failed to find the registered slot
 Failed to install message handler for message %short in channel %short!
+Failed to save steam datagram ticket cache.  We might not be able to reconnect if we crash and cannot ask for another ticket!
 Failed to set socket nonblocking mode.  Error code 0x%08x.
 Failed to set socket recv buffer size.  Error code 0x%08x.
 Failed to set socket send buffer size.  Error code 0x%08x.
@@ -2214,6 +2303,7 @@ Forgetting client %s.  Last communication was %.f seconds ago
 Found -NoQueuedPacketThread, so no queued packet thread will be created.
 FtIcFp
 G Ic4
+G [A\A^A_]
 G$IcO
 G(HcH
 G(L;unsigned long
@@ -2221,11 +2311,13 @@ G0H;F0t
 G8H	p(]
 G8I;G@
 G9D50uYC
-G9d5 unsigned short,1
+G;d. M
 G;d5 u K
+G;long<0u
 G<IcO8
 G@H+x0H
 G@L+x0I
+GA#D$
 GTIcGP
 GameResourceServiceClientV001
 GameResourceServiceServerV001
@@ -2271,7 +2363,7 @@ H+A@H
 H+B0H
 H+B@H
 H+C@H
-H+CXfH
+H+CxH=
 H+F0H
 H+F@H
 H+H0H
@@ -2312,13 +2404,16 @@ H__Znwm
 HammerMapLoader001
 HasField
 HasProceduralDataHelper()
+Hc8Hi
+Hc>Hi
 Hc@ H
 Hc@XHi
-Hc@pH
 Hc@pI
 HcC(I9
-HcCPH
+HcCdH=
+HcD20H
 HcE H
+HcF(Li
 HcG,H
 HcG0H
 HcGPH
@@ -2335,6 +2430,7 @@ Hc_(H
 Hcw(H
 HelpSystem_001
 Hex and octal numbers must be integers.
+Hffff.
 Hit end of input before closing quote (%char)
 Hit end of line before closing quote (%char)
 Host game server ip
@@ -2342,6 +2438,7 @@ HostStateMgr001
 How long p2p connection requests should linger before we completely ignore them
 I CUtlLinkedList<CUtlKeyValuePair<CFieldPath, empty_t>, unsigned int, false, unsigned int, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CFieldPath, empty_t>, unsigned int>, unsigned int> >::AllocInternal(bool) [T = CUtlKeyValuePair<CFieldPath, empty_t>, S = unsigned int, ML = false, I = unsigned int, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CFieldPath, empty_t>, unsigned int>, unsigned int>]
 I CUtlLinkedList<NetPacket_t *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = NetPacket_t *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short>]
+I CUtlLinkedList<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int, false, int, CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int> >::AllocInternal(bool) [T = SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int>]
 I CUtlRBTree<CIPRateLimit::iprate_s, int, bool (*)(const CIPRateLimit::iprate_s &, const CIPRateLimit::iprate_s &), CUtlMemory<UtlRBTreeNode_t<CIPRateLimit::iprate_s, int>, int> >::Find(const T &) const [T = CIPRateLimit::iprate_s, I = int, L = bool (*)(const CIPRateLimit::iprate_s &, const CIPRateLimit::iprate_s &), M = CUtlMemory<UtlRBTreeNode_t<CIPRateLimit::iprate_s, int>, int>]
 I CUtlRBTree<CIPRateLimit::iprate_s, int, bool (*)(const CIPRateLimit::iprate_s &, const CIPRateLimit::iprate_s &), CUtlMemory<UtlRBTreeNode_t<CIPRateLimit::iprate_s, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CIPRateLimit::iprate_s, I = int, L = bool (*)(const CIPRateLimit::iprate_s &, const CIPRateLimit::iprate_s &), M = CUtlMemory<UtlRBTreeNode_t<CIPRateLimit::iprate_s, int>, int>]
 I CUtlRBTree<CIPRateLimit::iprate_s, int, bool (*)(const CIPRateLimit::iprate_s &, const CIPRateLimit::iprate_s &), CUtlMemory<UtlRBTreeNode_t<CIPRateLimit::iprate_s, int>, int> >::NewNode(const T *) [T = CIPRateLimit::iprate_s, I = int, L = bool (*)(const CIPRateLimit::iprate_s &, const CIPRateLimit::iprate_s &), M = CUtlMemory<UtlRBTreeNode_t<CIPRateLimit::iprate_s, int>, int>]
@@ -2425,10 +2522,8 @@ I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<Utl
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I+4$H
 I+F`I
-I+FxH=
 I9FXt H
 I9}@unsigned short
-I;3t-H9
 IAppSystem
 IAtomicManipulator
 ICommandCallback
@@ -2459,7 +2554,6 @@ IcD$(A
 IcD$,H
 IcD$,L
 IcD$hA
-IcD40H
 IcE A
 IcE(A
 IcE4H
@@ -2471,12 +2565,14 @@ IcF A
 IcF H
 IcF(A
 IcF(I9
+IcF(M
 IcF,L
 IcF0A
 IcF0H
 IcF8A
 IcF@A
 IcFHA
+IcFPH
 IcFXA
 IcFhA
 IcFpA
@@ -2524,12 +2620,21 @@ If we get signed char completed splitpacket requesting acks, send the final 'suc
 Ifff.
 Ifffff.
 Ignoring %short, was in previous state only, now outside of valid range for field
+Ignoring nonsensical migration request from %short to migrate to %short, which is his own address
 Ignoring packet from %short:%double as it is not from Steam Channel P2P
 Ignoring packet from %short:%double as remote is from signed char game server
+Ignoring request by %short to migrate to %s.  Can'unsigned short locate requesting relay shared cluster data???
+Ignoring request by %short to migrate to %s.  Failed to allocate resources to talk to that relay.
+Ignoring request by %short to migrate to %s.  Target address appears to be in signed char different relay cluster?  (%short)
+Ignoring request by %short to migrate to %s.  We already know that relay is shutting down very soon.
+Ignoring request by %short to migrate to %s.  We don'unsigned short recognize that target address in the network config.
+Ignoring request by %short to migrate to %s.  We had problems communicating with that relay %.1fs ago.
+Ignoring/abandoning migration request.  Current primary %short is requesting to send us to %short, but our migration target is %short?
+Ignoring/abandoning migration request.  Current primary %short no longer has signed char request active
+Ignoring/abandoning migration request.  SDR client deactivated, or no primary selected
 Import "
 Incorrect client challenge in GameserverSessionEstablished from %s.  Reply could be spoofed, ignoring.
 Incorrect client challenge in RouterPingReply from %s.  Reply could be spoofed, ignoring.
-Incorrect client challenge in S2A_PING2REPLY from %s.  Reply could be spoofed, ignoring.
 Incorrect client cookie in NoSession from %s.  Could be spoofed, ignoring.
 Index must be -1 for non-repeated fields
 Index out-of-bounds (field is empty).
@@ -2552,13 +2657,13 @@ Interpreting non ascii codepoint %d.
 Invalid
 Invalid JSON data on line %double: %short
 Invalid address range '%short' in data center '%short'
+Invalid channel number %double
 Invalid cluster name '%short'; must be exactly 3 characters
 Invalid code point \u%04x
 Invalid combination of steam datagram config and gameserver sample.  %short
 Invalid control characters encountered in text.
 Invalid data center index %d.  (Count is %double)
 Invalid data center name '%short'; must be exactly 3 characters
-Invalid escape character 0x%02x
 Invalid escape character 0x%02x ('\%char')
 Invalid escape sequence in string literal.
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
@@ -2586,10 +2691,13 @@ IsValid<T>()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
 IsValidIndex(int) && (int != InvalidIndex())
-JcT&0H
+Jc<	H
+JcL.(I
 Jffffff.
 Jitter fakelag packet time
 JobStatus_t CJob::Abort(bool)
+K A9L$ |
+K A9M |
 K HcI
 K(Ict$,L
 K8;C<
@@ -2601,15 +2709,17 @@ K8;C<}unsigned short
 K8;C<}}
 KHIcT$,L
 KH[A^]
-KcD%0H
 KcD'0H
 KcD,0H
+KcD.0H
+KcD/0H
 KcD=0H
+KcD>0H
 KeyValueCache001
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
+KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstTrueSubKey()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextTrueSubKey()
 KeyValues::FindKey called on NULL pointer!
 Kfff.
@@ -2618,13 +2728,16 @@ L$ Hc<
 L$ L+
 L$ Lc,
 L$(IcV,L
+L$0t)I
 L$8A;D$<
 L$@L+a0I
 L$`I;L$ht
 L90t*H
-L95H/
+L95@bool
 L98tz
 L9v@u
+L;>unsigned short-L9
+L= A9M }
 L?333?
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -2632,7 +2745,8 @@ LABEL_REQUIRED
 LITE_RUNTIME
 Label
 Lag all incoming network data (including loopback) by this many milliseconds.
-Lc=*B
+Lc3E;4$us
+Lc=4q 
 LcO,D
 Lcc M
 Lco0M
@@ -2653,8 +2767,11 @@ LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*,
 Lost backup #%double session on %s.  %short
 Lost connectivity to ALL Steam Datagram routing clusters.  Possible problem with local internet connection?
 Lost primary session on %s.  %short
+M0t.I
 M8A;E<
 M8A;E<}_
+M94$t*H
+M96u/H
 MATCHFRAMEWORK_001
 MNetworkAlias
 MNetworkArraySerializer
@@ -2690,23 +2807,39 @@ MNetworkUserGroupSendProxyRecipientsFilter
 MNetworkVarNames
 MNetworkVarsAtomic
 MNetworkVarsDisable
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MResourceTypeForInfoType
 MSG_SPLITSCREEN_ADDUSER
 MSG_SPLITSCREEN_REMOVEUSER
+MXGJJ98X76
 MakeSerializersMatch failed for %short
 MakeSerializersMatchByMeta failed for %short
-Malformed MsgSteamDatagramDataRouterToClient from %short: Failed to varint decode size of stats message
-Malformed MsgSteamDatagramDataRouterToClient from %short: header size is %double, packet size is %double
 Malformed MsgSteamDatagramDataRouterToClient from %short: packet too small
-Malformed MsgSteamDatagramDataRouterToClient from %short: stats message size doesn'unsigned short make sense.  Header size %double, stats message size %double
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: Failed to varint decode size of stats message
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: Flags indicate presence of TimeSincePrev, but no room for it.  Header size %double, stats message size %double
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: Flags indicate presence of TimeSincePrev, but no room for it.  Stats message size %double, packet size %double
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: header size is %double, packet size is %double
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: packet too small
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: stats message size doesn'unsigned short make sense.  Header size %double, stats message size %double
+Malformed MsgSteamDatagramDataRouterToClientV1 from %short: stats message size doesn'unsigned short make sense.  Stats message size %double, packet size %double
 Malformed MsgSteamDatagramDataRouterToServer from %short: Failed to varint decode size of stats message
-Malformed MsgSteamDatagramDataRouterToServer from %short: Invalid steam ID 0x%016llx
-Malformed MsgSteamDatagramDataRouterToServer from %short: header size is %double, packet size is %double
+Malformed MsgSteamDatagramDataRouterToServer from %short: Flags indicate presence of TimeSincePrev, but no room for it.  Stats message size %double, packet size %double
+Malformed MsgSteamDatagramDataRouterToServer from %short: Hit end of packet trying to read 16-bit channel ID
+Malformed MsgSteamDatagramDataRouterToServer from %short: Hit end of packet trying to read 8-bit channel ID
+Malformed MsgSteamDatagramDataRouterToServer from %short: Invalid payload lead byte 0x%02x, unknown encoding of channel type
+Malformed MsgSteamDatagramDataRouterToServer from %short: Invalid payload lead byte 0x%x.  Currently only signed char single unreliable payload supported.
 Malformed MsgSteamDatagramDataRouterToServer from %short: packet too small
-Malformed MsgSteamDatagramDataRouterToServer from %short: reserved flags not set properly
-Malformed MsgSteamDatagramDataRouterToServer from %short: stats message size doesn'unsigned short make sense.  Header size %double, stats message size %double
+Malformed MsgSteamDatagramDataRouterToServer from %short: stats message size %double doesn'unsigned short make sense.
 Malformed MsgSteamDatagramDataRouterToServer from %short: varint-encoded channel numbers not yet supported
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: Failed to varint decode size of stats message
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: Flags indicate presence of TimeSincePrev, but no room for it.  Header size %double, stats message size %double
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: Invalid steam ID 0x%016llx
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: header size is %double, packet size is %double
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: packet too small
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: reserved flags not set properly
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: stats message size doesn'unsigned short make sense.  Header size %double, stats message size %double
+Malformed MsgSteamDatagramDataRouterToServerV1 from %short: varint-encoded channel numbers not yet supported
 MapListService_001
 MaterialUtils_001
 Maximum allowed file size for uploading in MB
@@ -2739,8 +2872,8 @@ ModelDocCommandSystem001
 Multiple extension registrations for type "
 MutableRawRepeatedField
 MutableRepeatedMessage
+N 9J |
 N Hc<
-N ffff.
 N@H+q0H
 N@L+q0I
 NETWORK_DISCONNECT_BADDELTATICK
@@ -2794,7 +2927,6 @@ Network config file '%short' not present; not loaded.
 Network config missing revision identifier.
 Network config router list/map mismatch!
 Network config router/map corrupt!
-Network configuration fake data changed %double -> %double
 Network configuration revision changed %double -> %double
 Network configuration: %short
 Network field tried to use signed char priority that has not been registered!
@@ -2817,6 +2949,7 @@ No active net channels.
 No backup router selected
 No default value
 No field named "uninterpreted_option" in the Options proto.
+No gameserver selected.
 No network configuration available.  We don'unsigned short know what data center we'long double restrict trying to connect to!
 No routers selected
 No steam datagram client connection active
@@ -2837,6 +2970,8 @@ Number of fragments for signed char splitpacket that can be sent per frame
 Number of packets per second that threaded socket pump algorithm allows from client.
 Number of seconds over which the threaded socket pump algorithm will fully recover client ratelimit.
 Numbers starting with leading zero must be in octal.
+O 9N |
+O A9L$ 
 O Hc4
 O Hc<
 O Lc,
@@ -2859,6 +2994,8 @@ Ordered object did not begin in signed char zeroed state
 Other Players
 OutPropData.GetNumBitsWritten() == nDataBlockSizeBits
 Overrides IP for multihomed hosts
+P A9U 
+P A9U |
 P(;Q(}_H
 P(;Q(}pI
 P@P@@
@@ -2878,7 +3015,6 @@ PP@PP`
 PPPP@P
 P[A\A^A_]
 P[A^]
-P`ppP`P`P
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
@@ -2890,15 +3026,18 @@ Path_Remove failed for read only CFieldPath
 Path_RemoveAll failed for read only CFieldPath
 Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%double)
 Peer To Peer
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
+Piggy-backed ping in data packet; requested immediately reply from relay
 Ping = %double+%double=%double (front+back=total).
 Ping failure to cluster %short was %.1fs ago.  Discarding record of failure, might try again.
 Ping to %short timed out.  (Consecutive failure #%d.)
 Ping to %short timed out.  Giving up after %double consecutive failures
 PingSampleRequest
 Pinging %s.
-Pinging %short (gameserver).
+Pinging %short using stats message; delayed reply OK.
+Pinging %short using stats message; requesting immediately reply.
 Plain
 Player
 PlusFour
@@ -2958,6 +3097,7 @@ PushTwoLeftDeltaZero
 PushTwoPack5LeftDeltaN
 PushTwoPack5LeftDeltaOne
 PushTwoPack5LeftDeltaZero
+Q A9W |
 QAngle
 Quaternion
 QueuedLoaderVersion001
@@ -2980,10 +3120,11 @@ Rate limited: %llu packets from %u.%u.%u.%u
 Reached an unintended state: CPPTYPE_MESSAGE
 Reading dangerously large protocol message.  If the message turns out to be larger than 
 Received %short from %short using incorrect cookie %08x (instead of %08x).  Message could be spoofed, ignoring.
-Received %short from %short when we thought we didn'unsigned short have signed char session.  Marking session as active.
-Received GameserverSessionEstablished from %short on port %double, session %08x
-Received S2A_PINGREPLY from %short, which is signed char real steam datagram relay?  Should only receive this from gameservers.
-Received malformed / unexpected packet with leading FF byte from %short
+Received %short from %short, when we don'unsigned short think we have signed char session there.  Session established message dropped, or packet arrived after session terminated.
+Received GameserverSessionEstablished from %short on port %double, cookie 0x%08x session 0x%08x
+Received Steam datagram ticket for server %short
+Received client message from %short using SessionID 0x%long long for %s.  But previously that session was for client %short!  This is suspicious.  Unlinking session for that Steam ID.
+Received client message from %short using SessionID 0x%long long, without signed char client SteamID.  We don'unsigned short recognize that address+SessionID.  Why does the relay think we know the Client Steam ID?
 Received malformed CMsgSteamDatagramClientPingSampleRequest from %short
 Received malformed CMsgSteamDatagramConnectionStatsRouterToClient from %short
 Received malformed CMsgSteamDatagramConnectionStatsRouterToServer from %s.  Missing / invalid envelope fields.  [ %short ]
@@ -2996,6 +3137,7 @@ Received malformed CMsgSteamDatagramPingReply from %short
 Received malformed GameserverPingReply from %short
 Received packet from non-internet address
 Received packet of invalid size %double from %short
+Received request to migrate to %short from %s.
 Received successful communication from Steam Datagram routing cluster.
 Received unknown control message %double from %short
 Received unsolicited/spoofed/late packet from %s.  Ignored.
@@ -3007,7 +3149,7 @@ ReleaseLast
 ReleaseMessage
 RemoveLast
 Removed fake field %short at %double
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -3021,8 +3163,7 @@ Requesting session from %s.  Ping = %double+%double=%double (front+back=total).
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ReturnType_t CEvent_Dispatch<CEventIDManager_NetChan, BogusType_t, 3>::DispatchEvent(typename BaseClass::Param1Type_t, typename BaseClass::Param2Type_t, typename BaseClass::Param3Type_t, bool, EventID_t) [EVENT_ID_MANAGER = CEventIDManager_NetChan, EVENT_DESCRIPTOR = BogusType_t, PARAMCOUNT = 3]
 ReturnType_t CEvent_Dispatch<CEventIDManager_NetChan, NetMessageConnectionClosed_t, 3>::DispatchEvent(typename BaseClass::Param1Type_t, typename BaseClass::Param2Type_t, typename BaseClass::Param3Type_t, bool, EventID_t) [EVENT_ID_MANAGER = CEventIDManager_NetChan, EVENT_DESCRIPTOR = NetMessageConnectionClosed_t, PARAMCOUNT = 3]
 ReturnType_t CEvent_Dispatch<CEventIDManager_NetChan, NetMessageSplitscreenUserChanged_t, 3>::DispatchEvent(typename BaseClass::Param1Type_t, typename BaseClass::Param2Type_t, typename BaseClass::Param3Type_t, bool, EventID_t) [EVENT_ID_MANAGER = CEventIDManager_NetChan, EVENT_DESCRIPTOR = NetMessageSplitscreenUserChanged_t, PARAMCOUNT = 3]
@@ -3035,9 +3176,9 @@ RouterPingReply from %short, %dms
 RouterQuality
 Routing cluster %short has missing or invalid 'addresses' list
 RoutingCluster
-S(A;W(uhH
+S A9U |
+S(A;T$(uiH
 S(Ict$,L
-S2A_PING2REPLY from %short, %dms
 S@H+Z0H
 SATAp
 SAXAp
@@ -3057,9 +3198,9 @@ STEAMHTTP_INTERFACE_VERSION002
 STEAMINVENTORY_INTERFACE_V001
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
-STEAMREMOTESTORAGE_INTERFACE_VERSION013
-STEAMSCREENSHOTS_INTERFACE_VERSION002
-STEAMUGC_INTERFACE_VERSION008
+STEAMREMOTESTORAGE_INTERFACE_VERSION014
+STEAMSCREENSHOTS_INTERFACE_VERSION003
+STEAMUGC_INTERFACE_VERSION009
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
 STEAMVIDEO_INTERFACE_V001
@@ -3067,7 +3208,6 @@ STRING
 STRING_PIECE
 SVC_Messages
 SVC_Messages_LowFrequency
-Saved to save steam datagram ticket cache.  We won'unsigned short be able to reconnect if we crash!
 ScaleformUI001
 SceneSystem_002
 SceneUtils_001
@@ -3135,7 +3275,7 @@ SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
 Sounds
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -3146,7 +3286,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 SourceCodeInfo
 Spawn Groups
 SpawnGroupFlags_t
@@ -3157,6 +3297,7 @@ Spew serializer counts
 Spew serializer info
 Spew signed char warning if packet loss percentage is above this threshold
 SplitPacket
+Started migration to %short at request of current primary %short
 Starting ping measurement
 Stats
 StatsService_001
@@ -3164,10 +3305,9 @@ Steam datagram ticket cache corrupt. Ignoring.
 Steam datagram ticket cache wrong version. Ignoring.
 Steam supporting smaller max routable packet than engine expecting (%double vs %double)
 SteamClient017
-SteamController003
+SteamController004
 SteamDGClient
 SteamDGServer
-SteamDataCenterID CalculateSteamDataCenterIDFromCode(const char *)
 SteamDatagramClient
 SteamDatagramServer
 SteamDatagramTransport::CSteamDatagramTransportClient
@@ -3203,21 +3343,25 @@ T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<CEncodeInfo, 6, short>, CE
 T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<CFieldListEncoderIterator::CSerializerLookup, 6, short>, CFieldListEncoderIterator::CSerializerLookup, short>::AddToTailGetPtr() [B = CUtlLeanVectorFixedGrowableBase<CFieldListEncoderIterator::CSerializerLookup, 6, short>, T = CFieldListEncoderIterator::CSerializerLookup, I = short]
 T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t, 3, short>, CFieldPathReconstruct_t, short>::AddToTailGetPtr() [B = CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t, 3, short>, T = CFieldPathReconstruct_t, I = short]
 T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int, 3, short>, unsigned int, short>::AddToTailGetPtr() [B = CUtlLeanVectorFixedGrowableBase<unsigned int, 3, short>, T = unsigned int, I = short]
+T PercentileGenerator<unsigned char, 1000>::GetPercentile(float) const [T = unsigned char, MAX_SAMPLES = 1000]
+T PercentileGenerator<unsigned short, 1000>::GetPercentile(float) const [T = unsigned short, MAX_SAMPLES = 1000]
+T$ 9Q
+T$ 9S |
+T$ A9W |
 T$ Hc
 T$0E1
 TASAp
+TAWATAp
 TBRAp
 TBRBRBRBRBRB\BRAp
 TBRB`
 TBSATAp
 TBTBRBUASATAp
 TBTBp
-TBWATAp
 TBXATAp
 TB^ATAp
 TCP/UDP Disabled.
 TCRAp
-TCRBSATAp
 TCSARBRAp
 TCSASARAp
 TCSATAp
@@ -3231,6 +3375,7 @@ TC^BRB`
 TC`6ATAp
 TC`RASATAp
 TISCp
+TM9d2
 TUUUUUU
 TYPE_BYTES
 TYPE_DOUBLE
@@ -3261,13 +3406,15 @@ Time is running in reverse, or bug with m_nInSequenceUSTime?  nowUSTime=%llu, m_
 Toggle field path tracing to file
 Too many network groups [%double], increase size of netbandwidthgraph_t::MAX_NETWORK_GROUPS [%double]
 Too many proxies for serializer %s.
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
 Traffic from %short was blocked for exceeding rate limits
+Tried to make an optimistic ping estimate without any ping data at all!
+Tried to make signed char pessimistic ping estimate without any ping data at all!
 Tried to merge messages of different types 
 Tried to recv datagram, but we haven'unsigned short specified what gameserver we'long double restrict talking to
 Tried to register signed char non-generated type with the generated type registry.
@@ -3279,11 +3426,12 @@ Tried to send queued packet to proxied client, but no ISteamDatagramTransportGam
 Tried to send queued packet to proxied gameserver, but no ISteamDatagramTransportClient
 Trying to open socket on %short
 Trying to send signed char packet via steam datagram when no network configuration is available.
-Trying to send signed char packet via steam datagram, but we have lost connectivity to all routers.  Check your Internet connection.  Cannot send packet.
-Trying to send signed char packet via steam datagram, but we have not yet established connectivity to any routers.  This is guaranteed to fail.
-Trying to send signed char packet via steam datagram, but we were never able to establish connectivity with any routers.  Check your Internet connection.  Cannot send packet.
+Trying to send signed char packet via steam datagram, but we have lost connectivity to all relays.  Check your Internet connection.  Cannot send packet.
+Trying to send signed char packet via steam datagram, but we have not yet established signed char session on any relays.  This is common for the first few packets, but is signed char problem if it persists.
+Trying to send signed char packet via steam datagram, but we were never able to establish connectivity with any relays.  Check your Internet connection.  Cannot send packet.
 Type appears to be in generated pool but wasn'unsigned short 
 Type is already registered: 
+U tUH
 U8A;M<
 UDP -> %short: sz=%5i seq=%5i ack=%5i rel=%i tm=%8.3f%short
 UDP -> %short: sz=%int OOB (%double)
@@ -3317,9 +3465,8 @@ User Messages
 UserInfoChangeService_001
 UtlStringMap is inconsistent: vector has %double entries but symbol table has %double
 UtlSymId_t CFlattenedSerializers::RegisterSerializer(const char *, CFlattenedSerializer *)
+V A9W |
 V$A+V Hc
-V8ff.
-V8ffffff.
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -3356,8 +3503,9 @@ VScriptDbg
 VScriptManager010
 VStringTokenSystem001
 VUUUH
-V_AppendSlash: ran out of space on %s.
+V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
 V_strcmp( pClassInfo->GetName(), pPossibleBase->GetName() )
+V_stristr_fast(char const*, char const*)
 V_strlen( pszCode ) == 3
 Value 
 Value must be "true" or "false" for boolean option "
@@ -3379,6 +3527,9 @@ Vector4D
 VisBuilder_001
 Voice
 VoiceDataFormat_t
+VtA+VpHc
+W 9S |
+W A9T$ |
 W$A+W Hc
 WA;v8u
 WARNING
@@ -3403,6 +3554,7 @@ Wait this many msecs before checking whether to send resend requests.
 Warning parsing text-format 
 Warning:  %short = '%short' is infinite, clamping value.
 Warning: Unused import: "
+We have signed char session on our migration target.  Why haven'unsigned short we selected it yet?
 Weird GameserverPingReply timestamps from %s.  Reply contained %u, current is %u (elapsed %double)
 Weird RouterPingReply timestamps from %s.  Reply contained %u, current is %u (elapsed %double)
 Window over which to average queries per second averages.
@@ -3432,6 +3584,7 @@ Zffffff.
 [Group]
 [I:%u:%u]
 [L:%u:%u]
+[M96u/H
 [M:%u:%u:%u]
 [Name]
 [P:%u:%u]
@@ -3448,6 +3601,7 @@ Zffffff.
 [signed char:%u:%u]
 [t.fD
 [unsigned short,fD
+\$HHc
 \$xE1
 \%03o
 \A\Ap
@@ -3456,12 +3610,13 @@ Zffffff.
 \fff.
 \long long%02x
 \u must be followed by exactly 4 hex digits
-\uCL9
+\uBH9
 \uRMc
 ]ARAp
 ]fff.
 ]ffff.
 ]ffffff.
+^ A;^$uj
 ^(A;^,ug
 ^(HcC
 ^,A+^(I
@@ -3469,9 +3624,9 @@ Zffffff.
 ^V_TY
 ^\A+^X~fI
 ^ffff.
+^pA;^tuj
 _ I;_(tG1
 _0IcG
-_0fffff.
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
@@ -3490,22 +3645,19 @@ _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
 _OSAtomicCompareAndSwap64Barrier
 _OSMemoryBarrier
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetEnv
 _Plat_GetLocalTime
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetTime
-_Plat_IsInDebugSession
+_Plat_IsInDebugSessionRaw
 _Plat_IsInTestMode
-_Plat_LoadModuleRaw
 _Plat_MSTime
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_TickDiffMilliSecF
 _Plat_USTime
-_Plat_getwd
 _RandomFloat
 _RandomInt
 _RandomSeed
@@ -3528,14 +3680,39 @@ _ThreadJoin
 _ThreadSetDebugNameS2
 _ThreadSetPriority
 _ThreadSleep
+_V_FixSlashes
+_V_StripTrailingWhitespace
+_V_UTF32ToUTF8
+_V_atan2f
+_V_atof
+_V_atoi
+_V_atoi64
+_V_atoui64
+_V_cosf
+_V_fmodf
+_V_qsort
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strtoi64
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstod
+_V_wcstoi64
 _Warning
-_]7i961t
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __UNKNOWN__
 __Unwind_Resume
+__V_ComposeFileName
+__V_MakeAbsolutePath
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___assert_rtn
 ___bzero
 ___cxa_allocate_exception
@@ -3550,10 +3727,7 @@ ___cxa_pure_virtual
 ___cxa_throw
 ___dynamic_cast
 ___error
-___exp10
 ___gxx_personality_v0
-___maskrune
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___stderrp
@@ -3566,8 +3740,6 @@ __float128 E;g$ulL
 __gcc_except_tab__TEXT
 __got
 __int128 < m_Vector.Count()
-__int128 >= 0
-__int128 E;n$utL
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -3575,8 +3747,6 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atan2f
-_atof
 _atoi
 _bind
 _ceilf
@@ -3584,7 +3754,6 @@ _close
 _fclose
 _ffffff.
 _fflush
-_fmodf
 _fopen
 _fprintf
 _fread
@@ -3611,15 +3780,12 @@ _memcpy
 _memmove
 _memset
 _poll
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
 _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
-_qsort
-_qsort_r
 _raise
 _recvfrom
 _remove
@@ -3636,7 +3802,6 @@ _strcmp
 _strcpy
 _strerror
 _strlen
-_strncat
 _strnlen
 _strstr
 _strtod
@@ -3646,26 +3811,26 @@ _strtoll
 _strtoul
 _strtoull
 _vsnprintf
-_wcstof
-_wcstol
 _write
-`!ATAp
+`"ATAp
 `(Hcx
 `0A9](
 `@pp 
 `PA9^X
 `PD9{unsigned char
-`P```
 `[A\A^A_]
 `[A^]
 ``A9^p
+`````PP`
 ````````
 `unsigned char[A\A^A_]
 activated
+active_sessions
 active_spawngroup_handle
 added
 additionalHops
 addon_name
+addons
 address
 address_ranges
 addresses
@@ -3694,6 +3859,7 @@ auto CEventDispatcher_Identified<CEventIDManager_NetChan>::RegisterEventListener
 auto CEventDispatcher_Identified<CEventIDManager_NetChan>::UnregisterEventListener_Abstract(const CUtlAbstractDelegate &, EventID_t)::(anonymous class)::operator()() const [EVENT_ID_MANAGER = CEventIDManager_NetChan]
 auto CFlattenedSerializer::WriteFieldListFromUnencodedEntity(FlattenedSerializerSpewType_t, const IReencodedEntity *, bf_write &, int, NetworkSerializationMode_t)::(anonymous class)::operator()() const
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto CNetChan::HasQueuedMessage(uint16)::(anonymous class)::operator()(const NetMessageHandle_t) const
 auto CNetworkSystem::IsP2PConnectionActive(const CPeerToPeerAddress &, int)::(anonymous class)::operator()() const
 available
 avg_data_in
@@ -3764,7 +3930,6 @@ bytes
 bytes. 
 c0D;r8u+H
 cached
-cbHdrOut <= 0x1ff
 cbHdrOutSpaceRemaining >= 0
 cbSend <= sizeof(pkt)
 cc_generic_services
@@ -3774,8 +3939,8 @@ chan.m_pLast != NULL
 chan.m_pLast == NULL
 changed
 channel
-char *_V_strncat(char *, const char *, int, int)
 char(E9~(
+char|xHc
 check.m_pField->m_nUserGroupCount + groupsToAdd.Count() <= NetworkFieldSerializerInfo_t::NFS_MAX_USERGROUP_COUNT
 cl_cmdrate
 cl_interp
@@ -3819,7 +3984,6 @@ code.m_buf.GetNumBitsWritten ( ) > 0
 code_filename
 codec
 color
-color32
 command
 compressed 
 computer_guid
@@ -3837,13 +4001,15 @@ const char *GetAvailabilityString(ESteamDatagramAvailability)
 const char *KeyValues::GetName() const
 const char *KeyValuesJSONParser::GetTokenDebugText()
 const char *NetworkFieldSerializerInfo_t::GetTypeName() const
-const char *V_stristr_fast(const char *, const char *)
 convars
 cookie
 coord
 coord_integral
 count >= 0
 count >= 1
+cpu_cost_per_packet
+cpu_cost_per_user
+cpu_load
 create_on_client
 creationsequence
 ctype
@@ -3854,8 +4020,10 @@ current == previous
 cvars
 data_centers
 data_compressed
+data_pkts_sec
 data_table_name
 databytes
+datacenter_id
 deactivated
 decal_texture_index
 dedicated
@@ -3867,7 +4035,6 @@ dependency
 deprecated
 descriptor_t
 descriptors
-destBufferSize >= 0
 destLen && *destLen >= sourceLen
 dialog_type
 disabled
@@ -3943,6 +4110,7 @@ float == NULL || dynamic_cast<To>(float) != NULL
 float CKeyValues_Data::Internal_GetFloat()
 float CQuantizedFloatEncoder::AssignRangeMultiplier(uint32, float)
 float CQuantizedFloatEncoder::GetExactEncodeTestCase(int) const
+float char::* M
 float32
 float64
 float@E;fDu
@@ -3999,7 +4167,7 @@ hostip
 hostname
 http://cdn.beta.steampowered.com/apps/sdr/network_config_beta.json
 http://cdn.dota2.com.cn/apps/sdr/network_config.json
-http://media.steampowered.com/apps/sdr/network_config.json
+http://cdn.steamstatic.com/apps/sdr/network_config.json
 iBitsRight > 0
 iChar < maxLen
 iNumSourceFields <= iNumFields
@@ -4014,13 +4182,11 @@ including
 incoming
 incoming_sequence
 infinity
-info.m_pReplacementString == 0
 initial_ping_timeout
 inpacket.m_nPacketSize
 inpacket.message
 input_type
 instantaneous
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int >= 0
 int CKeyValues_Data::Internal_GetInt()
 int CNetChan::ProcessPacketHeader(NetPacket_t *)
@@ -4040,20 +4206,16 @@ int CalculatePingScore(int, int, SharedClusterData::EPingQuality)
 int SchemaSingleInheritanceDepth(ClassIntrospectionHandle_t, ClassIntrospectionHandle_t)
 int SteamDatagramTransport::CSteamDatagramTransportClient::FindOrCreateServerDataForAddress(const netadr_t &, int)
 int SteamDatagramTransport::CSteamDatagramTransportClient::FindOrCreateServerDataForCluster(int)
+int SteamDatagramTransport::PingTracker::OptimisticPingEstimate() const
+int SteamDatagramTransport::PingTracker::PessimisticPingEstimate() const
 int SteamDatagramTransport::SteamDatagramNetwork::FindClusterByAddress(const netadr_t &, int *) const
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int16
 int32
 int32_value
 int64
-int64 V_atoi64(const char *)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
 invalid
-invalid input pointer
 is_ambient
 is_background_map
 is_bot
@@ -4068,6 +4230,7 @@ is_loadsavegame
 is_localonly
 is_multiplayer
 is_sentence
+is_transition
 ishltv
 isxdigit(char)
 java_generate_equals_and_hash
@@ -4076,16 +4239,25 @@ java_multiple_files
 java_outer_classname
 java_package
 java_string_check_utf8
+jitter_histogram_1
+jitter_histogram_10
+jitter_histogram_2
+jitter_histogram_20
+jitter_histogram_5
+jitter_histogram_negligible
 k_ESteamDatagramMsg_Diagnostic
+k_ESteamDatagramMsg_Invalid
 k_ESteamDatagramMsg_NoSession
+k_ESteamDatagramMsg_RelayHealth
 k_ESteamDatagramMsg_Stats
 kb_recv
 kb_sent
 key_t
 kffffff.
-l5$Hc
+l10A9
 lDelta >= 0
 label
+landmarkname
 latency_datacenter_ids
 latency_ping_ms
 leading_comments
@@ -4100,15 +4272,20 @@ long == 0 || nChannel > m_vecChannels[long-1].m_nChannel
 long == m_vecChannels.Count() || nChannel < m_vecChannels[long].m_nChannel
 long long	E9g
 long long	IcO
+long long E9|$
 long long signed char::* # of seconds we can wait for next packets to be sent based on rate setting (0 == no limit).
 long long signed char::* number of packets per burst beyond which threaded socket pump algorithm will start dropping packets.
+long long"A9^
 long long#E9w
 long long%02d
+long long'A9^
+long long'E9t$
 long long,@H>
-long long-E9w
+long long,E9w
 long long[A\A]A^A_]
 long long[A^A_]
 long'@L;
+long; HcD;0H
 lookup.m_nFirstShell > 0
 loopback
 loopback_t CUtlMemoryPool
@@ -4121,6 +4298,7 @@ m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_FirstFree == InvalidIndex()
 m_Head == InvalidIndex()
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_Info.m_nMessageId == nMessageId
@@ -4148,6 +4326,11 @@ m_fnChangeCallbacks.Count() == 0
 m_hThread == NULL
 m_heap.IsValidIndex(index)
 m_iDataType == TYPE_NONE
+m_idxServerMigrationTarget != m_vecActiveSessions[0]
+m_idxServerMigrationTarget < 0
+m_idxServerMigrationTarget == -1
+m_mapClientsBySteamID.Count() == 0
+m_mapRelaySessions.Count() == 0
 m_mapServers.Find( adr ) == m_mapServers.InvalidIndex()
 m_mapServers[idxServer].m_adr == adr
 m_mapServers[idxServer].m_hRoutingCluster == hCluster
@@ -4157,6 +4340,7 @@ m_nCustomDataSize > 0
 m_nFields == 0
 m_nPktsRecvWeirdSequenceCurrentInterval <= m_nPktsRecvSequencedCurrentInterval
 m_nRefs > 0
+m_nSamples > 0
 m_nSharedChangeCallbackCount must be <= 32
 m_networkContextData.Defined( pDataName )
 m_pActiveChannel
@@ -4181,6 +4365,7 @@ m_vecActiveSessions.Count() > 0
 m_vecActiveSessions.Count() >= idxCurrentBackup
 m_vecActiveSessions[int] != m_vecActiveSessions[unsigned int]
 m_vecChannels[long].m_nChannel <= chan.m_nChannel
+magic
 manifestincomplete
 manifestloadpriority
 map key must name signed char scalar or string field.
@@ -4194,8 +4379,6 @@ master
 matrix3x4_t
 matrix3x4a_t
 maxLen != 0
-maxLen > 0
-maxLen >= sizeof( *pDest )
 max_classes
 max_client_limit
 max_clients
@@ -4212,10 +4395,13 @@ metaInfo.m_UserGroups.Count() < Q_ARRAYSIZE(pFieldInfo->m_nUserGroups)
 method
 mffff.
 mffffff.
+migrate_request_ip
+migrate_request_port
 min_client_limit
 model_index
 msg.server_time() != 0
 msg.your_public_ip() != 0
+msgSessionEstablished.session_id() > 0
 msg_data
 msg_type
 nAlignment >= 0 && nAlignment <= UINT16_MAX
@@ -4246,6 +4432,7 @@ nModifiedSize == iter.GetBitWidth()
 nNumToPop >= 1
 nOut < 255
 nPacketNumber < MAX_SPLITPACKET_SPLITS
+nPenalty >= 0 && nPenalty < 5000
 nPenultimate >= 0
 nPingMS >= 0
 nPortNum >= 0 && nPortNum <= UINT16_MAX
@@ -4254,6 +4441,7 @@ nSlot != m_pFieldBits->InvalidHandle()
 nSym < m_msg.symbols_size()
 nTotalDataSize <= 255
 nTraversalOffset == 0
+nTries < 10000000
 nValue == data
 nValueToPush <= 31
 name_part
@@ -4339,6 +4527,7 @@ network_config_beta.cached.json
 network_config_beta.json
 network_config_changed_different_cluster
 network_config_changed_removed
+network_config_version
 network_connection.proto
 network_connection.proto"-
 network_connection_token
@@ -4391,8 +4580,8 @@ origin_x
 origin_y
 origin_z
 originalSender
+other_pkts_sec
 out of order
-outStrings.Count() == 0
 out_bytes_per_sec
 out_packets_per_sec_x10
 outgoing
@@ -4400,7 +4589,6 @@ outgoing_acknowledged
 output specified is NULL
 outputBuffer
 output_type
-p L;long double
 p RBRFRAp
 p p p
 p->m_bOwnsPacketDataPointer
@@ -4419,12 +4607,13 @@ pFieldFlattenedSerializer->m_bExcludedFromSerializerRegistry
 pFieldSerializer
 pHTTP
 pHdr->nContainedBitDataBits == OutPropData.GetNumBitsWritten()
+pInfo
 pLastChild->m_pPeer == NULL
 pMsgName
 pName
 pNetChannel->GetRemoteAddress().AsType<CPeerToPeerAddress>().GetSteamChannel() == STEAM_P2P_CLIENT_TO_CLIENT
-pOldPrimaryServer->m_bHaveSession
 pOldPrimaryServer->m_idx == m_vecActiveSessions[0]
+pOldPrimaryServer->m_unSessionID
 pOldPrimarySort
 pOutPacket
 pPackedOffsets && pPackedFields
@@ -4432,16 +4621,14 @@ pPool->m_SpaceUsed < 0xFFFF
 pRecvPkt[0] == ~(uint32)0
 pResult != chan.m_pLast
 pResult == chan.m_pLast
-pRouter->m_vecAddresses.Count() > 0
 pSchemaSystem != NULL
 pSchemaType
-pSearch
 pSerializeAs
 pSerializer
 pSerializer->m_bExcludedFromSerializerRegistry
 pSerializerInfo
-pServer->m_bHaveSession
 pServer->m_idx == idxServer
+pServer->m_unSessionID
 pSource
 pSourceFieldFlattenedSerializer
 pStart == (short *)( (char *)pPacket + wiresize )
@@ -4450,8 +4637,7 @@ pSubkey->m_pPeer == NULL
 pUnencoded->GetFieldPathAndData( int, toField, netData )
 pXu*H
 pXulH
-pXumH
-pXu{H
+pXuqH
 p[A\A^A_]
 p``  
 package
@@ -4479,10 +4665,25 @@ pause_group
 pause_type
 paused
 payloadData
+peak_jitter_usec
 pending data
 pending_full_frame
 ping_avg_ms
+ping_histogram_100
+ping_histogram_125
+ping_histogram_150
+ping_histogram_200
+ping_histogram_25
+ping_histogram_300
+ping_histogram_50
+ping_histogram_75
+ping_histogram_max
 ping_ms
+ping_ntile_50th
+ping_ntile_5th
+ping_ntile_75th
+ping_ntile_95th
+ping_ntile_98th
 ping_only
 ping_stddev_ms
 pitch
@@ -4500,8 +4701,9 @@ ports
 pos.IsValid()
 positive_int_value
 posttoserver
-ppline
+ppP`P`P
 prevhopcount
+previouslevel
 pri(%u)
 priority
 procedural
@@ -4510,7 +4712,7 @@ progress
 props
 protocol
 proxies
-pszCode[3] == '\0'
+pszCode[3] == '\0' || pszCode[4] == '\0'
 pthread_mutex_lock: 
 pthread_mutex_unlock: 
 ptr_ != NULL
@@ -4528,7 +4730,21 @@ qangle
 qangle_pitch_yaw
 qffffff.
 quality
+quality_histogram_1
+quality_histogram_100
+quality_histogram_50
+quality_histogram_75
+quality_histogram_90
+quality_histogram_95
+quality_histogram_97
+quality_histogram_99
+quality_histogram_dead
+quality_ntile_25th
+quality_ntile_2nd
+quality_ntile_50th
+quality_ntile_5th
 queued
+r A9t$ |
 r ffffff.
 r4we1
 r8wa1
@@ -4574,6 +4790,9 @@ savegamefilename
 savegamename
 schemasystem
 score
+scoring_penalty_datacenter_ids
+scoring_penalty_relay_cluster
+scoring_penalty_values
 sdpiD
 sdt_server_fakeloss_recv
 sdt_server_fakeloss_send
@@ -4605,14 +4824,15 @@ serializer_version
 serializers
 serializing
 server
-server.m_bHaveSession
 server.m_idx == idxServer
+server.m_unSessionID
 server_addr
 server_count
 server_ip_address
 server_sample
 server_time
 service
+session_id
 session_inactivity_timeout
 session_request_timeout
 set_ctype
@@ -4649,6 +4869,8 @@ socket() call failed.  Error code 0x%08x.
 socket.m_pSteamNetworking
 socketpair failed
 socketpair failed!
+sort.m_nOptimisticScore <= sort.m_nScore
+sort.m_nScore <= sort.m_nPessimisticScore
 sound_index
 sound_level
 sound_num_handle
@@ -4661,6 +4883,7 @@ spawn_count
 spawngrouphandle
 spawngroupmanifest
 spawngroupownerhandle
+spawngroupparenthandle
 speaker_entity
 splitpacket
 sq->m_pChannel
@@ -4701,6 +4924,7 @@ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
 std::__1::to_string(int)
 std::exception::~exception()
 std::terminate()
+steam_id
 steamdatagram_client_consecutitive_ping_timeouts_fail
 steamdatagram_client_consecutitive_ping_timeouts_fail_initial
 steamdatagram_client_fakeloss_recv
@@ -4709,7 +4933,7 @@ steamdatagram_client_force_relay_cluster
 steamdatagram_client_force_relay_cluster set to unknown relay '%short'.  Ignoring
 steamdatagram_client_min_pings_before_ping_accurate
 steamdatagram_client_single_socket
-steamdatagram_clientstatus
+steamdatagram_client_status
 steamdatagram_messages.proto
 steamdatagram_messages.proto"
 steamdatagram_tickets.bin
@@ -4722,6 +4946,7 @@ string_table_crc
 string_value
 strings::Substitute format string invalid: asked for "$
 strnlen
+subject.OU
 subtype mismatch
 sv_logblocks
 sv_max_queries_sec
@@ -4744,6 +4969,7 @@ svc_PacketReliable
 svc_PeerList
 svc_Prefetch
 svc_ServerInfo
+svc_ServerSteamID
 svc_SetPause
 svc_SetView
 svc_Sounds
@@ -4759,8 +4985,6 @@ t$(H9
 t$(wchar_t,H
 t$0H9
 t$@H9
-t$H9[8u
-t$HIc
 t$`H%
 t.Ic~ H
 t.Ic~$H
@@ -4784,15 +5008,18 @@ t5IcV,L
 t5IcW,L
 t6ffffff.
 t7IcT$,L
+t80f.
 t8D;}
 t8IcV,L
 t9IcG
+t9ffffff.
 tFIcG,L
 tHIcD$
 tLMc~
 tMff.
 tSfff.
 tUff.
+tVA9_
 table_id
 text format contains deprecated field "
 tfI9D$Xt_H
@@ -4811,6 +5038,7 @@ total_data_out
 total_packets_in
 total_packets_out
 tqJ94
+trJcD70L
 trailing_comments
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64
@@ -4853,7 +5081,6 @@ uint32 *CSerializedEntity::SetPackedFields(int, const PackedFieldPathList_t *, b
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
 uint32 bf_read::ReadVarInt32()
 uint64
-uint64 V_atoui64(const char *)
 uint8
 uint8 CNetworkMessages::FindOrCreateGroupId(const char *)
 uint8 CUserGroupRegistry::AddGroup(const char *)
@@ -4864,14 +5091,15 @@ uncompressed_size
 uninterpreted_option
 unknown
 unreliable
+unsigned __int128 char::* I
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
 unsigned int CLZSS::SafeUncompress(unsigned char *, unsigned char *, unsigned int)
 unsigned int CUtlStringMap<bool, CUtlSymbolTable>::Count() const [T = bool, SymbolTableType_t = CUtlSymbolTable]
 unsigned short	[A^]
+unsigned short!IcF
 unsigned short!~L1
-unsigned short"IcF
 unsigned short%ffff.
 unsigned short&H9[8tUH
 unsigned short'(A9
@@ -4899,6 +5127,7 @@ unsigned short+Ic~4H
 unsigned short+Ic~8H
 unsigned short+Ic~<H
 unsigned short+Ic~TH
+unsigned short+Lc{
 unsigned short-IcG,L
 unsigned short-Mc~0J
 unsigned short/ff.
@@ -4906,7 +5135,7 @@ unsigned short/fff.
 unsigned short<IcW,L
 unsigned short>fffff.
 unsigned short[H;E
-unsigned short[~$I
+unsigned short\~$I
 unsigned short`ff.
 update_baseline
 updated_entries
@@ -4921,7 +5150,6 @@ userid
 usermsgs
 utHc]
 vE9>short=
-vHIcVT
 vHct
 vXIc}(L
 val_bool
@@ -4937,6 +5165,7 @@ var_name_sym
 var_type_sym
 varint
 version
+vffffff.
 virtual EResult SteamDatagramTransport::CSteamDatagramTransportClient::SendDatagram(const void *, uint32, int)
 virtual EResult SteamDatagramTransport::CSteamDatagramTransportGameserver::SendDatagram(const void *, uint32, CSteamID, int)
 virtual INetChannel *CNetworkSystem::CreateNetChannel(int, const CPeerToPeerAddress &, const char *)
@@ -4970,7 +5199,6 @@ virtual void CNetworkMessages::RegisterNetworkFieldSerializer(const char *, Netw
 virtual void CNetworkSerializer::SetMessageId(uint32)
 virtual void CNetworkSerializerPB::SetMessageId(uint32)
 virtual void CNetworkSystem::P2PAcceptableConnectionsChanged(ESteamP2PConnectionOwner)
-virtual void CNetworkSystem::PollSocket(int, IConnectionlessPacketHandler *)
 virtual void CNetworkSystem::ProcessIncomingP2PRequests(ESteamP2PConnectionOwner, ISteamP2PAllowConnection *)
 virtual void CNetworkSystem::RemoveAllExtraSockets()
 virtual void CNetworkSystem::Shutdown()
@@ -4984,6 +5212,7 @@ virtual void ConVar::InternalSetIntValue(int)
 virtual void ConVar::InternalSetValue(const char *)
 virtual void SteamDatagramTransport::CSteamDatagramTransportClient::GetDataCenterByIndex(int, ISteamDatagramTransportClient::DataCenterStatus &)
 virtual void SteamDatagramTransport::CSteamDatagramTransportClient::GetRouterByIndex(int, ISteamDatagramTransportClient::RouterStatus &)
+virtual void SteamDatagramTransport::CSteamDatagramTransportGameserver::Destroy()
 voice
 voice_data
 voice_xsend_debug
@@ -5028,7 +5257,7 @@ void CNetChan::FlowIncomingAck(int, int, uint64)
 void CNetChan::ProcessConnectionIDHeader(NetPacket_t *, int)
 void CNetChan::SendSplitPacketMissingChunkRange(int, CUtlVector<short> &)
 void CNetChan::Setup(int, const ns_address &, const char *, NetChannelCategory_t, NetChannelCategory_t)
-void CNetworkFieldChangedEventQueue::QueueChange(void *, void *, void *&, int, NetworkFieldChangedDelegateType_t, CUtlAbstractDelegate, int, int)
+void CNetworkFieldChangedEventQueue::QueueChange(int, const CFieldPath &, UtlSymId_t, void *, void *, void *&, int, NetworkFieldChangedDelegateType_t, CUtlAbstractDelegate, int, int)
 void CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::DeallocateSignal(NetMessageHandle_t, const EffectiveType_t *) [EVENT_ID_MANAGER = CEventIDManager_NetChan, EFFECTIVE_TYPE_DESCRIPTOR = BogusType_t]
 void CNetworkMessages::ConfirmAllMessageHandlersInstalled(const char *, int, CUtlVector<NetMessageHandle_t> *)
 void CNetworkSerializer::CheckForDuplicateChangeCallbacks(const CSchemaClassBindingBase *)
@@ -5070,6 +5299,10 @@ void CUtlLinkedList<NetPacket_t *, unsigned short, false, unsigned short, CUtlMe
 void CUtlLinkedList<NetPacket_t *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = NetPacket_t *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short>]
 void CUtlLinkedList<NetPacket_t *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short> >::RemoveAll() [T = NetPacket_t *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short>]
 void CUtlLinkedList<NetPacket_t *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short> >::Unlink(I) [T = NetPacket_t *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<NetPacket_t *, unsigned short>, unsigned short>]
+void CUtlLinkedList<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int, false, int, CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int> >::Free(I) [T = SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int>]
+void CUtlLinkedList<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int, false, int, CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int> >::LinkBefore(I, I) [T = SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int>]
+void CUtlLinkedList<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int, false, int, CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int> >::RemoveAll() [T = SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int>]
+void CUtlLinkedList<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int, false, int, CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int> >::Unlink(I) [T = SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<SteamDatagramTransport::CSteamDatagramTransportGameserver::Client *, int>, int>]
 void CUtlMemory<SteamDatagramTransport::CSteamDatagramTransportClient::SavedServerQualityMetrics, int>::Swap(CUtlMemory<T, I> &) [T = SteamDatagramTransport::CSteamDatagramTransportClient::SavedServerQualityMetrics, I = int]
 void CUtlPriorityQueue<CQueuedPacketSender::CQueuedPacket *, CDefUtlPriorityQueueLessFunc<CQueuedPacketSender::CQueuedPacket *>, CUtlMemory<CQueuedPacketSender::CQueuedPacket *, int>, CDefUtlPriorityQueueSetIndexFunc<CQueuedPacketSender::CQueuedPacket *> >::RemoveAt(int) [T = CQueuedPacketSender::CQueuedPacket *, LessFunc = CDefUtlPriorityQueueLessFunc<CQueuedPacketSender::CQueuedPacket *>, A = CUtlMemory<CQueuedPacketSender::CQueuedPacket *, int>, SetIndexFunc = CDefUtlPriorityQueueSetIndexFunc<CQueuedPacketSender::CQueuedPacket *>]
 void CUtlPriorityQueue<SendQueueItem_t *, CDefUtlPriorityQueueLessFunc<SendQueueItem_t *>, CUtlMemory<SendQueueItem_t *, int>, CDefUtlPriorityQueueSetIndexFunc<SendQueueItem_t *> >::RemoveAt(int) [T = SendQueueItem_t *, LessFunc = CDefUtlPriorityQueueLessFunc<SendQueueItem_t *>, A = CUtlMemory<SendQueueItem_t *, int>, SetIndexFunc = CDefUtlPriorityQueueSetIndexFunc<SendQueueItem_t *>]
@@ -5221,10 +5454,13 @@ void SkipPropData_(CProceduralDataContextMgr &, bool *, bf_read *, CFlattenedSer
 void SkipPropData_(CProceduralDataContextMgr &, bool *, bf_read *, CFlattenedSerializer *, const CFieldPath &, int, NetworkSerializationMode_t, CAutoNetworkableData_t<2048> &, CSerializedEntity *, int, INetworkProceduralDataHelper *, void *) [bVerbose = true]
 void SteamDatagramTransport::CDatagramQueue::Channel::Enqueue(SteamDatagramTransport::Datagram_t *)
 void SteamDatagramTransport::CDatagramQueue::Enqueue(int, SteamDatagramTransport::Datagram_t *)
+void SteamDatagramTransport::CSteamDatagramTransportClient::CheckCancelMigrationRequest()
 void SteamDatagramTransport::CSteamDatagramTransportClient::CheckNetworkRevisionChanged()
 void SteamDatagramTransport::CSteamDatagramTransportClient::ProcessPacket(const uint8 *, int, const sockaddr_in &)
 void SteamDatagramTransport::CSteamDatagramTransportClient::ReceivedPacketFromServer(SteamDatagramTransport::CSteamDatagramTransportClient::ServerData &, int, uint64)
+void SteamDatagramTransport::CSteamDatagramTransportClient::RecvRelayClusterScoringPenalty(SteamDatagramTransport::CSteamDatagramTransportClient::ServerData &, int)
 void SteamDatagramTransport::CSteamDatagramTransportClient::Think()
+void SteamDatagramTransport::CSteamDatagramTransportClient::ThinkPendingMigrationRequest(uint64)
 void SteamDatagramTransport::CSteamDatagramTransportClient::ThinkSelectServer(uint64)
 void SteamDatagramTransport::CSteamDatagramTransportClient::ThreadProc()
 void SteamDatagramTransport::CSteamDatagramTransportGameserver::ThreadProc()
@@ -5236,27 +5472,27 @@ void SteamDatagramTransport::SharedClusterData::ReceivedDataCenterPingTime(Steam
 void SteamDatagramTransport::SteamDatagramNetwork::DataCenter::SetCode(const char *)
 void SteamDatagramTransport::SteamDatagramNetwork::RouterCluster::SetCode(const char *)
 void SteamDatagram_InitClient(EUniverse, ISteamHTTP *, const char *)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
-void V_StripTrailingWhitespace(char *)
-void _V_AppendSlash(char *, int, char)
-void _V_strncpy(char *, const char *, int)
 void bf_read::SetOverflowFlag()
 void bf_read::StartReading(const void *, int, int, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteSBitLong(int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
+void std::__1::__sort<std::__1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__1::__less<unsigned char, unsigned char>&)
+void std::__1::__sort<std::__1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, std::__1::__less<unsigned short, unsigned short>&)
 void vcon_NetGraphData_t::ByteSwap(const vcon_NetGraphData_t &)
 volume
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vxw-H
-w8D;}
+w_IcD
 wa1 restrict
 warning
 was deleted
+wchar_t [A\A^A_]
 wchar_t(L;unsigned long
+wchar_t/D;}
 weak_dependency
 world_offset_angle
 world_offset_pos
@@ -5264,9 +5500,9 @@ worldgroupid
 wrong submessage type
 x8A;D$0}1Ic
 xHHc{
-xXu*H
+xXulH
 xXurH
-xpA9U
+xhA9^
 xqaBCFHTTFFFN
 you_hear_them
 your_public_ip
@@ -5284,6 +5520,7 @@ z1H
 |$8H9
 |$@H9
 |;@L9
+|Nfffff.
 |fff.
 }	[A\A^A_]
 }%D9{<r
@@ -5293,8 +5530,11 @@ z1H
 }bA9^$r\I
 }ffff.
 }nfffff.
+~ E9t$$|
+~!A9^$|
 ~!ff.
-~'E9w$|!A
+~$fffff.
+~&E9w$| A
 ~(void:H
 ~)Hc4
 ~)ff.
@@ -5307,5 +5547,8 @@ z1H
 ~@fffff.
 ~Afff.
 ~Efff.
+~HMcnTM
 ~Nff.
+~bA9^$|\Hc
 ~fIcM(D
+~uff.

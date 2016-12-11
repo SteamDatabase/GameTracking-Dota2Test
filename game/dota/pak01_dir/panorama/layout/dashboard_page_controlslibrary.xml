@@ -18,7 +18,7 @@
 							<Button class="ButtonBevel">
 								<Label text="ButtonBevel"/>
 							</Button>
-							<Button class="PopupButton">
+							<Button class="PopupButton" onactivate="DOTAShowCompManila2016PlayerCardsPage()">
 								<Label text="PopupButton"/>
 							</Button>
 							<Button class="PopupButton Blue" onactivate="DOTAShowSeasonPassWheelPage()">
@@ -27,6 +27,12 @@
 							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_underlord.xml)">
 								<Label text="Underlord Debut" />
 							</Button>
+							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_monkeyking.xml)">
+								<Label text="Monkey King Debut" />
+							</Button>							
+							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_arcana_mk.xml)">
+								<Label text="Monkey King Arcana" />
+							</Button>														
 							<Button class="PopupButton">
 								<Label class="Capital" text="Popup Caps" />
 							</Button>
@@ -48,6 +54,8 @@
 									<Label text="Breaks Things" />
 								</Button>
 							</Panel>
+							
+							<TextButton class="ButtonDark" text="Battle Pass Reminder" onactivate="UIShowCustomLayoutPopup( CustomPopupTest, file://{resources}/layout/popups/splash_ads/popup_ti6_ending_reminder.xml )" />
 
 						</Panel>
 					</Panel>
@@ -73,7 +81,7 @@
 							<TextButton text="TooltipTest 1" onmouseover="UIShowCustomLayoutTooltip( TestTooltip, file://{resources}/layout/tooltips/tooltip_custom_test.xml )" onmouseout="UIHideCustomLayoutTooltip( TestTooltip )" />
 							<TextButton text="TooltipTest 2" onmouseover="UIShowCustomLayoutParametersTooltip( TestTooltip2, file://{resources}/layout/tooltips/tooltip_custom_test.xml, test=blah )" onmouseout="UIHideCustomLayoutTooltip( TestTooltip2 )" />
 
-							<TextButton class="ButtonBevel" text="Custom Popup" onactivate="UIShowCustomLayoutPopup( CustomPopupTest, file://{resources}/layout/popups/popup_custom_test.xml )" />
+							<TextButton class="ButtonBevel" text="Custom Popup" onactivate="UIShowCustomLayoutPopup( CustomPopupTest, file://{resources}/layout/popups/popup_report_player.xml )" />
 							<TextButton class="ButtonBevel" text="Custom Popup (Params)" onactivate="UIShowCustomLayoutPopupParameters( CustomPopupTest, file://{resources}/layout/popups/popup_custom_test.xml, popupvalue=hello )" />
 
 						</Panel>
@@ -358,6 +366,15 @@
 						<DOTAEmoticon alias="blush" />
 						<DOTAEmoticon alias="headshot" animating="false" />
 					</Panel>
+					<Panel id="ZooCooldown" class="ZooGroup">
+						<Panel id="CursorCooldown">
+							<Panel id="CursorCooldownContainer">
+								<Panel id="CursorCooldownBackground"/>
+								<Panel id="CursorCooldownRadialSweep"/>
+								<Label id="CursorCooldownValue" text="2.3" class="MonoNumbersFont"/>
+							</Panel>
+						</Panel>
+					</Panel>					
 
 					<Panel id="ZooHTMLGroup" class="ZooGroup">
 						<Label text="HTML!" />
@@ -419,54 +436,6 @@
 					<Label text="#DOTA_DialogVariableTest5" html="true" />
 					<Label text="#DOTA_DialogVariableTest6" html="true" />
 				</Panel>
-
-				<FrontpageCarousel>
-					<Panel id="CarouselCells">
-						<CustomLayoutPanel id="GenericCustom" class="DOTATodayCell DOTATodayCellMargins" layout="file://{resources}/layout/frontpage_generic_custom.xml">
-							<Panel id="Header">
-								<Label class="DOTATodayCellHeader" text="HeaderText"/>
-							</Panel>
-							<Panel class="DOTATodayCellFooter">
-								<Label class="CellFooterText" text="TitleText"/>
-								<Label class="CellFooterDetails" text="DescriptionText"  />
-							</Panel>
-						</CustomLayoutPanel>
-					</Panel>
-				</FrontpageCarousel>
-
-				<FrontpageCarousel>
-					<Panel id="CarouselCells">
-						<Button id="GenericText" class="DOTATodayCell DOTATodayCellMargins" >
-							<!--Image src="" class="DOTATodayCellImage" scaling="stretch-to-cover-preserve-aspect" /-->
-							<Image src="s2r://panorama/images/tint_png.vtex" class="DOTATodayCellTopTint" />
-							<Label class="DOTATodayCellHeader" text="HeaderText"/>
-							<Panel class="DOTATodayCellFooter">
-								<Label class="CellFooterText" text="TitleText"/>
-								<Label class="CellFooterDetails" text="FooterText"/>
-							</Panel>
-						</Button>
-					</Panel>
-				</FrontpageCarousel>
-
-				<!--
-				<FrontpageCarousel>
-					<Panel id="CarouselCells">
-						<FrontpageVideoStream class="DOTATodayCell DOTATodayCellLarge" account-id="85501006" league-id="3671"/>
-					</Panel>
-				</FrontpageCarousel>				
-				-->
-
-				<!--FrontpageTopLiveButton class="DOTATodayCell DOTATodayCellMargins">
-				</FrontpageTopLiveButton-->
-
-				<!--FrontpageLastMatchButton class="DOTATodayCell DOTATodayCellMargins">
-				</FrontpageLastMatchButton-->
-
-				<!--FrontpageFriendCustomGameButton class="DOTATodayCell DOTATodayCellMargins">
-				</FrontpageFriendCustomGameButton-->
-
-				<!--FrontpageProPlayingButton class="DOTATodayCell DOTATodayCellMargins">
-				</FrontpageProPlayingButton-->
 
 				<!--
 				<Panel class="ZooGroup">
@@ -650,15 +619,45 @@
 			</Panel>
 
 			<Panel id="ZooDebug4" class="ZooTab">
-				<DOTASpectatorOptions id="SpectatorOptionsTest" />
-				<DOTASpectatorGameStats id="SpectatorGameStatsTest" />
+				<DOTAVRGameScreen id="VRGameScreenTest" />
 			</Panel>
 			
 			<Panel id="ZooDebug5" class="ZooTab">
-				<FrontpageVideoStreamTwitch id="VideoStreamTwitch" league-id="4479"
-											english-channel="dotamajor"
-											russian-channel="dotamajorru"
-											chinese-stream="http://www.huomaotv.cn/dota2/major/h5.html" />
+				<Panel id="TestPanel">
+					<Panel id="HeroInspect">
+						<Panel id="HeroInspectContents">
+							<Panel id="HeroInspectPrimaryAttributeIcon" />
+							<Label id="HeroInspectHype" text="#npc_dota_hero_abyssal_underlord_hype" />
+							<TextButton text="Toggle Scroll" class="ButtonBevel" onactivate="ToggleStyle( HeroInspectHype, HideScroll) ToggleStyle( TransformTest, Trigger)"/>
+							<Panel id="TransformTest" class="Trigger">
+								<Panel class="TestBox">
+									<Panel class="SmallBox"/>
+								</Panel>
+							</Panel>
+						</Panel>
+					</Panel>			
+				</Panel>			
+				<!--<Panel id="SpectatorLobbyTest">
+					<DOTASpectatorLobbyBrowser id="SpectatorLobbyBrowserTest" />
+					<DOTASpectatorLobbyCreate id="SpectatorLobbyCreateTest" />
+				</Panel>-->
+
+			</Panel>
+
+			<Panel id="ZooDebug6" class="ZooTab">
+				<!--<DOTAVRHeroLoadoutHeroDetails id="VRHeroDetailsTest" heroid="6" />-->
+			</Panel>
+
+			<Panel id="ZooDebugBattleCup" class="ZooTab">
+
+
+				<Button class="ButtonBevel">
+					<Label text="Winner Popup" onactivate="ControlsZooShowBattleCupWinner()"/>
+				</Button>
+
+				<DOTABattleCupVictoryIcon id="BattleCupVictoryIcon2" class="BattleCupVictoryIconLarge BattleCupVictoryVisible"/>
+
+
 			</Panel>
 		</Panel>
 

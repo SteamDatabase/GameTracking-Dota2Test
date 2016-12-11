@@ -63,12 +63,18 @@ DOTATooltipEconItem.Seasonal .BackgroundImage
 	width: 140px;
 	height: 130px;
 	wash-color: #00000055;
+	opacity: .7;
 }
 
 #AutographImage
 {
 	horizontal-align: right;
 	vertical-align: middle;
+}
+
+.AutographEvent14 #AutographImage
+{
+	wash-color: #ED5649;
 }
 
 #AutographDetails
@@ -174,6 +180,9 @@ DOTATooltipEconItem.Seasonal .BackgroundImage
 	background-position: center;
     visibility: collapse;
     wash-color: #e54e42;
+	
+	/* Fall 2016 */
+	wash-color: #8ac267;
 }
 
 DOTATooltipEconItem.Seasonal .SeasonalIcon
@@ -213,6 +222,11 @@ DOTATooltipEconItem.Seasonal .SeasonalIcon
 	height: 43px;
 	margin-right: 16px;
 	opacity-mask: url("s2r://panorama/images/masks/gem_overlay_mask_psd.vtex") 0.0;
+}
+
+#BrandPanel .GemDetails 
+{
+	vertical-align: center;
 }
 
 #EconBrandIcon
@@ -621,10 +635,20 @@ DOTATooltipEconItem.HasAdditionalText .ExtraTooltipText
 /* Styles related to item styles display */
 #Styles
 {
-    flow-children: right;
+    flow-children: down;
    	margin-top: 12px;
 	margin-right: 16px;
 	margin-left: 16px;
+}
+
+.AutoStyleDesc
+{
+	visibility: collapse;
+}
+
+.AutoStyle .AutoStyleDesc
+{
+	visibility: visible;
 }
 
 #StylesList

@@ -19,7 +19,7 @@
  00@ P
  00p``` 0p```
  0Pp p
- IcuHH
+ Ict$HH
  ReadToken overflow
  [A\A^A_]
  [A^]
@@ -56,7 +56,8 @@
 !multilist || ML
 !pFocus || pFocus->IsFullyVisible()
 !pParent || !strcmp(pParent->GetModuleName(), GetControlsModuleName())
-#C<D	
+!this->m_bLocked
+#C4D	
 #Frame_Untitled
 #MessageBox_Cancel
 #MessageBox_OK
@@ -86,13 +87,11 @@ $ffffff.
 %d_hidden
 %d_width
 %double %double %double %double
-%fff.
 %ffff.
 %float %float %float %float
 %int %int %int %int
 %short moved to front
 %short string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
-%short unable to grow buffer to fit string
 %short, bool showScrollBar, bool allowMouseWheel, bool overrideChildPanelWidth
 %short, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
 %short, int SubTabPosition
@@ -106,6 +105,7 @@ $ffffff.
 %short, string text, bool scrollbar
 %short, string title
 %short: '%short'
+%short: string format requested %double chars
 %short:hscroll
 %short:vscroll
 &Apply
@@ -128,12 +128,13 @@ $ffffff.
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (no name)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-(uBHcK
+(uEHcK
 )fff.
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 +C$A9E
 +K Hc
 ,@C9\
+,fff.
 ,ffffff.
 -language
 -pixel_offset_x
@@ -175,7 +176,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -235,7 +235,6 @@ $ffffff.
 4 - no pin
 49K }
 49S |}
-6~Lfffff.
 8[A\A]A^A_]
 8[A\A]A^A_]A
 8[A\A^A_]
@@ -244,12 +243,10 @@ $ffffff.
 9S |signed char
 9S |unsigned int
 :ffff.
-;C |*H
 ;CPostConnectCallback
-;W8}unsigned long long
+;W0}unsigned long long
 <$v9H
 <(9{ |jI
-<G})C
 <NULL>
 <null>
 >#uKL
@@ -270,9 +267,9 @@ $ffffff.
 @CThreadSpinRWLock::UnlockWrite()
 @CThreadSyncObject::~CThreadSyncObject()
 @DevMsg(char const*, ...)
-@ITextureDictionary
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
@@ -287,20 +284,18 @@ $ffffff.
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
 @_Plat_CreateWindow
+@_Plat_DebugPrint
 @_Plat_DestroyWindow
 @_Plat_ExitProcess
 @_Plat_FlashWindow
 @_Plat_FloatTime
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_GetWindowBounds
 @_Plat_GetWindowClientSize
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
+@_Plat_IsInDebugSessionRaw
 @_Plat_IsWindowMinimized
 @_Plat_IsWindowVisible
-@_Plat_LoadModuleRaw
 @_Plat_MinimizeWindow
 @_Plat_ScreenToWindowCoords
 @_Plat_SetWindowPos
@@ -314,9 +309,42 @@ $ffffff.
 @_ThreadInMainThread
 @_ThreadInterlockedExchange64
 @_ThreadSleep
+@_V_FixSlashes
+@_V_GetErrno
+@_V_SetErrno
+@_V_UTF16ToUTF32
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_UTF8ToUTF32
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_iswspace
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_snwprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_swscanf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcsnicmp
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
 @__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_SetExtension
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
+@__V_wcsncpy_bytes
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -326,12 +354,9 @@ $ffffff.
 @___cxa_guard_release
 @___cxa_pure_virtual
 @___dynamic_cast
-@___error
-@___exp10
 @___gxx_personality_v0
 @___maskrune
 @___sincos_stret
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
@@ -352,7 +377,6 @@ $ffffff.
 @_memmove
 @_memset
 @_memset_pattern16
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -361,7 +385,6 @@ $ffffff.
 @_pthread_mutexattr_settype
 @_qsort
 @_raise
-@_setlocale
 @_sinf
 @_snprintf
 @_sscanf
@@ -369,28 +392,19 @@ $ffffff.
 @_strcmp
 @_strcpy
 @_strlen
-@_strncat
 @_strncpy
 @_strstr
-@_strtod
-@_strtol
-@_swprintf
 @_swscanf
 @_tan
 @_tanf
-@_vsnprintf
-@_vswprintf
 @_wcschr
 @_wcscmp
 @_wcscpy
 @_wcslen
 @_wcsncat
 @_wcsncpy
-@_wcstof
-@_wcstol
 @`@ @ 
 @dyld_stub_binder
-@hkS 
 @loader_path
 @rpath/libtier0.dylib
 @rpath/libvguirendersurface.dylib
@@ -405,7 +419,7 @@ A+D$$Hc
 A+T$TL
 A+t$PI
 A+wH~
-A9Epw4A
+A9D$pw7A
 A9NT|)~
 A9T$ }
 A9V |fA
@@ -414,15 +428,17 @@ A9V }	A
 A9\$$
 A9^$|
 A;D$ ~
-A;G ~
+A;N<u
 A;\$ u I
 A;\$ u&
 A;\$@|
 A;]Xu
 A;]long long|
+A;^ u
 A;^H|
 A;^xu6I
 A;_ u
+A;_(u
 A;_H|
 A;_huGI
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
@@ -574,9 +590,6 @@ CTier2AppSystem<IVGuiRenderSurface, 0>
 CTier3AppSystem<IVGuiRenderSurface, 0>
 CTreeViewListControl
 CUtlBuffer::CUtlBuffer(const void *, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlHandleTable<vgui::BuildGroup, 20>::HandleType_t::HandleType_t(unsigned int, unsigned int) [T = vgui::BuildGroup, HandleBits = 20]
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
@@ -674,6 +687,8 @@ CursorExitedChild
 CursorExitedMenuItem
 CursorMoved
 CvarToggleCheckButton
+D$0H9
+D$PHc
 D% A9
 D%$A9
 D0TE1
@@ -683,7 +698,6 @@ D9{$|
 D;s0u
 D;sPu H
 D;sp|
-D;{ u
 D;{(u
 D;{Pu
 D;{`u
@@ -818,6 +832,7 @@ FrameTitleButton.DisabledBgColor
 FrameTitleButton.DisabledFgColor
 FrameTitleButton.FgColor
 G8H	p(]
+GA#D$
 GAMECONSOLE
 GP uNA
 GameResourceServiceClientV001
@@ -908,6 +923,7 @@ IMECandidatesMenu
 IProceduralLayerRenderer
 IQuickTime001
 ISchemeSurface
+ITextureDictionary
 IVGuiPaintSurface
 IVGuiRenderSurface
 Ic\$(H
@@ -952,9 +968,9 @@ KeyTyped
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
+KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
 KeyValues::FindKey called on NULL pointer!
@@ -964,6 +980,7 @@ KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 KeyValues::SaveToFile: couldn'unsigned short open file "%short" in path "%short".
 KhL;,
 KillFocus
+L$HHc
 L90tiH
 L941tE
 L;k void
@@ -982,8 +999,6 @@ LabelChanged
 Language
 LanguageMenu
 LayoutFileChanged
-Lc=zu
-Lfff.
 LightingBuilderMgr001
 ListImage
 ListPanel
@@ -1008,6 +1023,7 @@ M;wchar_t void
 M;} void
 MATCHFRAMEWORK_001
 MATSURFACE
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPD94
 MapListService_001
@@ -1109,6 +1125,7 @@ PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
 Paste
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PinCorner
@@ -1117,7 +1134,7 @@ PinnedCornerOffsetY
 PopMakeCurrent
 PostProcessingSystem_001
 Pp p 0
-PpL;}
+PpL;long double
 PpppP0 
 PressButton
 PrevChild
@@ -1132,6 +1149,7 @@ QpL;unsigned long
 Queued fxn call: %short
 Queued fxn call: %short '%short'
 QueuedLoaderVersion001
+RBRAp
 RBRBRAp
 RBRBRBRBRBRBRBRAp
 RBRBRBRBRBRBRBRBRBRBRAp
@@ -1147,7 +1165,7 @@ RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
 ReloadLocalization
 Rename it and try again.
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayout_t CTSInputLayoutCreator::GetLayout()
@@ -1162,8 +1180,7 @@ ResolveVagueResourceFileName:: changed %short to %short
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 Resource\warning.wav
 Revert to saved- reloads the last saved file.
 RevertToSaved
@@ -1178,7 +1195,6 @@ RichText: textfile parameter '%short' not found.
 RichTextInterior
 Rotted code never implemented this
 RoundedCorners
-SATAp
 SSE and SSE2 are required.
 Save button - saves all settings to file. 
 SaveButton
@@ -1249,7 +1265,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -1260,14 +1276,13 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StartDrawing
 StatsService_001
 StatusLabel
 StoreUndo
 SubTabPosition
-TATCp
-TBRBSATBp
+TATBp
 TBSATAp
 TBTAp
 TCRAp
@@ -1308,7 +1323,7 @@ ToggleButton
 ToggleButton.SelectedTextColor
 ToggleColumnVisible
 Too many popups! Rendering will be bad!
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -1383,7 +1398,7 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-V_AppendSlash: ran out of space on %s.
+V_stristr_fast(char const*, char const*)
 Valve Client
 Variables
 VarsButton
@@ -1442,20 +1457,18 @@ _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
 _Plat_CreateWindow
+_Plat_DebugPrint
 _Plat_DestroyWindow
 _Plat_ExitProcess
 _Plat_FlashWindow
 _Plat_FloatTime
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_GetWindowBounds
 _Plat_GetWindowClientSize
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
+_Plat_IsInDebugSessionRaw
 _Plat_IsWindowMinimized
 _Plat_IsWindowVisible
-_Plat_LoadModuleRaw
 _Plat_MinimizeWindow
 _Plat_ScreenToWindowCoords
 _Plat_SetWindowPos
@@ -1469,12 +1482,45 @@ _ThreadGetCurrentId
 _ThreadInMainThread
 _ThreadInterlockedExchange64
 _ThreadSleep
+_V_FixSlashes
+_V_GetErrno
+_V_SetErrno
+_V_UTF16ToUTF32
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_UTF8ToUTF32
+_V_atof
+_V_atoi
+_V_cosf
+_V_iswspace
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_snwprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_swscanf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcsnicmp
+_V_wcstod
+_V_wcstoi64
 _Warning
 __DATA
 __DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_SetExtension
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
+__V_wcsncpy_bytes
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -1484,12 +1530,9 @@ ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
 ___dynamic_cast
-___error
-___exp10
 ___gxx_personality_v0
 ___maskrune
 ___sincos_stret
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___tolower
@@ -1501,7 +1544,6 @@ __cstring
 __data
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1528,7 +1570,6 @@ _memmove
 _memset
 _memset_pattern16
 _minmode
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -1537,7 +1578,6 @@ _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _qsort
 _raise
-_setlocale
 _sinf
 _snprintf
 _sscanf
@@ -1545,25 +1585,17 @@ _strchr
 _strcmp
 _strcpy
 _strlen
-_strncat
 _strncpy
 _strnlen
 _strstr
-_strtod
-_strtol
-_swprintf
 _swscanf
 _tanf
-_vsnprintf
-_vswprintf
 _wcschr
 _wcscmp
 _wcscpy
 _wcslen
 _wcsncat
 _wcsncpy
-_wcstof
-_wcstol
 ` ff.
 ` fff.
 ` ffff.
@@ -1633,7 +1665,6 @@ cellcolor
 center
 centerwrap
 changed
-char *_V_strncat(char *, const char *, int, int)
 child
 cl_hud_minmode
 className
@@ -1650,7 +1681,6 @@ const char *CKeyBindingsMgr::GetKeyBindingsFile(vgui::KeyBindingContextHandle_t)
 const char *CKeyBindingsMgr::GetKeyBindingsFilePathID(vgui::KeyBindingContextHandle_t)
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 const wchar_t *CKeyValues_Data::Internal_GetWString(const wchar_t *, wchar_t *, size_t)
 const wchar_t *vgui::RichText::ResolveLocalizedTextAndVariables(const char *, wchar_t *, size_t)
@@ -1672,7 +1702,6 @@ defaultSelectionBG2Color_override
 delta
 depressedBgColor_override
 depressedFgColor_override
-destBufferSize >= 0
 dev/vgui/materials/renderui_stencilmask.vmat
 dev/vgui/materials/white.vtex
 direction
@@ -1748,15 +1777,10 @@ imageAlignment
 imageSelected
 imagecolor
 index
-info.m_pReplacementString == 0
 infocus_bgcolor_override
 inputData
 inputsystem
 int != m_ColumnsHistory.Count()
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int < ( 1 << HandleBits )
 int CKeyValues_Data::Internal_GetInt()
 int CUtlQueue<int, CUtlMemory<int, int> >::Count() const [T = int, M = CUtlMemory<int, int>]
@@ -1765,16 +1789,9 @@ int CUtlSortVector<vgui::LayoutPanel_t, vgui::SortFuncPanelPtr, CUtlVector<vgui:
 int CUtlSortVector<vgui::LayoutPanel_t, vgui::SortFuncPanelPtr, CUtlVector<vgui::LayoutPanel_t, CUtlMemory<vgui::LayoutPanel_t, int> > >::Insert(const T &) [T = vgui::LayoutPanel_t, LessFunc = vgui::SortFuncPanelPtr, BaseVector = CUtlVector<vgui::LayoutPanel_t, CUtlMemory<vgui::LayoutPanel_t, int> >]
 int CUtlString::FormatV(const char *, __va_list_tag *)
 int ClipPolygon(const ScissorState_t &, int, const vgui::Vertex_t *, int, int, vgui::Vertex_t ***)
-int V_snprintf(char *, int, const char *, ...)
-int V_snwprintf(wchar_t *, int, const wchar_t *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int vgui::Menu::ComputeFullMenuHeightWithInsets()
-int64 V_atoi64(const char *)
 int_array
-invalid input pointer
 itemID
 itemIndex
 itemNum >= 0
@@ -1864,9 +1881,6 @@ materialsystem2
 matrix
 matrix_array
 matsystemtexture_%s_%lld.vtex
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxLenInBytes >= sizeof( *pDest )
 maxWidth >= width
 maxchars
 minWidth <= width
@@ -1926,7 +1940,6 @@ pPool->m_SpaceUsed < 0xFFFF
 pPt)H
 pSchemaSystem != NULL
 pScheme
-pSearch
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
 p[A\A^A_]
@@ -1963,6 +1976,7 @@ qangle
 qangle_array
 quaternion
 quaternion_array
+rQffffff.
 r_screen_size_expansion
 radr://5614542
 recode >= 0 && recode < 32
@@ -2031,7 +2045,6 @@ style
 subFocus
 subtabposition
 sx[A^]
-t$H9[8u
 t$XE+t$PE
 t$`L9
 t.I+]hH
@@ -2043,6 +2056,7 @@ t6ffffff.
 tCfffff.
 tEIcD$
 tMff.
+tVA9_
 tab position
 tabPosition
 tabposition
@@ -2081,9 +2095,9 @@ tqHc1
 typeinfo for std::bad_alloc
 u	9D2
 u	[A\A^A_]
+u ff.
 u!D;u
 u!L;}
-u!fff.
 u&A;FHu
 u&L;unsigned long
 u1D9t
@@ -2091,6 +2105,7 @@ u2ffff.
 u6E;~ u
 uCD;}
 uGetResourceManifest
+uOD;long double
 u`D9t
 udLc}
 uint64
@@ -2299,6 +2314,7 @@ visible
 vmatH
 void *CKeyValues_Data::Internal_GetPtr()
 void *CUtlMemoryPoolBase::Alloc()
+void CDynamicIndexData<unsigned short>::Lock(int) [T = unsigned short]
 void CDynamicVertexData<VGuiVertex_t>::Lock(int) [T = VGuiVertex_t]
 void CIndexDataBase<unsigned short>::Index(T) [T = unsigned short]
 void CIndexDataBase<unsigned short>::Index2(uint16, uint16) [T = unsigned short]
@@ -2490,9 +2506,6 @@ void ScreenClip(const ScissorState_t &, ScreenClipState_t &, Clipper &) [Clipper
 void ScreenClip(const ScissorState_t &, ScreenClipState_t &, Clipper &) [Clipper = CClipRight]
 void ScreenClip(const ScissorState_t &, ScreenClipState_t &, Clipper &) [Clipper = CClipTop]
 void SetScissorRect(ScissorState_t &, int, int, int, int)
-void _V_AppendSlash(char *, int, char)
-void _V_strncpy(char *, const char *, int)
-void _V_wcsncpy(wchar_t *, const wchar_t *, int)
 void vgui::BuildGroup::ApplySnap(vgui::Panel *)
 void vgui::BuildGroup::PanelAdded(vgui::Panel *)
 void vgui::BuildGroup::PanelRemoved(vgui::Panel *)
@@ -2531,8 +2544,7 @@ xhA9^
 ~ E9t$$|
 ~!A9^$|
 ~%fff.
-~(L;unsigned long
-~-95W
+~-95G~
 ~:ff.
 ~Ifffff.
 ~bA9^$|\Hc

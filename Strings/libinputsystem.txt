@@ -5,7 +5,7 @@
 !!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!H`VB`
+!@`cB`
 !bCreate
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -17,7 +17,7 @@
 #include
 #include is NULL 
 %int %int %int %int
-%short unable to grow buffer to fit string
+%short: string format requested %double chars
 'is NOT active'
 'is active'
 (*%short*), 
@@ -25,7 +25,7 @@
 ([A\A]A^A_]
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
-(uBHcK
+(uEHcK
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 +C$A9E
@@ -60,7 +60,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -75,7 +74,6 @@
 29K }
 49K }
 49S |}
-6~Lfffff.
 8[A\A]A^A_]
 8[A^A_]
 9S |signed char
@@ -99,18 +97,16 @@
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetDefaultMonitorIndex
 @_Plat_GetDesktopResolution
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_GetWindowClientSize
 @_Plat_GetWindowMonitorIndex
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_LoadSDL
 @_Plat_MSTime
 @_Plat_MilliSecTickDiff
@@ -120,28 +116,52 @@
 @_Plat_ScreenToWindowCoords
 @_Plat_SetupFPUControlWord
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
+@_Plat_UnloadModule
 @_Plat_WindowToOsSpecificHandle
 @_Plat_WindowToScreenCoords
 @_RegisterStringToken
 @_ThreadGetCurrentId
+@_V_FixSlashes
+@_V_GetErrno
+@_V_SetErrno
+@_V_StripFilename
+@_V_UTF16ToUTF8
+@_V_UTF8ToUTF32
+@_V_atof
+@_V_atoi
+@_V_powf
+@_V_qsort_s
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_tier0_memset
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_FileBase
+@__V_SetExtension
+@__V_StripExtension
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
 @___cxa_call_unexpected
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
 @___cxa_pure_virtual
-@___error
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
 @__float128 short::*
-@_atof
-@_atoi
-@_dlclose
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
 @_memchr
@@ -149,20 +169,12 @@
 @_memmove
 @_memset
 @_memset_pattern16
-@_pow
-@_printf
 @_pthread_mutex_destroy
 @_raise
-@_sscanf
 @_strchr
 @_strcmp
 @_strlen
-@_strncat
-@_strtod
-@_strtol
-@_vsnprintf
 @_wcslen
-@_wcstol
 @dyld_stub_binder
 @loader_path
 @rpath/libinputsystem.dylib
@@ -180,12 +192,12 @@ A9V |fA
 A9V }	
 A9V }	A
 A;D$ ~
-A;G ~
 A;\$@|
 A;]long long|
 A;^@|
 A;^Pu
 A;_Hu
+ACTIVE
 ACUTE_ACCENT
 AC_BACK
 AC_BOOKMARKS
@@ -216,7 +228,6 @@ AWAVAUATSPE
 AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
-AWAVAUATSPM
 AWAVSH
 AWAVSP
 AWAVSPA
@@ -235,6 +246,7 @@ A_WITH_TILDE
 Analog axis range before signed char button press is registered.
 AnimationSystemUtils_001
 AnimationSystem_001
+App activation changed: %short
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -300,9 +312,6 @@ CURRENCYUNIT
 CURRENCY_SIGN
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVProfNode *CVProfNode::GetVParent()
@@ -324,6 +333,7 @@ Current coordinate bias %short: %__float128,%__float128 scale %__float128,%__flo
 Cursor size scaling factor.
 D	0Ic
 D!8Mc
+D$ZHi
 D$ZLi
 D9sXu
 DECIMALSEPARATOR
@@ -365,6 +375,7 @@ FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String:
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 G8H	p(]
+GA#D$
 GAMECONSOLE
 GREATER
 GameResourceServiceClientV001
@@ -426,6 +437,7 @@ IInputStackSystem
 IInputSystem
 IKeyValuesErrorSpew
 IMEManager001
+INACTIVE
 INVERTED_EXCLAMATION_MARK
 INVERTED_QUESTION_MARK
 IQuickTime001
@@ -541,7 +553,7 @@ KV Conditional Evaluation Error
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *LoadCursorResource(const char *, const char *)
 KeyValues Error: %short in file %short
 KeyValues::FindKey called on NULL pointer!
@@ -556,8 +568,7 @@ LINUX
 LOWVIOLENCE
 L_SHOULDER
 L_TRIGGER
-Lc=:{
-Lfff.
+Lc5#]
 LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
@@ -568,12 +579,14 @@ MATCHFRAMEWORK_001
 MEDIASELECT
 MICRO_SIGN
 MIDDLE_DOT
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MOUSE1
 MOUSE2
 MOUSE3
 MOUSE4
 MOUSE5
+MOUSEWHEEL delta %double (raw %double)
 MOUSE_WHEEL
 MOUSE_X
 MOUSE_Y
@@ -624,6 +637,7 @@ PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostProcessingSystem_001
@@ -657,7 +671,7 @@ RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -666,8 +680,7 @@ RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 S1_DOWN
 S1_LEFT
 S1_RIGHT
@@ -676,7 +689,6 @@ S2_DOWN
 S2_LEFT
 S2_RIGHT
 S2_UP
-SATAp
 SCROLLLOCK
 SCROLLLOCKTOGGLE
 SDL is %short relative mouse
@@ -689,10 +701,12 @@ SDL: Window %double exposed
 SDL: Window %double gained keyboard focus
 SDL: Window %double got unknown event %double
 SDL: Window %double hidden
+SDL: Window %double hit test
 SDL: Window %double lost keyboard focus
 SDL: Window %double maximized
 SDL: Window %double minimized
 SDL: Window %double moved to %double,%double
+SDL: Window %double offered focus
 SDL: Window %double resized to %dx%double
 SDL: Window %double restored
 SDL: Window %double shown
@@ -768,7 +782,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -779,12 +793,11 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 Stall
 StatsService_001
 T &CUtlStringMap<CInputSystem::UserCursor_t, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CInputSystem::UserCursor_t, SymbolTableType_t = CUtlSymbolTable]
 TBRBRBRAp
-TBRBSATAp
 TBTAp
 TEXTINPUT '%short'
 THORN
@@ -793,7 +806,7 @@ TILDE
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -859,6 +872,7 @@ WIN32
 WINDOWS
 WINXP
 Warning:  %short = '%short' is infinite, clamping value.
+Window activation changed: %short
 Wingman warrior centering hack.
 Wingman warrior hack related to turn axes.
 WorkshopSetup001
@@ -897,18 +911,16 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetDefaultMonitorIndex
 _Plat_GetDesktopResolution
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_GetWindowClientSize
 _Plat_GetWindowMonitorIndex
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_LoadSDL
 _Plat_MSTime
 _Plat_MilliSecTickDiff
@@ -918,25 +930,52 @@ _Plat_RequireSDL
 _Plat_ScreenToWindowCoords
 _Plat_SetupFPUControlWord
 _Plat_ShouldCollectMiniDumpsForFatalErrors
+_Plat_UnloadModule
 _Plat_WindowToOsSpecificHandle
 _Plat_WindowToScreenCoords
 _RegisterStringToken
 _ThreadGetCurrentId
+_V_FixSlashes
+_V_GetErrno
+_V_SetErrno
+_V_StripFilename
+_V_UTF16ToUTF8
+_V_UTF8ToUTF32
+_V_atof
+_V_atoi
+_V_powf
+_V_qsort_s
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_tier0_memset
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstoi64
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __UNKNOWN__
 __Unwind_Resume
+__V_FileBase
+__V_SetExtension
+__V_StripExtension
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
 ___cxa_call_unexpected
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
 ___cxa_pure_virtual
-___error
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
 ___tolower
@@ -948,7 +987,6 @@ __data
 __gcc_except_tab__TEXT
 __got
 __int128 < m_Vector.Count()
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -956,9 +994,6 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
-_atoi
-_dlclose
 _g_VProfCurrentProfile
 _g_pMemAlloc
 _memchr
@@ -966,22 +1001,14 @@ _memcpy
 _memmove
 _memset
 _memset_pattern16
-_printf
 _pthread_mutex_destroy
 _raise
-_sscanf
 _strchr
 _strcmp
 _strlen
-_strncat
 _strnlen
-_strtod
-_strtol
-_vsnprintf
 _wcslen
-_wcstol
-`Xu*H
-`Xu~H
+`XujH
 `[A\A^A_]
 `unsigned char[A\A^A_]
 allowed
@@ -996,13 +1023,11 @@ bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
 bool KeyValues::LoadFromFile(IBaseFileSystem *, const char *, const char *, GetSymbolProc_t)
 buffer
-char *_V_strncat(char *, const char *, int, int)
 cl_auto_cursor_scale
 cl_cursor_scale
 const void *CUtlBuffer::PeekGet(int, int)
 count >= 0
 dat->m_pPeer == NULL
-destBufferSize >= 0
 disabled
 disabling
 disallowed
@@ -1016,17 +1041,11 @@ ffffff.
 filetoinclude
 hCursor != INPUT_CURSOR_HANDLE_PASS_THROUGH
 hidden
-info.m_pReplacementString == 0
 initializing SDL joystick %double %short
 inputsystem
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int CKeyValues_Data::Internal_GetInt()
 int CUtlString::FormatV(const char *, __va_list_tag *)
-int V_snprintf(char *, int, const char *, ...)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
-invalid input pointer
 joy_axisbutton_threshold
 joy_wingmanwarrior_centerhack
 joy_wingmanwarrior_turnhack
@@ -1053,9 +1072,6 @@ m_nType == IE_ButtonPressed
 m_pParent
 m_pParent == this
 m_pParent->m_fnCompletionCallback
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxlen >= 1
 mffff.
 mouse %double %short at %double %double on window %double
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
@@ -1098,7 +1114,6 @@ static void CGlobalConfigValueRegistry::AddToList(const char *, ConfigType_t, Co
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 std::terminate()
 strnlen
-t$H9[8u
 tGH9Oxu8
 tMff.
 ttLcO8M
@@ -1162,8 +1177,6 @@ void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CK
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void _V_FileBase(const char *, char *, int)
-void _V_strncpy(char *, const char *, int)
 void@wchar_t'H
 vstdlib
 vtable for __cxxabiv1::__class_type_info

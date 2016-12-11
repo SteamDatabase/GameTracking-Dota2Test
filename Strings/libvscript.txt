@@ -11,6 +11,7 @@
 		m_floatVal	= 1.5,
 		m_ints = 
 		m_stringVal	= "Hi.",
+	  p@
 	&	J	unsigned char	
 	D$hfffff.
 	[builtin#%double]:
@@ -24,12 +25,10 @@
 	no module '%short' in file '%short'
 	number
 	u;ff.
-	wchar_t>ffffff.
      
        
            
-                CDllDemandLoader
-        H
+                
   @0 P0
   @`pp`
   P@@ @``@ PP`@p
@@ -43,8 +42,6 @@
  - consider decreasing NUGGET_HANDLE_BITS; nugget table is almost empty, but serial number range is more than 33%% exhausted
  - consider increasing NUGGET_HANDLE_BITS; nugget table is more than 33%% full (if it fills it will crash!)
  0 0p
- 0@ 00 00 0@
- 0@PP@PP`
  ;D$8
  ;D$8D
  ;D$hD
@@ -53,7 +50,6 @@
  @0  @  0 @ 
  @@0@@  
  @@@@
- PP 0
  PP```p000
  ReadToken overflow
  [%.3f server clamped to %.3f]
@@ -61,7 +57,6 @@
  [A^]
  `p ``
  at %p
- bytes
  ffff.
  fffff.
  in function '%short'
@@ -69,7 +64,6 @@
  in main chunk
  max. %float
  min. %float
- rLfff.
  u	fA
  u%H9
  u3ffff.
@@ -78,7 +72,6 @@
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"Unsupported schema enum size"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 !)+!((('/1
 !IsExternallyAllocated() && !mem.IsExternallyAllocated()
 !IsSingleFieldRestricted()
@@ -113,11 +106,9 @@
 "%short" 
 "%short" = "%short"
 "%short":%double
-"></img>
 "HcSHH
 "fff.
 "ffff.
-"fffff.
 #base
 #base is NULL 
 #empty#
@@ -128,10 +119,10 @@
 #int#
 $ X wchar_t @"int"
 $;P8sMH
-%%.%if%short
 %-120s
 %-120s - %short
 %.14g
+%016llx
 %12.6f
 %__float128 %__float128
 %__float128 %__float128 %__float128
@@ -148,7 +139,6 @@ $;P8sMH
 %s._ANON_%double
 %s.dylib
 %short %p [%float %float %float]
-%short %short %short %short
 %short <null>
 %short at line %double
 %short called with %double arguments - expected %double
@@ -157,24 +147,16 @@ $;P8sMH
 %short has no instance glue - are you doing objectName.%short instead of objectName:%short?
 %short near '%short'
 %short parameter %double: expected %short but got %s.
-%short unable to grow buffer to fit string
-%short/%short
-%short/bin/%short
 %short: %p
 %short: %short
+%short: string format requested %double chars
 %short:%double
 %short:%double: %short
 %short[long long]
 %short|%double
-%uxE9
-&#039;
 &2&Q&p&
 &YA1H
-&amp;
-&ffffff.
-&nbsp;
 &qt != &q
-&quot;
 &vOutput != &d1
 &vOutput != &d2
 &vOutput != &p1
@@ -245,7 +227,7 @@ $;P8sMH
 (null)
 (pWordEnd - pWordStart) == 2
 (s_pThisModuleBindingPointer != NULL)
-(uBHcK
+(uEHcK
 (uintp)pReturn < k_LuaJIT_MemoryAddressLimit
 (uwE;
 (~'~'
@@ -257,6 +239,7 @@ $;P8sMH
 )D$pI
 )W H)
 )fff.
+)fffff.
 )ffffff.
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
@@ -268,25 +251,18 @@ $;P8sMH
 ,$[A\A]A^A_
 ,$fff.
 ,$x4I
-,%03d
-,/$`,
 ,[A^]
 ,fff.
 ,ffff.
--&B'-
 -+ #0
--allowdebug
 -sse2
 -sse3
 -sse4
--valveinternal
--xlsp
 ...	[A^]
 ./?.lua;/usr/local/share/luajit-2.0.4/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua
 ./?.so;/usr/local/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so
 .ETv*H
 .Elv*H
-.dylib
 .ffffff.
 /* GNU ld script
 /A;D$
@@ -327,11 +303,9 @@ $;P8sMH
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/exprevaluator.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stringpool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -342,14 +316,15 @@ $;P8sMH
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vscript/languages/lua/vlua/vluadbgp.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vscript/vscript.cpp
 /ffff.
-/unsigned short	L9
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 0 00 0  @0@ 
 0 @@0@
+000000
 0000P  
 0123456789ABCDEF
+0123456789ABCDEF21CUtlCStringConversion
 0123456789abcdef
 0@00@@Pp@0
 0[A\A^A_]
@@ -373,8 +348,6 @@ $;P8sMH
 5fff.
 6A9F8w
 6[A\A^A_]
-6~Lfffff.
-7P @0
 7fff.
 7fffff.
 8VBKVuRK
@@ -386,9 +359,7 @@ $;P8sMH
 9S }	
 9ffffff.
 9s |6
-:fff.
 :ffffff.
-:tFL9
 ;E wchar_t;
 ;E wchar_t[
 ;K ~+
@@ -408,33 +379,23 @@ $;P8sMH
 <(9{ |jI
 <,H;\$ wchar_t
 </%short>
-</h1>
-</pre>
-</script>
-</ul>
 <09{ |W
 <0A9~ 
 <:I;V
 << NULL >>
 <?xml version="1.0" encoding="UTF-8"?>
 <A9~ 
-<G})C
 <NULL>
-<br>A
 <eof>
 <ffff.
-<ffffff.
 <goto %short> jumps into the scope of local '%short'
 <identifier>
-<img src="
 <integer>
 <name>
 <name> or '...' expected
 <null>
 <number>
-<pre>
 <root>
-<signed char href=I
 <string>
 <unknown>
 =(debug command)
@@ -445,10 +406,8 @@ $;P8sMH
 ><![CDATA[%short]]>
 >[A\A^A_]
 >fffff.
-?0,/a,
 ?456789:;<=
 ??EE5433))
-?[A^]
 ?ffff.
 ?ubLk
 @ `00
@@ -472,12 +431,13 @@ $;P8sMH
 @CVirtualMachineCallStackTranslationEncoder::~CVirtualMachineCallStackTranslationEncoder()
 @ConMsg(char const*, ...)
 @DevMsg(char const*, ...)
-@DevWarning(char const*, ...)
 @IStack_VM_Segment_Marker::IStack_VM_Segment_Marker(CCallStackMarkerBase const&)
 @IStack_VM_Segment_Marker::~IStack_VM_Segment_Marker()
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @PPP@  0@  @
+@V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
@@ -491,20 +451,18 @@ $;P8sMH
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_MemAlloc_AllocFunc
+@_MemAlloc_FreeFunc
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModule
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MSTime
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_VirtualAlloc
 @_Plat_VirtualFree
-@_Plat_getwd
 @_RandomFloat
 @_RandomInt
 @_RandomSeed
@@ -512,33 +470,80 @@ $;P8sMH
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
 @_ThreadSleep
+@_V_FixSlashes
+@_V_GetErrno
+@_V_IsAbsolutePath
+@_V_RemoveDotSlashes
+@_V_SetErrno
+@_V_StrTrim
+@_V_StripTrailingSlash
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_UTF8CharsToUTF16
+@_V_UTF8ToUTF32
+@_V_UnqualifiedFileName
+@_V_acos
+@_V_acosf
+@_V_asinf
+@_V_atan2f
+@_V_atanf
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_expf
+@_V_fmodf
+@_V_localeconv
+@_V_logf
+@_V_powf
+@_V_pretifynum
+@_V_qsort_s
+@_V_rand
+@_V_sinf
+@_V_snprintf
+@_V_snwprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_strupper_fast
+@_V_swscanf
+@_V_tan
+@_V_tanf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_DeleteException
 @__Unwind_GetCFA
 @__Unwind_RaiseException
 @__Unwind_Resume
 @__Unwind_SetGR
 @__Unwind_SetIP
+@__V_ComposeFileName
+@__V_ExtractFileExtension
+@__V_ExtractFilePath
+@__V_FileBase
+@__V_MakeAbsolutePath
+@__V_StringAfterPrefix
+@__V_StripExtension
+@__V_StripLastDir
+@__V_strncat
+@__V_strncpy
+@__V_strnistr_fast
 @___bzero
-@___cxa_allocate_exception
 @___cxa_atexit
 @___cxa_begin_catch
 @___cxa_call_unexpected
-@___cxa_end_catch
-@___cxa_free_exception
 @___cxa_guard_abort
 @___cxa_guard_acquire
 @___cxa_guard_release
 @___cxa_pure_virtual
-@___cxa_rethrow
-@___cxa_throw
 @___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
-@___sincos_stret
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___stderrp
@@ -547,28 +552,17 @@ $;P8sMH
 @___tolower
 @__float128 short::*
 @_accept
-@_acos
-@_acosf
-@_asin
-@_asinf
-@_atan
-@_atan2
-@_atan2f
-@_atof
 @_atoi
 @_bind
-@_chdir
 @_clearerr
 @_close
 @_connect
-@_cos
 @_cosh
 @_dlclose
 @_dlerror
 @_dlopen
 @_dlsym
 @_exit
-@_exp
 @_fclose
 @_feof
 @_ferror
@@ -576,7 +570,6 @@ $;P8sMH
 @_fgets
 @_floor
 @_floorf
-@_fmodf
 @_fopen
 @_fprintf
 @_fputc
@@ -589,23 +582,14 @@ $;P8sMH
 @_fwrite
 @_g_Tier1_CRC32Table
 @_g_Tier1_CRC64Table
-@_g_Tier1_FullHTMLEntities
 @_g_pMemAlloc
 @_getc
-@_getcwd
 @_getenv
 @_gethostbyname
-@_iconv
-@_iconv_close
-@_iconv_open
 @_inet_ntoa
 @_ioctl
 @_ldexp
 @_listen
-@_localeconv
-@_log
-@_malloc
-@_mbstowcs
 @_memchr
 @_memcmp
 @_memcpy
@@ -618,9 +602,6 @@ $;P8sMH
 @_pclose
 @_poll
 @_popen
-@_pow
-@_powf
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -628,91 +609,43 @@ $;P8sMH
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
 @_putchar
-@_qsort_r
 @_raise
-@_rand
 @_recv
 @_send
 @_setsockopt
 @_setvbuf
 @_shutdown
-@_sin
 @_sinh
 @_socket
 @_sprintf
-@_sscanf
 @_strchr
 @_strcmp
 @_strcpy
 @_strdup
 @_strerror
 @_strlen
-@_strncat
 @_strncmp
 @_strncpy
 @_strpbrk
 @_strrchr
 @_strstr
-@_strtod
-@_strtol
-@_strtoll
 @_strtoul
-@_strtoull
-@_swprintf
-@_swscanf
-@_tan
-@_tanf
 @_tanh
 @_tmpfile
 @_ungetc
-@_vsnprintf
-@_vswprintf
-@_wcschr
-@_wcscpy
 @_wcslen
-@_wcsncat
-@_wcsncpy
-@_wcstof
-@_wcstol
-@_wcstombs
-@`I;@hsx1
 @dyld_stub_binder
 @loader_path
-@r4Mc
+@r4Ic
 @rpath/libtier0.dylib
 @rpath/libvscript.dylib
 @rpath/libvstdlib.dylib
-@std::__1::__basic_string_common<true>::__throw_length_error() const
-@std::__1::__get_classname(char const*, bool)
-@std::__1::__get_collation_name(char const*)
-@std::__1::__match_any_but_newline<char>::__exec(std::__1::__state<char>&) const
-@std::__1::__shared_weak_count::__add_shared()
-@std::__1::__shared_weak_count::__release_shared()
-@std::__1::__shared_weak_count::~__shared_weak_count()
-@std::__1::__vector_base_common<true>::__throw_length_error() const
-@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(unsigned long, char)
 @std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
-@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
-@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const
-@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(char)
-@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
 @std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)
-@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
 @std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
-@std::__1::collate<char>::id
-@std::__1::ctype<char>::id
-@std::__1::locale::locale()
-@std::__1::locale::locale(std::__1::locale const&)
-@std::__1::locale::name() const
-@std::__1::locale::use_facet(std::__1::locale::id&) const
-@std::__1::locale::~locale()
-@std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
-@std::__1::regex_error::~regex_error()
 @std::terminate()
 @t$A9
 @typeinfo for IStack_VM_Segment_Marker
-@typeinfo for std::__1::__shared_weak_count
-@typeinfo for std::__1::regex_error
 @typeinfo for std::bad_alloc
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
@@ -746,6 +679,7 @@ A;G ~
 A;G,|
 A;G8r
 A;L$ ~long long
+A;N<u
 A;O ~
 A;O4v
 A;T$ ~
@@ -761,8 +695,8 @@ A;X(uUD
 A;X(uYD
 A;\$@|
 A;]long long|
+A;^ u
 A;^@|
-A;_ ~'
 A;_(|
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
@@ -776,7 +710,6 @@ AVSPH
 AVSPI
 AWAVATS
 AWAVATSA
-AWAVATSD
 AWAVATSH
 AWAVATSI
 AWAVATSM
@@ -790,7 +723,6 @@ AWAVAUATSH
 AWAVAUATSI
 AWAVAUATSL
 AWAVAUATSP
-AWAVAUATSP9
 AWAVAUATSPA
 AWAVAUATSPD
 AWAVAUATSPE
@@ -820,7 +752,7 @@ AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
 Attempted to ConvertToCopiedData for unsupported type (%double)
-BTBTBVBp
+BTBVBp
 Bad expression operator: '%char%char', expected C style boolean expression operator.
 Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
 Bad expression token: %char
@@ -828,8 +760,11 @@ BakedLODBuilderMgr001
 Base()
 BenchmarkService001
 BinaryProperties_GetValue
+BitwiseAnd
+BitwiseNot
+BitwiseOr
+BitwiseXor
 Breakpoint type (%short) not supported.
-BuiltDebug
 C +C$v
 C [A^]
 C type
@@ -838,7 +773,6 @@ C,[A\A^A_]
 C0;C@u
 C8;D$
 C8;D$ wchar_t
-C8[A\A^A_]
 CAtomicManipulator<CUtlString>
 CAtomicManipulator<CUtlVector<CUtlVector<TestStruct_1::Range_t, CUtlMemory<TestStruct_1::Range_t, int> >, CUtlMemory<CUtlVector<TestStruct_1::Range_t, CUtlMemory<TestStruct_1::Range_t, int> >, int> > >
 CAtomicManipulator<CUtlVector<TestStruct_1::Range_t, CUtlMemory<TestStruct_1::Range_t, int> > >
@@ -859,7 +793,6 @@ CEmptyConVar
 CEntityHandle CVariantBase<CVariantDefaultAllocator>::operator CEntityHandle() const [CValueAllocator = CVariantDefaultAllocator]
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CHH;CP
 CHff.
 CHffff.
 CHffffff.
@@ -900,7 +833,6 @@ CSocketConnection object must be cleaned up before it can be long double restric
 CSocketConnection object was not properly cleaned up.
 CSocketConnection::~CSocketConnection()
 CStack_Lua_VM_Segment_Marker
-CSysModule *Sys_LoadModule(const char *)
 CTestNugget_1
 CTestNugget_2
 CThreadEvent::CThreadEvent(bool)
@@ -920,9 +852,8 @@ CTier2AppSystem<IScriptManager, 0>
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
 CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
+CUtlCharConversion::CUtlCharConversion(char, const char *, int, const CUtlCharConversion::ConversionArray_t *)
 CUtlHandleTable<CBaseNugget_Private, 16>::HandleType_t::HandleType_t(unsigned int, unsigned int) [T = CBaseNugget_Private, HandleBits = 16]
 CUtlString
 CUtlString CSchemaFieldIterator::GetFullyQualifiedFieldName() const
@@ -954,6 +885,7 @@ Can only write to connected socket.
 Cannot recover from failed socket shutdown.
 Cannot recover from failure in closesocket()
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
+ClearBit
 ClenDbyteDcharCsubCrepGreverse
 Color CVariantBase<CVariantDefaultAllocator>::operator Color() const [CValueAllocator = CVariantDefaultAllocator]
 ConCommand
@@ -1032,21 +964,18 @@ D$tH9
 D7	...
 D9sXu
 D;*~	
-D;char(r11
 D;sT}
 D;u,|
-D;{ u
+D;{ ~
 D;{,|
 D;|$TD
 D< +I
-DLOPEN "%short" Error:%short
 DLpfff.
 D\$<H
 DebugTextureInfo001
 Debugger
 DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
-DevWarning(char const*, ...)
 Dfffff.
 DotaCardGameClient_001
 DynASM 1.3.0
@@ -1067,6 +996,7 @@ E;nPI
 E;o8s[L
 E;uPu$I
 E;|$ ~<
+E;~(r61
 E;~0|:
 EDesc
 EHfff.
@@ -1087,16 +1017,9 @@ F A;F$s
 F I+F
 F [A^]
 F([A^]
-F0I;F8r7H
-F0I;F8raH
-F0I;F8t
-F0I;F8t>1
-F0I;F8u
 F8;D$Xw
 FCVAR_NEVER_AS_STRING
 FDesc
-FHI;FPrQH
-FHI;FPt(1
 FILE*
 FX$@tmI
 Failed to allocate schema type '%short'.
@@ -1114,12 +1037,6 @@ From Class Binding
 From Enum Binding
 G I+G
 G(;G,vr
-G,;G0
-G,;G0tO
-G,;G0tS
-G0I;G8r$H
-G0I;G8r'H
-G0I;G8t
 G8;D$(wchar_t
 G8;D$Xw
 G8A;E
@@ -1128,8 +1045,6 @@ GA#D$
 GAMECONSOLE
 GHfffff.
 GROUP
-GXI;G`
-G`I;Ghsi1
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
@@ -1161,9 +1076,7 @@ H!D$0
 H!wchar_t(]
 H+D$0
 H+L$@L
-H+S(H
 H+t$@H
-H0I;H8
 H9x unsigned short+H
 H;D$ tr
 H;D$`
@@ -1171,7 +1084,6 @@ H;D$p
 H;D$pu
 H;L$ H
 H;L$h
-H;W A
 H;\$ 
 H;l$ D
 H;l$P
@@ -1203,12 +1115,9 @@ I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable:
 I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::Find(const T &) const [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::NewNode(const T *) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
-I+V H)
 I9@ unsigned short"I
 I9P unsigned short%I
 I9|$ 
-I9}0t
-I9}Ht
 I;F(void
 I;~ ttI;~
 IAppSystem
@@ -1239,7 +1148,6 @@ IcV@H
 IcX$E1
 IcX$M
 Icv(H
-Ifffff.
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -1257,6 +1165,7 @@ Invalid endpoint index
 Invalid nugget type '%short', all nugget types must be derived from CBaseNugget!
 Invalid number of allowed connections.
 Invalid stack level (%double)
+IsBitSet
 IsFinite(angle)
 IsNull
 IsNull called without an object - did you call obj.IsNull() instead of obj:IsNull()?
@@ -1266,7 +1175,6 @@ JIT compiler disabled, CPU does not support SSE2
 K unsigned short%A
 K,[A^]
 K2K2K2
-K8H9K0
 K8H;A
 KHffff.
 KHffffff.
@@ -1275,10 +1183,10 @@ KeyValueCache001
 KeyValues *KeyValues::AddKey(const char *)
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
+KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstTrueSubKey()
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextTrueSubKey()
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
@@ -1354,6 +1262,7 @@ M9H unsigned short"I
 M;>t4A
 MATCHFRAMEWORK_001
 MHfff.
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MaterialUtils_001
@@ -1366,14 +1275,8 @@ Mffff.
 Missing breakpoint data ( breakpoint with ID %s. )
 Missing breakpoint with given ID %s.
 ModelDocCommandSystem001
-Module %short is signed char debug build
 Must use luaL_newstate() for 64 bit target
 N I+N
-N0I;N8
-N0I;N8rPH
-N0I;N8rcI
-N0I;N8tE1
-NHI;NP
 NYI: cannot call this C function (yet)
 NYI: packed bit fields
 NetworkClientService_001
@@ -1394,12 +1297,8 @@ No more nugget handles! Increase NUGGET_HANDLE_BITS...
 Normalized
 Not sure how we got here.
 O I+O
-O0H;O8
-O0I;O8s=1
-O0I;O8s@1
 OHfff.
 OVERRIDE_MMAP
-OXI;O`
 Only TCP sockets are implemented at the moment.
 Ordered object did not begin in signed char zeroed state
 P L;}
@@ -1410,11 +1309,13 @@ POSIX
 PPPPPP@P
 P[A\A^A_]
 P[A^]
+P`PP@@`P@@
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 Parameter type mismatch
 ParticleSystemMgr002
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostProcessingSystem_001
@@ -1423,16 +1324,14 @@ Print signed char message
 Print signed char warning
 PropertyEditorSystem_001
 QAngle
-Q_URLDecode needs signed char dest buffer at least as large as the source
 Quaternion
 QuaternionLength( q - q2 ) < 0.0001f
 QueuedLoaderVersion001
 RATBp
 RBRBRBRBRB`
 RBRBTAp
-RBRBUARBRBRBUAUAUARBUARBUARBUARBUARBUARBUARBUARBUARBUARBUARBUARBUARBUARBSAp
 RBRBUAp
-RBUARBUARBUARBVBp
+RBSATAp
 RandomFloat
 RandomInt
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -1443,7 +1342,7 @@ RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -1453,12 +1352,10 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceHandle_t CVariantBase<CVariantDefaultAllocator>::operator const ResourceBindingBase_t *() const [CValueAllocator = CVariantDefaultAllocator]
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 S4)P H
 S9W(ub
 SATAp
-SATBSARATAp
 SAWAVH
 SOCKET_ERR_ACCEPT_FAILED
 SOCKET_ERR_BAD_USER_DATA
@@ -1499,6 +1396,7 @@ Script_Msg
 Script_Warning
 Send can only return zero if zero bytes were given.
 ServerUploadGameStats001
+SetBit
 Shouldn'unsigned short have gotten here if previous operations were unsuccessful.
 Size() == operand.Size()
 SocketErrorCode_t CSocketConnection::CanReadFromEndpoint(int, bool *, timeval &)
@@ -1522,7 +1420,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -1533,7 +1431,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StatsService_001
 String %double: ref:%double %short
 Success
@@ -1565,27 +1463,23 @@ TA`5Ap
 TAp0p
 TBRATAp
 TBRAp
-TBRBSATAp
 TBRB]ARBRAp
-TBTATBp
+TBTATBRATAp
 TBTAp
-TBUAp
-TBUCRBVBSATAp
 TBVATAp
 TBYA`;A
-TB`'ATAp
 TB`6ATAp
-TB`BAp
+TB`CAp
 TB`gA`
 TCRAp
 TCTBp
 TCUARAp
+TCUCRBVBSATAp
 TCXATAp
 TCXBRAp
-TDpHQ
-TUUUUUU
+TDRATBp
+TDpPQ
 Table is null.
-Target buffer for Q_URLEncode needs to be 3 times larger than source to guarantee enough space
 TestRawStruct_1
 TestScriptMgr001
 TestStruct_1
@@ -1597,16 +1491,18 @@ TextLayout_001
 TextMessageMgr_001
 The function %short requires too many parameters.
 This object has been deleted from C++ and no longer exists. (Use :IsNull() to detect this.)
-ToolFramework2_001
+ToHexString
+ToggleBit
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
+Trying to set signed char breakpoint with missing file/line. Ensure the file is part of the Eclipse project (refresh project is necessary) and reopen the file in Eclipse.
 Type '%short' cannot reinterpret as desired type.
 Type name '%short' not found in global schema types.
 Type name field ('%short') is not signed char string.
-UARAp
 UAVSA
 UAVSD
 UAVSH
@@ -1632,15 +1528,10 @@ UAWAVSPD
 UAWAVSPH
 UAWAVSPI
 UAWAVSPM
-UCS-4LE
-UCS-LE
 UInt64
 UPDATE_STRING_TOKEN_DATABASE
 USAWAVH
-UTF-32LE
-UTF-8
 UTLHANDLE_INVALID == (int)hFoo1Table
-UUUUUUU
 Ufff.
 Unable to create environment
 Unable to update line number for the breakpoint with ID %short
@@ -1694,10 +1585,17 @@ VScriptLoadAndCompileResult_t IScriptVM::LoadAndCompileScriptFile(const char *, 
 VScriptManager010
 VStringTokenSystem001
 VUUUH
-V_AppendSlash: ran out of space on %s.
 V_IsAbsolutePath( absolutePath )
 V_IsAbsolutePath( m_fileName.Get() )
 V_IsAbsolutePath( ret )
+V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+V_fabsf( q.x*q.x + q.y*q.y + q.z*q.z + q.w*q.w - 1 ) < e-5f
+V_fabsf( vec.LengthSqr() - 1.0f ) < e-3
+V_fabsf( vecForward.LengthSqr() - 1.0f ) < e-3
+V_fabsf( vecLeft.LengthSqr() - 1.0f ) < e-3
+V_fabsf( vecRight.LengthSqr() - 1.0f ) < e-3
+V_fabsf( vecUp.LengthSqr() - 1.0f ) < e-3
+V_stristr_fast(char const*, char const*)
 V_strlen(pszRoot) + 32 <= nBufSize
 V_strstr( foo1->m_NuggetName, ANONYMOUS_NUGGET_SUFFIX )
 V_strstr( foo2->m_NuggetName, ANONYMOUS_NUGGET_SUFFIX )
@@ -1770,24 +1668,15 @@ XBSARBSAXBRB`
 X[A\A]A^A_]
 Xbox VDP is not supported on this platform.
 Yfffff.
-[/code]
-[/h1]
-[/img]
-[/list]
-[/url]
 [A\A]A^A_
 [A\A]A^A_]
 [A\A^A_
 [A\A^A_]
 [A^A_
 [A^A_]
-[code]
-[img]
-[list]
 [string "
 [string I
 [unsigned short,fD
-[url=
 \$ D)
 \$ E1
 \$ fD
@@ -1827,23 +1716,21 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_MemAlloc_AllocFunc
+_MemAlloc_FreeFunc
 _NAME
 _PACKAGE
 _PRELOAD
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModule
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MSTime
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_VirtualAlloc
 _Plat_VirtualFree
-_Plat_getwd
 _RandomFloat
 _RandomInt
 _RandomSeed
@@ -1853,10 +1740,55 @@ _ThreadInterlockedExchange64
 _ThreadSleep
 _VERSION
 _VMEVENTS
+_V_FixSlashes
+_V_GetErrno
+_V_IsAbsolutePath
+_V_RemoveDotSlashes
+_V_SetErrno
+_V_StrTrim
+_V_StripTrailingSlash
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_UTF8CharsToUTF16
+_V_UTF8ToUTF32
+_V_UnqualifiedFileName
+_V_acos
+_V_acosf
+_V_asinf
+_V_atan2f
+_V_atanf
+_V_atof
+_V_atoi
+_V_cosf
+_V_expf
+_V_fmodf
+_V_localeconv
+_V_logf
+_V_powf
+_V_pretifynum
+_V_qsort_s
+_V_rand
+_V_sinf
+_V_snprintf
+_V_snwprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_strupper_fast
+_V_swscanf
+_V_tan
+_V_tanf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstod
+_V_wcstoi64
 _Warning
 __((vector_size(
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_DeleteException
@@ -1865,25 +1797,27 @@ __Unwind_RaiseException
 __Unwind_Resume
 __Unwind_SetGR
 __Unwind_SetIP
+__V_ComposeFileName
+__V_ExtractFileExtension
+__V_ExtractFilePath
+__V_FileBase
+__V_MakeAbsolutePath
+__V_StringAfterPrefix
+__V_StripExtension
+__V_StripLastDir
+__V_strncat
+__V_strncpy
+__V_strnistr_fast
 ___bzero
-___cxa_allocate_exception
 ___cxa_atexit
 ___cxa_begin_catch
 ___cxa_call_unexpected
-___cxa_end_catch
-___cxa_free_exception
 ___cxa_guard_abort
 ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
-___cxa_rethrow
-___cxa_throw
 ___error
-___exp10
 ___gxx_personality_v0
-___maskrune
-___sincos_stret
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___stderrp
@@ -1924,7 +1858,6 @@ __index__newindex__gc__mode__eq__len__lt__le__concat__call__add__sub__mul__div__
 __inline
 __inline__
 __int128 < m_Vector.Count()
-__int128 >= 0
 __int16
 __int32
 __int64
@@ -1963,17 +1896,8 @@ __volatile
 __volatile__
 _`A;_p
 _accept
-_acos
-_acosf
-_asin
-_asinf
-_atan
-_atan2
-_atan2f
-_atof
 _atoi
 _bind
-_chdir
 _clearerr
 _close
 _connect
@@ -1991,7 +1915,6 @@ _fflush
 _fgets
 _floor
 _floorf
-_fmodf
 _fopen
 _fprintf
 _fputc
@@ -2004,21 +1927,15 @@ _ftello
 _fwrite
 _g_Tier1_CRC32Table
 _g_Tier1_CRC64Table
-_g_Tier1_FullHTMLEntities
 _g_pMemAlloc
 _getc
-_getcwd
 _getenv
 _gethostbyname
-_iconv
-_iconv_close
-_iconv_open
 _inet_ntoa
 _ioctl
 _ldexp
 _listen
 _lj_alloc_f_VALVE_OVERRIDEN
-_localeconv
 _luaJIT_setmode
 _luaJIT_version_2_0_4
 _luaL_addlstring
@@ -2153,8 +2070,6 @@ _luaopen_math
 _luaopen_package
 _luaopen_string
 _luaopen_table
-_malloc
-_mbstowcs
 _memchr
 _memcmp
 _memcpy
@@ -2167,8 +2082,6 @@ _munmap
 _pclose
 _poll
 _popen
-_powf
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -2176,9 +2089,7 @@ _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _putchar
-_qsort_r
 _raise
-_rand
 _recv
 _send
 _setsockopt
@@ -2187,49 +2098,27 @@ _shutdown
 _sinh
 _socket
 _sprintf
-_sscanf
 _strchr
 _strcmp
 _strcpy
 _strdup
 _strerror
 _strlen
-_strncat
 _strncmp
 _strncpy
 _strnlen
 _strpbrk
 _strrchr
 _strstr
-_strtod
-_strtol
-_strtoll
 _strtoul
-_strtoull
-_swprintf
-_swscanf
-_tanf
 _tanh
 _tmpfile
 _ungetc
-_valveinternal
-_vsnprintf
-_vswprintf
-_wcschr
-_wcscpy
 _wcslen
-_wcsncat
-_wcsncpy
-_wcstof
-_wcstol
-_wcstombs
-_xlsp
 `)W H
 `@p @
 `@pp`
-`P@@`P@@
 `[A\A^A_]
-`[A^]
 `unsigned char[A\A^A_]
 abort
 activelines
@@ -2339,11 +2228,6 @@ bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
 bool KeyValues::LoadFromFile(IBaseFileSystem *, const char *, const char *, GetSymbolProc_t)
 bool KeyValues::ReadAsBinaryInternal(CUtlBuffer &, char *, size_t)
-bool V_BBCodeToHTML(char *, const int, const char *, const int)
-bool V_BasicHtmlEntityEncode(char *, const int, const char *, const int, bool)
-bool V_HtmlEntityDecodeToUTF8(char *, const int, const char *, const int)
-bool _V_ExtractFilePath(const char *, char *, int)
-bool _V_StripLastDir(char *, int)
 boolean
 boolean or proxy expected
 borrow
@@ -2373,7 +2257,6 @@ cannot resume dead coroutine
 cannot resume non-suspended coroutine
 cannot resume running coroutine
 cannot use '...' outside signed char vararg function
-cchDest >= 0
 cclosure
 ccode:/
 cdata
@@ -2385,9 +2268,6 @@ char *CUtlInplaceBuffer::InplaceGetLinePtr()
 char *CUtlStringBuilder::Access()
 char *CUtlStringBuilder::InternalPrepareBuffer(size_t, bool, size_t)
 char *CUtlStringBuilder::PrepareBuffer(size_t, bool, size_t)
-char *V_AbbreviatePathInPlace(char *, const int, const char *)
-char *_V_strncat(char *, const char *, int, int)
-char cIntToHexDigit(int)
 char(%double)
 char(A;l$
 character
@@ -2418,13 +2298,9 @@ const char *CFmtStrN<256, false>::sprintf(const char *, ...) [SIZE_BUF = 256, QU
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *CSchemaFieldIterator::GetFieldName() const
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
-const char *_V_strnistr_fast(const char *, const char *, int)
-const uchar32 *V_strstr32(const uchar32 *, const uchar32 *)
 const void *CSchemaFieldIterator::PointerFromClass(const void *) const
 const void *CUtlBuffer::PeekGet(int, int)
 const wchar_t *CKeyValues_Data::Internal_GetWString(const wchar_t *, wchar_t *, size_t)
-const wchar_t *V_wcsistr(const wchar_t *, const wchar_t *)
 constants
 context
 context.m_vecStack.Count() <= 1
@@ -2441,9 +2317,6 @@ cpath
 createEyieldFresume
 cstring
 ctype<%short>
-cubDestSizeInBytes >= sizeof( *pUCS2 )
-cubDestSizeInBytes >= sizeof( *pUTF8 )
-cubDestSizeInBytes >= sizeof( *pUnicode )
 currentline
 d$ ff.
 d$Ht(H
@@ -2456,8 +2329,6 @@ debug
 debug	traceback
 declaration specifier expected
 delete
-destBufferSize >= 0
-destSize >= 1
 developer
 disabled
 dofile
@@ -2484,15 +2355,8 @@ errorCode == SOCKET_SUCCESS
 errorEpcall
 essthan
 etmetafield
-extension
 extern
 external hook
-fabs( vec.LengthSqr() - 1.0f ) < e-3
-fabs( vecForward.LengthSqr() - 1.0f ) < e-3
-fabs( vecLeft.LengthSqr() - 1.0f ) < e-3
-fabs( vecRight.LengthSqr() - 1.0f ) < e-3
-fabs( vecUp.LengthSqr() - 1.0f ) < e-3
-fabsf( q.x*q.x + q.y*q.y + q.z*q.z + q.w*q.w - 1 ) < e-5f
 false
 feature
 feature_get
@@ -2577,7 +2441,6 @@ hscript
 hscript_lightbinding
 idekey
 ightuserdata
-in != out
 in1 != out
 index
 index out of range
@@ -2585,36 +2448,6 @@ info.m_pReplacementString == 0
 inline
 input
 insert
-int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = char, DecFn = &V_UTF8ToUChar32, EncLenFn = &V_UChar32ToUTF8Len, EncFn = &V_UChar32ToUTF8]
-int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = unsigned short, DecFn = &V_UTF16ToUChar32, EncLenFn = &V_UChar32ToUTF16Len, EncFn = &V_UChar32ToUTF16]
-int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = wchar_t, DecFn = &(anonymous namespace)::V_UTF32ToUChar32, EncLenFn = &(anonymous namespace)::V_UChar32ToUTF32Len, EncFn = &(anonymous namespace)::V_UChar32ToUTF32]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = false, SrcType = char, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = false, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = false, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = false, SrcType = unsigned short, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = false, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = false, SrcType = wchar_t, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::LinguisticToLowerFunctor<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::LinguisticToUpperFunctor<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = char, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<char, &V_UTF8ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::LinguisticToLowerFunctor<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::LinguisticToUpperFunctor<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, &V_UTF16ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<unsigned short, &V_UTF16ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = unsigned short, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF16Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<unsigned short, &V_UChar32ToUTF16>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::LinguisticToLowerFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
 int < ( 1 << HandleBits )
 int BoxOnPlaneSide(const float *, const float *, const cplane_t *)
 int CKeyValues_Data::Internal_GetInt()
@@ -2628,23 +2461,7 @@ int CUtlString::FormatV(const char *, __va_list_tag *)
 int CVariantBase<CVariantDefaultAllocator>::operator int() const [CValueAllocator = CVariantDefaultAllocator]
 int GetSIMDRandContext()
 int Lua_Memory_Override_CALL_MUNMAP(void *, size_t)
-int Q_URLDecodeInternal(char *, int, const char *, int, bool)
-int Q_URLEncodeInternal(char *, int, const char *, int, bool)
-int V_snprintf(char *, int, const char *, ...)
-int V_snwprintf(wchar_t *, int, const wchar_t *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
-int V_vsnwprintf(wchar_t *, int, const wchar_t *, __va_list_tag *)
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = char, _To = unsigned short]
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = unsigned short, _To = char]
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = unsigned short, _To = wchar_t]
-int _V_CallIconv(const char *, const char *, const _From *, int, _To *, int) [_From = wchar_t, _To = unsigned short]
-int _V_UCS2ToUTF8(const ucs2 *, char *, int)
-int _V_UCS2ToUnicode(const ucs2 *, wchar_t *, int)
-int _V_UTF8ToUCS2(const char *, int, ucs2 *, int)
-int _V_UnicodeToUCS2(const wchar_t *, int, ucs2 *, int)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int( %double = 0x%X )
 int16
 int16_t
@@ -2652,7 +2469,6 @@ int32
 int32_t
 int64
 int64 CVariantBase<CVariantDefaultAllocator>::operator long long() const [CValueAllocator = CVariantDefaultAllocator]
-int64 V_atoi64(const char *)
 int64_t
 int8_t
 integer
@@ -2663,7 +2479,6 @@ invalid escape sequence
 invalid format
 invalid format (repeated flags)
 invalid format (width or precision too long)
-invalid input pointer
 invalid key to 'next'
 invalid level
 invalid long string delimiter
@@ -2678,6 +2493,7 @@ invalid value (%short) at index %double in table for 'concat'
 istype
 isvararg
 j_alloc_f_VALVE_OVERRIDEN
+jfffff.
 js_array
 js_object
 js_raw_args
@@ -2692,7 +2508,6 @@ l$hD
 l40D9
 language
 lastlinedefined
-len < maxlen
 leresult
 level
 level out of range
@@ -2798,13 +2613,9 @@ malformed number
 malformed pattern (ends with '%')
 malformed pattern (missing ']')
 match
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxLenInBytes >= sizeof( *pDest )
 max_children
 max_data
 max_depth
-maxlen >= 1
 message
 metamethod
 metatable
@@ -2824,7 +2635,6 @@ nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nCount >= 1
 nDecodedSize < nDecodedMaxSize
-nDestSize == 0 || pDest != NULL
 nEncodedSize < nEncodedMaxSize
 nEnumValueInt64 == pEnumValue->GetValue()
 nFlags >= 0 && nFlags <= UINT8_MAX
@@ -2838,7 +2648,6 @@ nMaxLen > 0
 nMinCapacity <= k_nMaxStringSize
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
-nOutSizeInBytes >= sizeof(pWString[0])
 nParentBone >= 0 && nParentBone < int
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nRefIndex != 0
@@ -2849,9 +2658,7 @@ nStackTop == nFnIndex
 nStackTop == nStackTopEnd
 nStackTop == nStackTopStart
 nStackTop == nStackTopStart + 1
-nToSizeInBytes >= sizeof( *pTo )
 nTraversalOffset == 0
-nValue >= 0 && nValue <= 15
 name conflict for module '%short'
 namewhat
 ndtable
@@ -2883,11 +2690,9 @@ operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
 option
-outStrings.Count() == 0
 output
 outputBuffer
 outsize >= 1
-p  @0@@P000000
 p.IsValid()
 p00P`0P 
 p8p(`
@@ -2920,9 +2725,6 @@ pSchemaSystem != NULL
 pSchemaType
 pSchemaType->CanAllocate()
 pSchemaType->CanReinterpretAs( pBaseSchemaType )
-pSearch
-pShortenToSlash != NULL
-pStartOfShortendString >= pPath
 pSubKey && pSubKey->m_pPeer == NULL
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
@@ -2939,7 +2741,6 @@ package
 pagesize
 pairs
 parent
-pathStringLength >= 1
 pattern too complex
 pcall
 perform arithmetic on
@@ -2947,8 +2748,6 @@ place
 pointer
 popen
 pos.IsValid()
-ppath
-ppline
 preload
 print
 printstack
@@ -2969,7 +2768,6 @@ qangle
 qfff.
 qt.IsValid()
 quaternion
-r""\\
 r+A#Nt
 r+fff.
 r+ffff.
@@ -2978,8 +2776,6 @@ r,ffffff.
 r.ffffff.
 r/fffff.
 r7fff.
-r>ff.
-rBff.
 rIfff.
 rJA#Nl
 rQff.
@@ -3029,8 +2825,8 @@ s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 s_pConfigRegistry->m_nCount >= 0 && s_pConfigRegistry->m_nCount < ARRAYSIZE(s_pConfigRegistry->m_pInfo)
 schemasystem
-script
 scripts/vscripts/%short
+scripts\vscripts
 searchpath
 seeall
 selectHtonumber
@@ -3100,66 +2896,15 @@ static void TestStruct_1::Ints_t::Schema_VerifyBindingIsRegistered()
 static void TestStruct_1::Range_t::Schema_VerifyBindingIsRegistered()
 static void TestStruct_1::Schema_VerifyBindingIsRegistered()
 status
-std::__1::__alternate<char>
-std::__1::__back_ref<char>
-std::__1::__back_ref_collate<char, std::__1::regex_traits<char> >
-std::__1::__back_ref_icase<char, std::__1::regex_traits<char> >
-std::__1::__basic_string_common<true>::__throw_length_error() const
-std::__1::__begin_marked_subexpression<char>
-std::__1::__bracket_expression<char, std::__1::regex_traits<char> >
-std::__1::__empty_non_own_state<char>
-std::__1::__empty_state<char>
-std::__1::__end_marked_subexpression<char>
-std::__1::__end_state<char>
-std::__1::__get_classname(char const*, bool)
-std::__1::__get_collation_name(char const*)
-std::__1::__has_one_state<char>
-std::__1::__l_anchor<char>
-std::__1::__lookahead<char, std::__1::regex_traits<char> >
-std::__1::__loop<char>
-std::__1::__match_any<char>
-std::__1::__match_any_but_newline<char>
-std::__1::__match_any_but_newline<char>::__exec(std::__1::__state<char>&) const
-std::__1::__match_char<char>
-std::__1::__match_char_collate<char, std::__1::regex_traits<char> >
-std::__1::__match_char_icase<char, std::__1::regex_traits<char> >
-std::__1::__node<char>
-std::__1::__owns_one_state<char>
-std::__1::__owns_two_states<char>
-std::__1::__r_anchor<char>
-std::__1::__repeat_one_loop<char>
-std::__1::__shared_ptr_pointer<std::__1::__empty_state<char>*, std::__1::default_delete<std::__1::__empty_state<char> >, std::__1::allocator<std::__1::__empty_state<char> > >
-std::__1::__shared_weak_count::__add_shared()
-std::__1::__shared_weak_count::__release_shared()
-std::__1::__shared_weak_count::~__shared_weak_count()
-std::__1::__vector_base_common<true>::__throw_length_error() const
-std::__1::__word_boundary<char, std::__1::regex_traits<char> >
-std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(unsigned long, char)
 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
-std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
-std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const
-std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(char)
-std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)
-std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
-std::__1::collate<char>::id
-std::__1::ctype<char>::id
-std::__1::default_delete<std::__1::__empty_state<char> >
-std::__1::locale::locale()
-std::__1::locale::locale(std::__1::locale const&)
-std::__1::locale::name() const
-std::__1::locale::use_facet(std::__1::locale::id&) const
-std::__1::locale::~locale()
-std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
-std::__1::regex_error::~regex_error()
 std::basic_iostream<char, std::char_traits<char> >)S H
 std::terminate()
 stderr
 stdin
 stdout
-steam://openurl/
-steam://openurl_external/
+steamapps\workshop\content
 step_into
 step_out
 step_over
@@ -3188,13 +2933,10 @@ t$0I9
 t$2Hk
 t$8I9
 t$@H;
-t$H9[8u
 t$HE1
 t$Ht!f.
 t3ffff.
-tBfff.
 tDA9@
-tFff.
 tFffff.
 tLMc~
 tMff.
@@ -3224,28 +2966,26 @@ traceback
 transaction_id
 trueHtostring
 trx*@
+tsff.
 tvA;V8H
 type == dat->Internal_GetDataType()
 type parameter
 typeDnext
 typedef
 typeinfo for IStack_VM_Segment_Marker
-typeinfo for std::__1::__shared_weak_count
-typeinfo for std::__1::regex_error
 typeinfo for std::bad_alloc
 typename
 typeof
 u"... float
 u#ff.
 u)...'A;G
-u*ffff.
 u.fffff.
 u/...-D
 u1fffff.
 u64( %lld = 0x%llX )
 u:fffff.
+u>fffff.
 uAL;d$
-uRHc;H
 uVL){
 u\Hc{ H
 u`...^A
@@ -3258,7 +2998,6 @@ uint32_t
 uint64
 uint64 CKeyValues_Data::Internal_GetUint64()
 uint64 CVariantBase<CVariantDefaultAllocator>::operator unsigned long long() const [CValueAllocator = CVariantDefaultAllocator]
-uint64 V_atoui64(const char *)
 uint64_t
 uint8
 uint8_t
@@ -3285,14 +3024,12 @@ unsigned __int128,A;G,|!
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
 unsigned long long*HcJ
-unsigned short	H+]
 unsigned short CCountedStringPool::ReferenceStringHandle(const char *)
 unsigned short ffffff.
 unsigned short#L)0H
 unsigned short%ff.
 unsigned short&H9[8tUH
 unsigned short&L;unsigned char
-unsigned short(ff.
 unsigned short)A#F
 unsigned short)A#G
 unsigned short,A#D$
@@ -3301,7 +3038,6 @@ unsigned short-L9`
 unsigned short/HcN
 unsigned short?fff.
 unsigned short[;S8sEH
-unsigned short[E#unsigned __int128
 unsigned short]A;W8sIL
 until
 update
@@ -3459,6 +3195,7 @@ void KeyValues::AppendIncludedKeys(CUtlVector<KeyValues *> &)
 void KeyValues::ElideSubKey(KeyValues *)
 void KeyValues::InsertSubKey(int, KeyValues *)
 void KeyValues::MergeBaseKeys(CUtlVector<KeyValues *> &)
+void KeyValues::MergeFrom(KeyValues *, KeyValues::MergeKeyValuesOp_t)
 void KeyValues::ParseIncludedKeys(const char *, const char *, IBaseFileSystem *, const char *, CUtlVector<KeyValues *> &, GetSymbolProc_t)
 void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CKeyValuesTokenReader &, GetSymbolProc_t)
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
@@ -3490,25 +3227,12 @@ void SocketLibShutdown()
 void TransformToWorldSpace(int, int, const int *, matrix3x4a_t *)
 void UnitTestQuatExpLog()
 void UnitTestRotateBetween()
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
-void V_SplitString2InPlace(char *, const char **, int, CUtlVector<const char *> &)
-void V_StripLeadingWhitespace(char *)
-void V_StripSurroundingQuotes(char *)
-void V_StripTrailingSlash(char *)
-void V_StripTrailingWhitespace(char *)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
-void _V_AppendSlash(char *, int, char)
-void _V_DefaultExtension(char *, const char *, int)
-void _V_FileBase(const char *, char *, int)
 void _V_binarytohex(const byte *, int, char *, int)
 void _V_hextobinary(const char *, int, byte *, int)
-void _V_strncpy(char *, const char *, int)
-void _V_strtowcs(const char *, int, wchar_t *, int)
-void _V_wcsncpy(wchar_t *, const wchar_t *, int)
 void _VectorNormalizeFast(Vector &)
 void([A^]
 volatile
-vpk:H
 vscript
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
@@ -3516,7 +3240,6 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vzffffff.
 w6fff.
 wchar_t
-wchar_t *_V_wcsncat(wchar_t *, const wchar_t *, int, int)
 wchar_t char::* L
 wchar_t"HcG$H
 where
@@ -3531,11 +3254,11 @@ xmove
 xpcall
 yield
 yperror
-zD0123456789ABCDEF
 zfffff.
 {$,ulL
 {(D;{,void
 {8H;wchar_t
+{8HcS0H
 {`u$1
 {pD;{trd
 {unsigned short*%H
@@ -3557,7 +3280,6 @@ zfffff.
 |,L;unsigned long
 |6JfA
 |fff.
-|jffff.
 |uSHcO
 }$,uvA
 }$,u}
@@ -3566,6 +3288,5 @@ zfffff.
 ~&ffff.
 ~8v9H
 ~Qfffff.
-~fffff.
 ~off.
 ~unsigned short*%L

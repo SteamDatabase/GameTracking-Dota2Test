@@ -90,9 +90,9 @@ TournamentPhase.Active
 #BracketZoomContainer
 {
 	margin: 16px 16px 16px 16px;
-	background-color: black;
-
-	box-shadow: inset 4px 4px 10px 8px black;
+    //background-color: black;
+    background-color: #1a202477;
+    //box-shadow: inset 4px 4px 10px 8px black;
 }
 
 #PhaseDates {
@@ -108,6 +108,8 @@ TournamentPhase.Active
 #StandingsPanel
 {
 	flow-children: right-wrap;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #MatchGridPanel

@@ -7,9 +7,42 @@
 @define offWhite: #ccccccff;
 @define selectedTextBackgroundColor: #66666633;
 @define test: #320000;
+@define goldColor: #ffcc33;
 
 @define dotalevelgradient: gradient( linear, 0% 0%, 0% 100%, from( #BBCAEA ), color-stop( 0.5, #ffffff), color-stop( 0.5, #D9DFEC), to( #BBCAEA ) );
 @define dotaplaytimegradient: gradient( linear, 0% 0%, 0% 100%, from( #3db451 ), color-stop( 0.5, #beffc7), color-stop( 0.5, #91d69a), to( #3db451 ) );
+
+@define HeroSlot0Color: #3375FFFF;
+@define HeroSlot1Color: #66FFBFFF;
+@define HeroSlot2Color: #BF00BFFF;
+@define HeroSlot3Color: #F3F00BFF;
+@define HeroSlot4Color: #FF6B00FF;
+@define HeroSlot5Color: #FE86C2FF;
+@define HeroSlot6Color: #A1B447FF;
+@define HeroSlot7Color: #65D9F7FF;
+@define HeroSlot8Color: #008321FF;
+@define HeroSlot9Color: #A46900FF;
+
+@define HeroSlot0ColorHalf: #3375FF33;
+@define HeroSlot1ColorHalf: #66FFBF44;
+@define HeroSlot2ColorHalf: #BF00BF88;
+@define HeroSlot3ColorHalf: #F3F00B33;
+@define HeroSlot4ColorHalf: #FF6B0033;
+@define HeroSlot5ColorHalf: #FE86C244;
+@define HeroSlot6ColorHalf: #A1B44766;
+@define HeroSlot7ColorHalf: #65D9F733;
+@define HeroSlot8ColorHalf: #00832133;
+@define HeroSlot9ColorHalf: #A4690033;
+
+@define RuneDDColor: #82CAFF;
+@define RuneHasteColor: #F62817;
+@define RuneIllusionColor: #FFD700;
+@define RuneInvisColor: #8B008B;
+@define RuneRegenColor: #7FFF00;
+@define RuneArcaneColor: #FD3AFB;
+@define RuneBountyColor: #FF7800;
+
+@define PreConnectedTransitionDuration: 1s;
 
 
 /* ContextMenu - used in code -- dont rename */
@@ -128,11 +161,6 @@ DropDown:disabled
 	background-image: url("s2r://panorama/images/control_icons/arrow_dropdown_disabled_png.vtex");
 }
 
-DropDown:disabled Label
-{
-	color: #444444;
-}
-
 DropDown.DropDownMenuVisible:hover, DOTASettingsEnumDropDown.DropDownMenuVisible:hover
 {
 
@@ -157,6 +185,11 @@ DropDown Label, DOTASettingsEnumDropDown Label
 DropDown:focus Label, DOTASettingsEnumDropDown:focus Label
 {
 	color: white;
+}
+
+DropDown:disabled Label
+{
+	color: #444444;
 }
 
 DropDown.DropDownMenuVisible:focus Label, DOTASettingsEnumDropDown.DropDownMenuVisible:focus Label
@@ -504,7 +537,7 @@ ToggleButton .TickBox, DOTASettingsCheckbox .TickBox
 	border: 2px solid #5e686966;
 	box-shadow: #00000055 -2px -2px 1px 4px;
 	
-	transition-property: background-color, box-shadow, color, border, background-image;
+	transition-property: background-color, box-shadow, color, border, background-image, wash-color, pre-transform-scale2d;
 	transition-duration: 0.20s;
 	transition-timing-function: ease-in-out;
 	
@@ -738,13 +771,34 @@ RadioButton:disabled > Label
 	border-bottom-color: #333333;
 	border-right-color: #404040;
 
-	transition-property: background-color;
+	transition-property: background-color, opacity;
 	transition-duration: 0.05s;
 	transition-timing-function: linear;
 	box-shadow: #00000055 -2px -2px 4px 4px;
 
 	min-width: 192px;
 	min-height: 36px;
+}
+
+.ButtonBevel.Green
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2a481f ), to( #226326 ) );
+
+	border-top-color: #355639;
+	border-left-color: #2c4d30;
+	border-bottom-color: #1e371e;
+	border-right-color: #214123;
+}
+
+.ButtonBevel.DarkGreen
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1a2c13 ), to( #18441b ) );
+
+	border-top-color: #223524;
+	border-left-color: #2c4d30;
+	border-bottom-color: #091009;
+	border-right-color: #132615;
+
 }
 
 .ButtonBevel:enabled:hover
@@ -755,6 +809,26 @@ RadioButton:disabled > Label
 	border-left-color: #aaaaaa33;
 	border-bottom-color: #333333;
 	border-right-color: #404040;
+}
+
+.ButtonBevel.Green:enabled:hover
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #226528 ), to( #288a36 ) );
+
+	border-top-color: #030503;
+	border-left-color: #000000;
+	border-bottom-color: #1e371d;
+	border-right-color: #244426;
+}
+
+.ButtonBevel.DarkGreen:enabled:hover
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #17421b ), to( #185321 ) );
+
+	border-top-color: #000000;
+	border-left-color: #000000;
+	border-bottom-color: #172a16;
+	border-right-color: #152716;
 }
 
 .ButtonBevel:disabled
@@ -779,6 +853,26 @@ RadioButton:disabled > Label
 	sound: "ui_generic_button_click";
 }
 
+.ButtonBevel.Green:active
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1f3d25), to( #2b562c ) );
+
+	border-top-color: #132416;
+	border-left-color: #192f1b;
+	border-bottom-color: #386b3b;
+	border-right-color: #264a29;
+}
+
+.ButtonBevel.Green:active
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #132416), to( #183019 ) );
+
+	border-top-color: #09110a;
+	border-left-color: #0f1b10;
+	border-bottom-color: #1f3820;
+	border-right-color: #172c19;
+}
+
 .ButtonBevel Label
 {
 	margin-top: 2px;
@@ -789,6 +883,10 @@ RadioButton:disabled > Label
 	text-align: center;
 	vertical-align: middle;
 	text-shadow: 2px 2px 4px 1.0 #000000;
+	
+	transition-property: color;
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in-out;	
 }
 
 .ButtonBevel:active Label 
@@ -1493,6 +1591,10 @@ Slider.HorizontalSlider #SliderThumb:disabled, SlottedSlider.HorizontalSlider #S
 	background-color: #333333;
 }
 
+.PreGame #PreGameLabel
+{
+	opacity: 1;
+}
 
 .SliderTick
 {
@@ -1602,6 +1704,11 @@ SimpleContextMenu .ContextMenuBody
 SimpleContextMenu.Wider .ContextMenuBody
 {
 	width: 250px;
+}
+
+SimpleContextMenu.ExtraWide .ContextMenuBody
+{
+	width: 300px;
 }
 
 SimpleContextMenu .ContextMenuBody Button
@@ -2232,6 +2339,11 @@ ProgressBar
 	background-size: 32px;
 }
 
+#DOTANotificationButton .TopBarSmallButton
+{
+	background-position: 20% 50%;
+}
+
 .TopBarSmallButton
 {
 	margin: 0px;
@@ -2315,6 +2427,16 @@ ProgressBar
 	width: 1px;
 	height: 100%;
 	background-color: #ffffff88;
+}
+
+.HorizontalLineFill
+{
+	width: fill-parent-flow (1.0);
+	height: 1px;
+	background-color: white;
+	vertical-align: middle;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 
@@ -2600,6 +2722,12 @@ EdgeScrollBar.Vertical #MaxButton
 	background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, color-stop(0.0, #aa2305 ), color-stop(0.5, #aa2305), color-stop(0.6, #00000000 ) );
 }
 
+.Green.PaginationButton,
+.Green.PaginationButton:selected
+{
+	background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, color-stop(0.0, #0caa05 ), color-stop(0.5, #20aa05), color-stop(0.6, #00000000 ) );
+}
+
 .PaginationButton:enabled:hover
 {
 	opacity: 0.6;
@@ -2679,25 +2807,25 @@ DOTAAvatarImage.EventPointTierPlatinum .AvatarBorderImage
 
 DOTAAvatarImage.EventPointTierBronze .AvatarBorderImage
 {
-	background-image: url("s2r://panorama/images/compendium/avatarborder_default_ti6_psd.vtex");
+	background-image: url("s2r://panorama/images/compendium/avatarborder_default_fall_2016_psd.vtex");
 	saturation: 1;
 }
 
 DOTAAvatarImage.EventPointTierSilver .AvatarBorderImage
 {
-	background-image: url("s2r://panorama/images/compendium/avatarborder_silver_ti6_psd.vtex");
+	background-image: url("s2r://panorama/images/compendium/avatarborder_silver_fall_2016_psd.vtex");
 	saturation: 1;
 }
 
 DOTAAvatarImage.EventPointTierGold .AvatarBorderImage
 {
-	background-image: url("s2r://panorama/images/compendium/avatarborder_gold_ti6_psd.vtex");
+	background-image: url("s2r://panorama/images/compendium/avatarborder_gold_fall_2016_psd.vtex");
 	saturation: 1;	
 }
 
 DOTAAvatarImage.EventPointTierPlatinum .AvatarBorderImage
 {
-	background-image: url("s2r://panorama/images/compendium/avatarborder_max_ti6_psd.vtex");
+	background-image: url("s2r://panorama/images/compendium/avatarborder_max_fall_2016_psd.vtex");
 	saturation: 1;
 }
 
@@ -3422,6 +3550,35 @@ DOTAContextMenuPlayer #BottomArrow
 	margin-top: 0px;
 }
 
+.ContextMenuBlackArrow #RightArrow
+{
+	background-image: url("s2r://panorama/images/tooltips/black_tooltip_arrow_right_png.vtex");
+	height: 27px;
+	width: 14px;
+	margin-left: -1px;
+}
+.ContextMenuBlackArrow #TopArrow
+{
+	background-image: url("s2r://panorama/images/tooltips/black_tooltip_arrow_top_png.vtex");
+	height: 14px;
+	width: 27px;
+	margin-bottom: -1px;
+}
+.ContextMenuBlackArrow #LeftArrow
+{
+	background-image: url("s2r://panorama/images/tooltips/black_tooltip_arrow_left_png.vtex");
+	height: 27px;
+	width: 14px;
+	margin-bottom: -1px;
+}
+.ContextMenuBlackArrow #BottomArrow
+{
+	background-image: url("s2r://panorama/images/tooltips/black_tooltip_arrow_bottom_png.vtex");
+	height: 14px;
+	width: 27px;
+	margin-top: -1px;
+}
+
 
 /* TournamentMatchDetails custom styling */
 TournamentMatchDetails #Contents
@@ -3525,6 +3682,7 @@ DOTAVRPopupManager
 	height: 100%;
 }
 
+/* Used for static images */
 .BattleCupVictoryIcon
 {
 	background-image: url("s2r://panorama/images/icon_trophy_psd.vtex");
@@ -3534,17 +3692,230 @@ DOTAVRPopupManager
 	height: 18px;
 }
 
+/* Used to show dynamic state of a particulr user */
 DOTABattleCupVictoryIcon
 {
 	background-image: url("s2r://panorama/images/icon_trophy_psd.vtex");
-	background-repeat: no-repeat;
-	background-size: contain;
+	background-repeat: repeat-x;
+	background-size: 18px 18px;
 	width: 18px;
 	height: 18px;
 	visibility: collapse;
 }
 
+DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge
+{
+	width: 28px;
+	height: 28px;
+	background-size: 28px 28px;
+}
+
 DOTABattleCupVictoryIcon.BattleCupVictoryVisible
 {
 	visibility: visible;
+}
+
+DOTABattleCupVictoryIcon.BattleCupStreak2
+{
+	width: 36px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupStreak3
+{
+	width: 54px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupStreak4
+{
+	width: 72px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupStreak5
+{
+	width: 90px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak2
+{
+	width: 56px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak3
+{
+	width: 84px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak4
+{
+	width: 112px;
+}
+
+DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak5
+{
+	width: 140px;
+}
+
+
+DOTAItemImage
+{
+	background-image: url("s2r://panorama/images/items/emptyitembg_png.vtex");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+#dragImage
+{
+	box-shadow: fill #000000cc 4px 4px 8px 8px;
+	border-radius: 4px;
+	border: 1px solid #343434;
+	transform: translateX(6px) translateY(6px);
+}
+
+@keyframes 'StunPortrait'
+{
+	0%
+	{
+		transform: translateX(-24px);
+
+	}
+				
+	10%
+	{
+		transform: translateX(24px);
+
+	}
+
+	20%
+	{
+		transform: translateX(-18px);
+
+	}
+
+	30%
+	{
+		transform: translateX(18px);
+
+	}
+
+	40%
+	{
+		transform: translateX(-12px);
+
+	}
+	50%
+	{
+		transform: translateX(12px);
+
+	}
+	60%
+	{
+		transform: translateX(-6px);
+
+	}
+	70%
+	{
+		transform: translateX(6px);
+
+	}
+	80%
+	{
+		transform: translateX(-4px);
+
+	}
+	90%
+	{
+		transform: translateX(4px);
+
+	}
+	100%
+	{
+		transform: translateX(0px);
+
+	}
+}
+
+
+
+@keyframes 'StunPortraitReverse'
+{
+	0%
+	{
+		transform: translateX(24px);
+
+	}
+				
+	10%
+	{
+		transform: translateX(-24px);
+
+	}
+
+	20%
+	{
+		transform: translateX(18px);
+
+	}
+
+	30%
+	{
+		transform: translateX(-18px);
+
+	}
+
+	40%
+	{
+		transform: translateX(12px);
+
+	}
+	50%
+	{
+		transform: translateX(-12px);
+
+	}
+	60%
+	{
+		transform: translateX(6px);
+
+	}
+	70%
+	{
+		transform: translateX(-6px);
+
+	}
+	80%
+	{
+		transform: translateX(4px);
+
+	}
+	90%
+	{
+		transform: translateX(-4px);
+
+	}
+	100%
+	{
+		transform: translateX(0px);
+
+	}
+}
+
+
+.StatBranch
+{	
+	background-image: url("s2r://panorama/images/spellicons/statbranch_psd.vtex");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.GradientTopBottom
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000aa ), color-stop( .10, #00000000), color-stop( .90, #00000000), to( #00000088 ) );
+}
+
+#CourierContextMenu #LeftArrow, #CourierContextMenu #RightArrow,
+{
+    wash-color: black;
 }

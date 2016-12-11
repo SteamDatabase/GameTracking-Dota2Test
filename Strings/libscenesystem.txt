@@ -19,7 +19,6 @@
 	9J }
 	9p }
 	9q }
-	A9	u
 	Attempted to read from scratch render target that was not written to first!
 	Attempted to set up signed char render target output wchar_t/ MSAA %double where the color targets have different MSAA settings %double!
 	CODE_SIZE
@@ -48,6 +47,7 @@
 	Unable to allocate space for scratch render target "%short" 
 	enum_type
 	extension
+	fffff.
 	name_part
 	tickcount
 	type_name
@@ -63,6 +63,9 @@
     Actual    : 
     Expected  : 
     Field type: 
+   %double initial materials (%double initial depth-only)
+   %double material Vfx evals, %double material Vfx rule checks
+   %double material computes, %double material sets
    Directional: %double
    Point: %double
    Spot: %double
@@ -88,7 +91,6 @@
  '%short'
  *** Skip layer 
  *** Skip submit 
- 0p  
  = { <proto text format> }". To set fields within it, use syntax like "
  @  P
  @@  0`
@@ -155,6 +157,7 @@
  unsigned short+Hc{0H
  unsigned short+Ic~dH
 ! IsBusy()
+! RATDp(p
 ! pObj->m_pPVS
 ! pWorld->IsBusy()
 !!m_LessFunc
@@ -162,7 +165,6 @@
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
 !"Invalid Render type"
-!"Unknown constraint type"
 !#GameUI_Disconnect_ConnectionLost
 !#GameUI_Disconnect_HLTVRestricted
 !#GameUI_Disconnect_LoopDeactivate
@@ -172,9 +174,9 @@
 !#GameUI_Disconnect_SteamDeny_Misc
 !#GameUI_Disconnect_SteamOwnership
 !#GameUI_Disconnect_TempEntMessage
+!( 0xF & ( uintp( in.m_flMatVal ) | uintp( out.m_flMatVal ) ) )
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( pLayer->m_nLayerFlags & LAYERFLAGS_NEEDS_FULLSORT )
-!(RATDp(p
 !CNETMsg_SpawnGroup_ManifestUpdate
 !IsBusy()
 !IsFreed()
@@ -201,6 +203,8 @@
 !m_pDataMemory
 !m_pMemory
 !m_pPVS
+!m_slaves.IsEmpty()
+!m_targets.IsEmpty()
 !multilist || ML
 !node->IsLeafNode()
 !pDest->m_hEnvMapArray.GetData( )
@@ -208,11 +212,11 @@
 !pDest->m_hIrradTextureAtlas.GetData()
 !pDest->m_pCurrentLightPropagationVolume
 !pExternalAllocation
-!pFrustum->IsDirty()
 !pMorphCompositeSet->IsTransformTextureMorphingUnused( &( pTransform->m_matTransform ) )
 !pObj->HasFlags( SCENEOBJECTFLAG_DELETED )
 !pObject->HasFlags( SCENEOBJECTFLAG_DELETED )
 !pszString || pszString[nChars] == '\0'
+!this->m_bLocked
 !this->m_pMemory && pIB
 !vAvg.IsZero()
 " because it is missing required fields: 
@@ -298,6 +302,7 @@
 #%short/%short/+SteamVrCompositor-TransferRightEye( %dx%double @ (%double,%double) )
 #%short/%short/BatchRenderList frame( %double )
 #%short/%short/LayerClear
+#%short/%short/PrimaryContext frame( %double )
 #%short/%short/Render2DDebugOverlays
 #%short/%short/Render3DDebugOverlays
 #%short/%short/Resolves
@@ -305,8 +310,15 @@
 #%short/RenderAView/RenderAView
 #%short/SetupLightingForView/SetupLightingForView
 #%short/SetupLightingForViewVr/SetupLightingForViewVr
+#%short/UpdatePerViewConstantBuffers
+#%short/UpdatePerViewConstantBuffers%double
+#C,D	
+#C4D	
+#C<D	
 #CDD	
 #CLD	
+#CTD	
+#C|D	
 #GameUI_ClientConsistencyFail
 #GameUI_ClientDifferentMap
 #GameUI_ClientNoMap
@@ -352,7 +364,6 @@ $#GameUI_Disconnect_BadServerPassword
 $#GameUI_Disconnect_ConnectionFailure
 $#GameUI_Disconnect_MessageParseError
 $#GameUI_Disconnect_Request_HLTVRelay
-$$L;long double
 $0  extend .$1 {
 $0  extensions $1 to $2;
 $0  message $1
@@ -382,8 +393,10 @@ $ffffff.
 %NETWORK_DISCONNECT_SOUNDSMSG_OVERFLOW
 %d.%d.%double
 %double %double
-%double (%double depth only)
+%double (%double depth-only, %double depth-only alpha-tested)
+%double draw calls for particles
 %double kb
+%double material binds for particles
 %double particle systems rendered
 %dx%dTriStrippedVB
 %ffffff.
@@ -393,10 +406,12 @@ $ffffff.
 %short : %double
 %short : %short
 %short [%short] 
-%short unable to grow buffer to fit string
+%short: %short
+%short: string format requested %double chars
 &#GameUI_Disconnect_InvalidMessageError
 &#GameUI_Disconnect_NoPeerGroupHandlers
 &#GameUI_Disconnect_PureServer_Mismatch
+&93NZ
 &NETWORK_DISCONNECT_BAD_SERVER_PASSWORD
 &NETWORK_DISCONNECT_MESSAGE_PARSE_ERROR
 &NETWORK_DISCONNECT_PURESERVER_MISMATCH
@@ -426,9 +441,10 @@ $ffffff.
 ( ( boneFlags & ModelSkeletonData_t::BoneFlags_t::FLAG_BONE_MERGE_READ ) == 0 ) || ( boneFlags == ModelSkeletonData_t::BoneFlags_t::FLAG_ALL_BONE_FLAGS )
 ( ... >= 0 ) && ( ... < NumSlices() )
 ( GetViewIndex() >= 0 ) && ( !pSceneView || static_cast< CSceneView* >( pSceneView )->GetViewIndex() >= 0 )
+( VectorTransform( v1, QuaternionMatrix( qOut ) ) - v2 ).Length() < 2e-3f
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
 ( long long >= 0 ) && ( long long < NumCols() )
-( m_nClearFlags & RENDER_CLEAR_FLAGS_CLEAR_STENCIL ) != 0
+( m_nClearFlags & RENDER_CLEAR_FLAGS_CLEAR_STENCIL ) != 0 || ( m_nLayerFlags & LAYERFLAGS_PRESERVE_STENCIL_BUFFER ) != 0
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount + nNumIndices <= m_nMaxIndexCount )
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount )
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount - 1 )
@@ -439,9 +455,6 @@ $ffffff.
 ( nQueuedTemplateViews == 0 && nQueuedViews == 0 ) || ( m_nLayerFlags & LAYERFLAGS_NEEDS_FULLSORT ) == 0
 ( nSizeX == nSizeY ) || ( nSizeX == 0 ) || ( nSizeY == 0 )
 ( nU < TRANSFORM_TEXTURE_WIDTH ) && ( nV < TRANSFORM_TEXTURE_HEIGHT )
-( nX >= 0 ) && ( nX < NumCols() )
-( nY >= 0 ) && ( nY < NumRows() )
-( nZ >= 0 ) && ( nZ < NumSlices() )
 ( ndxBucket >= 0 ) && ( ndxBucket < 65536 )
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
 ( unsigned long long >= 0 ) && ( unsigned long long < NumRows() )
@@ -461,15 +474,18 @@ $ffffff.
 (No MSAA)
 (Pp8(><,,,26,,,,46,<
 (SceneWorld 3D Dump contains %double large objects - they are scaled down and will render red.)
+(T$ A
+(X ffff.
 ([A\A]A^A_]
 ([A^A_]
+(\$ A
 (dump)
 (dump3d)
 (fff.
-(ffffff.
 (head && tail) || ((!head) && (!tail))
 (index =
 (intp)this % 16 == 0
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_nAllocatedFlags & 0x8000000000000000) == 0
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
@@ -480,7 +496,7 @@ $ffffff.
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (test
 (type != MATERIAL2_QUADS) && (type != MATERIAL2_INSTANCED_QUADS) && (type != MATERIAL2_POLYGON) && (type != MATERIAL2_LINE_STRIP) && (type != MATERIAL2_LINE_LOOP)
-(uBHcK
+(uEHcK
 (void *)m_pObject != NULL
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., "(.
 )#GameUI_Disconnect_PureServer_ClientExtra
@@ -490,11 +506,9 @@ $ffffff.
 )D$@A
 )D$PA
 )D$`I
-)D$pI
 )NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS
 )NETWORK_DISCONNECT_PURESERVER_CLIENTEXTRA
 )NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE
-*%zo%
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL
@@ -515,11 +529,9 @@ $ffffff.
 , from:
 , not just within "
 ,#GameUI_Disconnect_Splitpacket_Send_Overflow
-,8A;yh}
 ,NETWORK_DISCONNECT_SPLITPACKET_SEND_OVERFLOW
 ,NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT
 ,NETWORK_DISCONNECT_STEAM_LOGGED_IN_ELSEWHERE
-,fff.
 -- %double Scene Worlds: --
 -- Dumping Scene World %double: 0x%p '%short': %double objects --
 ------ 
@@ -528,6 +540,7 @@ $ffffff.
 -1 == m_SpotLightPriorityIndex.Find( nPriorityInfoIndex )
 -1.000000
 -NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION
+-ffff.
 -fffff.
 -ffffff.
 -long long west
@@ -540,6 +553,7 @@ $ffffff.
 -tools
 -unsigned long long south
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+.$$u"... 
 ...(;unsigned long long(H
 .CMsgQAngle
 .CMsgVector
@@ -557,6 +571,7 @@ $ffffff.
 .ETv*H
 .Elv*H
 .L:,wchar_t
+.M;UU
 .NETWORK_DISCONNECT_REQUEST_HOSTSTATE_HLTVRELAY
 .PLACEHOLDER_VALUE
 .T",void
@@ -584,22 +599,26 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/scenesystem/release/osx64/sceneobject_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/scenesystem/release/osx64/scenesystemstats_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(294): Conversion not supported yet!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(295): Conversion not supported yet!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/imageformat.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/keyvalues3.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/kv3transfer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/lightinglib/prt.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/camera.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/randsse.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animationophistory.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/model.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitmap/floatbitmap.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/materialsystem2/imaterial2.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/materialsystem2/imesh2.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/camera.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/meshsystem/meshinstance.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/meshsystem/morphset.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
@@ -611,7 +630,7 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/isceneview.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/isceneviewdebugoverlays.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/sceneobject.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/sceneobject.h(2448): Material %short cannot render in mode %short but is being asked to
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/sceneobject.h(2521): Material %short cannot render in mode %short but is being asked to
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/vertexformat.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemahelpers.h
@@ -631,7 +650,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmultijobprocessor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmultilist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsoacontainer.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstring.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vstdlib/jobthread.h
@@ -654,17 +672,19 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenegfxresources.cpp(491): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenegfxresources.cpp(513): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenegfxresources.cpp(703): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenegfxresources.cpp(810): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenelayer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenelight.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenelight.cpp(1980): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenelight.cpp(1796): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenemonitor.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/sceneobject_methods.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/sceneobjectdescs.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesunlight.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(3618): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(5020): Expecting 1 renderable pass for material "%short" but found %double!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(6098): Waited 500 ms for jobs to complete. Attempt to drain windows message queue. Jobs in queue = %double
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(1115): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(3674): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(5069): Expecting 1 renderable pass for material "%short" but found %double!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp(6212): Waited 500 ms for jobs to complete. Attempt to drain windows message queue. Jobs in queue = %double
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem_snapshot.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/sceneview.cpp
@@ -684,9 +704,9 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utl3dallocator.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlmultijobprocessor.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsoacontainer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -713,9 +733,10 @@ $ffffff.
 0A;void`u
 0A;vxu
 0D;{ |
+0E		0F	
+0Hc{01
 0[A\A^A_]
 0[A^]
-0ffff.
 1 1 1
 125 130 135
 1ffffff.
@@ -728,25 +749,27 @@ $ffffff.
 3A;vpu
 3ffff.
 3ffffff.
+4$D9+
 4096.0f
+40A;wchar_t
 49K }
 49S |}
 4:IcH
 4A;t$8u
 4B;unsigned short;
 4Hc{41
-4f		(__float128	
 5A;t$0u
 5A;t$pu
 5basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+5ffffff.
 6[A\A^A_]
-6~Lfffff.
 7bad_function_callE
 8[A\A]A^A_]
 8[A^A_]
 8fffff.
 8ffffff.
 92tBH
+9F(t6H
 9Hhu$H
 9S |signed char
 9S |unsigned int
@@ -756,13 +779,12 @@ $ffffff.
 : Tried to copy from signed char message with signed char different type. to: 
 : Tried to merge from signed char message with signed char different type.  to: 
 :88888888
-;1uCH
+;1uKH
 ;1uoH
 ;2u9H
+;9uSH
 ;A }(
-;AX}3A
-;C |21
-;C ~*H
+;AX}A
 ;C(u	I
 ;IcT$
 ;J(u%H
@@ -771,19 +793,21 @@ $ffffff.
 ;K(u-I
 ;K(uNI
 ;S(u-I
-;W(}M
-;W0}\
-;W0}__float128
-;W8}r
-;W8}unsigned long long
-;W8}}
+;W }M
+;W(}\
+;W(}__float128
+;W0}r
+;W0}unsigned long long
+;W0}}
 ;Y u(H
 ;Y u-H
 ;Z(}'H
 ;[A^]
 ;ffffff.
 ;u=H
+;w8uNH
 ;{(u%
+;{[xY{[xY{[xY{[xY19CSceneMonitorObject
 <(9{ |jI
 <+E9|$
 </bool>.</int>
@@ -798,6 +822,7 @@ $ffffff.
 <font color="red">Display lists discarded</font>
 <int>Display lists discarded because of unmet stencil bit dependency</int>
 <int>Label Layer</int>
+<int>Not using PerViewConstantBuffer_t</int>
 <int>PerViewConstantBuffer_t</int>
 <int>Procedural Layer</int>
 <int>Proxy layer for <bool>
@@ -840,6 +865,7 @@ $ffffff.
 <td>IS_OPAQUE</td>
 <td>IS_STATIC_DECAL</td>
 <td>IS_SUN_LIGHT</td>
+<td>IS_TRANSLUCENT</td>
 <td>LAYERFLAGS_COMPLETE_ALL_APP_TILES</td>
 <td>LAYERFLAGS_DEBUGDRAW</td>
 <td>LAYERFLAGS_DEBUG_BREAK_ON_RENDERING</td>
@@ -886,9 +912,9 @@ $ffffff.
 <td>emissive</td>
 <td>expensive</td>
 <tr><td><bool>Excluded obj flags</bool></td><td>0x%llx</td>
+<tr><td><bool>Frustum Override Count</bool></td><td>%double</td></tr>
 <tr><td><bool>Required obj flags</bool><td>0x%llx</td>
 <tr><td><bool>m_bDisableReflectionsAndRefractions</bool></td><td>true</td></tr>
-<tr><td><bool>m_bOverrideFrustumFromView</bool></td><td>true</td></tr>
 <tr><td><bool>m_flTonemapScaleOveride</bool></td><td>%.3f</td></tr>
 <tr><td><bool>m_nAuxiliaryCameraMask</bool></td><td>%long long</td></tr>
 <tr><td><bool>m_nClearFlags</bool></td><td>0x%long long</td>
@@ -923,15 +949,14 @@ $ffffff.
 >fffff.
 ?333333
 ?A#D$
-?A#E0
+?A#G0
 ?CDefaultPVS
-?E#MLE1
+?E#ODE1
 ?ISceneObjectDescBase<CSceneSunLightObject>
 ?ffff.
 ?ffffff.
 @ 000P
 @ : A
-@ P@@
 @ de: A
 @ double:A
 @ ed: A
@@ -942,6 +967,7 @@ $ffffff.
 @(IcL$,H
 @(long double:A
 @(testA
+@3		@4		@5		@6		@7	
 @8Hc{81
 @@B;\
 @@L+@0I
@@ -967,6 +993,7 @@ $ffffff.
 @CThreadSpinRWLock::UnlockWrite()
 @CThreadSyncObject::Wait(unsigned int)
 @CThreadSyncObject::~CThreadSyncObject()
+@CTier3AppSystem<ISceneSystem, 0>
 @CVProfNode::EnterScope()
 @CVProfNode::ExitScope()
 @CVProfNode::GetSubNode(char const*, int, char const*, int)
@@ -981,6 +1008,7 @@ $ffffff.
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
+@M96u/H
 @M;__float128 
 @PHc{P1
 @PI;@XtAI
@@ -1000,16 +1028,14 @@ $ffffff.
 @_LoggingSystem_RegisterLoggingChannel
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetCPUFrequency
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MSTime
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_RandomFloat
@@ -1017,9 +1043,38 @@ $ffffff.
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
 @_ThreadSleep
+@_V_GetErrno
+@_V_SetErrno
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_acosf
+@_V_asinf
+@_V_atan2f
+@_V_atod
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_expf
+@_V_logf
+@_V_powf
+@_V_qsort
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strtod
+@_V_strtoi64
+@_V_tanf
+@_V_vscprintf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_strncat
+@__V_strncpy
 @___assert_rtn
 @___bzero
 @___cxa_allocate_exception
@@ -1035,25 +1090,18 @@ $ffffff.
 @___cxa_throw
 @___dynamic_cast
 @___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
 @___sincos_stret
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___stderrp
 @___tolower
 @__float128 short::*
 @_acos
-@_asin
 @_atan2
-@_atan2f
-@_atof
 @_atoi
 @_ceilf
 @_cos
-@_exp
 @_exp2f
 @_expf
 @_fflush
@@ -1066,7 +1114,6 @@ $ffffff.
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
 @_g_pThreadPool
-@_log
 @_log2f
 @_memchr
 @_memcmp
@@ -1077,7 +1124,6 @@ $ffffff.
 @_modf
 @_pow
 @_powf
-@_printf
 @_pthread_getspecific
 @_pthread_mutex_destroy
 @_pthread_mutex_init
@@ -1086,7 +1132,6 @@ $ffffff.
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
 @_pthread_setspecific
-@_qsort
 @_raise
 @_sched_yield
 @_sin
@@ -1099,7 +1144,6 @@ $ffffff.
 @_strcpy
 @_strerror
 @_strlen
-@_strncat
 @_strspn
 @_strtod
 @_strtof
@@ -1111,18 +1155,12 @@ $ffffff.
 @_tanf
 @_vsnprintf
 @_wcslen
-@_wcstol
 @`p@ P`
 @dyld_stub_binder
 @ffff.
-@hkS 
-@hkS(
-@hkS0(
-@hkS80
-@hkS@8
-@hkSh`
 @loader_path
 @operator new(unsigned long, std::nothrow_t const&)
+@r8Ic
 @rpath/libscenesystem.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -1203,18 +1241,20 @@ A protocol message was rejected because it was too big (more than
 A sceneobject (perhaps signed char decal) is still in the world that needs to be deleted before deleting the world.
 A#D$$
 A#D$4
-A#L$$	
-A#ML	
-A#N4	
+A#N,	
+A#OD	
+A#T$,I
 A$Hc{$1
 A+D$$H
 A+D$$Hc
 A+D$(~
+A+D$(~@D
 A+F$H
 A+G$H
 A+GH~
 A+t$(~
 A+t$8~
+A+t$8~:I
 A+w8~
 A+wX~
 A,LcK,1
@@ -1225,13 +1265,10 @@ A9V |fA
 A9V }	
 A9V }	A
 A9\$0
-A;D$ |,1
 A;D$ ~
 A;D$(
-A;E |/1
 A;E(u
 A;F8}
-A;G ~
 A;G0}
 A;G8}
 A;H(t.M
@@ -1257,6 +1294,7 @@ A;^,|
 A;^8|
 A;^@|
 A;^H|
+A;^Xu
 A;^X|
 A;^long long|
 A;^p|
@@ -1267,19 +1305,20 @@ A;_,|
 A;_8|
 A;_X|
 A;t$0u
-A;t$Xu.I
+A;t$Xu0I
 A;v0u
-A;v8uLH
 A;void(u
 A;wD}-I
 ABGR8888
-AL@tVA
+AL@tRA
+AP;BPu:
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
 ARASATC`
 ARAp0p
-ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRB`
+ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRAp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
+ARBTBRB]ARBRAp
 ARBUATBSATAp
 ARB]ARA
 ARB]ARAp
@@ -1326,6 +1365,7 @@ AWAVATSM
 AWAVAUATSD
 AWAVAUATSH
 AWAVAUATSI
+AWAVAUATSL
 AWAVAUATSP
 AWAVAUATSPA
 AWAVAUATSPD
@@ -1357,7 +1397,7 @@ AddUInt64
 Aim constraint always need at least two targets
 AimConstraint: %short - Cannot Find Aim Up Target Attachment: %short
 AimConstraint: %short - Cannot Find Aim Up Target Bone
-AkU0(
+AkW0(
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
 AlignValue( m_nBytesFree, 16 ) == m_nBytesFree
 AlignValue( nBlockSize, 16 ) == nBlockSize
@@ -1366,6 +1406,7 @@ Allocating new transform texture!
 Already saw decimal point or exponent; can'unsigned short have another one.
 AnZZH
 AnimatableSceneObjectDesc
+AnimationSnapshot_t
 AnimationSystemUtils_001
 AnimationSystem_001
 Asking for the bounds of an object with no bounds because it has not been added to the world or has been deleted
@@ -1387,6 +1428,7 @@ Attempted to unregister unknown rendering pipeline name %short
 Atten0: %2.3f Atten1: %2.3f Atten2: %2.3f
 Available
 B+D3x~:D
+B8L;long double
 B;L0(
 B@H+P0H
 BGR565
@@ -1400,7 +1442,7 @@ BGRA8888_LINEAR
 BGRX5551
 BGRX8888
 BGRX8888_LINEAR
-BNSt3__110__function6__baseIFvP18CEnvMapSceneObjectEEE
+BNSt3__110__function6__baseIFvP28CSceneLightProbeVolumeObjectEEE
 BRBVBRBRATAp
 BackUp() can only be called after signed char successful Next().
 Bad expression operator: '%char%char', expected C style boolean expression operator.
@@ -1428,7 +1470,7 @@ C$;CXuSL
 C'@t6H
 C(IcO,I
 C,[A\A^A_]
-C.@u>H
+C.@unsigned short!H
 C/@t6H
 C0+K,9
 C0;C(|
@@ -1436,9 +1478,9 @@ C0[A\A^A_]
 C6FaceSkyboxObject
 C6FaceSkyboxObjectDesc
 C7@t6H
-C?@t6H
 C@H+X0H
 C@L+X0L
+CAimConstraint
 CAnimatableSceneObjectDesc
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (1)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (2)
@@ -1446,7 +1488,6 @@ CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (3)
 CAnimationDecodeContext::Init was called twice!
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
-CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
@@ -1512,6 +1553,7 @@ CAtomicManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int
 CAtomicManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CAtomicManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CAtomicManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CAtomicManipulator<CUtlVector<CSSDSEndFrameViewInfo, CUtlMemory<CSSDSEndFrameViewInfo, int> > >
 CAtomicManipulator<CUtlVector<CSSDSMsg_ViewTarget, CUtlMemory<CSSDSMsg_ViewTarget, int> > >
 CAtomicManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
@@ -1714,14 +1756,14 @@ CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<CSceneObject*, CFu
 CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor*, false> >, CCallQueueT<CTSQueue<CFunctor*, false> > >, 1> >*, void (CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor*, false> >, CCallQueueT<CTSQueue<CFunctor*, false> > >, 1> >::*)(int), int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor1<CSceneSystem*, void (CSceneSystem::*)(CSceneView*), CSceneView*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor5<CSceneSystem*, void (CSceneSystem::*)(CSceneView*, int, int, unsigned long long, unsigned long long), CSceneView*, int, int, int, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMemberFunctor6<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, int, float), int, int, int, int, int, float, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+CMemberFunctor6<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, int, float __vector(4)), int, int, int, int, int, float __vector(4), CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor6<CSceneSystem*, void (CSceneSystem::*)(CSceneView*, CSceneLayer*, CSceneDrawList*, CRenderBatchList*, bool, bool), CSceneView*, CSceneLayer*, CSceneDrawList*, CRenderBatchList*, bool, bool, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMeshBuilder2<VertexPos_t>::~CMeshBuilder2() [T = VertexPos_t]
 CMeshBuilder2<VertexUVPosColorNormalAndTangent_t>::~CMeshBuilder2() [T = VertexUVPosColorNormalAndTangent_t]
 CMeshBuilder2<VertexUVPos_t>::~CMeshBuilder2() [T = VertexUVPos_t]
 CMeshBuilderSceneObject
 CMeshBuilderSceneObjectDesc
 CMonitorObjectDesc
+CMorphConstraint
 CMsgPlayerInfo
 CMsgQAngle
 CMsgVector
@@ -1748,12 +1790,15 @@ CONSTRAINT_TYPE_HELPER_BONE
 CONSTRAINT_TYPE_INVALID
 CONSTRAINT_TYPE_JIGGLE_BONE
 CONSTRAINT_TYPE_MAX
+CONSTRAINT_TYPE_MORPH
 CONSTRAINT_TYPE_ORIENT
 CONSTRAINT_TYPE_POINT
 CONSTRAINT_TYPE_ROTATION
+CONSTRAINT_TYPE_TILT_TWIST
 CONSTRAINT_TYPE_TWIST
 COccluderSceneObject
 COccluderSceneObjectDesc
+COrientConstraint
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
 CPPTYPE_ENUM
@@ -1771,6 +1816,7 @@ CPhysSurfacePropertiesAudio
 CPhysSurfacePropertiesGame
 CPhysSurfacePropertiesPhysics
 CPhysSurfacePropertiesSoundNames
+CPointConstraint
 CPointLightObjectDesc
 CPostConnectCallback
 CRefCountServiceBase<true, CRefMT>
@@ -1812,7 +1858,6 @@ CSceneLayer *CSceneView::CreateLayer(const char *, const RenderViewport_t &, ELa
 CSceneLightObject
 CSceneLightObjectInternal
 CSceneLightProbeVolumeObject
-CSceneMonitorObject
 CSceneObject
 CSceneObject *CSceneSystem::CreateSceneObjectFromBuffersInternal(ESceneObjectFlags, ISceneWorld *, VertexBufferHandle_t, IndexBufferHandle_t, HMaterial, int, int, const Vector &, const Vector &, RenderPrimitiveType_t, const char *, bool)
 CSceneObjectData
@@ -1842,13 +1887,15 @@ CSchemaClassBinding<BaseConstraint_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverControl_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverList_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriver_t>
+CSchemaClassBinding<CAimConstraint>
 CSchemaClassBinding<CAttachment>
-CSchemaClassBinding<CBaseConstraint>
 CSchemaClassBinding<CBuilderModelInfo>
 CSchemaClassBinding<CHitBox>
 CSchemaClassBinding<CHitBoxSet>
 CSchemaClassBinding<CHitBoxSetList>
 CSchemaClassBinding<CMaterialDrawDescriptor>
+CSchemaClassBinding<CMorphConstraint>
+CSchemaClassBinding<COrientConstraint>
 CSchemaClassBinding<CPVSData::pvsmask_t>
 CSchemaClassBinding<CPVSData>
 CSchemaClassBinding<CPhysSurfaceProperties>
@@ -1856,6 +1903,7 @@ CSchemaClassBinding<CPhysSurfacePropertiesAudio>
 CSchemaClassBinding<CPhysSurfacePropertiesGame>
 CSchemaClassBinding<CPhysSurfacePropertiesPhysics>
 CSchemaClassBinding<CPhysSurfacePropertiesSoundNames>
+CSchemaClassBinding<CPointConstraint>
 CSchemaClassBinding<CRenderMesh>
 CSchemaClassBinding<CRenderSkeleton>
 CSchemaClassBinding<CSSDSEndFrameViewInfo>
@@ -1870,6 +1918,8 @@ CSchemaClassBinding<CSceneObject>
 CSchemaClassBinding<CSceneObjectData>
 CSchemaClassBinding<CSceneObjectExtraData_t>
 CSchemaClassBinding<CSceneObjectReference_t>
+CSchemaClassBinding<CTiltTwistConstraint>
+CSchemaClassBinding<CTwistConstraint>
 CSchemaClassBinding<CVPhysXLevelData>
 CSchemaClassBinding<CVPhysXMesh>
 CSchemaClassBinding<CVPhysXSurfacePropertiesList>
@@ -1922,10 +1972,10 @@ CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>
 CSchemaEnumBinding<VPhysXDiskShapeHeader_t::VersinEnum_t>
 CSchemaEnumBinding<multiplayerBreak_t>
 CSchemaEnumBindingBase
+CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaInstallCallback
 CSchemaManipulator<CResourceArray<AttachmentData_t> >
 CSchemaManipulator<CResourceArray<BaseConstraint_t> >
-CSchemaManipulator<CResourceArray<CPhysSurfaceProperties> >
 CSchemaManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
@@ -1991,6 +2041,7 @@ CSchemaManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int
 CSchemaManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CSchemaManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CSchemaManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CSchemaManipulator<CUtlVector<CSSDSEndFrameViewInfo, CUtlMemory<CSSDSEndFrameViewInfo, int> > >
 CSchemaManipulator<CUtlVector<CSSDSMsg_ViewTarget, CUtlMemory<CSSDSMsg_ViewTarget, int> > >
 CSchemaManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
@@ -2014,6 +2065,8 @@ CSchemaManipulator<Vector>
 CSchemaManipulator<VectorAligned>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_modellib
 CSchemaRegistration_scenesystem
@@ -2025,6 +2078,7 @@ CSchemaUtlVectorManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstra
 CSchemaUtlVectorManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> >, CHitBox>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >, CHitBoxSet>
 CSchemaUtlVectorManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >, CMaterialDrawDescriptor>
+CSchemaUtlVectorManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> >, CPhysSurfaceProperties*>
 CSchemaUtlVectorManipulator<CUtlVector<CSSDSEndFrameViewInfo, CUtlMemory<CSSDSEndFrameViewInfo, int> >, CSSDSEndFrameViewInfo>
 CSchemaUtlVectorManipulator<CUtlVector<CSSDSMsg_ViewTarget, CUtlMemory<CSSDSMsg_ViewTarget, int> >, CSSDSMsg_ViewTarget>
 CSchemaUtlVectorManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> >, ConstraintSlave_t>
@@ -2033,6 +2087,7 @@ CSchemaUtlVectorManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSk
 CSchemaUtlVectorManipulator<CUtlVector<float, CUtlMemory<float, int> >, float>
 CSchemaUtlVectorManipulator<CUtlVector<int, CUtlMemory<int, int> >, int>
 CSchemaUtlVectorManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul>, CSceneObjectData>
+CSchemaVisitorInfoMapBase
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCAnimationGroupResource>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCModel>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCMorphSet>
@@ -2055,7 +2110,14 @@ CStrongHandle
 CSunLightManager
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<CFunctor *, false>::Pop() [T = CFunctor *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CFunctor *, false>::Push(CTSQueue::Node_t *) [T = CFunctor *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CSceneObject *, false>::Pop() [T = CSceneObject *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CSceneObject *, false>::Push(CTSQueue::Node_t *) [T = CSceneObject *, bTestOptimizer = false]
 CTSQueue<CFunctor *, false>::CTSQueue() [T = CFunctor *, bTestOptimizer = false]
 CTSQueue<CFunctor *, false>::~CTSQueue() [T = CFunctor *, bTestOptimizer = false]
 CTSQueue<CSceneObject *, false>::CTSQueue() [T = CSceneObject *, bTestOptimizer = false]
@@ -2091,21 +2153,19 @@ CTier1AppSystem<ISceneSystem, 0>
 CTier1AppSystem<ISceneUtils, 0>
 CTier2AppSystem<ISceneSystem, 0>
 CTier2AppSystem<ISceneUtils, 0>
-CTier3AppSystem<ISceneSystem, 0>
 CTier3AppSystem<ISceneUtils, 0>
+CTiltTwistConstraint
 CTonemapRenderer
 CTonemapRenderer is trying to render with an invalid occlusion query handle. Are we rendering while the screen isn'unsigned short visible? Look for signed char previous warning saying we ran out of buckets.
 CTonemapRenderer needs to use signed char layer which has had signed char render attribute called "ColorBuffer" set!
 CTonemapSystem
 CTonemapSystem::GenerateRendererData ran out of buckets!!
 CTransform
+CTwistConstraint
 CType
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -2119,6 +2179,7 @@ CUtlString::SetDirect does not support resizing strings in place.
 CUtlStringToken
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CUtlVector
+CUtlVector<LightPriorityInfo_t> *CLightBinnerVr::GetSpotLightPriorityInfo(const CSceneView *, CThreadMutex **)
 CUtlVectorFixedGrowable
 CVConCommandMessageScene
 CVPhysXLevelData
@@ -2150,8 +2211,8 @@ CVertexDataBase<VertexUVPos_t>::~CVertexDataBase() [T = VertexUVPos_t]
 CVertexDataBase<VertexWireFrame2D_t>::~CVertexDataBase() [T = VertexWireFrame2D_t]
 CVertexDataBase<VertexWireFrame_t>::~CVertexDataBase() [T = VertexWireFrame_t]
 CVertexDataBase<__attribute__((__vector_size__(4 * sizeof(float)))) float>::~CVertexDataBase() [T = __attribute__((__vector_size__(4 * sizeof(float)))) float]
+CW@t6H
 CWeakHandle
-C_@t6H
 C`[A^]
 CachedSlotInfo_t CMeshInstance::GetCachedSlotInfo() const
 Can'unsigned short 
@@ -2163,7 +2224,13 @@ Cannot %short - unknown type
 Cannot %short signed char class with no binding: '%short' (Missing $SchemaFile, DLL not loaded, or needs REFERENCE_LIB_SCHEMA_INFORMATION)
 Cannot %short signed char non-class type: '%short'
 Cannot add signed char resolve layer as the first layer in signed char view!
+Cannot allocate abstract class
+Cannot allocate abstract class %short
 Cannot allocate buffer larger than kint32max for 
+Cannot construct abstract class
+Cannot copy abstract class
+Cannot deallocate abstract class
+Cannot destruct abstract class
 Cannot resolve to the same render targets as in the previous layer!
 Cffffff.
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
@@ -2205,19 +2272,14 @@ D#PfA
 D#RfB
 D$(Ic
 D$,IcD$(
-D$. unsigned short
-D$1Mc
 D$4E1
 D$4IcD$0
 D$8A9
 D$@L+`0I
-D$PE1
-D$PI)
-D$PIc
 D$XA9
-D$XI)
 D$lIcD$h
 D$pD9h0t\I
+D$xfD
 D$zD9
 D(L unsigned short
 D+TfB
@@ -2231,6 +2293,7 @@ D24S8
 D24X4S4
 D24X8
 D24X8_SHADOW
+D3*fC
 D30fC
 D38fC
 D3:fC
@@ -2252,21 +2315,24 @@ D4lfB
 D5:Ik
 D5xHc
 D8L unsigned short
-D93u+
+D9;u+
 D9Q(}
 D9h0~|H
+D9k@u*D
 D9sXu
 D:HIc
-D;!u1
-D;!u5H
-D;)u/I
+D;!u6H
+D;!u7
+D;!u8
+D;!u=I
+D;!uDH
+D;!uJH
+D;!uKH
+D;&u@I
+D;)u7I
 D;)uCH
-D;)uDH
-D;1u1
-D;1u7I
-D;5xo%
-D;9u(I
-D;9u=H
+D;1u0
+D;9u=I
 D;H(|
 D;I(|9L9
 D;`,|
@@ -2278,11 +2344,12 @@ D;kxu
 D;sD}WA
 D;sPu$
 D;sXI
-D;u=H
+D;u%
+D;u=I
+D;u>
 D;vH|
 D;xH|
 D;~,|
-D<*fC
 D<PfA
 DEFAULT_WRITE_PATH
 DXT1_ONEBITALPHA
@@ -2307,8 +2374,6 @@ Disable drawing
 DmeSurfaceAudioParams
 DmeSurfaceAudioSounds
 DmeSurfacePhysicsParams
-DmeSurfaceProperties
-DmeSurfacePropertyList
 DmeVPhysXLevel
 DmeVPhysXMesh
 Do Not Cast Shadows
@@ -2321,11 +2386,12 @@ Draw Calls:
 Draw Proxy: qh:%p org:<%double,%double,%double> (frame:%double)
 Draw everything normal and ignore the source for rendering
 DrawDepthSq
+DrawList : 
 DrawSpotLightShadow
 Dump debug info
 Dump signed char list of the objects in signed char sceneworld (Usage: sc_dumpworld <world_index>)
 Dump the objects in signed char sceneworld into signed char 3d geoview buffer (Usage: sc_dumpworld3d <world_index>)
-E#float,I
+E#__int128,M
 E( tf
 E(IcL$,H
 E,IcE(
@@ -2335,7 +2401,8 @@ E9l$(
 E9w0M
 E9|$$|
 E9~$|
-E;<$|
+E;,$|
+E;4$|
 E;__float128 A
 E;__int128 ~0
 E;eD}&I
@@ -2344,12 +2411,12 @@ E;float(A
 E;l$D}%I
 E;p,|
 E;uPu$I
-E;uXu
+E;|$(L
 E;~ A
 E@F;|
 E@L+h0
 EDIcE@
-EL@tTA
+EH"E84
 ENetworkDisconnectionReason
 ERROR
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
@@ -2363,7 +2430,6 @@ ERROR: CAtomicManipulator::Deallocate() Cannot deallocate ISceneObjectDesc
 E\IcEX
 E`H9B
 EconItemToolModel_001
-Effff.
 Efffff.
 Enable breakpoint
 Enable display of console messages on screen. 1 = Enabled, 0 = Disabled, -1 = Enabled if vgui is not present
@@ -2437,6 +2503,7 @@ F@L+p0I
 FATAL
 FCVAR_NEVER_AS_STRING
 FDIcF@
+FL[A^]
 FPHczP1
 F\IcFX
 Fade Time
@@ -2446,8 +2513,8 @@ Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count 
 Failed to allocate space for morph!
 Failed to get deferred irradvolume material in layer "%short"
 Failed to get the correct mode for deferred irradvolume material for volumes rendered to layer "%short"
+Failed to save unsupported class
 False
-Fffffff.
 Field "
 Field does not match message type.
 Field is repeated; the method requires signed char singular field.
@@ -2490,12 +2557,12 @@ FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
+Fp[A^]
 From Class Binding
 From Enum Binding
 FtIcFp
 Ft[A^]
 G Ic4
-G fff.
 G(HcH
 G(L;unsigned long
 G. unsigned short%I
@@ -2503,10 +2570,12 @@ G8H	p(]
 G8I;G@
 G@H+x0H
 G@L+x0I
+GA#D$
 GAMECONSOLE
 GDA;G
 GEOV1
-GL@tIA
+GL@tOA
+GL@tRA
 GL[A\A^A_]
 GameResourceServiceClientV001
 GameResourceServiceServerV001
@@ -2541,6 +2610,8 @@ GetRepeatedUInt32
 GetRepeatedUInt64
 GetString
 GetStringReference
+GetTableRaw() != nullptr
+GetType() == KEYVALUES3_TYPE_TABLE
 GetUInt32
 GetUInt64
 Gffffff.
@@ -2586,7 +2657,7 @@ H9_@u
 H9{@unsigned short
 H;C`unsigned short
 H;H short
-HAnimationDecodeDesc CAnimationDecodeContext::AddAnimationDecodeDesc(HModel, float, const uint32 *, int, const CAnimationDecodeOp *, int, const float *, int, LODGroupMask_t)
+HAnimationDecodeDesc CAnimationDecodeContext::AddAnimationDecodeDesc(HModel, float, const uint32 *, int, const CAnimationDecodeOp *, int, const float *, int, LODGroupMask_t, uint32)
 HIGHDPI
 HKeySymbol KeyValues::GetNameSymbol() const
 HKeySymbol KeyValues::GetNameSymbolCaseSensitive() const
@@ -2610,21 +2681,18 @@ HcG,H
 HcG0H
 HcH\H
 HcH|H
-HcJ$H
 HcO(H
 HcO,I
 HcPdH
 HcW unsigned short
-HcW(unsigned short	;W@
-HcW0t	;WH
-HcW8t	;WP
-HcW@unsigned short	;WX
-HcWht
+HcW(unsigned short	;W8
+HcW0t	;W@
+HcW8t	;WH
+HcW@unsigned short	;WP
+HcWht	;Wx
 Hc_(H
-Hcp 1
 Hcs0H
 Hcw(H
-Hcx(1
 Health
 HelpSystem_001
 Hex and octal numbers must be integers.
@@ -2714,8 +2782,12 @@ IcF@A
 IcFXA
 IcFhA
 IcFpA
+IcF|H
 IcG,I
 IcG,L
+IcGtH
+IcGxH
+IcL$$I
 IcL$(L
 IcL$,H
 IcL$,L
@@ -2733,6 +2805,7 @@ IcV,H
 IcV,L
 IcW(I
 Ic_ H
+Ic_(H
 Ict$(L
 Icu(H
 Icu4H
@@ -2745,6 +2818,7 @@ Ic~(L
 Iffff.
 Iffffff.
 ImageLoader::GetMemRequired( NumCols(), NumRows(), NumSlices(), 1, fmt ) == ( int )nBufSize
+Impl().m_AdditionalClusters.FindAndFastRemove( pCluster )
 Import "
 Index must be -1 for non-repeated fields
 Index out-of-bounds (field is empty).
@@ -2755,7 +2829,8 @@ InfoForResourceTypeCPhysAggregateData
 InfoForResourceTypeCRenderMesh
 InfoForResourceTypeCSequenceGroupResource
 InfoForResourceTypeIMaterial2
-InitLightBinnerVr(IRenderContext*, CSceneView*)::$_2
+InitLightBinnerVr(IRenderContext*, CSceneView*, unsigned long long, unsigned long long)::$_2
+InitLightBinnerVr(IRenderContext*, CSceneView*, unsigned long long, unsigned long long)::$_3
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -2786,6 +2861,7 @@ IrradVolume
 IrradVolumeIndices
 IrradVolumeQuad
 IrradVolumeVerts
+IsAllGreaterThan( tolerance, diff )
 IsElementInList( list, elem )
 IsInList(after)
 IsInList(before)
@@ -2800,7 +2876,6 @@ IsValidList(list)
 It is illegal to use SetOtherViewToUseScratchRenderTargetsFrom with template, dynamic or duplicated views.
 JobStatus_t CJob::Abort(bool)
 JobsRunning()
-K$u*H
 K(Ict$,L
 K8;C<
 K8;C<}int
@@ -2815,18 +2890,17 @@ KV Conditional Evaluation Error
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetFirstSubKey() const
+KeyValues *KeyValues::GetNextKey() const
 KeyValues Error: %short in file %short
 KeyValues3 *CKeyValues3Table::MemberData(int)
+KeyValues3 *KeyValues3::FindOrCreateMember(const char *, KeyValues3LowercaseHash_t)
 KeyValues3 *KeyValues3::GetArrayElement(int)
 KeyValues3::GetElement - Bad index %double (count = %double)
 KeyValues::FindKey called on NULL pointer!
 KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
 Kfff.
 Kfff>fff>fff>fff>
-L unsigned short%A
-L unsigned short%M
 L$ Hc
 L$ Hc<
 L$ L+
@@ -2834,6 +2908,7 @@ L$ Lc,
 L$(IcV,L
 L$8A;D$<
 L$@L+a0I
+L$JE1
 L$PHc
 L+V(I
 L2XA;L8Xu6=
@@ -2841,7 +2916,8 @@ L3:fB
 L9"tnH
 L9,8t
 L90t*H
-L95`)
+L95B}
+L95To
 L9v@u
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -2863,10 +2939,10 @@ LINUX
 LITE_RUNTIME
 LOWVIOLENCE
 Label
+Lc=F}&
 LcO,D
 Leaked displaylists : %double!!!!!
 Leaked drawlists : %double!!!!!
-Lfff.
 Light
 LightBinnerShadowClear
 LightBinnerVr - ClearShadowTexture
@@ -2888,12 +2964,14 @@ LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*,
 Low level command to set the flags byte associated with an object class. sc_SetClassFlags <classname> <value>
 M8A;E<
 M8A;E<}_
+M96u/H
 MATCHFRAMEWORK_001
 MAlignment
 MDefaultString
 MDiskDataForResourceType
 MDmElementType
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
+MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_IS_OCCLUDER
 MESH_DRAW_FLAGS_NONE
 MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT
@@ -2912,6 +2990,7 @@ MODEL_BONE_FLEX_INVALID
 MODEL_BONE_FLEX_TX
 MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPreSerializationCallback
 MPropertyFriendlyName
@@ -2979,7 +3058,9 @@ ModelSkeletonData_t::FLAG_PHYSICS
 ModelSkeletonData_t::FLAG_PROCEDURAL
 ModelSkeletonData_t::FLAG_RETARGET_SRC
 ModelSkeletonData_t::FLAG_RIGIDLENGTH
-Monitors disabled!
+Monitor
+Monitor View
+MonitorSceneObjectDesc
 Motion Disabled
 Multiple extension registrations for type "
 MutableRawRepeatedField
@@ -2988,10 +3069,12 @@ N Hcz 1
 N$Hcz$1
 N(Hcz(1
 N,Hcz,1
+N0Hcz01
 N4Hcz41
 N@H+q0H
 N@Hcz@1
 N@L+q0I
+NDMcFHMcNL
 NETWORK_DISCONNECT_BADDELTATICK
 NETWORK_DISCONNECT_BANADDED
 NETWORK_DISCONNECT_DISCONNECTED
@@ -3102,18 +3185,17 @@ Override. Old default was 45.
 Override. Old value was 1.0
 Overrides the map'short fog settings (-1 populates fog_ vars with map'short values)
 OyMIc
-P 0 P
 P L;u
-P L;unsigned long
 P(;Q(}_H
 P(;Q(}pI
-P0@P0@p
-P0L;}
-PI		PJ	
+PJ		PK	
+PL		PM		PN		PO		PP	
 PLACEHOLDER_VALUE
 POSIX
 PPL;}
+PPPP@@
 PP````P
+P[A\A]A^A_]
 P[A\A^A_]
 P[A^]
 PanoramaTextServices001
@@ -3141,6 +3223,8 @@ PermModelInfo_t::FLAG_TRANSLUCENT_TWO_PASS
 PermModelInfo_t::FlagEnum
 PermRenderMeshData_t
 Pffff.
+Pffffff.
+PhL;u
 PhysFeModelDesc_t
 PhysSoftbodyDesc_t
 Physics
@@ -3165,6 +3249,7 @@ PostProcessVertexLayout
 PostProcessingSystem_001
 Pp@`PP
 Prints out the overall extra data allocation counts
+ProjectionDepth
 PropertyEditorSystem_001
 Protocol Buffer reflection usage error:
 Protocol message serialized itself in invalid fashion.
@@ -3174,13 +3259,13 @@ Quaternion
 QueuedLoaderVersion001
 QyOIc
 R16F_EXPAND
-RARARARARARARARARARARARARARARARARASBp
+RARARARARARARARARARARARARARARARARASAp
 RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
 RBRBSCp
 RBRB\0
-RBRCp
+RBRBp
 RBRGp
 RBSAXAp
 RBTBRAp
@@ -3237,7 +3322,7 @@ Render3DVectorTextOverlays
 RenderBufferBinding_t
 RenderCubeMap
 RenderCubeMap frustum %short
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayoutField_t
@@ -3261,8 +3346,7 @@ Requested unsupported scenesystem scratch rendertarget
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 RingReduction
 RingReduction2
 RingReduction3
@@ -3280,6 +3364,7 @@ SARBSAXBSARBSAXBRB`
 SATAp
 SAXBRAp
 SBRAp
+SBRGp8p
 SBTBRBRG
 SCENESYSTEMMAT_OCCLUSION_PROXY material has pass count %double, expected 1!
 SCENESYSTEMMAT_OCCLUSION_PROXY_COUNT_DRAW material has pass count %double, expected 1!
@@ -3305,6 +3390,10 @@ SceneSystem/CMTAtlasHeight
 SceneSystem/CMTAtlasWidth
 SceneSystem/DynamicSkyLighting
 SceneSystem/NoSunLightManager
+SceneSystem/SunLightMaxCascadeSize
+SceneSystem/SunLightMaxShadowBufferSize
+SceneSystem/SunLightShadowRenderMode
+SceneSystem/Tonemapping
 SceneSystem/TransformTextureRowCount
 SceneSystem/VrLightBinner
 SceneSystem/VrLightBinnerLightPriority
@@ -3347,6 +3436,7 @@ SetRepeatedUInt64
 SetString
 SetUInt32
 SetUInt64
+Sffffff.
 Shadowed spot lights require more than the allocated %dx%double shadow map! Some will be removed!
 Show occluder
 Show the occluder depth buffer mip level. 0=off, 1=1st mip, 2=nd mip, etc...
@@ -3372,7 +3462,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -3383,7 +3473,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 SourceCodeInfo
 SpawnGroupFlags_t
 SplatLights
@@ -3414,7 +3504,6 @@ Surface Prop Hash
 SurfacePropertiesList
 Symbol name "
 T &CUtlStringMap<CUtlDelegate<void (ISceneView *, const CRenderAttributes *)>, CUtlSymbolTableMT>::operator[](UtlSymId_t) [T = CUtlDelegate<void (ISceneView *, const CRenderAttributes *)>, SymbolTableType_t = CUtlSymbolTableMT]
-T *CSOAContainer::ElementPointer(int, int, int, int) const [T = float]
 T KeyValues3::GetAsNumeric() const [T = float]
 T KeyValues3::GetAsNumeric() const [T = int]
 T KeyValues3::GetAsNumeric() const [T = long long]
@@ -3426,25 +3515,26 @@ TATATAp
 TATAp
 TAVAp
 TBRAp
-TBRBRA
 TBRBRAp
 TBRBRBXARATBYATBTBRBRAp
+TBRBTBRBTBRA
 TBRB`
+TBRB`QATAp
 TBSARAp
 TBTAp
-TBTBTBp
+TBTBRBRB`SATAp
+TBTBTAp
 TBTB`<BRBRB`
 TBUATBSATAp
 TB`<Ap
+TBp p
+TCRAp
 TCRBRBRBRBRBRBRA
 TCRBRDp
-TCRBSATAp
-TCRB`
-TCRB`PATAp
 TCSATAp
+TCSAp
 TCTAp
 TCTBRBRB`
-TCTBRBRB`SATAp
 TCTBRBTBRAp
 TCTBRBTBVBRAp
 TCTBRBVAp
@@ -3455,13 +3545,12 @@ TCUATAp
 TCVATARAp
 TCVATARBVATARAp
 TCVATAp
-TCWARATAp
+TCWBp
 TCZAp
-TCZBRARATAp
+TCZBRAp
 TDSBWKp
 TETBRAp
-TETBRBTBRBTBRAp
-TGRBTBSATBSATBRBRBRBRAp
+TFTAp
 TNp p
 TUUUUUU
 TYPE_BYTES
@@ -3501,7 +3590,7 @@ Tonemapping_UseAlphaChannelForAutoExposure
 Tonemapping_UseLogLuminance
 Too many point(%double) + spot(%double) + dir(%double) lights found! CLightBinnerVr supports %double active point + spot + dir lights!
 Too many shadowed spot lights in the scene!  Some will be removed!
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -3519,6 +3608,7 @@ Tried to register signed char non-generated type with the generated type registr
 Trying to create signed char sceneobject with non-existant desc %short
 Type appears to be in generated pool but wasn'unsigned short 
 Type is already registered: 
+TypeManager
 U8A;M<
 UNKNOWN
 UPDATE_STRING_TOKEN_DATABASE
@@ -3527,7 +3617,6 @@ UUUUUUUUH!
 UVLX8888
 UVTestLayout
 UVWQ8888
-Uffffff.
 UnbatchaH
 Unbatchable material draws: 
 Unexpected end of string.
@@ -3551,9 +3640,6 @@ UtlHashHandle_t CUtlHash<BoneHashPairing_t, bool (*)(const BoneHashPairing_t &, 
 UtlHashHandle_t CUtlHash<CUtlHashDict<ISceneObjectDesc *, true, true>::Entry_t, CUtlHashDict<ISceneObjectDesc *, true, true>::CCompare<true>, CUtlHashDict<ISceneObjectDesc *, true, true>::CHash<true> >::BuildHandle(int, int) const [Data = CUtlHashDict<ISceneObjectDesc *, true, true>::Entry_t, C = CUtlHashDict<ISceneObjectDesc *, true, true>::CCompare<true>, K = CUtlHashDict<ISceneObjectDesc *, true, true>::CHash<true>]
 UtlHashHandle_t CUtlHash<CUtlHashDict<unsigned char, true, true>::Entry_t, CUtlHashDict<unsigned char, true, true>::CCompare<true>, CUtlHashDict<unsigned char, true, true>::CHash<true> >::BuildHandle(int, int) const [Data = CUtlHashDict<unsigned char, true, true>::Entry_t, C = CUtlHashDict<unsigned char, true, true>::CCompare<true>, K = CUtlHashDict<unsigned char, true, true>::CHash<true>]
 UtlHashHandle_t CUtlHash<NameToLightCookieSequence_t, bool (*)(const NameToLightCookieSequence_t &, const NameToLightCookieSequence_t &), unsigned int (*)(const NameToLightCookieSequence_t &)>::BuildHandle(int, int) const [Data = NameToLightCookieSequence_t, C = bool (*)(const NameToLightCookieSequence_t &, const NameToLightCookieSequence_t &), K = unsigned int (*)(const NameToLightCookieSequence_t &)]
-V8ff.
-V8ffffff.
-VATARAp
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -3637,7 +3723,6 @@ Vector4D
 VectorAligned
 VertexColorUVPos_t
 VertexIrradVolume_t
-VertexPos_t
 VertexPostProcess_t
 VertexRenderCount()
 VertexUVPosColorNormalAndTangent_t
@@ -3654,7 +3739,8 @@ Views involved are: "%short" and "%short"
 VisBuilder_001
 VpropBreakablePartData_t
 VrLightCookieSettings
-W%X|"
+W8ffff.
+W8fffff.
 WARNING
 WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
 WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
@@ -3677,6 +3763,7 @@ X360_DST24
 X360_DST24F
 X;T1Xu?A
 XBRAp
+XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB`
 XBSARBSAXBRB`
 XBTBRBRBRAp
@@ -3687,10 +3774,9 @@ X[A\A]A^A_]
 X[A^A_]
 Xffffff.
 XyH_	
-Y%tc!
-Yffff.
+Y%$8"
 Yfffff.
-Yffffff.
+ZBRARATAp
 Zffffff.
 [A\A]A^A_]
 [A\A]A^A_]A
@@ -3703,7 +3789,7 @@ Zffffff.
 [packed = true] can only be specified for repeated primitive fields.
 [unsigned short,fD
 \$ D)
-\$0Ic
+\$HHc
 \%03o
 \/RfC
 \U%08x
@@ -3714,6 +3800,7 @@ Zffffff.
 ^LA+^H~jI
 ^V_TY
 ^\A+^X~fI
+^fffff.
 _ I;_(tG1
 _0IcG
 _8fff.
@@ -3735,16 +3822,14 @@ _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
 _OSAtomicCompareAndSwap64Barrier
 _OSMemoryBarrier
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetCPUFrequency
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MSTime
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _RandomFloat
@@ -3752,12 +3837,41 @@ _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
 _ThreadSleep
+_V_GetErrno
+_V_SetErrno
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_acosf
+_V_asinf
+_V_atan2f
+_V_atod
+_V_atof
+_V_atoi
+_V_cosf
+_V_expf
+_V_logf
+_V_powf
+_V_qsort
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strtod
+_V_strtoi64
+_V_tanf
+_V_vscprintf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstoi64
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_strncat
+__V_strncpy
 ___assert_rtn
 ___bzero
 ___cxa_allocate_exception
@@ -3773,11 +3887,8 @@ ___cxa_pure_virtual
 ___cxa_throw
 ___dynamic_cast
 ___error
-___exp10
 ___gxx_personality_v0
-___maskrune
 ___sincos_stret
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___stderrp
@@ -3800,10 +3911,7 @@ __stubs
 __text
 __unwind_info
 _acos
-_asin
 _atan2
-_atan2f
-_atof
 _atoi
 _ceilf
 _class
@@ -3828,7 +3936,6 @@ _memset
 _memset_pattern16
 _modf
 _powf
-_printf
 _pthread_getspecific
 _pthread_mutex_destroy
 _pthread_mutex_init
@@ -3837,7 +3944,6 @@ _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _pthread_setspecific
-_qsort
 _raise
 _sched_yield
 _sinf
@@ -3849,7 +3955,6 @@ _strcmp
 _strcpy
 _strerror
 _strlen
-_strncat
 _strnlen
 _strspn
 _strtod
@@ -3861,7 +3966,6 @@ _strtoull
 _tanf
 _vsnprintf
 _wcslen
-_wcstol
 ` 000
 `(Hcx
 `0A9](
@@ -3870,8 +3974,12 @@ _wcstol
 `[A\A^A_]
 `[A^]
 ``A9^p
+```````P
 `fff.
+`ffff.
 `unsigned char[A\A^A_]
+addons
+after sort:
 aggregate_value
 alias.m_nScratchRTIndex < 0
 allow_alias
@@ -3890,12 +3998,14 @@ auto CIrradVolumeObjectDesc::DrawArray(class IRenderContext *, CMeshDrawPrimitiv
 auto CKeyValues3Context::FreeKV_Internal(KeyValues3 *)::(anonymous class)::operator()() const
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto CLightBinner::AddSpotLight_Internal(const CSceneLightObject *, const Vector4DAligned &, int *, ELightShadowMode)::(anonymous class)::operator()() const
-auto CLightBinnerVr::AddSpotLight(const CSceneLightObject *, const Vector4DAligned &, ELightShadowMode, int, Vector4D *)::(anonymous class)::operator()() const
+auto CLightBinnerVr::AddSpotLight(const CSceneView *, const CSceneLightObject *, const Vector4DAligned &, ELightShadowMode, int, Vector4D *)::(anonymous class)::operator()() const
 auto CModel::LODLevelForScreenSize(float)::(anonymous class)::operator()() const
 auto CScratchRenderTargetSystem::ValidateLegalRenderTargets()::(anonymous class)::operator()(uint32, const CSceneLayer::RenderTargetAttribute_t &) const
-auto CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *, const CRenderMesh *)::(anonymous class)::operator()() const
+auto CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *)::(anonymous class)::operator()() const
+auto CUtlMultiJobProcessor::WaitForCompletion()::(anonymous class)::operator()() const
 bFoundMatch
 bIsVolumeTexture || ( nDepth == 1 )
+bSetupParamsOnly || m_pContext->GetPrimaryContext() == nullptr
 bUsingMSAA
 because aux mask=
 because its not the first submit and we have signed char proxy target layer : 
@@ -3903,14 +4013,17 @@ begin to finishrendering views : %float
 best wh=%double %double info wchar_t unsigned char=%double %double testinf wh=%double %double
 binner_shadow_depthDS.vtex
 binner_shadow_depthRT.vtex
+bitNum >= 0 && bitNum < this->GetNumBits()
 ble mateH
 bool CCMTAtlasScoreboard::AllocateSpace(int, int, C8x8ElementScoreboardAllocationDesc *)
 bool CIndexData<unsigned short>::Lock(int) [T = unsigned short]
+bool CKV3TransferSaveContext::PrepareTargetForClass(KeyValues3 *, KV3TransferClassBehavior_t, const char *)
+bool CMorphConstraint::CacheModelData(const CModel *)
+bool CSceneLayer::BindRenderTargetsAndClear(IRenderContext *, CSceneView *, bool, SceneSystemPerFrameStats_t &)
 bool CScratchRTAllocator::Allocate(CScratchRenderTargetSystem::RenderTargetStateAlias_t &, int, bool)
 bool CUtlBuffer::Get(void *, int)
 bool CVertexData<Vector>::Lock(int) [T = Vector]
 bool CVertexData<Vertex2DPos_t>::Lock(int) [T = Vertex2DPos_t]
-bool CVertexData<VertexPos_t>::Lock(int) [T = VertexPos_t]
 bool CVertexData<VertexUVPosColorNormalAndTangent_t>::Lock(int) [T = VertexUVPosColorNormalAndTangent_t]
 bool CVertexData<VertexUVPos_t>::Lock(int) [T = VertexUVPos_t]
 bool CVertexData<__attribute__((__vector_size__(4 * sizeof(float)))) float>::Lock(int) [T = __attribute__((__vector_size__(4 * sizeof(float)))) float]
@@ -3930,9 +4043,7 @@ cannot allocate transform texture
 cc_generic_services
 char *CUtlStringBuilder::InternalPrepareBuffer(size_t, bool, size_t)
 char *CUtlStringBuilder::PrepareBuffer(size_t, bool, size_t)
-char *_V_strncat(char *, const char *, int, int)
 char(E9~(
-cl_constraints_enable
 climbable
 clipped:H
 color
@@ -3940,6 +4051,8 @@ colorTarget
 command
 const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
 const MorphData_t *CMorphSet::FindMorphData(int, CMorphSet **)
+const Quaternion RotateBetween(const Vector &, const Vector &)
+const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
 const void *CUtlBuffer::PeekGet(int, int)
 convars
@@ -3961,7 +4074,6 @@ cube.pfm
 cvars
 dampening
 dat->m_pPeer == NULL
-dc		Td		Ne	
 debugoverlay_draw_current
 debugoverlay_ignore_source
 debugoverlay_show_text_outline
@@ -3971,7 +4083,6 @@ dependency
 deprecated
 depthTarget
 description
-destBufferSize >= 0
 double
 double,HKc\7xH
 double_value
@@ -3984,7 +4095,9 @@ dynamic_cast< const CSceneView * >( pViewInterface ) != NULL
 dynamic_cast<const CSceneView *>( pViewInterface ) != NULL
 eaded trH
 ed: A
+efffff.
 elasticity
+elements
 empty_string_ != NULL
 en-size H
 endeA
@@ -4011,7 +4124,6 @@ fff?E
 ffff.
 fffff.
 ffffff.
-fffffff.
 field
 filetoinclude
 finish to complete : %float
@@ -4022,7 +4134,6 @@ flZFar > flZNear
 flZNear > 0.f
 flags
 float
-float &CSOAContainer::FloatValue(int, int, int, int) const
 float &FloatBitMap_t::Pixel(int, int, int, int) const
 float == NULL || dynamic_cast<To>(float) != NULL
 float CPixelVisibilitySystem::GetFractionVisible(const pixelvis_queryparams_t &, pixelvis_handle_t *, const CViewId &)
@@ -4036,6 +4147,7 @@ float renderH
 float resolvH
 float views H
 float world H
+float(ff.
 float(unsigned __int128 char::*(D
 float@LcV(H
 float\IcFX1
@@ -4051,6 +4163,7 @@ g_TSPointerListNodes.IsAllocationWithinPool( pCurrent )
 g_hSkyMapRenderTarget == RENDER_TEXTURE_HANDLE_INVALID
 g_nOutstandingBatchListCounts == 0
 g_pResourceHandleUtils
+g_pThreadPool->YieldWait( &m_jobsFinishedEvent )
 gamematerial
 gamemode
 gameproperties
@@ -4084,23 +4197,20 @@ indexbuffer
 indsA
 infinity
 info.m_hSwapChain != SWAP_CHAIN_HANDLE_INVALID
-info.m_pReplacementString == 0
 ing clipH
 ing cullH
 input_type
 instanceidbuffer
 instanceidbuffer2
-int		pj	
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int == ARRAYSIZE( m_FreeList ) - 1
 int >= 0
 int CAnimatableSceneObjectDesc::FindOrAllocateTransforms(CSceneAnimatableObject *, CMeshInstance *, const CRenderSkeleton *, const Vector4D &, bool, bool &)
 int CAnimationState::GetBonesInWorldSpace(const matrix3x4_t &, int, matrix3x4_t *, const uint32 *)
+int CDisjointSetForest::Find(int)
 int CKeyValues_Data::Internal_GetInt()
 int CLightBinner::AddPointLight(const LightDesc_t *, float)
 int CLightBinner::FindBinsForSpotLight(const CSceneLightObject *, float, int *)
-int CLightBinnerVr::AddSpotLight(const CSceneLightObject *, const Vector4DAligned &, ELightShadowMode, int, Vector4D *)
-int CMeshBuilder2<VertexPos_t>::IndicesFromVertices(MaterialPrimitiveType2_t, int) [T = VertexPos_t]
+int CLightBinnerVr::AddSpotLight(const CSceneView *, const CSceneLightObject *, const Vector4DAligned &, ELightShadowMode, int, Vector4D *)
 int CMeshBuilder2<VertexUVPosColorNormalAndTangent_t>::IndicesFromVertices(MaterialPrimitiveType2_t, int) [T = VertexUVPosColorNormalAndTangent_t]
 int CMeshBuilder2<VertexUVPos_t>::IndicesFromVertices(MaterialPrimitiveType2_t, int) [T = VertexUVPos_t]
 int CSceneSystem::AllocatePerFrameTextureData(int, float *&)
@@ -4115,17 +4225,12 @@ int CUtlTSRowAllocator::AllocateDataCommon(int, int *, int *, int) [bTryToFillHo
 int GetSIMDRandContext()
 int GetStrideOfLightsInShorts(int, int, int, const LightBin_t &, const LightList_t &)
 int ParseRenderTargetTokens(const char *, int, RenderTargetToken_t *)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
 int32
 int64
-int64 V_atoi64(const char *)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
 int|long double#E
 int|long double#int|long double#int|long double#int|long double#
-invalid input pointer
 ion-cullH
 ipping: H
 irradvolumescreenquad
@@ -4135,6 +4240,7 @@ is_headless
 is_loadsavegame
 is_localonly
 is_multiplayer
+is_transition
 ishltv
 isxdigit(char)
 iygIc
@@ -4157,10 +4263,10 @@ l$xMc
 l7xC;
 label
 label: %short
+landmarkname
 leading_comments
 len > 0 || HasError()
 length_delimited
-lg		`unsigned char	
 libscenesystem.dylib
 lightDesc.m_PhiDot <= 1.0f && lightDesc.m_PhiDot > 0.0f
 lightDesc.m_ThetaDot <= 1.0f && lightDesc.m_ThetaDot > 0.0f
@@ -4188,7 +4294,6 @@ long long~A9^
 long'@L;
 lowerPlane.DistTo( vFrustumCenter ) >= 0.0f
 ls: A
-m_AdditionalClusters.FindAndFastRemove( pCluster )
 m_Blobs.IsPeeked()
 m_Capsules
 m_CollisionAttributeIndices
@@ -4204,6 +4309,7 @@ m_FirstFree == InvalidIndex()
 m_Frame1
 m_Frame2
 m_Head == InvalidIndex()
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_HitBoxSets
@@ -4211,6 +4317,8 @@ m_HitBoxes
 m_InitPose
 m_InteractAs
 m_InteractAsStrings
+m_InteractExclude
+m_InteractExcludeStrings
 m_InteractWith
 m_InteractWithStrings
 m_LayerName
@@ -4248,6 +4356,8 @@ m_axes
 m_bAlphaBlendedMaterial
 m_bBegin
 m_bBeginHasBeenCalled
+m_bCacheAttempted
+m_bCacheOk
 m_bClimbable
 m_bEnableAngularMotor
 m_bEnableLinearLimit
@@ -4400,11 +4510,9 @@ m_nCollisionAttribute
 m_nCollisionAttributeIndex
 m_nCollisionGroupHash
 m_nConstraintType
+m_nCubeMapPrecomputedHandshake
 m_nCurrentLOD
 m_nCurrentMeshGroupMask
-m_nDataType[ nAttrIdx ] == nDataType
-m_nDataType[nAttributeIdx] != ATTRDATATYPE_4V
-m_nDataType[nAttributeIdx] != ATTRDATATYPE_NONE
 m_nDataType[nDestAttr] == src.m_nDataType[nSrcAttr]
 m_nDebugLevel
 m_nDefaultClassID == 0
@@ -4432,6 +4540,7 @@ m_nLayerForceID
 m_nLayerId
 m_nLayerIndex
 m_nLayerMatchID
+m_nLightProbeVolumePrecomputedHandshake
 m_nMask
 m_nMaterial
 m_nMeshGroupMaskSmall
@@ -4461,11 +4570,15 @@ m_nReserved2
 m_nRotateMotion
 m_nScratchRTCount <= MAX_ACTUAL_RENDERTARGETS
 m_nSizeCullBloat
+m_nSlaveAxis
+m_nSlaveBoneList.IsEmpty()
+m_nSlaveChannel
 m_nStartIndex
 m_nStartInstance
 m_nState == DRAWLIST_STATE_GOTTEN
 m_nSurfaceProp
 m_nSurfacepropertyIndices
+m_nTargetAxis
 m_nTargetUpBoneHash
 m_nTextureHeight == updateRect.y + nNumRowsToDo
 m_nTranslateMotion
@@ -4552,6 +4665,7 @@ m_runStepLeft
 m_runStepRight
 m_sBoneName
 m_sSurfaceProperty
+m_sTargetMorph
 m_sceneObjects
 m_scrapeRough
 m_scrapeSmooth
@@ -4559,6 +4673,7 @@ m_secondaryRenders.Count() == 0
 m_shape
 m_skeleton
 m_slaves
+m_slaves.Count() == m_nSlaveBoneList.Count()
 m_solverIterationCount
 m_spheres
 m_status.Load() < JOB_OK
@@ -4588,13 +4703,13 @@ m_twistLowLimitValue
 m_types
 m_vAngularTargetVelocity
 m_vBasePosition
-m_vCubeMapOrigin
 m_vEnds
 m_vEyePosition
 m_vHullMax
 m_vHullMin
 m_vInfluenceOffsets
 m_vInfluenceRotations
+m_vLightingOrigin
 m_vLinearTargetVelocity
 m_vMaxBounds
 m_vMinBounds
@@ -4674,8 +4789,6 @@ materialsystem2
 matrix3x4_t
 matrix3x4a_t
 mattestquad
-maxLen > 0
-maxLen >= sizeof( *pDest )
 max_client_limit
 max_clients
 maxspeedfactor
@@ -4699,8 +4812,7 @@ nActualPoseParamCount >= nPoseParamCount
 nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nAttrIdx < MAX_SOA_FIELDS
-nAttrIdx >= 0
-nAttributeIdx < MAX_SOA_FIELDS
+nAxis >= X_AXIS && nAxis <= Z_AXIS
 nBin == m_nNumTotalBins
 nBits <= nBytes*8
 nBlockSize <= 128 * 1024
@@ -4708,6 +4820,7 @@ nBlockSize >= 16 * sizeof( MemoryBlock_t )
 nBytesPerRow < AVAILABLE_BUFFER_SIZE
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
+nClassBehavior == KV3TRANSFER_CLASS_UNIMPLEMENTED
 nColumns <= m_transformTexHeader.m_nWidth
 nCount >= 1
 nDepthTexture != RENDER_TEXTURE_HANDLE_INVALID
@@ -4743,8 +4856,11 @@ nMultisampleType != RENDER_MULTISAMPLE_INVALID
 nNumCullingPlanes <= CVolumeCuller::cMaxInclusionVolumePlanes
 nNumMorphCompositeSetTrackers < MAX_MORPH_SETS_PER_ANIMATABLE_SCENE_OBJECT
 nNumPlanes <= cMaxInclusionVolumePlanes
+nNumRenderablesToDraw == 1
 nOurIndex != m_layerList.InvalidIndex()
+nParent == nTopParent
 nParentBone < 0 || BitVec_IsBitSet( m_pReadableBones, nParentBone )
+nParentBoneIndex >= 0
 nPartitionIdx == nSubList
 nPasses < 2
 nPixelCount == NumCols() * NumRows() * NumSlices()
@@ -4762,21 +4878,21 @@ nSize < ARRAYSIZE( m_hWellKnownRenderTargetBindings )
 nSize < ARRAYSIZE( m_hWellKnownRenderTargets )
 nSlot < ARRAYSIZE( m_pDependentViews )
 nSrcMSAAType == nDestMSAAType
+nSubtreeTipBone >= 0 && nSubtreeTipBone < nBoneCount
 nTargetIndex >= nMatchIndex
 nTargets > 1
+nTotalQuadCount == 0
 nTotalShorts <= nLightDataStrideShorts
 nTotalStrideInShorts > 0
 nTransformSlotIndex != -1
 nTransformSlotIndexForMorphInfo >= 0
+nTries < 10000000
 nVertexBuffers
 nVertexCount >= 0
 nVertexCount >= 2
 nVertexCount >= 3
 nVertexStride == sizeof( Vector4DAligned )
 nWidth == s_nLightingSampleTextureWidth
-nX < m_nColumns
-nY < m_nRows
-nZ < m_nSlices
 name_part
 nderA
 negative_int_value
@@ -4804,14 +4920,19 @@ no_standard_descriptor_accessor
 nomsaa + msaa copies
 nomsaa copy
 normal
+null material
 num_server_players
 number
 numbits >= 0 && numbits <= 32
 nxnstripped
+oD$`float
 oIPfA
 occluder
 occlusionproxyvb
-offfff.
+offff.
+ol3 float
+ol4 float
+ol> float
 oneof_decl
 oneof_index
 operator delete(void*)
@@ -4825,7 +4946,6 @@ operator[]
 optimize_for
 optional
 options
-origin.IsValid() && origin.IsReasonable()
 original
 output specified is NULL
 output.m_pColorTargets[unsigned int] != SCENE_VIEW_RENDER_TARGET_INVALID
@@ -4833,15 +4953,13 @@ outputBuffer
 output_type
 outputcolor
 outputdepth
-p		@r	
 p Hc{ 1
-p RAp
 p,Hc{,1
 p.IsValid()
 p4Hc{41
+p8RBTBSATBSATBRBRBRBRBVATARAp
 p8p8p
 p8pXp
-p<D;u(tKH
 pBlob
 pCallback == NULL
 pChild->m_pExtraData->m_pParentObject == nullptr
@@ -4854,8 +4972,11 @@ pCurrentKey
 pDebugInfo[nCascadeIndex].m_nNumWorldFocusVerts <= ARRAYSIZE(pDebugInfo[nCascadeIndex].m_WorldFocusVerts)
 pDesc
 pExtra
+pFBCopyTextureDesc
 pFileSystem
 pFlexSetup->m_flexDescWeights.Count() / 2 == nFlexWeights
+pFlexSetup->m_pFlexDescDelayedWeights != nullptr
+pFlexSetup->m_pFlexTimeLast != nullptr
 pHpHp
 pIrrad
 pIrradVolumeMaterial
@@ -4867,9 +4988,13 @@ pLastMorphCompositeDesc != nullptr
 pLastMorphCompositeSet != nullptr
 pLayer->m_renderBatchLists.Count() == 0
 pLayer->m_renderBatchLists.Count() == 1
+pLayerConcrete->m_nPerLayerViewConstantsViewIndex != UINT32_MAX
 pMaterialMode
 pMaterialToUseToDraw || ( pVertexTints == nullptr )
+pMemberName && pMemberName[0] != '\0'
 pMeshInstance->m_pAnimatableData
+pMeshInstanceAnimatableData
+pMeshInstanceAnimatableData->m_flexDescDelayedWeights.Count() == nFlexWeights
 pModel
 pModel->GetAnimationStateOffset( ANIMATION_STATE_TYPE_BONE_TRANSFORMS ) == 0
 pMorphCompositeDesc->m_pMorphData->m_morphRectDatas.Count() > 0
@@ -4894,7 +5019,10 @@ pObj->m_pRefData == m_objectReferences + int
 pObject == m_pSceneObject
 pObject->m_pExtraData
 pObjectList->m_nCurPrimitiveIndex != 0xaaaaaaaa
+pParentLightBinner
+pParentView
 pParentView->m_auxiliaryCameras.Count() == pView->m_auxiliaryCameras.Count()
+pPolymorphicClassName && pPolymorphicClassName[0] != '\0'
 pPool->m_SpaceUsed < 0xFFFF
 pPrevClusterInFreeList != NULL
 pPreviousLayer->m_RenderTargetOutputs.m_nColorTargetCount > 0
@@ -4912,13 +5040,12 @@ pTexDesc
 pView->m_queuedBeginViews.Count() == 0
 pWorld
 pWorld != nullptr
-pWorldToView
-pXRCp
 pXRERA
 pXRERAp
 pXRERAp0p0p
 pXRESC
 pXRESF
+pXRESFp0p
 pXRESGp8p
 pXRETBRAp
 pXp8p
@@ -4926,6 +5053,7 @@ pXu*H
 pXulH
 p[A\A^A_]
 p[A^]
+p`RBp
 package
 packed
 params.bSetup
@@ -4948,6 +5076,7 @@ postprocess
 pppp 
 ppppP
 prev layer not found
+previouslevel
 pthread_mutex_lock: 
 pthread_mutex_unlock: 
 ptr_ != NULL
@@ -4963,16 +5092,16 @@ q.IsValid()
 qffffff.
 qt.IsValid()
 r$fff.
-r(fff.
+r'ffffff.
 r)ffff.
 r1fffff.
 r5fffff.
 r7fff.
 r=ffff.
-rAff.
-rBffffff.
+rGfff.
 rKffff.
 rNfff.
+r_allow_morph_batching_on_base
 r_dopixelvisibility
 r_draw_animatables
 r_fallback_texture_lod_scale
@@ -5032,7 +5161,6 @@ s1_mapname
 s2HcC
 s8[A\A^A_]
 sHI;void
-sZfffff.
 s_flSizeCullBloatScale
 s_hPrtSkyTransmitterPositionsTexture == RENDER_TEXTURE_HANDLE_INVALID
 s_hSkyLightingSamplesRenderTarget == RENDER_TEXTURE_HANDLE_INVALID
@@ -5053,6 +5181,7 @@ sc_animatable_fastpath_enable_sort
 sc_aux_cameras_enabled
 sc_aux_cameras_single_submit
 sc_batch_cb_updates_for_view
+sc_batch_layer_cb_updates
 sc_check_world
 sc_disableThreading
 sc_disable_dynamic_sky_lighting
@@ -5062,10 +5191,12 @@ sc_disable_shadow_materials
 sc_disable_spotlight_shadows
 sc_disable_world_materials
 sc_double_submit
+sc_dump_lists
 sc_dumpworld
 sc_dumpworld %double
 sc_dumpworld3d
 sc_dumpworld3d %double
+sc_dupe_simple_meshes_count
 sc_dynamic_job_scheduling
 sc_extended_stats
 sc_fast_object_reject
@@ -5076,6 +5207,7 @@ sc_force_submit_count
 sc_list_extradata_allocations
 sc_listworlds
 sc_lod_distance_scale_override
+sc_log_stats
 sc_log_submits
 sc_max_framebuffer_copies_per_layer
 sc_multithread_sorted_layers
@@ -5098,6 +5230,7 @@ sc_skip_identical_rt_binds
 sc_skip_traversal
 sc_spew_cmt_usage
 sc_throw_away_all_layers
+sc_use_clear_subrect
 scene_quadindexbuffer
 scenegfxresources
 sceneobject_h
@@ -5141,7 +5274,6 @@ short(IcT$
 short@[A^]
 short\L;long double
 short`E9up
-signed char		~bool	
 signon_state
 sint32
 sint64
@@ -5154,6 +5286,7 @@ spawn_count
 spawngrouphandle
 spawngroupmanifest
 spawngroupownerhandle
+spawngroupparenthandle
 spotLightLayout
 spotLightQuadLayout
 stackLevel >= 0 && stackLevel < m_errorIndex
@@ -5173,12 +5306,14 @@ static CSchemaEnumBindingBase *CSchemaEnumBinding<VPhysXDiskShapeHeader_t::Versi
 static CSchemaEnumBindingBase *CSchemaEnumBinding<multiplayerBreak_t>::Get() [T = multiplayerBreak_t]
 static bool CAnimatableSceneObjectDesc::GetMorphCompositeSetForMeshInstance(CMorphSet *, CMorphCompositeSet **, CAnimatableSceneObjectDesc::MorphCompositeSetTracker_t *, int *)
 static float CSunLightManager::CalculateSplitPlaneDistance(int, int, float, float, float)
+static float CTiltTwistConstraint::ComputeTwistAroundAxisInRadians(matrix3x4a_t &, int, float)
 static int CSceneSystem::GetPartition(const CSceneObject *)
 static void AttachmentData_t::Schema_VerifyBindingIsRegistered()
 static void BaseConstraint_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverList_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
+static void CAimConstraint::Schema_VerifyBindingIsRegistered()
 static void CAnimatableSceneObjectDesc::SetupBones(BoneSetupInfo_t *)
 static void CAnimatableSceneObjectDesc::SetupMorphCompositing(const CRenderMesh *, float *, float *, uint32, int)
 static void CAttachment::Schema_VerifyBindingIsRegistered()
@@ -5189,6 +5324,8 @@ static void CHitBox::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSet::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSetList::Schema_VerifyBindingIsRegistered()
 static void CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered()
+static void CMorphConstraint::Schema_VerifyBindingIsRegistered()
+static void COrientConstraint::Schema_VerifyBindingIsRegistered()
 static void CPVSData::Schema_VerifyBindingIsRegistered()
 static void CPVSData::pvsmask_t::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfaceProperties::Schema_VerifyBindingIsRegistered()
@@ -5196,6 +5333,7 @@ static void CPhysSurfacePropertiesAudio::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesGame::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesPhysics::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesSoundNames::Schema_VerifyBindingIsRegistered()
+static void CPointConstraint::Schema_VerifyBindingIsRegistered()
 static void CRenderMesh::Schema_VerifyBindingIsRegistered()
 static void CRenderSkeleton::Schema_VerifyBindingIsRegistered()
 static void CSSDSEndFrameViewInfo::Schema_VerifyBindingIsRegistered()
@@ -5211,6 +5349,9 @@ static void CSceneObjectData::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectExtraData_t::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectReference_t::Schema_VerifyBindingIsRegistered()
 static void CSplatLightsLayerRenderer::SplatVPLsIntoLPV(const CLightPropagationVolumeSceneObject *, int, const CSceneLightObject *, const VMatrix &, IRenderContext *, ISceneView *, ISceneLayer *)
+static void CStudioConstraintBones::ComputeTwistConstraint(matrix3x4a_t *, const CModel *, const CTwistConstraint *)
+static void CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
+static void CTwistConstraint::Schema_VerifyBindingIsRegistered()
 static void CVPhysXLevelData::Schema_VerifyBindingIsRegistered()
 static void CVPhysXMesh::Schema_VerifyBindingIsRegistered()
 static void CVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
@@ -5249,8 +5390,10 @@ static void VPhysXShapeCompoundHeader2_t::Schema_VerifyBindingIsRegistered()
 static void VPhysics2ShapeDef_t::Schema_VerifyBindingIsRegistered()
 static void VpropBreakablePartData_t::Schema_VerifyBindingIsRegistered()
 std::__1::__basic_string_common<true>::__throw_length_error() const
+std::__1::__function::__base<void (CEnvMapSceneObject*)>
 std::__1::__function::__base<void (CSceneObject*)>
-std::__1::__function::__func<InitLightBinnerVr(IRenderContext*, CSceneView*)::$_2, std::__1::allocator<InitLightBinnerVr(IRenderContext*, CSceneView*)::$_2>, void (CEnvMapSceneObject*)>
+std::__1::__function::__func<InitLightBinnerVr(IRenderContext*, CSceneView*, unsigned long long, unsigned long long)::$_2, std::__1::allocator<InitLightBinnerVr(IRenderContext*, CSceneView*, unsigned long long, unsigned long long)::$_2>, void (CEnvMapSceneObject*)>
+std::__1::__function::__func<InitLightBinnerVr(IRenderContext*, CSceneView*, unsigned long long, unsigned long long)::$_3, std::__1::allocator<InitLightBinnerVr(IRenderContext*, CSceneView*, unsigned long long, unsigned long long)::$_3>, void (CSceneLightProbeVolumeObject*)>
 std::__1::__function::__func<void (*)(CSceneObject*), std::__1::allocator<void (*)(CSceneObject*)>, void (CSceneObject*)>
 std::__1::__next_prime(unsigned long)
 std::__1::__vector_base_common<true>::__throw_length_error() const
@@ -5325,17 +5468,15 @@ sunshadowdummy
 sunshadows
 surfacePropertyName
 sx[A^]
-t$ D94
+t$ D9<
+t$ E1
 t$ H9
 t$(H9
 t$0H9
 t$@H9
-t$H9[8u
-t$HIc
 t$Pfffff.
 t$XvaH
 t$fff.
-t$ffffff.
 t$pfff.
 t.HcC
 t.Ic~ H
@@ -5344,7 +5485,6 @@ t.Ic~(H
 t.Ic~0H
 t.Ic~8H
 t.Ic~<H
-t.ff.
 t0E9g
 t0IcD$,H
 t0IcU,H
@@ -5354,7 +5494,6 @@ t1IcEhI9
 t2IcD$hI9
 t2IcL$,H
 t2ff.
-t2ffff.
 t2ffffff.
 t3ff.
 t3fff.
@@ -5371,25 +5510,24 @@ t5ffff.
 t6fffff.
 t6ffffff.
 t7IcT$,L
-t7fff.
-t7ffff.
+t7fffff.
 t7ffffff.
 t80E1
 t8IcV,L
 t9IcG
-t9ffffff.
 tAIcD$hI9
 tBfff.
-tCffff.
 tEIcD$
 tEIcG
 tFA#F
 tFIcG,L
+tHfff.
 tIffff.
 tMff.
 tOffffff.
 tRH9X
 tRfff.
+tWffff.
 tangent
 target bH
 target.m_Info.m_nMultisampleType != RENDER_MULTISAMPLE_INVALID
@@ -5406,6 +5544,7 @@ thickness
 this->m_bOkToLock
 this->m_nBufferIndexCount > 0
 this->m_pMemory
+tiA9_
 tick_interval
 tlIcG
 tlfff.
@@ -5435,36 +5574,32 @@ typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char
 typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 u	L9G
 u!H9{
+u"... H
 u#...!float
 u%H9y
 u(...&H
 u*H;E
 u/...-float
-u5M9H
-u5z3H
 u8I9]
 u:z81
-u:z8L;T
+u:z8H
+u?...=M;\
 u?M9D$
 u?M9G
-u@ff.
-u@fff.
-u@ffff.
-u@fffff.
-u@ffffff.
 uAz?H
 uBD9V
+uBz@H
+uCzAH
 uGI9~
 uGetResourceManifest
+uGzEM;L
 uLM9w
-uLzJM;L
 uMI9~
 uNzLH
 uQff.
+uQzOH
 uRff.
-uUzSH
-uUzSI
-u[zYH
+u\zZH
 uaH;E
 ubz`A
 uczaA
@@ -5473,26 +5608,24 @@ uder triH
 uderA
 uders beH
 ue materH
-ugzeH
 uint CSunLightManager::ComputeCullingVolumePlanes(VPlane *, Vector, const CFrustum &, float)
 uint32
 uint32 CModel::GetAnimationStateOffset(AnimationStateType_t) const
 uint64
-ukff.
+umzkH
+umzkI
 uninterpreted_option
 unknown
 unrecognized string in token spec %short
 unsigned __int128 != outputLayer.m_nOutputCount
-unsigned __int128 char::*(L
 unsigned __int128@ISceneView
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
 unsigned charcomplex ;C`|
-unsigned int		@long		
-unsigned long		@unsigned __int128		
 unsigned long long lists H
 unsigned short	HcK
 unsigned short	IcM
+unsigned short	[A\A^A_]
 unsigned short	[A^]
 unsigned short fff.
 unsigned short"ff.
@@ -5505,6 +5638,7 @@ unsigned short#fff.
 unsigned short%ffff.
 unsigned short%fffff.
 unsigned short&H9[8tUH
+unsigned short&ffffff.
 unsigned short'IcO,I
 unsigned short)A#F
 unsigned short)A#G
@@ -5524,24 +5658,27 @@ unsigned short/HcChI9
 unsigned short/IcE
 unsigned short/TfC
 unsigned short/ffff.
-unsigned short:ffffff.
 unsigned short<IcW,L
 unsigned short<fff.
 unsigned short=E9l$
 unsigned short?fff.
-unsigned short^fffff.
+unsigned short?ffffff.
+unsigned short[ff.
+unsigned short\Ic]
 upperPlane.DistTo( vFrustumCenter ) >= 0.0f
 userid
 usermsgs
 usion reH
 utHc]
-uuA+^
 uvtangent
 uyD;V
+u}...{H
 v0[A^]
+vOrigin.IsValid() && vOrigin.IsReasonable()
 vP[A^]
 vScale.IsValid()
 vXIc}(L
+vX[A^]
 val_bool
 val_byte
 val_long
@@ -5556,7 +5693,6 @@ viewport.IsValid()
 viewport.m_nHeight > 0
 viewport.m_nWidth > 0
 virtual CSceneLightObject *CSceneSystem::CreateLight(const LightDesc_t &, ISceneWorld *, bool)
-virtual CSceneMonitorObject *CSceneSystem::CreateMonitorObject(ISceneWorld *, ISceneWorld *)
 virtual CSceneObject *CSceneSystem::CreateOccluderSceneObject(ISceneWorld *, const void *, int, int, const void *, int, int, bool, const Vector &, const Vector &)
 virtual CSceneObject *CSceneSystem::CreateSceneObject(ESceneObjectFlags, ISceneWorld *, SceneObjectCreationFlags_t)
 virtual CSceneObject *CSceneSystem::CreateSceneObject(ISceneObjectDesc *, ESceneObjectFlags, ISceneWorld *, SceneObjectCreationFlags_t)
@@ -5599,8 +5735,6 @@ virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::Allocate() 
 virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<AttachmentData_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Allocate() [T = CResourceArray<BaseConstraint_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Allocate() [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::AllocateAndCopy(const void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Allocate() [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -5693,8 +5827,6 @@ virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Copy(void *,
 virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Deallocate(void *) [T = CResourceArray<AttachmentData_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Copy(void *, const void *) [T = CResourceArray<BaseConstraint_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Deallocate(void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Copy(void *, const void *) [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Deallocate(void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Copy(void *, const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Deallocate(void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -5793,6 +5925,7 @@ virtual void CLightPropagationVolumeObjectDesc::DrawArray(IRenderContext *, CMes
 virtual void CMDL::SetBoneTransformsInSceneObject(CSceneAnimatableObject *, uint8)
 virtual void CMDL::SetPoseParameters(const float *, int)
 virtual void CMonitorObjectDesc::DrawArray(class IRenderContext *, CMeshDrawPrimitive_t *, int, const class ISceneView *, class ISceneLayer *, SceneSystemPerFrameStats_t &)
+virtual void CMorphConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
 virtual void CPointLightObjectDesc::DrawArray(class IRenderContext *, CMeshDrawPrimitive_t *, int, const class ISceneView *, class ISceneLayer *, SceneSystemPerFrameStats_t &)
 virtual void CSceneSystem::AllocateScratchRenderTargets(CUtlStringToken, int, int, const SceneScratchRenderTargetInfo_t *)
 virtual void CSceneSystem::BeginRenderingViews(IRenderDevice *, bool)
@@ -5842,7 +5975,9 @@ virtual void CSkyBoxObjectDesc::DrawArray(class IRenderContext *, CMeshDrawPrimi
 virtual void CSplatGeometryLayerRenderer::Render(ISceneView *, IRenderContext *, ISceneLayer *, SceneSystemPerFrameStats_t *)
 virtual void CSpotLightObjectDesc::DrawArray(class IRenderContext *, CMeshDrawPrimitive_t *, int, const class ISceneView *, class ISceneLayer *, SceneSystemPerFrameStats_t &)
 virtual void CSpotLightObjectDescVr::DrawArray(class IRenderContext *, CMeshDrawPrimitive_t *, int, const class ISceneView *, class ISceneLayer *, SceneSystemPerFrameStats_t &)
-virtual void CSunLightManager::DrawArray(class IRenderContext *, CMeshDrawPrimitive_t *, int, const class ISceneView *, class ISceneLayer *, SceneSystemPerFrameStats_t &)
+virtual void CTiltTwistConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
+virtual void CTiltTwistConstraint::FillInPermData(BaseConstraint_t *, CResourceStream *) const
+virtual void CTiltTwistConstraint::InitFromPermData(const BaseConstraint_t *)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
 virtual void ConVar::ChangeStringValue(const char *, float)
@@ -5857,25 +5992,36 @@ vmesh
 vnfffff.
 void (*)(CSceneObject*)
 void (CSceneObject*)
-void *CMeshBuilder2<VertexPos_t>::BaseIndexData() [T = VertexPos_t]
 void *CMeshBuilder2<VertexUVPosColorNormalAndTangent_t>::BaseIndexData() [T = VertexUVPosColorNormalAndTangent_t]
 void *CMeshBuilder2<VertexUVPos_t>::BaseIndexData() [T = VertexUVPos_t]
 void *CUtlMemoryPoolBase::Alloc()
 void *CUtlScratchMemoryPool::AddNewBlock(int)
-void BoneSetup_ApplyConstraints(matrix3x4a_t *, const CModel *, const CRenderMesh *)
-void CAnimatableSceneObjectDesc::DrawPrimitive(IRenderContext *, const DrawViewParams_t &, CMeshDrawPrimitive_t *, IMaterialMode *, int, DrawValues_t &, bool, SceneSystemPerFrameStats_t &, int, ISceneLayer *)
+void CAnimatableSceneObjectDesc::DrawPrimitive(IRenderContext *, const DrawViewParams_t &, CMeshDrawPrimitive_t *, const IMaterial2 *, IMaterialMode *, int, DrawValues_t &, bool, SceneSystemPerFrameStats_t &, int, ISceneLayer *)
 void CAnimationDecodeContext::Init(AnimationProcessingType_t, CUtlScratchMemoryPool *)
 void CAnimationState::ComputeHasNonTransformAnimationData()
+void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = int]
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned int]
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned short]
+void CDynamicIndexData<unsigned short>::Lock(int) [T = unsigned short]
+void CDynamicVertexData<FullscreenQuadVertex_t>::Lock(int) [T = FullscreenQuadVertex_t]
 void CDynamicVertexData<MorphNormalWrinkleVertex_t>::Lock(int) [T = MorphNormalWrinkleVertex_t]
+void CDynamicVertexData<MorphPositionSpeedVertex_t>::Lock(int) [T = MorphPositionSpeedVertex_t]
 void CDynamicVertexData<PointLightInstanceStream_t>::Lock(int) [T = PointLightInstanceStream_t]
+void CDynamicVertexData<QuadVertex_t>::Lock(int) [T = QuadVertex_t]
 void CDynamicVertexData<SpotLightInstanceStream_t>::Lock(int) [T = SpotLightInstanceStream_t]
+void CDynamicVertexData<SunLightQuadVertex_t>::Lock(int) [T = SunLightQuadVertex_t]
+void CDynamicVertexData<VertexColorUVPos_t>::Lock(int) [T = VertexColorUVPos_t]
+void CDynamicVertexData<VertexDebugUI_t>::Lock(int) [T = VertexDebugUI_t]
+void CDynamicVertexData<VertexIrradVolume_t>::Lock(int) [T = VertexIrradVolume_t]
+void CDynamicVertexData<VertexPos2DTex2D_t>::Lock(int) [T = VertexPos2DTex2D_t]
+void CDynamicVertexData<VertexPos_t>::Lock(int) [T = VertexPos_t]
+void CDynamicVertexData<VertexPostProcess_t>::Lock(int) [T = VertexPostProcess_t]
+void CDynamicVertexData<VertexUVPos_t>::Lock(int) [T = VertexUVPos_t]
 void CDynamicVertexData<VertexWireFrame2D_t>::Lock(int) [T = VertexWireFrame2D_t]
 void CDynamicVertexData<VertexWireFrame_t>::Lock(int) [T = VertexWireFrame_t]
 void CFrustum::BuildShadowFrustum(const VMatrix &, const VMatrix &)
-void CFrustum::SetCameraPosition(const Vector &)
+void CFrustum::SetCameraPositionAndAngles(const Vector &, const QAngle &)
 void CIndexData<unsigned short>::Init(T *, int) [T = unsigned short]
 void CIndexData<unsigned short>::Unlock() [T = unsigned short]
 void CIndexDataBase<unsigned short>::AdvanceIndexCount(int) [T = unsigned short]
@@ -5900,17 +6046,10 @@ void CMDL::SetupSceneSystemAnimation(float)
 void CMemberFuncProxyBase<CParallelProcessorAbstract<CParallelProcessor<CSceneObject *, CFuncJobItemProcessor<CSceneObject *>, 1> > *, void (CParallelProcessorAbstract<CParallelProcessor<CSceneObject *, CFuncJobItemProcessor<CSceneObject *>, 1> >::*)(int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelProcessorAbstract<CParallelProcessor<CSceneObject *, CFuncJobItemProcessor<CSceneObject *>, 1> > *, FUNCTION_TYPE = void (CParallelProcessorAbstract<CParallelProcessor<CSceneObject *, CFuncJobItemProcessor<CSceneObject *>, 1> >::*)(int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> > *, void (CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> >::*)(int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> > *, FUNCTION_TYPE = void (CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> >::*)(int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, const CSOAContainer *, int, int, int, int, int, const float *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, const CSOAContainer *, int, int, int, int, int, const float *), MEM_POLICY = CFuncMemPolicyNone]
-void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, int, float), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, int, float), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, int, __attribute__((__vector_size__(4 * sizeof(float)))) float), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, int, __attribute__((__vector_size__(4 * sizeof(float)))) float), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CSceneSystem *, void (CSceneSystem::*)(CSceneView *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSceneSystem *, FUNCTION_TYPE = void (CSceneSystem::*)(CSceneView *), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CSceneSystem *, void (CSceneSystem::*)(CSceneView *, CSceneLayer *, CSceneDrawList *, CRenderBatchList *, bool, bool), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSceneSystem *, FUNCTION_TYPE = void (CSceneSystem::*)(CSceneView *, CSceneLayer *, CSceneDrawList *, CRenderBatchList *, bool, bool), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CSceneSystem *, void (CSceneSystem::*)(CSceneView *, int, int, unsigned long long, unsigned long long), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSceneSystem *, FUNCTION_TYPE = void (CSceneSystem::*)(CSceneView *, int, int, unsigned long long, unsigned long long), MEM_POLICY = CFuncMemPolicyNone]
-void CMeshBuilder2<VertexPos_t>::AdvanceIndices(int) [T = VertexPos_t]
-void CMeshBuilder2<VertexPos_t>::Begin(MaterialPrimitiveType2_t, int) [T = VertexPos_t]
-void CMeshBuilder2<VertexPos_t>::ComputeNumVertsAndIndices(int *, int *, MaterialPrimitiveType2_t, int) [T = VertexPos_t]
-void CMeshBuilder2<VertexPos_t>::Draw(IRenderContext *, IMaterialMode *, const CRenderAttributes *) [T = VertexPos_t]
-void CMeshBuilder2<VertexPos_t>::End() [T = VertexPos_t]
-void CMeshBuilder2<VertexPos_t>::ExtractBuffers(MeshBuilderBuffers_t *, bool) [T = VertexPos_t]
-void CMeshBuilder2<VertexPos_t>::InitBuffers(int, int) [T = VertexPos_t]
 void CMeshBuilder2<VertexUVPosColorNormalAndTangent_t>::AdvanceIndex() [T = VertexUVPosColorNormalAndTangent_t]
 void CMeshBuilder2<VertexUVPosColorNormalAndTangent_t>::AdvanceIndices(int) [T = VertexUVPosColorNormalAndTangent_t]
 void CMeshBuilder2<VertexUVPosColorNormalAndTangent_t>::Begin(MaterialPrimitiveType2_t, int) [T = VertexUVPosColorNormalAndTangent_t]
@@ -5927,7 +6066,7 @@ void CMeshBuilder2<VertexUVPos_t>::Draw(IRenderContext *, IMaterialMode *, const
 void CMeshBuilder2<VertexUVPos_t>::End() [T = VertexUVPos_t]
 void CMeshBuilder2<VertexUVPos_t>::ExtractBuffers(MeshBuilderBuffers_t *, bool) [T = VertexUVPos_t]
 void CMeshBuilder2<VertexUVPos_t>::InitBuffers(int, int) [T = VertexUVPos_t]
-void CMeshBuilderSceneObjectDesc::DrawPrimitive(IRenderContext *, CMeshDrawPrimitive_t *, IMaterialMode *, bool, SceneSystemPerFrameStats_t &)
+void CMeshBuilderSceneObjectDesc::DrawPrimitive(IRenderContext *, CMeshDrawPrimitive_t *, IMaterialMode *, ISceneLayer *, bool, SceneSystemPerFrameStats_t &)
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
 void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
@@ -5936,12 +6075,12 @@ void CPixelVisibilityQuery::IssueCountingQuery(IRenderContext *, float, float, b
 void CPixelVisibilityQuery::IssueQuery(IRenderContext *, float, float, bool, const CFrustum &)
 void CPreRenderSubmissionSetupList<FlexDescSetupInfo_t>::AppendFreeToList(T *) [T = FlexDescSetupInfo_t]
 void CRenderBatchList::DrawCurrentPrimitives()
+void CRenderBatchList::MakeFrameBufferCopy(bool)
 void CRenderBatchList::Start(CSceneView *, CSceneLayer *, bool, bool)
 void CResourceStream::Align(uint, int)
 void CResourceStream::EnsureAvailable(uint)
 void CSOAContainer::AllocateConstantMemory()
 void CSOAContainer::AllocateDataMemory()
-void CSOAContainer::AssertDataType(int, EAttributeDataType) const
 void CSOAContainer::ResampleAttribute(CSOAContainer &, int, int)
 void CSOAContainer::SetAttributeType(int, EAttributeDataType, bool)
 void CSceneDrawList::Check() const
@@ -5961,6 +6100,8 @@ void CSceneSystem::DeleteObjectForReal(CSceneObject *)
 void CSceneSystem::DrawReflectiveMeshes(IRenderContext *, CSceneLayer *, CSceneView *, const CMeshDrawPrimitive_t *, SceneSystemPerFrameStats_t &)
 void CSceneSystem::GenerateCompositeMorphTextureAtlas()
 void CSceneSystem::HandleFlexSetup(FlexDescSetupInfo_t *)
+void CSceneSystem::InitializeRenderAttributesForLayer(IRenderContext *, ISceneLayer *, const CSceneView *)
+void CSceneSystem::MakeFrameBufferCopy(IRenderContext *, CSceneView *, CSceneLayer *, SceneSystemPerFrameStats_t &, bool)
 void CSceneSystem::PerformPartitionOptimization()
 void CSceneSystem::ScenesystemDebugger_SnapshotLayerTexture(CSceneView *, CSceneLayer *, int, int, HRenderTexture)
 void CSceneSystem::SetupConstantsForMultiGPU(CSceneLayer *, CSceneView *, int, int)
@@ -5985,6 +6126,7 @@ void CSceneWorldObjectListChunk::Check(int, const CSceneWorld *) const
 void CSchemaClassBindingBase::RegBase(ISchemaSystem *, const char *, const char *, CSchemaClassInfo *, const char *) [I = int]
 void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
+void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
 void CScratchRTAllocator::AssignPreviouslyAllocatedTexture(CScratchRenderTargetSystem::RenderTargetStateAlias_t &, int)
 void CScratchRTAllocator::Init(CSceneView *, CScratchRenderTargetSystem::RenderTargetState_t *)
 void CScratchRenderTargetSystem::AssignTexturesToRenderTargets(int, CScratchRenderTargetSystem::RenderTargetState_t *, int, CScratchRenderTargetSystem::LayerInfo_t *)
@@ -6055,7 +6197,6 @@ void CUtlString::SetDirect(const char *, int)
 void CUtlStringBuilder::Data::SetError(bool)
 void CVertexData<Vector>::Unlock() [T = Vector]
 void CVertexData<Vertex2DPos_t>::Unlock() [T = Vertex2DPos_t]
-void CVertexData<VertexPos_t>::Unlock() [T = VertexPos_t]
 void CVertexData<VertexUVPosColorNormalAndTangent_t>::Unlock() [T = VertexUVPosColorNormalAndTangent_t]
 void CVertexData<VertexUVPos_t>::Unlock() [T = VertexUVPos_t]
 void CVertexData<__attribute__((__vector_size__(4 * sizeof(float)))) float>::Unlock() [T = __attribute__((__vector_size__(4 * sizeof(float)))) float]
@@ -6082,10 +6223,11 @@ void CVertexDataBase<__attribute__((__vector_size__(4 * sizeof(float)))) float>:
 void CVolumeCuller::SetInclusionVolumePlanes(const VPlane *, uint)
 void CallPostConnect()
 void ComputeBonesToSetup(const CModel *, ModelSkeletonData_t::BoneFlags_t, uint32 *)
+void ComputeSubtree(const Graph_t *, int, BitVec_t *) [Graph_t = ModelSkeletonData_t, BitVec_t = CVarBitVec]
 void ConVar_Register(int64, IConCommandBaseAccessor *)
 void ConVar_Unregister()
 void ConnectInterfaces(CreateInterfaceFn *, int)
-void CreateViewConstantsForLayer(PerViewConstantBuffer_t *, const CSceneView *, const CSceneLayer *, float32, int, int)
+void CreatePerLayerViewConstants(PerViewConstantBuffer_t *, const CSceneView *, const CSceneLayer *, float32, int, int)
 void DisconnectInterfaces()
 void DisconnectTier2Libraries()
 void FloatBitMap_t::ConvertGammaToLinear(FBMGammaType_t)
@@ -6109,10 +6251,10 @@ void FloatBitMap_t::LoadFromBufferRGBFloat(const T *, int) [T = RGB323232F_t]
 void FloatBitMap_t::LoadFromRGBA8888BufferGammaToLinear(const RGBA8888_t *, int)
 void FloatBitMap_t::WriteToBufferBGRA(RGBA8888_t *, int) const
 void GetTextureInfo(HRenderTexture, int *, int *, RenderMultisampleType_t *)
-void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenelayer.cpp:213:31)]
-void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp:4295:32)]
-void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp:4461:3)]
-void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp:5989:32)]
+void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenelayer.cpp:220:31)]
+void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp:4297:32)]
+void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp:4471:3)]
+void ISceneView::ForEachWorldToRender(FUNCTOR) const [FUNCTOR = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/scenesystem/scenesystem.cpp:6103:32)]
 void IntrusiveList::AddToEndWithTail(T *&, V *, T *&) [T = CSceneWorldObjectListChunk, V = CSceneWorldObjectListChunk]
 void IntrusiveList::AddToEndWithTail(T *&, V *, T *&) [T = CUtlSimpleQueue<PendingVisitList_t, 64>::QueueNode_t, V = CUtlSimpleQueue<PendingVisitList_t, 64>::QueueNode_t]
 void IntrusiveList::RemoveFromDList(T *&, T *) [T = CUtl3DAllocator::FreeRegion_t]
@@ -6125,6 +6267,7 @@ void KeyValues::ParseIncludedKeys(const char *, const char *, IBaseFileSystem *,
 void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CKeyValuesTokenReader &, GetSymbolProc_t)
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void MathLib_Init()
+void MatrixInvert_Aligned(const matrix3x4a_t &, matrix3x4a_t &)
 void QuaternionAverageExponential(Quaternion &, int, const Quaternion *, const float *)
 void QuaternionConjugate(const Quaternion &, Quaternion &)
 void QuaternionInvert(const Quaternion &, Quaternion &)
@@ -6137,12 +6280,11 @@ void QuaternionScale(const Quaternion &, float, Quaternion &)
 void QuaternionSlerpNoAlign(const Quaternion &, const Quaternion &, float, Quaternion &)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void RenderAView(CSceneView *, float32, ConstantBufferHandle_t, bool)
+void RenderAView(CSceneView *, float32, ConstantBufferHandle_t, SceneSystemPerFrameStats_t &, bool)
 void SetupLightingConstantsVr(IRenderContext *, const CSceneView *, CLightBinnerVr *, PerViewLightingConstantBufferVr_t *, PerViewLightingConstantBufferVr2_t *, PerViewLightingIntConstantBufferVr_t *, float)
 void SkyBox_InitGfxResources()
 void Thread_ProcessProceduralLayer(CSceneView *, CSceneLayer *, bool)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
-void _V_strncpy(char *, const char *, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
@@ -6171,6 +6313,7 @@ wellknown_black_cube_1x1
 wellknown_black_cube_array_1x1x1
 wellknown_checker_2x2.vtex
 wellknown_transparent_black_1x1
+wellknown_transparent_black_array_1x1
 wellknown_white_1x1
 wellknown_white_array_1x1x1
 wfffff.
@@ -6184,16 +6327,18 @@ ws used:H
 ws: A
 x6A9^
 x8A;D$0}1Ic
-xXu*H
+xXuhH
 xqaBCFHTTFFFN
 xyA9^
 yxxxxxxxH
 yxxxxxxxI
+z/H
 zbuffer_%d.tga
 zbuffer_unfiltered%d.tga
 zed:A
 {#ffff.
-{4ffff.
+{/ffffff.
+{[xYH
 |#:fA
 |$ E1
 |$ H9
@@ -6204,6 +6349,7 @@ zed:A
 |$0L9
 |$8H9
 |$@H9
+|$@tBL
 |vHcU
 |{HcM
 }	[A\A^A_]
@@ -6213,14 +6359,11 @@ zed:A
 ~ L;unsigned long
 ~"A9^$|
 ~$E9f$|
+~$fffff.
 ~%E9f$|
 ~&E9t$$|
+~-ffff.
 ~0A9^$|*Hc
-~5fffff.
-~@fff.
-~@ffff.
-~@fffff.
-~@ffffff.
 ~OdfD
 ~fIcM(D
 ~xA9^$|rHc

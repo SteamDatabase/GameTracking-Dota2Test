@@ -20,7 +20,6 @@
 !"Failed to CFStringCreateWithCString watcher path"
 !"Invalid scheme requested."
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!X`yA`
 !bCreate
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -44,8 +43,8 @@
 %s_%double
 %short Queue dispatching command( %short, %short -- %int )
 %short Queue dispatching( %short -- %int )
-%short unable to grow buffer to fit string
 %short/%short
+%short: string format requested %double chars
 '"KEY_APOSTROPHE
 'ffff.
 () ,+-
@@ -59,8 +58,7 @@
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (nBytes % 4) == 0
 (no name)
-(uBHcK
-)ffff.
+(uEHcK
 )fffff.
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
@@ -97,7 +95,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -136,7 +133,6 @@
 5%KEY_5
 5fff.
 6^KEY_6
-6~Lfffff.
 7&KEY_7
 8*KEY_8
 8Hct0
@@ -153,7 +149,6 @@
 :hover
 :scrollbar
 :selected
-:tFL9
 ;:KEY_SEMICOLON
 ;Stu	;long longcomplex 
 <$v9H
@@ -174,6 +169,8 @@
 @CThreadSyncObject::~CThreadSyncObject()
 @DevMsg(char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @_AssertMsg_ConditionFailed
 @_CFArrayCreate
@@ -206,23 +203,45 @@
 @_PasteboardGetItemIdentifier
 @_PasteboardPutItemFlavor
 @_PasteboardSynchronize
+@_Plat_DebugPrint
 @_Plat_DebugString
 @_Plat_ExitProcess
 @_Plat_FloatTime
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MSTime
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
-@_Plat_getwd
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_GetErrno
+@_V_SetErrno
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_UTF8ToUTF32
+@_V_atof
+@_V_atoi
+@_V_qsort_s
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_MakeAbsolutePath
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___CFConstantStringClassReference
 @___bzero
 @___cxa_atexit
@@ -232,14 +251,11 @@
 @___cxa_guard_acquire
 @___cxa_guard_release
 @___cxa_pure_virtual
-@___error
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
 @__float128 short::*
-@_atof
 @_atoi
 @_closedir
 @_g_Tier1_BitWriteMasks
@@ -255,7 +271,6 @@
 @_memset
 @_memset_pattern16
 @_opendir$INODE64
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -272,15 +287,9 @@
 @_strcmp
 @_strcpy
 @_strlen
-@_strncat
 @_strncpy
-@_strtod
-@_strtol
 @_time
-@_vsnprintf
 @_wcslen
-@_wcstof
-@_wcstol
 @dyld_stub_binder
 @loader_path
 @rpath/libtier0.dylib
@@ -302,8 +311,10 @@ A9^$|
 A9^||
 A9_L|
 A;D$ ~
-A;G ~
+A;N<u
 A;\$@|
+A;]@r71
+A;]@szI
 A;]long long|
 A;]p|
 A;^ u
@@ -327,7 +338,6 @@ AWAVAUATSPH
 AWAVAUATSPHc
 AWAVAUATSPI
 AWAVAUATSPL
-AWAVAUATSPM
 AWAVSA
 AWAVSH
 AWAVSP
@@ -421,9 +431,6 @@ CTier3AppSystem<vgui::IInputInternal, 0>
 CTier3AppSystem<vgui::IPanel, 0>
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlHandleTable<vgui::VPanel, 20>::HandleType_t::HandleType_t(unsigned int, unsigned int) [T = vgui::VPanel, HandleBits = 20]
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
@@ -468,14 +475,12 @@ D$ D9
 D9sL|
 D9sXu
 D9{$|
-D;%<B
 D;short u
 D;unsigned __int128@A
 D;w0M
 D;w0|
 D;wchar_t@|
 D;wchar_t`|
-D;{ u
 DebugTextureInfo001
 Default
 Delete
@@ -493,10 +498,8 @@ E9~$r
 E9~$|jI
 E;__int128 ~0
 E;fPu#
-E;l$@
-E;l$@r01
-E;long double@r-1
 E;uPu$I
+E;}@r21
 EconItemToolModel_001
 Ehfffff.
 Encountered ConCommand '%short' without signed char callback!
@@ -684,10 +687,9 @@ KeyTyped
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
-KeyValues *KeyValues::GetFirstTrueSubKey()
+KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
 KeyValues::FindKey called on NULL pointer!
@@ -713,7 +715,6 @@ LabelDimText
 LayoutFile
 LayoutFileChanged
 Leaked %double panels of class %short in %short
-Lfff.
 LightingBuilderMgr001
 ListBgColor
 ListPanel.BgColor
@@ -730,6 +731,7 @@ LoadFromBuffer: expected '{', found '%short'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 MATCHFRAMEWORK_001
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MaterialUtils_001
@@ -774,6 +776,7 @@ PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostProcessingSystem_001
@@ -808,7 +811,7 @@ Render command has left edge > right edge: '%short'
 Render command has top edge > bottom edge: '%short'
 Render command has x0 and x1 reversed: '%short'
 Render command has y0 and y1 reversed: '%short'
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -817,8 +820,7 @@ RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 RichText.BgColor
 RichText.SelectedBgColor
 RichText.SelectedTextColor
@@ -827,7 +829,6 @@ Right
 SARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARCp
 SARARARARARARARARARARARARARARARARARARARARARARARARARAp
 SARARARARARAp
-SATAp
 SPHcG
 ScalableImageBorder
 ScaleformUI001
@@ -884,7 +885,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -895,13 +896,12 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StatsService_001
 SubPanelBgColor
 TBRATAp
 TBRAp
 TBRBRB`*ATAp
-TBRBSATAp
 TBRB]ARB]ARB]ARB`gATAp
 TBRB`&ATAp
 TBTAp
@@ -935,7 +935,7 @@ TitleButtonDisabledBgColor
 TitleButtonDisabledFgColor
 TitleButtonFgColor
 ToggleButton.SelectedTextColor
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -983,7 +983,8 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-V_AppendSlash: ran out of space on %s.
+V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+V_stristr_fast(char const*, char const*)
 Vfff.
 VisBuilder_001
 WIN32
@@ -1054,26 +1055,48 @@ _PasteboardGetItemCount
 _PasteboardGetItemIdentifier
 _PasteboardPutItemFlavor
 _PasteboardSynchronize
+_Plat_DebugPrint
 _Plat_DebugString
 _Plat_ExitProcess
 _Plat_FloatTime
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MSTime
 _Plat_ShouldCollectMiniDumpsForFatalErrors
-_Plat_getwd
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_GetErrno
+_V_SetErrno
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_UTF8ToUTF32
+_V_atof
+_V_atoi
+_V_qsort_s
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstod
+_V_wcstoi64
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_MakeAbsolutePath
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___CFConstantStringClassReference
 ___bzero
 ___cxa_atexit
@@ -1083,9 +1106,7 @@ ___cxa_guard_abort
 ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
-___error
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
 ___tolower
@@ -1097,7 +1118,6 @@ __cstring
 __data
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1105,7 +1125,6 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
 _atoi
 _clipRect[0] <= _clipRect[2]
 _clipRect[1] <= _clipRect[3]
@@ -1127,7 +1146,6 @@ _minmode
 _opendir$INODE64
 _parent->_childDar.FindElement(sibling) != _parent->_childDar.InvalidIndex()
 _pinsibling_their_corner < ARRAYSIZE(PinDeltas)
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -1144,17 +1162,10 @@ _strchr
 _strcmp
 _strcpy
 _strlen
-_strncat
 _strncpy
 _strnlen
-_strtod
-_strtol
 _time
-_u%fffff.
-_vsnprintf
 _wcslen
-_wcstof
-_wcstol
 `[A\A^A_]
 `fff.
 `unsigned char[A\A^A_]
@@ -1192,7 +1203,6 @@ cffffff.
 cfg/registry.vdf
 changing kb focus from %short to %short
 changing mouse focus from %short to %short
-char *_V_strncat(char *, const char *, int, int)
 cl_hud_minmode
 color
 colors
@@ -1201,7 +1211,6 @@ command
 const CUtlHandleTable::EntryType_t *CUtlHandleTable<vgui::VPanel, 20>::GetEntry(UtlHandle_t, bool) const [T = vgui::VPanel, HandleBits = 20]
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 context != DEFAULT_INPUT_CONTEXT
 context != DEFAULT_VGUI_CONTEXT
@@ -1216,7 +1225,6 @@ dashedrect
 dat->m_pPeer == NULL
 delete
 delta
-destBufferSize >= 0
 destSizeBytes >= sizeof(dest[0])
 dialogName && *dialogName
 draw_corner_height
@@ -1262,26 +1270,17 @@ image_tiled
 image_tiled_horiz
 image_tiled_vert
 include
-info.m_pReplacementString == 0
 inset
 inset-bottom
 inset-left
 inset-right
 inset-top
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = char, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<char, &V_UTF8ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int < ( 1 << HandleBits )
 int CKeyValues_Data::Internal_GetInt()
 int CUtlQueue<int, CUtlMemory<int, int> >::Count() const [T = int, M = CUtlMemory<int, int>]
 int CUtlString::FormatV(const char *, __va_list_tag *)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
-int _V_strnicmp_fast(const char *, const char *, int)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
-invalid input pointer
 is topmost popup
 isproportional
 italian
@@ -1338,8 +1337,6 @@ materials/vgui/hud/800corner1.vmat
 materials/vgui/hud/800corner2.vmat
 materials/vgui/hud/800corner3.vmat
 materials/vgui/hud/800corner4.vmat
-maxLen > 0
-maxLen >= sizeof( *pDest )
 mffff.
 min height
 min width
@@ -1365,7 +1362,6 @@ operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
-outStrings.Count() == 0
 outline
 overflow
 p P@ @ p 
@@ -1382,7 +1378,6 @@ pOther->Internal_GetSubKey() == NULL
 pPKEY_P
 pPool->m_SpaceUsed < 0xFFFF
 pSchemaSystem != NULL
-pSearch
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
 padding
@@ -1466,11 +1461,11 @@ style
 styles
 swedish
 symbol
-t$H9[8u
 t9IcG
 tEIcD$
 tMff.
 tTKEY_T
+tbA9_
 tchinese
 textcolor
 tiled
@@ -1494,8 +1489,8 @@ unsigned short%ffff.
 unsigned short&H9[8tUH
 unsigned short-L9`
 unsigned short/ff.
-unsigned short/ffffff.
 unsigned short>IcG
+unsigned short{ffffff.
 update
 usHc]
 uses_appearances
@@ -1625,14 +1620,12 @@ void KeyValues::AddSubKey(KeyValues *)
 void KeyValues::AddSubkeyUsingKnownLastChild(KeyValues *, KeyValues *)
 void KeyValues::AppendIncludedKeys(CUtlVector<KeyValues *> &)
 void KeyValues::MergeBaseKeys(CUtlVector<KeyValues *> &)
+void KeyValues::MergeFrom(KeyValues *, KeyValues::MergeKeyValuesOp_t)
 void KeyValues::ParseIncludedKeys(const char *, const char *, IBaseFileSystem *, const char *, CUtlVector<KeyValues *> &, GetSymbolProc_t)
 void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CKeyValuesTokenReader &, GetSymbolProc_t)
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
-void _V_AppendSlash(char *, int, char)
-void _V_strncpy(char *, const char *, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)

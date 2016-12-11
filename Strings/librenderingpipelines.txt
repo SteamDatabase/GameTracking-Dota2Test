@@ -1,5 +1,6 @@
         
                 
+ [A^]
  ffff.
  ffffff.
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
@@ -11,7 +12,11 @@
 !m_bBufferInstalled && m_nVertexIncrement == 0
 !m_bStoredSubKey
 !m_pMemory
+!this->m_bLocked
 "fffff.
+#C,D	
+#C4D	
+#C<D	
 #fff.
 #ffffff.
 $ffffff.
@@ -23,7 +28,6 @@ $ffffff.
 (m_nRefCount & INTERNAL_LOCKED) != 0
 )ffffff.
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
-*ffffff.
 +ffffff.
 -sse2
 -sse3
@@ -31,12 +35,12 @@ $ffffff.
 .ETv*H
 .Elv*H
 .fffff.
+.ffffff.
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/imageformat.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/camera.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/vertexdata.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
@@ -57,10 +61,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
 /usr/lib/libSystem.B.dylib
@@ -70,6 +70,8 @@ $ffffff.
 0 - render forward only objects in the forward layers. 1 - do not render forward only objects.
 00000`PP
 0=Off, 1=DebugWireframe, 2=DebugSolidBlink
+0[A\A^A_]
+0[A^]
 1 - Use quarter res gbuffers for SSAO calculation. 0 - Use full res gbuffers for SSAO calculations.
 1ffffff.
 2ffffff.
@@ -78,21 +80,20 @@ $ffffff.
 3DSkyboxForwardProxy
 3DSkyboxTranslucent
 3DSkyboxTranslucentProxy
-3ffffff.
-6~Lfffff.
 8[A\A]A^A_]
 8[A^A_]
-;W0}__float128
-;W8}r
+;W(}__float128
+;W0}r
 ;ffffff.
 <null>
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
-@_CMemAllocSystemInitialize
 @_CommandLine
 @_EarlyInit_Tier0
 @_GetCPUInformation
@@ -101,18 +102,28 @@ $ffffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_RegisterStringToken
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
+@_V_UTF32ToUTF8
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_powf
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_vsnprintfRet
 @_Warning
 @__Unwind_Resume
+@__V_strncpy
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -122,18 +133,11 @@ $ffffff.
 @___cxa_guard_release
 @___cxa_pure_virtual
 @___gxx_personality_v0
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
-@_atof
-@_atoi
-@_free
 @_g_pMemAlloc
-@_malloc
 @_memchr
 @_memcpy
-@_pow
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -142,17 +146,13 @@ $ffffff.
 @_pthread_mutexattr_settype
 @_raise
 @_sprintf
-@_sscanf
 @_strchr
 @_strcmp
 @_strlen
 @_tanf
-@_vsnprintf
 @dyld_stub_binder
-@hkS 
-@hkS(
 @loader_path
-@r<Mc
+@r8Ic
 @rpath/librenderingpipelines.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -163,7 +163,6 @@ $ffffff.
 @vtable for __cxxabiv1::__pointer_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
-A;G ~
 A;]long long|
 A;^8|
 ABGR8888
@@ -180,16 +179,15 @@ AWAVATSI
 AWAVAUATSH
 AWAVAUATSL
 AWAVAUATSP
-AWAVAUATSPH
+AWAVAUATSPA
 AWAVAUATSPI
 AWAVAUATSPM
 AWAVSH
-AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
 AWAVSPM
-AZBSC
+AZBS0
 A[ATAp
 After3DGeo
 AfterTranslucent3D
@@ -260,15 +258,12 @@ CRenderingPipelines
 CSHLobeVisualizationLayerRenderer
 CSchemaInstallCallback
 CScreenSpaceReflectionsRenderer
+CTemplateSceneViewFactory_RenderVRMonitors
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CTier0AppSystem<IAppSystem>
 CTier1AppSystem<IAppSystem, 0>
 CTier2AppSystem<IAppSystem, 0>
 CTier3AppSystem<IAppSystem, 0>
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
-CUtlString::SetDirect does not support resizing strings in place.
 CVertexDataBase - No storage!
 CVertexDataBase - Tried to advance past the last vertex (%double)
 CVertexDataBase<VertexPos2DTex2D_t>::~CVertexDataBase() [T = VertexPos2DTex2D_t]
@@ -276,7 +271,6 @@ CVertexDataBase<VertexPostProcess_t>::~CVertexDataBase() [T = VertexPostProcess_
 CVertexDataBase<VrQuadVertex_t>::~CVertexDataBase() [T = VrQuadVertex_t]
 CVrQuadRenderer
 CameraDepth
-Cffffff.
 Clear Color Depth Stencil
 ClearHdrBackBuffer
 ClearLighting
@@ -328,6 +322,7 @@ DotaCardGameClient_001
 Dynamic Decals
 DynamicGBuffer
 E	unsigned __int128,L
+E fff.
 ERROR! Cannot load RenderingPipelineVrStartup resource manifest for the vr render pipeline!
 EconItemToolModel_001
 EmissiveGBuffer
@@ -348,6 +343,7 @@ ForwardDecals
 ForwardLightSetup
 ForwardOpaque
 G8H	p(]
+GA#D$
 GBuffer
 GBufferAlbedo
 GBufferDecals
@@ -374,14 +370,13 @@ HDRBloom
 HDRColorBuffer
 HDRColorBufferCopy
 HDRPostProcess
-H[A^A_]
 H__ZdaPv
 H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
 HcW unsigned short
-HcW(unsigned short	;W@
+HcW(unsigned short	;W8
 HelpSystem_001
 Hffffff.
 HostStateMgr001
@@ -437,6 +432,7 @@ LowResGBufferDepth
 LowResGBufferNormals
 LowResGBuffer_ReconstructNormals
 MATCHFRAMEWORK_001
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MaterialUtils_001
@@ -444,6 +440,7 @@ Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
 ModelDocCommandSystem001
+Monitor
 NV_DST16
 NV_DST24
 NV_INTZ
@@ -465,6 +462,7 @@ Ordered object did not begin in signed char zeroed state
 OuterSky
 OuterSkyProxy
 P L;u
+P0  0
 PaintPost0
 PaintPost1
 PaintPost2
@@ -476,6 +474,7 @@ PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostDecalForwardDynamic
@@ -494,8 +493,9 @@ QuarterResNormal
 QueuedLoaderVersion001
 R16F_EXPAND
 RBRAp
-RBRBRBRBRB^Bp
+RBRBRBRBRB^Ap
 RBSAp
+RBTBRAp
 RG1616
 RG1616F
 RG1616F_EXPAND
@@ -519,9 +519,10 @@ RGBA8888_LINEAR
 RGBX555
 RGBX8888
 ReflectionTemplate
+Refract Prep
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayout_t CTSInputLayoutCreator::GetLayout()
@@ -543,13 +544,12 @@ RenderingPipelines_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 SARAp
-SARBTBRARBp
+SARBRAp
 SARBTBRAp
+SARBTBTAp
 SATAp
-SATBp
 SBuffer
 SSAOBlurH
 SSAOBlurHoriz
@@ -575,7 +575,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -586,18 +586,16 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 Static Decals
 Static World Overlays
 StaticGBuffer
 StatsService_001
-TARBp
-TBRBSATCp
+TARAp
+TBRBRBRAp
 TBRBVBRBVBRBVBRBVBRBWATAp
 TBRBXBRBVBRBTBSATAp
-TCRBRBRAp
-TCSARARBp
-TCSATBp
+TCSATAp
 TCZAp
 TH)GD
 TH)GTH)GTH)GTH)long longimaginary !
@@ -607,7 +605,7 @@ TextMessageMgr_001
 ToneMapping
 Tonemap
 TonemapManifest
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -658,6 +656,8 @@ VScriptDbg
 VScriptManager010
 VStringTokenSystem001
 VUUUH
+V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
+V_stristr_fast(char const*, char const*)
 VertexPostProcess_t
 ViewModel
 ViewModelForward
@@ -691,7 +691,6 @@ ZK?Q/"
 [A^A_]
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
-_CMemAllocSystemInitialize
 _CommandLine
 _CreateInterface
 _EarlyInit_Tier0
@@ -704,21 +703,31 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
+_V_UTF32ToUTF8
+_V_atof
+_V_atoi
+_V_cosf
+_V_powf
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_vsnprintfRet
 _Warning
 __DATA
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_strncpy
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -728,7 +737,6 @@ ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
 ___gxx_personality_v0
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
 __bss
@@ -745,14 +753,9 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
-_atoi
-_free
 _g_pMemAlloc
-_malloc
 _memchr
 _memcpy
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -761,13 +764,11 @@ _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _raise
 _sprintf
-_sscanf
 _strchr
 _strcmp
 _strlen
 _strnlen
 _tanf
-_vsnprintf
 `[A\A^A_]
 `unsigned char[A\A^A_]
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
@@ -775,7 +776,6 @@ bool InstallSchemaBindings(const char *, ISchemaSystem *)
 const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 degrees to add to fov to compensate for just-in-time HMD
 depthprepass
 dyld_stub_binder
@@ -793,11 +793,6 @@ hLowResGBufferNormals != SCENE_VIEW_RENDER_TARGET_INVALID
 hLowResLBuffer != SCENE_VIEW_RENDER_TARGET_INVALID
 hNormals != SCENE_VIEW_RENDER_TARGET_INVALID
 hSSAOOutput != SCENE_VIEW_RENDER_TARGET_INVALID
-info.m_pReplacementString == 0
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
-invalid input pointer
 librenderingpipelines.dylib
 m_bInitialized.Load()
 m_fnChangeCallbacks.Count() == 0
@@ -823,26 +818,20 @@ materials/rendertargetops/bilateral_blur_horz.vmat
 materials/rendertargetops/bilateral_blur_vert.vmat
 materials/rendertargetops/reconstruct_normals.vmat
 materialsystem2
-maxLen > 0
-maxLen >= sizeof( *pDest )
-nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
-nChars == V_strlen(m_pString)
 nffffff.
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
-origin.IsValid() && origin.IsReasonable()
+outputColor
+outputDepth
 outputcolor
 outputdepth
-p RDRDp0p
-p p0p
 pCallback == NULL
 pName
 pOutRtInfo
 pOutViewport
 pSchemaSystem != NULL
-pSearch
 p[A\A^A_]
 positionH
 postprocess
@@ -892,14 +881,16 @@ std::__1::__function::__base<void (CSceneObject*)>
 std::__1::__function::__func<void (*)(CSceneObject*), std::__1::allocator<void (*)(CSceneObject*)>, void (CSceneObject*)>
 std::terminate()
 strnlen
-t$H9[8u
 t2ff.
 t3ff.
+t4ffff.
 t6fffff.
 t6ffffff.
 tUfffff.
 texcoordH
 textures/dev/ggx_integrate_brdf_lut.vtex
+textures/dev/ggx_integrate_brdf_lut_schlick.vtex
+this->m_bOkToLock
 typeinfo for std::bad_alloc
 uGetResourceManifest
 unsigned char[A\A]A^A_]
@@ -917,14 +908,15 @@ virtual void ConVar::InternalSetIntValue(int)
 virtual void ConVar::InternalSetValue(const char *)
 void (*)(CSceneObject*)
 void (CSceneObject*)
-void CFrustum::SetCameraPosition(const Vector &)
+void CDynamicVertexData<VertexPos2DTex2D_t>::Lock(int) [T = VertexPos2DTex2D_t]
+void CDynamicVertexData<VertexPostProcess_t>::Lock(int) [T = VertexPostProcess_t]
+void CDynamicVertexData<VrQuadVertex_t>::Lock(int) [T = VrQuadVertex_t]
 void CKeyValues_Data::Internal_ClearData()
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
 void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
 void CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown() [TResourceInfoData = InfoForResourceTypeCTextureBase]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
-void CUtlString::SetDirect(const char *, int)
 void CVertexDataBase<VertexPos2DTex2D_t>::AdvanceVertex() [T = VertexPos2DTex2D_t]
 void CVertexDataBase<VertexPostProcess_t>::AdvanceVertex() [T = VertexPostProcess_t]
 void CVertexDataBase<VrQuadVertex_t>::AdvanceVertex() [T = VrQuadVertex_t]
@@ -938,7 +930,6 @@ void DisconnectTier2Libraries()
 void MathLib_Init()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void _V_strncpy(char *, const char *, int)
 void@wchar_t'H
 vr_depth_prepass
 vr_depth_prepass_alphatested

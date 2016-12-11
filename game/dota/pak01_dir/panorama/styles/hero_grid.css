@@ -7,10 +7,17 @@
 @define CategoryTitleInset: 8px;
 
 
+
 #GridCore
 {
     padding-left: 100px;
 }
+
+DOTAHudPreGame #GridCore
+{
+	height: 580px;
+}
+
 
 #GridOverlay
 {
@@ -122,10 +129,8 @@ DOTAHeroCard
 {
     margin: -89px -78px;
 
-    opacity: 0.0;
-
     /* Card position is set in code, but we still want to animate it */
-    transition-property: opacity, position, wash-color, brightness;
+    transition-property: opacity, wash-color, brightness;
     transition-duration: 0.30s;
 	transition-timing-function: ease-in-out;
 }
@@ -134,64 +139,32 @@ DOTAHeroCard
 {
     margin: -92px -81px;
 }
-
 .AspectRatio5x4 DOTAHeroCard
 {
     margin: -98px -83px;
 }
 
-DOTAHeroCard.Showing
+.AspectRatio4x3 DOTAHudPreGame DOTAHeroCard
 {
-    opacity: 0.93;
-	saturation: 0.7;
+	margin: -68px -72px;
 }
+.AspectRatio5x4 DOTAHudPreGame DOTAHeroCard
+{
+	margin: -70px -75px;
+}
+
+
 
 DOTAHeroCard.Showing.Highlighted
 {
-    opacity: 1;
-	saturation: 1;
-
     animation-name: HeroCardSelected;
 	animation-iteration-count: infinite;   
     animation-duration: 0.8s;	
-	
 }
 
-DOTAHeroCard.Showing:disabled
+DOTAHeroCard.Showing:not(.HeroCardDisabled):hover
 {
-    /* fade out when filtered */
-    opacity: .2;
-	saturation: 0.0;
-	wash-color: #777777aa;
-}
-
-DOTAHeroCard.Showing:enabled:hover
-{
-	opacity: 1.0;
-	saturation: 1.0;
 	z-index: 2;
-	wash-color: white;
-}
-
-.SearchingHeroes DOTAHeroCard.Showing
-{
-    opacity: .2;
-	saturation: 0.0;
-	wash-color: #777777aa;
-}
-
-.SearchingHeroes DOTAHeroCard.Showing:disabled
-{
-    opacity: .2;
-	saturation: 0.0;
-	wash-color: #777777aa;
-}
-
-.SearchingHeroes DOTAHeroCard.Showing.Highlighted
-{
-	brightness: 1.0;
-	saturation: 1;
-	opacity: 1;
 }
 
 DOTAHeroCard.Activated

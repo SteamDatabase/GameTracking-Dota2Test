@@ -5,8 +5,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/ssequaternion_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceeditinfo_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceextreflist_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourcemanifest_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceremaptable_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourcemanifestfiledata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcesystem/release/osx64/resourcehandletypes_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcesystem/release/osx64/resourcesystemprofileinfo_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
@@ -14,6 +13,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/iresourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcehandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcesystemhelpers.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
@@ -34,26 +34,20 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlreferencetracker.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utltshash.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcedictionary.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcefile.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcestream.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/basefileresourcedataprovider.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/internalresourcehelpers.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/asyncresourcedatarequest.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/codemanifestmanager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/loadingresource.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/profilehelpers.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest_imp.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest_imp.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp(291): Syntax error in resource remap table condition: "%s"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp(314): Syntax error in resource remap table condition: "%s"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp(329): Encountered a likely recursive remap table condition for file "%s": "%s"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem_leaktracker.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/splitstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stacktools_tier1.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp

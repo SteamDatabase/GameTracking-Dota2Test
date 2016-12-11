@@ -59,6 +59,7 @@
  ConDMsg
  ConMsg(char const*, ...)
  CreateSimpleThread
+ D typeinfo for std::__1::bad_function_call
  DevMsg
  DevMsg(char const*, ...)
  DevWarning(char const*, ...)
@@ -130,6 +131,7 @@
  Plat_GetLocalTime
  Plat_GetMemPageSize
  Plat_GetModuleFilename
+ Plat_GetModuleInterfaceFactory
  Plat_GetModuleProcAddress
  Plat_GetMonitorBounds
  Plat_GetMonitorResolution
@@ -150,7 +152,7 @@
  Plat_InstallUrlHandler
  Plat_IsDirectory
  Plat_IsHighDPI
- Plat_IsInDebugSession
+ Plat_IsInDebugSessionRaw
  Plat_IsInTestMode
  Plat_IsRunningOnCustomerMachine
  Plat_IsWindowMinimized
@@ -188,6 +190,7 @@
  Plat_WindowToOsSpecificHandle
  Plat_chdir
  Plat_getwd
+ R typeinfo name for std::__1::bad_function_call
  RandomFloat
  RandomInt
  RandomSeed
@@ -241,9 +244,92 @@
  Tier0DebugDrawLockLines
  Tier0DebugDrawLockedQueryLine
  Tier0DebugDrawUnlockLines
+ V_AddBackSlashesToSpecialChars
+ V_CopyMemory3D
+ V_FixDoubleSlashes
+ V_FixSlashes
+ V_GetErrno
+ V_GetFileExtension
+ V_GetFileExtensionSafe
+ V_IsAbsolutePath
+ V_LogMultiline
+ V_ParseLine
+ V_ParseToken
+ V_PathContainsPath
+ V_RemoveDotSlashes
+ V_SetErrno
+ V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+ V_StrTrim
+ V_StripFilename
+ V_StripLeadingWhitespace
+ V_StripSurroundingQuotes
+ V_StripTrailingSlash
+ V_StripTrailingWhitespace
+ V_UTF16ToUTF32
+ V_UTF16ToUTF8
+ V_UTF32ToUTF8
+ V_UTF8ToUTF32
+ V_UnqualifiedFileName
+ V_acosf
+ V_asinf
+ V_atan2f
+ V_atod
+ V_atof
+ V_atoi
+ V_atoui64
+ V_cosf
+ V_expf
+ V_fclose
+ V_fopen
+ V_fread
+ V_fwrite
+ V_iswspace
+ V_logf
+ V_powf
+ V_pretifymem
+ V_qsort
+ V_qsort_s
+ V_sinf
+ V_snprintf
+ V_snwprintf
+ V_sscanf
+ V_stricmp_fast
+ V_stristr_fast(char const*, char const*)
+ V_strlower_fast
+ V_strtod
+ V_strtoi64
+ V_strtoui64
+ V_strupper_fast
+ V_swscanf
+ V_vscprintf
+ V_vsnprintf
+ V_vsnprintfRet
+ V_vsnprintfSize
+ V_wcsnicmp
+ V_wcstod
+ V_wcstoi64
  Warning
  _DefaultRuneLocale
  _Unwind_Resume
+ _V_AppendSlash
+ _V_ComposeFileName
+ _V_DefaultExtension
+ _V_ExtractFileExtension
+ _V_ExtractFilePath
+ _V_FileBase
+ _V_FixupPathName
+ _V_GetFirstDir
+ _V_MakeAbsolutePath
+ _V_MakeRelativePath
+ _V_SetExtension
+ _V_StrSubst
+ _V_StringAfterPrefix
+ _V_StripExtension
+ _V_StripLastDir
+ _V_strncat
+ _V_strncpy
+ _V_strnicmp_fast
+ _V_wcsncpy_bytes
  __CFConstantStringClassReference
  __assert_rtn
  __bzero
@@ -261,10 +347,10 @@
  __cxa_throw
  __dynamic_cast
  __error
- __exp10
+ __exp10f
  __gxx_personality_v0
  __maskrune
- __sincosf_stret
+ __sincos_stret
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -277,7 +363,6 @@
  acos
  asin
  atan2
- atan2f
  atof
  atoi
  atol
@@ -294,7 +379,6 @@
  curl_easy_perform
  curl_easy_setopt
  curl_global_init
- dlsym
  dup
  dyld_stub_binder
  exit
@@ -313,6 +397,7 @@
  fputs
  fread
  free
+ frexpf
  fstat$INODE64
  futimes
  fwrite
@@ -341,7 +426,6 @@
  kCFProxyTypeKey
  kCFProxyTypeNone
  kCFProxyUsernameKey
- ldexp
  listen
  log
  lseek
@@ -378,7 +462,6 @@
  sendto
  setbuf
  setenv
- setlocale
  setrlimit
  setsockopt
  signal
@@ -390,7 +473,6 @@
  sprintf
  srand
  sscanf
- stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__get_classname(char const*, bool)
  std::__1::__get_collation_name(char const*)
@@ -435,6 +517,7 @@
  std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
  std::__1::regex_error::~regex_error()
  std::__1::to_string(int)
+ std::exception::what() const
  std::exception::~exception()
  std::terminate()
  strcat
@@ -443,7 +526,6 @@
  strcpy
  strerror
  strlen
- strncat
  strncmp
  strncpy
  strpbrk
@@ -471,7 +553,6 @@
  ungetc
  void std::__1::__sort<std::__1::__less<float, float>&, float*>(float*, float*, std::__1::__less<float, float>&)
  vsnprintf
- vswprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
@@ -482,6 +563,4 @@
  wcslen
  wcsncat
  wcsncpy
- wcstof
- wcstol
  write

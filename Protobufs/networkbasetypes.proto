@@ -98,6 +98,7 @@ message CNETMsg_SignonState {
 	optional uint32 num_server_players = 3;
 	repeated string players_networkids = 4;
 	optional string map_name = 5;
+	optional string addons = 6;
 }
 
 message CSVCMsg_GameEvent {
@@ -158,6 +159,7 @@ message CNETMsg_SpawnGroup_Load {
 	optional uint32 worldgroupid = 15;
 	optional uint32 creationsequence = 16;
 	optional string savegamefilename = 17;
+	optional uint32 spawngroupparenthandle = 18;
 }
 
 message CNETMsg_SpawnGroup_ManifestUpdate {
@@ -198,5 +200,8 @@ message CSVCMsg_GameSessionConfiguration {
 	optional string server_ip_address = 13;
 	optional bytes data = 14;
 	optional bool is_localonly = 15;
+	optional bool is_transition = 16;
+	optional string previouslevel = 17;
+	optional string landmarkname = 18;
 }
 

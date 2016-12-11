@@ -1,5 +1,4 @@
 		[ FAIL ] - Manifest contains an illegal resource name "%short"!
-	%short(%double) : %short
 	Individual reference records '%short'
 	RKS_DEFAULT = 
 	RKS_DISABLE_GROUP_CLEARING = 
@@ -9,84 +8,72 @@
 	References grouped by matching call stack of at least 1 frame '%short'
 	References grouped by matching call stack of at least 10 frames '%short'
 	References grouped by matching call stack of at least 4 frames '%short'
-	Requested type %lld (%short), actual type %lld (%short)
-       
+	fff.
+	fffff.
         
                 CStackAnnotation_SimpleString
-         Had signed char pending load flag on signed char resource (%short) during signed char manifest but no refcounts were present at the end of loading.
-         This can be caused if you have extrefs to this resource in signed char transformed resource, but didn'unsigned short transfer them to strong handles during your Allocate().
-         This is likely an error in the type manager for signed char resource type that references the resource named above.
+    p
   0  
   P0 
   `P 
- @ @p 
  A;L$
+ L;>u
  [A\A^A_]
- [A^]
  ffff.
- ffffff.
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
-!( hResource->m_nFlags & RESOURCE_BINDING_HAS_MOUNTED_VPK )
-!( m_nFlags & FCVAR_NEVER_AS_STRING )
-!P`kAp
-!bDeferred
-!bWantsLoad
+!H`kA\ATAp
+!IsForInMemoryData()
+!IsResourceCurrentlyLoading( hResource )
+!V_stricmp( pResourceName, CResourceNameGetter( hResource ).Get() )
 !ffffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
-!m_bHeaderRequestIsValidForDataToo
+!m_bDisallowNewManifestsStarting
 !m_bInitialized
-!m_bPerformingReload
-!m_bPerformingReload || ( m_activeResourceManifests.Count() == 1 )
-!m_bPerformingReload || ( m_activeResourceManifests[pData->m_Resource.m_nLoadingManifest] == pManifest )
-!m_bPerformingReload || ( pOwnerManifest == pManifest )
-!m_bPreventNewManifestsFromBeingStarted
+!m_bLocked
 !m_pAttachedDest
+!m_pFileRequest
+!m_pLoadingInfo || m_pLoadingInfo->m_nLoadingIndex == LOADING_RESOURCE_MANIFEST_INDEX_INVALID
+!m_pNextFenceManifest || m_pNextFenceManifest->GetStateInternal() == ACTIVEMANIFEST_FINALIZED
 !m_pReleasedData
-!memcmp(pTokenInDuplicate, pCurPos, nTokenLength)
+!m_pRequest
 !multilist || ML
-!pManifest || ( pManifest->GetLoadingIndex() == hResource->m_nLoadingManifest )
-!pManifest->HasQueuedLoadRequests()
 !pManifest->IsMarkedForDeletion()
-!pRequest->IsForInMemoryData()
-!pResourceName || !pRefTable
 "[A\A^A_]
-$$t	H
-%double (%double deferred)
 %double General references (long double restrict unsigned __int128::* ResourceAddRef() calls than ResourceRelease())
 %double Manifest references (Still holding onto signed char HResourceManifest somewhere)
 %double Schema references (Most likely signed char resource referring to another resource)
 %double Strong handle references (Still holding onto signed char CStrongHandle somewhere)
-%int %int %int %int
+%fff.
 %lld, 
+%s$Fence%double
+%s.%short
 %short : "%short"
 %short : %short
-%short unable to grow buffer to fit string
-%short%-20s%-30s = Total: % 7d
 %short%-20s%-30s = Total: % 8.2fms, Avg: % 8.2fus, Count: % 7d
 %short%short%short%short
-&fff.
-&ffffff.
-'fffff.
+%short: string format requested %double chars
+'ffffff.
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
-( m_pInMemoryData != NULL ) == ( m_pFileRequest == NULL )
-( pResourceData->m_Resource.m_nFlags & (RESOURCE_BINDING_DEFERRED|RESOURCE_BINDING_PENDING_LOAD) ) == 0
-( pResourceData->m_Resource.m_nFlags & RESOURCE_BINDING_LOADED ) || !( pResourceData->m_Resource.m_nFlags & RESOURCE_BINDING_HAS_EVER_BEEN_LOADED )
+( hReferringResource == RESOURCE_HANDLE_INVALID ) || ( pOutHandle != nullptr )
+( hResource->m_nFlags & RESOURCE_BINDING_LOADED ) || !( hResource->m_nFlags & RESOURCE_BINDING_HAS_EVER_BEEN_LOADED )
+( m_pInMemoryData != nullptr ) == ( m_pFileRequest == nullptr )
+( pManifest->GetType() != RESOURCE_MANIFEST_TYPE_BLOCKING_RELOAD ) || ( pOwnerManifest == pManifest )
 ([A\A]A^A_]
+([A^A_]
+(int64)m_nLoadSizeBytes <= nAvailableSize
 (intp)this % 16 == 0
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (s_pThisModuleBindingPointer != NULL)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-(uBHcK
 (void *)m_pObject != NULL
 ** Forcing all resource loads to fail: "%short"
-*** Bad deletion request: Refcount for %short resource "%short" (%016llX) is greater than deferred count. (%double > %double)!
+*** Bad deletion request: Refcount for %short resource "%short" (%016llX) is greater than zero. (%double)!
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
-*pFileName != '.'
-*pFixedResourceName != '.'
+*ffffff.
 + CStrongHandle, %double operations: %short
 + CStrongHandle, operation: %lld)
 + Manifest, %double operations: %short
@@ -104,24 +91,16 @@ $$t	H
 - ResourceRelease(), ResourceReferencePairingId_t: %double, operation: %lld
 - Schematized reference, %double operations: %short
 - Schematized reference, Pairing ID: %double, operation: %lld
---  Increase the size of the resource stream   --
---  Need %double bytes, but only have %double bytes
---------------------WARNING----------------------
--HACK_test_vpcf2_path
 -exit_on_resource_load_failure
--ffff.
 -force_all_resource_loads_to_fail
--resource_debug_break_substring
 -resource_debug_id
--resource_debug_spew_substring
 -resource_exit_after_time
+-resource_system_verbose
 -resourceleaks
 -sse2
 -sse3
 -sse4
 -start_resource_profiling
-.ETv*H
-.Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/aabb_h_schema.gen_cpp
@@ -131,8 +110,7 @@ $$t	H
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/ssequaternion_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceeditinfo_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceextreflist_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourcemanifest_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceremaptable_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourcemanifestfiledata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcesystem/release/osx64/resourcehandletypes_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcesystem/release/osx64/resourcesystemprofileinfo_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
@@ -140,6 +118,7 @@ $$t	H
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/iresourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcehandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcesystemhelpers.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
@@ -160,26 +139,20 @@ $$t	H
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlreferencetracker.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utltshash.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcedictionary.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcefile.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcestream.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/basefileresourcedataprovider.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/internalresourcehelpers.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/asyncresourcedatarequest.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/codemanifestmanager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/loadingresource.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/profilehelpers.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest_imp.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest_imp.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp(291): Syntax error in resource remap table condition: "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp(314): Syntax error in resource remap table condition: "%short"!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourceremapper.cpp(329): Encountered signed char likely recursive remap table condition for file "%short": "%short"!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem_leaktracker.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/splitstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stacktools_tier1.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -189,19 +162,15 @@ $$t	H
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 0[A\A^A_]
-0fffff.
+2fffff.
 4$A;\$
+4$E;|$
+6Ic^@H
 6[A\A^A_]
-6~Lfffff.
 8[A\A]A^A_]
-8[A^A_]
-8ffff.
-:tFL9
+;GH|FH
 <INVALID>
 <NULL>
-<NoReferenceBlocks>
-<NotInReferenceBlocks>
-<string based>
 >L97t-H
 ?IVConCommDataReceived
 @CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
@@ -223,14 +192,14 @@ $$t	H
 @CVProfNode::EnterScope()
 @CVProfNode::ExitScope()
 @CVProfNode::GetSubNode(char const*, int, char const*, int)
+@H[A^]
 @IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 @IStack_Annotation::~IStack_Annotation()
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
-@PL;}
-@XL;long double
+@M96u/H
 @[A\A^A_]
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
@@ -238,39 +207,47 @@ $$t	H
 @_EarlyInit_Tier0
 @_GetCPUInformation
 @_IterateCapturedStackAnnotations
-@_KeyValuesSystem
 @_LOG_GENERAL
 @_LoggingSystem_GetChannelVerbosity
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_LoggingSystem_SetChannelVerbosity
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
-@_Plat_GetOSType
-@_Plat_GetPlatformError
-@_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MicroSecTickDiff
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_TickDiffMicroSec
 @_Plat_TickDiffMicroSecF
 @_Plat_TickDiffMilliSecF
-@_Plat_VirtualAlloc
-@_Plat_VirtualFree
 @_SeriousWarning
 @_ThreadGetCurrentId
 @_ThreadGetCurrentProcessId
 @_ThreadInMainThread
 @_ThreadInterlockedExchange64
 @_ThreadNanoSleep
+@_V_FixSlashes
+@_V_GetFileExtension
+@_V_IsAbsolutePath
+@_V_qsort_s
+@_V_snprintf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
 @_Warning
-@__DefaultRuneLocale
 @__GetCallStack_Fast
 @__Unwind_Resume
+@__V_FileBase
+@__V_FixupPathName
+@__V_SetExtension
+@__V_StripExtension
+@__V_strncat
+@__V_strncpy
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -280,40 +257,31 @@ $$t	H
 @___cxa_guard_release
 @___cxa_pure_virtual
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
 @__float128 short::*
-@_atof
-@_atoi
-@_free
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
-@_malloc
 @_memchr
 @_memcmp
 @_memcpy
 @_memmove
 @_memset
-@_printf
 @_pthread_mutex_destroy
 @_raise
-@_sscanf
 @_strchr
 @_strcmp
-@_strcpy
 @_strlen
-@_strncat
-@_vsnprintf
 @dyld_stub_binder
 @loader_path
-@r<Mc
+@r8Ic
 @rpath/libresourcesystem.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
 @std::terminate()
 @typeinfo for IStack_Annotation
 @typeinfo for std::bad_alloc
+@unsigned short;At
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
@@ -321,15 +289,13 @@ A LcK 1
 A(Hc{(1
 A0LcK01
 A8Hc{81
-A;D$,
-A;G ~
 A;\$@|
-A;](u
-A;]long long|
-A;^(u&L
-A;^@|
+A;\$HudI
+A;^H|*H
+A;_0u
 A;_H|
-A;t$Xu.I
+A;_H|rH
+A;t$Xu0I
 A@LcK@1
 AABB_t
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
@@ -353,50 +319,40 @@ AWAVAUATSH
 AWAVAUATSL
 AWAVAUATSP
 AWAVAUATSPA
+AWAVAUATSPD
 AWAVAUATSPH
 AWAVAUATSPI
+AWAVAUATSPL
 AWAVAUATSPM
 AWAVSH
 AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
-AZBSBp
-A[ATAp
-AcquireResourceHandleSubmitLoadIfNeeded %short in %short
-AcquireResourceHandleSubmitLoadIfNeeded: "%short"
 ActiveManifestState_t CResourceManifest::GetState() const
-AddManifestDescToNamedManifest %short in %short
+ActiveManifestState_t CResourceManifest::GetStateInternal() const
 Allocate
 An attempt was made to create signed char resource manifest with debug name "%short" while the resource system was shutting down.
-An attempt was made to load named resource manifest "%short" with debug name "%short" while the resource system was shutting down.
-An attempt was made to load resource manifest file "%short" with debug name "%short" while the resource system was shutting down.
-An attempt was made to load signed char named resource manifest with debug name "%short" while the resource system was shutting down.
-An attempt was made to load signed char resource manifest group "%short" with debug name "%short" while the resource system was shutting down.
 AnimationSystemUtils_001
 AnimationSystem_001
-AppendResourceNamesFromCodeBasedManifest %short
 AqqInv
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
 Attempted to register duplicate manifest name %short!
-Autoconvert
 Available resource leak tracking configuration aliases:
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
 Bad index for CSchemaLoadContext::GetRootObject!
 BakedLODBuilderMgr001
 Base()
 BenchmarkService001
 BinaryProperties_GetValue
-BlockingLoadResourceFileNonStreamingPortion: Trying to load an illegal resource name %short!
+Blocking Manifest Load
 C [A^]
-C ffff.
 CAsyncCallStackTracker::SynchronousSectionStart() cannot use signed char CDeferredCallStackMarker. Use CDeferredCallStackMarkerProxy instead.
 CAsyncResourceDataRequest
+CAsyncResourceDataRequest::CAsyncResourceDataRequest(ResourceHandle_t, bool, int64, size_t, const char *)
+CAsyncResourceDataRequest::~CAsyncResourceDataRequest()
 CAtomicManipulator<CResourceArray<CResourceString> >
 CAtomicManipulator<CResourceArray<CTransform> >
 CAtomicManipulator<CResourceArray<FeAxialEdgeBend_t> >
@@ -432,7 +388,6 @@ CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >
 CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >
 CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >
 CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >
-CAtomicManipulator<CResourceArray<ResourceRemapRule_t> >
 CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >
 CAtomicManipulator<CResourceArray<float> >
 CAtomicManipulator<CResourceArray<unsigned int> >
@@ -447,31 +402,24 @@ CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<float __vector(4)>
 CBaseAppSystem<IResourceSystem>
-CBaseFileResourceDataProvider
 CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
 CCallStackMarkerBase::TestMarkerAgainstCapturedStackIndex(void const* const*, int, int) const
-CConCommandMemberAccessor<CResourceSystem>
+CCodeResourceManifestManager
+CConCommandMemberAccessor<CResourceSystemProfiler>
 CDefaultAccessor
 CDeferredCallStackMarker::Insert()
 CDeferredCallStackMarker::Remove()
-CEmptyConVar
-CEmptyResourceDataProvider
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CFunctor
-CMemberFunctor1<CResourceSystem*, void (CResourceSystem::*)(IAsyncResourceDataRequest*), CAsyncResourceDataRequest*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMemberFunctor3<CResourceSystem*, void (CResourceSystem::*)(IAsyncFileRequest*, CResourceManifest*, CAsyncCallStackTracker*), IAsyncFileRequest*, CResourceManifest*, CAsyncCallStackTracker*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMemberFunctor3<CResourceSystem*, void (CResourceSystem::*)(IAsyncFileRequest*, ResourceBindingBase_t const*, ResourceId_t), IAsyncFileRequest*, ResourceBindingBase_t const*, ResourceId_t, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMemberFunctor4<CResourceSystem*, void (CResourceSystem::*)(IAsyncFileRequest*, ResourceBindingBase_t const*, ResourceId_t, bool), IAsyncFileRequest*, ResourceBindingBase_t const*, ResourceId_t, bool, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+CLoadingResource::CLoadingResource(ResourceHandle_t, ResourceId_t, ResourceHandle_t, CResourceManifest *)
+CLoadingResource::~CLoadingResource()
+CMemberFunctor0<CAsyncResourceDataRequest*, void (CAsyncResourceDataRequest::*)(), CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+CMemberFunctor1<CLoadingResource*, void (CLoadingResource::*)(CAsyncResourceDataRequest*), CAsyncResourceDataRequest*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CNullTypeManager
 COLORCORRECTION_VERSION_1
-CONTENT
-CONTENTROOT
 CPostConnectCallback
 CRCMD_SetProfileMode
-CRD_BlockingLoadResourceFileDataUtils
-CRD_OnHeaderLoadedUtils
-CRD_OnInitialDataRequestUtils
 CRD_RegisterResourceDataUtils
 CRMSG_Entity_Event
 CRMSG_Entity_Info
@@ -486,20 +434,21 @@ CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
 CResourceArray
 CResourceConstructor
 CResourceDeallocatorUtils
-CResourceDeferredReference
 CResourceExtReference
-CResourceManifest *CResourceSystem::GetLoadingManifestForResource(ResourceHandle_t)
-CResourceManifest::CResourceManifest(ResourceManifestLoadPriority_t, bool, const char *, UtlSymId_t, bool)
+CResourceManifest *CResourceSystem::GetLoadingManifest(LoadingResourceManifestIndex_t)
+CResourceManifest::CResourceManifest(ResourceManifestType_t, ResourceManifestLoadPriority_t, bool, const char *)
 CResourceManifest::~CResourceManifest()
+CResourceManifestTypeManager
 CResourcePointer
-CResourceStream
-CResourceStreamVM
 CResourceString
 CResourceSystem
-CResourceSystem shutdown, leaking %short [refcount: %double] [deferred count: %double] 
+CResourceSystem BeginShutdown()
+CResourceSystem Init
+CResourceSystem Shutdown
+CResourceSystem shutdown, leaking %short%short [refcount: %double]
 CResourceSystem::FindOrCreateProceduralResource: Passed in signed char NULL debug name for an anonymous resource!
-CResourceSystem::ReloadResource() - Cannot reload signed char nonexistent resource!
-CResourceSystem::ResourceLoadRequestResult_t CResourceSystem::AcquireResourceHandleSubmitLoadIfNeeded(CResourceManifest *, const char *, ResourceId_t, bool, ResourceType_t, ResourceHandle_t *, bool, ResourceId_t)
+CResourceSystemLeakTracker
+CResourceSystemProfiler
 CSchemaClassBinding<AABB_t>
 CSchemaClassBinding<CRCMD_SetProfileMode>
 CSchemaClassBinding<CRMSG_Entity_Event>
@@ -561,8 +510,10 @@ CSchemaClassBinding<InfoForResourceTypeCParticleSnapshot>
 CSchemaClassBinding<InfoForResourceTypeCPhysAggregateData>
 CSchemaClassBinding<InfoForResourceTypeCPostProcessingResource>
 CSchemaClassBinding<InfoForResourceTypeCRenderMesh>
+CSchemaClassBinding<InfoForResourceTypeCResourceManifestInternal>
 CSchemaClassBinding<InfoForResourceTypeCSequenceGroupResource>
 CSchemaClassBinding<InfoForResourceTypeCTextureBase>
+CSchemaClassBinding<InfoForResourceTypeCVMixListResource>
 CSchemaClassBinding<InfoForResourceTypeCVPhysXLevelData>
 CSchemaClassBinding<InfoForResourceTypeCVPhysXSurfacePropertiesList>
 CSchemaClassBinding<InfoForResourceTypeCVirtualVolumeTexture>
@@ -573,10 +524,7 @@ CSchemaClassBinding<InfoForResourceTypeIParticleSystemDefinition>
 CSchemaClassBinding<InfoForResourceTypePRTMatrixData_t>
 CSchemaClassBinding<InfoForResourceTypeProcessingGraphInstance_t>
 CSchemaClassBinding<InfoForResourceTypeProcessingGraph_t>
-CSchemaClassBinding<InfoForResourceTypeResourceManifest_t>
-CSchemaClassBinding<InfoForResourceTypeResourceRemapTable_t>
 CSchemaClassBinding<InfoForResourceTypeVBitmapFontRuntimeData_t>
-CSchemaClassBinding<InfoForResourceTypeVGameSoundScript_t>
 CSchemaClassBinding<InfoForResourceTypeVSound_t>
 CSchemaClassBinding<InfoForResourceTypeWorldEnvironmentMaps_t>
 CSchemaClassBinding<InfoForResourceTypeWorldLighting_t>
@@ -587,17 +535,13 @@ CSchemaClassBinding<PhysFeModelDesc_t>
 CSchemaClassBinding<ResourceAdditionalRelatedFile_t>
 CSchemaClassBinding<ResourceArgumentDependency_t>
 CSchemaClassBinding<ResourceCustomDependency_t>
-CSchemaClassBinding<ResourceDefRefList_t>
 CSchemaClassBinding<ResourceEditFloatData_t>
 CSchemaClassBinding<ResourceEditInfoBlock_t>
 CSchemaClassBinding<ResourceEditIntData_t>
 CSchemaClassBinding<ResourceEditStringData_t>
 CSchemaClassBinding<ResourceExtRefList_t>
 CSchemaClassBinding<ResourceInputDependency_t>
-CSchemaClassBinding<ResourceManifest_t>
 CSchemaClassBinding<ResourceReferenceInfo_t>
-CSchemaClassBinding<ResourceRemapRule_t>
-CSchemaClassBinding<ResourceRemapTable_t>
 CSchemaClassBinding<ResourceSpecialDependency_t>
 CSchemaClassBindingBase
 CSchemaEnumBinding<LightSourceShape_t>
@@ -642,7 +586,6 @@ CSchemaManipulator<CResourceArray<ResourceEditIntData_t> >
 CSchemaManipulator<CResourceArray<ResourceEditStringData_t> >
 CSchemaManipulator<CResourceArray<ResourceInputDependency_t> >
 CSchemaManipulator<CResourceArray<ResourceReferenceInfo_t> >
-CSchemaManipulator<CResourceArray<ResourceRemapRule_t> >
 CSchemaManipulator<CResourceArray<ResourceSpecialDependency_t> >
 CSchemaManipulator<CResourceArray<float> >
 CSchemaManipulator<CResourceArray<unsigned int> >
@@ -661,7 +604,6 @@ CSchemaRegistration_mathlib_extended
 CSchemaRegistration_resourcefile
 CSchemaRegistration_resourcesystem
 CStackAnnotation<ResourceNameInfo_t const*, void, void, void, void, void, void, void, void>
-CStackAnnotation<char const*, char const*, char const*, void, void, void, void, void, void>
 CStackAnnotation<char const*, char const*, void, void, void, void, void, void, void>
 CStackAnnotation<char const*, void, void, void, void, void, void, void, void>
 CStackTop_Base::CStackTop_Base()
@@ -673,15 +615,19 @@ CStrongHandleVoid
 CStrongHandleVolatile
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<CAsyncIOResult_t, false>::Pop() [T = CAsyncIOResult_t, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CResourceManifest *, false>::Pop() [T = CResourceManifest *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CResourceManifest *, false>::Push(CTSQueue::Node_t *) [T = CResourceManifest *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<const ResourceBindingBase_t *, false>::Pop() [T = const ResourceBindingBase_t *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<const ResourceBindingBase_t *, false>::Push(CTSQueue::Node_t *) [T = const ResourceBindingBase_t *, bTestOptimizer = false]
 CTSQueue<CAsyncIOResult_t, false>::CTSQueue() [T = CAsyncIOResult_t, bTestOptimizer = false]
 CTSQueue<CAsyncIOResult_t, false>::~CTSQueue() [T = CAsyncIOResult_t, bTestOptimizer = false]
 CTSQueue<CResourceManifest *, false>::CTSQueue() [T = CResourceManifest *, bTestOptimizer = false]
 CTSQueue<CResourceManifest *, false>::~CTSQueue() [T = CResourceManifest *, bTestOptimizer = false]
-CTSQueue<CResourceManifest::PendingResourceLoad_t, false>::CTSQueue() [T = CResourceManifest::PendingResourceLoad_t, bTestOptimizer = false]
-CTSQueue<CResourceManifest::PendingResourceLoad_t, false>::~CTSQueue() [T = CResourceManifest::PendingResourceLoad_t, bTestOptimizer = false]
-CTSQueue<CResourceSystem::PendingResourceManifest_t, false>::CTSQueue() [T = CResourceSystem::PendingResourceManifest_t, bTestOptimizer = false]
-CTSQueue<CResourceSystem::PendingResourceManifest_t, false>::~CTSQueue() [T = CResourceSystem::PendingResourceManifest_t, bTestOptimizer = false]
 CTSQueue<const ResourceBindingBase_t *, false>::CTSQueue() [T = const ResourceBindingBase_t *, bTestOptimizer = false]
 CTSQueue<const ResourceBindingBase_t *, false>::~CTSQueue() [T = const ResourceBindingBase_t *, bTestOptimizer = false]
 CThreadEvent::CThreadEvent(bool)
@@ -702,9 +648,6 @@ CUtlBlockMemory overflow!
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -712,6 +655,7 @@ CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, cons
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
 CUtlReferenceTracker::Release() release counts for group outnumber addref counts for the same group
 CUtlString::SetDirect does not support resizing strings in place.
+CUtlStringMap inserted signed char string and got index %double, but there are only %double entries already inside.
 CUtlStringToken
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVConResourceProfileCommandHandler
@@ -721,62 +665,51 @@ CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 CWeakHandle
 CWeakHandleVoid
-Cannot allocate virtual address space in CResourceStreamVM::ReserveVirtualMemory, error %u
 Cannot assign multiple callbacks to signed char CAsyncResourceDataRequest
 Cannot attach to const deferred proxy
 ConCommand
 ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-Conditional Error: %short
 ConfigurationSystem_001
-ConsoleStartup
 Count
 CovMatrix3
 CreateInterface
-D$  unsigned short
-D$(A;D$,~OH
-D$,A;D$(|-1
+D$ ffffff.
+D$8Hc
+D$8fA
 D$HH9
-D$PE1
-D$PIc
-D9sXu
-D;bool(|
-D;k8u
+D%p unsigned short!L
+D;xH|41
+D;{(u
+D;{0u
 D;{8I
-DATAH
 DATAL
 DISABLED
+DM96u/H
 Deallocate
 Debug Name
 DebugTextureInfo001
-Deferred reference only resource detected when m_DeletionRequests = 0: '%short'
-DeleteResource for: "%short" (Reference count = %double, Deferred count = %double)
+DeleteResource for: "%short" (Reference count = %double)
 DependencyClass::m_pDependencyLL == NULL
-DmeResourceManifest
 DotaCardGameClient_001
-E  t1I
+E;float u!
+E;nHu
+E;t$H
+E;uH|
 E;uPu$I
+E;wH|
 ENABLED
 ERROR: %short resource %016llX is the wrong resource type!
 ERROR: %short resource %016llX requested but not resident. (Missing from from signed char manifest?)
-ERROR: %short resource '%short' (%016llX) requested has been deferred and is not loaded.
 ERROR: %short resource '%short' (%016llX) requested is not loaded and may have been deleted.
 ERROR: %short resource '%short' (%016llX) requested is still pending and is not loaded.
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
-ERROR: CResourceSystem::ReloadResource() - Cannot reload signed char nonexistent resource!
-ERROR: No type manager (%short) for resource "%short"!
+ERROR: No type manager for resource "%short"!
 ERROR: Reentrant call to CResourceSystem::BlockUntilManifestLoaded() while already in signed char frame update!
 ERROR: Reentrant call to CResourceSystem::FrameUpdate()!
 ERROR: Resource name "%short" has the incorrect extension "%short" for the specified resource type (expected "%short")!
-ERROR: Specified full path %short does not lie under the mod search path!)
-ERROR: Specified path %short could not be made content-relative
-ERROR: Trying to stream resource '%short' without an appropriate type manager! (If this is at startup, you may need to use CTier2AppSystemDict::SuppressStartupManifestLoad())
-ERROR: Unable to deduce resource type for resource "%short"!
-ERROR: Unknown resource type (%short) for resource "%short"!
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
 Encountered nonexistent %short: %016llX (file "%short")
@@ -786,22 +719,8 @@ EnvironmentMapBuilder_001
 Error initializing resource manager for resource type "%lld"!
 Error loading resource "%short" (Invalid header version: %double != %double)
 Error loading resource file "%short" (Error: %short)
-Error loading resource manifest "%short" (Error: %short)
-Error loading resource manifest "%short" (Invalid header version: %double != %double)
 Error loading resource manifest "%short" (No DATA block)
-Error loading resource remap fallback file for file "%short"!
-Error loading resource remap file "%short" (Invalid header version: %double != %double)
-Error loading resource remap file "%short" (No DATA block)
-Error! External resource reference %016llX is referring to the wrong type of resource!
-Error! Type manager for resource type '%short' %lld not registered!
 EventSystem001
-Expected %.8llX ("%short"), Deduced %.8llX ("%short").
-ExtrefCleanUpGuts
-ExtrefFixup
-ExtrefFixupField
-ExtrefInfoFindOrCreate
-ExtrefInfoInit
-ExtrefTraverseClass
 F Hcz 1
 F0Hcz01
 F@Hcz@1
@@ -809,11 +728,8 @@ FATAL ERROR: %short resource '%short' (%016llX) is the wrong resource type! (Thi
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
 Failed to handle resourcesystem profile command of type '%short'
 Failed to load resource "%short" and -exit_on_resource_load_failure was set and it'short not in badresources_whitelist.txt
-Failed to request handle to externally referenced resource %short
 Failed to unserialize resourcesystem profile command received from VConsole!
 Failed to update resource [streaming]: "%short"
-Failed to update resource: "%short"
-Failed trying to Commit %u bytes, used %u bytes, reserved %u bytes
 FeAxialEdgeBend_t
 FeBandBendLimit_t
 FeCollisionPlane_t
@@ -844,7 +760,7 @@ FeTaperedCapsuleStretch_t
 FeTreeChildren_t
 FeTri_t
 FeWorldCollisionParams_t
-File error loading resource header "%short" (Error: %short)
+FileSystem
 Final operation count %llu
 FixupResourceName: Illegal full path passed in ("%short")!
 FixupResourceName: Illegal path, missing extension passed in ("%short")!
@@ -859,76 +775,70 @@ FourVectors
 FourVectors2D
 From Class Binding
 From Enum Binding
-G8H	p(]
-GAMECONSOLE
 GameResourceServiceClientV001
 GameResourceServiceServerV001
-GameStartup
 GameUIService_001
-GenerateResourceNameFromFileName: Invalid extension specified in file name "%short"!
-GetGroupManifestResources: Manifest group name is empty or null.
-GetGroupManifestResources: Manifest group name not registered: "%short"
 GetNamedManifestResources: Manifest group name is empty or null.
 GetNamedManifestResources: Manifest name not registered: "%short"
 GetRegistrationForType(%short) != NULL
 GetRegistrationForType(pResourceData->m_nResourceType)->m_pTypeManager == NULL
 GetResourceStatus( pResourceName ) == RESOURCE_STATUS_RESIDENT
-H	p(]
 H	wchar_t(]
 H!wchar_t(]
-H90t%1
-H=vpcfA
+H@[A^]
 HHc{H1
-HIGHDPI
-HResourceManifest CResourceSystem::CreateResourceManifestInternal(int, const char **, ResourceManifestLoadBehavior_t, const char *, ResourceManifestLoadPriority_t, bool)
+HResourceManifestInternal
 H[A\A]A^A_]
 H__ZdaPv
 H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
-HandleResourceData
-Hc@pH
-HcK(H
+Hc@pI
+HcCHH
+HcH H
 HelpSystem_001
 HostStateMgr001
+HtA;ItH
+HtA;KtH
+I CUtlLinkedList<CLoadingResource *, unsigned short, true, unsigned short, CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CLoadingResource *, S = unsigned short, ML = true, I = unsigned short, M = CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>]
 I CUtlLinkedList<CResourceManifest *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CResourceManifest *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short>]
+I CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int> >::AllocInternal(bool) [T = ExtRefList_t *, S = unsigned int, ML = true, I = unsigned int, M = CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
-I;1tAL9
-I;3t!H9
-I;t#L9
+I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
+I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
+I9T=Pt2
 IAppSystem
 IAsyncResourceDataRequest
+IAsyncResourceDataRequest *CLoadingResource::CreateAsyncResourceDataRequest(int64, size_t, const char *)
 IAtomicManipulator
+ICodeResourceManifestManager
 ICommandCallback
 ICommandCompletionCallback
 IConCommandBaseAccessor
-IConVar
 IQuickTime001
-IRD_BlockingLoadResourceFileDataUtils
-IRD_OnHeaderLoadedUtils
-IRD_OnInitialDataRequestUtils
 IRD_RegisterResourceDataUtils
 IRefCounted
-IResourceDataProvider
 IResourceDeallocatorUtils
 IResourceHandleUtils
 IResourceManifestRegistry
 IResourceSystem
-IResourceSystemSingleThreaded
-IResourceSystemTools
+IResourceSystemLeakTracker
+IResourceSystemProfiler
 IResourceSystemUtils
 IResourceTypeManager
 ISchemaBinding
 ISchemaManipulator
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
-ITSHashConstructor<CResourceSystem::ResourceData_t>
+ITSHashConstructor<ResourceBindingBase_t>
+Ic4$H
+IcT$PH
+Ic]8H
 Idle (ResourceSystemSleep)
-InFrameUpdate()
 InfoForResourceTypeCAnimationGroupResource
 InfoForResourceTypeCAnimationResource
 InfoForResourceTypeCDotaItemDefinitionResource
@@ -946,8 +856,10 @@ InfoForResourceTypeCParticleSnapshot
 InfoForResourceTypeCPhysAggregateData
 InfoForResourceTypeCPostProcessingResource
 InfoForResourceTypeCRenderMesh
+InfoForResourceTypeCResourceManifestInternal
 InfoForResourceTypeCSequenceGroupResource
 InfoForResourceTypeCTextureBase
+InfoForResourceTypeCVMixListResource
 InfoForResourceTypeCVPhysXLevelData
 InfoForResourceTypeCVPhysXSurfacePropertiesList
 InfoForResourceTypeCVirtualVolumeTexture
@@ -958,10 +870,7 @@ InfoForResourceTypeIParticleSystemDefinition
 InfoForResourceTypePRTMatrixData_t
 InfoForResourceTypeProcessingGraphInstance_t
 InfoForResourceTypeProcessingGraph_t
-InfoForResourceTypeResourceManifest_t
-InfoForResourceTypeResourceRemapTable_t
 InfoForResourceTypeVBitmapFontRuntimeData_t
-InfoForResourceTypeVGameSoundScript_t
 InfoForResourceTypeVSound_t
 InfoForResourceTypeWorldEnvironmentMaps_t
 InfoForResourceTypeWorldLighting_t
@@ -977,35 +886,33 @@ IsIdxValid(int)
 IsInList(before)
 IsPowerOfTwo( m_nAlignment )
 IsResourceManifestGroupKnown: Manifest group name is empty or null
-IsResourceManifestNamedKnown: Manifest name is empty or null
 IsResourceNameValid( pName )
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
+It;JtH
+ItA;HtH
 K9t&Xu
 KeyValueCache001
 L$0E1
+L$PE1
 L&`ffff.
-L+{(M
-L1<ffff.
+L1xffffff.
 L90t*H
+L;>unsigned short!L9
 LIGHT_SOURCE_SHAPE_SPHERE
-LINUX
-LOWVIOLENCE
 Leaked reference to ERROR resource for type %short!
-Leaked resource: Refcount %short for %short resource "%short" (%016llX).  This may result in signed char crash.
+Leaked resource: Refcount %short for %short%short resource "%short" (%016llX).  This may result in signed char crash.
 LightDesc_t
 LightSourceShape_t
 LightType_t
 LightingBuilderMgr001
-LoadResourceManifestGroup: Manifest group name is empty or null.
-LoadResourceManifestGroup: Manifest group name not registered: "%short"
-LoadResourceManifestNamed: Manifest name is empty or null
-LoadResourceManifestNamed: Manifest name not registered: "%short"
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
+M+}(M
+M96u/H
 M9?u/H
 MATCHFRAMEWORK_001
 MATERIAL_LIGHT_DIRECTIONAL
@@ -1014,32 +921,19 @@ MATERIAL_LIGHT_ENVIRONMENT_PROBE
 MATERIAL_LIGHT_POINT
 MATERIAL_LIGHT_SPOT
 MATERIAL_LIGHT_UNUSED
-MAttributeName
-MDiskDataForResourceType
-MDmElementType
 MKeyfieldname
 MN_DeallocateResourceData for: "%short"
-MN_DeleteRequestedResources for: "%short" (Refcount = %double, deferred count = %double)
-MN_OnResourceDataLoaded for: "%short" (%llu bytes)
-MN_OnResourceHeaderLoaded for: "%short"
-MN_OnResourceManifestLoaded for: "%short"
-MN_RegisterResourceData %short
-MN_ServicePendingReplacement (no replacement data: deallocate) for: "%short"
-MN_ServicePendingReplacement (with replacement data: reload) for: "%short"
+MN_DeleteRequestedResources for: "%short" (Refcount = %double)
 MNetworkSerializeAs
 MNoScatter
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPropertySuppressField
 MResourceBlockType
 MResourceTypeForInfoType
 MSerializeAs
 MUnserializationCallback
-Manifest "%short" is badly formed for loading!
-Manifest "%short" requesting resource "%short"
-Manifest %short already unloaded!!!!
 Manifest File
-Manifest Group "%short" requesting resource "%short", requested by manifests:
-Manifest Group Name
 Manifest Name
 ManifestCompletion
 MapListService_001
@@ -1063,12 +957,11 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 Nfffff.
-No-refcount resource detected at the end of signed char manifest load
 NotifyManifestFinished
 OldFeEdge_t
 Ordered object did not begin in signed char zeroed state
 P P0@
-POSIX
+PPL;long double
 P[A^]
 PanoramaTextServices001
 PanoramaUIClient001
@@ -1080,20 +973,17 @@ PhysicsBuilderMgr001
 PostProcessingSystem_001
 PropertyEditorSystem_001
 Quaternion
-Queued manual deletion for: "%short"
 QueuedLoaderVersion001
 RAphp8p
 RBRAp
 RBRBRBRBRA
-RBRCp
-RBVAp
 RESOURCE_INPUT_DEPENDENCY_EXISTS
 RESOURCE_INPUT_DEPENDENCY_GAME_FILE
 RESOURCE_INPUT_DEPENDENCY_NOFLAG
 RESOURCE_INPUT_DEPENDENCY_OPTIONAL
 RESOURCE_MANIFEST_HANDLE_INVALID
 RESOURCE_TYPE_NONE
-RGp8p8p
+RESOURCE_TYPE_RESOURCE_MANIFEST
 RKS_DEFAULT
 RKS_DISABLE_GROUP_CLEARING
 RKS_KEEP_ALL_RECORDS
@@ -1117,12 +1007,12 @@ RMSG_RESOURCE_DATA_IO
 RMSG_RESOURCE_DATA_LOADED
 RMSG_RESOURCE_DEALLOCATE
 RMSG_RESOURCE_EXTREF_FIXUP
-RMSG_RESOURCE_HEADER_IO
-RMSG_RESOURCE_HEADER_LOADED
 RMSG_RESOURCE_LOAD_COMPLETED
 RMSG_RESOURCE_LOAD_FAILED
 RMSG_RESOURCE_LOAD_NAMEONLY_COMPLETED
 RMSG_RESOURCE_LOAD_REQUEST_QUEUED
+RMSG_RESOURCE_OBSOLETE_1
+RMSG_RESOURCE_OBSOLETE_2
 RMSG_SUB_EVENT_BEGIN_SPAN
 RMSG_SUB_EVENT_COUNT
 RMSG_SUB_EVENT_END_SPAN
@@ -1142,11 +1032,8 @@ RMSG_UNUSED_7
 RMSG_UNUSED_8
 RSProfilerTool
 RegisterConfigValue: Unknown error constructing config value "%short"!
-RegisterNamedManifest %short in %short
-RegisterNamedManifest:: "Startup" Manifest group name has been removed. Use ConsoleStartup, GameStartup, or ToolsStartup
 Release
-Reload "%short"
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -1156,21 +1043,16 @@ Reporting references for leak tracker error: "%short"
 Reporting references for resource "%short":
 Resource "%short" was not precached and could not be loaded by signed char just in time blocking load.
 Resource "%short" was not precached but was loaded by signed char just in time blocking load.
-Resource %short
-Resource File
 Resource Leak Breakdown
 Resource Name
 Resource System
 Resource leak tracking is disabled, run with "-resourceleaks" to track references
-Resource manifest "%short" (Empty m_ResourceFileNameList)
-Resource replacement %short
 Resource system profile mode %short
 ResourceAdditionalRelatedFile_t
 ResourceArgumentDependency_t
 ResourceBinding_t
 ResourceCompilerSystem001
 ResourceCustomDependency_t
-ResourceDefRefList_t
 ResourceDependencyFlags_t
 ResourceEditFloatData_t
 ResourceEditInfoBlock_t
@@ -1178,20 +1060,18 @@ ResourceEditIntData_t
 ResourceEditStringData_t
 ResourceExtRefList_t
 ResourceHandleUtils001
+ResourceHandle_t CResourceManifest::GetLoadingResource(int) const
 ResourceHandle_t CResourceSystem::CreateEmptyResourceInternal(const char *, ResourceType_t, bool)
 ResourceId_t
 ResourceInputDependency_t
+ResourceManifestLoadPriority_t CResourceManifest::GetPriority() const
 ResourceManifestRegistry001
-ResourceManifest_t
-ResourceNameHandleInternal_t CResourceRemapper::ComputeRemappedResource(ResourceNameHandleInternal_t, int)
+ResourceManifestType_t CResourceManifest::GetType() const
 ResourceNameHandle_t AllocResourceNameImp(bool, const char *)
 ResourceReferenceInfo_t
-ResourceRemapRule_t
-ResourceRemapTable_t
 ResourceSpecialDependency_t
 ResourceSystem
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ResourceSystemWaitingForFutureWork
 ResourceTypeIndex_t CResourceSystem::Internal_InstallPlaceholderTypeManager(ResourceType_t)
 RnPlane_t
@@ -1206,13 +1086,13 @@ SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 ServerUploadGameStats001
-Sfffff.
+Sffff.
 Sleeping
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -1223,64 +1103,54 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 StakRaw8H
-Startup
 StatsService_001
-Streaming Manifest file: "%short"
-Streaming data [%double bytes] for: "%short"
-Streaming header for: "%short"
-SubmitDataRequests
-SubmitHeaderRequests
-T &CUtlBlockMemory<const ResourceBindingBase_t *, int>::operator[](I) [T = const ResourceBindingBase_t *, I = int]
-T &CUtlStringMap<CResourceSystem::NamedResourceManifest_t *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CResourceSystem::NamedResourceManifest_t *, SymbolTableType_t = CUtlSymbolTable]
+SubmitResourceFileRequests
+T &CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>::operator[](I) [T = UtlLinkedListElem_t<CLoadingResource *, unsigned short>, I = unsigned short]
+T &CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>::operator[](I) [T = UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, I = unsigned int]
+T &CUtlStringMap<CodeResourceManifest_t *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CodeResourceManifest_t *, SymbolTableType_t = CUtlSymbolTable]
 T &CUtlStringMap<ResourceManifestEntry_t *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = ResourceManifestEntry_t *, SymbolTableType_t = CUtlSymbolTable]
-T$(~_A
-TARAp
-TBRASAYATAp
+TARBp
 TBRAp
-TBRBSATAp
+TBRB`
+TBSATAp
 TBTBp
-TBVBRB
+TBXBSATAp
+TB`VAUAYAVATAp
+TBp p
 TCRAp
 TCRBRA
-TCTAp
+TCRBRBXBRBTASAYATAp
+TCSATAp
 TCTBp
-TCUAp
-TCVATARAp
-TCXAp
-TCYARB`pAVAVATAYAVATAp
-TCYAp
+TCTBp p
+TCUARB
+TFVAp
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
 ThreadInMainThread()
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
-ToolsStartup
 Tried to double-register resource manager for two resource types! ( "%lld" and "%lld")
 Tried to install signed char NULL resource manager for resource type "%lld"!
 Tried to install signed char placeholder resource manager for an existing resource type "%lld"!
 Tried to install two resource managers for the same resource type "%lld"!
-Trying to destroy signed char resource manifest that'short still in use! Don'unsigned short ever try to destroy resource manifests from the manifest completion callback.
-Unable to read find remap file "%short"
-Unable to read resource file %short!
-Unable to read resource remap file "%short"
-Unexpected flags during deallocation for resource (deferred or pending_load set) '%short'
 Unexpected flags during deallocation for resource (not loaded but has been loaded) '%short'
+Unexpected flags during deallocation for resource (pending_load set) '%short'
 Unrecognized resource leak tracking parameter: "%short", available configuration aliases:
+Unrecognized streaming type: %double
 UnregisterNamedManifest called, but we are not shutting down!!!
 Updating resource [streaming]: "%short"
-Updating resource: "%short"
 Usage: resource_leaks <resource_name>
 UserInfoChangeService_001
-UtlTSHashHandle_t CUtlTSHashBase<CResourceSystem::ResourceData_t, 1021, unsigned long long, CUtlTSHashGenericHashMethod<unsigned long long>, CThreadSpinRWLock>::ElementPtrToHandle(T *) const [T = CResourceSystem::ResourceData_t, BUCKET_COUNT = 1021, KEYTYPE = unsigned long long, HashFuncs = CUtlTSHashGenericHashMethod<unsigned long long>, LOCKTYPE = CThreadSpinRWLock]
-V8ff.
-V8ffffff.
+UtlSymId_t CUtlStringMap<CodeResourceManifest_t *, CUtlSymbolTable>::Insert(const char *, const T &) [T = CodeResourceManifest_t *, SymbolTableType_t = CUtlSymbolTable]
+UtlTSHashHandle_t CUtlTSHashBase<ResourceBindingBase_t, 1021, unsigned long long, CUtlTSHashGenericHashMethod<unsigned long long>, CThreadSpinRWLock>::ElementPtrToHandle(T *) const [T = ResourceBindingBase_t, BUCKET_COUNT = 1021, KEYTYPE = unsigned long long, HashFuncs = CUtlTSHashGenericHashMethod<unsigned long long>, LOCKTYPE = CThreadSpinRWLock]
 VATARAp
 VATAp
 VApplication001
@@ -1318,7 +1188,6 @@ VScriptManager010
 VStringTokenSystem001
 VUUUH
 VXHc:1
-V_AppendSlash: ran out of space on %s.
 Vector
 Vector2D
 Vector4D
@@ -1328,7 +1197,6 @@ VxHc:1
 WARNING: %short resource '%short' (%016llX) requested but is not in the system. (Missing from from signed char manifest?)
 WARNING: %short resource '%short' is the wrong resource type (expected %short)!
 WARNING: FindResourceByName called with invalid resource name "%short"
-WARNING: Inconsistency detected in CResourceSystem::ExecuteResourceManifestRequests()!
 WARNING: Long frame update (%.2fms) for resource type manager '%short' in frame %double (%double long updates total for this manager)
 WARNING: Long resource system update - should have taken no more than %dns, but took %.4fs! (Frame #%double)
 WARNING: Resource "%short" references itself!
@@ -1339,24 +1207,33 @@ WARNING: Trying to access schema enum binding before bindings were registered in
 WARNING: Trying to deallocate signed char resource after the type manager was uninstalled! ("%short")
 WARNING: Trying to deallocate signed char resource with no associated resource type! ("%short")
 WARNING: resource '%short' is an unknown resource type!
-WIN32
-WINDOWS
-WINXP
-Warning:  %short = '%short' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
-Wrong alignment %double
+XI9t=Xu
 X[A\A]A^A_]
+X[A^]
 Zero refcount resource detected when m_DeletionRequests = 0: '%short'
-[%short] Registering resource %016llX (file "%short")
+[%p] Begin loading streaming data for resource %016llX (file "%short")
+[%p] Bump Extref resource %016llX (file "%short") to %double
+[%p] Finalize resource %016llX (file "%short")
+[%p] Finished external request for resource %016llX (file "%short")
+[%p] Finished loading manifest
+[%p] Lock change [%double] for resource %016llX (file "%short")
+[%p] OnResourceDataLoaded for resource %016llX (file "%short") (%llu bytes)
+[%p] Priority %double Transfer ownership: for resource %016llX (file "%short") [old manifest %p %double]
+[%p] ProcessLoadRequest: Priority [%double] for resource %016llX (file "%short")
+[%p] ProcessLoadRequest: Priority [%double] for resource %016llX (file "%short") Extref Parent %016llX (file "%short")
+[%p] Register Referring Resource: for resource %016llX (file "%short"), parent( "%short") ext ref depth [%double]
+[%p] Registering resource %016llX (file "%short")
+[%p] Started external request for resource %016llX (file "%short")
+[%p] Started loading manifest
 [A\A]A^A_]
 [A\A^A_]
 [A\A^A_]A
 [A^A_]
 [unsigned short,fD
-\fff.
-^fffff.
+\$HHc
 _0IcG
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
@@ -1369,42 +1246,50 @@ _GetResourceManifestCount
 _GetResourceManifests
 _InstallSchemaBindings
 _IterateCapturedStackAnnotations
-_KeyValuesSystem
 _LOG_GENERAL
 _LoggingSystem_GetChannelVerbosity
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_LoggingSystem_SetChannelVerbosity
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
-_Plat_GetOSType
-_Plat_GetPlatformError
-_Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MicroSecTickDiff
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_TickDiffMicroSec
 _Plat_TickDiffMicroSecF
 _Plat_TickDiffMilliSecF
-_Plat_VirtualAlloc
-_Plat_VirtualFree
 _SeriousWarning
 _ThreadGetCurrentId
 _ThreadGetCurrentProcessId
 _ThreadInMainThread
 _ThreadInterlockedExchange64
 _ThreadNanoSleep
+_V_FixSlashes
+_V_GetFileExtension
+_V_IsAbsolutePath
+_V_qsort_s
+_V_snprintf
+_V_stricmp_fast
+_V_strlower_fast
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
 _Warning
 __DATA
-__DefaultRuneLocale
 __GetCallStack_Fast
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_FileBase
+__V_FixupPathName
+__V_SetExtension
+__V_StripExtension
+__V_strncat
+__V_strncpy
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -1414,7 +1299,6 @@ ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
 __bss
@@ -1425,7 +1309,6 @@ __data
 __gcc_except_tab__TEXT
 __got
 __int128 < m_Vector.Count()
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1433,67 +1316,54 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_addons
-_atof
-_atoi
-_ffffff.
-_free
 _g_VProfCurrentProfile
 _g_pMemAlloc
-_malloc
 _memchr
 _memcmp
 _memcpy
 _memmove
 _memset
-_printf
 _pthread_mutex_destroy
 _raise
-_sscanf
 _strchr
 _strcmp
-_strcpy
 _strlen
-_strncat
 _strnlen
-_vsnprintf
 ` P`p
-`[A\A^A_]
 `unsigned char[A\A^A_]
+anonymous 
 attenuation0
 attenuation1
 attenuation2
+auto CAsyncResourceDataRequest::InitForInMemoryBuffer(void *, size_t)::(anonymous class)::operator()() const
 bAlreadyLoaded
+bFound
 bGotProfileEvents
-bHasMountedVPK == bIsVPK
+bLock != m_bLocked
+bStartLoading
 badresources_whitelist.txt
-basemodfile
 bfff.
 bitNum >= 0 && bitNum < this->GetNumBits()
-blockingLoadUtils.m_pResultRecord != NULL
-blockingLoadUtils.m_pResultRecord == NULL
 bool CAsyncResourceDataRequest::IsForInMemoryData()
 bool CBitVecT<CVarBitVecBase<unsigned short, 32> >::IsBitSet(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
-bool CResourceManifest::IsResourceRegisteredAsRoot(ResourceHandle_t) const
-bool CResourceRemapper::GetRemapConfigValue(const char *) const
-bool CResourceSystem::MN_PotentiallyDeleteResource(ResourceHandle_t)
-bool CResourceSystem::MN_RegisterResourceData(ResourceHandle_t, const ResourceId_t, const ResourceFileHeader_t *)
-bool CResourceSystem::StreamResourceReferenceAndFixup(ResourceType_t, ResourceHandle_t *, ResourceHandle_t, ResourceId_t, ResourceId_t, const CResourceRefTable *, const char *, char *, int, bool)
+bool CLoadingResource::RegisterResourceData(const ResourceFileHeader_t *, uint32)
+bool CLoadingResource::ShouldFail(const ResourceTypeRegistration_t *) const
+bool CResourceManifest::IsMarkedForDeletionAfterLoadCompletion() const
+bool CResourceManifest::RemoveLoadingResource(ResourceHandle_t)
+bool CResourceSystem::AcquireResourceHandleSubmitLoadIfNeeded(CResourceManifest *, ResourceHandle_t, const char *, CStrongHandleVoid *)
+bool CResourceSystem::RegisterResourceExternalReference(ResourceHandle_t, const char *, CStrongHandleVoid *)
+bool CResourceSystem::RemoveManifestFromPendingLoadQueue(CResourceManifest *)
 bool CUtlReferenceTracker<ResourceLeakTrackingGroup_t, unsigned long long, 0, CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options>::Internal_Release_TestGroupCounts(GROUP_TYPE, bool) [GROUP_TYPE = ResourceLeakTrackingGroup_t, UNIQUE_ID_TYPE = unsigned long long, INVALID_UNIQUE_ID_VALUE = 0, OPTIONS_OVERRIDE_CLASS = CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options]
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bouncecolor
 castshadows
-char *_V_strncat(char *, const char *, int, int)
 color
-const CResourceSystem::ResourceTypeRegistration_t *CResourceSystem::GetRegistrationForType(ResourceTypeIndex_t) const
-const T &CUtlStringMap<bool, CUtlSymbolTable>::operator[](UtlSymId_t) const [T = bool, SymbolTableType_t = CUtlSymbolTable]
+const ResourceTypeRegistration_t *CResourceSystem::GetRegistrationForType(ResourceTypeIndex_t) const
 const char *CFmtStrN<256, false>::sprintf(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-const char *V_stristr_fast(const char *, const char *)
 const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 ctx.GetRootCount() == 1
-data.m_Resource.m_nRefCount == 0
+data.m_nRefCount == 0
 default
-destBufferSize >= 0
 dimension0
 dimension1
 disable_group_clearing
@@ -1542,20 +1412,14 @@ flWorldFriction
 fltx4
 g_pResourceHandleUtils
 g_pResourceSystem
-hId != m_IdMap.InvalidHandle()
-hResource->m_nDeferredCount < hResource->m_nRefCount
-hResource->m_nDeferredCount >= 0
+g_pResourceSystemImp->InFrameUpdate()
+hReferringResource != RESOURCE_HANDLE_INVALID
+hResource != RESOURCE_HANDLE_INVALID
 hResource->m_nRefCount > 0
-hfffff.
-info.m_pReplacementString == 0
 innerconeangle
+int CAsyncResourceDataRequest::Release()
 int CUtlString::FormatV(const char *, __va_list_tag *)
-int ResourceRelease(ResourceHandle_t, bool, uintp, ResourceLeakTrackingGroup_t)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
-int _V_strnicmp_fast(const char *, const char *, int)
-item.m_nType == REPLACEMENT_MANIFEST
+int ResourceRelease(ResourceHandle_t, uintp, ResourceLeakTrackingGroup_t)
 keep_all_records
 keepall
 libresourcesystem.dylib
@@ -1602,9 +1466,9 @@ m_FitWeights
 m_FollowNodes
 m_FreeNodes
 m_Head == InvalidIndex()
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
-m_IdMap.Find( nId.GetRaw() ) != m_IdMap.InvalidHandle()
 m_InitPose
 m_InputDependencies
 m_LegacyStretchForce
@@ -1623,13 +1487,11 @@ m_NumElements == 0
 m_Objects.Count() == m_ObjectTypes.Count()
 m_ParameterName
 m_ParameterType
-m_PendingLoadRequests.Count() == 0
 m_Phi
 m_Plane
 m_Quads
 m_Range
 m_RelativeFilename
-m_ResourceFileNameList
 m_ResourceName
 m_ReverseOffsets
 m_Rods
@@ -1659,16 +1521,10 @@ m_Type
 m_WorldCollisionNodes
 m_WorldCollisionParams
 m_activeResourceManifests.IsInList( nIndex )
-m_activeResourceManifests.IsInList( pData->m_Resource.m_nLoadingManifest )
 m_bCastShadows
-m_bClearAllPreviousRules
 m_bEnableProfiling
-m_bPerformingReload
 m_bRenderDiffuse
 m_bRenderSpecular
-m_baseRemapFiles
-m_condition
-m_conditionSymbols
 m_flAddWorldCollisionRadius
 m_flDefaultExpAirDrag
 m_flDefaultExpQuadAirDrag
@@ -1694,8 +1550,13 @@ m_flWindage
 m_flXY
 m_flXZ
 m_flYZ
-m_fnChangeCallbacks.Count() == 0
+m_hResource->m_nLoadingResource != LOADING_RESOURCE_INDEX_INVALID
+m_hResource->m_nLoadingResource == LOADING_RESOURCE_INDEX_INVALID
 m_lightCookie
+m_loadingState < LOADING_STATE_WAITING_FOR_OWNER_MANIFEST
+m_loadingState == LOADING_STATE_NOT_STARTED_LOAD
+m_loadingState == LOADING_STATE_WAITING_FOR_DATA
+m_loadingState == LOADING_STATE_WAITING_FOR_OWNER_MANIFEST
 m_nCollisionSphereInclusiveCount
 m_nDynamicNodeFlags
 m_nEHandle
@@ -1708,21 +1569,19 @@ m_nFitMatrixCount2
 m_nFlags
 m_nFrameNumber
 m_nId
-m_nIndexMask + 1 == ( 1 << m_nIndexShift )
+m_nIndexMask + 1 == ( U << m_nIndexShift )
 m_nInt
-m_nLoadingIndex != LOADING_RESOURCE_MANIFEST_INDEX_INVALID
-m_nLoadingIndex == LOADING_RESOURCE_MANIFEST_INDEX_INVALID
+m_nLoadType != RESOURCE_LOAD_INVALID
 m_nManifestIndex
 m_nNode
 m_nNodeCount
 m_nObjectId
 m_nParentIndex
 m_nPendingGlobalStreamingDataRequests >= 0
-m_nPendingResourceManifestRequests >= 0
-m_nPendingStreamingDataRequests >= 0
 m_nQuadCount1
 m_nQuadCount2
 m_nQuadVelocitySmoothIterations
+m_nRefCount > 0
 m_nReferencerResourceId
 m_nReferredToResourceId
 m_nReserved
@@ -1744,17 +1603,20 @@ m_nSubEvent
 m_nTimeUS
 m_nTreeDepth
 m_nUserData
-m_originalResourceName
 m_pActiveBlockingManifest == NULL
 m_pActiveBlockingManifest == pManifest
 m_pAttachedDest && (m_pAttachedDest->m_pAttachedSource == this)
-m_pData
-m_pData == NULL
 m_pEntityClass
 m_pEntityName
 m_pInMemoryData != NULL
+m_pInMemoryData != nullptr
 m_pInMemoryData == NULL && m_pFileRequest == NULL
 m_pInMemoryData->m_pBuffer
+m_pLoadingInfo
+m_pLoadingInfo && m_pLoadingInfo->m_nLoadingIndex != LOADING_RESOURCE_MANIFEST_INDEX_INVALID
+m_pLoadingInfo && m_pLoadingInfo->m_nLoadingIndex == LOADING_RESOURCE_MANIFEST_INDEX_INVALID
+m_pLoadingInfo->m_nPendingResourceFileRequests >= 0
+m_pLoadingInfo->m_nPendingStreamingDataRequests >= 0
 m_pManifestDebugName
 m_pMemory
 m_pMemory[ int ]
@@ -1762,18 +1624,19 @@ m_pOuterTypeScope != NULL
 m_pOwner && m_CompletionFunc
 m_pOwner && m_Func
 m_pParent
-m_pParent == this
 m_pParent->m_fnCompletionCallback
 m_pResourceName
 m_pResourceUpdater == NULL
 m_pResourceUpdater == pUpdater
 m_pSchemaType != NULL
-m_pSubsequentRequest == NULL
 m_pTypeOf != NULL
-m_pUserCallback == NULL
-m_remapRules
-m_replacementResourceName
+m_pUserCallback == nullptr
 m_resourceRefInfoList
+m_rootResources.Count() == 0
+m_streamingState <= STREAMING_STATE_REQUESTED
+m_streamingState == STREAMING_STATE_REQUESTED
+m_streamingState == STREAMING_STATE_WAITING_FOR_STREAMING_ASYNC_REQUEST || m_streamingState == STREAMING_STATE_WAITING_FOR_STREAMING_DATA
+m_streamingState == STREAMING_STATE_WAITING_FOR_STREAMING_DATA
 m_vDiag
 m_vMaxBounds
 m_vMinBounds
@@ -1782,28 +1645,28 @@ m_vecUp
 marker.m_pMarker != &marker
 marker.m_pMarker != STACK_MARKER_DEFERRED_PROXY
 mathlib_extended
-maxLen > 0
-maxLen >= sizeof( *pDest )
-maxlen >= 1
 mffff.
 models/props_gameplay/npc/shopkeeper_vulture.vmdl
-nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nBeginDynamic
 nBoneCtrl
+nBytesToRead >= 0
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nChild
 nChildNode
 nCollisionMask
+nCount == 0
 nCtrl
 nCtrlChild
 nCtrlParent
 nDummy
 nEdge
 nElem
+nFirst == m_IdMap.Count()
 nFlags >= 0 && nFlags <= UINT8_MAX
 nFoundIndex != -1
+nGrowSize <= 1 << 27
 nIndex <= 255
 nIndex >= 0 && nIndex <= 255
 nListBegin
@@ -1815,19 +1678,17 @@ nNodeX1
 nNodeY0
 nNodeY1
 nParentNode
-nResourceHeaderBytesToRead >= 0
-nResourceReferenceType == DeduceResourceTypeFromResourceName( pInvalidResourceName )
-nResourceType == DeduceResourceTypeFromResourceName( "%short" ).
 nSide
 nSize != 0
 nTargetNode
-nTokenLength > 0 && !memcmp(pTokenInDuplicate,pCurPos,nTokenLength)
+nTries < 10000000
 nTypeIndex.Get() >= 0 && nTypeIndex.Get() < m_nRegisteredResourceTypes
 nUpdate == IResourceUpdater::RESOURCE_UP_TO_DATE
 nValid == m_nAnnotations
 nVertexNode
-nameId != m_NamedManifests.InvalidIndex()
+nameId != m_CodeManifests.InvalidIndex()
 nogroup
+offffff.
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
@@ -1840,21 +1701,24 @@ pBlob
 pCallback == NULL
 pDesc->m_pManifestName
 pElement
-pFirstSeparator - pCurPos <= INT_MAX
 pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
+pHeader->m_nResourceVersion == RESOURCE_MANIFEST_RESOURCE_VERSION
 pItem->IsMarkedForDeletion()
+pLoadingResource
+pLoadingResource->GetOwningManifest() == pManifest
 pManifest
-pManifest != NULL
-pManifest != m_pActiveBlockingManifest
 pName
+pOutHandle
+pOuterManifest != nullptr
 pOwnerManifest
 pPool->m_SpaceUsed < 0xFFFF
 pReg != NULL
-pReg && pReg->m_pTypeManager
+pReg != nullptr
 pRegistration
-pRegistration != NULL
-pReplacementData != NULL
+pReplacementData != nullptr
 pReplacementData == NULL
+pRequest
+pRequest->IsForInMemoryData()
 pResourceExt[0] == 0 || (pResourceExt[0] >= 'signed char' && pResourceExt[0] <= '...') || (pResourceExt[0] >= '0' && pResourceExt[0] <= '9')
 pResourceExt[1] == 0 || (pResourceExt[1] >= 'signed char' && pResourceExt[1] <= '...') || (pResourceExt[1] >= '0' && pResourceExt[1] <= '9')
 pResourceExt[2] == 0 || (pResourceExt[2] >= 'signed char' && pResourceExt[2] <= '...') || (pResourceExt[2] >= '0' && pResourceExt[2] <= '9')
@@ -1864,8 +1728,6 @@ pResourceExt[5] == 0 || (pResourceExt[5] >= 'signed char' && pResourceExt[5] <= 
 pResourceExt[6] == 0 || (pResourceExt[6] >= 'signed char' && pResourceExt[6] <= '...') || (pResourceExt[6] >= '0' && pResourceExt[6] <= '9')
 pResourceExt[7] == 0 || (pResourceExt[7] >= 'signed char' && pResourceExt[7] <= '...') || (pResourceExt[7] >= '0' && pResourceExt[7] <= '9')
 pSchemaSystem != NULL
-pSearch
-pSubsequentRequest != NULL
 pTrackingData != NULL
 pXRERA
 pXRERAp0p
@@ -1873,16 +1735,15 @@ pXRESAp
 pXRESF
 pXRESGp8p8p
 pXp8p
-p`ppppP` 
-ppResourceData != NULL
+p`pppp
+ptA;qt
+ptA;st
 qAdjust
-r.ffff.
 radr://5614542
 range
 renderdiffuse
 renderspecular
 require_exact_pairings
-resourceFileNameList
 resource_leaks
 resource_leaks <resource_name>: Show resource leaks for the named resource
 resource_leaks: Invalid resource name '%short'
@@ -1891,7 +1752,6 @@ resourcefile
 resourcesystem
 rs_dump_stats
 rs_dump_stats - Dump resourcesystem stats.
-sPw&H
 s_nConnectionCount > 0
 s_nDLLIdentifier < 0
 s_nDLLIdentifier >= 0
@@ -1900,15 +1760,17 @@ s_nResourceFCRegisteredCount > 0
 schemasystem
 shadowtextureheight
 shadowtexturewidth
-short(HcS0L
 static CSchemaEnumBindingBase *CSchemaEnumBinding<LightSourceShape_t>::Get() [T = LightSourceShape_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<LightType_t>::Get() [T = LightType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RMSG_EventType_t>::Get() [T = RMSG_EventType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RMSG_SubEventType_t>::Get() [T = RMSG_SubEventType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ResourceDependencyFlags_t>::Get() [T = ResourceDependencyFlags_t]
 static bool CAsyncAnnotationCapture::IterateStackAnnotationCallback(const void *, int, const char *, void *)
+static bool CLoadingResource::ShouldLoadStreamingData(CResourceManifest *, ResourceHandle_t)
 static void AABB_t::Schema_VerifyBindingIsRegistered()
+static void CAsyncResourceDataRequest::ProcessCompletedRequests(int)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+static void CLoadingResource::ProcessLoadRequest(CResourceManifest *, ResourceHandle_t, ResourceHandle_t, ResourceId_t, const char *)
 static void CRCMD_SetProfileMode::Schema_VerifyBindingIsRegistered()
 static void CRMSG_Entity_Event::Schema_VerifyBindingIsRegistered()
 static void CRMSG_Entity_Info::Schema_VerifyBindingIsRegistered()
@@ -1969,8 +1831,10 @@ static void InfoForResourceTypeCParticleSnapshot::Schema_VerifyBindingIsRegister
 static void InfoForResourceTypeCPhysAggregateData::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCPostProcessingResource::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCRenderMesh::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeCResourceManifestInternal::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCSequenceGroupResource::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCTextureBase::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeCVMixListResource::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCVPhysXLevelData::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCVirtualVolumeTexture::Schema_VerifyBindingIsRegistered()
@@ -1981,10 +1845,7 @@ static void InfoForResourceTypeIParticleSystemDefinition::Schema_VerifyBindingIs
 static void InfoForResourceTypePRTMatrixData_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeProcessingGraphInstance_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeProcessingGraph_t::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeResourceManifest_t::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeResourceRemapTable_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeVBitmapFontRuntimeData_t::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeVGameSoundScript_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeVSound_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeWorldEnvironmentMaps_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeWorldLighting_t::Schema_VerifyBindingIsRegistered()
@@ -1995,43 +1856,39 @@ static void PhysFeModelDesc_t::Schema_VerifyBindingIsRegistered()
 static void ResourceAdditionalRelatedFile_t::Schema_VerifyBindingIsRegistered()
 static void ResourceArgumentDependency_t::Schema_VerifyBindingIsRegistered()
 static void ResourceCustomDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceDefRefList_t::Schema_VerifyBindingIsRegistered()
 static void ResourceEditFloatData_t::Schema_VerifyBindingIsRegistered()
 static void ResourceEditInfoBlock_t::Schema_VerifyBindingIsRegistered()
 static void ResourceEditIntData_t::Schema_VerifyBindingIsRegistered()
 static void ResourceEditStringData_t::Schema_VerifyBindingIsRegistered()
 static void ResourceExtRefList_t::Schema_VerifyBindingIsRegistered()
 static void ResourceInputDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceManifest_t::Schema_VerifyBindingIsRegistered()
 static void ResourceReferenceInfo_t::Schema_VerifyBindingIsRegistered()
-static void ResourceRemapRule_t::Schema_VerifyBindingIsRegistered()
-static void ResourceRemapTable_t::Schema_VerifyBindingIsRegistered()
 static void ResourceSpecialDependency_t::Schema_VerifyBindingIsRegistered()
 std::terminate()
 strnlen
-t$H9[8u
-t$HIc
-t3fff.
+t.A;_
+t8A;^
 tHIcD$
-taIc^HH
+tQD;{
 taL9x
-tfffff.
 tlIcG
+tpE;float
 tqJ94
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
-u(L9=5
-u2A;^Xu
-u4H95^
+u wchar_t*H
+u(L9=E
+u1D9t
+u2A;^Pu
 uGetResourceManifest
-uQfff.
-uint CResourceStream::GetTotalSize() const
 uint64
-unsigned char[A\A]A^A_]
-unsigned short%fffff.
-unsigned short&H9[8tUH
+unsigned short	[A\A^A_]
+unsigned short&E;unsigned __int128
+unsigned short&ffffff.
 unsigned short,ffff.
-uuA+^
+unsigned short>Lc=1
+unsigned short>fffff.
+unsigned short@A;_
 vCenter
 vOffset
 vShape
@@ -2040,20 +1897,20 @@ vanim
 vents
 vfont
 vgraf
-vgscr
 virtual AsyncRequestStatus_t CAsyncResourceDataRequest::GetRequestStatus()
-virtual HResourceManifest CResourceSystem::LoadResourceManifestFile(const char *, ResourceManifestLoadBehavior_t, const char *, ResourceManifestLoadPriority_t)
 virtual HResourceManifest CResourceSystem::LoadResourceManifestGroup(const char *, ResourceManifestLoadBehavior_t, const char *, ResourceManifestLoadPriority_t)
 virtual HResourceManifest CResourceSystem::LoadResourceManifestNamed(const char *, ResourceManifestLoadBehavior_t, const char *, ResourceManifestLoadPriority_t)
-virtual IAsyncResourceDataRequest *CResourceSystem::CreateAsyncResourceDataRequest(ResourceHandle_t, int64, size_t)
+virtual IAsyncResourceDataRequest *CResourceSystem::CreateAsyncResourceDataRequest(ResourceHandle_t, int64, size_t, const char *)
 virtual ResourceHandle_t CResourceSystem::BlockingLoadResourceByNameIntoJustInTimeManifest(const char *, ResourceType_t, const char *)
 virtual ResourceHandle_t CResourceSystem::FindOrRegisterResourceByName(const char *, ResourceType_t, bool)
 virtual ResourceHandle_t CResourceSystem::FindResourceById(ResourceId_t, ResourceType_t)
-virtual ResourceNonStreamingDataHandle_t CResourceSystem::BlockingLoadResourceFileNonStreamingPortion(const char *, void **, const ResourceFileHeader_t **)
 virtual bool CVConResourceProfileCommandHandler::MessageData(uint32, uint16, uint32, byte *)
+virtual bool IResourceTypeManager::IsStreamingDataAlreadyLoaded(ResourceHandle_t)
 virtual const char *CAsyncResourceDataRequest::GetFileName()
-virtual int CConCommandMemberAccessor<CResourceSystem>::CommandCompletionCallback(const char *, CUtlVector<CUtlString> &) [T = CResourceSystem]
+virtual int CConCommandMemberAccessor<CResourceSystemProfiler>::CommandCompletionCallback(const char *, CUtlVector<CUtlString> &) [T = CResourceSystemProfiler]
+virtual int CResourceSystem::GetAllResources(int, int, ResourceHandle_t *, ResourceSystemGetResourcesFlags_t)
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
+virtual int IResourceTypeManager::GetNonStreamingDataLoadSize() const
 virtual size_t CAsyncResourceDataRequest::GetResultBufferSize()
 virtual void *CAsyncResourceDataRequest::GetResultBuffer()
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::Allocate() [T = CResourceArray<CResourceString>]
@@ -2126,8 +1983,6 @@ virtual void *CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Al
 virtual void *CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceInputDependency_t>]
 virtual void *CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Allocate() [T = CResourceArray<ResourceReferenceInfo_t>]
 virtual void *CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceRemapRule_t> >::Allocate() [T = CResourceArray<ResourceRemapRule_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceRemapRule_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceRemapRule_t>]
 virtual void *CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Allocate() [T = CResourceArray<ResourceSpecialDependency_t>]
 virtual void *CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceSpecialDependency_t>]
 virtual void *CAtomicManipulator<CResourceArray<float> >::Allocate() [T = CResourceArray<float>]
@@ -2136,7 +1991,7 @@ virtual void *CAtomicManipulator<CResourceArray<unsigned int> >::Allocate() [T =
 virtual void *CAtomicManipulator<CResourceArray<unsigned int> >::AllocateAndCopy(const void *) [T = CResourceArray<unsigned int>]
 virtual void *CAtomicManipulator<CResourceArray<unsigned short> >::Allocate() [T = CResourceArray<unsigned short>]
 virtual void *CAtomicManipulator<CResourceArray<unsigned short> >::AllocateAndCopy(const void *) [T = CResourceArray<unsigned short>]
-virtual void CAsyncResourceDataRequest::AssignCallback(CFunctor *)
+virtual void CAsyncResourceDataRequest::AssignCallback(CFunctor *, AsyncResourceDataRequestBehavior_t)
 virtual void CAsyncResourceDataRequest::KeepResultBuffer()
 virtual void CAsyncResourceDataRequest::ReleaseResultBuffer()
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Copy(void *, const void *) [T = CResourceArray<CResourceString>]
@@ -2209,8 +2064,6 @@ virtual void CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Cop
 virtual void CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceInputDependency_t>]
 virtual void CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceReferenceInfo_t>]
 virtual void CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Deallocate(void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceRemapRule_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceRemapRule_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceRemapRule_t> >::Deallocate(void *) [T = CResourceArray<ResourceRemapRule_t>]
 virtual void CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceSpecialDependency_t>]
 virtual void CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceSpecialDependency_t>]
 virtual void CAtomicManipulator<CResourceArray<float> >::Copy(void *, const void *) [T = CResourceArray<float>]
@@ -2219,36 +2072,26 @@ virtual void CAtomicManipulator<CResourceArray<unsigned int> >::Copy(void *, con
 virtual void CAtomicManipulator<CResourceArray<unsigned int> >::Deallocate(void *) [T = CResourceArray<unsigned int>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Copy(void *, const void *) [T = CResourceArray<unsigned short>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Deallocate(void *) [T = CResourceArray<unsigned short>]
-virtual void CBaseFileResourceDataProvider::OnInitialDataRequest(ResourceHandle_t, IRD_OnInitialDataRequestUtils *)
-virtual void CConCommandMemberAccessor<CResourceSystem>::CommandCallback(const CCommandContext &, const CCommand &) [T = CResourceSystem]
+virtual void CCodeResourceManifestManager::RegisterNamedManifest(ResourceManifestDesc_t *)
+virtual void CCodeResourceManifestManager::UnregisterNamedManifest(ResourceManifestDesc_t *)
+virtual void CConCommandMemberAccessor<CResourceSystemProfiler>::CommandCallback(const CCommandContext &, const CCommand &) [T = CResourceSystemProfiler]
 virtual void CNullTypeManager::AllocateResource(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *)
-virtual void CRD_OnHeaderLoadedUtils::SetHeaderRequestIsValidForDataToo()
-virtual void CRD_OnHeaderLoadedUtils::SetSubsequentFileRequest(IAsyncFileRequest *)
 virtual void CResourceDeallocatorUtils::ReleaseControl(const void *)
-virtual void CResourceStreamVM::Commit(uint)
-virtual void CResourceSystem::BlockingReloadResourceWithReplacementData(ResourceHandle_t, const void *, int)
+virtual void CResourceManifestTypeManager::AllocateResource(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *)
 virtual void CResourceSystem::DeleteResource(ResourceHandle_t)
 virtual void CResourceSystem::DestroyResourceManifest(HResourceManifest)
 virtual void CResourceSystem::ForceSynchronizationAndBlockUntilManifestLoaded(HResourceManifest)
-virtual void CResourceSystem::FreeResourceFileNonStreamingPortion(ResourceNonStreamingDataHandle_t)
-virtual void CResourceSystem::InstallResourceTypeManagerCustomProvider(ResourceType_t, IResourceTypeManager *, IResourceDataProvider *, bool, const char *, const char *, const char *)
 virtual void CResourceSystem::InstallResourceUpdater(IResourceUpdater *)
-virtual void CResourceSystem::MarkStreamingDataLoaded(ResourceHandle_t)
-virtual void CResourceSystem::RegisterNamedManifest(ResourceManifestDesc_t *)
-virtual void CResourceSystem::ResourceReferenceLeakTracking_AddRef(ResourceHandle_t, ResourceLeakTrackingGroup_t, uintp)
-virtual void CResourceSystem::ResourceReferenceLeakTracking_Release(ResourceHandle_t, ResourceLeakTrackingGroup_t, uintp)
+virtual void CResourceSystem::InstallTypeManager(ResourceType_t, IResourceTypeManager *, const char *, const char *, const char *)
+virtual void CResourceSystem::LockResourceLoad(ResourceHandle_t, bool)
 virtual void CResourceSystem::SetResourceTypeManifestPriority(ResourceType_t, ResourceManifestPriority_t)
 virtual void CResourceSystem::UninstallResourceUpdater(IResourceUpdater *)
 virtual void CResourceSystem::UnregisterForcedSynchronizationCallback(ResourceSystemForcedSynchronizationCallback_t, void *)
-virtual void CResourceSystem::UnregisterNamedManifest(ResourceManifestDesc_t *)
-virtual void CResourceSystem::WaitForStreamingData(ResourceHandle_t)
+virtual void CResourceSystemLeakTracker::ResourceReferenceLeakTracking_AddRef(ResourceHandle_t, ResourceLeakTrackingGroup_t, uintp)
+virtual void CResourceSystemLeakTracker::ResourceReferenceLeakTracking_Release(ResourceHandle_t, ResourceLeakTrackingGroup_t, uintp)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
-virtual void ConVar::ChangeStringValue(const char *, float)
-virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
-virtual void ConVar::InternalSetFloatValue(float)
-virtual void ConVar::InternalSetIntValue(int)
-virtual void ConVar::InternalSetValue(const char *)
+virtual void IResourceTypeManager::LoadStreamingData(ResourceHandle_t, IResourceSystemUtils *)
 vltre
 vmesh
 vmorf
@@ -2258,75 +2101,81 @@ void CAsyncCallStackTracker::ShiftCapture(int, int)
 void CAsyncCallStackTracker::SynchronousSectionEnd(bool, FN_GetCallStack, uint32)
 void CAsyncCallStackTracker::SynchronousSectionStart(CCallStackMarkerBase &)
 void CAsyncCallStackTracker::SynchronousSectionStart(const CCallStackMarkerBase &)
-void CAsyncResourceDataRequest::InitForFileRead(CResourceSystem *)
-void CAsyncResourceDataRequest::InitForInMemoryBuffer(CResourceSystem *, void *, size_t)
+void CAsyncResourceDataRequest::IO_HandleAsyncResourceDataRequest()
+void CAsyncResourceDataRequest::InitForFileRead(bool, const char *)
+void CAsyncResourceDataRequest::InitForInMemoryBuffer(void *, size_t)
 void CAsyncStackTop::ExposeAnnotations(CAsyncCallStackTracker *)
 void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned short]
 void CDeferredCallStackMarkerProxy::Attach(CDeferredCallStackMarkerProxyTarget &)
 void CDeferredCallStackMarkerProxy::Detach()
-void CMemberFuncProxyBase<CResourceSystem *, void (CResourceSystem::*)(IAsyncFileRequest *, CResourceManifest *, CAsyncCallStackTracker *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CResourceSystem *, FUNCTION_TYPE = void (CResourceSystem::*)(IAsyncFileRequest *, CResourceManifest *, CAsyncCallStackTracker *), MEM_POLICY = CFuncMemPolicyNone]
-void CMemberFuncProxyBase<CResourceSystem *, void (CResourceSystem::*)(IAsyncFileRequest *, const ResourceBindingBase_t *, ResourceId_t), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CResourceSystem *, FUNCTION_TYPE = void (CResourceSystem::*)(IAsyncFileRequest *, const ResourceBindingBase_t *, ResourceId_t), MEM_POLICY = CFuncMemPolicyNone]
-void CMemberFuncProxyBase<CResourceSystem *, void (CResourceSystem::*)(IAsyncFileRequest *, const ResourceBindingBase_t *, ResourceId_t, bool), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CResourceSystem *, FUNCTION_TYPE = void (CResourceSystem::*)(IAsyncFileRequest *, const ResourceBindingBase_t *, ResourceId_t, bool), MEM_POLICY = CFuncMemPolicyNone]
-void CMemberFuncProxyBase<CResourceSystem *, void (CResourceSystem::*)(IAsyncResourceDataRequest *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CResourceSystem *, FUNCTION_TYPE = void (CResourceSystem::*)(IAsyncResourceDataRequest *), MEM_POLICY = CFuncMemPolicyNone]
+void CLoadingResource::BeginLoadingResource(bool)
+void CLoadingResource::BeginLoadingStreamingData()
+void CLoadingResource::EnsureStreamingDataRequested()
+void CLoadingResource::FinalizeLoadRequest()
+void CLoadingResource::HandleAdditionalLoadRequest(ResourceHandle_t, CResourceManifest *)
+void CLoadingResource::InitializeAsAlreadyLoaded()
+void CLoadingResource::Lock(bool)
+void CLoadingResource::NoteResourceDataLoaded(CAsyncResourceDataRequest *)
+void CLoadingResource::OnResourceDataLoaded(CAsyncResourceDataRequest *)
+void CLoadingResource::OnResourceLoadFailed()
+void CLoadingResource::RegisterAsyncDataRequestComplete(CAsyncResourceDataRequest *)
+void CLoadingResource::TransferManifestOwnership(CResourceManifest *)
+void CMemberFuncProxyBase<CAsyncResourceDataRequest *, void (CAsyncResourceDataRequest::*)(), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CAsyncResourceDataRequest *, FUNCTION_TYPE = void (CAsyncResourceDataRequest::*)(), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CLoadingResource *, void (CLoadingResource::*)(CAsyncResourceDataRequest *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CLoadingResource *, FUNCTION_TYPE = void (CLoadingResource::*)(CAsyncResourceDataRequest *), MEM_POLICY = CFuncMemPolicyNone]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
 void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
-void CResourceManifest::FinalizeAfterLoading()
-void CResourceManifest::RegisterPendingFileDataRequest(PendingRequestType_t, CInterlockedPendingRequest *)
-void CResourceManifest::RegisterPendingFileHeaderRequest(PendingRequestType_t, CInterlockedPendingRequest *)
-void CResourceManifest::RegisterPendingManifestRequest(PendingRequestType_t)
+void CResourceManifest::Initialize(int, const char **)
+void CResourceManifest::InitializeInternal(int, const char **)
+void CResourceManifest::InvokeCompletionCallback()
+void CResourceManifest::MarkForDeletionAfterLoadCompletion()
+void CResourceManifest::RegisterDependentManifest(CResourceManifest *)
+void CResourceManifest::RegisterLoadingResource(ResourceHandle_t)
+void CResourceManifest::RegisterPendingResourceFileRequest(PendingRequestType_t)
 void CResourceManifest::RegisterPendingStreamingDataRequest(PendingRequestType_t)
 void CResourceManifest::RegisterRootResource(ResourceHandle_t)
+void CResourceManifest::RemoveAllDependentManifests()
+void CResourceManifest::RemoveDependentManifest(CResourceManifest *)
 void CResourceManifest::StartLoading()
-void CResourceStream::Align(uint, int)
-void CResourceStream::EnsureAvailable(uint)
-void CResourceStreamVM::ReleaseVirtualMemory()
-void CResourceStreamVM::ReserveVirtualMemory(uint)
-void CResourceSystem::AssignLoadingOwnershipOfHandle(CResourceManifest *, ResourceHandle_t)
-void CResourceSystem::ClearLoadingOwnershipOfHandleIfOwned(CResourceManifest *, ResourceHandle_t)
-void CResourceSystem::EnsureStreamingDataResident(CResourceManifest *, ResourceHandle_t)
-void CResourceSystem::ExecuteResourceLoadRequests()
 void CResourceSystem::ExecuteResourceManifestRequests()
-void CResourceSystem::FinalizeLoadingManifest(CResourceManifest *)
-void CResourceSystem::FlushPendingResourceRequestsForRemapChanges()
-void CResourceSystem::IO_HandleAsyncResourceDataFileRequest(IAsyncResourceDataRequest *)
-void CResourceSystem::MN_DeallocateResourceData(CResourceSystem::ResourceData_t *)
-void CResourceSystem::MN_NoteResourceDataLoaded(IAsyncFileRequest *, ResourceHandle_t, bool)
-void CResourceSystem::MN_NoteResourceHeaderLoaded(IAsyncFileRequest *, ResourceHandle_t)
-void CResourceSystem::MN_OnResourceDataLoaded(IAsyncFileRequest *, ResourceHandle_t, ResourceId_t, bool)
-void CResourceSystem::MN_OnResourceHeaderLoaded(IAsyncFileRequest *, ResourceHandle_t, ResourceId_t)
-void CResourceSystem::MN_OnResourceLoadFailed(const ResourceHandle_t &)
-void CResourceSystem::MN_OnResourceManifestLoaded(IAsyncFileRequest *, CResourceManifest *, CAsyncCallStackTracker *)
+void CResourceSystem::FinalizeOrAdvanceLoadingManifests(int, CResourceManifest **)
+void CResourceSystem::MN_DeallocateResourceData(ResourceHandleWritable_t)
 void CResourceSystem::MaybeExitBecauseOfResourceLoadFailure(const char *)
-void CResourceSystem::RemoveResourceTypeManagerInternal(IResourceTypeManager *, ResourceType_t)
-void CResourceSystem::SetProfilingResourceEvents(bool)
-void CResourceSystem::StreamResourceLoad(CResourceManifest *, ResourceHandle_t, ResourceId_t)
-void CResourceSystem::StreamResourceManifest(CResourceManifest *, const char *)
 void CResourceSystem::Update_Internal(int, ResourceSystemUpdateMode_t, bool)
+void CResourceSystem::WarnAboutResourceTypeLeaks(ResourceIdMap_t *, ResourceTypeIndex_t, const char *)
+void CResourceSystemProfiler::SetProfilingResourceEvents(bool)
 void CSchemaClassBindingBase::RegBase(ISchemaSystem *, const char *, const char *, CSchemaClassInfo *, const char *) [I = int]
 void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
-void CSplitString::Construct(const char *, const char **, int)
 void CStrongHandle<ResourceBindingVoid_t>::Shutdown() [TResourceInfoData = ResourceBindingVoid_t]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, &CUtlMemoryPoolBase::FreeList_t::pNext>::Push(T *) [T = CUtlMemoryPoolBase::FreeList_t, POINTER_TYPE = CUtlMemoryPoolBase::FreeList_t, CONTAINER_TYPE = CUtlMemoryPoolBase::FreeList_t, LINKED_LIST_PTR = &CUtlMemoryPoolBase::FreeList_t::pNext]
 void CTSQueue<CAsyncIOResult_t, false>::Purge() [T = CAsyncIOResult_t, bTestOptimizer = false]
 void CTSQueue<CResourceManifest *, false>::Purge() [T = CResourceManifest *, bTestOptimizer = false]
-void CTSQueue<CResourceManifest::PendingResourceLoad_t, false>::Purge() [T = CResourceManifest::PendingResourceLoad_t, bTestOptimizer = false]
-void CTSQueue<CResourceSystem::PendingResourceManifest_t, false>::Purge() [T = CResourceSystem::PendingResourceManifest_t, bTestOptimizer = false]
 void CTSQueue<const ResourceBindingBase_t *, false>::Purge() [T = const ResourceBindingBase_t *, bTestOptimizer = false]
-void CUtlBlockMemory<const ResourceBindingBase_t *, int>::ChangeSize(int) [T = const ResourceBindingBase_t *, I = int]
-void CUtlBlockMemory<const ResourceBindingBase_t *, int>::Init(int, int) [T = const ResourceBindingBase_t *, I = int]
+void CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>::ChangeSize(int) [T = UtlLinkedListElem_t<CLoadingResource *, unsigned short>, I = unsigned short]
+void CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>::Init(int, int) [T = UtlLinkedListElem_t<CLoadingResource *, unsigned short>, I = unsigned short]
+void CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>::ChangeSize(int) [T = UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, I = unsigned int]
+void CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>::Init(int, int) [T = UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, I = unsigned int]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::Put(const void *, int)
 void CUtlBuffer::VaPrintf(const char *, __va_list_tag *)
+void CUtlLinkedList<CLoadingResource *, unsigned short, true, unsigned short, CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short> >::Free(I) [T = CLoadingResource *, S = unsigned short, ML = true, I = unsigned short, M = CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>]
+void CUtlLinkedList<CLoadingResource *, unsigned short, true, unsigned short, CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = CLoadingResource *, S = unsigned short, ML = true, I = unsigned short, M = CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>]
+void CUtlLinkedList<CLoadingResource *, unsigned short, true, unsigned short, CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short> >::RemoveAll() [T = CLoadingResource *, S = unsigned short, ML = true, I = unsigned short, M = CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>]
+void CUtlLinkedList<CLoadingResource *, unsigned short, true, unsigned short, CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short> >::Unlink(I) [T = CLoadingResource *, S = unsigned short, ML = true, I = unsigned short, M = CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>]
 void CUtlLinkedList<CResourceManifest *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short> >::Free(I) [T = CResourceManifest *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short>]
 void CUtlLinkedList<CResourceManifest *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = CResourceManifest *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short>]
 void CUtlLinkedList<CResourceManifest *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short> >::RemoveAll() [T = CResourceManifest *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short>]
 void CUtlLinkedList<CResourceManifest *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short> >::Unlink(I) [T = CResourceManifest *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short>]
+void CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int> >::Free(I) [T = ExtRefList_t *, S = unsigned int, ML = true, I = unsigned int, M = CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>]
+void CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int> >::LinkBefore(I, I) [T = ExtRefList_t *, S = unsigned int, ML = true, I = unsigned int, M = CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>]
+void CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int> >::RemoveAll() [T = ExtRefList_t *, S = unsigned int, ML = true, I = unsigned int, M = CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>]
+void CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int> >::Unlink(I) [T = ExtRefList_t *, S = unsigned int, ML = true, I = unsigned int, M = CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
+void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 void CUtlReferenceTracker<ResourceLeakTrackingGroup_t, unsigned long long, 0, CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options>::Release(GROUP_TYPE, UNIQUE_ID_TYPE, const CCallStackCapture &) [GROUP_TYPE = ResourceLeakTrackingGroup_t, UNIQUE_ID_TYPE = unsigned long long, INVALID_UNIQUE_ID_VALUE = 0, OPTIONS_OVERRIDE_CLASS = CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options]
 void CUtlString::SetDirect(const char *, int)
 void CVConResourceProfileCommandHandler::HandleCommand(void *, const CSchemaType *)
@@ -2334,21 +2183,14 @@ void CVarBitVecBase<unsigned short, 32>::ReallocInts(int) [CountType = unsigned 
 void CallPostConnect()
 void ConVar_Register(int64, IConCommandBaseAccessor *)
 void ConVar_Unregister()
-void ConditionSyntaxError(const char *)
 void ConnectInterfaces(CreateInterfaceFn *, int)
 void DisconnectInterfaces()
 void DisconnectTier2Libraries()
-void GenerateResourceNameFromFileName(const char *, char *, int)
 void MathLib_Init()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void ResourceHandleLeak_MetaData_GroupedRecords(CLogging_MetaDataAllocator *, const CResourceBindingReferenceTrackingData *, int)
 void ResourceHandleLeak_MetaData_IndividualRecords(CLogging_MetaDataAllocator *, const CResourceBindingReferenceTrackingData *)
-void _V_AppendSlash(char *, int, char)
-void _V_FileBase(const char *, char *, int)
-void _V_strncpy(char *, const char *, int)
-vpcfA
-vpcfu
 vphys
 vplev
 vpost
@@ -2356,12 +2198,12 @@ vpram
 vprtm
 vrgrp
 vrman
-vrmap
 vrnmd
 vsndevts
 vsndstck
 vstdlib
 vsurf
+vt;wtH
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
@@ -2372,16 +2214,14 @@ vwrld
 vwrlt
 wchar_t char::*(M
 xHHc{
+xXu*H
+xXulH
 zD(knN
 {error resource: %short}
-|!ffffff.
 |$@L9?u
-|jffff.
-}HA;EP}
-~+ffff.
-~@ffffff.
-~Kffffff.
-~Offffff.
-~kff.
-~}ffff.
-~~fffff.
+}%E9|$$r
+}'A9^$r!I
+}*D9s$r$H
+},E9t$$r%I
+~.fff.
+~?fff.

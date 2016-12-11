@@ -10,27 +10,38 @@
   `@ 
   `P 
   `p 
-  frame %2d: %p
-  p` 
  %4i: 
  - %double / %double allocated
  - Cluster[%double]@%8p = '%short' (type %double)
  - follow %short wchar_t%.3f
- 0P0P
+ 0@``
+ 0@`` 
+ 0@``0
  @  P
  @0@@@
  @P0 0`
+ @``  `
+ @`p  `
+ @pP  `
  Child collection: [%p]
  Hc{ 1
- P0@P0@
  PP@ 
  [A\A^A_]
  [A^]
- fff.
+ `  0P0
+ ` 0@``@
+ `0@P
+ `0@``
+ `0@`` 
+ `0@``0
+ `0@``@
+ `0@``P
+ `0@``P 
  ffff.
  fffff.
  ffffff.
  next: %p, parent: %p
+ p0@``0
  stubbed
 ! GetWorld()->IsBusy()
 ! IsAnyNegative( CmpGtSIMD( AbsSIMD( Four_Ones - ( fl4A + fl4S + fl4T + fl4U ) ), ReplicateX4( 1.0e-4 ) ) )
@@ -42,9 +53,11 @@
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
 !"Not found"
 !( ( nAlignNodeCount - 1 ) & nAlignNodeCount )
+!( 0xF & ( uintp( in.m_flMatVal ) | uintp( out.m_flMatVal ) ) )
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( nLanes & ( nLanes - 1 ) )
 !( nPidx & ~KILL_LIST_INDEX_MASK ) && !( nKillFlags & ~KILL_LIST_FLAGS_MASK )
+!(p(`
 !4G(H
 !4G(L
 !IsExternallyAllocated() && !mem.IsExternallyAllocated()
@@ -73,33 +86,39 @@
 !m_pPrevDef
 !m_pPrevDef && !m_pNextDef
 !m_pVdata && !m_pIdata
+!m_slaves.IsEmpty()
+!m_targets.IsEmpty()
 !queue.Element( int )->HasLinks()
+!this->m_bLocked
 !this->m_pMemory && pIB
 "%short" 
 "%short" "
 "%short" "%short" 
 "fff.
+"ffff.
 "fffff.
+"ffffff.
 "id" "elementid" 
 # of children to enable
 # of children to set
 # of control points to set
+#CDD	
 #CLD	
-#CTD	
-#CdD	
+#C\D	
+#CtD	
 #C|D	
 #fff.
 #fffff.
 #ffffff.
-$$L;long double
 $1HcT1
 $>!@void>
+$@fff.
 $A;GX|3H
 $E9n
 $Iffffff.
 $fffff.
 $ffffff.
-$wbIcD
+$wRIcD
 %.04f
 %.10f
 %02x 
@@ -108,6 +127,7 @@ $wbIcD
 %double matrices will shape-fit complex deformations: {%short}
 %double of %double driving bones have too few influences and were switched to simplified single-polygon shape-fit mode: {%short}
 %double/%double cloth nodes(verts) will simulate without any animation influence.
+%fffff.
 %ffffff.
 %float %float
 %float %float %float
@@ -119,19 +139,21 @@ $wbIcD
 %short encoding %short %double format %short %double %short
 %short is trying to get CP object %double but the operator read limit is %double
 %short is trying to get CP renderable %double but the operator read limit is %double
-%short unable to grow buffer to fit string
 %short%short%short #%double
 %short(%double) : %short
+%short,%float,%float,%.9f,%double
+%short,%float,%float,%.9f,%double,%double,%double,%float,%float,%.9f,%double,%double
 %short: %short
+%short: string format requested %double chars
 &YA1H
 &YA1L
 &fff.
+&fffff.
 &ffffff.
 &qt != &q
+'Lighten blend mode
 'Number of columns in grid
 'Number of rows in grid
-'ffff.
-'ffffff.
 ( (m_alignment-1) & (uintp)m_pBase ) == 0
 ( 1.0f - tr.fraction ) >= 0.0f
 ( alignment >= 4 ) && ( m_alignment == alignment )
@@ -140,11 +162,10 @@ $wbIcD
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount )
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount - 1 )
 ( m_nVertexIncrement == 0 ) || ( m_nVertexCount + nNumVertices <= m_nMaxVertexCount )
-( nAttrIdx >= 0 ) && ( nAttrIdx < MAX_SOA_FIELDS )
 ( nOffset & 3 ) == 0
 ( nParticleAttribute >= 0 ) && ( nParticleAttribute < MAX_PARTICLE_ATTRIBUTES )
 ( nParticleIndex >= 0 ) && ( nParticleIndex < ActiveParticleCount() )
-( nWhichPoint >= 0 ) && ( nWhichPoint < MAX_PARTICLE_CONTROL_POINTS )
+( nParticles % N ) == 0
 ( nX >= 1 ) && ( nY >= 1 ) && ( nZ >= 1 )
 ( ndxBucket >= 0 ) && ( ndxBucket < 65536 )
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
@@ -153,7 +174,9 @@ $wbIcD
 ( size + 1 ) < capacity
 ( unsigned short >= 0.0 ) && ( unsigned short <= 1.0 )
 (*%short*), 
-(@CSchemaClassBinding<C_OP_RenderStatusEffect>
+(-B8%
+(5!B%
+(="=%
 (D$ D
 (D$@A
 (D2pA
@@ -162,6 +185,7 @@ $wbIcD
 (D9 E
 (GetChar()) == (0)
 (Hc{(1
+(L* A
 (L9 E
 (L9 H
 (L9@D
@@ -169,14 +193,11 @@ $wbIcD
 (T90D
 (V0fD
 ([A\A]A^A_]
-([A\A]A^A_]A
 ([A^A_]
-(\2 A
+(\$ A
 (\9 A
 (d$0A
 (dest.AddToTail()) == (int)
-(double& A
-(ffffff.
 (intp)this % 16 == 0
 (l$ A
 (l$0E
@@ -188,14 +209,19 @@ $wbIcD
 (nIndexCount == 0) || (pIndices[0] < m_nActiveParticles)
 (nVertexCount & 0x3) == 0
 (s_pThisModuleBindingPointer != NULL)
-(size_t)hResource % 4 == 0
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uintp)m_pNextAlloc <= (uintp)m_pBufferBase + m_nBufferSize
 )D$ H
 )D$4H
+)D$tA
+)L$@A
+)L$PA
+)L$`A
+)L$pA
 )T> H
 )T> float
 )V ;]
+)\$ A
 )\> D
 )\> H
 )\> float
@@ -203,6 +229,10 @@ $wbIcD
 )^ ;U
 )^ D;]
 )_ fA
+)d$0A
+)d$4H
+)d$DB
+)d$TB
 )d$dE
 )d$tA
 )fffff.
@@ -210,8 +240,10 @@ $wbIcD
 )t$$E
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
-*ChHcCt
-*FhMcflD9
+*** Turn on -particle_perf!
+*** Unable to open profile file!
+*CpHcC|
+*FpMcftD9
 *pMaxIndices <= 32768
 *pMaxVertices <= 32768
 *pnBoneIndex >= 0
@@ -225,9 +257,9 @@ $wbIcD
 +K$Hc
 +fff.
 ,>u"u?
-,ffff.
 ,fffff.
 ,ffffff.
+,float;>"
 - Additional Cluster %double:
 - Embedded Cluster:
 -0.9629629
@@ -237,45 +269,33 @@ $wbIcD
 -30 0 0 
 -30 30 0 
 -90.0f
--ffff.
 -ffffff.
 -forceReloadParticleSnapshots
 -particle_perf
 -sse2
 -sse3
 -sse4
-.-'X	
-.-MX	
 .125 .125 .125
 .25 .25 .25
 .5 .5 .5
-.5O`"
-.@pu$z"
-.C0v~
-.C4vh
-.C8vR
-.Clu5z3
-.Cxu4z2
-.C|u'...%
+.=-|%
+.=v2%
+.@xu'...%
+.C4vs
+.C8v]
+.Ctu5z3
+.D$Dr	
 .ETv*H
 .Elv*H
-.Fpv3Hc
-.Ghu1z/
-.Glu$z"
-.Gpu#...!
-.Gpu&z$
-.Gxu(...&
-.Gxu*...(
-.GxuEzC
-.Kps-
-.Kpsf
-.Kpu(...&
-.Kxr0
-.NDv$
-.Nxr1
-.O|u<...:
-.W|u8z6
-.fffff.
+.Fxv3Hc
+.Gpu1z/
+.Gtu$z"
+.Gxu&z$
+.Gxu)...'
+.IDv$
+.Kxs-
+.Kxsi
+.Kxu(...&
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/boneconstraints_h_schema.gen_cpp
@@ -288,17 +308,13 @@ $wbIcD
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_level_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_shape_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vpropbreakabledata_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/../common/blobulator/implicit/../smartarray.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_constraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_initializers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_initializersnew.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_emitters.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_helpers.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_opsnew.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp(5054): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/particle_sort.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/particles_internal.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp(5603): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_constraints_cpp_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_initializers_cpp_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_initializersnew_cpp_schema.gen_cpp
@@ -332,6 +348,10 @@ $wbIcD
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/polyhedron.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/randsse.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/../common/blobulator/implicit/../smartarray.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/builtin_particle_helpers.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/control_point_data.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particle_initialization.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particle_sceneobject.cpp
@@ -341,6 +361,7 @@ $wbIcD
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particles.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particles_internal.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particletypemanager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/animcontainer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer.h
@@ -348,7 +369,9 @@ $wbIcD
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer_saveloadresource.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer_schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/materialsystem2/imesh2.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/femodelbuilder.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/indexdata.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/vertexdata.h
@@ -376,7 +399,6 @@ $wbIcD
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmemory.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlpriorityqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsoacontainer.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsortvector.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
@@ -416,6 +438,24 @@ $wbIcD
 0.001
 0.025
 00000`PP
+000@``
+000@```
+00@``
+00@`` 
+00@``0
+00@``0 
+0@`` 
+0@``  
+0@``0
+0@``@
+0@``P
+0@``P 
+0@``PP `
+0@```
+0@``` 
+0@``p
+0@``p 
+0Hc{01
 0[A\A^A_]
 0[A^]
 0fffff.
@@ -431,92 +471,98 @@ $wbIcD
 100000.0
 100000000
 1000000000
-10016
-10119
-10256
-10309
-10443
-10503
-10581
-10652
-10722
-10765
-10883
-10985
-11003
-11129
-11168
-11337
-11417
-11498
-11665
-11718
-11830
-11899
-11984
-12134
-12137
-12234
-12335
-12393
-12471
-12617
-12656
-12714
-12793
+10030
+10147
+10270
+10337
+10457
+10531
+10595
+10680
+10736
+10793
+10816
+10897
+10911
+10999
+11031
+11143
+11196
+11351
+11445
+11524
+11693
+11746
+11858
+11927
+12012
+12162
+12165
+12262
+12363
+12421
+12499
+12645
+12684
+12742
 128 0 0
-12860
-12921
-13047
-13056
-13206
-13219
-13389
-13507
-13661
+12821
+12888
+12949
+13075
+13084
+13234
+13247
+13358
+13417
+13497
+13535
+13689
 137.508
-13882
-14023
-14163
-14306
-14508
-14633
-14757
-14885
-15122
-15286
-15414
-15588
-15753
-15898
-16043
-16188
-16365
-16497
-16638
-16796
-16924
-17142
-17389
-17590
-17696
-17877
-18149
-18267
-18385
-18517
-18624
-18780
-18894
-19012
-19189
-19304
-19407
-19525
+13910
+14051
+14191
+14334
+14536
+14661
+14785
+14913
+15150
+15314
+15442
+15616
+15781
+15926
+16071
+16216
+16393
+16525
+16666
+16824
+16952
+17170
+17417
+17618
+17724
+17905
+18177
+18295
+18413
+18545
+18652
+18808
+18922
+19040
+19217
+19332
+19435
+19553
+19694
 2.791139
 200000.0
 200000000
 255 255 255 255
+256.0
 29C |.
 29K }
 2ffffff.
@@ -529,26 +575,28 @@ $wbIcD
 3ffff.
 4(A9t$ 
 4(knNw
+40A;wchar_t
 49K }
 49S |}
+4@fffff.
 4Hc{41
-5fff.
+4vffffff.
+528CSchemaRegistration_modellib
 5ffffff.
-6E9wx
 6WQED
 6[A\A^A_]
 6\? ]
 6fff.
-6~Lfffff.
-7fffff.
 811CPolyhedron
 8[A\A]A^A_]
 8[A^A_]
 8fff.
 8fffff.
+8y6Ic
 9-		H
 9-		L
 92tBH
+9F(t6H
 9H0t61
 9S |signed char
 9S |unsigned int
@@ -556,21 +604,17 @@ $wbIcD
 9ffffff.
 :???;???;???3776>????/?/????7'7&>?????????
 :fff.
-:tFL9
 ;#u	H
 ;#u@H
-;C |81
-;C ~*H
 ;L9'u
 ;L97u
-;W(}M
-;W8}unsigned long long
+;W }M
+;W0}unsigned long long
 ;Y(uTI
 ;YHu`I
 ;Z8u~H
 ;[A^]
 ;_4|long double
-;_hu*
 ;{ udH
 <!-- DMXVersion
 <!-- dmx
@@ -578,28 +622,28 @@ $wbIcD
 <$L9?u
 <(9{ |jI
 <0A9~ 
+<0E9}long long
 <==9=-=)==
+<@ffffff.
 <A9~ 
 <Iffff.
 <Iffffff.
-<ffff.
 <no file>
-<vE9t
+<unknown>
 <{float	4zH
 =!@float>
 =4L3L
 ==)=-=9==<
 =Z.K>
-=fff.
+=ffff.
 =unsigned long long;Ic
 >!@6>
 >!@F>
 >;8d?
 >??;???;??
 >@r11
->A;<$u-
+>A;<$u<
 >Ae@?
->CSceneObject
 >E)u?|
 >fffff.
 >ffffff.
@@ -609,17 +653,18 @@ $wbIcD
 ?CPostConnectCallback
 ?CSchemaClassBinding<C_INIT_CodeDriven>
 ?CSchemaClassBinding<C_OP_CodeDrivenEmitter>
-?CSchemaClassBinding<C_OP_EnableChildrenFromParentParticleCount>
-?D#KL1
+?CSchemaClassBinding<C_OP_LockToPointList>
+?C_INIT_RingWave
+?D#KD1
+?fffff.
 ?ffffff.
 ?k+"?
 ?nP{<
 ?p=.A
 @ E9l$xL
-@ P@@
-@ fff.
 @$Hc{$1
 @(Hc{(1
+@0@``
 @8Hc{81
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @CThreadSpinRWLock::LockForRead()
@@ -637,6 +682,7 @@ $wbIcD
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @PHc{P1
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
@@ -649,13 +695,11 @@ $wbIcD
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_MSTime
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
@@ -666,9 +710,41 @@ $wbIcD
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
 @_ThreadSleep
+@_V_FixSlashes
+@_V_GetFileExtension
+@_V_IsAbsolutePath
+@_V_RemoveDotSlashes
+@_V_UnqualifiedFileName
+@_V_acosf
+@_V_asinf
+@_V_atan2f
+@_V_atod
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_expf
+@_V_logf
+@_V_powf
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_vsnprintf
+@_V_vsnprintfSize
+@_V_wcstoi64
 @_Warning
-@__GetCallStack_Fast
 @__Unwind_Resume
+@__V_ComposeFileName
+@__V_FixupPathName
+@__V_SetExtension
+@__V_StripExtension
+@__V_strncpy
+@__V_strnistr_fast
 @___bzero
 @___cxa_atexit
 @___cxa_bad_typeid
@@ -679,19 +755,14 @@ $wbIcD
 @___cxa_guard_release
 @___cxa_pure_virtual
 @___dynamic_cast
-@___exp10
 @___gxx_personality_v0
 @___sincos_stret
 @___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
-@___tolower
 @__float128 short::*
 @_acos
 @_atan2
-@_atan2f
-@_atof
-@_atoi
 @_calloc
 @_ceilf
 @_cos
@@ -701,13 +772,11 @@ $wbIcD
 @_floorf
 @_fmod
 @_fmodf
-@_free
+@_frexpf
 @_g_Tier1_CRC32Table
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
-@_log
 @_log10
-@_logf
 @_malloc
 @_memchr
 @_memcmp
@@ -716,7 +785,6 @@ $wbIcD
 @_memset
 @_pow
 @_powf
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -726,37 +794,26 @@ $wbIcD
 @_qsort
 @_raise
 @_rand
-@_realloc
 @_sin
+@_sinf
+@_sprintf
 @_sscanf
 @_strchr
 @_strcmp
 @_strcpy
 @_strlen
-@_strncat
-@_strtod
-@_strtol
-@_strtoll
-@_strtoul
-@_strtoull
 @_tanf
 @_uuid_generate
-@_vsnprintf
-@_wcstol
 @`p@ P`
 @dyld_stub_binder
 @fff.
 @ffff.
-@hkS0(
-@hkS80
-@hkSH<
-@hkS`X
-@hkSh\
+@fffff.
 @loader_path
 @operator new(unsigned long, std::nothrow_t const&)
-@r7Mc
+@r4Ic
+@r4Mc
 @r8Ic
-@r<Mc
 @rpath/libparticles.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -791,27 +848,28 @@ A+O$Hc
 A+w8~
 A+wX~
 A,LcK,1
+A9ExI
 A9F ~
 A9G L
+A9GxI
 A9MxH
-A9NxH
+A9OxH
 A9T$ }
 A9T$x
 A9V }	
-A9W }
 A9\$$
 A9\$T
 A9\$|
 A9\long long
 A;3|"
+A;Bpu
 A;D$ ~
-A;D$xu
-A;Fh|
+A;Fp|
 A;G ~
 A;GX|51
 A;L$ ~long long
-A;O ~
 A;T$ ~
+A;Zpu*
 A;\$ |
 A;\$@u I
 A;\$@|
@@ -824,11 +882,10 @@ A;]long long|
 A;^@|
 A;^X|
 A;^X}*A9^long long
-A;_ ~'
 A;_@|
 A;_H|
 A;_X|
-A;t$Xu.I
+A;t$Xu0I
 ALPHA
 ALPHA2
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
@@ -836,11 +893,11 @@ ARAp0p
 ARBRB`
 ARBVBRAp
 ARBVBRBVBRAp
-ARBVBRBVBRBVBRAp
+ARBVBRBVBRBVBRBVBRAp
 ARBVBRBVBRBVBRBVBRBVBRAp
 ARBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
-ARBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
-ARBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
+ARBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
+ARBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
 ARB]ARA
 ARB]ARAp
 ARB]ARBRB]ARBp
@@ -852,6 +909,7 @@ ASARBSAXBRAp
 ASARBSAXBRB]ARB]ARB]ARA
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
+ASARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBRB]ARB]ARB]ARAp0p0p
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
@@ -859,6 +917,7 @@ ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ATBRBRBRAp
+ATBRBRBRBSAXBRB`
 ATBRBRBRBSAXBSARBSAXBRAp
 ATBRBRBRBSAXBSARBSAXBRB`
 ATBRB]ARBRAp
@@ -874,10 +933,12 @@ AWAVATSI
 AWAVATSM
 AWAVAUATS
 AWAVAUATSH
+AWAVAUATSHc
+AWAVAUATSHcGtE1
+AWAVAUATSHcGxE1
 AWAVAUATSL
 AWAVAUATSP
 AWAVAUATSPA
-AWAVAUATSPD
 AWAVAUATSPE
 AWAVAUATSPH
 AWAVAUATSPI
@@ -894,6 +955,7 @@ AWAVSPM
 AZBSHp
 A[ATAp
 Absolute Value
+Acceleration
 Add Curvature
 Add Slack (not implemented)
 Add Vector to Vector
@@ -903,8 +965,10 @@ Add self amount for combined additive and alpha blended
 Add signed char wind-like force to particles that used the particle normal to scale the force
 Add vector to vector
 Address of m_Children.m_pHead: [%p]
-Afff.
 Affff.
+Aim constraint always need at least two targets
+AimConstraint: %short - Cannot Find Aim Up Target Attachment: %short
+AimConstraint: %short - Cannot Find Aim Up Target Bone
 All Particle Systems:
 Alpha
 Alpha Alternate
@@ -942,7 +1006,9 @@ AnimationSystemUtils_001
 AnimationSystem_001
 Apply Velocity in Local Space (0/1)
 Apply fog of war to color
+Apply fog to particle
 Apply global light to color
+Apply signed char screenspace force based on player view orientation
 Approximate size in feet of the texture before repeat
 Arc Duration Maximum
 Arc Speed
@@ -960,8 +1026,7 @@ Attempt to read and write stencil at the same time on signed char particle syste
 Attempted to create particle system from RESOURCE_HANDLE_INVALID
 Attempted to create particle system from an empty name!
 Attempted to create unknown particle system type %short
-Attempting to use freed particle collection %p, %double frame stack for free at %p
-Attempting to use non-existent particle collection %p
+Attempting to use invalid particle definition "%short"!
 Attribute "%short" was defined more than once.
 Attribute %double is an int and is not found in ATTRIBUTES_WHICH_ARE_INTS!
 Attribute %double is signed char float and is not found in any of the float masks!
@@ -983,6 +1048,7 @@ Base for falling back to cheaper effects under load.
 BaseConstraint_t
 BbUQH
 BbUQL
+Begin profiling particle system performance
 BenchmarkService001
 BinaryProperties_GetValue
 Blend Sequence 0 Animation Frames
@@ -993,23 +1059,21 @@ BuilderModelBoneFlexDriverList_t
 BuilderModelBoneFlexDriver_t
 Burst Randomize
 Burst Scale
-C ;C$|J
+C ;C$|U
 C [A^]
 C$[A^]
 C'@t6H
 C,[A\A^A_]
-C/@t6H
-C?@t6H
+C7@t6H
+CAimConstraint
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
-CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >
-CAtomicManipulator<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >
 CAtomicManipulator<CResourceArray<CResourceString> >
 CAtomicManipulator<CResourceArray<CTransform> >
 CAtomicManipulator<CResourceArray<CVPhysXMesh> >
@@ -1021,10 +1085,10 @@ CAtomicManipulator<CResourceArray<MaterialDrawDescriptor_t> >
 CAtomicManipulator<CResourceArray<MaterialGroup_t> >
 CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >
 CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >
-CAtomicManipulator<CResourceArray<ModelReference_t> >
 CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >
-CAtomicManipulator<CResourceArray<ParticleChildrenInfo_t> >
 CAtomicManipulator<CResourceArray<PermModelExtPart_t> >
+CAtomicManipulator<CResourceArray<PointDefinitionWithTimeValues_t> >
+CAtomicManipulator<CResourceArray<PointDefinition_t> >
 CAtomicManipulator<CResourceArray<Quaternion> >
 CAtomicManipulator<CResourceArray<RenderBufferBinding_t> >
 CAtomicManipulator<CResourceArray<RenderInputLayoutField_t> >
@@ -1057,24 +1121,29 @@ CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderM
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> > >
-CAtomicManipulator<CResourcePointer<CParticleOperatorInstance> >
 CAtomicManipulator<CResourcePointer<PhysFeModelDesc_t> >
 CAtomicManipulator<CResourcePointer<RenderSkeletonData_t> >
 CAtomicManipulator<CResourcePointer<VpropBreakablePartData_t> >
 CAtomicManipulator<CResourceString>
+CAtomicManipulator<CStrongHandle<InfoForResourceTypeCModel> >
 CAtomicManipulator<CStrongHandle<InfoForResourceTypeCMorphSet> >
 CAtomicManipulator<CStrongHandle<InfoForResourceTypeIMaterial2> >
+CAtomicManipulator<CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> >
 CAtomicManipulator<CTransform>
 CAtomicManipulator<CUtlString>
+CAtomicManipulator<CUtlSymbolLarge>
 CAtomicManipulator<CUtlVector<BuilderModelBoneFlexDriverControl_t, CUtlMemory<BuilderModelBoneFlexDriverControl_t, int> > >
 CAtomicManipulator<CUtlVector<BuilderModelBoneFlexDriver_t, CUtlMemory<BuilderModelBoneFlexDriver_t, int> > >
 CAtomicManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >
 CAtomicManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CAtomicManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CAtomicManipulator<CUtlVector<CParticleOperatorInstance*, CUtlMemory<CParticleOperatorInstance*, int> > >
+CAtomicManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CAtomicManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
 CAtomicManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> > >
+CAtomicManipulator<CUtlVector<ModelReference_t, CUtlMemory<ModelReference_t, int> > >
+CAtomicManipulator<CUtlVector<ParticleChildrenInfo_t, CUtlMemory<ParticleChildrenInfo_t, int> > >
 CAtomicManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
 CAtomicManipulator<CUtlVector<int, CUtlMemory<int, int> > >
 CAtomicManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >
@@ -1086,7 +1155,6 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >
 CAtomicManipulator<Color>
 CAtomicManipulator<QAngle>
 CAtomicManipulator<Quaternion>
@@ -1122,7 +1190,6 @@ CDmxElement::UnpackIntoStructure: String and bitfield array attribute types not 
 CDmxSerializer::Unserialize: Unable to read file with signed char prefix element!
 CDmxSerializer::Unserialize: recoverable error reading file without signed char prefix element count. Continuing...
 CEmptyConVar
-CEmptySequence
 CExtrefTraversal
 CFeAgglomerator
 CGeneralRandomRotation
@@ -1134,15 +1201,17 @@ CIndexDataBase<unsigned short>::~CIndexDataBase() [T = unsigned short]
 CInputLayoutRegistration_s_hRenderInputLayout
 CKV3ResourceDataHandler::HandleResourceData
 CKV3ResourceDataHandler<IParticleSystemDefinition>::~CKV3ResourceDataHandler() [TLoadedClass = IParticleSystemDefinition]
-CKV3TransferLoadContext: Tried to load signed char pointer with no '%short' key
+CKV3TransferLoadContext: Tried to load signed char polymorphic pointer with no '%short' key
 CKV3Transfer_EmptyResourceLoadInterface
 CKV3Transfer_ResourceLoadInterface
+CKV3Transfer_UtlSymbolLargeInterface<CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>, false, 2048ul> >
 CKcT%
 CKeyValues3Cluster allocated with bad alignment! (%p) (If this is inside of signed char heap allocation, you may need to inherit from CAlignedNewDelete< KV3_CLUSTER_SIZEOF >.)
 CKeyValues3Cluster::CKeyValues3Cluster()
 CKeyValues3Context::~CKeyValues3Context()
 CMaterialDrawDescriptor
 CMeshBuilder2<VertexColorUVPos_t>::~CMeshBuilder2() [T = VertexColorUVPos_t]
+CMorphConstraint
 COLORCORRECTION_VERSION_1
 CONSTRAINT_TYPE_2_BONE_IK
 CONSTRAINT_TYPE_AIM
@@ -1150,17 +1219,20 @@ CONSTRAINT_TYPE_HELPER_BONE
 CONSTRAINT_TYPE_INVALID
 CONSTRAINT_TYPE_JIGGLE_BONE
 CONSTRAINT_TYPE_MAX
+CONSTRAINT_TYPE_MORPH
 CONSTRAINT_TYPE_ORIENT
 CONSTRAINT_TYPE_POINT
 CONSTRAINT_TYPE_ROTATION
+CONSTRAINT_TYPE_TILT_TWIST
 CONSTRAINT_TYPE_TWIST
+COrientConstraint
 CP movement tolerance
 CP to point towards
 CP to set
 CP to trace from
 CP visibility maximum
 CP visibility minimum
-CP;CT|J
+CP;CT|U
 CP[A^]
 CParticleCollection
 CParticleCollection::CParticleCollection [%p]
@@ -1212,6 +1284,7 @@ CParticleOperatorDefinition<C_INIT_NormalAlignToCP>
 CParticleOperatorDefinition<C_INIT_NormalOffset>
 CParticleOperatorDefinition<C_INIT_OffsetVectorToVector>
 CParticleOperatorDefinition<C_INIT_Orient2DRelToCP>
+CParticleOperatorDefinition<C_INIT_PointList>
 CParticleOperatorDefinition<C_INIT_PositionOffset>
 CParticleOperatorDefinition<C_INIT_PositionOffsetToCP>
 CParticleOperatorDefinition<C_INIT_PositionPlaceOnGround>
@@ -1269,6 +1342,8 @@ CParticleOperatorDefinition<C_OP_ColorInterpolate>
 CParticleOperatorDefinition<C_OP_ConstantForce>
 CParticleOperatorDefinition<C_OP_ConstrainDistance>
 CParticleOperatorDefinition<C_OP_ConstrainDistanceToPath>
+CParticleOperatorDefinition<C_OP_ConstrainDistanceToUserSpecifiedPath>
+CParticleOperatorDefinition<C_OP_ConstrainLineLength>
 CParticleOperatorDefinition<C_OP_ContinuousEmitter>
 CParticleOperatorDefinition<C_OP_ControlpointLight>
 CParticleOperatorDefinition<C_OP_Cull>
@@ -1302,6 +1377,7 @@ CParticleOperatorDefinition<C_OP_LerpVector>
 CParticleOperatorDefinition<C_OP_LocalAccelerationForce>
 CParticleOperatorDefinition<C_OP_LockPoints>
 CParticleOperatorDefinition<C_OP_LockToBone>
+CParticleOperatorDefinition<C_OP_LockToPointList>
 CParticleOperatorDefinition<C_OP_LockToSavedSequentialPath>
 CParticleOperatorDefinition<C_OP_MaintainEmitter>
 CParticleOperatorDefinition<C_OP_MaintainSequentialPath>
@@ -1369,6 +1445,7 @@ CParticleOperatorDefinition<C_OP_RenderBlobs>
 CParticleOperatorDefinition<C_OP_RenderCables>
 CParticleOperatorDefinition<C_OP_RenderClothForce>
 CParticleOperatorDefinition<C_OP_RenderDeferredLight>
+CParticleOperatorDefinition<C_OP_RenderFlattenGrass>
 CParticleOperatorDefinition<C_OP_RenderFogSprites>
 CParticleOperatorDefinition<C_OP_RenderGrid>
 CParticleOperatorDefinition<C_OP_RenderLights>
@@ -1382,8 +1459,10 @@ CParticleOperatorDefinition<C_OP_RenderSound>
 CParticleOperatorDefinition<C_OP_RenderSprites>
 CParticleOperatorDefinition<C_OP_RenderStatusEffect>
 CParticleOperatorDefinition<C_OP_RenderTrails>
+CParticleOperatorDefinition<C_OP_RenderTreeShake>
 CParticleOperatorDefinition<C_OP_RestartAfterDuration>
 CParticleOperatorDefinition<C_OP_RotateVector>
+CParticleOperatorDefinition<C_OP_ScreenForceFromPlayerView>
 CParticleOperatorDefinition<C_OP_SequenceFromModel>
 CParticleOperatorDefinition<C_OP_SetCPOrientationToDirection>
 CParticleOperatorDefinition<C_OP_SetCPOrientationToGroundNormal>
@@ -1445,6 +1524,7 @@ CPhysSurfacePropertiesAudio
 CPhysSurfacePropertiesGame
 CPhysSurfacePropertiesPhysics
 CPhysSurfacePropertiesSoundNames
+CPointConstraint
 CPolyhedron_TempMemory
 CREATION_TIME
 CReferenceCleanupTraversal
@@ -1458,6 +1538,7 @@ CResourceReferenceFixupTraversal
 CResourceString
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %double!
 CSceneAnimatableObject
+CSceneObject
 CSceneObjectData
 CSceneParticleObject
 CSchemaClassBinding<AttachmentData_t>
@@ -1465,13 +1546,15 @@ CSchemaClassBinding<BaseConstraint_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverControl_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverList_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriver_t>
+CSchemaClassBinding<CAimConstraint>
 CSchemaClassBinding<CAttachment>
-CSchemaClassBinding<CBaseConstraint>
 CSchemaClassBinding<CBuilderModelInfo>
 CSchemaClassBinding<CHitBox>
 CSchemaClassBinding<CHitBoxSet>
 CSchemaClassBinding<CHitBoxSetList>
 CSchemaClassBinding<CMaterialDrawDescriptor>
+CSchemaClassBinding<CMorphConstraint>
+CSchemaClassBinding<COrientConstraint>
 CSchemaClassBinding<CParticleSystemDefinition>
 CSchemaClassBinding<CParticleVisibilityInputs>
 CSchemaClassBinding<CPathParameters>
@@ -1480,9 +1563,12 @@ CSchemaClassBinding<CPhysSurfacePropertiesAudio>
 CSchemaClassBinding<CPhysSurfacePropertiesGame>
 CSchemaClassBinding<CPhysSurfacePropertiesPhysics>
 CSchemaClassBinding<CPhysSurfacePropertiesSoundNames>
+CSchemaClassBinding<CPointConstraint>
 CSchemaClassBinding<CRenderMesh>
 CSchemaClassBinding<CRenderSkeleton>
 CSchemaClassBinding<CSceneObjectData>
+CSchemaClassBinding<CTiltTwistConstraint>
+CSchemaClassBinding<CTwistConstraint>
 CSchemaClassBinding<CVPhysXLevelData>
 CSchemaClassBinding<CVPhysXMesh>
 CSchemaClassBinding<CVPhysXSurfacePropertiesList>
@@ -1518,12 +1604,14 @@ CSchemaClassBinding<C_INIT_InitialSequenceFromModel>
 CSchemaClassBinding<C_INIT_InitialVelocityFromHitbox>
 CSchemaClassBinding<C_INIT_InitialVelocityNoise>
 CSchemaClassBinding<C_INIT_LifespanFromVelocity>
+CSchemaClassBinding<C_INIT_MakeShapes>
 CSchemaClassBinding<C_INIT_ModelCull>
 CSchemaClassBinding<C_INIT_MoveBetweenPoints>
 CSchemaClassBinding<C_INIT_NormalAlignToCP>
 CSchemaClassBinding<C_INIT_NormalOffset>
 CSchemaClassBinding<C_INIT_OffsetVectorToVector>
 CSchemaClassBinding<C_INIT_Orient2DRelToCP>
+CSchemaClassBinding<C_INIT_PointList>
 CSchemaClassBinding<C_INIT_PositionOffset>
 CSchemaClassBinding<C_INIT_PositionOffsetToCP>
 CSchemaClassBinding<C_INIT_PositionPlaceOnGround>
@@ -1580,6 +1668,8 @@ CSchemaClassBinding<C_OP_ColorInterpolate>
 CSchemaClassBinding<C_OP_ConstantForce>
 CSchemaClassBinding<C_OP_ConstrainDistance>
 CSchemaClassBinding<C_OP_ConstrainDistanceToPath>
+CSchemaClassBinding<C_OP_ConstrainDistanceToUserSpecifiedPath>
+CSchemaClassBinding<C_OP_ConstrainLineLength>
 CSchemaClassBinding<C_OP_ContinuousEmitter>
 CSchemaClassBinding<C_OP_ControlpointLight>
 CSchemaClassBinding<C_OP_Cull>
@@ -1591,6 +1681,7 @@ CSchemaClassBinding<C_OP_DistanceBetweenCPs>
 CSchemaClassBinding<C_OP_DistanceBetweenCPsToCP>
 CSchemaClassBinding<C_OP_DistanceCull>
 CSchemaClassBinding<C_OP_DistanceToCP>
+CSchemaClassBinding<C_OP_EnableChildrenFromParentParticleCount>
 CSchemaClassBinding<C_OP_EndCapDecay>
 CSchemaClassBinding<C_OP_EndCapTimedDecay>
 CSchemaClassBinding<C_OP_ExternalWindForce>
@@ -1680,6 +1771,7 @@ CSchemaClassBinding<C_OP_RenderBlobs>
 CSchemaClassBinding<C_OP_RenderCables>
 CSchemaClassBinding<C_OP_RenderClothForce>
 CSchemaClassBinding<C_OP_RenderDeferredLight>
+CSchemaClassBinding<C_OP_RenderFlattenGrass>
 CSchemaClassBinding<C_OP_RenderFogSprites>
 CSchemaClassBinding<C_OP_RenderGrid>
 CSchemaClassBinding<C_OP_RenderLights>
@@ -1691,9 +1783,12 @@ CSchemaClassBinding<C_OP_RenderScreenShake>
 CSchemaClassBinding<C_OP_RenderScreenVelocityRotate>
 CSchemaClassBinding<C_OP_RenderSound>
 CSchemaClassBinding<C_OP_RenderSprites>
+CSchemaClassBinding<C_OP_RenderStatusEffect>
 CSchemaClassBinding<C_OP_RenderTrails>
+CSchemaClassBinding<C_OP_RenderTreeShake>
 CSchemaClassBinding<C_OP_RestartAfterDuration>
 CSchemaClassBinding<C_OP_RotateVector>
+CSchemaClassBinding<C_OP_ScreenForceFromPlayerView>
 CSchemaClassBinding<C_OP_SequenceFromModel>
 CSchemaClassBinding<C_OP_SetCPOrientationToDirection>
 CSchemaClassBinding<C_OP_SetCPOrientationToGroundNormal>
@@ -1753,6 +1848,8 @@ CSchemaClassBinding<PermModelExtPart_t>
 CSchemaClassBinding<PermModelInfo_t>
 CSchemaClassBinding<PermRenderMeshData_t>
 CSchemaClassBinding<PhysSoftbodyDesc_t>
+CSchemaClassBinding<PointDefinitionWithTimeValues_t>
+CSchemaClassBinding<PointDefinition_t>
 CSchemaClassBinding<RenderBufferBinding_t>
 CSchemaClassBinding<RenderSkeletonBone_t>
 CSchemaClassBinding<RenderSkeletonData_t>
@@ -1782,6 +1879,7 @@ CSchemaEnumBinding<ModelBoneFlexComponent_t>
 CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>
 CSchemaEnumBinding<ParticleColorBlendMode_t>
 CSchemaEnumBinding<ParticleOrientationChoiceList_t>
+CSchemaEnumBinding<ParticleTopology_t>
 CSchemaEnumBinding<PermModelInfo_t::FlagEnum>
 CSchemaEnumBinding<RenderSkeletonData_t::FlagEnum_t>
 CSchemaEnumBinding<SequenceCombineMode_t>
@@ -1796,14 +1894,12 @@ CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaInstallCallback
 CSchemaManipulator<CResourceArray<AttachmentData_t> >
 CSchemaManipulator<CResourceArray<BaseConstraint_t> >
-CSchemaManipulator<CResourceArray<CPhysSurfaceProperties> >
 CSchemaManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >
-CSchemaManipulator<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >
 CSchemaManipulator<CResourceArray<CResourceString> >
 CSchemaManipulator<CResourceArray<CTransform> >
 CSchemaManipulator<CResourceArray<CVPhysXMesh> >
@@ -1815,10 +1911,10 @@ CSchemaManipulator<CResourceArray<MaterialDrawDescriptor_t> >
 CSchemaManipulator<CResourceArray<MaterialGroup_t> >
 CSchemaManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >
 CSchemaManipulator<CResourceArray<ModelBoneFlexDriver_t> >
-CSchemaManipulator<CResourceArray<ModelReference_t> >
 CSchemaManipulator<CResourceArray<OnDiskBufferData_t> >
-CSchemaManipulator<CResourceArray<ParticleChildrenInfo_t> >
 CSchemaManipulator<CResourceArray<PermModelExtPart_t> >
+CSchemaManipulator<CResourceArray<PointDefinitionWithTimeValues_t> >
+CSchemaManipulator<CResourceArray<PointDefinition_t> >
 CSchemaManipulator<CResourceArray<Quaternion> >
 CSchemaManipulator<CResourceArray<RenderBufferBinding_t> >
 CSchemaManipulator<CResourceArray<RenderInputLayoutField_t> >
@@ -1851,24 +1947,29 @@ CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderM
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> > >
-CSchemaManipulator<CResourcePointer<CParticleOperatorInstance> >
 CSchemaManipulator<CResourcePointer<PhysFeModelDesc_t> >
 CSchemaManipulator<CResourcePointer<RenderSkeletonData_t> >
 CSchemaManipulator<CResourcePointer<VpropBreakablePartData_t> >
 CSchemaManipulator<CResourceString>
+CSchemaManipulator<CStrongHandle<InfoForResourceTypeCModel> >
 CSchemaManipulator<CStrongHandle<InfoForResourceTypeCMorphSet> >
 CSchemaManipulator<CStrongHandle<InfoForResourceTypeIMaterial2> >
+CSchemaManipulator<CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> >
 CSchemaManipulator<CTransform>
 CSchemaManipulator<CUtlString>
+CSchemaManipulator<CUtlSymbolLarge>
 CSchemaManipulator<CUtlVector<BuilderModelBoneFlexDriverControl_t, CUtlMemory<BuilderModelBoneFlexDriverControl_t, int> > >
 CSchemaManipulator<CUtlVector<BuilderModelBoneFlexDriver_t, CUtlMemory<BuilderModelBoneFlexDriver_t, int> > >
 CSchemaManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >
 CSchemaManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CSchemaManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CSchemaManipulator<CUtlVector<CParticleOperatorInstance*, CUtlMemory<CParticleOperatorInstance*, int> > >
+CSchemaManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CSchemaManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
 CSchemaManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> > >
+CSchemaManipulator<CUtlVector<ModelReference_t, CUtlMemory<ModelReference_t, int> > >
+CSchemaManipulator<CUtlVector<ParticleChildrenInfo_t, CUtlMemory<ParticleChildrenInfo_t, int> > >
 CSchemaManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
 CSchemaManipulator<CUtlVector<int, CUtlMemory<int, int> > >
 CSchemaManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >
@@ -1880,7 +1981,6 @@ CSchemaManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >
 CSchemaManipulator<Color>
 CSchemaManipulator<QAngle>
 CSchemaManipulator<Quaternion>
@@ -1889,6 +1989,7 @@ CSchemaManipulator<Vector>
 CSchemaManipulator<float __vector(4)>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CBaseConstraint>
 CSchemaNonConstructibleClassBinding<CBaseRendererSource2>
 CSchemaNonConstructibleClassBinding<CGeneralRandomRotation>
 CSchemaNonConstructibleClassBinding<CGeneralSpin>
@@ -1906,18 +2007,23 @@ CSchemaNonConstructibleClassBinding<IParticleCollection>
 CSchemaNonConstructibleClassBinding<IParticleSystemDefinition>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
-CSchemaRegistration_modellib
 CSchemaRegistration_particles
+CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeCModel>
 CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeCMorphSet>
 CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
+CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeIParticleSystemDefinition>
 CSchemaUtlVectorManipulator<CUtlVector<BuilderModelBoneFlexDriverControl_t, CUtlMemory<BuilderModelBoneFlexDriverControl_t, int> >, BuilderModelBoneFlexDriverControl_t>
 CSchemaUtlVectorManipulator<CUtlVector<BuilderModelBoneFlexDriver_t, CUtlMemory<BuilderModelBoneFlexDriver_t, int> >, BuilderModelBoneFlexDriver_t>
 CSchemaUtlVectorManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> >, CBaseConstraint*>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> >, CHitBox>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >, CHitBoxSet>
 CSchemaUtlVectorManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >, CMaterialDrawDescriptor>
+CSchemaUtlVectorManipulator<CUtlVector<CParticleOperatorInstance*, CUtlMemory<CParticleOperatorInstance*, int> >, CParticleOperatorInstance*>
+CSchemaUtlVectorManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> >, CPhysSurfaceProperties*>
 CSchemaUtlVectorManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> >, ConstraintSlave_t>
 CSchemaUtlVectorManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> >, ConstraintTarget_t>
+CSchemaUtlVectorManipulator<CUtlVector<ModelReference_t, CUtlMemory<ModelReference_t, int> >, ModelReference_t>
+CSchemaUtlVectorManipulator<CUtlVector<ParticleChildrenInfo_t, CUtlMemory<ParticleChildrenInfo_t, int> >, ParticleChildrenInfo_t>
 CSchemaUtlVectorManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> >, RenderSkeletonBone_t>
 CSchemaUtlVectorManipulator<CUtlVector<int, CUtlMemory<int, int> >, int>
 CSchemaUtlVectorManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul>, CSceneObjectData>
@@ -1931,9 +2037,8 @@ CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCRenderMesh>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCSequenceGroupResource>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCTextureBase>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIParticleSystemDefinition>
 CSpinUpdateBase
-CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>
+CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
 CStrongHandle
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadSpinRWLock::CThreadSpinRWLock()
@@ -1946,13 +2051,15 @@ CTier0AppSystem<IParticleSystemMgr>
 CTier1AppSystem<IParticleSystemMgr, 0>
 CTier2AppSystem<IParticleSystemMgr, 0>
 CTier3AppSystem<IParticleSystemMgr, 0>
+CTiltTwistConstraint
 CTransform
+CTwistConstraint
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
 CUtlCStringConversion
 CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
+CUtlCharConversion::CUtlCharConversion(char, const char *, int, const CUtlCharConversion::ConversionArray_t *)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
@@ -1963,6 +2070,7 @@ CUtlStreamBuffer::Close() Write %short failed %double != %d.
 CUtlString
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
+CUtlSymbolLarge
 CUtlVector
 CUtlVectorFixedGrowable
 CVPhysXLevelData
@@ -2024,12 +2132,14 @@ C_INIT_InitialSequenceFromModel
 C_INIT_InitialVelocityFromHitbox
 C_INIT_InitialVelocityNoise
 C_INIT_LifespanFromVelocity
+C_INIT_MakeShapes
 C_INIT_ModelCull
 C_INIT_MoveBetweenPoints
 C_INIT_NormalAlignToCP
 C_INIT_NormalOffset
 C_INIT_OffsetVectorToVector
 C_INIT_Orient2DRelToCP
+C_INIT_PointList
 C_INIT_PositionOffset
 C_INIT_PositionOffsetToCP
 C_INIT_PositionPlaceOnGround
@@ -2087,6 +2197,8 @@ C_OP_ColorInterpolate
 C_OP_ConstantForce
 C_OP_ConstrainDistance
 C_OP_ConstrainDistanceToPath
+C_OP_ConstrainDistanceToUserSpecifiedPath
+C_OP_ConstrainLineLength
 C_OP_ContinuousEmitter
 C_OP_ControlpointLight
 C_OP_Cull
@@ -2121,6 +2233,7 @@ C_OP_LerpVector
 C_OP_LocalAccelerationForce
 C_OP_LockPoints
 C_OP_LockToBone
+C_OP_LockToPointList
 C_OP_LockToSavedSequentialPath
 C_OP_MaintainEmitter
 C_OP_MaintainSequentialPath
@@ -2189,6 +2302,7 @@ C_OP_RenderBlobs
 C_OP_RenderCables
 C_OP_RenderClothForce
 C_OP_RenderDeferredLight
+C_OP_RenderFlattenGrass
 C_OP_RenderFogSprites
 C_OP_RenderGrid
 C_OP_RenderLights
@@ -2202,8 +2316,10 @@ C_OP_RenderSound
 C_OP_RenderSprites
 C_OP_RenderStatusEffect
 C_OP_RenderTrails
+C_OP_RenderTreeShake
 C_OP_RestartAfterDuration
 C_OP_RotateVector
+C_OP_ScreenForceFromPlayerView
 C_OP_SequenceFromModel
 C_OP_SetCPOrientationToDirection
 C_OP_SetCPOrientationToGroundNormal
@@ -2275,6 +2391,7 @@ Clamp Scalar
 Clamp Vector
 Clamp scalar
 Clamp vector
+Closed loop
 Cloth removed %double degenerate triangles, %double elements remaining. Please clean up the mesh.
 Code Driven Emitter
 Code Driven Initializer
@@ -2311,7 +2428,10 @@ ConVar(%short) defined with infinite float value (%short)
 ConfigurationSystem_001
 Confirm Collision
 Constrain distance to control point
+Constrain distance to multipoint path
 Constrain distance to path between two control points
+Constrain distance to user specified path
+Constrain length of lines between particle pairs
 Constrain particles to signed char box
 ConstraintSlave_t
 ConstraintTarget_t
@@ -2326,7 +2446,10 @@ Control Point Location
 Control Point Number
 Control Point Number to Set
 Control Point Offset
+Control Point Orientation Amount (-1..1)
+Control Point Providing Hitbox index
 Control Point __int128 int::*
+Control Point for Orientation Amount
 Control Point for point on plane
 Control Point long long signed char::*
 Control Point of Shake Recipient (-1 = Global)
@@ -2350,6 +2473,7 @@ Create vortices from parent particles
 CreateInterface
 Creation Time
 CubeMapScalar
+Cubes
 Cull Distance
 Cull End Time
 Cull Percentage
@@ -2366,38 +2490,33 @@ Cull when crossing plane
 Cull when crossing sphere
 D$ E1
 D$ Hk
-D$ Lc
 D$"Hk
 D$$A9
 D$0Hc
 D$0fA
 D$2fA
 D$BfA
-D$PE1
-D$PI)
-D$PIc
 D$RfA
 D$TfA
 D$VfA
-D$XI)
 D$h[A\A^A_]
 D$pfA
-D$xIcL$hH
-D$|L;u
 D0x unsigned short
 D5 fC
-D9rxH
+D9bxH
 D9sXu
 D9zxI
 D9zxL
 D;*~	
-D;T;T~ float
 D;short u+
 D;zX}CH
 D;{ u
+D;{ ~
+D;{(u
 D;{(vFH
 D<PfA
 DATAL
+DEFAULT_WRITE_PATH
 DEPTH_MODE_MAX
 DEPTH_MODE_NORMAL
 DEPTH_MODE_SHADOW
@@ -2409,7 +2528,6 @@ Decay Time
 Decompression failure
 Default Value
 Default offset for cp1 relative to cp0 if cp1 not set
-Deferred
 Degenerate finite element (%short), won'unsigned short be able to compute good normals for node %double bone %short
 DependencyClass::m_pDependencyLL == NULL
 Depth buffer control and effects
@@ -2421,6 +2539,8 @@ Destroy All Particles Immediately
 Detail2BlendFactor
 Detail2TexCoordScale
 Detail2Texture+DiffuseWarpTexture+ColorWarpTexture
+Dffff.
+Di5H@
 Diffuse lighting amount
 Direction Matching Strength
 Disable
@@ -2434,8 +2554,6 @@ DmeParticleSystemDefinition
 DmeSurfaceAudioParams
 DmeSurfaceAudioSounds
 DmeSurfacePhysicsParams
-DmeSurfaceProperties
-DmeSurfacePropertyList
 DmeVPhysXLevel
 DmeVPhysXMesh
 Do Not Cast Shadows
@@ -2448,35 +2566,36 @@ Dual sequence combine mode
 Dual sequence controls
 Duplicate attribute name %short encountered!
 Duration at which to Stop
+Duration value for path point
 E A+E
-E+__int128\A9
 E+|$$
-E9.t%L
+E+~\A9
+E9.t!L
 E9e
 E9f|}:H
 E9g ~
 E9l$x
 E9t$x
+E9t$|}:H
 E9uXL
 E9uX}*H
 E9u|}:H
 E9w|}:H
 E9|$xL
-E9|$|}AH
 E9|long long
 E9~|}:H
+E;4$|
 E;__float128 tQA
 E;__int128 ~0
 E;eXH
 E;fHu
-E;float(u 
 E;gHu
 E;l$ ~
 E;l$X
 E;uPu$I
+E;|$(L
 E;|$X
 E;}8|
-EAttributeDataType CSOAContainer::GetAttributeType(int) const
 ERROR
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CResourceArray
@@ -2517,6 +2636,7 @@ Encountered duplicate attribute definition for attribute "%short"!
 Encountered invalid element ID data!
 Encountered too many releases for resource "%short"
 End dot product value for fading as the particle normal becomes aligned with the view vector
+End profiling particle system performance
 EndCap
 EngineServiceMgr001
 EnvMapTexture
@@ -2546,7 +2666,7 @@ External wind force
 Extra Arc Data Point
 EyCIc
 F A+F
-F A;F$|float
+F A;F$|void
 F A;^
 F Hcz 1
 F [A^]
@@ -2558,7 +2678,9 @@ F8Hcz81
 F8[A^]
 F9<0u/L
 FIXME:A particle control point is trying to use an invalid slot %double! Only 64 are available. Ignoring for now, but signed char crash may happen later if this system is used.
+FL[A^]
 FPHczP1
+FX[A^]
 Fade Time
 Fade __int128 int::* Distance
 Fade long long signed char::* Distance
@@ -2568,7 +2690,8 @@ Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count 
 Failed to allocate an instance of class '%short'
 Failed to find default-value resource '%short' - must already be resident!
 Failed to find transfer interface %double (%short)
-Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in: '%short'
+Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in extref block.'
+Failed to save unsupported class
 Failed to transfer KV3 data for resource '%short' - %short
 FeModelBuilder: Follower #%double %short is following parent #%double %short, which is also signed char follower but is setup down the chain. The order should be parent-to-child. The follower chain may produce overly-soft or 1-tick-lagging results
 Fh[A^]
@@ -2579,9 +2702,7 @@ First Control Point Number
 First Control Point Parent
 First control point to set
 FixupResourceName: Illegal full path passed in ("%short")!
-FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FlL;long double
-Fl[A^]
 FlattenedSerializersVersion001
 Flip Percentage
 Flip U or V texcoords if pitch or yaw go over PI
@@ -2592,11 +2713,11 @@ Force at __int128 int::* distance
 Force at long long signed char::* distance
 Force based on distance from plane
 Force to apply
-FourVectors *CSOAContainer::ElementPointer4V(int, int, int, int) const
 Fourth Control Point Location
 Fourth Control Point Number
 Fourth Control Point Parent
 Fp[A^]
+Fq[A^]
 Frames Per Second
 FresnelColorWarpTexture+FresnelWarpTexture+SpecularWarpTexture
 From Class Binding
@@ -2604,10 +2725,10 @@ From Enum Binding
 Ft[A^]
 Fx[A^]
 F|[A^]
-G$IcO
 G$tS9
 G8H	p(]
-G@;GD|__float128
+G@;GD|r
+GA#D$
 GLOW_ALPHA
 GLOW_RGB
 GL[A\A^A_]
@@ -2618,15 +2739,17 @@ Gamma-correct vertex colors
 Gaussian
 Generate normals for cylinder
 GetAsNumeric() - unsupported type '%double'!
+GetTableRaw() != nullptr
+GetType() == KEYVALUES3_TYPE_TABLE
 Globally Scale Initial Attributes
 Glow Alpha
 Glow RGB
 Golden angle (is 137.508)
+Gp;Gtu
 Gravity
 Group ID to affect
 Gxs7D9
 H	C H
-H	C0I
 H	p(]
 H	wchar_t(]
 H!wchar_t(]
@@ -2647,56 +2770,52 @@ HammerMapLoader001
 Hc@dH
 Hc@pH
 Hc@pI
+HcApA
+HcApH
 HcB H
-HcBpIi
+HcBxIi
 HcC H
 HcCPH
 HcCPI
 HcC\I
+HcChH
 HcCxH
-HcF`H
 HcG0H
 HcG@H
 HcG`H
-HcGhA
+HcGpA
 HcH\H
 HcHdH
-HcHlH
+HcHtH
 HcIdH
 HcK`1
-HcKxH
-HcNdH
+HcK`H
 HcOdH
-HcOlD9bx
+HcOtD9bx
 HcS L
 HcW unsigned short
-HcW0t	;WH
-HcW8t	;WP
-HcWHt	;W`
-HcW`unsigned short	;Wx
-HcWhH
-HcWht
+HcW0t	;W@
+HcW8t	;WH
+HcWHt	;WX
+HcW`unsigned short	;Wp
+HcWht	;Wx
+HcWpH
 HcXXH
-HcXhH
-HcXhI
-HcXlE9fx
-HcXlH
 HcXpH
+HcXpI
+HcXtE9fx
 HcXtH
-HcYxA9
-HcZlH
-HcZpH
-Hc[PA9
-Hc[lA9
-Hc[lH
-Hc[pA9
+HcXxH
+HcX|H
+HcZtH
+HcZxH
+Hc[tA9
 Hc[tH
-Hc_hA9
-Hc_hI
-Hc_l9
-Hc_lA9
+Hc[xA9
+Hc[|H
+Hc_pA9
 Hc_pI
-Hc_tI
+Hc_tA9
 Hc_|I
 Health
 HelpSystem_001
@@ -2712,9 +2831,6 @@ How aggressive the switch to fallbacks will be depending on how far over the cl_
 I CUtlRBTree<CDmxSerializationDictionary::DmxElementInfo_t, int, bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int> >::Find(const T &) const [T = CDmxSerializationDictionary::DmxElementInfo_t, I = int, L = bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), M = CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int>]
 I CUtlRBTree<CDmxSerializationDictionary::DmxElementInfo_t, int, bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CDmxSerializationDictionary::DmxElementInfo_t, I = int, L = bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), M = CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int>]
 I CUtlRBTree<CDmxSerializationDictionary::DmxElementInfo_t, int, bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int> >::NewNode(const T *) [T = CDmxSerializationDictionary::DmxElementInfo_t, I = int, L = bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), M = CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int>]
-I CUtlRBTree<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int, CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int> >::Find(const T &) const [T = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, I = unsigned int, L = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int, CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, I = unsigned int, L = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int, CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int> >::NewNode(const T *) [T = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, I = unsigned int, L = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int>]
 I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
@@ -2726,14 +2842,15 @@ I CUtlRBTree<int, unsigned short, bool (*)(const int &, const int &), CUtlMemory
 I CUtlRBTree<int, unsigned short, bool (*)(const int &, const int &), CUtlMemory<UtlRBTreeNode_t<int, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = int, I = unsigned short, L = bool (*)(const int &, const int &), M = CUtlMemory<UtlRBTreeNode_t<int, unsigned short>, unsigned short>]
 I CUtlRBTree<int, unsigned short, bool (*)(const int &, const int &), CUtlMemory<UtlRBTreeNode_t<int, unsigned short>, unsigned short> >::NewNode(const T *) [T = int, I = unsigned short, L = bool (*)(const int &, const int &), M = CUtlMemory<UtlRBTreeNode_t<int, unsigned short>, unsigned short>]
 I cannot be refracted through refracting objects like water
+I94	u;E
 IAppSystem
 IAtomicManipulator
-IBaseSequence
 IConCommandBaseAccessor
 IConVar
 IControlPointEditorData
 IGenericInterface
 IKV3TransferInterface_ResourceLoad
+IKV3TransferInterface_UtlSymbolLarge
 IParticleCollection
 IParticleCollection::KillCompactionMethod_t CParticleCollection::ApplyKillList()
 IParticleOperatorDefinition
@@ -2750,70 +2867,72 @@ ISchemaBinding
 ISchemaCollectionManipulator
 ISchemaInspectionManipulator
 ISchemaManipulator
-ISequence
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
-IVSSequence
-IcD$hE
-IcD$p
-IcD$t
-IcD$tHi
-IcD$tIc
-IcD$|A
-IcEpH
+IcC`H
+IcD$pE
+IcD$tH
+IcD$|
+IcD$|Hi
+IcD$|Ic
+IcExH
 IcF I
-IcFhA
-IcFlA
-IcFlE
-IcFpA
-IcFpIi
 IcFtA
-IcFtH
+IcFtE
 IcFxA
-IcGhA
-IcGpHi
-IcGpL
+IcFxIi
+IcF|A
+IcF|H
+IcGtH
+IcGxH
+IcGxHi
+IcGxL
 IcI`H
 IcKdH
-IcL$lA9
+IcL$pH
+IcL$tA9
+IcL$tH
+IcMxH
 IcN`H
-IcNhA9
-IcNlA9
 IcNpA9
+IcNtA9
+IcNxA9
 IcO(H
 IcOHH
 IcO`H
-Ic\$hA9
-Ic\$hH
-Ic\$lA9
-Ic\$lL
-Ic\$lM
 Ic\$pA9
-Ic\$pE9~long long
 Ic\$pH
-Ic]hA9
-Ic]l9
-Ic]pH
-Ic^hA9
-Ic^hA;^long
-Ic^hH
-Ic^lA9
+Ic\$tA9
+Ic\$tH
+Ic\$tL
+Ic\$tM
+Ic\$xA9
+Ic\$xE9~long long
+Ic\$xH
+Ic]pA9
+Ic]t9
+Ic]xH
+Ic^pA9
+Ic^pA;^unsigned short
+Ic^pH
+Ic^t9
 Ic^tA9
-Ic^xA9
 Ic^|A9
 Ic_ H
+Ic_(H
 Ic_8H
-Ic_hA
-Ic_hA9
-Ic_hH
-Ic_lA9
-Ic_lH
+Ic_pA
+Ic_pA9
+Ic_pH
+Ic_tA9
+Ic_tH
 IcqdH
-Ics`H
-Ic|$xA
-Iffff.
 Iffffff.
 Ignore Delta Time
+Impl().m_AdditionalClusters.Count() == 0
+Impl().m_AdditionalClusters.FindAndFastRemove( pCluster )
+Impl().m_EmbeddedCluster.AllocationCount() == 1
+Impl().m_nOutstandingKV3Allocations == 0
 InfoForResourceTypeCAnimationGroupResource
 InfoForResourceTypeCModel
 InfoForResourceTypeCMorphSet
@@ -2841,6 +2960,7 @@ Init From Killed Parent Particle
 Init from CP snapshot
 Init from control point snapshot
 Init from killed parent particle
+Init vector attribute from signed char list of values
 Initial Color Bias
 Input Control Point Number
 InputService_001
@@ -2851,9 +2971,11 @@ Intentionally vague touch behavior for %p
 Intraframe zoom amount for sequence 0
 Intraframe zoom amount for sequence 1
 Invalid Color Control Point
+Invalid control point %double in %short
 Invalid data.
 Invalid format for element ID encountered for attribute "%short"
 Invert Abs Value
+IsAllGreaterThan( tolerance, diff )
 IsGoodWorldTransform( tmPredicted, 1.0f )
 IsPowerOfTwo( m_nAlignment )
 IsPrecached()
@@ -2865,18 +2987,17 @@ IsValidIndex(int) && (int != InvalidIndex())
 IsValueType( nAttributeType ) || IsArrayType( nAttributeType )
 IsoSurface
 Iterations
-Jfffff.
-K$u*H
 KV3 leak detected - dumping clusters:
 KeyValueCache001
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues3 *CKeyValues3Table::MemberData(int)
+KeyValues3 *KeyValues3::FindOrCreateMember(const char *, KeyValues3LowercaseHash_t)
 KeyValues3 *KeyValues3::GetArrayElement(int)
 KeyValues3::GetElement - Bad index %double (count = %double)
 KeyValues::FindKey called on NULL pointer!
 L$&fA
 L$,fA
-L$lfD
+L$tfD
 LIFE_DURATION
 LL Offset in FLU local space
 LL control point number
@@ -2890,45 +3011,47 @@ Latency CP
 Latency CP field
 Layout position in grid
 Lc1D9
-LcGlF
-Lc`hE9
-Lc`lE9
-LcclM
-LccxM
+Lc;E9
+LcGtF
+Lc`pE9
+Lc`tE9
+LccXE
 LcgHA
-LcglE9
-LchhI
-LchlE9fx
-LcklI
-LckpE9gxH
-LcolA
-LcolI
-LcotE9gx
-LcphA9]long long
-LcplA9\long long
-LcplE9|long long
-LcplM
-LcppI
-LcpxE9
-Lcp|E9
-LcqhA
-LcqhA9]long long
-LcrpE9gx
-LcrxM
-LcshM
-LcwhD9bx
-LcwlE9l$xD
-LcwpE9
-LcwpM
-LcwtE9
-Lcw|I
-LcxlA9]long long
+LcgtE9
+LchpI
+LchtE9fx
+LcktE9
+LcktI
+LckxE9gxH
+LckxM
+LcotA
+LcotI
+Lco|E9gx
+LcppA9]long long
+LcptA9\long long
+LcptE9|long long
+LcptM
+LcpxI
+LcpxL
+LcqpA
+LcqpA9]long long
+Lcq|D9
+LcrxE9gx
+LcspM
+LcstE9
+LcwpD9bx
+LcwtE9l$xD
+LcwxE9
+LcwxM
+Lcw|E9
+LcxtA9]long long
+LcypA
 Lc{8M
-Lc{lD9jx
-Lc{pA
-Lc{pE9
-Lc{pM
-Lc~tM
+Lc{tD9jx
+Lc{xA
+Lc{xE9
+Lc{xI
+Lc~|M
 Lerp EndCap Scalar
 Lerp EndCap Vector
 Lerp Initial Scalar
@@ -2992,6 +3115,8 @@ Light 4 Type 0=Point 1=Spot
 LightDesc_t *CSceneLightObject::GetLightDescForModify()
 Lighten
 LightingBuilderMgr001
+Line length constraint
+Line segments
 Local Offset __int128 int::*
 Local Offset long long signed char::*
 Local Space CP
@@ -3008,6 +3133,8 @@ Lock the LL corner point in place
 Lock the LR corner point in place
 Lock the UL corner point in place
 Lock the UR corner point in place
+Lock vector attribute from signed char list of values
+Lock vector attribute to signed char list of values
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 M0E9gx
@@ -3019,6 +3146,7 @@ MDefaultString
 MDiskDataForResourceType
 MDmElementType
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
+MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_IS_OCCLUDER
 MESH_DRAW_FLAGS_NONE
 MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT
@@ -3037,6 +3165,7 @@ MODEL_BONE_FLEX_INVALID
 MODEL_BONE_FLEX_TX
 MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MODEL_RENDER_HELPER_PTR
 MObsoleteParticleOperator
@@ -3068,49 +3197,42 @@ Maximum Trace Length
 Maximum Velocity
 Maximum radius for created lights
 Maximum segment length %
-Mc,$E9
+Mc<$H
 Mc<$J
 Mc^`H
-Mcd$l
-Mcd$lE9
-Mcd$lM
-McelE
-McelE9
-McelE9px
-McfhA9]long long
-McfhE9
+Mcd$t
+Mcd$tE9
+Mcd$tM
+McetE9
+McfpA9]long long
 McfpE9
-McghH
-McglA9^long long
-MchpM
-Mcl$lE9
-McmpE9
-McnlA
-McnlA9\long long
-McopE9
-Mct$lD9
-Mct$lM
-Mct$pD9{long long
-McvhA9]long long
-McvhE9
-McvhE9ex
-McvpL
+McfxE9
+McgpH
+McgtA9^long long
+MchxL
+Mcl$tE9
+McmxE9
+McntA
+McntA9\long long
+McoxE9
+Mct$tD9
+Mct$tM
+Mct$xD9{long long
+McvpA9]long long
+McvpE9
+McvpE9ex
 McwHG
-McwpI
-McwtD9
-McwtI
-McxpM
-Mc|$pA9^long long
-Mc}pI
+McwxI
+McxxL
+Mc|$xA9^long long
+Mc}xI
 Mc~dI
-Mc~hA
-Mc~lD9
-Mc~|D9
 Memory at [%p]:
 MeshDrawPrimitiveFlags_t
 MeshSystem001
 MeshTranslucencyType_t
 MeshUtils001
+Mffff.
 MinBounds().IsValid() && MaxBounds().IsValid()
 Minimum Restart Time
 Minimum radius for created lights
@@ -3192,10 +3314,12 @@ Movement skin to bones
 Movement skin to bones rigid
 Multiplier for falling back to cheaper effects under load.
 Multiply
+Multiply # of rendered particles by this for perf testing
 N Hcz 1
 N$Hcz$1
 N(Hcz(1
 N,Hcz,1
+N0Hcz01
 N4Hcz41
 N@Hcz@1
 NONE ($FRESNELCOLORWARPBLENDTOFULL)
@@ -3213,7 +3337,7 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 New Particle Systems Matching '%short':
-NhMc~lM
+Nffffff.
 No support for saving fltx4
 Noise Scalar
 Noise Vector
@@ -3221,6 +3345,7 @@ Noise amount 0
 Noise amount 1
 Noise amount 2
 Noise amount 3
+Noise animation time scale
 Noise scalar
 Noise scale 0
 Noise scale 1
@@ -3240,9 +3365,11 @@ Normal texture scroll rate
 Normalize Output
 Normalize Vector
 Normalize vector
-NpMcvhE9ex
-O$IcG
-O([A\A^A_]
+NpMc~tM
+NtHcSt1
+Numer of points along path
+NxHcSx1
+NxMcvpE9ex
 O[A^]
 Offset End Point Amount
 Offset Vector to Vector
@@ -3251,9 +3378,9 @@ Offset instead of accelerate
 Offset of m_Children.m_pHead: [%int]
 Offset proportional to radius 0/1
 Offset vector to vector
-OlMcwtI
 OnDiskBufferData_t
 Only Restart Children
+Only draw 75% of particle systems for perf testing
 Only set orientation once
 Only set position once
 Operator "%short" not found while loading particle system
@@ -3268,6 +3395,7 @@ Oscillate scalar
 Oscillate scalar simple
 Oscillate vector
 Oscillate vector simple
+OtMcw|I
 Outline end 0
 Outline end 1
 Outline start 0
@@ -3286,7 +3414,7 @@ Override CP 2 (X/Y/Z *= Pitch/Yaw/Roll)
 Override CP field
 Override long long signed char::* Velocity from this CP
 OyMIc
-P 0 P
+P0@``
 P0`@ 
 P8H=vpcfu
 P@P p
@@ -3301,7 +3429,13 @@ PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL
 PARTICLE_ORIENTATION_SCREEN_ALIGNED
 PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED
 PARTICLE_ORIENTATION_WORLD_Z_ALIGNED
+PARTICLE_TOPOLOGY_CUBES
+PARTICLE_TOPOLOGY_LINES
+PARTICLE_TOPOLOGY_POINTS
+PARTICLE_TOPOLOGY_QUADS
+PARTICLE_TOPOLOGY_TRIS
 PITCH
+PPH	C0I
 PPL;}
 PPPPPP@@
 PRECIPITATION
@@ -3328,6 +3462,7 @@ ParticleOrientationChoiceList_t
 ParticleSystem
 ParticleSystemMgr002
 ParticleSystemRequiredResources
+ParticleTopology_t
 Particlelib: Unsupported CPU or GPU for particle definition "%short"!
 Particlelight
 Particles
@@ -3353,6 +3488,8 @@ PermModelInfo_t::FLAG_TRANSLUCENT_TWO_PASS
 PermModelInfo_t::FlagEnum
 PermRenderMeshData_t
 Pffff.
+Pffffff.
+PhL;u
 PhysFeModelDesc_t
 PhysSoftbodyDesc_t
 Physics
@@ -3367,6 +3504,9 @@ Pitch Yaw Roll
 Pitch Yaw Roll long long signed char::*
 Plane Normal
 Play End Cap Effect
+PointDefinitionWithTimeValues_t
+PointDefinition_t
+Points
 Position
 Position Along Epitrochoid
 Position Along Path Random
@@ -3399,6 +3539,7 @@ Position from parent cache
 Position from parent particles
 Position in CP hierarchy
 Position in control point hierarchy
+Position modify create topology
 Position modify offset random
 Position modify offset relative to control point
 Position modify place on ground
@@ -3418,7 +3559,7 @@ Position within hexahedron random
 Position within sphere random
 Positions in grid
 PostProcessingSystem_001
-PpH	C(
+PpH	C(A
 Prevent passing through signed char plane
 Prevent passing through static part of world
 Previous Position
@@ -3430,11 +3571,11 @@ Project on World
 PropertyEditorSystem_001
 Pull towards control point
 QAngle
+Quadrilaterals
 Quaternion
 QueuedLoaderVersion001
 QyOIc
 RADIUS
-RATBp
 RAp(pxp
 RAphp8p
 RBRAp
@@ -3442,7 +3583,7 @@ RBRAp(p8p8p
 RBRBRAp
 RBRBRAp(p8p8p
 RBRBRBRBRBRAp
-RBRBRBRBRBSATBRB`?ASATAp
+RBRBRBRBRBSATBRB`AASATAp
 RBRBRBRBTAp
 RBRBRBRBVAp
 RBRBRBRBVBRBRBRBVAp
@@ -3464,14 +3605,16 @@ RBRBRCSBRBTBRBRCSBRBRCSBRBRCSBRBTBRBRCSAp
 RBRBRCp
 RBRBRDTBRBRBRBTBRBTAp
 RBRBSBp
-RBRBSCp
 RBRBTAp
+RBRBTBRBRAp
 RBRBTBRBRBRC
 RBRBTBRBRC
 RBRBTBRBRCSAp
 RBRBTBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSAp
+RBRBTBRBRCp
 RBRBTBRBSBp
 RBRBTBRBTAp
+RBRBTBRBTBRBRCSAp
 RBRBTBRBTBRBSBp
 RBRBTBRBTBRBTAp
 RBRBTBRBTBRBTBRBRAp
@@ -3482,19 +3625,20 @@ RBRBTBRBTBRBTBRBTAp
 RBRBTBRBTBRBTBRBTBRBSBp
 RBRBTBRBTBRBTBRBTBRBTAp
 RBRBTBRBTBRBTBRBTBRBTBRBSBp
-RBRBTBRBTBRBTBRBTBRBTBRBTAp
+RBRBTBRBTBRBTBRBTBRBTBRBTBRBRAp
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBRBRC
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBSBp
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBSBp
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTAp
+RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRCSBRBSBp
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBSBp
-RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRCSBRBSBp
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBSBp
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRBRC
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRBRC
 RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRAp
-RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTAp
+RBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBVBRBRBRBSBp
 RBRBTBRBTBRBVBRBRBRBVBRBRBRBVAp
+RBRBTBRBVBRBRBRBSBp
 RBRBTBRBVBRBRBRBVBRBRBRBTBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSBRBRCSBRBTBRBTBRBTAp
 RBRBVAp
 RBRBVBRBRBRBSBp
@@ -3516,7 +3660,7 @@ RBRCSBRBTBRBTBRBTBRBTBRBTBRBSBp
 RBRCSBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRAp
 RBRCp
 RBRGp
-RBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBRB`
+RBSATAp
 RBSBp
 RBTAp
 RBTBRBRAp
@@ -3532,6 +3676,7 @@ RBTBRBTBRBRBRCp
 RBTBRBTBRBRC
 RBTBRBTBRBSBp
 RBTBRBTBRBTAp
+RBTBRBTBRBTBRBRAp
 RBTBRBTBRBTBRBRCRBp
 RBTBRBTBRBTBRBSBp
 RBTBRBTBRBTBRBTAp
@@ -3551,7 +3696,7 @@ RBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRCRBp
 RBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBSBp
 RBTBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRCp
 RBVBRBRBRBTBRBTBRBTBRBTBRBSBp
-RB`tB`/Ap
+RCSAp
 RESLH
 RESLL
 RESOURCE_TYPE_PARTICLE_SYSTEM
@@ -3561,6 +3706,7 @@ RGB blend weight for sequence 1
 RGp8p8p
 ROTATION
 ROTATION_SPEED
+Radial Amount (-1..1)
 Radius
 Radius Bias
 Radius Multiplier
@@ -3693,15 +3839,18 @@ Remap vector to control point
 Remap velocity to vector
 Render Cloth Force
 Render Deferred Light
+Render Flatten Grass
 Render Screen Shake
 Render Sound
 Render Status Effect
+Render Tree Shake
 Render as models
 Render as models (DEPRECATED)
 Render blobs
 Render cables
 Render cloth force
 Render deferred light
+Render flattened grass
 Render fog sprites
 Render fogsprites
 Render grid
@@ -3718,7 +3867,7 @@ Render sprites
 Render status effect
 RenderAsModels
 RenderBufferBinding_t
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayoutField_t
@@ -3739,11 +3888,9 @@ Replicate sequence 1 alpha to rgb
 Resource %short
 ResourceCompilerSystem001
 ResourceHandleUtils001
-ResourceHandle_t CKV3Transfer_EmptyResourceLoadInterface::GetHandleForResource(KeyValues3 *, ResourceType_t)
-ResourceId_t UpdateResourceIdForUGC(const char *, UGCHandle_t, ResourceId_t, const CResourceRefTable *, char *, int)
+ResourceHandle_t CKV3Transfer_EmptyResourceLoadInterface::GetHandleForResource(const KeyValues3 *, ResourceType_t)
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ResourceType_t GetResourceTypeOfWeakHandle(const CSchemaType *)
 Restart Effect after Duration
 Restart effect after duration
@@ -3800,6 +3947,7 @@ SBRBRCSBRBRCRBp
 SBRBTAp
 SBRBTBRBRCSBRBTBRBRCSBRBTBRBRCSBRBTBRBRCSAp
 SBRBTBRBTBRBTBRBTBRBRCSBRBRAp
+SBRGp8p
 SBTBRBRG
 SBTBRBTBRBTBRBTBRBRC
 SCENEOBJECTPTR
@@ -3824,6 +3972,7 @@ SEQUENCE_COMBINE_MODE_WEIGHTED_BLEND
 SEQUENCE_NUMBER
 SEQUENCE_NUMBER1
 SSE and SSE2 are required.
+SYMLL
 Saturate color pre alphablend
 Save Offset
 Scalar Random
@@ -3853,6 +4002,7 @@ Scratch float 2
 Screen & Particle Normal Align
 Screen Align
 Screen-Z Align
+Screenspace Player-View Force
 Second Control Point Location
 Second Control Point Number
 Second Control Point Parent
@@ -3918,7 +4068,6 @@ Set per child control point from parent control points
 Set per child control point from particle positions
 Set positions in world space
 Set single control point position
-Sfffff.
 SkeletonBoneBbox_t
 SmartArray<CubeInfo (*)[101], false, 16>::SmartArray() [T = CubeInfo (*)[101], sse_align = false, initialCapacity = 16]
 SmartArray<CubeInfo (*)[101], false, 16>::~SmartArray() [T = CubeInfo (*)[101], sse_align = false, initialCapacity = 16]
@@ -3949,7 +4098,7 @@ SoundService_001
 SoundSystem001
 Source Alpha value to map to alpha of 1
 Source Alpha value to map to alpha of zero
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -3960,7 +4109,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 Spatial Coordinate Offset
 Spatial Noise Coordinate Scale
 Specify blend weights for alpha and rgb
@@ -3974,6 +4123,7 @@ Spin Strength
 Spring Constraint
 Spring constraint
 Spring force
+StIcvt1
 Start dot product value for fading as the particle normal becomes aligned with the view vector
 Starting Control Point
 StatsService_001
@@ -3987,6 +4137,7 @@ Strength Modifiers
 Sub Frame Interpolation
 Surface Prop Hash
 SurfacePropertiesList
+SxIcvx1
 T &CUtlStringMap<CParticleSnapshot *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CParticleSnapshot *, SymbolTableType_t = CUtlSymbolTable]
 T &SmartArray<ImpParticle *, false, 16>::operator[](int) [T = ImpParticle *, sse_align = false, initialCapacity = 16]
 T &SmartArray<ImpParticle, false, 16>::operator[](int) [T = ImpParticle, sse_align = false, initialCapacity = 16]
@@ -4026,8 +4177,6 @@ T *CMultiBufferCounter::operator()(T *&, uint) [T = unsigned int]
 T *CMultiBufferCounter::operator()(T *&, uint) [T = unsigned short]
 T *CParticleSnapshot::ElementPointer(int, int, int, int) const [T = float]
 T *CParticleSnapshot::ElementPointer(int, int, int, int) const [T = int]
-T *CSOAContainer::ElementPointer(int, int, int, int) const [T = float]
-T *CSOAContainer::ElementPointer(int, int, int, int) const [T = int]
 T KeyValues3::GetAsNumeric() const [T = float]
 T KeyValues3::GetAsNumeric() const [T = int]
 T KeyValues3::GetAsNumeric() const [T = long long]
@@ -4035,52 +4184,52 @@ T$$fA
 T$*fA
 TA9D5Tu
 TA9D=Tu
+TARBRBRBRBSAXBTBRB]ARAp
+TARBRB]ARBRAp
 TARBRB]ARBREp
 TBRATAp
 TBRAp
-TBRBRA
 TBRBRAp
+TBRBTBRBTBRBSBp
 TBRBTBRBTBRBTBRBTBRBTAp
 TBSARDp
-TB`<BRB`<BRBRB`<BRB`<BRB`<BRB`<BRB`<BRAp
-TB`<BRB`<BRB`<BRB`<BRB`<BRAp
-TB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRA
-TB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRBRB`=ARB`=ARB`=ARB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRAp
-TB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRBRBRB`=ARB`>BRB`=ARB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BSATAp
+TBSATAp
+TB`=ARB`=ARBRB`=ARB`=ARB`=ARB`=ARB`=ARAp
 TBppp
 TCRAp
 TCRBR
-TCRBSATAp
-TCRB`
 TCSATAp
 TCTAp
 TCTBRAp
 TCTBRBRBSATAp
 TCUATAp
-TCVAp
+TCUAp
 TCVBRAp
 TCVBRBVBRBVBRAp
-TCVBRBVBRBVBRBVBRAp
-TCVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
+TCVBRBVBRBVBRBVBRBVBRAp
+TCVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
 TCVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRBVBRAp
-TCWARATAp
-TCZBSATBUATAp
+TCWBp
+TCZBSATBUATBRB`
 TC\BRAp
 TC\Bp
-TC`%ARCp
-TC`<BRAp
-TC`<BRB`<BRAp
-TC`<BRB`<BRB`<BRB`<BRB`<BRB`<BRB`<BSATAp
-TC`?ARAp
-TC`?ARB`?ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARAp
+TC`%ARBTATB`Ap
+TC`=ARAp
+TC`=ARB`=ARAp
+TC`=ARB`=ARB`=ARB`=ARB`=ARAp
+TC`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARA
+TC`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARBRB`>BRB`>BRB`>BRB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARAp
+TC`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARBRBRB`>BRB`?ARB`>BRB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ASATAp
+TC`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ARB`=ASATAp
+TC`AARAp
+TC`AARB`AARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARB`?ARAp
 TC`CATAp
-TClass *KV3Transfer_AllocateClassInstance(CKV3TransferBlockAllocator *, const char *, typename std::enable_if<((Schema_HasOrInheritsSchemaClassMarker<TClass>::value))>::type *) [TClass = CParticleOperatorInstance]
-TClass *KV3Transfer_AllocateClassInstance(CKV3TransferBlockAllocator *, const char *, typename std::enable_if<((Schema_HasOrInheritsSchemaClassMarker<TClass>::value))>::type *) [TClass = IParticleSystemDefinition]
-TD`<Ap
+TClass *KV3TransferSchema_AllocateClassInstance(CKV3TransferBlockAllocator *, const char *) [TClass = CParticleOperatorInstance]
+TClass *KV3TransferSchema_AllocateClassInstance(CKV3TransferBlockAllocator *, const char *) [TClass = IParticleSystemDefinition]
 TETBRBRBSBp
-TGRBTBp
-THp@p
+TGp@p
 TINT_RGB
+TIRBTBp
 TRAIL_LENGTH
 T[A^]
 Target layer ID for rendering
@@ -4088,6 +4237,7 @@ Teleport Beam
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
+Texture Coordinates
 Texture UV control
 Texture scroll rate
 Third Control Point Location
@@ -4096,34 +4246,42 @@ Third Control Point Parent
 Time Coordinate Offset
 Time Noise Coordinate Scale
 Time Offset
+Time scale
 Time varying force
 Time-of-Day Parameter
 Timescale Modifiers
+To load signed char CUtlSymbolLarge you must specify signed char symbol table via LoadContext.AddInterface( CKV3Transfer_UtlSymbolLargeInterface )
 Too few simulated vertices bound to matrix %short
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
+Topology
 Trace Direction Override
 Trace Length
 Trace Update Rate
+Trace cache efficiency = %float%%
 Trail Length
 Trail Length Random
 Trail forward shift (fraction)
 Trail length random
 TransferPostLoadFn
 TransferPostSaveFn
-Tried to load deferred reference '%short' from signed char value without signed char deferred reference flag.
+Treat path as signed char loop
+Triangles
 Tried to load resource reference '%short' from signed char value without signed char resource reference flag.
-Tried to load signed char pointer with no '%short' key
+Tried to load signed char polymorphic pointer with no '%short' key
 Trying to cast '%short' to signed char different resource type!
 Trying to deallocate particle system definition while collections still exist!
 Trying to modify signed char CSceneLightObject outside of CSceneLightObjectModifyScope!
 Turbulent force
+Twist amount (-1..1)
 Twist around axis
 TypeManager
+T~"fD
+UBRBRBRAp
 UBRBRBRBTAp
 UBRBRBRCRBp
 UBRBRBRCSAp
@@ -4139,6 +4297,7 @@ UBRBRBTBRBTBRBTBRBTBRBRAp
 UBRBRBTBRBTBRBTBRBTBRBRCSBRBTBRBTBRBSBp
 UBRBRBTBRBTBRBTBRBTBRBSBp
 UBRBRBTBRBTBRBTBRBTBRBTBRBRAp
+UBRBRBTBRBTBRBTBRBTBRBTBRBSBp
 UBRBRBTBRBTBRBTBRBTBRBTBRBTBRBTAp
 UBRBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBRCRBp
 UBRBRBTBRBTBRBTBRBTBRBTBRBTBRBTBRBSBp
@@ -4186,10 +4345,13 @@ Use Local Space
 Use Particle Count as Density Scale
 Use additive blending
 Use distance to an infinite line instead of signed char finite line segment
+Use local coordinates for offset
 Use local space offset
 Use max-luminance blending for sequence 0
 Use max-luminance blending for sequence 1
+Use particle system topology
 Use radius for Per Particle Trace Length
+Use scalar attribute for texture coordinate
 Use sequential CP pairs between start and end point
 Use soft edges for distance alpha
 UserInfoChangeService_001
@@ -4256,8 +4418,13 @@ VScriptDbg
 VScriptManager010
 VStringTokenSystem001
 VUUUH
+VUUUI
 VUUUL
-V_AppendSlash: ran out of space on %s.
+VUUUM
+V_fabsf( vecForward.LengthSqr() - 1.0f ) < e-3
+V_fabsf( vecRight.LengthSqr() - 1.0f ) < e-3
+V_fabsf( vecUp.LengthSqr() - 1.0f ) < e-3
+V_stristr_fast(char const*, char const*)
 Value %short exeeds size of datatype. 
 Vector
 Vector Component Random
@@ -4265,7 +4432,7 @@ Vector ControlPointReference_t::GetCurrentPosition(CParticleCollection *) const
 Vector Random
 Vector component random
 Vector random
-Vector2D CBaseRendererSource2::RenderSetup(IRenderContext *, CParticleCollection *, const CUtlStringToken &, const Vector4D &, void *, CRenderAttributes &, const ISceneLayer *) const
+Vector2D CBaseRendererSource2::RenderSetup(IRenderContext *, CParticleCollection *, const CUtlStringToken &, const Vector4D &, C_OP_BaseRenderContext_t *, CRenderAttributes &, const ISceneLayer *) const
 Vector4D
 Velocity Away from Hitbox Random
 Velocity Control Point
@@ -4332,31 +4499,32 @@ Wrong alignment %double
 X axis scaling Scalar field
 X axis scaling scalar field
 X offset of center point
+X-Jv 
 XBRAp
+XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB`
-XBSARBSAXBRB`
 XBTBRBRBRBSAXBRAp
+XBTBRBRBRBSAXBSARBSAXBRB`
 XBTBRB]ARBRAp
 XD$ A
 XD<PA
 XD>@D
 XHc{X1
 XL<@A
-XOpuJzHH
+XOxuJzHH
 XT<0A
 XY velocity only
 X[A\A]A^A_]
 X[A^A_]
 X\>0D
 Xd<`A
-Xl$|fD
 Xt2`A
 Y axis scaling Scalar field
 Y axis scaling scalar field
 Y offset of center point
 YCHfH
 YC`fD
-YD$hfD
+YD$pfD
 YFHfH
 YF`fD
 YS@fH
@@ -4365,26 +4533,25 @@ YV@fH
 Z axis scaling Scalar field
 Z axis scaling scalar field
 [A\A]A^A_]
+[A\A]A^A_]A
 [A\A^A_]
 [A^A_]
-[A^]A
 [unsigned short,fD
-\$lA9
-\$pfD
-\D$hH
+\$HHc
+\$tA9
+\$tIcD$x
+\$xfD
+\D$pH
 \D< A
 \L$$f
 \L< A
 \\< A
 \t2PA
 ^GdfD
-^L[A^]
 ^fff.
 ^fffff.
 ^long long[A^]
 ^p[A^]
-^unsigned char[A^]
-^unsigned short[A^]
 ^|[A^]
 _0IcG
 _AssertMsg_ConditionFailed
@@ -4402,13 +4569,11 @@ _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_MSTime
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
@@ -4419,12 +4584,44 @@ _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
 _ThreadSleep
+_V_FixSlashes
+_V_GetFileExtension
+_V_IsAbsolutePath
+_V_RemoveDotSlashes
+_V_UnqualifiedFileName
+_V_acosf
+_V_asinf
+_V_atan2f
+_V_atod
+_V_atof
+_V_atoi
+_V_cosf
+_V_expf
+_V_logf
+_V_powf
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_vsnprintf
+_V_vsnprintfSize
+_V_wcstoi64
 _Warning
 __DATA
-__GetCallStack_Fast
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_ComposeFileName
+__V_FixupPathName
+__V_SetExtension
+__V_StripExtension
+__V_strncpy
+__V_strnistr_fast
 ___bzero
 ___cxa_atexit
 ___cxa_bad_typeid
@@ -4435,13 +4632,11 @@ ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
 ___dynamic_cast
-___exp10
 ___gxx_personality_v0
 ___sincos_stret
 ___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
-___tolower
 __bss
 __common
 __const
@@ -4462,9 +4657,6 @@ __text
 __unwind_info
 _acos
 _atan2
-_atan2f
-_atof
-_atoi
 _calloc
 _ceilf
 _class
@@ -4474,21 +4666,18 @@ _floor
 _floorf
 _fmod
 _fmodf
-_free
+_frexpf
 _g_Tier1_CRC32Table
 _g_VProfCurrentProfile
 _g_pMemAlloc
 _log10
-_logf
 _malloc
 _memchr
 _memcmp
 _memcpy
 _memmove
 _memset
-_pA;^X
 _powf
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -4498,28 +4687,25 @@ _pthread_mutexattr_settype
 _qsort
 _raise
 _rand
-_realloc
+_sinf
+_sprintf
 _sscanf
 _strchr
 _strcmp
 _strcpy
 _strlen
-_strncat
 _strnlen
-_strtod
-_strtol
-_strtoll
-_strtoul
-_strtoull
 _tanf
 _uuid_generate
-_vsnprintf
-_wcstol
+_xA;^X
 `0@  
-`Xu*H
+`0@``
+`XujH
 `[A\A^A_]
-``P@ `
+`[A^]
+```0@
 ```P`
+```````P
 `unsigned char[A\A^A_]
 absolute value
 accelerate position
@@ -4530,7 +4716,6 @@ add noise
 add self amount for combined additive and alpha blended
 add slack (not implemented)
 additive
-affffff.
 agg.GetCluster( nChild )->m_nParent == nDynNode
 agg.GetClusterCount() == int( nDynNodeCount * 2 - 1 )
 aggregation radius
@@ -4552,6 +4737,7 @@ amount of current position to preserve
 amount of damping of changes
 amount of force
 amount of slide
+amount of time taken to smooth between different shake parameters
 amount to multiply light brightness by
 amount to multiply particle system radius by to get light radius
 amount to scale trail length by
@@ -4581,7 +4767,7 @@ audiosounds
 auto CKeyValues3Context::FreeKV_Internal(KeyValues3 *)::(anonymous class)::operator()() const
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto CParticleSystemMgr::CreateParticleCollection(HParticleSystemDefinition, void *, IParticleSystemQuery *, bool, float, int)::(anonymous class)::operator()() const
-bAlive
+auto CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *)::(anonymous class)::operator()() const
 bContainsCRLF
 batch particle systems
 bias distance
@@ -4610,8 +4796,10 @@ bool CDmxSerializer::UnserializeAttributes(CUtlBuffer &, CDmxElement *, CUtlVect
 bool CDmxSerializerKeyValues2::UnserializeElementArrayAttribute(CUtlBuffer &, DmxElementDictHandle_t, const char *)
 bool CIndexData<unsigned short>::Lock(int) [T = unsigned short]
 bool CKV3ResourceDataHandler<IParticleSystemDefinition>::Init(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *) [TLoadedClass = IParticleSystemDefinition]
-bool CKV3Transfer_ResourceLoadInterface::HandleResourceReference(CKV3TransferLoadContext *, ResourceType_t, KeyValues3 *, ResourceHandle_t *, bool)
+bool CKV3TransferSaveContext::PrepareTargetForClass(KeyValues3 *, KV3TransferClassBehavior_t, const char *)
+bool CKV3Transfer_ResourceLoadInterface::HandleResourceReference(CKV3TransferLoadContext *, ResourceType_t, const KeyValues3 *, CStrongHandleVoid *)
 bool CMemoryStack::Init(const char *, unsigned int, unsigned int, unsigned int, unsigned int)
+bool CMorphConstraint::CacheModelData(const CModel *)
 bool CParticleCollection::Init(HParticleSystemDefinition, void *, IParticleSystemQuery *, bool, float, int)
 bool CParticleSnapshot::AddAttributeMapping(int, int, const char *)
 bool CParticleSnapshot::HasAttribute(int, EAttributeDataType) const
@@ -4629,6 +4817,7 @@ bool CVertexData<ParticleVertexRepeatedStream_t>::Lock(int) [T = ParticleVertexR
 bool CVertexData<VertexColorUVPos_t>::Lock(int) [T = VertexColorUVPos_t]
 bool C_OP_ClothMovement::BuildFeModelGrid(CFeModelBuilder &, CParticleCollection *) const
 bool GetDefaultValueForControlPointType(Vector &, ControlPointType_t)
+bool GroupHasValidAnimation(const CAnimationGroupResource *)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool Unserialize(CUtlBuffer &, CUtlVector<T> &) [T = CUtlBinaryBlock]
 bool Unserialize(CUtlBuffer &, CUtlVector<T> &) [T = CUtlString]
@@ -4663,8 +4852,6 @@ cache attribute to read from
 can'unsigned short solve quadratic for light %float %float
 center core radius
 center offset
-cffff.
-char *_V_strncat(char *, const char *, int, int)
 child group ID
 child group ID to affect
 cl_aggregate_particles
@@ -4706,8 +4893,6 @@ const ResourceBlockEntry_t *Resource_GetBlockEntry(const ResourceFileHeader_t *,
 const Vector &CParticleCollection::GetControlPointAtPrevTime(int)
 const char *CControlPointEditorDataEntry::GetLabel(int) const
 const char *CParticleOperatorInstance::GetOperatorSchemaName() const
-const char *V_stristr_fast(const char *, const char *)
-const char *_V_strnistr_fast(const char *, const char *, int)
 const float *CParticleCollection::GetFloatAttributePtr(int, int) const
 const float *CParticleCollection::GetInitialFloatAttributePtr(int, int) const
 const void *CUtlBuffer::PeekGet(int, int)
@@ -4810,7 +4995,6 @@ desired velocity CP
 desired velocity CP field override(for speed only)
 dest CP
 dest control point component
-destBufferSize >= 0
 destroy all particles immediately
 detail 2 texture
 difference maximum
@@ -4876,6 +5060,7 @@ emit_continuously
 emit_instantaneously
 emitter lifetime end time (seconds)
 emitter lifetime start time (seconds)
+emitters
 enable fading and clamping
 enable particle depth-feathering
 enable particle outlining
@@ -4920,9 +5105,6 @@ fTIcFP1
 fabs( DotProduct( v01 - v23, long double[ 0 ] ) ) < 0.001f && fabs( DotProduct( v01 - v23, eV ) ) < 0.001f
 fabs( DotProduct( vecFwd, vecUp ) ) < 0.1f
 fabs( DotProduct( vecRight, vecUp ) ) < 0.1f
-fabs( vecForward.LengthSqr() - 1.0f ) < e-3
-fabs( vecRight.LengthSqr() - 1.0f ) < e-3
-fabs( vecUp.LengthSqr() - 1.0f ) < e-3
 fade bias
 fade end time
 fade in time exponent
@@ -4943,7 +5125,6 @@ false
 ffff.
 fffff.
 ffffff.
-fhMcnlM
 field to init
 field to read
 field to write
@@ -4963,12 +5144,14 @@ flEmissionRate != 0.0f
 flMinDist <= flMaxDist * 1.0001f + FLT_EPSILON
 flScale >= 0.0f
 flSinArea >= e-6f
+flattening strength
 flip horizontal
 flip percentage
 flip twist axis with yaw
 float
 float *CParticleCollection::GetFloatAttributePtrForWrite(int, int)
 float *CParticleCollection::GetInitialFloatAttributePtrForWrite(int, int)
+float QuaternionDotProduct(const Quaternion &, const Quaternion &)
 float QuaternionNormalize(Quaternion &)
 float SnapWeight0(float)
 float SnapWeight01(float)
@@ -4986,11 +5169,13 @@ force to apply
 force to be inside model
 force triangulate
 forcedrawinterlevedwithsiblings
+forces
 forward angle
 forward_angle
 fourth control point location
 fourth control point number
 fourth control point parent
+fpMcntM
 frames per second
 freeze simulation after time
 frequence scale
@@ -4999,8 +5184,6 @@ fresnel color warp texture
 fresnel warp texture
 friction
 g_hSource2RendererPixelConstants != CONSTANT_BUFFER_HANDLE_INVALID
-g_pParticleSystemMgr->ValidateParticleCollection( m_pParticles )
-g_pParticleSystemMgr->ValidateParticleCollection( pChild )
 g_pResourceHandleUtils
 g_pResourceSystem
 gamematerial
@@ -5018,10 +5201,6 @@ growth time
 hClass
 hElement != ELEMENT_DICT_HANDLE_INVALID
 hResource != RESOURCE_HANDLE_INVALID
-hResource->m_nDeferredCount < hResource->m_nRefCount
-hResource->m_nDeferredCount <= hResource->m_nRefCount
-hResource->m_nDeferredCount > 0
-hResource->m_nDeferredCount >= 0
 hResource->m_nRefCount > 0
 half-lambert normals
 head->m_pPrev==which
@@ -5052,6 +5231,7 @@ initial radius
 initialCapacity == 0 || signed char
 initialCommit <= m_maxSize
 initial_particles
+initializers
 input control point
 input control point number
 input field
@@ -5070,6 +5250,7 @@ instant jump threshold
 int >= 0 && int < capacity
 int >= 0 && int < this->GetNumBits()
 int >= 0 && unsigned int >= 0 && int < ysizeP1 && unsigned int < zsizeP1
+int CDisjointSetForest::Find(int)
 int CKeyValues_Data::Internal_GetInt()
 int CMeshBuilder2<VertexColorUVPos_t>::IndicesFromVertices(MaterialPrimitiveType2_t, int) [T = VertexColorUVPos_t]
 int CParticleCollection::FlippedParticleIndex(int) const
@@ -5086,14 +5267,12 @@ int ControlPointReference_t::Index() const
 int GenerateSortedIndexList(Vector, const Vector *, CParticleVisibilityData *, CParticleCollection *, bool, void *, VTXTYPE **, bool, const CONTEXTTYPE &, bool) [VTXTYPE = ParticleFullRenderData_Scalar_View, CONTEXTTYPE = BaseParticleVertexCalculationContext_t]
 int GenerateSortedIndexList(Vector, const Vector *, CParticleVisibilityData *, CParticleCollection *, bool, void *, VTXTYPE **, bool, const CONTEXTTYPE &, bool) [VTXTYPE = ParticleRenderDataWithNormal_Scalar_View, CONTEXTTYPE = BaseParticleVertexCalculationContext_t]
 int GenerateSortedIndexList(Vector, const Vector *, CParticleVisibilityData *, CParticleCollection *, bool, void *, VTXTYPE **, bool, const CONTEXTTYPE &, bool) [VTXTYPE = ParticleRenderDataWithTrailDelta_Scalar_View, CONTEXTTYPE = TrailDeltaCalculationContext_t]
+int GenerateSortedIndexList(Vector, const Vector *, CParticleVisibilityData *, CParticleCollection *, bool, void *, VTXTYPE **, bool, const CONTEXTTYPE &, bool) [VTXTYPE = ParticleRenderDataWithTrailDelta_Scalar_View_Lines, CONTEXTTYPE = TrailDeltaCalculationContext_t]
 int GetSIMDRandContext()
-int ResourceRelease(ResourceHandle_t, bool, uintp, ResourceLeakTrackingGroup_t)
+int ResourceRelease(ResourceHandle_t, uintp, ResourceLeakTrackingGroup_t)
 int UnscrambleColumnIndex(int, int)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
 int _V_strncmp(const char *, const char *, int)
 int( refCtrl ) < m_CtrlToNode.Count()
-int64 V_atoi64(const char *)
 int_array
 internal error in particle system MapParticleOrientationIndexToShaderCombo()
 interploation distance tolerance cp
@@ -5118,7 +5297,7 @@ keyvalues2_v1
 kill on no collision
 kill particle on collision
 kill unused
-l$xff.
+l$XHc_xI
 latency CP
 latency CP field
 length fade in time
@@ -5207,11 +5386,9 @@ long long signed char::* Trace Length
 long long signed char::* distance value
 long long>E9nx
 long long[A\A]A^A_]
-long longcomplex ;C||O
+long longcomplex ;C||Z
 low violence definition
 m_ActivityName
-m_AdditionalClusters.Count() == 0
-m_AdditionalClusters.FindAndFastRemove( pCluster )
 m_AllocatorUtils.DidAllocatorAssumeControl() || m_AllocatorUtils.GetDataSize() == 0
 m_AttachmentName
 m_Attributes[int].m_bObjectId
@@ -5240,7 +5417,6 @@ m_EconSlotName
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
-m_EmbeddedCluster.AllocationCount() == 2
 m_Emitters
 m_EndingForce
 m_ExtParts
@@ -5259,6 +5435,8 @@ m_InitPose
 m_Initializers
 m_InteractAs
 m_InteractAsStrings
+m_InteractExclude
+m_InteractExcludeStrings
 m_InteractWith
 m_InteractWithStrings
 m_LightColor1
@@ -5340,12 +5518,15 @@ m_bBlendFramesSeq0
 m_bBoundBox
 m_bBrushOnly
 m_bCPPairs
+m_bCacheAttempted
+m_bCacheOk
 m_bCanBeModified
 m_bCannotBeRefracted
 m_bClampLowerRange
 m_bClampUpperRange
 m_bClampV
 m_bClimbable
+m_bClosedLoop
 m_bColor
 m_bConfirmCollision
 m_bConstraints
@@ -5377,6 +5558,7 @@ m_bFitToModelSize
 m_bFlipBasedOnYaw
 m_bFlipHorizontal
 m_bFlipUVBasedOnPitchYaw
+m_bFogParticles
 m_bForceDrawInterlevedWithSiblings
 m_bForceZ
 m_bGammaCorrectVertexColors
@@ -5412,6 +5594,7 @@ m_bLightType1
 m_bLightType2
 m_bLightType3
 m_bLightType4
+m_bLightenMode
 m_bLinear
 m_bLocalCoords
 m_bLocalSpace
@@ -5425,6 +5608,7 @@ m_bLockULCorner
 m_bLockURCorner
 m_bLockURow
 m_bLoop
+m_bLoopedPath
 m_bMaintainHitbox
 m_bManualAnimFrame
 m_bMaxLuminanceBlendingSequence0
@@ -5449,6 +5633,7 @@ m_bParticleFeathering
 m_bPerParticle
 m_bPerParticleTR
 m_bPerVertexLighting
+m_bPlaceAlongPath
 m_bPlayEndCap
 m_bPosition
 m_bPrevPosition
@@ -5467,6 +5652,7 @@ m_bRandomize
 m_bRandomlyFlipDirection
 m_bRefract
 m_bResetAnimOnStop
+m_bReverse
 m_bReverseOrder
 m_bReverseZBuffering
 m_bRigid
@@ -5521,7 +5707,9 @@ m_bUseParticleCount
 m_bUseParticleVelocity
 m_bUseRandomCPs
 m_bUseRawMeshGroup
+m_bUseScalarForTextureCoordinate
 m_bUseTexture
+m_bUseTopology
 m_bUseVelocity
 m_bUseWaterHeight
 m_bUseWithContEmit
@@ -5604,6 +5792,7 @@ m_fSpeedRandExp
 m_fSpinRateStopTime
 m_fl4NoiseScale
 m_flAParm
+m_flAccel
 m_flAddCurvature
 m_flAddNoise
 m_flAddSelfAmount
@@ -5646,6 +5835,7 @@ m_flConstantRadius
 m_flConstantRotation
 m_flConstantRotationSpeed
 m_flConstrainRadiusToLengthRatio
+m_flControlPointOrientationAmount
 m_flCpMovementTolerance
 m_flCullEnd
 m_flCullExp
@@ -5717,6 +5907,7 @@ m_flFinalTextureOffsetU
 m_flFinalTextureOffsetV
 m_flFinalTextureScaleU
 m_flFinalTextureScaleV
+m_flFlattenStrength
 m_flForceScale
 m_flForwardDegrees
 m_flForwardShift
@@ -5796,6 +5987,7 @@ m_flMinimumTimeStep
 m_flModelScale
 m_flNoDrawTimeToGoToSleep
 m_flNoPixelVisibilityFallback
+m_flNoiseAnimationTimeScale
 m_flNoiseCoordScale0
 m_flNoiseCoordScale1
 m_flNoiseCoordScale2
@@ -5830,6 +6022,7 @@ m_flOutputMin
 m_flOverbrightFactor
 m_flParticleDensity
 m_flParticlesPerOrbit
+m_flPeakStrength
 m_flPercent
 m_flPitch
 m_flPitchScale
@@ -5837,6 +6030,7 @@ m_flPlaneOffset
 m_flPositionDampingConstant
 m_flPrevPosScale
 m_flProxyRadius
+m_flRadialAmount
 m_flRadius
 m_flRadius1
 m_flRadius2
@@ -5862,6 +6056,7 @@ m_flRotRateMax
 m_flRotRateMin
 m_flRotateRateDegrees
 m_flRotationRandExponent
+m_flScalarAttributeTextureCoordScale
 m_flScale
 m_flScaleVOffsetByControlPointDistance
 m_flScaleVScrollByControlPointDistance
@@ -5872,6 +6067,7 @@ m_flSequence0AlphaWeight
 m_flSequence0RGBWeight
 m_flSequence1AlphaWeight
 m_flSequence1RGBWeight
+m_flShakeDuration
 m_flSkinWidth
 m_flSlideAmount
 m_flSndLvlScale
@@ -5907,12 +6103,16 @@ m_flTextureVOffset
 m_flTextureVScrollRate
 m_flTextureVWorldSize
 m_flThickness
+m_flTimeDuration
+m_flTimeScale
 m_flTintPerc
 m_flTolerance
 m_flTraceLength
 m_flTraceOffset
 m_flTraceTolerance
+m_flTransitionTime
 m_flTravelTime
+m_flTwistAmount
 m_flUpdateRate
 m_flUpdateThreshold
 m_flUvDensity
@@ -6067,15 +6267,13 @@ m_nControlPoint5
 m_nControlPoint6
 m_nControlPoint7
 m_nControlPointCompare
+m_nControlPointForLinearDirection
 m_nControlPointLocal
 m_nControlPointNumber
 m_nControlPointNumber <= pParticles->GetHighestControlPoint()
 m_nControlPointNumberEnd
 m_nControlPointNumberStart
 m_nCullControlPoint
-m_nDataType[nAttributeIdx] != ATTRDATATYPE_4V
-m_nDataType[nAttributeIdx] != ATTRDATATYPE_NONE
-m_nDataType[nAttributeIdx] == ATTRDATATYPE_4V
 m_nDefaultMeshGroupMask
 m_nDensity
 m_nDesiredEndPoint
@@ -6113,6 +6311,7 @@ m_nHeadLocation
 m_nHealth
 m_nHeightCP
 m_nHitBoxIndex
+m_nHitboxValueFromControlPointIndex
 m_nHorizCropField
 m_nInControlPointNumber
 m_nIncrement
@@ -6162,6 +6361,7 @@ m_nNumControlPoints
 m_nNumParticlesToKill < MAX_PARTICLES_IN_A_SYSTEM
 m_nNumParticlesToKill <= m_nActiveParticles
 m_nNumParticlesToKill == 0
+m_nNumPointsAlongPath
 m_nNumRows
 m_nOffsetCP
 m_nOpEndCapState
@@ -6183,7 +6383,6 @@ m_nOutputEndField
 m_nOutputField
 m_nOutputStartCP
 m_nOutputStartField
-m_nOutstandingKV3Allocations == 0
 m_nOverrideCP
 m_nOverrideCP2
 m_nOverrideCPField
@@ -6192,12 +6391,14 @@ m_nParticleFlags & PCFLAGS_NEEDS_SLEEPING_SIMULATION
 m_nParticleNumber
 m_nParticlesToEmit
 m_nParticlesToMaintain
+m_nPeakStrengthFieldOverride
 m_nPerParticleReadInitialAttributeMask & ( 1 << nAttribute )
 m_nPitchField
 m_nPlaneControlPoint
 m_nPrimitiveType
 m_nRadiusComponent
 m_nRadiusField
+m_nRadiusFieldOverride
 m_nRefCP1
 m_nRefCP2
 m_nRefCounter
@@ -6207,6 +6408,7 @@ m_nReserved
 m_nReserved2
 m_nRotateMotion
 m_nRunAlignment >= nAlignMask
+m_nScalarFieldForTextureCoordinate
 m_nScaleCP
 m_nScaleCP1
 m_nScaleCP2
@@ -6223,6 +6425,9 @@ m_nSizeCullBloat
 m_nSkin
 m_nSkinCP
 m_nSkipRenderControlPoint
+m_nSlaveAxis
+m_nSlaveBoneList.IsEmpty()
+m_nSlaveChannel
 m_nSnapshotControlPoint
 m_nSnapshotControlPointNumber
 m_nSndLvlField
@@ -6233,12 +6438,15 @@ m_nStartCP
 m_nStartControlPointNumber
 m_nStartIndex
 m_nStartInstance
+m_nStrengthFieldOverride
 m_nSubModelField
 m_nSurfaceProp
 m_nSurfacepropertyIndices
+m_nTargetAxis
 m_nTargetUpBoneHash
 m_nTintBlendMode
 m_nTintCP
+m_nTopology
 m_nTranslateMotion
 m_nType
 m_nUpType
@@ -6269,6 +6477,7 @@ m_pMorphSet
 m_pMultiBuffer + m_nMultiBufferSize == bufferStrider.Get( )
 m_pNextDef != this
 m_pNextDef == NULL
+m_pNextDef == nullptr && m_pPrevDef == nullptr
 m_pOperatorContextData == NULL
 m_pOuterTypeScope != NULL
 m_pParent
@@ -6301,6 +6510,7 @@ m_params
 m_parentName
 m_parts
 m_physics
+m_pointList
 m_projectionAngularTolerance
 m_projectionLinearTolerance
 m_pszCullReplacementName
@@ -6334,12 +6544,14 @@ m_runStepLeft
 m_runStepRight
 m_sBoneName
 m_sSurfaceProperty
+m_sTargetMorph
 m_sceneObjects
 m_scrapeRough
 m_scrapeSmooth
 m_shape
 m_skeleton
 m_slaves
+m_slaves.Count() == m_nSlaveBoneList.Count()
 m_solverIterationCount
 m_spheres
 m_stencilTestID
@@ -6458,6 +6670,7 @@ m_vecWarpMin
 m_vertexBuffers
 m_walkStepLeft
 m_walkStepRight
+magnitudeSqr
 maintain count scale control point
 maintain count scale control point field
 maintain existing hitbox
@@ -6467,6 +6680,7 @@ material
 material override
 materials/dev/roomwalls_white.vmat
 materials/dev/spritecard.vmat
+materials/dev/spritecard_lighten.vmat
 materials/dev/spritecard_mod2x.vmat
 materials/dev/spritecard_nonzbuffered.vmat
 materials/dev/spritecard_nonzbuffered_mod2x.vmat
@@ -6492,9 +6706,8 @@ max length
 max particles
 max projection depth
 max row/particle index to affect
+max size
 max trace length
-maxLen > 0
-maxLen >= sizeof( *pDest )
 max_particles
 maximum
 maximum distance
@@ -6503,6 +6716,7 @@ maximum distance middle
 maximum draw distance
 maximum emission per frame
 maximum inherited velocity
+maximum length
 maximum number of quads per render segment
 maximum points to cache
 maximum radius for created lights
@@ -6529,12 +6743,14 @@ min initial speed
 min length
 min projection depth
 min row/particle index to affect
+min size
 minimum
 minimum CPU level
 minimum GPU level
 minimum alpha
 minimum distance
 minimum free particles to aggregate
+minimum length
 minimum radius
 minimum radius for created lights
 minimum rendered frames
@@ -6565,10 +6781,11 @@ nAlignment >= 0 && nAlignment <= UINT16_MAX
 nAttrIdx < MAX_SOA_FIELDS
 nAttribute < MAX_PARTICLE_ATTRIBUTES
 nAttribute >= 0
-nAttributeIdx < MAX_SOA_FIELDS
+nAxis >= X_AXIS && nAxis <= Z_AXIS
 nCPIndex != INVALID_CONTROL_POINT_INDEX
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
+nClassBehavior == KV3TRANSFER_CLASS_UNIMPLEMENTED
 nControlPoint < MAX_PARTICLE_CONTROL_POINTS
 nControlPoint <= GetHighestControlPoint()
 nControlPoint <= m_nHighestControlPointReadByOperator
@@ -6602,16 +6819,21 @@ nMaxIndexCount > 0
 nMaxVertexCount > 0
 nNewCount <= m_nActiveParticles
 nNewParticles >= 0
+nParent == nTopParent
+nParentBoneIndex >= 0
 nParticleAttribute >= 0 && nParticleAttribute < ARRAYSIZE(m_ParticleAttributeToContainerAttribute)
+nParticleCount % ( pParticles->m_nParticleGroupSize ) == 0
 nParticleCount == nGridRows * nGridCols
 nParticleNumber < m_nAllocatedParticles
 nPidx < m_nActiveParticles + 4
 nResourceType != RESOURCE_TYPE_NONE
-nRodVidx == 0 ? ( rod.nNode[ 0 ] == v0 && rod.nNode[ 1 ] == v1 ) : ( rod.nNode[ 0 ] == v1 && rod.nNode[ 1 ] == v0 )
+nResourceType == DeduceResourceTypeFromResourceName( pReferencedResourceName )
 nRopeRunningIndex == m_nRopeIndexCount
 nSequencesPerParticle != -1
 nSize != 0
 nStaticNodes <= nLastStaticNodes
+nSubtreeTipBone >= 0 && nSubtreeTipBone < nBoneCount
+nTargets > 1
 nTraversalOffset == 0
 nU < m_nNumCols
 nV < m_nNumCols
@@ -6619,10 +6841,7 @@ nV == 0
 nVertexCount >= 0
 nVertexCount >= 2
 nVertexCount >= 3
-nX < m_nColumns
-nY < m_nRows
-nZ < m_nSlices
-nffffff.
+name, total time, max time, avg sim time, total frames, max particles used, allocated particles, total render time, max render time, avg render time, number of intersection tests, number of actual traces
 noise amount 0
 noise amount 1
 noise amount 2
@@ -6652,6 +6871,7 @@ num_to_emit
 num_to_emit_minimum
 number of columns in grid
 number of rows in grid
+numframes,%double
 oX fA
 object local space axis 0/1
 offset
@@ -6674,6 +6894,9 @@ offset position
 offset proportional to radius 0/1
 offset propotional to radius
 offset rotation
+ol3 float
+ol4 float
+ol> float
 only active within input range
 only active within specified difference
 only active within specified distance
@@ -6703,6 +6926,8 @@ operator time offset seed
 operator time scale max
 operator time scale min
 operator time scale seed
+operators
+opname, total time, max time, average time, total frames
 optimize for rope and cloth simulation
 orient model ... to normal
 orientation control point
@@ -6750,12 +6975,11 @@ override max velocity from this CP
 p	9fD
 p Hc{ 1
 p(?!@V>
-p(p(`
 p(p8p8SAp
 p,Hc{,1
 p.IsValid()
 p0 = %float %float %float , %float %float %float, %float %float %float, %float %float %float
-p00@@
+p0`tB`.Ap
 p1 = %float %float %float , %float %float %float, %float %float %float, %float %float %float
 p4Hc{41
 p8p8SAp
@@ -6765,9 +6989,9 @@ p8p8UBRBRBSBp
 p8p8UBRBRBTAp
 p8p8p
 p8p8p0`
+pAnimData != NULL
 pAtomicType
 pBlob
-pBlockAllocator != NULL
 pCallback == NULL
 pChild[ 0 ]->m_nPriorityIndex == 0
 pContext->GetBlockAllocator() != NULL
@@ -6788,6 +7012,7 @@ pInitialMem
 pKV3DataBlock != NULL
 pKillList && ( nNumParticlesToKill > 0 )
 pLoadFromValue != NULL
+pMemberName && pMemberName[0] != '\0'
 pName
 pNewRef != NULL
 pNewRef->GetReadInitialAttributes() == 0
@@ -6801,38 +7026,37 @@ pParticleCollection->PrivateDef() != NULL
 pParticleCollection->m_hDef != PARTICLE_SYSTEM_HANDLE_INVALID
 pParticles->GetFloatAttributePtrForWrite( m_nAttributeToWrite, 0 )
 pParticles->GetPrevAttributeMemory()
+pPolymorphicClassName && pPolymorphicClassName[0] != '\0'
 pPool->m_SpaceUsed < 0xFFFF
 pPrevClusterInFreeList != NULL
 pQuaternions
-pReferencedResourceName != NULL
-pReferencedResourceName == NULL
 pResourceLoadInterface != NULL
 pResourceSaveInterface != NULL
 pResult->State() == VISIT_INFO_STATE_COMPLETE
 pSchemaSystem != NULL
-pSearch
 pTempLoadedData
 pTempLoadedData == pTempBuffer
 pToken
-pTracking->bAlive != bAlive
 pUnpack->m_nBitOffset + pUnpack->m_nSize <= 32
 pUnpack->m_nBitOffset + pUnpack->m_nSize <= 8*sizeof(T)
 pUnpack->m_nSize <= 32
 pUnpack->m_nSize <= 8*sizeof(T)
 pUnpack->m_nSize > 1
+pUtlSymbolLargeInterface != NULL
 pXRERA
 pXRERAp
 pXRERAp0p0p
 pXRESAp
 pXRESC
 pXRESF
+pXRESFp0p
 pXRESGp8p
 pXRETBRAp
 pXREUBRBTBRBTBRBTAp
 pXREVBRBRBTAp
 pXp8p
 pXu*H
-pXumH
+pXulH
 pXurH
 p[A^]
 p\$ 9
@@ -6845,6 +7069,7 @@ particle increment amount
 particle number to read
 particleSystemDefinitions
 particle_attribute_to_container_attribute
+particle_profile.csv
 particle_snapshot
 particle_system
 particlefield
@@ -6857,7 +7082,14 @@ particles
 particles to map from start to end
 particles/error/error.vpcf
 particles/particlemanifest.vrman
+particles_end_profile
+particles_multiplier
+particles_skip_one_quarter
+particles_start_profile
 particlesystemmgr
+path points
+peak strength
+peak strength field override
 per particle
 per particle spatial offset
 per particle world collision tests
@@ -6879,6 +7111,7 @@ pl< 9
 plane normal
 plane point
 play end cap effect
+point list
 point offset
 pos.IsValid()
 position
@@ -6911,7 +7144,8 @@ quaternion_array
 queue2.Count() == 1
 r5fffff.
 r7fff.
-rGD;long double
+rDffff.
+rGD;u
 r_draw_particle_children_with_parents
 r_drawparticles
 r_freezeparticles
@@ -6992,12 +7226,14 @@ render_rope
 render_screen_velocity_rotate
 render_sprite_trail
 render_sprites
+renderers
 reset animation frame on stop
 resourcesystem
 rest length U
 rest length V
 restart behavior (0 = bounce, 1 = loop )
 reverse ...-buffer test
+reverse order
 reverse point order
 reverse warp (0/1)
 rigid lock
@@ -7041,6 +7277,7 @@ s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 save offset
 scalar field
+scalar to use for texture coordinate
 scale
 scale CP (cube width/cutoff/render = long long/unsigned long long/...)
 scale CP (distance/speed/local speed)
@@ -7072,6 +7309,7 @@ scale position
 scale radius
 scale radius from initial value
 scale size multiplier from CP
+scale value to map attribute to texture coordinate
 scale velocity
 scale_bias
 scrapeRoughThreshold
@@ -7101,9 +7339,8 @@ set number of children based on particle count
 set orientation
 set orientation in world space
 set positions in world space
-sfff.
+shake duration after end
 short!fff.
-short(E;$
 shuffle
 size < 1024 * 1024
 size >= 0
@@ -7126,6 +7363,7 @@ soundpicker
 source CP
 source alpha value to map to alpha of 1
 source alpha value to map to alpha of zero
+space points along path
 spatial coordinate offset
 spatial noise coordinate scale
 specular warp texture
@@ -7156,7 +7394,6 @@ spritecardparticlesnormal
 spritecardparticlestrail
 spritecardparticlestrailwithnormal
 spritecardtessvb
-stIc[xH
 start age maximum
 start age minimum
 start alpha
@@ -7195,6 +7432,7 @@ static CSchemaEnumBindingBase *CSchemaEnumBinding<ModelBoneFlexComponent_t>::Get
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::Get() [T = ModelSkeletonData_t::BoneFlags_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ParticleColorBlendMode_t>::Get() [T = ParticleColorBlendMode_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ParticleOrientationChoiceList_t>::Get() [T = ParticleOrientationChoiceList_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<ParticleTopology_t>::Get() [T = ParticleTopology_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::Get() [T = PermModelInfo_t::FlagEnum]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderSkeletonData_t::FlagEnum_t>::Get() [T = RenderSkeletonData_t::FlagEnum_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<SequenceCombineMode_t>::Get() [T = SequenceCombineMode_t]
@@ -7204,12 +7442,14 @@ static CSchemaEnumBindingBase *CSchemaEnumBinding<VPhysXConstraintParams_t::Enum
 static CSchemaEnumBindingBase *CSchemaEnumBinding<VPhysXDiskShapeHeader_t::VersinEnum_t>::Get() [T = VPhysXDiskShapeHeader_t::VersinEnum_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<multiplayerBreak_t>::Get() [T = multiplayerBreak_t]
 static FeNodeBase_t CFeModelBuilder::BuildNodeBasisFast(const CUtlVectorAligned<CFeModelBuilder::BuildNode_t> &, uint, const CUtlSortVector<int> &)
+static float CTiltTwistConstraint::ComputeTwistAroundAxisInRadians(matrix3x4a_t &, int, float)
 static size_t CSOAContainer::ElementSizeInBytes(EAttributeDataType)
 static void AttachmentData_t::Schema_VerifyBindingIsRegistered()
 static void BaseConstraint_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverList_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
+static void CAimConstraint::Schema_VerifyBindingIsRegistered()
 static void CAttachment::Schema_VerifyBindingIsRegistered()
 static void CBaseConstraint::Schema_VerifyBindingIsRegistered()
 static void CBuilderModelInfo::Schema_VerifyBindingIsRegistered()
@@ -7217,25 +7457,30 @@ static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigTy
 static void CHitBox::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSet::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSetList::Schema_VerifyBindingIsRegistered()
-static void CKV3TransferValHelper<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceArray<T> &) [T = CResourceArray<CResourcePointer<CParticleOperatorInstance> >, U = CResourceArray<CResourcePointer<CParticleOperatorInstance> >]
-static void CKV3TransferValHelper<CResourceArray<ModelReference_t> >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceArray<T> &) [T = CResourceArray<ModelReference_t>, U = CResourceArray<ModelReference_t>]
-static void CKV3TransferValHelper<CResourceArray<ParticleChildrenInfo_t> >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceArray<T> &) [T = CResourceArray<ParticleChildrenInfo_t>, U = CResourceArray<ParticleChildrenInfo_t>]
+static void CKV3TransferValHelper<CResourceArray<PointDefinitionWithTimeValues_t> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CResourceArray<T> &) [T = CResourceArray<PointDefinitionWithTimeValues_t>, U = CResourceArray<PointDefinitionWithTimeValues_t>]
+static void CKV3TransferValHelper<CResourceArray<PointDefinition_t> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CResourceArray<T> &) [T = CResourceArray<PointDefinition_t>, U = CResourceArray<PointDefinition_t>]
 static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >::LoadDefault(CKV3TransferLoadContext *, const char *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >]
-static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >]
+static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >]
 static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> >]
 static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >::LoadDefault(CKV3TransferLoadContext *, const char *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >]
-static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >]
+static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >]
 static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> >]
 static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >::LoadDefault(CKV3TransferLoadContext *, const char *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >]
-static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >]
+static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >]
 static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> >]
-static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> > >::LoadDefault(CKV3TransferLoadContext *, const char *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >]
-static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> > >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >]
-static void CKV3TransferValHelper<CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> > >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CResourceExtReference<TResourceHandleType> &) [T = CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >, U = CResourceExtReference<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition> >]
-static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIMaterial2> >::LoadValue(CKV3TransferLoadContext *, KeyValues3 *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIMaterial2>, U = CStrongHandle<InfoForResourceTypeIMaterial2>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeCModel> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeCModel>, U = CStrongHandle<InfoForResourceTypeCModel>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeCModel> >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeCModel>, U = CStrongHandle<InfoForResourceTypeCModel>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIMaterial2> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIMaterial2>, U = CStrongHandle<InfoForResourceTypeIMaterial2>]
 static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIMaterial2> >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIMaterial2>, U = CStrongHandle<InfoForResourceTypeIMaterial2>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> >::LoadDefault(CKV3TransferLoadContext *, const char *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>, U = CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>, U = CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>, U = CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>]
+static void CKV3TransferValHelper<CUtlSymbolLarge>::LoadDefault(CKV3TransferLoadContext *, const char *, CUtlSymbolLarge &) [U = CUtlSymbolLarge]
+static void CKV3TransferValHelper<CUtlSymbolLarge>::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CUtlSymbolLarge &) [U = CUtlSymbolLarge]
 static void CKV3TransferValHelper<__attribute__((__vector_size__(4 * sizeof(float)))) float>::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const fltx4 &) [U = __attribute__((__vector_size__(4 * sizeof(float)))) float]
 static void CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered()
+static void CMorphConstraint::Schema_VerifyBindingIsRegistered()
+static void COrientConstraint::Schema_VerifyBindingIsRegistered()
 static void CParticleCollection::EmitAndInit(CParticleCollection *, bool)
 static void CParticleOperatorInstance::Schema_VerifyBindingIsRegistered()
 static void CParticleSystemDefinition::Schema_VerifyBindingIsRegistered()
@@ -7246,9 +7491,13 @@ static void CPhysSurfacePropertiesAudio::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesGame::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesPhysics::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesSoundNames::Schema_VerifyBindingIsRegistered()
+static void CPointConstraint::Schema_VerifyBindingIsRegistered()
 static void CRenderMesh::Schema_VerifyBindingIsRegistered()
 static void CRenderSkeleton::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectData::Schema_VerifyBindingIsRegistered()
+static void CStudioConstraintBones::ComputeTwistConstraint(matrix3x4a_t *, const CModel *, const CTwistConstraint *)
+static void CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
+static void CTwistConstraint::Schema_VerifyBindingIsRegistered()
 static void CVPhysXLevelData::Schema_VerifyBindingIsRegistered()
 static void CVPhysXMesh::Schema_VerifyBindingIsRegistered()
 static void CVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
@@ -7285,12 +7534,14 @@ static void C_INIT_InitialSequenceFromModel::Schema_VerifyBindingIsRegistered()
 static void C_INIT_InitialVelocityFromHitbox::Schema_VerifyBindingIsRegistered()
 static void C_INIT_InitialVelocityNoise::Schema_VerifyBindingIsRegistered()
 static void C_INIT_LifespanFromVelocity::Schema_VerifyBindingIsRegistered()
+static void C_INIT_MakeShapes::Schema_VerifyBindingIsRegistered()
 static void C_INIT_ModelCull::Schema_VerifyBindingIsRegistered()
 static void C_INIT_MoveBetweenPoints::Schema_VerifyBindingIsRegistered()
 static void C_INIT_NormalAlignToCP::Schema_VerifyBindingIsRegistered()
 static void C_INIT_NormalOffset::Schema_VerifyBindingIsRegistered()
 static void C_INIT_OffsetVectorToVector::Schema_VerifyBindingIsRegistered()
 static void C_INIT_Orient2DRelToCP::Schema_VerifyBindingIsRegistered()
+static void C_INIT_PointList::Schema_VerifyBindingIsRegistered()
 static void C_INIT_PositionOffset::Schema_VerifyBindingIsRegistered()
 static void C_INIT_PositionOffsetToCP::Schema_VerifyBindingIsRegistered()
 static void C_INIT_PositionPlaceOnGround::Schema_VerifyBindingIsRegistered()
@@ -7348,6 +7599,8 @@ static void C_OP_ColorInterpolate::Schema_VerifyBindingIsRegistered()
 static void C_OP_ConstantForce::Schema_VerifyBindingIsRegistered()
 static void C_OP_ConstrainDistance::Schema_VerifyBindingIsRegistered()
 static void C_OP_ConstrainDistanceToPath::Schema_VerifyBindingIsRegistered()
+static void C_OP_ConstrainDistanceToUserSpecifiedPath::Schema_VerifyBindingIsRegistered()
+static void C_OP_ConstrainLineLength::Schema_VerifyBindingIsRegistered()
 static void C_OP_ContinuousEmitter::Schema_VerifyBindingIsRegistered()
 static void C_OP_ControlpointLight::Schema_VerifyBindingIsRegistered()
 static void C_OP_Cull::Schema_VerifyBindingIsRegistered()
@@ -7382,6 +7635,7 @@ static void C_OP_LerpVector::Schema_VerifyBindingIsRegistered()
 static void C_OP_LocalAccelerationForce::Schema_VerifyBindingIsRegistered()
 static void C_OP_LockPoints::Schema_VerifyBindingIsRegistered()
 static void C_OP_LockToBone::Schema_VerifyBindingIsRegistered()
+static void C_OP_LockToPointList::Schema_VerifyBindingIsRegistered()
 static void C_OP_LockToSavedSequentialPath::Schema_VerifyBindingIsRegistered()
 static void C_OP_MaintainEmitter::Schema_VerifyBindingIsRegistered()
 static void C_OP_MaintainSequentialPath::Schema_VerifyBindingIsRegistered()
@@ -7449,6 +7703,7 @@ static void C_OP_RenderBlobs::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderCables::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderClothForce::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderDeferredLight::Schema_VerifyBindingIsRegistered()
+static void C_OP_RenderFlattenGrass::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderFogSprites::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderGrid::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderLights::Schema_VerifyBindingIsRegistered()
@@ -7462,8 +7717,10 @@ static void C_OP_RenderSound::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderSprites::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderStatusEffect::Schema_VerifyBindingIsRegistered()
 static void C_OP_RenderTrails::Schema_VerifyBindingIsRegistered()
+static void C_OP_RenderTreeShake::Schema_VerifyBindingIsRegistered()
 static void C_OP_RestartAfterDuration::Schema_VerifyBindingIsRegistered()
 static void C_OP_RotateVector::Schema_VerifyBindingIsRegistered()
+static void C_OP_ScreenForceFromPlayerView::Schema_VerifyBindingIsRegistered()
 static void C_OP_SequenceFromModel::Schema_VerifyBindingIsRegistered()
 static void C_OP_SetCPOrientationToDirection::Schema_VerifyBindingIsRegistered()
 static void C_OP_SetCPOrientationToGroundNormal::Schema_VerifyBindingIsRegistered()
@@ -7526,6 +7783,8 @@ static void PermModelExtPart_t::Schema_VerifyBindingIsRegistered()
 static void PermModelInfo_t::Schema_VerifyBindingIsRegistered()
 static void PermRenderMeshData_t::Schema_VerifyBindingIsRegistered()
 static void PhysSoftbodyDesc_t::Schema_VerifyBindingIsRegistered()
+static void PointDefinitionWithTimeValues_t::Schema_VerifyBindingIsRegistered()
+static void PointDefinition_t::Schema_VerifyBindingIsRegistered()
 static void RenderBufferBinding_t::Schema_VerifyBindingIsRegistered()
 static void RenderSkeletonBone_t::Schema_VerifyBindingIsRegistered()
 static void RenderSkeletonData_t::Schema_VerifyBindingIsRegistered()
@@ -7550,6 +7809,7 @@ std::terminate()
 stencil test ID
 stencil write ID
 strain
+strength field override
 string
 string_array
 strnlen
@@ -7560,20 +7820,18 @@ surfacePropertyName
 t$ A)
 t$ A+t$
 t$8[A\A^A_]
-t$H9[8u
-t$HIc
-t.Mc|$lA9^long long
+t$xIc
+t.Mc|$tA9^long long
 t.ff.
-t1ffff.
-t4Mc|$hA9^long long
+t.ffffff.
+t4Mc|$pA9^long long
 t7HcE
 t8(E9
 t80E1
-tCffff.
-tDLcolE9~long long
-tDLco|D9cx
-tFLc{lE9l$xM
-tHLcxlA9]long long
+tDLcotE9~long long
+tFLc{tE9l$xM
+tHLcxtA9]long long
+tHfff.
 tIffff.
 tLMc~
 tLfff.
@@ -7581,7 +7839,6 @@ tOffffff.
 tRH9X
 tangent
 target layer ID for rendering
-tbA9\long long
 tes_index_buffer
 tesselation resolution scale factor
 test direction
@@ -7594,7 +7851,7 @@ texture V Scroll Rate
 texture V World Size
 texture scroll rate
 tfE9l$x
-tgLce
+tfff.
 thickness
 third control point location
 third control point number
@@ -7623,7 +7880,9 @@ tint_perc
 tlE9zx
 tlIcG
 tlfff.
+toA9\long long
 tqJ94
+tqMcetE9px
 trace accuracy tolerance
 trace collision group
 trace direction override
@@ -7638,6 +7897,7 @@ treat distance between points as radius
 treat offset as scalar of particle radius
 treat offset as scale of total distance
 turbulent force
+twHc]
 twist around axis
 twist axis
 type != MATERIAL2_HETEROGENOUS
@@ -7647,24 +7907,25 @@ typeinfo for std::bad_alloc
 u"... H
 u#...!F
 u#...!H
-u#...!L
 u$z"A
 u$z"H
+u$z"L
+u&z$M
 u'...%H
-u)...'M
 u*...(H
 u-...+A
+u.z,H
+u/...-H
 u0ff.
 u0z.E9
 u0z.fffff.
 u2z0H
-u4z2H
-u5z3H
 u5z3I
 u6z4f
 u7z5f
-uAz?H
+u=ffff.
 uGetResourceManifest
+uKzIH
 uiKey != UnusedElementKey()
 uint( unsigned int ) < ( elem.nStaticNodes == 3 && elem.nNode[2] == elem.nNode[3] ? 4 : elem.nStaticNodes ) ? ( refNodeIndex < m_nStaticNodes ) : ( refNodeIndex >= m_nStaticNodes )
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
@@ -7674,12 +7935,10 @@ uint8
 uint8_array
 uniform speed
 unknown
-unsigned __int128-#L"
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
 unsigned charcomplex ;C`|
 unsigned charcomplex [A^]
-unsigned charimaginary ;Glu
 unsigned short	A91
 unsigned short	[A^]
 unsigned short <= 1.0f
@@ -7691,16 +7950,14 @@ unsigned short%fffff.
 unsigned short&H9[8tUH
 unsigned short)A#F
 unsigned short)A#G
-unsigned short*ff.
-unsigned short+ff.
 unsigned short,A#D$
 unsigned short,ffff.
 unsigned short<fff.
 unsigned short@long long [9]
+unsigned short[ff.
 unsigned short\E9l$x
 unsigned short]E9l$x
 unsigned short]ffff.
-unsigned short^fffff.
 unsigned short`A9_
 unused
 unusedBoneSet.Count() == nOldBoneListCount
@@ -7729,10 +7986,10 @@ use sequential CP pairs between start and end point
 use skinning instead of hitboxes
 use soft edges for distance alpha
 use velocity for test direction
-uuA+^
 v0[A^]
 vP[A^]
 vScale.IsValid()
+vX[A^]
 value to lerp to
 values.Count() == 1
 vecScale[m_nScaleControlPointField] >= 0.0f
@@ -7755,7 +8012,6 @@ vfffff.
 view model effect
 virtual CParticleCollection::~CParticleCollection()
 virtual CParticleOperatorInstance *CChildOperatorDefinition::CreateInstance(const DmObjectId_t &) const
-virtual CSceneParticleObject::~CSceneParticleObject()
 virtual EAttributeDataType CParticleSystemMgr::GetParticleAttributeDataType(int) const
 virtual FourVectors *CParticleSnapshot::ElementPointer4V(int, int, int, int) const
 virtual IParticleCollection *CParticleSystemMgr::CreateParticleCollection(HParticleSystemDefinition, void *, IParticleSystemQuery *, bool, float, int)
@@ -7764,6 +8020,7 @@ virtual InitReturnVal_t CParticleSystemMgr::Init()
 virtual ResourceHandle_t CKV3Transfer_ResourceLoadInterface::FindExistingResource(ResourceType_t, const char *, bool)
 virtual bool CParticleSnapshot::Init(int, int, int, const AttributeMapVector &)
 virtual bool CParticleSnapshot::Unserialize(const char *)
+virtual bool IResourceTypeManager::IsStreamingDataAlreadyLoaded(ResourceHandle_t)
 virtual const CModelHitBoxesInfo &CParticleCollection::ControlPointHitBox(int) const
 virtual const char *CChildOperatorDefinition::GetName() const
 virtual const char *CParticleSystemMgr::GetParticleAttributeName(int) const
@@ -7777,8 +8034,6 @@ virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::Allocate() 
 virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<AttachmentData_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Allocate() [T = CResourceArray<BaseConstraint_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Allocate() [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::AllocateAndCopy(const void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Allocate() [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -7791,8 +8046,6 @@ virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandl
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
-virtual void *CAtomicManipulator<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >::Allocate() [T = CResourceArray<CResourcePointer<CParticleOperatorInstance> >]
-virtual void *CAtomicManipulator<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourcePointer<CParticleOperatorInstance> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::Allocate() [T = CResourceArray<CResourceString>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceString>]
 virtual void *CAtomicManipulator<CResourceArray<CTransform> >::Allocate() [T = CResourceArray<CTransform>]
@@ -7815,14 +8068,14 @@ virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >:
 virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ModelBoneFlexDriverControl_t>]
 virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::Allocate() [T = CResourceArray<ModelBoneFlexDriver_t>]
 virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ModelBoneFlexDriver_t>]
-virtual void *CAtomicManipulator<CResourceArray<ModelReference_t> >::Allocate() [T = CResourceArray<ModelReference_t>]
-virtual void *CAtomicManipulator<CResourceArray<ModelReference_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ModelReference_t>]
 virtual void *CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::Allocate() [T = CResourceArray<OnDiskBufferData_t>]
 virtual void *CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<OnDiskBufferData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ParticleChildrenInfo_t> >::Allocate() [T = CResourceArray<ParticleChildrenInfo_t>]
-virtual void *CAtomicManipulator<CResourceArray<ParticleChildrenInfo_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ParticleChildrenInfo_t>]
 virtual void *CAtomicManipulator<CResourceArray<PermModelExtPart_t> >::Allocate() [T = CResourceArray<PermModelExtPart_t>]
 virtual void *CAtomicManipulator<CResourceArray<PermModelExtPart_t> >::AllocateAndCopy(const void *) [T = CResourceArray<PermModelExtPart_t>]
+virtual void *CAtomicManipulator<CResourceArray<PointDefinitionWithTimeValues_t> >::Allocate() [T = CResourceArray<PointDefinitionWithTimeValues_t>]
+virtual void *CAtomicManipulator<CResourceArray<PointDefinitionWithTimeValues_t> >::AllocateAndCopy(const void *) [T = CResourceArray<PointDefinitionWithTimeValues_t>]
+virtual void *CAtomicManipulator<CResourceArray<PointDefinition_t> >::Allocate() [T = CResourceArray<PointDefinition_t>]
+virtual void *CAtomicManipulator<CResourceArray<PointDefinition_t> >::AllocateAndCopy(const void *) [T = CResourceArray<PointDefinition_t>]
 virtual void *CAtomicManipulator<CResourceArray<Quaternion> >::Allocate() [T = CResourceArray<Quaternion>]
 virtual void *CAtomicManipulator<CResourceArray<Quaternion> >::AllocateAndCopy(const void *) [T = CResourceArray<Quaternion>]
 virtual void *CAtomicManipulator<CResourceArray<RenderBufferBinding_t> >::Allocate() [T = CResourceArray<RenderBufferBinding_t>]
@@ -7871,14 +8124,11 @@ virtual void *CAtomicManipulator<CResourceArray<unsigned long long> >::Allocate(
 virtual void *CAtomicManipulator<CResourceArray<unsigned long long> >::AllocateAndCopy(const void *) [T = CResourceArray<unsigned long long>]
 virtual void *CAtomicManipulator<CResourceArray<unsigned short> >::Allocate() [T = CResourceArray<unsigned short>]
 virtual void *CAtomicManipulator<CResourceArray<unsigned short> >::AllocateAndCopy(const void *) [T = CResourceArray<unsigned short>]
-virtual void *CParticleTypeManager::HandleResourceDataBlockingLoad(const char *, void *, IRD_BlockingLoadResourceFileDataUtils *, const ResourceFileHeader_t **, bool *)
 virtual void *CResourceAllocatorUtils::AssumeControl(const void *)
 virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Copy(void *, const void *) [T = CResourceArray<AttachmentData_t>]
 virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Deallocate(void *) [T = CResourceArray<AttachmentData_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Copy(void *, const void *) [T = CResourceArray<BaseConstraint_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Deallocate(void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Copy(void *, const void *) [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Deallocate(void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Copy(void *, const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Deallocate(void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -7891,8 +8141,6 @@ virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
-virtual void CAtomicManipulator<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >::Copy(void *, const void *) [T = CResourceArray<CResourcePointer<CParticleOperatorInstance> >]
-virtual void CAtomicManipulator<CResourceArray<CResourcePointer<CParticleOperatorInstance> > >::Deallocate(void *) [T = CResourceArray<CResourcePointer<CParticleOperatorInstance> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Copy(void *, const void *) [T = CResourceArray<CResourceString>]
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Deallocate(void *) [T = CResourceArray<CResourceString>]
 virtual void CAtomicManipulator<CResourceArray<CTransform> >::Copy(void *, const void *) [T = CResourceArray<CTransform>]
@@ -7915,14 +8163,14 @@ virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >::
 virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >::Deallocate(void *) [T = CResourceArray<ModelBoneFlexDriverControl_t>]
 virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::Copy(void *, const void *) [T = CResourceArray<ModelBoneFlexDriver_t>]
 virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::Deallocate(void *) [T = CResourceArray<ModelBoneFlexDriver_t>]
-virtual void CAtomicManipulator<CResourceArray<ModelReference_t> >::Copy(void *, const void *) [T = CResourceArray<ModelReference_t>]
-virtual void CAtomicManipulator<CResourceArray<ModelReference_t> >::Deallocate(void *) [T = CResourceArray<ModelReference_t>]
 virtual void CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::Copy(void *, const void *) [T = CResourceArray<OnDiskBufferData_t>]
 virtual void CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::Deallocate(void *) [T = CResourceArray<OnDiskBufferData_t>]
-virtual void CAtomicManipulator<CResourceArray<ParticleChildrenInfo_t> >::Copy(void *, const void *) [T = CResourceArray<ParticleChildrenInfo_t>]
-virtual void CAtomicManipulator<CResourceArray<ParticleChildrenInfo_t> >::Deallocate(void *) [T = CResourceArray<ParticleChildrenInfo_t>]
 virtual void CAtomicManipulator<CResourceArray<PermModelExtPart_t> >::Copy(void *, const void *) [T = CResourceArray<PermModelExtPart_t>]
 virtual void CAtomicManipulator<CResourceArray<PermModelExtPart_t> >::Deallocate(void *) [T = CResourceArray<PermModelExtPart_t>]
+virtual void CAtomicManipulator<CResourceArray<PointDefinitionWithTimeValues_t> >::Copy(void *, const void *) [T = CResourceArray<PointDefinitionWithTimeValues_t>]
+virtual void CAtomicManipulator<CResourceArray<PointDefinitionWithTimeValues_t> >::Deallocate(void *) [T = CResourceArray<PointDefinitionWithTimeValues_t>]
+virtual void CAtomicManipulator<CResourceArray<PointDefinition_t> >::Copy(void *, const void *) [T = CResourceArray<PointDefinition_t>]
+virtual void CAtomicManipulator<CResourceArray<PointDefinition_t> >::Deallocate(void *) [T = CResourceArray<PointDefinition_t>]
 virtual void CAtomicManipulator<CResourceArray<Quaternion> >::Copy(void *, const void *) [T = CResourceArray<Quaternion>]
 virtual void CAtomicManipulator<CResourceArray<Quaternion> >::Deallocate(void *) [T = CResourceArray<Quaternion>]
 virtual void CAtomicManipulator<CResourceArray<RenderBufferBinding_t> >::Copy(void *, const void *) [T = CResourceArray<RenderBufferBinding_t>]
@@ -7973,29 +8221,34 @@ virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Copy(void *, c
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Deallocate(void *) [T = CResourceArray<unsigned short>]
 virtual void CChildOperatorDefinition::InstallDefinition(CParticleOperatorInstance *) const
 virtual void CExtrefTraversal::VisitRelevantField(void *, CSchemaType *, FieldIntrospectionHandle_t)
-virtual void CParticleCollection::GetControlPointAtTime(int, float, Vector *)
+virtual void CMorphConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
+virtual void CParticleCollection::GetControlPointAtTime(int, float, Vector *) const
 virtual void CParticleCollection::GetSecondarySceneObjects(CUtlVector<CSceneObject *> &)
 virtual void CParticleCollection::Restart(EParticleRestartMode_t)
 virtual void CParticleCollection::SetControlPointOrientation(int, const Vector &, const Vector &, const Vector &)
-virtual void CParticleCollection::SetRenderingEnabled(bool)
 virtual void CParticleCollection::SleepingSimulate(float)
 virtual void CParticleOperatorInstance::GenerateVectorAttribute(CParticleCollection *, int, FourVectors *, void *) const
 virtual void CParticleOperatorInstance::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void CParticleSystemDefinition::CopyActiveControlPointFields(IControlPointEditorData *) const
 virtual void CParticleSystemMgr::SetLastSimulationDuration(float)
 virtual void CParticleSystemMgr::UnreferenceParticleSnapshot(IParticleSnapshot *)
-virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, bool, FieldIntrospectionHandle_t)
+virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, FieldIntrospectionHandle_t)
+virtual void CTiltTwistConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
+virtual void CTiltTwistConstraint::FillInPermData(BaseConstraint_t *, CResourceStream *) const
+virtual void CTiltTwistConstraint::InitFromPermData(const BaseConstraint_t *)
 virtual void C_INIT_CreateGrid::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_InitFromCPSnapshot::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_InitFromParentKilled::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_InitialRepulsionVelocity::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_LifespanFromVelocity::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
+virtual void C_INIT_MakeShapes::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_RandomSequence::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_RandomSequence::InitializeContextData(CParticleCollection *, void *) const
 virtual void C_INIT_SetHitboxToClosest::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_INIT_SetHitboxToModel::InitNewParticlesScalar(CParticleCollection *, int, int, int, void *) const
 virtual void C_OP_ContinuousEmitter::SkipToTime(float, CParticleCollection *, void *) const
 virtual void C_OP_InstantaneousEmitter::SkipToTime(float, CParticleCollection *, void *) const
+virtual void C_OP_NoiseEmitter::SkipToTime(float, CParticleCollection *, void *) const
 virtual void C_OP_RenderModels::PostSimulate(CParticleCollection *, void *) const
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
@@ -8037,7 +8290,7 @@ void *CParticleCollection::GetPointerAttributeValue(int, int) const
 void *CUtlMemoryPoolBase::Alloc()
 void *DMXAlloc(uint32)
 void BasisToQuaternion(const Vector &, const Vector &, const Vector &, Quaternion &)
-void BubbleSort(T *, int, const LessThan &) [T = unsigned int, LessThan = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/femodelbuilder.cpp:841:38)]
+void BubbleSort(T *, int, const LessThan &) [T = unsigned int, LessThan = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/femodelbuilder.cpp:934:38)]
 void C4VAttributeIterator::Init(int, const CParticleCollection *, int)
 void C4VInterpolatedAttributeIterator::Init(int, CParticleCollection *)
 void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
@@ -8079,7 +8332,7 @@ void CFeModelBuilder::BuildAxialEdges()
 void CFeModelBuilder::BuildFeEdgeDesc()
 void CFeModelBuilder::BuildInvMassesAndSortNodes()
 void CFeModelBuilder::BuildQuads(CUtlVector<FeQuad_t> &, bool)
-void CFeModelBuilder::BuildRod(float, uint, uint, uint, uint, uint, uint, CUtlHashtable<uint32, uint32> &)
+void CFeModelBuilder::BuildRod(float, uint, uint, uint, uint, uint, uint, EdgeHashTable_t &)
 void CFeModelBuilder::BuildTree()
 void CFeModelBuilder::ConvertCtrlToNode(int &)
 void CFeModelBuilder::ConvertCtrlToNode(uint16 &)
@@ -8093,8 +8346,8 @@ void CIndexDataBase<unsigned short>::AdvanceIndexCount(int) [T = unsigned short]
 void CIndexDataBase<unsigned short>::Index(T) [T = unsigned short]
 void CIndexDataBase<unsigned short>::Index2(uint16, uint16) [T = unsigned short]
 void CKV3TransferContextBase::AddInterfaceVoid(KV3Transfer_InterfaceId_t, void *)
-void CKV3TransferLoadContext::LoadOwningPointer(KeyValues3 *, T *&) [T = CParticleOperatorInstance]
-void CKV3TransferLoadContext::LoadOwningPointer(KeyValues3 *, T *&) [T = IParticleSystemDefinition]
+void CKV3TransferLoadContext::LoadOwningPointer(T *&, const KeyValues3 *) [T = CParticleOperatorInstance]
+void CKV3TransferLoadContext::LoadOwningPointer(T *&, const KeyValues3 *) [T = IParticleSystemDefinition]
 void CKV3TransferLoadContext::SetExternalBlockAllocation(void *, uint)
 void CKeyValues3Cluster::Free(KeyValues3 *)
 void CKeyValues3Context::FreeKV_Internal(KeyValues3 *)
@@ -8138,13 +8391,12 @@ void CParticleCollection::UnlinkFromDefList()
 void CParticleObjectDesc::AddCollectionPrimitive(CSceneParticleObject *, CParticleCollection *, ISceneLayer *, int &, uint32, float, CMeshPrimitiveOutputBuffer &)
 void CParticleSnapshot::PurgeUnusedBoneNames()
 void CParticleSystemDefinition::AllocateControlPoint(ControlPointReference_t *)
-void CParticleSystemDefinition::InitOperatorsFromResource(ParticleFunctionType_t, CResourceArray<CResourcePointer<CParticleOperatorInstance> > &)
+void CParticleSystemDefinition::InitOperatorsFromResource(ParticleFunctionType_t, ParticleOperatorVector_t &)
 void CParticleSystemDefinition::RemoveCircularChildReferences_R(CUtlVectorFixedGrowable<CParticleSystemDefinition *, 8> &)
 void CParticleSystemDefinition::UnlinkAllCollections()
 void CParticleSystemMgr::AttachKillList(CParticleCollection *)
 void CParticleSystemMgr::DetachKillList(CParticleCollection *)
 void CParticleSystemMgr::InitAttributeTable()
-void CParticleSystemMgr::TrackCollectionState(IParticleCollection *, bool)
 void CParticleTypeManager::Deallocate(void *, IResourceDeallocatorUtils *)
 void CResourceStream::Align(uint, int)
 void CResourceStream::EnsureAvailable(uint)
@@ -8157,6 +8409,7 @@ void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSche
 void CSchemaFieldIterator::Advance()
 void CSchemaFieldIterator::Reset()
 void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
+void CStrongHandle<InfoForResourceTypeCModel>::Shutdown() [TResourceInfoData = InfoForResourceTypeCModel]
 void CStrongHandle<InfoForResourceTypeCMorphSet>::Shutdown() [TResourceInfoData = InfoForResourceTypeCMorphSet]
 void CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown() [TResourceInfoData = InfoForResourceTypeCTextureBase]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
@@ -8178,8 +8431,6 @@ void CUtlPriorityQueue<CFeAgglomerator::CLink, CFeAgglomerator::LinkLessFunc_t, 
 void CUtlRBTree<CDmxSerializationDictionary::DmxElementInfo_t, int, bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CDmxSerializationDictionary::DmxElementInfo_t, I = int, L = bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), M = CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int>]
 void CUtlRBTree<CDmxSerializationDictionary::DmxElementInfo_t, int, bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int> >::RemoveAll() [T = CDmxSerializationDictionary::DmxElementInfo_t, I = int, L = bool (*)(const CDmxSerializationDictionary::DmxElementInfo_t &, const CDmxSerializationDictionary::DmxElementInfo_t &), M = CUtlMemory<UtlRBTreeNode_t<CDmxSerializationDictionary::DmxElementInfo_t, int>, int>]
 void CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, unsigned short, bool (*)(const CUtlString &, const CUtlString &)>::Node_t, unsigned short, CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, unsigned short, bool (*)(const CUtlString &, const CUtlString &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, unsigned short, bool (*)(const CUtlString &, const CUtlString &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, unsigned short, bool (*)(const CUtlString &, const CUtlString &)>::Node_t, I = unsigned short, L = CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, unsigned short, bool (*)(const CUtlString &, const CUtlString &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, unsigned short, bool (*)(const CUtlString &, const CUtlString &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int, CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, I = unsigned int, L = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int>]
-void CUtlRBTree<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int, CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int> >::RemoveAll() [T = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, I = unsigned int, L = CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<IParticleCollection *, CParticleSystemMgr::CollectionTracking_t *, unsigned int, bool (*)(IParticleCollection *const &, IParticleCollection *const &)>::Node_t, unsigned int>, unsigned int>]
 void CUtlRBTree<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
@@ -8204,12 +8455,13 @@ void CVertexDataBase<TrailVertexWithNormalPerParticleStream_t>::AdvanceVertex() 
 void CVertexDataBase<VertexColorUVPos_t>::AdvanceVertex() [T = VertexColorUVPos_t]
 void CVertexDataBase<VertexUVPosNormalAndTangent_t>::AdvanceVertexCount(int) [T = VertexUVPosNormalAndTangent_t]
 void CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>::InitUntyped(ResourceHandle_t) [T = InfoForResourceTypeIParticleSystemDefinition]
-void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *) const [VTXTYPE = TrailVertexPerParticleStream_t, bWriteNormals = false, bAlpha2 = false]
-void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *) const [VTXTYPE = TrailVertexPerParticleStream_t, bWriteNormals = false, bAlpha2 = true]
-void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *) const [VTXTYPE = TrailVertexWithNormalPerParticleStream_t, bWriteNormals = true, bAlpha2 = false]
-void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *) const [VTXTYPE = TrailVertexWithNormalPerParticleStream_t, bWriteNormals = true, bAlpha2 = true]
+void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *, SceneSystemPerFrameStats_t &) const [VTXTYPE = TrailVertexPerParticleStream_t, bWriteNormals = false, bAlpha2 = false]
+void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *, SceneSystemPerFrameStats_t &) const [VTXTYPE = TrailVertexPerParticleStream_t, bWriteNormals = false, bAlpha2 = true]
+void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *, SceneSystemPerFrameStats_t &) const [VTXTYPE = TrailVertexWithNormalPerParticleStream_t, bWriteNormals = true, bAlpha2 = false]
+void C_OP_RenderRopes::DrawRopes(IRenderContext *, CParticleCollection *, RenderRopeContext_t *, const CUtlStringToken &, int, float, CRenderAttributes &, const RsStencilStateOverride_t *, ISceneLayer *, SceneSystemPerFrameStats_t &) const [VTXTYPE = TrailVertexWithNormalPerParticleStream_t, bWriteNormals = true, bAlpha2 = true]
 void CallAssert0()
 void CallPostConnect()
+void ComputeSubtree(const Graph_t *, int, BitVec_t *) [Graph_t = ModelSkeletonData_t, BitVec_t = CVarBitVec]
 void ConVar_Register(int64, IConCommandBaseAccessor *)
 void ConVar_Unregister()
 void ConnectInterfaces(CreateInterfaceFn *, int)
@@ -8217,6 +8469,18 @@ void DisconnectInterfaces()
 void DisconnectTier2Libraries()
 void EndDMXContext(bool)
 void GenerateRandomPointsInsideHexahedron(const Vector *, FourVectors *, int)
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleFullRenderData_Scalar_View, N = 2]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleFullRenderData_Scalar_View, N = 3]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleRenderDataWithNormal_Scalar_View, N = 2]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleRenderDataWithNormal_Scalar_View, N = 3]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleRenderDataWithTrailDelta_Scalar_View, N = 2]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleRenderDataWithTrailDelta_Scalar_View, N = 3]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleRenderDataWithTrailDelta_Scalar_View_Lines, N = 2]
+void GroupPointerSort(VTYPE **, int) [VTYPE = ParticleRenderDataWithTrailDelta_Scalar_View_Lines, N = 3]
+void GroupSort(ParticleRenderData_t *, int) [N = 2]
+void GroupSort(ParticleRenderData_t *, int) [N = 3]
+void GroupSort(ParticleRenderData_t *, int) [N = 4]
+void GroupSort(ParticleRenderData_t *, int) [N = 8]
 void IndexTriVertexBuffer::beginCube(cube_index_t)
 void IndexTriVertexBuffer::beginMesh()
 void IndexTriVertexBuffer::endFrame()
@@ -8230,13 +8494,17 @@ void LightDesc_t::ComputeLightAtPoints(const FourVectors &, const FourVectors &,
 void LightDesc_t::ComputeNonincidenceLightAtPoints(const FourVectors &, FourVectors &, bool) const
 void LockCorner(bool, int, int, FourVectors *, CParticleCollection *, CLockedParticleSavedDataList &)
 void MathLib_Init()
+void MatrixInvert_Aligned(const matrix3x4a_t &, matrix3x4a_t &)
 void ProjectingParticleCache::insertIntoCache(ImpParticle *, float, float, Point3D &, Point3D &)
 void QuaternionAverageExponential(Quaternion &, int, const Quaternion *, const float *)
+void QuaternionConjugate(const Quaternion &, Quaternion &)
+void QuaternionInvert(const Quaternion &, Quaternion &)
 void QuaternionMatrix(const Quaternion &, const Vector &, const Vector &, matrix3x4_t &)
 void QuaternionMatrix(const Quaternion &, const Vector &, matrix3x4_t &)
 void QuaternionMatrix(const Quaternion &, matrix3x4_t &)
 void QuaternionMatrixOrientationOnly(const Quaternion &, matrix3x4_t &)
 void QuaternionMult(const Quaternion &, const Quaternion &, Quaternion &)
+void QuaternionScale(const Quaternion &, float, Quaternion &)
 void QuaternionSlerpNoAlign(const Quaternion &, const Quaternion &, float, Quaternion &)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
@@ -8269,15 +8537,13 @@ void SweepRenderer::deallocSliceCorners(Slice_t *)
 void SweepRenderer::deallocSliceTodoList(Slice_t *)
 void SweepRenderer::render_slices()
 void SweepRenderer::seed_surface(Point3D &)
-void TransferValueIntoResourceString(CKV3TransferBlockAllocator *, CResourceString &, const char *)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
 void WorldIntersectT(IParticleSystemQuery *, const FourVectors *, const FourVectors *, int, int, ISectData_t *, CWorldCollideContextData *, const uint32)
-void _V_AppendSlash(char *, int, char)
-void _V_strncpy(char *, const char *, int)
 void-IcD
 void@[A^]
 volume field
 volume scale
+vpcf1
 vpcfA
 vpcfH
 vpcfL
@@ -8289,9 +8555,9 @@ vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vtexH
 vtexL
-w0AkG(
+w0IcG(Hk
 wHA96t
-wPAkGHPHc
+wPIcGHH
 walkleft
 walkright
 warp max
@@ -8300,7 +8566,8 @@ warp scale control point number
 warp transition start time
 warp transition time (treats min/max as start/end sizes)
 wchar_t >= 0.0f && wchar_t <= 1.0f
-wchar_t@IcL$hA9
+wchar_t char::*|I
+wchar_t@IcL$pA9
 which->m_pNext->m_pPrev==which
 which->m_pPrev->m_pNext==which
 world time noise coordinate scale
@@ -8310,10 +8577,10 @@ write stencil on ...-buffer test success
 xCHcT
 xHHc{
 xXu*H
+xXuhH
 xXulH
 xXumH
-xXusH
-xXu{H
+xXurH
 xcHcT
 xyA9^
 yHfff.
@@ -8331,8 +8598,7 @@ yaw_rate_min
 yaw_stop_time
 yfffff.
 z/float
-{!ffff.
-{p@r*H
+{long long@r*H
 |#HH9
 |#hH9
 |#hL9
@@ -8340,15 +8606,17 @@ z/float
 |$ !r*H
 |$$A)
 |$<fA
+|$xHc
+|Hfff.
 |XL9
 |fff.
 |ffff.
-|jffff.
 |xL9
 }=-<L
 }HA;EP}
 ~$IcF
 ~1fffff.
+~8IcE
 ~<fff.
 ~=ff.
 ~Lff.
@@ -8356,4 +8624,6 @@ z/float
 ~Offff.
 ~^>9cx
 ~_fff.
-~ht3H
+~ffff.
+~pt)D
+~xHcE

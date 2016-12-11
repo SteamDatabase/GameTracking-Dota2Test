@@ -19,8 +19,8 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/bitmap.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/colorconversion.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(294): Conversion not supported yet!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(822): Unsupported color format "%s", skipping!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(295): Conversion not supported yet!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(823): Unsupported color format "%s", skipping!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/imageformat.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/entity2/entityclass.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/entity2/entityidentity.cpp
@@ -39,7 +39,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/cubemap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/concreteentitylist.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/entitycomponent.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/entityidentity.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/entitykeyvalues.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/variant.h
@@ -74,7 +73,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlleanvector.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsoacontainer.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utltshash.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vscript/ivscript.h
@@ -95,7 +93,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stacktools_tier1.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utl3dallocator.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utloctree.cpp
@@ -106,12 +103,9 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(1106): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(597): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(610): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(623): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(636): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(712): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(1205): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(402): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(793): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/lightquery.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/lighttree.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/prtmatrix.cpp
@@ -125,5 +119,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/virtualvolumetexture.cpp(480): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/world.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp(163): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp(198): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp(740): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldrenderermgr.cpp

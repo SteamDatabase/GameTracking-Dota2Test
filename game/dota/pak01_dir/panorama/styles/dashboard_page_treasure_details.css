@@ -262,7 +262,7 @@ DOTATreasureDetailsPage
 	visibility: visible;
 }
 
-#TreasureQuantityDropDown
+.QuantityDropDown
 {
 	width: 82px;
 	height: 44px;
@@ -279,7 +279,12 @@ DOTATreasureDetailsPage
 	visibility: collapse;
 }
 
-#TreasureQuantityDropDown Label
+#InfuserQuantityDropDown
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #5a2e79 ), to( #3b1956 ) );
+}
+
+.QuantityDropDown Label
 {
 	vertical-align: middle;
 	font-size: 18px;
@@ -287,7 +292,7 @@ DOTATreasureDetailsPage
 	color: #ffffff;
 }
 
-#TreasureQuantityDropDownDropDownMenu
+#TreasureQuantityDropDownDropDownMenu, #InfuserQuantityDropDownDropDownMenu
 {
 	width: 80px;
 }
@@ -337,8 +342,9 @@ DropDown
 }
 .EventIcon
 {
-	background-image: url("s2r://panorama/images/compendium/spring2016/logicon_activate_psd.vtex");
+	background-image: url("s2r://panorama/images/control_icons/battlepass_logo_grayscale_small_png.vtex");
 	background-size: contain;
+	background-repeat: no-repeat;
 	width: 26px;
 	height: 26px;
 	margin-right: 6px;
@@ -514,6 +520,73 @@ DropDown
 }
 
 
+#InfuserPurchaseButton
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #5a2e79 ), to( #3b1956 ) );
+}
+#InfuserPurchaseRow
+{
+	visibility: collapse;
+}
+.OwnsInfuser #InfuserPurchaseRow
+{
+	margin-bottom: 0px;
+}
+.InfuserPurchaseAvailable #InfuserPurchaseRow
+{
+	visibility: visible;
+}
+
+#InfuserButtonContents
+{
+	horizontal-align: center;
+	flow-children: right;
+}
+
+#InfuserButtonPrice
+{
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: -3px;
+}
+
+#InfusersOwnedRow
+{
+	width: 100%;
+	background-color: #5a2e7933;
+	flow-children: right;
+	padding: 6px 4px 4px 4px;
+
+	visibility: collapse;
+}
+.OwnsInfuser #InfusersOwnedRow
+{
+	visibility: visible;
+}
+
+#InfusersOwnedLabel
+{
+	font-size: 16px;
+	text-align: right;
+	width: fill-parent-flow( 1.0 );
+	text-align: right;
+	text-transform: uppercase;
+	color: #ccc;
+	vertical-align: middle;
+}
+
+#InfusersOwnedCount
+{
+	vertical-align: middle;
+	padding: 0px 8px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+
 #MarketPurchaseButton
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #245a4b ), to( #1d493d ));
@@ -559,9 +632,25 @@ DropDown
 {
 	vertical-align: middle;
 	margin-right: 5px;
+	tooltip-position: left;
+	flow-children: right;
+}
+
+#AutographPrefix > Label
+{
 	color: #c3cbd6;
 	font-size: 16px;
 	text-transform: uppercase;
+}
+
+#AutographPrefix > .InfoIcon
+{
+	wash-color: #c3cbd6;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	margin-bottom: 4px;
+	margin-left: 0px;
 }
 
 #TreasureAutographDropDown
@@ -1072,7 +1161,7 @@ DOTATreasureDetailsPage.FullPreviewMode #TreasureContents .TreasureItem.Received
 {
 	brightness: 0.05;
 	transform: scale3d( 0.7, 0.7, 1.0 );
-	blur: gaussian( 3, 3, 2 );
+	blur: gaussian( 3 );
 	saturation: .6;
 }
 
@@ -1087,7 +1176,7 @@ DOTATreasureDetailsPage.FullPreviewMode #TreasureContents .TreasureItem.Received
 	brightness: 0.12;
 	saturation: .6;
 	transform: scale3d( 0.7, 0.7, 1.0 );
-	blur: gaussian( 3, 3, 2 );
+	blur: gaussian( 3 );
 
 	transition-property: position, transform, brightness, opacity, saturation, blur, pre-transform-scale2d;
 	transition-duration: 0.35s;

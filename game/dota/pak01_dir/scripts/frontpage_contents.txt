@@ -27,46 +27,38 @@
 	// "BrowserGoToDOTAURL( international/compendium )"		-> http://www.dota2.com/international/compendium
 	// "DOTAShowCompendiumLeaguePage( League, 0, Page )"	Open up a compendium for a specific league to the designated page
 
-	
-	//	"sale_item"
-	//	{
-	//		"layout_pos"			"0"
-	//		"cell_type"				"sale_item"
-	//	}
+	//"sale_item"
+	//{
+	//	"layout_pos"			"1"
+	//	"cell_type"				"sale_item"
+	//}
 
-	"upgrade_battlepass"
+	"underlord_debut"
 	{
-		"layout_pos"			"1"
-		"cell_type"				"custom_panel"
-		"custom_cell_id"		"FrontpageCellBattlePassUpgrade"
-		"custom_cell_xml"		"layout/banners/front_page_battlepass_upgrade.xml"
+	 	"layout_pos"			"0"
+	 	"cell_type"				"custom_panel"
+	 	"custom_cell_id"		"FrontpageCellUnderlordDebut"
+	 	"custom_cell_xml"		"layout/banners/front_page_debut_underlord.xml"
+		"click_url"				"BrowserGoToDOTAURL( darkrift )"		
 	}
-
-    "gameplay_patch"
-    {
-        "layout_pos"			"4"
-        "cell_type"				"custom_panel"
-        "custom_cell_id"		"FrontpageCellGamePlayPatch"
-        "custom_cell_xml"		"layout/banners/front_page_gameplaypatch.xml"
-    }
+	
+	"gameplay_patch"
+	{
+	 	"layout_pos"			"5"
+	 	"cell_type"				"custom_panel"
+	 	"custom_cell_id"		"FrontpageCellGamePlayPatch"
+	 	"custom_cell_xml"		"layout/banners/front_page_gameplaypatch.xml"
+	}
 
 	//"frontpage_video_twitch"
 	//{
 	//	"layout_pos"			"0"
 	//	"cell_type"				"video_stream_twitch"
-	//	"league_id"				"4479"
-	//	"english_channel"		"dotamajor"
-	//	"russian_channel"		"dotamajorru"
-	//	"chinese_stream"		"http://www.huomaotv.cn/dota2/major/h5.html"
-	//}
-
-	//"ti6_battlepass"
-	//{
-	//	"layout_pos"			"0"
-	//	"cell_type"				"custom_panel"
-	//	"custom_cell_id"		"FrontpageCellBattlePassTI6"
-	//	"custom_cell_xml"		"layout/banners/front_page_battlepass_ti6.xml"
-	//	"click_url"				"BrowserGoToDOTAURL( international/battlepass )"
+	//	"league_id"				"4664"
+	//	"english_channel"		"dota2ti"
+	//	"russian_channel"		"dota2ti_ru"
+	//	"chinese_stream"		"http://www.huomao.com/outplayer/htmlfive/3039.html"
+	//	"chinese_previous_stream"		"http://list.youku.com/albumlist/show?id=27822247&amp;ascending=1&amp;page=1"
 	//}
 
 	//"nested_treasure_ii"
@@ -102,13 +94,24 @@
 	//	"click_url"				"DOTAShowSplashAd( 20 )"
 	//}	
 
-	"blog_post"
-	{
-		"layout_pos"			"3"
-		"cell_type"				"blog"
-		"blog_page"				"0"
-		"cycle_time"			"8"
-	}
+	//"blog_post"
+	//{
+	//	"layout_pos"			"3"
+	//	"cell_type"				"blog"
+	//	"blog_page"				"0"
+	//	"cycle_time"			"8"
+	//}
+
+	//"aegis"
+	//{
+	//	"layout_pos"			"2"
+	//	"cell_type"				"default"
+	//	"image_url"				"file://{images}/front_page/ads/ti6_aegis.jpg"
+	//	"header_text"			"#FrontPage_TI6Aegis_Header"
+	//	"title_text"			"#FrontPage_TI6Aegis_Title"
+	//	"description_text"		"#FrontPage_TI6Aegis_Description"
+	//	"click_url"				"BrowserGoToURL( http://blog.dota2.com/2016/07/level-1000-collectors-aegis-of-champions/ )"
+	//}
 	
 	"last_match"
 	{
@@ -116,158 +119,46 @@
 		"cell_type"				"lastmatch"
 	}
 
-	"immortal_treasure_ii"
+	"warhammer_treasure"
 	{
-		"layout_pos"			"0"
+		"layout_pos"			"3"
 		"cell_type"				"default"
-		"image_url"				"file://{images}/econ/tools/ti6_immortal_treasure_b.png"
-		"header_text"			"#FrontPage_Spring_2016_Treasure1_Header"
-		"title_text"			"#FrontPage_Spring_2016_Treasure2_Title"
-		"description_text"		"#FrontPage_Spring_2016_Treasure1_Description"
-		"click_url"				"DOTAShowItemDefPage( 11520 )"
-	}
-	
-	"collectors_cache"
-	{
-		"layout_pos"			"5"
-		"cell_type"				"default"
-		"image_url"				"file://{images}/front_page/ads/ti6_collectors_cache.jpg"
-		"header_text"			"#FrontPage_Spring_2016_Collectors_Cache_Header"
-		"title_text"			"#FrontPage_Spring_2016_Collectors_Cache_Title"
-		"description_text"		"#FrontPage_Spring_2016_Collectors_Cache_Description"
-		"click_url"				"DOTAShowItemDefPage( 11573 )"
-	}
+		"image_url"				"file://{images}/front_page/ads/warhammer_treasure.jpg"
+		"header_text"			"#FrontPage_WarhammerTreasure_Header"
+		"title_text"			"#FrontPage_WarhammerTreasure_Title"
+		"description_text"		"#FrontPage_WarhammerTreasure_Description"
+		"click_url"				"DOTAShowItemDefPage( 11883 )"
+	}	
 
 	//"custom_game"
 	//{
-	//	"layout_pos"			"3"
-	//	"cell_type"				"custom_game"
-	//	"custom_game_id"		"1"		// Randomly pick a top custom game
-	//	"header_text"			"#DOTA_Custom_Game_Of_The_Day"
-
-	//	"filters"
-	//	{
-	//		"owned"
-	//		{
-	//			"filter_type"		"EventPoints"
-	//			"filter_args"		"14 MustOwn"
-	//			"comparison"		"!="
-	//			"ref_value"			"0"
-	//		}
-	//	}
+		//"layout_pos"			"4"
+		//"cell_type"				"custom_game"
+		//"custom_game_id"		"1"		// Randomly pick a top custom game
+		//"header_text"			"#DOTA_Custom_Game_Of_The_Day"
 	//}
 
-	//"top_live"
-	//{
-	//	"layout_pos"			"4"
-	//	"cell_type"				"toplive"
-	//	"cycle_time"			"20"
-	//
-	//		"filters"
-	//	{
-	//		"owned"
-	//		{
-	//			"filter_type"		"EventPoints"
-	//			"filter_args"		"14 MustOwn"
-	//			"comparison"		"!="
-	//			"ref_value"			"0"
-	//		}
-	//	}
-	//}
+	"custom_game_pass"
+	{
+		"layout_pos"			"4"
+		"cell_type"				"default"
+		"image_url"				"file://{images}/econ/custom_games_pass/crumbling_island_arena_pass.png"
+		"header_text"			"#FrontPage_CrumblingIsland_Header"
+		"title_text"			"#FrontPage_CrumblingIsland_Title"
+		"description_text"		"#FrontPage_CrumblingIsland_Description"
+		"click_url"				"DOTAShowCustomGamePage( 473718711 )"
+	}
 
-	//"pro_game"
-	//{
-	//	"layout_pos"			"4"
-	//	"cell_type"				"progame"
-	//
-	//	"filters"
-	//	{
-	//		"owned"
-	//		{
-	//			"filter_type"		"EventPoints"
-	//			"filter_args"		"14 MustOwn"
-	//			"comparison"		"!="
-	//			"ref_value"			"0"
-	//		}
-	//	}
-	//}	
-	
-	//"ti6_arcana_vote"
-	//{
-	//	"layout_pos"			"5"
-	//	"cell_type"				"default"
-	//	"image_url"				"file://{images}/front_page/ads/arcana_vote_ti6.psd"
-	//
-	//	"header_text"			"#FrontPage_Spring_2016_BattlePass_Arcana_Vote_Header"
-	//	"title_text"			"#FrontPage_Spring_2016_BattlePass_Arcana_Vote_Title"
-	//	"description_text"		"#FrontPage_Spring_2016_BattlePass_Arcana_Vote_Description"
-	//
-	//	"click_url"				"DOTAIfOwnedEvent( EVENT_ID_INTERNATIONAL_2016, DOTAShowBPSpring2016ArcanaVotePage(), DOTAShowBPSpring2016PurchasePage( false ) )"
-	//}
-	
-	//"ti6_immortal_gardens"
-	//{
-	//	"layout_pos"			"5"
-	//	"cell_type"				"default"
-	//	"image_url"				"file://{images}/front_page/ads/immortal_gardens_ti6.jpg"
-	//
-	//	"header_text"			"#FrontPage_Spring_2016_BattlePass_Immortal_Gardens_Header"
-	//	"title_text"			"#FrontPage_Spring_2016_BattlePass_Immortal_Gardens_Title"
-	//	"description_text"		"#FrontPage_Spring_2016_BattlePass_Immortal_Gardens_Description"
-	//
-	//	"click_url"				"DOTAIfOwnedEvent( EVENT_ID_INTERNATIONAL_2016, DOTAShowStoreItemDetailsPage( -1, 11316, 0 ), DOTAShowBPSpring2016PurchasePage( false ) )"
-	//}
-	
-	//"ti6_quest_rewards"
-	//{
-	//	"layout_pos"			"5"
-	//	"cell_type"				"default"
-	//	"image_url"				"file://{images}/front_page/ads/quest_rewards_ti6.psd"
-	//
-	//	"header_text"			"#FrontPage_Spring_2016_BattlePass_Quest_Rewards_Header"
-	//	"title_text"			"#FrontPage_Spring_2016_BattlePass_Quest_Rewards_Title"
-	//	"description_text"		"#FrontPage_Spring_2016_BattlePass_Quest_Rewards_Description"
-	//
-	//	"click_url"				"DOTAIfOwnedEvent( EVENT_ID_INTERNATIONAL_2016, DOTAShowBPSpring2016QuestsPage(), DOTAShowBPSpring2016PurchasePage( false ) )"
-	//}
-	//
-	//"ti6_seasonal_terrain"
-	//{
-	//	"layout_pos"			"5"
-	//	"cell_type"				"default"
-	//	"image_url"				"file://{images}/front_page/ads/seasonal_terrain_ti6.psd"
-	//
-	//	"header_text"			"#FrontPage_Spring_2016_BattlePass_Seasonal_Terrain_Header"
-	//	"title_text"			"#FrontPage_Spring_2016_BattlePass_Seasonal_Terrain_Title"
-	//	"description_text"		"#FrontPage_Spring_2016_BattlePass_Seasonal_Terrain_Description"
-	//
-	//	"click_url"				"DOTAIfOwnedEvent( EVENT_ID_INTERNATIONAL_2016, DOTAShowStoreItemDetailsPage( -1, 11171, 0 ), DOTAShowBPSpring2016PurchasePage( false ) )"
-	//}
-	//
-	//"ti6_wagering"
-	//{
-	//	"layout_pos"			"5"
-	//	"cell_type"				"default"
-	//	"image_url"				"file://{images}/front_page/ads/wagering_ti6.psd"
-	//
-	//	"header_text"			"#FrontPage_Spring_2016_BattlePass_Wagering_Header"
-	//	"title_text"			"#FrontPage_Spring_2016_BattlePass_Wagering_Title"
-	//	"description_text"		"#FrontPage_Spring_2016_BattlePass_Wagering_Description"
-	//
-	//	"click_url"				"DOTAIfOwnedEvent( EVENT_ID_INTERNATIONAL_2016, DOTAShowBPSpring2016WageringPage(), DOTAShowBPSpring2016PurchasePage( false ) )"
-	//}
-	
-	//"ti6_courier"
-	//{
-	//	"layout_pos"			"4"
-	//	"cell_type"				"default"
-	//	"image_url"				"file://{images}/front_page/ads/evolving_courier_ti6.psd"
-	//
-	//	"header_text"			"#FrontPage_Spring_2016_BattlePass_Courier_Header"
-	//	"title_text"			"#FrontPage_Spring_2016_BattlePass_Courier_Title"
-	//	"description_text"		"#FrontPage_Spring_2016_BattlePass_Courier_Description"
-	//	
-	//	"click_url"				"DOTAIfOwnedEvent( EVENT_ID_INTERNATIONAL_2016, DOTAShowStoreItemDetailsPage( -1, 11461, 0 ), DOTAShowBPSpring2016PurchasePage( false ) )"
-	//}
+//	"top_live"
+//	{
+//		"layout_pos"			"5"
+//		"cell_type"				"toplive"
+//		"cycle_time"			"20"
+//	}
 
+//	"pro_game"
+//	{
+//		"layout_pos"			"4"
+//		"cell_type"				"progame"
+//	}
 }

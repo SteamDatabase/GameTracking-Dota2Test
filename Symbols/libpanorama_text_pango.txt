@@ -19,15 +19,13 @@
  LoggingSystem_RegisterLoggingChannel
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
+ Plat_DebugPrint
  Plat_ExitProcess
  Plat_GetEnv
- Plat_GetModuleFilename
  Plat_GetModuleProcAddress
- Plat_IsInDebugSession
+ Plat_IsInDebugSessionRaw
  Plat_LoadModule
- Plat_LoadModuleRaw
  Plat_ShouldCollectMiniDumpsForFatalErrors
- Plat_getwd
  R AES_version
  R ASN1_version
  R BN_version
@@ -362,9 +360,20 @@
  T strnlen
  ThreadGetCurrentId
  ThreadInterlockedExchange64
+ V_FixDoubleSlashes
+ V_FixSlashes
+ V_StripFilename
+ V_UTF16ToUTF8
+ V_UTF32ToUTF8
+ V_qsort_s
+ V_stricmp_fast
+ V_vsnprintfRet
  Warning
  _DefaultRuneLocale
  _Unwind_Resume
+ _V_ComposeFileName
+ _V_MakeAbsolutePath
+ _V_strncpy
  __assert_rtn
  __bzero
  __cxa_allocate_exception
@@ -388,8 +397,6 @@
  __toupper
  abort
  alphasort$INODE64
- atof
- atoi
  ceilf
  dyld_stub_binder
  fclose
@@ -499,7 +506,6 @@
  pango_layout_set_width
  pango_layout_set_wrap
  pango_layout_xy_to_index
- printf
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -548,7 +554,6 @@
  strcpy
  strerror
  strlen
- strncat
  strncpy
  strtod
  strtof
@@ -563,4 +568,3 @@
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
- vtable for __cxxabiv1::__vmi_class_type_info

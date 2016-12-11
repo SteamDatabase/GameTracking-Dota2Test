@@ -18,9 +18,19 @@ DOTAChat
     vertical-align: bottom;
 }
 
+DOTAChat.Hidden
+{
+	visibility: collapse;
+}
+
 .ChatLeftPanel
 {
     vertical-align: bottom;
+}
+
+.HudChat .ChatLeftPanel
+{
+	visibility: collapse;
 }
 
 .ChatMissedMessages
@@ -423,7 +433,7 @@ DOTAChat.ChatExpanded #ParticipantArea
 
 .ChatLine DOTAEmoticon
 {
-	margin-top: -6px;
+	margin-top: -4px;
 	margin-bottom: -8px;
 	margin-left: 1px;
 	margin-right: 1px;
@@ -620,6 +630,7 @@ DOTAChat.ChatExpanded
     sound-out: "ui_chat_slide_out";
 }
 
+DOTAChat.PreGameChat #ChatLinesContainer,
 DOTAChat.ChatExpanded #ChatLinesContainer
 {
     height: 232px;
@@ -628,6 +639,36 @@ DOTAChat.ChatExpanded #ChatLinesContainer
     border-left: chatBorderWidth chatBorderStyle chatBorderColor;
     border-right: chatBorderWidth chatBorderStyle chatBorderColor;
     border-bottom: 0px chatBorderStyle transparent;
+}
+.SideChat DOTAChat.PreGameChat #ChatLinesContainer,
+.SideChat DOTAChat.ChatExpanded #ChatLinesContainer
+{
+    height:900px;
+}
+
+.SideChat .ChatCorePanel
+{
+    vertical-align:top;
+    height:100%;
+}
+
+.SideChat #ChatMainPanel
+{
+    height:100%;
+}
+.SideChat #ChatHelpPanel
+{
+    visibility:collapse;
+    height:0px;
+}
+.SideChat #ChatLinesArea
+{
+    height:700px;
+}
+DOTAChat.PreGameChat #ChatLinesContainer
+{
+	height: 160px;
+	background-color: #00000088;
 }
 
 .OnTodayPage DOTAChat.ChatExpanded #ChatLinesContainer
@@ -642,11 +683,13 @@ DOTAChat.ChatExpanded #ChatLinesContainer
 }
 
 
+DOTAChat.PreGameChat #ChatHeaderPanel,
 DOTAChat.ChatExpanded #ChatHeaderPanel
 {
     opacity: 1.0;
 }
 
+DOTAChat.PreGameChat #ChatLinesPanel VerticalScrollBar,
 DOTAChat.ChatExpanded #ChatLinesPanel VerticalScrollBar
 {
 	opacity: 1.0;
@@ -657,11 +700,18 @@ DOTAChat.ChatExpanded #ChatLinesOverlay
 	opacity: 1.0;
 }
 
+DOTAChat.PreGameChat #ChatLinesOverlay
+{
+	opacity: 0;
+}
+
+DOTAChat.PreGameChat #ChatTotalMissed,
 DOTAChat.ChatExpanded #ChatTotalMissed
 {
 	opacity: 0.0;
 }
 
+DOTAChat.PreGameChat #ChatTotalMissed.HasMissedMessages.MissedMessagesAcknowledged,
 DOTAChat.ChatExpanded #ChatTotalMissed.HasMissedMessages.MissedMessagesAcknowledged
 {
 	opacity: 0.0;
@@ -783,6 +833,31 @@ DOTAChat.ChatExpanded #ChatTotalMissed.HasMissedMessages.MissedMessagesAcknowled
 .HelpButton Label
 {
     wash-color: none;
+}
+
+.ScrollUpButton,
+.ScrollDownButton
+{
+	visibility: collapse;
+	wash-color: #303435;
+}
+
+.CanScrollDown .ScrollUpButton:hover,
+.CanScrollUp .ScrollDownButton:hover
+{
+	wash-color: #b3c6cc;
+}
+
+.CanScrollDown .ScrollUpButton,
+.CanScrollUp .ScrollDownButton
+{
+	wash-color: #737f83;
+}
+
+DOTAChat#HudChat .ScrollUpButton,
+DOTAChat#HudChat .ScrollDownButton
+{
+	visibility: visible;
 }
 
 .ChatTimestamp
@@ -938,7 +1013,7 @@ DOTAChatTab:selected #ChatTabName
 	opacity: 1;
 }
 
-#ChatTargetLabel, #ChatEmoticonButton
+#ChatTargetLabel, #ChatEmoticonButton, #ChatScrollUpButton, #ChatScrollDownButton
 {
     height: 100%;
     vertical-align: middle;
@@ -995,6 +1070,27 @@ DOTAChatTab:selected #ChatTabName
     width: 30px;
 }
 
+
+#ChatScrollUpButton
+{
+    background-image: url("s2r://panorama/images/control_icons/arrow_solid_up_png.vtex");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 5px;
+    width: 30px;
+}
+
+
+#ChatScrollDownButton
+{
+    background-image: url("s2r://panorama/images/control_icons/arrow_solid_down_png.vtex");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 5px;
+    width: 30px;
+}
 
 #ChatTabShareButton
 {
@@ -1221,6 +1317,14 @@ ToggleButton:hover .TickBox
 	transform: translateY( 6px );
 }
 
+.HudChat .DiceRoll
+{
+	background-color: black;
+	padding-top: 4px;
+	padding-right: 4px;
+	transform: translateY( 4px );
+}
+
 .DiceRollColumn
 {
 	width: 24px;
@@ -1240,4 +1344,163 @@ ToggleButton:hover .TickBox
 .TournamentLink
 {
     color:#6A8EAA;
+}
+
+
+.SuggestedHero
+{
+	font-weight: bold;
+}
+.SuggestedHeroRole
+{
+	font-weight: bold;
+}
+
+DOTAChat#HudChat
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+
+	y: -240px;
+
+	width: 700px;
+	height: 400px;
+
+	transition-property: position;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+DOTAChat#HudChat.Channeling
+{
+	y: -340px;
+}
+
+DOTAChat#HudChat #ChatLinesContainer,
+DOTAChat#HudChat #ChatHeaderPanel
+{
+	border: 0px solid black;
+
+	height: 162px;
+	margin-bottom: 0px;
+
+	opacity-mask: none;
+
+	background-color: #00000000;
+	opacity-mask:none;
+}
+
+DOTAChat#HudChat #ChatControls
+{
+	opacity: 0;
+}
+
+DOTAChat#HudChat.Active #ChatControls
+{
+	opacity: 1;
+}
+
+DOTAChat#HudChat #ChatLinesOverlay
+{
+	background-color: #00000000;
+	border-left: 0px solid black;
+}
+
+
+DOTAChat#HudChat .ChatLine
+{
+	font-size: 18px;
+	width: 650px;
+	max-width: 650px;
+	font-weight: bold;
+
+	text-shadow: 2px 2px 2px 1.5 #000000;
+}
+
+DOTAChat#HudChat .ChatTarget
+{
+    font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	color: #fbe6b9;
+}
+
+
+DOTAChat#HudChat .ChatPersona
+{
+    font-size: 20px;
+}
+
+DOTAChat .ChatLine .HeroIcon
+{
+	width: 40px;
+	height: 24px;
+	margin-bottom: -3px;
+	margin-top: 0px;
+	margin-bottom: -6px;
+	margin-right: 4px;
+	transform: translateY( 2px );
+}
+
+DOTAChat#HudChat .ChatLine.Expired
+{
+	transition-property: opacity!immediate;
+	transition-duration: 0.6s;
+
+	opacity: 0;
+}
+
+DOTAChat#HudChat.Active .ChatLine.Expired
+{
+	transition-property: opacity!immediate;
+	transition-duration: 0.1s;
+
+	opacity: 1;
+}
+
+DOTAChat#HudChat #ChatLinesContainer #VerticalScrollBar,
+DOTAChat#HudChat .ChatTimestamp
+{
+	opacity: 0;
+}
+
+DOTAChat#HudChat .PlayerColor0 { color: HeroSlot0Color; }
+DOTAChat#HudChat .PlayerColor1 { color: HeroSlot1Color; }
+DOTAChat#HudChat .PlayerColor2 { color: HeroSlot2Color; }
+DOTAChat#HudChat .PlayerColor3 { color: HeroSlot3Color; }
+DOTAChat#HudChat .PlayerColor4 { color: HeroSlot4Color; }
+DOTAChat#HudChat .PlayerColor5 { color: HeroSlot5Color; }
+DOTAChat#HudChat .PlayerColor6 { color: HeroSlot6Color; }
+DOTAChat#HudChat .PlayerColor7 { color: HeroSlot7Color; }
+DOTAChat#HudChat .PlayerColor8 { color: HeroSlot8Color; }
+DOTAChat#HudChat .PlayerColor9 { color: HeroSlot9Color; }
+
+DOTAChat#HudChat .RuneDD { color: RuneDDColor; font-weight: bold; }
+DOTAChat#HudChat .RuneHaste { color: RuneHasteColor; font-weight: bold; }
+DOTAChat#HudChat .RuneIllus { color: RuneIllusionColor; font-weight: bold; }
+DOTAChat#HudChat .RuneInvis { color: RuneInvisColor; font-weight: bold; }
+DOTAChat#HudChat .RuneRegen { color: RuneRegenColor; font-weight: bold; }
+DOTAChat#HudChat .RuneArcane { color: RuneArcaneColor; font-weight: bold; }
+DOTAChat#HudChat .RuneBounty { color: RuneBountyColor; font-weight: bold; }
+
+.ChatWheelIcon
+{
+	width: 20px;
+	height: 20px;
+	margin-top: 4px;
+	margin-bottom: -4px;
+
+	vertical-align: top;
+}
+
+
+DOTAChat#HudChat .GameAllChat,
+DOTAChat#HudChat .GameAlliesChat
+{
+	font-weight: bold;
+}
+
+DOTAChat#HudChat #ChatMissedContainer
+{
+	visibility: collapse;
 }

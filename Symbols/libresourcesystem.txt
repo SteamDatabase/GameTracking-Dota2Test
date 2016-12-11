@@ -25,7 +25,6 @@
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
  IterateCapturedStackAnnotations
- KeyValuesSystem
  LOG_GENERAL
  LoggingSystem_GetChannelVerbosity
  LoggingSystem_IsChannelEnabled
@@ -35,24 +34,18 @@
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
+ LoggingSystem_SetChannelVerbosity
  Msg
+ Plat_DebugPrint
  Plat_ExitProcess
  Plat_FloatTime
- Plat_GetModuleFilename
- Plat_GetModuleProcAddress
- Plat_GetOSType
- Plat_GetPlatformError
- Plat_IsHighDPI
- Plat_IsInDebugSession
- Plat_LoadModuleRaw
+ Plat_IsInDebugSessionRaw
  Plat_MicroSecTickDiff
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_TickDiffMicroSec
  Plat_TickDiffMicroSecF
  Plat_TickDiffMilliSecF
- Plat_VirtualAlloc
- Plat_VirtualFree
  SeriousWarning
  T BinaryProperties_GetValue
  T CreateInterface
@@ -69,10 +62,25 @@
  ThreadInMainThread
  ThreadInterlockedExchange64
  ThreadNanoSleep
+ V_FixSlashes
+ V_GetFileExtension
+ V_IsAbsolutePath
+ V_qsort_s
+ V_snprintf
+ V_stricmp_fast
+ V_strlower_fast
+ V_vsnprintf
+ V_vsnprintfRet
+ V_vsnprintfSize
  Warning
- _DefaultRuneLocale
  _GetCallStack_Fast
  _Unwind_Resume
+ _V_FileBase
+ _V_FixupPathName
+ _V_SetExtension
+ _V_StripExtension
+ _V_strncat
+ _V_strncpy
  __bzero
  __cxa_atexit
  __cxa_begin_catch
@@ -82,34 +90,24 @@
  __cxa_guard_release
  __cxa_pure_virtual
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
- atof
- atoi
  dyld_stub_binder
- free
  g_VProfCurrentProfile
  g_pMemAlloc
- malloc
  memchr
  memcmp
  memcpy
  memmove
  memset
- printf
  pthread_mutex_destroy
  raise
- sscanf
  std::terminate()
  strchr
  strcmp
- strcpy
  strlen
- strncat
  typeinfo for IStack_Annotation
  typeinfo for std::bad_alloc
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info

@@ -271,6 +271,25 @@ DOTAHotkey Label
 	width: 100%;
 }
 
+.Reborn DOTAHotkey
+{
+	background-color: black;
+	border-radius: 0px;
+	border: 0px;
+	box-shadow: fill black 0px 0px 0px 0px;
+}
+
+.Reborn DOTAHotkey Label
+{
+	color: white;
+	font-weight: normal;
+}
+
+DOTAHotkey.Hidden
+{
+	visibility: collapse;
+}
+
 @keyframes 'borderglow5'
 {
 	0%
@@ -330,3 +349,11 @@ DOTAHotkey Label
 	vertical-align: center;
 	horizontal-align: right;
 }
+
+.Reborn DOTAAbilityButton DOTAItemImage
+{
+    background-image: url("s2r://panorama/images/hud/reborn/inventory_item_well_psd.vtex");
+	background-image: none;
+}
+
+

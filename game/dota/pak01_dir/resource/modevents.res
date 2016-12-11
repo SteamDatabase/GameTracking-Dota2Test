@@ -56,7 +56,9 @@
 
 	"dota_barracks_kill"
 	{
-		"barracks_id"	"short"
+		"barracks_id"		"short"
+		"killer_playerid"	"short"
+		"killer_team"		"short"
 	}
 
 	"dota_tower_kill"
@@ -397,6 +399,10 @@
 	{
 		"matchID"	"uint64"
 		"result"	"byte"
+	}
+	"team_details_updated"
+	{
+		"teamID"	"long"
 	}
 	"live_games_updated"
 	{
@@ -1164,6 +1170,16 @@
 
 	"game_rules_shutdown"
 	{
+	}
+
+	"aegis_event"
+	{
+		"player_id"			"short"
+		"chat_message_type"	"short"
+	}
+	"bought_back"
+	{
+		"player_id"			"short"
 	}
 }
 

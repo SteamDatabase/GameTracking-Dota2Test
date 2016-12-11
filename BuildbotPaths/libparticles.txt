@@ -8,17 +8,13 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_level_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_shape_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vpropbreakabledata_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/../common/blobulator/implicit/../smartarray.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_constraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_initializers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_initializersnew.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_emitters.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_helpers.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_opsnew.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp(5054): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/particle_sort.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/particles_internal.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp(5603): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_constraints_cpp_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_initializers_cpp_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_initializersnew_cpp_schema.gen_cpp
@@ -52,6 +48,10 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/polyhedron.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/randsse.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/../common/blobulator/implicit/../smartarray.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/builtin_particle_helpers.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/control_point_data.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particle_initialization.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particle_sceneobject.cpp
@@ -61,6 +61,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particles.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particles_internal.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/particles/particletypemanager.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/animcontainer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer.h
@@ -68,7 +69,9 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer_saveloadresource.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer_schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/materialsystem2/imesh2.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/femodelbuilder.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/indexdata.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/rendersystem/vertexdata.h
@@ -96,7 +99,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmemory.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlpriorityqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsoacontainer.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsortvector.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
@@ -120,4 +122,4 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/utlstreambuffer.cpp
-void BubbleSort(T *, int, const LessThan &) [T = unsigned int, LessThan = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/femodelbuilder.cpp:841:38)]
+void BubbleSort(T *, int, const LessThan &) [T = unsigned int, LessThan = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/femodelbuilder.cpp:934:38)]

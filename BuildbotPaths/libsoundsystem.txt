@@ -3,13 +3,13 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/soundsystem/release/osx64/soundstackscriptschema_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/keyvalues3.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/keyvalues3_oldschematext.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/keyvalues3_textreader.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/introspectedtypemanager.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/kv3typemanager.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/iresourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcehandle.h
@@ -19,6 +19,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemadatatraversal.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/soundsystem/audio_mix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/soundsystem/isoundopsystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/soundsystem/lowlevel.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/soundsystem/soundopshared.h
@@ -26,7 +27,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/bitbuf.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/convar.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/simpledatacache.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlbuffer.h
@@ -41,6 +41,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemalib/schemadatatraversal.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemalib/schemaiterator.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/device_capture.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/lowlevel/audioprocessor.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/lowlevel/device_null.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/lowlevel/device_sdl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/lowlevel/mix.cpp
@@ -67,8 +68,8 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_mixlayer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_occlusion.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_opvar.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_pause_soundevents.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_pos_vec8.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_sms.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_sos.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_source_info.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_spatialize.cpp
@@ -77,6 +78,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_timers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_tracks.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_util.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_op_vmix.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_system.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_system.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_op_sys/sos_track_system.cpp
@@ -88,6 +90,10 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/snd_wave_temp.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/soundevent.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/soundsystem.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/utlstringtokendict.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/vmix.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/vmix.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/vmix_mixer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/soundsystem/voice.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/bitbuf.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/circularbuffer.cpp
@@ -96,11 +102,11 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlmemoryarena.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utltokenizer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/fieldpath.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp

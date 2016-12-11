@@ -58,6 +58,8 @@
  DevMsg(char const*, ...)
  DevWarning(char const*, ...)
  EarlyInit_Tier0
+ GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
+ GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
  GetCPUInformation
  KeyValuesSystem
  LOG_GENERAL
@@ -79,6 +81,7 @@
  LoggingSystem_SetChannelVerbosity
  LoggingSystem_TagName
  Msg
+ Plat_DebugPrint
  Plat_ExitProcess
  Plat_FileExists
  Plat_FileIsReadOnly
@@ -86,13 +89,11 @@
  Plat_FloatTime
  Plat_GetEnv
  Plat_GetModuleFilename
- Plat_GetModuleProcAddress
  Plat_GetOSType
  Plat_GetTime
  Plat_IsHighDPI
- Plat_IsInDebugSession
+ Plat_IsInDebugSessionRaw
  Plat_IsRunningOnCustomerMachine
- Plat_LoadModuleRaw
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_TickDiffMilliSec
@@ -140,6 +141,19 @@
  T UnRegisterGlobalObject
  T UnlockGlobalObjectRegistry
  T VStdLib_GetICVarFactory
+ T V_LogMultiline
+ T V_LogMultilineToArray
+ T V_ParseToken
+ T V_RandomString(int)
+ T V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
+ T V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+ T V_SplitString2(char const*, char const**, int, CUtlVector<char*, CUtlMemory<char*, int> >&)
+ T V_SplitString2InPlace(char*, char const**, int, CUtlVector<char const*, CUtlMemory<char const*, int> >&)
+ T V_SplitStringInPlace(char*, char const*, CUtlVector<char const*, CUtlMemory<char const*, int> >&)
+ T V_SplitWString
+ T V_SplitWString2
+ T V_StripAndPreserveHTML
+ T V_StripAndPreserveHTMLCore
  T operator delete(void*)
  T operator delete[](void*)
  T operator new(unsigned long)
@@ -161,12 +175,51 @@
  ThreadTerminateProcessCode
  ThreadWaitForProcessExit
  ThreadYield
- V_tier0_stricmp_fast
+ V_GetErrno
+ V_SetErrno
+ V_StripFilename
+ V_UTF16ToUTF8
+ V_UTF32ToUTF8
+ V_UTF8CharsToUTF32
+ V_atof
+ V_atoi
+ V_fclose
+ V_fflush
+ V_fopen
+ V_fprintf
+ V_fread
+ V_freopen
+ V_fseek
+ V_ftell
+ V_fwrite
+ V_iswspace
+ V_logf
+ V_powf
+ V_qsort
+ V_qsort_s
+ V_rand
+ V_snprintf
+ V_sscanf
+ V_stricmp_fast
+ V_stricmp_fast_NegativeForUnequal
+ V_stristr_fast(char const*, char const*)
+ V_strlower_fast
+ V_strtod
+ V_strtoi64
+ V_vsnprintf
+ V_vsnprintfRet
+ V_vsnprintfSize
+ V_wcsistr(wchar_t const*, wchar_t const*)
  Warning
- _DefaultRuneLocale
  _GetCallStack_Fast
  _NSGetEnviron
  _Unwind_Resume
+ _V_ComposeFileName
+ _V_ExtractFilePath
+ _V_strncat
+ _V_strncpy
+ _V_strnicmp_fast
+ _V_wcsncpy_bytes
  __bzero
  __cxa_atexit
  __cxa_begin_catch
@@ -176,40 +229,24 @@
  __cxa_guard_release
  __cxa_pure_virtual
  __error
- __exp10
  __gxx_personality_v0
- __maskrune
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __tolower
  _exit
- atof
- atoi
  chdir
  close
  dup
  dup2
  dyld_stub_binder
  execve
- fclose
  fcntl
- fflush
- fopen
  fork
- fprintf
- fread
- free
- freopen
- fseek
- ftell
- fwrite
  g_VProfCurrentProfile
  g_pFiberJobPool
  g_pMemAlloc
  getdtablesize
- log
- malloc
  memchr
  memcmp
  memcpy
@@ -218,31 +255,24 @@
  memset_pattern16
  pipe
  poll
- powf
- printf
+ pthread_getspecific
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
  pthread_mutexattr_init
  pthread_mutexattr_settype
- qsort
+ pthread_setspecific
  raise
- rand
  read
- sscanf
  std::terminate()
  strchr
  strcmp
  strcpy
  strerror
  strlen
- strncat
- strtod
- strtol
  typeinfo for CThread
  typeinfo for std::bad_alloc
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info

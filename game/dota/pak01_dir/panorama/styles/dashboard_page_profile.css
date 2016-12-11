@@ -83,6 +83,13 @@ DOTAProfilePage.PageVisible
 	letter-spacing: 2px;
 }
 
+/* Some languages need some extra space for tabs */
+.Language_greek .ProfileContentRightTabOption Label,
+.Language_turkish .ProfileContentRightTabOption Label
+{
+	letter-spacing: 0px;
+}
+
 .ProfileContentRightTabOption:hover Label
 {
 	color: white;
@@ -1075,6 +1082,29 @@ Button.SimpleIconButtonSteam Image
 	flow-children: right;
 }
 
+.PreviousBattlePass
+{
+	width: 72px;
+	height: 72px;
+	vertical-align: middle;
+	margin-right: 16px;
+	
+	
+	background-image: url("s2r://panorama/images/compendium/spring2016/profile_previous_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+	
+	tooltip-position: bottom;
+
+	visibility: collapse;
+}
+
+.HasRollupTI6 #TI2016.PreviousBattlePass
+{
+	visibility: visible;
+}
+
 #ProfileActionButtons
 {
 	margin-top: 8px;
@@ -1433,7 +1463,14 @@ DOTASpiderGraph
 #RecentGames
 {
 	flow-children: down;
+	visibility: collapse;
 }
+
+#RecentGames.TabEnabled
+{
+	visibility: visible;
+}
+
 
 #RecentGamesTable
 {
@@ -1678,6 +1715,17 @@ Panel.BottomMatchInTourney
 }
 
 DOTAProfilePage.LocalUser .SelfOnly
+{
+	visibility: visible;
+}
+
+.SelfOrFriend
+{
+	visibility: collapse;
+}
+
+DOTAProfilePage.Friend .SelfOrFriend,
+DOTAProfilePage.LocalUser .SelfOrFriend
 {
 	visibility: visible;
 }
@@ -1974,7 +2022,7 @@ Panel.RecentGame Label
 #TeammateStats VerticalScrollBar .ScrollThumb
 {
 	background-color: #566767;
-	border: none;
+	border: 0px solid #000;
 	border-top: 1px solid #aaaaaa22;
 	border-right: 1px solid #000000aa;
 }

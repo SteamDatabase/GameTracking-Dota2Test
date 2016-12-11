@@ -79,6 +79,7 @@
 !#GameUI_Disconnect_SteamDeny_Misc
 !#GameUI_Disconnect_SteamOwnership
 !#GameUI_Disconnect_TempEntMessage
+!( 0xF & ( uintp( in.m_flMatVal ) | uintp( out.m_flMatVal ) ) )
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !CNETMsg_SpawnGroup_ManifestUpdate
 !NETWORK_DISCONNECT_HLTVRESTRICTED
@@ -90,6 +91,9 @@
 !m_bInitialized
 !m_bStoredSubKey
 !m_ppGlobalPointer || ( *m_ppGlobalPointer == static_cast< G* >( pActualClass ) )
+!m_slaves.IsEmpty()
+!m_targets.IsEmpty()
+!multilist || ML
 !node->IsLeafNode()
 !sm_bHasActivated
 " because it is missing required fields: 
@@ -233,12 +237,13 @@ $gender
 %NETWORK_DISCONNECT_SOUNDSMSG_OVERFLOW
 %d.%d.%double
 %int %int %int %int
-%short unable to grow buffer to fit string
 %short%short%short
 %short:  IGameSystem::LoopActivateAllSystems
 %short:  IGameSystem::LoopDeactivateAllSystems
 %short:  IGameSystem::LoopInitAllSystems(finish)
 %short:  IGameSystem::LoopInitAllSystems(start)
+%short: %short
+%short: string format requested %double chars
 &#GameUI_Disconnect_InvalidMessageError
 &#GameUI_Disconnect_NoPeerGroupHandlers
 &#GameUI_Disconnect_PureServer_Mismatch
@@ -251,6 +256,7 @@ $gender
 &NETWORK_DISCONNECT_STEAM_AUTHCANCELLED
 &NETWORK_DISCONNECT_TEMPENTMSG_OVERFLOW
 &YA1L
+&qt != &q
 '#GameUI_Disconnect_BadSpectatorPassword
 '#GameUI_Disconnect_DifferentClassTables
 'NETWORK_DISCONNECT_BADSPECTATORPASSWORD
@@ -263,6 +269,8 @@ $gender
 'fff.
 'u0Ic
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
+( ndxBucket >= 0 ) && ( ndxBucket < 65536 )
+( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
 (#GameUI_Disconnect_LoopLevelLoadActivate
 (*%short*), 
 (GetChar()) == (0)
@@ -281,7 +289,7 @@ $gender
 (missing)
 (nBytes % 4) == 0
 (s_pThisModuleBindingPointer != NULL)
-(uBHcK
+(uEHcK
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., "(.
 )#GameUI_Disconnect_PureServer_ClientExtra
 )#GameUI_Disconnect_SteamDeny_BadAntiCheat
@@ -346,6 +354,7 @@ $gender
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vpropbreakabledata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/gamecore/igamesystem.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/gameinterfaces/gameinterfaces.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/game/host/dota/groundheighttrace.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/host/gamemodelinfo.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/host/generated_protodota/osx64/network_connection.pb.cc
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/host/generated_protodota/osx64/networkbasetypes.pb.cc
@@ -354,8 +363,15 @@ $gender
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/include/gamecore/igamesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/keyvalues3.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/kv3transfer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/iprerequisite.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
@@ -363,6 +379,8 @@ $gender
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/bitbuf.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhash.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/resourcestream.cpp
@@ -371,7 +389,6 @@ $gender
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -397,6 +414,8 @@ $gender
 0A;void`u
 0A;vxu
 0D;{ |
+0Hc{01
+0PP@@
 0[A\A^A_]
 0[A^]
 1 1 1
@@ -406,6 +425,7 @@ $gender
 33333333I9
 3A;v8u
 3A;vpu
+40A;wchar_t
 49K }
 49S |}
 4A;t$8u
@@ -414,11 +434,11 @@ $gender
 5A;t$0u
 5A;t$pu
 6[A\A^A_]
-6~Lfffff.
 8[A\A]A^A_]
 8[A^A_]
 8fffff.
 92tBH
+9F(t6H
 9S |signed char
 9S |unsigned int
 9W(}!H
@@ -439,10 +459,9 @@ $gender
 ;{(u%
 <(9{ |jI
 <NULL>
-<fff.
+<unknown>
 =unsigned long long;Ic
-@  0 
-@ P@@
+?CBaseGameSystemFactory
 @$Hc{$1
 @(HcH
 @(Hc{(1
@@ -460,6 +479,7 @@ $gender
 @M;__float128 
 @PHc{P1
 @PI;@XtAI
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A\A^A_]A
 @[A^]
@@ -476,21 +496,45 @@ $gender
 @_LoggingSystem_RegisterLoggingChannel
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_TickDiffMilliSecF
 @_RegisterStringToken
+@_V_GetErrno
+@_V_SetErrno
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_acosf
+@_V_asinf
+@_V_atan2f
+@_V_atod
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_expf
+@_V_logf
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_FileBase
+@__V_strncat
+@__V_strncpy
 @___assert_rtn
 @___bzero
 @___cxa_allocate_exception
@@ -505,31 +549,28 @@ $gender
 @___cxa_throw
 @___dynamic_cast
 @___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
+@___sincos_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___stderrp
 @___tolower
 @__float128 short::*
-@_atof
-@_atoi
+@_acos
+@_atan2
 @_ceilf
 @_fflush
 @_floorf
 @_fprintf
-@_free
+@_frexpf
 @_g_Tier1_BitWriteMasks
 @_g_pMemAlloc
-@_malloc
 @_memchr
 @_memcmp
 @_memcpy
 @_memmove
 @_memset
 @_memset_pattern16
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
@@ -538,13 +579,11 @@ $gender
 @_sched_yield
 @_snprintf
 @_sprintf
-@_sscanf
 @_strchr
 @_strcmp
 @_strcpy
 @_strerror
 @_strlen
-@_strncat
 @_strtod
 @_strtof
 @_strtol
@@ -557,7 +596,8 @@ $gender
 @dyld_stub_binder
 @ffff.
 @loader_path
-@r<Mc
+@r4Mc
+@r8Ic
 @rpath/libhost.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -628,7 +668,6 @@ A;D$ ~
 A;D$(
 A;E(u
 A;F8}
-A;G ~
 A;G0}
 A;G8}
 A;H(t.M
@@ -659,7 +698,7 @@ A;_,|
 A;_8|
 A;_X|
 A;t$0u
-A;t$Xu.I
+A;t$Xu0I
 A;v0u
 A;void(u
 APPSYSTEM: In ConnectGameInterfaces(), s_nRegistrationCount is %double!
@@ -669,7 +708,8 @@ APPSYSTEM: In ReconnectGameInterface(), tried to use different connection modes!
 ARAp0p
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBSATBp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
-ARBZBRB`
+ARBTBRB]ARBRAp
+ARBZBRAp
 ARB]ARA
 ARB]ARAp
 ARB]ARBRB]ARB]ARB]ARB]ARA
@@ -685,7 +725,6 @@ ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBTBRB]ARBRAp
-ASATAp
 ASCTBRBUARBTAp
 ATAUARB`
 ATBRBRBRBSAXBRB`
@@ -710,7 +749,9 @@ AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
+AWAVSA
 AWAVSH
+AWAVSL
 AWAVSP
 AWAVSPA
 AWAVSPH
@@ -731,6 +772,9 @@ AddMessage
 AddString
 AddUInt32
 AddUInt64
+Aim constraint always need at least two targets
+AimConstraint: %short - Cannot Find Aim Up Target Attachment: %short
+AimConstraint: %short - Cannot Find Aim Up Target Bone
 Already saw decimal point or exponent; can'unsigned short have another one.
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -744,6 +788,7 @@ B;L0(
 B@H+P0H
 BRBVBRBRATAp
 BRB]ARBZBRB`
+BSATAp
 BackUp() can only be called after signed char successful Next().
 Bad expression operator: '%char%char', expected C style boolean expression operator.
 Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
@@ -762,13 +807,14 @@ Byte size calculation and serialization were inconsistent.  This may indicate si
 C [A^]
 C$;CXuSL
 C(IcO,I
+C,[A\A^A_]
 C0+K,9
 C0[A\A^A_]
 C@H+X0H
 C@L+X0L
+CAimConstraint
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
-CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
@@ -833,6 +879,7 @@ CAtomicManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int
 CAtomicManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CAtomicManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CAtomicManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CAtomicManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
 CAtomicManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> > >
 CAtomicManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
@@ -862,12 +909,12 @@ CBaseAppSystem<IPredictionDiffMgr>
 CBaseAppSystem<ISaveRestoreDataMgr>
 CBaseAppSystem<ISource2Host>
 CBaseConstraint
-CBaseGameSystemFactory
 CBuilderModelInfo
 CDebugDrawQueueMgr
 CDefaultAccessor
 CDontUseThisGameSystem
 CDotaMapUtils
+CDotaMapUtils: Failed to load tree map %short
 CEmptyConVar
 CFieldPathHuffmanEncoder::INode
 CFieldPathHuffmanEncoder::InternalNode
@@ -1014,6 +1061,7 @@ CLoopModeFactory<CLoopModeGameHostDota>
 CLoopModeGameHostBase
 CLoopModeGameHostDota
 CMaterialDrawDescriptor
+CMorphConstraint
 CMsgPlayerInfo
 CMsgQAngle
 CMsgVector
@@ -1040,10 +1088,13 @@ CONSTRAINT_TYPE_HELPER_BONE
 CONSTRAINT_TYPE_INVALID
 CONSTRAINT_TYPE_JIGGLE_BONE
 CONSTRAINT_TYPE_MAX
+CONSTRAINT_TYPE_MORPH
 CONSTRAINT_TYPE_ORIENT
 CONSTRAINT_TYPE_POINT
 CONSTRAINT_TYPE_ROTATION
+CONSTRAINT_TYPE_TILT_TWIST
 CONSTRAINT_TYPE_TWIST
+COrientConstraint
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
 CPPTYPE_ENUM
@@ -1059,6 +1110,7 @@ CPhysSurfacePropertiesAudio
 CPhysSurfacePropertiesGame
 CPhysSurfacePropertiesPhysics
 CPhysSurfacePropertiesSoundNames
+CPointConstraint
 CPostConnectCallback
 CPredictionDiffMgr
 CRenderMesh
@@ -1083,21 +1135,26 @@ CSchemaClassBinding<BaseConstraint_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverControl_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriverList_t>
 CSchemaClassBinding<BuilderModelBoneFlexDriver_t>
+CSchemaClassBinding<CAimConstraint>
 CSchemaClassBinding<CAttachment>
-CSchemaClassBinding<CBaseConstraint>
 CSchemaClassBinding<CBuilderModelInfo>
 CSchemaClassBinding<CHitBox>
 CSchemaClassBinding<CHitBoxSet>
 CSchemaClassBinding<CHitBoxSetList>
 CSchemaClassBinding<CMaterialDrawDescriptor>
+CSchemaClassBinding<CMorphConstraint>
+CSchemaClassBinding<COrientConstraint>
 CSchemaClassBinding<CPhysSurfaceProperties>
 CSchemaClassBinding<CPhysSurfacePropertiesAudio>
 CSchemaClassBinding<CPhysSurfacePropertiesGame>
 CSchemaClassBinding<CPhysSurfacePropertiesPhysics>
 CSchemaClassBinding<CPhysSurfacePropertiesSoundNames>
+CSchemaClassBinding<CPointConstraint>
 CSchemaClassBinding<CRenderMesh>
 CSchemaClassBinding<CRenderSkeleton>
 CSchemaClassBinding<CSceneObjectData>
+CSchemaClassBinding<CTiltTwistConstraint>
+CSchemaClassBinding<CTwistConstraint>
 CSchemaClassBinding<CVPhysXLevelData>
 CSchemaClassBinding<CVPhysXMesh>
 CSchemaClassBinding<CVPhysXSurfacePropertiesList>
@@ -1185,10 +1242,10 @@ CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>
 CSchemaEnumBinding<VPhysXDiskShapeHeader_t::VersinEnum_t>
 CSchemaEnumBinding<multiplayerBreak_t>
 CSchemaEnumBindingBase
+CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaInstallCallback
 CSchemaManipulator<CResourceArray<AttachmentData_t> >
 CSchemaManipulator<CResourceArray<BaseConstraint_t> >
-CSchemaManipulator<CResourceArray<CPhysSurfaceProperties> >
 CSchemaManipulator<CResourceArray<CResourceArray<unsigned char> > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
@@ -1253,6 +1310,7 @@ CSchemaManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int
 CSchemaManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CSchemaManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
+CSchemaManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
 CSchemaManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
 CSchemaManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> > >
 CSchemaManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
@@ -1271,6 +1329,8 @@ CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_host
 CSchemaRegistration_modellib
@@ -1282,11 +1342,13 @@ CSchemaUtlVectorManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstra
 CSchemaUtlVectorManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> >, CHitBox>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >, CHitBoxSet>
 CSchemaUtlVectorManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >, CMaterialDrawDescriptor>
+CSchemaUtlVectorManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> >, CPhysSurfaceProperties*>
 CSchemaUtlVectorManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> >, ConstraintSlave_t>
 CSchemaUtlVectorManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> >, ConstraintTarget_t>
 CSchemaUtlVectorManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> >, RenderSkeletonBone_t>
 CSchemaUtlVectorManipulator<CUtlVector<int, CUtlMemory<int, int> >, int>
 CSchemaUtlVectorManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul>, CSceneObjectData>
+CSchemaVisitorInfoMapBase
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCAnimationGroupResource>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCModel>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCMorphSet>
@@ -1330,13 +1392,14 @@ CTier3AppSystem<IHostUtils, 0>
 CTier3AppSystem<IPredictionDiffMgr, 0>
 CTier3AppSystem<ISaveRestoreDataMgr, 0>
 CTier3AppSystem<ISource2Host, 0>
+CTiltTwistConstraint
 CTransform
+CTwistConstraint
 CType
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
+CUtlLinkedList overflow! (exhausted index range)
+CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlString
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
@@ -1350,7 +1413,13 @@ C`[A^]
 Can'unsigned short 
 Can'unsigned short get here.
 Can'unsigned short get here: failed to get default value as string
+Cannot allocate abstract class
+Cannot allocate abstract class %short
 Cannot allocate buffer larger than kint32max for 
+Cannot construct abstract class
+Cannot copy abstract class
+Cannot deallocate abstract class
+Cannot destruct abstract class
 Cfffff.
 Cffffff.
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
@@ -1377,11 +1446,7 @@ D$(Ic
 D$,IcD$(
 D$4IcD$0
 D$@L+`0I
-D$PE1
-D$PI)
-D$PIc
 D$XA9
-D$XI)
 D$lIcD$h
 D$pD9h0t\I
 D9Q(}
@@ -1405,11 +1470,10 @@ DependencyClass::m_pDependencyLL == NULL
 DescriptorProto
 DescriptorProtosH
 DevMsg(char const*, ...)
+Dffff.
 DmeSurfaceAudioParams
 DmeSurfaceAudioSounds
 DmeSurfacePhysicsParams
-DmeSurfaceProperties
-DmeSurfacePropertyList
 DmeVPhysXLevel
 DmeVPhysXMesh
 Do Not Cast Shadows
@@ -1426,6 +1490,7 @@ E;float(A
 E;g8|
 E;p,|
 E;uPu$I
+E;|$(L
 E;~ A
 E@F;|
 E@L+h0
@@ -1516,6 +1581,7 @@ Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend signed char non-lite type to contain signed char lite type, but the reverse is allowed.
 EyCIc
 F Hcz 1
+F [A^]
 F$Hcz$1
 F$IcF 
 F$fffff.
@@ -1523,6 +1589,7 @@ F(@t3H
 F(Hcz(1
 F(L;long double
 F(L;unsigned long
+F([A^]
 F,Hcz,1
 F,IcF(
 F0D9k(
@@ -1533,11 +1600,13 @@ F9l?T
 F@L+p0I
 FATAL
 FDIcF@
+FL[A^]
 FPHczP1
 F\IcFX
 Fade Time
 Fade __int128 int::* Distance
 Fade long long signed char::* Distance
+Failed to save unsupported class
 False
 Field "
 Field does not match message type.
@@ -1573,6 +1642,7 @@ FlattenedSerializersVersion001
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
+Fp[A^]
 From Class Binding
 From Enum Binding
 FtIcFp
@@ -1583,6 +1653,7 @@ G(L;unsigned long
 G8H	p(]
 G@H+x0H
 G@L+x0I
+GA#D$
 GAMECONSOLE
 GL[A\A^A_]
 Game System %short is defined twice!
@@ -1615,6 +1686,8 @@ GetRepeatedUInt32
 GetRepeatedUInt64
 GetString
 GetStringReference
+GetTableRaw() != nullptr
+GetType() == KEYVALUES3_TYPE_TABLE
 GetUInt32
 GetUInt64
 H	p(]
@@ -1684,6 +1757,7 @@ HitBoxSet_t
 HitBox_t
 HostStateMgr001
 HostUtils001
+I CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
 I CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::Find(const T &) const [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 I CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 I CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::NewNode(const T *) [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
@@ -1741,19 +1815,24 @@ IcF@A
 IcFXA
 IcFhA
 IcFpA
+IcF|H
 IcG,I
 IcG,L
+IcGtH
+IcGxH
 IcL$(L
 IcL$,H
 IcL$,L
 IcN(I
 IcN,L
+IcNXH9
 IcO,L
 IcT$(H
 IcT$,L
 IcV,H
 IcV,L
 IcW(I
+Ic_(H
 Ict$(L
 Icu(H
 Icu4H
@@ -1761,6 +1840,7 @@ Icw(L
 Ic|$(L
 Ic|$<H
 Ic~(L
+Impl().m_AdditionalClusters.FindAndFastRemove( pCluster )
 Import "
 Index must be -1 for non-repeated fields
 Index out-of-bounds (field is empty).
@@ -1796,6 +1876,10 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE: 
 Invalid wire type for CPPTYPE_UINT32: 
 Invalid wire type for CPPTYPE_UINT64: 
+IsAllGreaterThan( tolerance, diff )
+IsInList(before)
+IsValidIndex(elem)
+IsValidIndex(elem) && IndexInRange( elem )
 K(Ict$,L
 K8;C<
 K8;C<}int
@@ -1809,10 +1893,11 @@ KV Conditional Evaluation Error
 KeyValueCache001
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetFirstSubKey() const
+KeyValues *KeyValues::GetNextKey() const
 KeyValues Error: %short in file %short
 KeyValues3 *CKeyValues3Table::MemberData(int)
+KeyValues3 *KeyValues3::FindOrCreateMember(const char *, KeyValues3LowercaseHash_t)
 KeyValues3 *KeyValues3::GetArrayElement(int)
 KeyValues3::GetElement - Bad index %double (count = %double)
 KeyValues::FindKey called on NULL pointer!
@@ -1825,8 +1910,8 @@ L$ Lc,
 L$(IcV,L
 L$8A;D$<
 L$@L+a0I
-L95;/
-L95`T
+L95P;
+L95h<
 L9v@u
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -1836,7 +1921,6 @@ LITE_RUNTIME
 LOWVIOLENCE
 Label
 LcO,D
-Lfff.
 LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
@@ -1850,6 +1934,7 @@ MDefaultString
 MDiskDataForResourceType
 MDmElementType
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
+MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_IS_OCCLUDER
 MESH_DRAW_FLAGS_NONE
 MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT
@@ -1868,6 +1953,7 @@ MODEL_BONE_FLEX_INVALID
 MODEL_BONE_FLEX_TX
 MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPropertyFriendlyName
 MULTIPLAYER_BREAK_CLIENT
@@ -1892,6 +1978,7 @@ Messages can'unsigned short have default values!
 Messages can'unsigned short have default values.
 MethodDescriptorProto
 MethodOptions
+Mffff.
 Missing field: FileDescriptorProto.name.
 Missing name.
 ModelBoneFlexComponent_t
@@ -1931,6 +2018,7 @@ N Hcz 1
 N$Hcz$1
 N(Hcz(1
 N,Hcz,1
+N0Hcz01
 N4Hcz41
 N@H+q0H
 N@Hcz@1
@@ -1996,14 +2084,13 @@ Option must have signed char name.
 Option must not use reserved name "uninterpreted_option".
 Ordered object did not begin in signed char zeroed state
 OyMIc
-P 0 P
 P P@@ 
 P(;Q(}_H
 P(;Q(}pI
-P0@P0
 PLACEHOLDER_VALUE
 POSIX
 PPL;}
+PPPP@@
 P[A\A^A_]
 P[A^]
 PanoramaTextServices001
@@ -2030,6 +2117,8 @@ PermModelInfo_t::FLAG_TRANSLUCENT_TWO_PASS
 PermModelInfo_t::FlagEnum
 PermRenderMeshData_t
 Pffff.
+Pffffff.
+PhL;u
 PhysFeModelDesc_t
 PhysSoftbodyDesc_t
 Physics
@@ -2047,11 +2136,10 @@ QyOIc
 RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
-RBRBRBRBRBRBRBRB\D[ARAp
-RBRCp
+RBRBRBRBRBRBRAp
 RBRGp
 RBTBRAp
-RBXBVAp
+RBXAp
 RB`!ARB`!ARB`
 RGp8p8p
 Reached an unintended state: CPPTYPE_MESSAGE
@@ -2068,7 +2156,7 @@ ReleaseLast
 ReleaseMessage
 RemoveLast
 RenderBufferBinding_t
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayoutField_t
@@ -2085,8 +2173,7 @@ Repeated fields can'unsigned short have default values.
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ResponseRulesCache001
 RnCapsuleDesc_t
 RnHullDesc_t
@@ -2097,10 +2184,9 @@ RnSoftbodySpring_t
 RnSphereDesc_t
 S(Ict$,L
 S@H+Z0H
-SARBRBRBRBRBRBRB\LRAp
-SATAp
 SAXBRAp
 SBRAp
+SBRGp8p
 SBTBRBRG
 SPAWN_GROUP_BLOCK_UNTIL_LOADED
 SPAWN_GROUP_DONT_SPAWN_ENTITIES
@@ -2149,7 +2235,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -2160,10 +2246,11 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 SourceCodeInfo
 SpawnGroupFlags_t
 StatsService_001
+SteamToursHost001
 String field
 String literals cannot cross line boundaries.
 StringOutputStream.
@@ -2176,25 +2263,28 @@ T KeyValues3::GetAsNumeric() const [T = float]
 T KeyValues3::GetAsNumeric() const [T = int]
 T KeyValues3::GetAsNumeric() const [T = long long]
 T$ Hc
-TARARARARARARBp
+TARARARARARARARCp
 TARBRB]ARBREp
 TATATAp
 TBRAp
 TBRBRAp
 TBRBRBRAp
 TBRBRBRBRBRBRBRB\FRBRBRBRBRBRBRAp
-TBRBSATAp
 TBRB`
 TBTAp
-TCRBRA
+TCRAp
 TCRBRBRBRBRBRBRAp
+TCRBRBRBRBRBRBRB\D[ARAp
 TCRBRBRBRBRBRB^DRBRBRBRBRBRBRB\Bp
 TCRBRDp
-TCWARATAp
+TCSAp
+TCWBp
 TC\Ep
 TC\Ip
+TC\Kp
 TC^IpPp
-TC`%ARBRBVAp
+TC`'ARBRBVAp
+TCp p
 TUUUUUU
 TYPE_BYTES
 TYPE_DOUBLE
@@ -2221,7 +2311,7 @@ This ZeroCopyOutputStream doesn'unsigned short support aliasing. Reaching here u
 This program requires version 
 This program was compiled against version 
 This shouldn'unsigned short be called if all the sizes are equal.
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -2234,6 +2324,7 @@ Tried to merge messages of different types
 Tried to register signed char non-generated type with the generated type registry.
 Type appears to be in generated pool but wasn'unsigned short 
 Type is already registered: 
+TypeManager
 U8A;M<
 UPDATE_STRING_TOKEN_DATABASE
 UTF-8 data when 
@@ -2245,6 +2336,7 @@ UninterpretedOption
 Unknown KV3 type '%double'.
 Unknown enumeration value of "
 UserInfoChangeService_001
+UtlHashHandle_t CUtlHash<BoneHashPairing_t, bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), unsigned int (*)(const BoneHashPairing_t &)>::BuildHandle(int, int) const [Data = BoneHashPairing_t, C = bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), K = unsigned int (*)(const BoneHashPairing_t &)]
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -2306,6 +2398,7 @@ VScriptDbg
 VScriptManager010
 VStringTokenSystem001
 VUUUH
+V_stristr_fast(char const*, char const*)
 Value 
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -2338,6 +2431,7 @@ WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
+XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB`
 XBRBp
 XBSARBSAXBRB`
@@ -2346,7 +2440,6 @@ XHc{X1
 XPlhppppv4B>:
 X[A\A]A^A_]
 X[A^A_]
-Y)Yz$
 Yfffff.
 [A\A]A^A_]
 [A\A^A_]
@@ -2356,6 +2449,7 @@ Yfffff.
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
 [unsigned short,fD
+\$HHc
 \%03o
 \U%08x
 \long long%02x
@@ -2364,6 +2458,7 @@ Yfffff.
 ^LA+^H~jI
 ^V_TY
 ^\A+^X~fI
+^fffff.
 _ I;_(tG1
 _0IcG
 _8[A^]
@@ -2385,24 +2480,48 @@ _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
 _OSAtomicCompareAndSwap64Barrier
 _OSMemoryBarrier
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_TickDiffMilliSecF
 _RegisterStringToken
+_V_GetErrno
+_V_SetErrno
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_acosf
+_V_asinf
+_V_atan2f
+_V_atod
+_V_atof
+_V_atoi
+_V_cosf
+_V_expf
+_V_logf
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_FileBase
+__V_strncat
+__V_strncpy
 ___assert_rtn
 ___bzero
 ___cxa_allocate_exception
@@ -2417,9 +2536,8 @@ ___cxa_pure_virtual
 ___cxa_throw
 ___dynamic_cast
 ___error
-___exp10
 ___gxx_personality_v0
-___maskrune
+___sincos_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___stderrp
@@ -2440,24 +2558,22 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
-_atoi
+_acos
+_atan2
 _ceilf
 _class
 _fflush
 _floorf
 _fprintf
-_free
+_frexpf
 _g_Tier1_BitWriteMasks
 _g_pMemAlloc
-_malloc
 _memchr
 _memcmp
 _memcpy
 _memmove
 _memset
 _memset_pattern16
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
@@ -2466,13 +2582,11 @@ _raise
 _sched_yield
 _snprintf
 _sprintf
-_sscanf
 _strchr
 _strcmp
 _strcpy
 _strerror
 _strlen
-_strncat
 _strnlen
 _strtod
 _strtof
@@ -2482,7 +2596,7 @@ _strtoul
 _strtoull
 _vsnprintf
 _wcslen
-`%ARAp
+`'ARAp
 `(Hcx
 `0A9](
 `@fffff.
@@ -2491,7 +2605,9 @@ _wcslen
 `[A\A^A_]
 `[A^]
 ``A9^p
+```````P
 `unsigned char[A\A^A_]
+addons
 aggregate_value
 allactors
 allow_alias
@@ -2504,6 +2620,10 @@ audioroughnessfactor
 audiosounds
 auto CKeyValues3Context::FreeKV_Internal(KeyValues3 *)::(anonymous class)::operator()() const
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *)::(anonymous class)::operator()() const
+bitNum >= 0 && bitNum < this->GetNumBits()
+bool CKV3TransferSaveContext::PrepareTargetForClass(KeyValues3 *, KV3TransferClassBehavior_t, const char *)
+bool CMorphConstraint::CacheModelData(const CModel *)
 bool CUtlBuffer::Get(void *, int)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
@@ -2516,13 +2636,11 @@ bulletimpact
 bytes
 bytes. 
 cc_generic_services
-char *_V_strncat(char *, const char *, int, int)
 char(E9~(
 climbable
 command
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 convars
 count >= 0
@@ -2536,7 +2654,6 @@ density
 dependency
 deprecated
 description
-destBufferSize >= 0
 diffcheck
 diffcheck_playerslot
 diffcheck_spew
@@ -2575,6 +2692,8 @@ fixed64
 flags
 float
 float == NULL || dynamic_cast<To>(float) != NULL
+float QuaternionDotProduct(const Quaternion &, const Quaternion &)
+float QuaternionNormalize(Quaternion &)
 float(unsigned __int128 char::*(D
 float@LcV(H
 float\IcFX1
@@ -2604,26 +2723,21 @@ impacthard
 impactsoft
 in1 != out
 infinity
-info.m_pReplacementString == 0
 input_type
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int >= 0
+int CDisjointSetForest::Find(int)
 int CUtlString::FormatV(const char *, __va_list_tag *)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int _V_strncmp(const char *, const char *, int)
 int32
 int64
-int64 V_atoi64(const char *)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
-invalid input pointer
 is_background_map
 is_extension
 is_headless
 is_loadsavegame
 is_localonly
 is_multiplayer
+is_transition
 ishltv
 isxdigit(char)
 iygIc
@@ -2637,6 +2751,7 @@ jumpfactor
 key_t
 kffffff.
 label
+landmarkname
 leading_comments
 length_delimited
 libhost.dylib
@@ -2647,11 +2762,11 @@ long long,@H>
 long long[A\A]A^A_]
 long long[A^A_]
 long'@L;
-m_AdditionalClusters.FindAndFastRemove( pCluster )
 m_Capsules
 m_CollisionAttributeIndices
 m_CollisionGroup
 m_CollisionGroupString
+m_ElementCount == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
@@ -2659,11 +2774,14 @@ m_ExtParts
 m_FirstFree == InvalidIndex()
 m_Frame1
 m_Frame2
+m_Head == InvalidIndex()
 m_HitBoxSets
 m_HitBoxes
 m_InitPose
 m_InteractAs
 m_InteractAsStrings
+m_InteractExclude
+m_InteractExcludeStrings
 m_InteractWith
 m_InteractWithStrings
 m_LinearLimit
@@ -2671,6 +2789,8 @@ m_LoopState
 m_Memory.IsIdxValid( Index )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + nMaxSize - 1 )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
+m_Memory.IsValidIterator( it )
+m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
 m_Name
 m_NumElements == 0
 m_ParticleBoneHash
@@ -2680,6 +2800,7 @@ m_Root == InvalidIndex()
 m_SourceFilename
 m_Springs
 m_SwingLimit
+m_Tail == InvalidIndex()
 m_Transform
 m_TwistLimit
 m_anchor
@@ -2688,6 +2809,8 @@ m_audioParams
 m_audioSounds
 m_axes
 m_bAlphaBlendedMaterial
+m_bCacheAttempted
+m_bCacheOk
 m_bClimbable
 m_bEnableAngularMotor
 m_bEnableLinearLimit
@@ -2813,6 +2936,7 @@ m_linearLimitRestitution
 m_linearLimitSpring
 m_linearLimitValue
 m_lodGroupSwitchDistances
+m_mapData.IsValidHandle( unsigned char )
 m_material
 m_materialGroups
 m_materials
@@ -2862,17 +2986,22 @@ m_nParent
 m_nPlatWindowHeight
 m_nPlatWindowWidth
 m_nPrimitiveType
+m_nRefCount > 0
 m_nRefCounter
 m_nRenderHeight
 m_nRenderWidth
 m_nReserved
 m_nReserved2
 m_nRotateMotion
+m_nSlaveAxis
+m_nSlaveBoneList.IsEmpty()
+m_nSlaveChannel
 m_nSplitScreenSlot
 m_nStartIndex
 m_nStartInstance
 m_nSurfaceProp
 m_nSurfacepropertyIndices
+m_nTargetAxis
 m_nTargetUpBoneHash
 m_nTickCount
 m_nTotalTicks
@@ -2928,12 +3057,14 @@ m_runStepLeft
 m_runStepRight
 m_sBoneName
 m_sSurfaceProperty
+m_sTargetMorph
 m_sceneObjects
 m_scrapeRough
 m_scrapeSmooth
 m_shape
 m_skeleton
 m_slaves
+m_slaves.Count() == m_nSlaveBoneList.Count()
 m_solverIterationCount
 m_spheres
 m_strain
@@ -2980,6 +3111,7 @@ m_vecSize
 m_vertexBuffers
 m_walkStepLeft
 m_walkStepRight
+magnitudeSqr
 manifestincomplete
 manifestloadpriority
 map key must name signed char scalar or string field.
@@ -2987,13 +3119,12 @@ map type is only allowed for fields with signed char message type.
 map type is only allowed for repeated fields.
 map_key must not name signed char repeated field.
 map_name
+maps/%s.trm
+maps/%s.vhcg
 matrix3x4_t
 matrix3x4a_t
-maxLen > 0
-maxLen >= sizeof( *pDest )
 max_client_limit
 max_clients
-maxlen >= 1
 maxspeedfactor
 message
 message_set_wire_format
@@ -3006,16 +3137,23 @@ msg_data
 msg_type
 multiplayerBreak_t
 nAddCapacity < 0x40000000
+nAxis >= X_AXIS && nAxis <= Z_AXIS
 nBits <= nBytes*8
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
+nClassBehavior == KV3TRANSFER_CLASS_UNIMPLEMENTED
+nCount >= 1
 nFlags >= 0 && nFlags <= UINT8_MAX
 nGender < Q_ARRAYSIZE( g_pGenderTags )
 nIdx >= 0 && nIdx <= INT8_MAX
 nIndex >= 0 && nIndex < nMemberCount
 nLastPriority >= nPriority
 nMaxChars > 0
+nParent == nTopParent
+nParentBoneIndex >= 0
 nSize != 0
+nSubtreeTipBone >= 0 && nSubtreeTipBone < nBoneCount
+nTargets > 1
 name_part
 negative_int_value
 nested_type
@@ -3041,6 +3179,9 @@ num_server_players
 number
 numbits >= 0 && numbits <= 32
 offset >= 0
+ol3 float
+ol4 float
+ol> float
 oneof_decl
 oneof_index
 operator delete(void*)
@@ -3058,6 +3199,7 @@ output_type
 p Hc{ 1
 p SAp
 p,Hc{,1
+p.IsValid()
 p4Hc{41
 p8p8p
 pCallback == NULL
@@ -3067,11 +3209,14 @@ pHpHp
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pMapData->m_nRefCount > 0
+pMemberName && pMemberName[0] != '\0'
 pName
+pPolymorphicClassName && pPolymorphicClassName[0] != '\0'
 pPool->m_SpaceUsed < 0xFFFF
 pPrevClusterInFreeList != NULL
+pQuaternions
 pSchemaSystem != NULL
-pSearch
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
 pXRERA
@@ -3079,6 +3224,7 @@ pXRERAp
 pXRERAp0p0p
 pXRESC
 pXRESF
+pXRESFp0p
 pXRESGp8p
 pXRETBRAp
 pXp8p
@@ -3090,11 +3236,13 @@ parse
 parsing
 physics
 players_networkids
+pos.IsValid()
 position
 positive_int_value
 pppp 
 ppppP
 prerequisite '%short'
+previouslevel
 pthread_mutex_lock: 
 pthread_mutex_unlock: 
 ptr_ != NULL
@@ -3106,6 +3254,8 @@ q(;r(}6I
 q(;r(};H
 q(;r(}XH
 q(;wchar_t(H
+q.IsValid()
+qt.IsValid()
 r5fffff.
 r7fff.
 r=ffff.
@@ -3159,6 +3309,7 @@ spawn_count
 spawngrouphandle
 spawngroupmanifest
 spawngroupownerhandle
+spawngroupparenthandle
 stackLevel >= 0 && stackLevel < m_errorIndex
 start
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AttachmentInfluenceFlags_t>::Get() [T = AttachmentInfluenceFlags_t]
@@ -3176,11 +3327,13 @@ static CSchemaEnumBindingBase *CSchemaEnumBinding<VPhysXDiskShapeHeader_t::Versi
 static CSchemaEnumBindingBase *CSchemaEnumBinding<multiplayerBreak_t>::Get() [T = multiplayerBreak_t]
 static bool IGameSystem::InitAllSystems()
 static bool IGameSystem::LoopInitAllSystems(const GameSessionConfiguration_t &, ILoopModePrerequisiteRegistry *)
+static float CTiltTwistConstraint::ComputeTwistAroundAxisInRadians(matrix3x4a_t &, int, float)
 static void AttachmentData_t::Schema_VerifyBindingIsRegistered()
 static void BaseConstraint_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriverList_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
+static void CAimConstraint::Schema_VerifyBindingIsRegistered()
 static void CAttachment::Schema_VerifyBindingIsRegistered()
 static void CBaseConstraint::Schema_VerifyBindingIsRegistered()
 static void CBuilderModelInfo::Schema_VerifyBindingIsRegistered()
@@ -3189,14 +3342,20 @@ static void CHitBox::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSet::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSetList::Schema_VerifyBindingIsRegistered()
 static void CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered()
+static void CMorphConstraint::Schema_VerifyBindingIsRegistered()
+static void COrientConstraint::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfaceProperties::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesAudio::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesGame::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesPhysics::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesSoundNames::Schema_VerifyBindingIsRegistered()
+static void CPointConstraint::Schema_VerifyBindingIsRegistered()
 static void CRenderMesh::Schema_VerifyBindingIsRegistered()
 static void CRenderSkeleton::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectData::Schema_VerifyBindingIsRegistered()
+static void CStudioConstraintBones::ComputeTwistConstraint(matrix3x4a_t *, const CModel *, const CTwistConstraint *)
+static void CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
+static void CTwistConstraint::Schema_VerifyBindingIsRegistered()
 static void CVPhysXLevelData::Schema_VerifyBindingIsRegistered()
 static void CVPhysXMesh::Schema_VerifyBindingIsRegistered()
 static void CVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
@@ -3310,8 +3469,6 @@ t$ H9
 t$(H9
 t$0H9
 t$@H9
-t$H9[8u
-t$HIc
 t.Ic~ H
 t.Ic~$H
 t.Ic~(H
@@ -3332,7 +3489,7 @@ t7IcT$,L
 t80E1
 t8IcV,L
 t9IcG
-tCffff.
+tEIcD$
 tFIcG,L
 tMff.
 text format contains deprecated field "
@@ -3367,7 +3524,6 @@ uLM9w
 uMI9~
 uOzMA
 uWzUA
-ud9=|
 uint32
 uint64
 uninterpreted_option
@@ -3379,6 +3535,8 @@ unsigned charcomplex ;C`|
 unsigned short	[A^]
 unsigned short&H9[8tUH
 unsigned short'IcO,I
+unsigned short)A#F
+unsigned short)A#G
 unsigned short*ff.
 unsigned short+Hc{
 unsigned short+Hc{ H
@@ -3386,17 +3544,19 @@ unsigned short+Hc{(H
 unsigned short+Hc{,H
 unsigned short+Ic~8H
 unsigned short+Ic~TH
+unsigned short,A#D$
 unsigned short-IcG,L
 unsigned short-L9`
 unsigned short<IcW,L
 unsigned short<fff.
-unsigned short^fffff.
+unsigned short[ff.
 userid
 usermsgs
-uuA+^
 v0[A^]
 vP[A^]
+vScale.IsValid()
 vXIc}(L
+vX[A^]
 val_bool
 val_byte
 val_long
@@ -3411,8 +3571,6 @@ virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::Allocate() 
 virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<AttachmentData_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Allocate() [T = CResourceArray<BaseConstraint_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Allocate() [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void *CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::AllocateAndCopy(const void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Allocate() [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -3503,8 +3661,6 @@ virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Copy(void *,
 virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Deallocate(void *) [T = CResourceArray<AttachmentData_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Copy(void *, const void *) [T = CResourceArray<BaseConstraint_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Deallocate(void *) [T = CResourceArray<BaseConstraint_t>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Copy(void *, const void *) [T = CResourceArray<CPhysSurfaceProperties>]
-virtual void CAtomicManipulator<CResourceArray<CPhysSurfaceProperties> >::Deallocate(void *) [T = CResourceArray<CPhysSurfaceProperties>]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Copy(void *, const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Deallocate(void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
@@ -3591,18 +3747,25 @@ virtual void CAtomicManipulator<CResourceArray<unsigned long long> >::Copy(void 
 virtual void CAtomicManipulator<CResourceArray<unsigned long long> >::Deallocate(void *) [T = CResourceArray<unsigned long long>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Copy(void *, const void *) [T = CResourceArray<unsigned short>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Deallocate(void *) [T = CResourceArray<unsigned short>]
+virtual void CDotaMapUtils::ReleaseDotaMapData(DotaMapDataHandle_t)
 virtual void CGameModelInfoClient::ForceModelBounds(const char *, const Vector &, const Vector &)
 virtual void CGameSystemReallocatingFactory<CTestGameSystem, CTestGameSystem>::DestroyGameSystem(IGameSystem *) [T = CTestGameSystem, G = CTestGameSystem]
 virtual void CHostUtils::GenderExpandString(gender_t, const char *, char *, int)
+virtual void CMorphConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
 virtual void CPredictionDiffMgr::AddToDiff(CSplitScreenSlot, bool, int, const char *)
+virtual void CTiltTwistConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
+virtual void CTiltTwistConstraint::FillInPermData(BaseConstraint_t *, CResourceStream *) const
+virtual void CTiltTwistConstraint::InitFromPermData(const BaseConstraint_t *)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
 virtual void ConVar::ChangeStringValue(const char *, float)
 virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
 virtual void ConVar::InternalSetFloatValue(float)
 virtual void ConVar::InternalSetIntValue(int)
 virtual void ConVar::InternalSetValue(const char *)
+virtual void IPrerequisite::Release()
 vmdl1
 vmesh
+void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
 void CKeyValues3Cluster::Free(KeyValues3 *)
 void CKeyValues3Context::FreeKV_Internal(KeyValues3 *)
 void CKeyValuesErrorStack::Pop()
@@ -3618,11 +3781,16 @@ void CResourceStream::EnsureAvailable(uint)
 void CSchemaClassBindingBase::RegBase(ISchemaSystem *, const char *, const char *, CSchemaClassInfo *, const char *) [I = int]
 void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
+void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
 void CStrongHandle<InfoForResourceTypeCMorphSet>::Shutdown() [TResourceInfoData = InfoForResourceTypeCMorphSet]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::AssumeMemory(void *, int, int, int)
 void CUtlBuffer::GetString(char *, int)
+void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::Free(I) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
+void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
+void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
+void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::Unlink(I) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
 void CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 void CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::RemoveAll() [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
@@ -3633,6 +3801,7 @@ void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTab
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 void CUtlString::SetDirect(const char *, int)
 void CallPostConnect()
+void ComputeSubtree(const Graph_t *, int, BitVec_t *) [Graph_t = ModelSkeletonData_t, BitVec_t = CVarBitVec]
 void ConVar_Register(int64, IConCommandBaseAccessor *)
 void ConVar_Unregister()
 void ConnectGameInterfaces(CreateInterfaceFn *, int, GameInterfaceConnectionMode_t)
@@ -3649,14 +3818,22 @@ void KeyValues::ParseIncludedKeys(const char *, const char *, IBaseFileSystem *,
 void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CKeyValuesTokenReader &, GetSymbolProc_t)
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void MathLib_Init()
+void MatrixInvert_Aligned(const matrix3x4a_t &, matrix3x4a_t &)
+void QuaternionAverageExponential(Quaternion &, int, const Quaternion *, const float *)
+void QuaternionConjugate(const Quaternion &, Quaternion &)
+void QuaternionInvert(const Quaternion &, Quaternion &)
+void QuaternionMatrix(const Quaternion &, const Vector &, const Vector &, matrix3x4_t &)
+void QuaternionMatrix(const Quaternion &, matrix3x4_t &)
+void QuaternionMatrixOrientationOnly(const Quaternion &, matrix3x4_t &)
+void QuaternionMult(const Quaternion &, const Quaternion &, Quaternion &)
+void QuaternionScale(const Quaternion &, float, Quaternion &)
+void QuaternionSlerpNoAlign(const Quaternion &, const Quaternion &, float, Quaternion &)
 void ReconnectGameInterface(CreateInterfaceFn, const char *, GameInterfaceConnectionMode_t)
 void ReconnectGameInterface(CreateInterfaceFn, const char *, void **)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterGameInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
-void _V_FileBase(const char *, char *, int)
-void _V_strncpy(char *, const char *, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
@@ -3692,4 +3869,5 @@ yxxxxxxxI
 |$@H9
 }	[A\A^A_]
 }HA;EP}
+~$fffff.
 ~fIcM(D

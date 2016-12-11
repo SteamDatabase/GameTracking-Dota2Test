@@ -32,9 +32,12 @@
           </Panel>
 
           <Panel id="Styles">
-            <Label id="StyleLabel" text="#DOTA_econ_item_details_style_label"/>
-            <Panel id="StylesList" />
-          </Panel>
+						<Label class="AutoStyleDesc" text="#DOTA_econ_item_details_autostyle_label" />
+						<Panel class="LeftRightFlow" >
+							<Label id="StyleLabel" text="#DOTA_econ_item_details_style_label"/>
+							<Panel id="StylesList" />
+						</Panel>
+					</Panel>
 
           <Panel id="BrandPanel" class="EcontooltipGem LeftRightFlow">
             <Panel class="BrandIcon">
@@ -43,9 +46,6 @@
             <Panel class="GemDetails TopBottomFlow">
               <Panel class="GemName GemBrand">
                 <Label text="#DOTA_tooltip_econ_item_partner"/>
-              </Panel>
-              <Panel class="GemType GemBrand">
-                <Label text=""/>
               </Panel>
             </Panel>
           </Panel>

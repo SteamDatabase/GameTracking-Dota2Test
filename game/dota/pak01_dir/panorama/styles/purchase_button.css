@@ -232,6 +232,23 @@ DOTAPurchaseButton.EventReward.IndividualItem.Season_International2016 #EventIco
 	visibility: visible;
 }
 
+DOTAPurchaseButton.EventReward.IndividualItem.Season_Fall2016
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2b3e18 ), to( #455c1e ) );
+	background-size: 100% 100%;
+}
+DOTAPurchaseButton.EventReward.IndividualItem.Season_Fall2016 #EventIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/battlepass_logo_grayscale_small_png.vtex");
+	visibility: visible;
+}
+
+.SmallPurchaseButton .Contents > Label
+{
+    font-size: 18px;
+    margin-top: -1px;
+    letter-spacing: 1px;
+}
 
 /* future: add styling for EventPoints if we ever sell items that way again */
 
@@ -239,4 +256,55 @@ DOTAPurchaseButton.EventReward.IndividualItem.Season_International2016 #EventIco
 DOTAStoreItem DOTAPurchaseButton .Contents > Label
 {
 	font-size: 18px;
+}
+
+
+/* Pre-Game Available Items */
+
+DOTAHudPreGame .AvailableEconItem DOTAPurchaseButton
+{
+	height: 30px;
+	padding: 5px 4px 3px 4px;
+}
+
+DOTAHudPreGame .AvailableEconItem DOTAPurchaseButton .Contents > Label
+{
+	font-size: 16px;
+	text-overflow: shrink;
+}
+
+DOTAHudPreGame .AvailableEconItem DOTAPurchaseButton #SourceIconContainer
+{
+	width: 22px;
+}
+
+DOTAHudPreGame .AvailableEconItem DOTAPurchaseButton #SourceIconArrow
+{
+	visibility: collapse;
+}
+
+
+/* -- VRMode --------------------------------------------------------------- */
+
+.VRMode DOTAStoreItem DOTAPurchaseButton .Contents > Label
+{
+	font-size: 40px;
+}
+
+.VRMode #SourceIconArrow
+{
+	width: 24px;
+	height: 24px;
+}
+
+.VRMode #SourceIcon
+{
+	width: 36px;
+	height: 34px;
+}
+
+.VRMode #SourceIconContainer
+{
+	width: 80px;
+	height: 36px;
 }

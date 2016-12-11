@@ -2,21 +2,22 @@
 	HcQ L
 	Unnamed World: %double
 	World: %short
+	fffff.
         
                 CDefaultKeyValuesErrorSpew
+  @  
   P0 
   P@ 
  0@@@
  A;L$
  HcP0H
- P   
  ReadToken overflow
  [A\A^A_]
  [A^]
- `  @0
  fff.
  ffff.
  fffff.
+ p  @0
 !!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
@@ -39,7 +40,6 @@
 !bCreate
 !fffff.
 !ffffff.
-!g_bCheckForChainedCalls || g_bReceivedChainedRemove
 !g_pLightTreeManager
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
 !g_pWorldNodeManager
@@ -71,10 +71,13 @@
 !pConnection->m_bMarkedForRemoval
 !pEnvironmentMap->m_bSkyRelightingEnabled
 !pExternalAllocation
+!pLoadRequest->m_pQuadParams
 !pReturn
 !s_pEntityNameStringTable.m_bServer
 !sm_pMemoryPool
-"ScriptEntityComponent"
+!this->m_bLocked
+#C,D	
+#CLD	
 #base
 #base is NULL 
 #fff.
@@ -84,8 +87,8 @@
 $1HcT1
 $7Ic@
 $IcT$
+$fff.
 $ffff.
-$ffffff.
 %__float128 %__float128
 %__float128 %__float128 %__float128
 %__float128 %__float128 %__float128 %__float128
@@ -114,17 +117,15 @@ $ffffff.
 %short DynamicAtr:%short = '%short'
 %short allocation count overflow
 %short executing script: %short
-%short failed to process %double/%double entities. Possibly one of entities failed to spawn, added itself to deletion list and was deleted before this function was called.
-%short unable to grow buffer to fit string
 %short( No I/O Connections )
 %short: %short
+%short: string format requested %double chars
 %short== World '%short' Entity Lump '%short': %double entities ==
 &YA1H
 &YA1L
 &fff.
 &fffff.
 &ffffff.
-'ffff.
 'fffff.
 'ffffff.
 ( ( pEntity->GetFlags() & EF_IS_ANONYMOUS_ALLOCATION ) != 0 ) || ( m_EntityList.IsUsed( m_EntityList.GetEntityIndex( pEntity ) ) )
@@ -136,9 +137,6 @@ $ffffff.
 ( long long >= 0 ) && ( long long < NumCols() )
 ( m_flags & ECF_ANONYMOUS_ENTITY ) == 0
 ( nNodesToVisit + 2 ) <= ARRAYSIZE( pNodesToVisit )
-( nX >= 0 ) && ( nX < NumCols() )
-( nY >= 0 ) && ( nY < NumRows() )
-( nZ >= 0 ) && ( nZ < NumSlices() )
 ( ndxBucket >= 0 ) && ( ndxBucket < 65536 )
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
 ( pEntity->GetEHandle().operator CEntityIdentity*() == pEntity ) || ( pEntity->GetEHandle().operator CEntityIdentity*() == NULL )
@@ -153,11 +151,11 @@ $ffffff.
 (*%short*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
-([A\A]A^A_]A
 ([A^A_]
 (fffff.
 (ffffff.
 (hide)
+(intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
 (m_Type==MATERIAL_LIGHT_POINT) || (m_Type==MATERIAL_LIGHT_SPOT) || (m_Type==MATERIAL_LIGHT_DIRECTIONAL)
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
@@ -176,17 +174,17 @@ $ffffff.
 (pPolygons != NULL) && (pLines != NULL) && (pPoints != NULL)
 (s_pThisModuleBindingPointer != NULL)
 (show)
-(size_t)hResource % 4 == 0
 (spew)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-(uBHcK
+(uEHcK
 (void *)m_pObject != NULL
 )T$ A
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *[A\A^A_]
 ++%short is at refcount %double
-+1~&I
++0~ H
++A$Lc
 +C$A9E
 +C$Lc
 +K$Hc
@@ -205,8 +203,11 @@ $ffffff.
 -sse2
 -sse3
 -sse4
+.D0hu1z/H
+.D0lu
 .ETv*H
 .Elv*H
+.M;UU
 .ffff.
 .fffff.
 .ffffff.
@@ -235,8 +236,8 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/bitmap.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/colorconversion.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(294): Conversion not supported yet!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(822): Unsupported color format "%short", skipping!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(295): Conversion not supported yet!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/floatbitmap.cpp(823): Unsupported color format "%short", skipping!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/bitmap/imageformat.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/entity2/entityclass.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/entity2/entityidentity.cpp
@@ -255,7 +256,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/cubemap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/concreteentitylist.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/entitycomponent.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/entityidentity.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/entitykeyvalues.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/entity2/variant.h
@@ -290,7 +290,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlleanvector.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsoacontainer.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utltshash.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vscript/ivscript.h
@@ -311,7 +310,6 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stacktools_tier1.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utl3dallocator.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utloctree.cpp
@@ -322,12 +320,9 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(1106): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(597): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(610): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(623): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(636): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(712): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(1205): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(402): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/grasstilesceneobject.cpp(793): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/lightquery.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/lighttree.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/prtmatrix.cpp
@@ -341,8 +336,10 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/virtualvolumetexture.cpp(480): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/world.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp(163): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp(198): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldnode.cpp(740): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/worldrenderer/worldrenderermgr.cpp
+/ffff.
 /fffff.
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
@@ -352,23 +349,22 @@ $ffffff.
 0 @00
 0 `00
 0.003
+0.25 0.3 0.2
 0.707 0.707 0.0
-0E13IHandleEntity
 0[A\A^A_]
 0[A^]
 0pPPP0
 2000.0
 29C |.
 29K }
-2fffff.
 3000.0
-33s?33s?
+3ffffff.
+4$D9+
+49HcD>\H
 49K }
 49S |}
 512.0
 6[A\A^A_]
-6fff.
-6~Lfffff.
 7AtEH
 8[A\A]A^A_]
 8[A^A_]
@@ -380,10 +376,8 @@ $ffffff.
 9ffff.
 9ffffff.
 :ffffff.
-:tFL9
 ;C0t*H
-;Sxu,
-;W0}__float128
+;W(}__float128
 ;Y(uTI
 ;YHu`I
 ;ffff.
@@ -395,10 +389,11 @@ $ffffff.
 <NULL>
 <\w6H
 <empty>
+<fff.
 <no classname>
 <no targetname>
 <none>
->CMemberFunctor6<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, int, float), int, int, int, int, int, float, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+>CMemberFunctor6<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, int, float __vector(4)), int, int, int, int, int, float __vector(4), CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 >ISceneObjectDesc
 >L97t-H
 >LZMAt
@@ -411,6 +406,7 @@ $ffffff.
 @@[A^]
 @CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
 @CDeferredCallStackMarker::Remove()
+@CStackTop_Base::GetCurrentTop(bool)
 @CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
 @CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
@@ -430,6 +426,9 @@ $ffffff.
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
+@M96u/H
+@V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
 @_AssertMsg_ConditionFailed
@@ -445,26 +444,57 @@ $ffffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetCPUFrequency
 @_Plat_GetEnv
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
 @_Plat_GetOSType
 @_Plat_IsHighDPI
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
+@_Plat_NeedsLowFragmentation
 @_Plat_RelativeTicks
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_RandomFloat
 @_RandomInt
+@_RandomSeed
 @_RegisterStringToken
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
+@_V_CopyMemory3D
+@_V_FixSlashes
+@_V_GetErrno
+@_V_GetFileExtension
+@_V_SetErrno
+@_V_UTF16ToUTF8
+@_V_UTF32ToUTF8
+@_V_atan2f
+@_V_atof
+@_V_atoi
+@_V_cosf
+@_V_powf
+@_V_qsort
+@_V_qsort_s
+@_V_sinf
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtoi64
+@_V_strtoui64
+@_V_swscanf
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_vsnprintfSize
+@_V_wcstod
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__GetCallStack_Fast
 @__Unwind_Resume
+@__V_SetExtension
+@__V_StripExtension
+@__V_strncat
+@__V_strncpy
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -473,16 +503,10 @@ $ffffff.
 @___cxa_guard_acquire
 @___cxa_guard_release
 @___cxa_pure_virtual
-@___error
-@___exp10
 @___gxx_personality_v0
-@___maskrune
-@___sincosf_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
-@_atan2f
-@_atof
 @_atoi
 @_ceilf
 @_floorf
@@ -491,49 +515,34 @@ $ffffff.
 @_g_Tier1_BitWriteMasks
 @_g_pMemAlloc
 @_g_pThreadPool
-@_malloc
 @_memchr
-@_memcmp
 @_memcpy
 @_memmove
 @_memset
 @_memset_pattern16
 @_pow
 @_powf
-@_printf
 @_pthread_mutex_destroy
 @_pthread_mutex_init
 @_pthread_mutex_lock
 @_pthread_mutex_unlock
 @_pthread_mutexattr_init
 @_pthread_mutexattr_settype
-@_qsort
 @_raise
+@_roundf
 @_sscanf
 @_strchr
 @_strcmp
 @_strdup
 @_strlen
-@_strncat
 @_strstr
-@_strtod
-@_strtol
-@_strtoll
-@_strtoul
-@_strtoull
-@_swscanf
-@_vsnprintf
 @_wcslen
-@_wcstof
-@_wcstol
 @`Hc{`1
 @dyld_stub_binder
-@ffffff.
-@hkS80
 @loader_path
 @operator new(unsigned long, std::nothrow_t const&)
 @pHc{p1
-@r<Mc
+@r8Ic
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
 @rpath/libworldrenderer.dylib
@@ -588,10 +597,8 @@ A9V }
 A9V }	A
 A9W8u
 A9\$p~
-A9^@unsigned short
 A;D$ ~
-A;E|H
-A;G ~
+A;F||
 A;G(unsigned short*H
 A;M<u
 A;\$ u I
@@ -615,26 +622,28 @@ A;_hu
 A;_p|
 AABB_t
 ABGR8888
+AP;A 
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
 ARAp0p0p
 ARBRBSAXBRBRBSAXBRB`
+ARBSApH]ARA
 ARBTAp
 ARBTBRB]Ap
 ARB]ARA
 ARB]ARBRCp
 ARGB8888
-ASARBSAXBRA
+ASARBSAXBRAp
 ASARBSAXBRB`
 ASARBSAXBRCp
 ASARBSAXBSARBSAXBRBRBSAXBRBRBSAXBRA
 ASARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
-ATBRAp
 ATBRBRBRBSAXBSARBSAXBSARBSAXBRCp
 ATBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBRB]ARAp
 ATBRBRBRBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB]ARB]ARCp
-ATCRBZATBp
+ATBRBZATCRAp
+ATCRAp
 ATI1N
 ATI2N
 ATI_DST16
@@ -694,6 +703,8 @@ Attempted to ConvertToCopiedData for unsupported type (%double)
 Attempted to set attribute %short as if it was signed char non-attribute key!
 Attempting to allocate irradiance volume %p.
 Attempting to evict irradiance volume %p to make room for irradiance volume %p.
+B+D9(~%
+B+t98~ J
 BGR565
 BGR888
 BGR888_BLUESCREEN
@@ -705,12 +716,11 @@ BGRA8888_LINEAR
 BGRX5551
 BGRX8888
 BGRX8888_LINEAR
-BRBRAp
-BRBUAp
 Bad expression operator: '%char%char', expected C style boolean expression operator.
 Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
 Bad expression token: %char
 Bad line/polygon linkage
+Bad type %double in saved CVariant
 BakedLODBuilderMgr001
 Base()
 BaseSceneObjectOverride_t
@@ -719,12 +729,13 @@ BinaryProperties_GetValue
 BoneOverride_t
 BuildListAction_t CWorld::BuildRenderList_Internal(WorldTraversal_t *, int, float, int &)
 C [A^]
-C+unsigned short'X~
+C+unsigned short'`~
 C0D9pP
 C0D9xP
 C1@unsigned short/H
 C1HtMH
-C;\=Xu/H
+C8[A\A^A_]
+C;\=`u%H
 CAsyncTrackingConvar
 CAtomicManipulator<CEntityHandle>
 CAtomicManipulator<CResourceArray<BoneOverride_t> >
@@ -777,6 +788,8 @@ CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<matrix3x4_t>
+CAttributeDictSaveDataOps
+CAttributeDictSaveDataOps does not support arrays
 CBaseAppSystem<IWorldRendererMgr>
 CBaseIntrospectedTypeManager
 CBaseIntrospectedTypeManager:  Bindings don'unsigned short match.
@@ -784,6 +797,8 @@ CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
 CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
 CConCommandMemberAccessor<CWorldRendererMgr>
+CDefSaveRestoreBlockHandler
+CDefSaveRestoreOps
 CDefaultAccessor
 CDefaultIntrospectedTypeManager<1936291446ull, CWorldVisibility>
 CDefaultIntrospectedTypeManager<431316170614ull, World_t>
@@ -796,6 +811,8 @@ CDefaultIntrospectedTypeManager<8097873960414574454ull, WorldEnvironmentMaps_t>
 CDefaultTypesafeIntrospectedTypeManager<431366240118ull, WorldNode_t>
 CDeferredCallStackMarker::Remove()
 CEmptyConVar
+CEmptyEntityInstance
+CEmptyEntityInstance::CEntityInstanceEntityClass
 CEntityClass
 CEntityClass::CClassAttributes
 CEntityClass::ComponentHelper_t
@@ -821,7 +838,9 @@ CEntityKeyValues::Unserialize: Unsupported keyvalue variant type!
 CEntityKeyValues::~CEntityKeyValues()
 CEntityMgr
 CEntityOutputTemplate
+CEntitySystem
 CEnvironmentMapTextureCoordinator::~CEnvironmentMapTextureCoordinator()
+CEventQueue_SaveRestoreBlockHandler
 CExtrefTraversal
 CFieldPathHuffmanEncoder::INode
 CFieldPathHuffmanEncoder::InternalNode
@@ -841,6 +860,7 @@ CFunctor6<void (*)(unsigned char*, unsigned long, CWeakHandle<InfoForResourceTyp
 CFunctorJob
 CGrassTileObjectDesc
 CGrassTileSceneObject
+CGrassWorld
 CHandle
 CIrradVolumeTextureCoordinator::~CIrradVolumeTextureCoordinator()
 CJob
@@ -855,10 +875,13 @@ CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJo
 CMemberFunctor1<CParallelProcessorAbstract<CStreamingPrtMatrixParallelController>*, void (CParallelProcessorAbstract<CStreamingPrtMatrixParallelController>::*)(int), int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor1<CStreamingPrtMatrixInstance*, void (CStreamingPrtMatrixInstance::*)(bool), bool, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor1<CStreamingPrtMatrixInstance*, void (CStreamingPrtMatrixInstance::*)(int), int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+CMemberFunctor1<CWorldNode*, void (CWorldNode::*)(GrassLoadRequest_t*), GrassLoadRequest_t*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor2<CEnvironmentMapTextureCoordinator*, void (CEnvironmentMapTextureCoordinator::*)(IAsyncFileRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>), IAsyncFileRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor2<CIrradVolumeTextureCoordinator*, void (CIrradVolumeTextureCoordinator::*)(IAsyncFileRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>), IAsyncFileRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor2<CStreamingPrtMatrixInstance*, void (CStreamingPrtMatrixInstance::*)(int, int), int, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor3<CVirtualVolumeTextureManager*, void (CVirtualVolumeTextureManager::*)(IAsyncFileRequest*, CVirtualVolumeTexture*, LoadRequest_t*), IAsyncFileRequest*, CVirtualVolumeTexture*, LoadRequest_t*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+CMemberFunctor4<CGrassTileObjectDesc*, bool (CGrassTileObjectDesc::*)(CWeakHandle<InfoForResourceTypeIMaterial2>, CWeakHandle<InfoForResourceTypeCTextureBase>, int, bool), CStrongHandleCopyable<InfoForResourceTypeIMaterial2>, CStrongHandleCopyable<InfoForResourceTypeCTextureBase>, int, bool, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+CMemberFunctor6<CGrassTileObjectDesc*, bool (CGrassTileObjectDesc::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, unsigned char*, int, int, bool, ImageFormat), CStrongHandleCopyable<InfoForResourceTypeCTextureBase>, unsigned char*, int, int, bool, ImageFormat, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor7<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, CSOAContainer const*, int, int), int, int, int, int, CSOAContainer const*, int, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CNativeOutputs
 CNetworkVarChainer
@@ -876,6 +899,7 @@ CPolyhedron_AllocByNew
 CPolyhedron_TempMemory
 CPostConnectCallback
 CRayTracingEnvironmentPrtCallback
+CReadGrassTexturePixelsCallback
 CRefCountServiceBase<true, CRefMT>
 CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
 CRefCounted1<IRefCounted, CRefCountServiceBase<true, CRefMT> >
@@ -905,7 +929,6 @@ CSchemaClassBinding<CWorldVisNode>
 CSchemaClassBinding<CWorldVisibility>
 CSchemaClassBinding<EntClassComponentOverride_t>
 CSchemaClassBinding<EntComponentInfo_t>
-CSchemaClassBinding<EntComponentInterface_t>
 CSchemaClassBinding<EntInput_t>
 CSchemaClassBinding<EntOutput_t>
 CSchemaClassBinding<EntityIOConnectionData_t>
@@ -990,6 +1013,8 @@ CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
+CSchemaNonConstructibleClassBinding<CEmptyEntityInstance::CEntityInstanceEntityClass>
+CSchemaNonConstructibleClassBinding<CEmptyEntityInstance>
 CSchemaNonConstructibleClassBinding<CEntityClass>
 CSchemaNonConstructibleClassBinding<CEntityComponentHelper>
 CSchemaNonConstructibleClassBinding<CEntityInstance::CEntityInstanceEntityClass>
@@ -1022,7 +1047,8 @@ CScriptPrecacheContext
 CSingleWorldRep
 CSplitScreenSlot
 CStackAnnotation<CEntityInstance*, CEntityInstance*, EntityIOOutputDesc_t*, CVariantBase<CVariantDefaultAllocator>*, float, void, void, void, void>
-CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>
+CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
+CStackTop_Base::GetCurrentTop(bool)
 CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
 CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
 CStreamingEnvironmentMapMgr
@@ -1031,7 +1057,12 @@ CStreamingPrtMatrixMgr
 CStreamingPrtMatrixParallelController
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
+CTSQueue corrupt
+CTSQueue corruption
+CTSQueue: Misaligned node
 CTSQueue: Misaligned queue
+CTSQueue::Node_t *CTSQueue<CFunctor *, false>::Pop() [T = CFunctor *, bTestOptimizer = false]
+CTSQueue::Node_t *CTSQueue<CFunctor *, false>::Push(CTSQueue::Node_t *) [T = CFunctor *, bTestOptimizer = false]
 CTSQueue<CFunctor *, false>::CTSQueue() [T = CFunctor *, bTestOptimizer = false]
 CTSQueue<CFunctor *, false>::~CTSQueue() [T = CFunctor *, bTestOptimizer = false]
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
@@ -1051,9 +1082,6 @@ CTransform
 CUtlBinaryBlock
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
@@ -1064,10 +1092,11 @@ CUtlStringToken
 CUtlSymbol
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CUtlSymbolLarge
-CUtlTSOpenHash::HashEntry_t *CUtlTSOpenHash<long long, long long, 64, CUtlMaskedIntHashMethod, CUtlTSOpenHashConcurrencyModelLockFree>::FindEntry_Inline(KEYTYPE, bool *, KEYTYPE *) const [KEYTYPE = long long, VALUETYPE = long long, NBASESIZE = 64, HashFuncs = CUtlMaskedIntHashMethod, ConcurrencyModel = CUtlTSOpenHashConcurrencyModelLockFree]
+CUtlTSOpenHash::HashEntry_t *CUtlTSOpenHash<unsigned int, unsigned int, 64, CUtlMaskedIntHashMethod, CUtlTSOpenHashConcurrencyModelLockFree>::FindEntry_Inline(KEYTYPE, bool *, KEYTYPE *) const [KEYTYPE = unsigned int, VALUETYPE = unsigned int, NBASESIZE = 64, HashFuncs = CUtlMaskedIntHashMethod, ConcurrencyModel = CUtlTSOpenHashConcurrencyModelLockFree]
 CUtlVector
 CVariantBase
 CVariantDefaultAllocator
+CVariantSaveDataOps
 CVertexDataBase - No storage!
 CVertexDataBase - Tried to advance past the last vertex (%double)
 CVertexDataBase<VertexPos2DTex2D_t>::~CVertexDataBase() [T = VertexPos2DTex2D_t]
@@ -1078,11 +1107,14 @@ CWorld
 CWorld::CacheNodes
 CWorld::~CWorld()
 CWorldNode *CWorld::GetNode(int)
+CWorldNode::GrassFileCreateManifest
 CWorldNodeManager
 CWorldNodeManager::CWorldNodeManager()
 CWorldRendererMgr
 CWorldRendererMgr::CreateWorld
+CWorldRendererMgr::CreateWorld() - Failed to mount world vpk fike for world name %s.
 CWorldRendererMgr::CreateWorld_Internal( %short ):  Blocking load because marked for deletion during load
+CWorldRendererMgr::ServiceWorldRequests long frame: %fms
 CWorldRendererMgr::SetupWorldResources( %short ):  Blocking load because marked for deletion during load
 CWorldSceneObjectRef
 CWorldVisCluster
@@ -1101,15 +1133,14 @@ Cannot destroy world with externally held manifest (%short)
 Cannot destruct abstract class
 Cannot determine resource type for handle '%short' - schema data not loaded for the referred-to type?
 Cannot run script: NULL script name
-Cannot use ENTITY_COMPONENT_PRIORITY after specifying signed char spawn/activate/remove/etc. helper!
 ChangeAccessorFieldPathIndex_t
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
-ClassIntrospectionHandle_t FindDiskDataClassForResourceType(ResourceType_t)
 CmdLinkAH
 Color
 Color CVariantBase<CEntityVariantAllocator>::operator Color() const [T = CEntityVariantAllocator]
 Color CVariantBase<CVariantDefaultAllocator>::operator Color() const [CValueAllocator = CVariantDefaultAllocator]
 ComponentUnserializerClassInfo_t &ComponentUnserializerClassInfo_t::operator=(const ComponentUnserializerClassInfo_t &)
+CompressAndUploadGrassTextureJob
 ConCommand
 ConCommandBase
 ConVar
@@ -1126,14 +1157,12 @@ Container to hold keyvalues published to spawn functions in script
 Container to hold outputs published by script to game
 CopyAttrFrom
 Couldn'unsigned short ReadTexturePixels when creating grass.
-Couldn'unsigned short find or run script '%s.inspect()'
 Count
 CreateEntity
 CreateInterface
 CreateWorld for non-default lump with no spawngroup specified: '%short'
 Creating %int scene objects for node %int
 D!$Hc
-D$ fA
 D$([A\A^A_]
 D$0Hc
 D$8Hc
@@ -1150,27 +1179,30 @@ D24X4S4
 D24X8
 D24X8_SHADOW
 D9sXu
-D;!u-
-D;!u<I
-D;1u5
-D;1u6H
+D;-	C
+D;-IB
+D;-oA
+D;-yB
+D;1u4
+D;1u9H
+D;1u9I
 D;9u/H
 D;`D}!HcH@H
 D;k@u&
-D;s0uDH
+D;s0uRH
 D;s8u
 D;sP|
 D;sXu
 D;short@u*
-D;spu
+D;u/H
 D;{@u
-D=HHc
+D;{pu
+D=PHc
 DATAL
 DXT1_ONEBITALPHA
 DXT5_NM
 Dangerously short line
 DebugTextureInfo001
-Deferred
 Degenerate point
 Degenerate polygon
 DegreeEuler
@@ -1195,9 +1227,11 @@ Dump all of the worlds that we know about
 Dump the contents of an entity lump
 DynamicCubeMapTexture_EncodeOnly.vtex
 DynamicCubeMapTexture_FlipMipEncode.vtex
-E ;E(
+E D;E(
 E9o0u3H
 E9w<u
+E9w@unsigned short
+E;,$D
 E;<$A
 E;__int128 ~0
 E;float@uHI
@@ -1209,6 +1243,9 @@ E;o8u
 E;t$ 
 E;uPu$I
 E;w8u
+E;w8u!
+E;w8u"
+E;w8u%
 E;|$0
 E;|$PH
 E;|$xu
@@ -1234,8 +1271,6 @@ ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
-ERROR: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
-ERROR: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
 ERROR: Problem allocating permanent data for resource in file '%short'. See above for reason(short)
 EWorldNodeStatusFlags_t CWorld::GetNodeStatus(int)
 EconItemToolModel_001
@@ -1248,7 +1283,6 @@ Encountered too many releases for resource "%short"
 EngineServiceMgr001
 EntClassComponentOverride_t
 EntComponentInfo_t
-EntComponentInterface_t
 EntInput_t
 EntOutput_t
 Entity "%short" encountered an error in RunPrivateScript()
@@ -1259,6 +1293,9 @@ Entity Load Unserialize
 Entity System
 EntityDormancyType_t
 EntityIOConnectionData_t
+EntityIOConnectionDesc_t
+EntityIOConnection_t
+EntityIOQueuePrioritizedEvent_t
 EntityIOTargetType_t
 EntityKeyValueData_t
 EntityLumpFlags_t
@@ -1266,19 +1303,19 @@ EnvironmentMapBuilder_001
 EnvironmentMaps
 Error loading resource "%short" (Invalid resource version: %double != %double)
 Error running script named %short
+EventQueue
 EventSystem001
 Evicting env map in slot %double
 Expected %float but got %float!
 Expected %lld but got something different!
 ExtraVertexStreamOverride_t
 F Hcz 1
-F09XP
 F0Hcz01
 F@H+F8H
 FCVAR_NEVER_AS_STRING
 FHA;F
 FLHczL1
-FX@unsigned short*H
+FP@unsigned short*H
 F`Hcz`1
 Failed to activate script entity %short of type %short: script entity instance is null
 Failed to allocate %double long long %double long long %double region in the irradiance texture atlas for irradiance volume %p.
@@ -1289,23 +1326,18 @@ Failed to call CBaseIntrospectedTypeManager::Init
 Failed to call CBaseIntrospectedTypeManager::SetDiskDataBinding
 Failed to find an appropriate irradiance volume to evict to make room for %p.
 Failed to find the center point for irradiance volume %p
-Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in: '%short'
+Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in extref block.'
 Failed to load geometry for level %short
 Failed to mount world vpk fike %short, file could not be found.
 Failed to precache script entity %short of type %short: script entity instance is null
-Failed to read grass file %short
 Failed to spawn script entity %short of type %short: script entity instance is null
 Failed to stream primary relighting data!
 Failed to unmount world vpk fike %short, file could not be found.
 Failed to update on remove script entity %short of type %short: script entity instance is null
-Failed, non-string script result type %double
-Failed, nonsensical script result %double
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
 FillAttr
 Fire an entity output
 FireOutput
-FixupResourceName: Illegal full path passed in ("%short")!
-FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FlattenedSerializersVersion001
 FloatBitMap::QuarterSize
 FloatBitMap_t::CopyFloatBitmap: Received NULL pointer!
@@ -1328,6 +1360,7 @@ G0HcHLH
 G8H	p(]
 G8I;G@
 G8IcD$
+GA#D$
 GAMECONSOLE
 GLOBAL_ILLUMINATION_AMBIENT_OCCLUSION
 GLOBAL_ILLUMINATION_BAKE
@@ -1338,7 +1371,8 @@ GameResourceServiceServerV001
 GameStartup
 GameUIService_001
 GenerateGrassTexture
-GenerateGrassTexture failed!
+GenerateGrassTexture failed for albedo!
+GenerateGrassTexture failed for specular!
 GeneratePolyhedronFromPlanes_Point *AllocatePoint(GeneratePolyhedronFromPlanes_UnorderedPointLL *&, CStackItemDispenser<GeneratePolyhedronFromPlanes_UnorderedPointLL> &, int &)
 Generated signed char point on top of another
 Get Integer Attribute
@@ -1367,7 +1401,7 @@ GrassDensity.vtex
 GrassDepth.vtex
 GrassObject
 GrassQuad.vtex
-GrassQuadMaterial
+GrassQuadSpecular.vtex
 GrassRenderTexture.vtex
 GrassSkewBrightness.vtex
 GrassTileDirectionalIB
@@ -1406,8 +1440,8 @@ HammerMapLoader001
 HasAllocatedMemory( nDestAttr )
 Hc@0H
 Hc@XH
+HcBxH
 HcC@H
-HcD2\H
 HcH(H
 HcH0H
 HcH8H
@@ -1418,14 +1452,14 @@ HcH`H
 HcHhH
 HcHpH
 HcHxH
-HcI@H
-HcM0H
+HcKHD
 HcP HcT
 HcPLH
 HcPhH
 HcPpH
 HcQL1
-HcW8t	;WP
+HcR0H
+HcW8t	;WH
 HcX Hc\
 HcXhD
 HcrL1
@@ -1480,9 +1514,12 @@ IPrtTraceCallback
 IQuickTime001
 IRRADVOLUME_FLAGS_NONE
 IRRADVOLUME_FLAG_AUTO_GENERATED
+IReadTexturePixelsCallback
 IRefCounted
 IResourceAllocatorUtils
 IResourceTypeManager
+ISaveRestoreBlockHandler
+ISaveRestoreOps
 ISchemaBinding
 ISchemaCollectionManipulator
 ISchemaInspectionManipulator
@@ -1493,19 +1530,18 @@ IStack_Annotation::~IStack_Annotation()
 IStreamingEnvironmentMapMgr
 IStreamingIrradVolumeMgr
 IStreamingPrtMatrixMgr
+IToolsResourceListener
 IWorld
 IWorldReference
 IWorldRendererMgr
-IcD$hH
 IcE H
-IcExL
 IcF0H
 IcF8I9
+IcFpH
 IcO8H9
 IcT$PH
 IcVXH
 Ic_ H
-Ic_HD9
 ImageLoader::GetMemRequired( NumCols(), NumRows(), NumSlices(), 1, fmt ) == ( int )nBufSize
 IncludeScript stack overflow
 InfoForResourceTypeCEntityLump
@@ -1575,10 +1611,9 @@ KeyValueCache001
 KeyValues
 KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
-KeyValues *KeyValues::GetFirstSubKey()
 KeyValues *KeyValues::GetFirstTrueSubKey()
 KeyValues *KeyValues::GetFirstValue()
-KeyValues *KeyValues::GetNextKey()
+KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextTrueSubKey()
 KeyValues *KeyValues::GetNextValue()
 KeyValues Error: %short in file %short
@@ -1586,7 +1621,6 @@ KeyValues::FindKey called on NULL pointer!
 KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
 L$LfD
 L$\fD
-L9#unsigned short	H
 L90t*H
 LE_BGRA8888
 LE_BGRX8888
@@ -1603,9 +1637,11 @@ LINEAR_RGBA16161616
 LINEAR_RGBA8888
 LINUX
 LOWVIOLENCE
+LcU0HcE
 Lcp E
 Lcp4E1
-Lfff.
+LcsHE9
+LcxXM
 LightTreeResourceData_t
 LightingBuilderMgr001
 Line endpoint mismatch
@@ -1619,6 +1655,9 @@ Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
+Long grass load frame: %float ms for %double grass tiles
+M33s?33s?
+M96u/H
 MATCHFRAMEWORK_001
 MDiskDataForResourceType
 MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle_t
@@ -1632,6 +1671,7 @@ MNetworkPriority
 MNetworkSerializeAs
 MNetworkVarNames
 MNoScatter
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MResourceTypeForInfoType
 MResourceVersion
@@ -1679,11 +1719,11 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 NhHczh1
-No VM
 No conversion from %short to bool now
 No conversion from %short to string at the moment!
 No free conversion of %short variant to %short right now
 No free conversion of %short variant to HSCRIPT right now
+No free conversion of %short variant to Vector right now
 NodeData_t
 North
 NxHczx1
@@ -1699,12 +1739,14 @@ OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND
 ObjectTypeFlags_t
 Offffff.
 OnDiskBufferData_t
+Only DXT1/DXT5 online texture compression supported.
 Ordered object did not begin in signed char zeroed state
 Output
 Output unserialization of entities on map load. 0 - off, 1 - client/server, 2 - server, 3 - client
 Override fademaxdist for purposes of streaming visiblity calculation.
 P p@P
-P@``@0
+P@p`@0
+PEvent
 POSIX
 PPL;}
 PRTMatrixData_t
@@ -1722,6 +1764,7 @@ Param
 ParticleSystemMgr002
 Pending List:
 PermEntityLumpData_t
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PixRGBAF FloatBitMap_t::PixelRGBAF(int, int, int) const
@@ -1741,8 +1784,9 @@ RAp0p
 RAphp8p
 RBRAp
 RBRBRBRBRBRAp
-RBRBWARATAVATARBp
-RBRBp(p
+RBRBRBUAp
+RBRBXARATBVATARBp
+RBRBp8p
 RBRGp8p8p
 RBSAXAp
 RBSAXBRAp
@@ -1799,8 +1843,9 @@ Removes signed char connected script function from an I/O event on this entity.
 Render the world.
 Render world node bounds
 RenderBufferBinding_t
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
+RenderGrassTextureJob
 RenderHardwareConfig002
 RenderInputLayout_t CTSInputLayoutCreator::GetLayout()
 RenderService_001
@@ -1809,21 +1854,19 @@ RenderUtils_001
 Resource %short
 ResourceCompilerSystem001
 ResourceHandleUtils001
-ResourceId_t UpdateResourceIdForUGC(const char *, UGCHandle_t, ResourceId_t, const CResourceRefTable *, char *, int)
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 ResourceType_t GetResourceTypeOfWeakHandle(const CSchemaType *)
 Retrieve the private per-instance script-side data associated with an entity
 Retrieve the public script-side data associated with an entity
 Retrieve, creating if necessary, the private per-instance script-side data associated with an entity
 Retrieve, creating if necessary, the public script-side data associated with an entity
+Rfffff.
 Ridiculously short line
 Root entity class
 RunScriptCode
 RunScriptFile
 S0HcrLH
-SATAp
 SAXBSARBSAXBSARBSAXBSARBSAXBRB`
 SSE and SSE2 are required.
 ScaleformUI001
@@ -1834,7 +1877,6 @@ Schema Field
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
-Script Binding Component
 Script failed to find output "%short"
 Script not found (%short) 
 ScriptFireOutput
@@ -1855,7 +1897,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -1866,7 +1908,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 South
 Spawn
 StatsService_001
@@ -1876,39 +1918,41 @@ SubFloat( pPointWalk->point.ptPosition, 3 ) == -1.0f
 Successfully allocated irradiance volume %p.
 Successfully deallocated irradiance volume %p
 T &CUtlStringMap<int, CUtlSymbolTable>::operator[](UtlSymId_t) [T = int, SymbolTableType_t = CUtlSymbolTable]
-T *CSOAContainer::ElementPointer(int, int, int, int) const [T = float]
 T *CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t, short>, CEntityKeyValues::KeyValueInfo_t, short>::AddToTailGetPtr() [B = CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t, short>, T = CEntityKeyValues::KeyValueInfo_t, I = short]
 T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int, 9, short>, unsigned int, short>::AddToTailGetPtr() [B = CUtlLeanVectorFixedGrowableBase<unsigned int, 9, short>, T = unsigned int, I = short]
 T CUtlObjectAttributeTable<CEntityIdentity, CUtlStringToken>::GetValue(KEYTYPE, T, bool *) [OBJECTTYPE = CEntityIdentity, KEYTYPE = CUtlStringToken, T = int]
-TARBp
-TA`6ATAp
+TASBRBp0p0TBp
+TA`5Ap
 TBRAp
 TBRBRBRAp
+TBRBRBSATAp
 TBRBSATAp
-TBRBVATARAp
+TBRBp0p
 TBSAp
 TBTARAUCTAY0
 TBTAp
 TBTBRJp
+TBTBp
 TB`+ASATAp
+TB`5Ap
 TB`6ATAp
-TB`;ARBRBUATAp
+TB`AARBRBUATAp
 TCRAp
-TCRBRAp
 TCRBRDp
-TCRBSATAp
 TCRBTBp
+TCRBVATARAp
 TCRBp
-TCSA`
+TCTAp
 TCTBRBRBSATAp
 TCTBSATAp
-TCTBp
 TCUATAp
 TCVATARAp
-TCZATA
-TC\Ap
+TCVAp
+TC[ATBp
+TC]AVAp
 TCp(p
-TFVATARAp
+TCp0p0p(p
+TFVATAp
 THRAp
 THc{T1
 Temporary polyhedron memory being rewritten before released
@@ -1917,7 +1961,7 @@ TextLayout_001
 TextMessageMgr_001
 There'short signed char polygon missing
 This case should only happen between two new points.
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -1927,16 +1971,15 @@ ToolsStartup
 Track Entity I/O call stacks across the event queue
 Tried to destroy (from script) signed char networked entity (%double/%short) on the client, the server controls lifespan, ignoring
 Trying to cast '%short' to signed char different resource type!
-Two components have the same batch index! This is illegal!
 TypeManager
 UNKNOWN
 UPDATE_STRING_TOKEN_DATABASE
+UUUUA9
 UVLX8888
 UVWQ8888
 Unable to stream in envmap texture "%short" (Error: %short)
 Unable to stream in irradiance texture "%short" (Error: %short)
 Unhandled field type for field '%short': '%short' (Why did it pass SchemaRecurseType?)
-Unknown eInspectionDetail_t %double
 Unknown image format in gameinfo.gi WorldRenderer/EnvironmentMapFormat. Defaulting to DXT5.
 Unknown job state
 UnmountWorldVPK() --%short is at refcount %double
@@ -1944,16 +1987,12 @@ Unrecognized data type in attribute dict!
 Unsupported Grass File Version. Expected %d. Found %double
 Unsupported number of values found in grass tile. Expected %d. Found %double
 UpdateOnRemove
-UpdateOnRemove() was not chained to the base class in entity %short (signed char %short)!
 Usage: %short <world_name> <layer_name> <visible>
 Usage: %short <world_name> <lump_name>
-Use of BatchSpawnDependencyIsland has no default implementation
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 UtlHashHandle_t CUtlHash<CWorldSceneObjectRef *, bool (*)(CWorldSceneObjectRef *const &, CWorldSceneObjectRef *const &), unsigned int (*)(CWorldSceneObjectRef *const &)>::BuildHandle(int, int) const [Data = CWorldSceneObjectRef *, C = bool (*)(CWorldSceneObjectRef *const &, CWorldSceneObjectRef *const &), K = unsigned int (*)(CWorldSceneObjectRef *const &)]
 UtlSymId_t CUtlStringMap<int, CUtlSymbolTable>::Insert(const char *, const T &) [T = int, SymbolTableType_t = CUtlSymbolTable]
-V8ff.
-V8ffffff.
 VATARAp
 VApplication001
 VAvi001
@@ -1971,7 +2010,6 @@ VGUI_Scheme010
 VGUI_Surface032
 VGUI_System010
 VGUI_ivgui008
-VM Inspection
 VMDLLIB001
 VMapResourceData_t
 VMaterialSystem2_001
@@ -1992,6 +2030,8 @@ VScriptManager010
 VStringTokenSystem001
 VUUUH
 VUUUL
+V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+V_stristr_fast(char const*, char const*)
 V_uuid_t
 Vector
 Vector2D
@@ -2002,9 +2042,11 @@ VirtualVolume Physical Texture.vtex
 VirtualVolume TLB Texture.vtex
 VirtualVolumeTexData_t
 VisBuilder_001
+WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Invalid mesh version '%double' for file: %short
 WARNING: Missing data block for file: %short
 WARNING: Missing introspection manifest for file: %short
+WARNING: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
 WARNING: Problems encounted with external references in resource '%short'. See above for reason(short)
 WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
 WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
@@ -2039,7 +2081,7 @@ XBRB`
 XBTBRB]ARBRAp
 X[A\A]A^A_]
 X[A^A_]
-Yffff.
+Y>t$7?*
 Yfffff.
 You cannot set key values outside of signed char CEntityKeyValuesModifyScope scope!
 Zfff.
@@ -2047,7 +2089,6 @@ Zfff.
 [A\A]A^A_]A
 [A\A^A_]
 [A^A_]
-[A^]A
 [Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
 [PR#]
 [unsigned short,fD
@@ -2075,29 +2116,60 @@ _LoggingSystem_GetChannel
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetCPUFrequency
 _Plat_GetEnv
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
 _Plat_GetOSType
 _Plat_IsHighDPI
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
+_Plat_NeedsLowFragmentation
 _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _RandomFloat
 _RandomInt
+_RandomSeed
 _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
+_V_CopyMemory3D
+_V_FixSlashes
+_V_GetErrno
+_V_GetFileExtension
+_V_SetErrno
+_V_UTF16ToUTF8
+_V_UTF32ToUTF8
+_V_atan2f
+_V_atof
+_V_atoi
+_V_cosf
+_V_powf
+_V_qsort
+_V_qsort_s
+_V_sinf
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtoi64
+_V_strtoui64
+_V_swscanf
+_V_vsnprintf
+_V_vsnprintfRet
+_V_vsnprintfSize
+_V_wcstod
+_V_wcstoi64
 _Warning
 __DATA
-__DefaultRuneLocale
 __GetCallStack_Fast
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_SetExtension
+__V_StripExtension
+__V_strncat
+__V_strncpy
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -2106,11 +2178,7 @@ ___cxa_guard_abort
 ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
-___error
-___exp10
 ___gxx_personality_v0
-___maskrune
-___sincosf_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___tolower
@@ -2130,8 +2198,6 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atan2f
-_atof
 _atoi
 _ceilf
 _floorf
@@ -2140,46 +2206,34 @@ _g_Mathlib_GammaToLinearByteTable
 _g_Tier1_BitWriteMasks
 _g_pMemAlloc
 _g_pThreadPool
-_malloc
 _memchr
-_memcmp
 _memcpy
 _memmove
 _memset
 _memset_pattern16
 _powf
-_printf
 _pthread_mutex_destroy
 _pthread_mutex_init
 _pthread_mutex_lock
 _pthread_mutex_unlock
 _pthread_mutexattr_init
 _pthread_mutexattr_settype
-_qsort
 _raise
+_roundf
 _sscanf
 _strchr
 _strcmp
 _strdup
 _strlen
-_strncat
 _strnlen
 _strstr
-_strtod
-_strtol
-_strtoll
-_strtoul
-_strtoull
-_swscanf
-_vsnprintf
 _wcslen
-_wcstof
-_wcstol
 `[A\A^A_]
 `unsigned char[A\A^A_]
 activator
 async_track_entity_io
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto CWorld::GetNode(int)::(anonymous class)::operator()() const
 bFound
 bIgnoreSimulationCheck || IsInSimulation()
 bNonDegenerate
@@ -2190,6 +2244,7 @@ bitNum >= 0 && bitNum < this->GetNumBits()
 bool CBitVecT<CVarBitVecBase<unsigned short, 32> >::IsBitSet(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
 bool CEntityKeyValues::Unserialize(CUtlBuffer &)
 bool CEntityKeyValues::UnserializeKeys(CUtlBuffer &, int, bool)
+bool CGrassTileObjectDesc::CompressAndUploadGrassTexture(HRenderTexture, uint8 *, int, int, bool, ImageFormat)
 bool CStreamingEnvironmentMapMgr::AllocateDynamicTexture(StreamingEnvironmentMap_t *)
 bool CStreamingEnvironmentMapMgr::FreeDynamicTexture(StreamingEnvironmentMap_t *)
 bool CStreamingEnvironmentMapMgr::StreamOut(StreamingEnvironmentMap_t *)
@@ -2199,7 +2254,6 @@ bool CUtlQueue<CWeakHandle<InfoForResourceTypeCTextureBase>, CUtlMemory<CWeakHan
 bool CWorld::AreAllNodesCached() const
 bool CWorld::IsNodeRenderable(int)
 bool CWorldRendererMgr::DestroyWorldForReal(CSingleWorldRep *)
-bool CWorldRendererMgr::MountWorldVPK(const char *, bool)
 bool CWorldRendererMgr::UnmountWorldVPK(const char *)
 bool CanBeAppliedToReceivers(StreamingEnvironmentMap_t *)
 bool EnvironmentMapStorageImageFormatIsLinear()
@@ -2222,17 +2276,14 @@ bool bf_write::WriteBits(const void *, int)
 boolean
 buffer
 caller
-char *_V_strncat(char *, const char *, int, int)
 character
 color
-color32
 const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
 const ResourceBlockEntry_t *Resource_GetBlockEntry(const ResourceFileHeader_t *, ResourceBlockId_t)
 const T &CUtlBlockMemory<CacheOptimizedTriangle_t, int>::operator[](I) const [T = CacheOptimizedTriangle_t, I = int]
 const char *CFmtStrN<256, false>::sprintf(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
 const char *KeyValues::GetName() const
-const char *V_stristr_fast(const char *, const char *)
 const void *CUtlBuffer::PeekGet(int, int)
 const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 count >= 0
@@ -2240,7 +2291,6 @@ cstring
 cubeblur
 dHcHpH
 dat->m_pPeer == NULL
-destBufferSize >= 0
 dstStride == 0
 dyld_stub_binder
 ehandle
@@ -2263,10 +2313,10 @@ false
 ffff.
 fffff.
 ffffff.
+fieldInfo.pTypeDesc->fieldSize == 1
 filesystem_stdio
 filetoinclude
 float
-float &CSOAContainer::FloatValue(int, int, int, int) const
 float &FloatBitMap_t::Alpha(int, int, int) const
 float &FloatBitMap_t::Pixel(int, int, int, int) const
 float CGlobalVarsBase::curtime(bool) const
@@ -2288,32 +2338,22 @@ g_pWorldRendererMgrImp == this
 gfff.
 gm_ClassAttributes
 gm_ComponentInfosById
-gm_fComponentsAccessible
 gm_fComponentsContained
 hHcXpD
 hIc>I
 hPublicInstance != INVALID_HSCRIPT
-hResource->m_nDeferredCount < hResource->m_nRefCount
-hResource->m_nDeferredCount <= hResource->m_nRefCount
-hResource->m_nDeferredCount > 0
-hResource->m_nDeferredCount >= 0
 hResource->m_nRefCount > 0
 hfff.
 hffff.
 hscript
 hscript_lightbinding
-hu-...+H
 iBitsRight > 0
 iCount >= 3
 iIndex < (1<<MAX_EDICT_BITS)
 iSurroundedCount <= 1
 iValidLineForNewPolygon_ReferenceIndex != -1
+iffff.
 in1 != out
-info.m_pReplacementString == 0
-inspect
-int != m_EntitiesWithComponent.InvalidIndex()
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = unsigned short, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<unsigned short, &V_UTF16ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
-int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = char, TDecodeSrc = (anonymous namespace)::DecodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&V_UChar32ToUTF8Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<char, &V_UChar32ToUTF8>]
 int CKeyValues_Data::Internal_GetInt()
 int CSchemaInheritanceIterator::PopulateTraversal_R(ClassIntrospectionHandle_t, ClassIntrospectionHandle_t, uint32, bool, bool)
 int CUtlOctree::GetChild(int, int) const
@@ -2327,23 +2367,19 @@ int CVirtualVolumeTexture::EvictPage()
 int Extract4PositionsAndNormals(FourVectors *, FourVectors *, PrtPositionBufferHandle_t, int)
 int MipOffset(int, int)
 int NumMipLevelsForEnvironmentMapSize(int)
-int ResourceRelease(ResourceHandle_t, bool, uintp, ResourceLeakTrackingGroup_t)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
+int ResourceRelease(ResourceHandle_t, uintp, ResourceLeakTrackingGroup_t)
 int _V_strncmp(const char *, const char *, int)
 int32
 int64
-int64 V_atoi64(const char *)
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
 integer
-invalid input pointer
 irrad_atlas_print_stats
 irrad_flush
 irrad_maxstreams
 irrad_overridefademaxdist
 irrad_streamingthreshold
 irrad_suppress
+iszString
 jffff.
 jfffff.
 js_array
@@ -2352,6 +2388,7 @@ js_raw_args
 js_value
 key != m_nDeletedKeyValue
 key != m_nEmptyKeyValue
+l$xE1
 lHcHxH
 lerpRect.depth > 0
 lerpRect.height > 0
@@ -2378,6 +2415,7 @@ m_EnvironmentMaps.HasElement( pEnvironmentMap )
 m_EnvironmentMaps[ int ]->m_bStreamingTextureRequested == false
 m_FirstFree == InvalidIndex()
 m_Flags
+m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_ImageVertices
@@ -2403,14 +2441,15 @@ m_Root == InvalidIndex()
 m_SerializedOctree
 m_Textures.Count() == 0
 m_Textures.IsValidIndex( idx )
-m_bCannotSetPriority
 m_bChildHierarchyUpToDate
 m_bInitialized.Load()
+m_bMarkedForRemoval
 m_bSkyRelight
 m_bWrapInAtlas
 m_boneHashes
 m_boneOverrides
 m_boneTransforms
+m_bool
 m_builderParams
 m_channelPageResX
 m_channelPageResY
@@ -2437,6 +2476,7 @@ m_flFadeMaxDist
 m_flFadeMinDist
 m_flFadeStartDistance
 m_flFarVisibleDistance
+m_flFireTime
 m_flGutterSize
 m_flHalfScreenWidth
 m_flHeight
@@ -2451,15 +2491,22 @@ m_flNearVisibleDistance
 m_flUVMapThreshold
 m_flWidth
 m_flags
+m_float
 m_fnChangeCallbacks.Count() == 0
 m_globalIlluminationMethod
 m_grassFileName
+m_hActivator
+m_hCaller
+m_hEntTarget
+m_hEntity
+m_hTarget
 m_head != QUEUE_ITERATOR_INVALID
 m_iDataType == TYPE_NONE
-m_iRuntimeIndex
+m_iEventListCount
 m_imageFormats
 m_infoOverlays
 m_inputName
+m_int
 m_irradVolumes
 m_iszPrivateVScripts
 m_keyValuesData
@@ -2479,30 +2526,28 @@ m_nBytesFree == 0
 m_nChildren
 m_nClusterCount
 m_nCompressedAtlasSize
+m_nCubeMapPrecomputedHandshake
 m_nData
-m_nDataType[ nAttrIdx ] == nDataType
-m_nDataType[nAttributeIdx] != ATTRDATATYPE_4V
-m_nDataType[nAttributeIdx] != ATTRDATATYPE_NONE
 m_nDataType[nDestAttributeIndex] == other.m_nDataType[nSrcAttributeIndex]
 m_nDrawCallIndex
 m_nEnvMapTextureStreamsInFlight > 0
 m_nEnvMapTextureStreamsInFlight >= 0
 m_nFlags
 m_nInputCount
-m_nInterfaces
+m_nLightGroup
+m_nLightProbeVolumePrecomputedHandshake
 m_nLoadItemsPending == 0
 m_nMaxTexScaleSlots
 m_nNodeCount
 m_nNumParameters < MAX_SCRIPT_FUNCTION_PARAMETERS
 m_nObjectID
 m_nObjectTypeFlags
-m_nOffset
 m_nOutputCount
+m_nOutputID
 m_nOverlayRenderOrder
 m_nPageDataTotalSize
 m_nParent
 m_nPlanes
-m_nPostReferenceOffset
 m_nPrimaryRelightDataOffset
 m_nPrimaryRelightDataSize
 m_nPrimaryRelightDataSizeUncompressed
@@ -2531,11 +2576,11 @@ m_nSequenceOverride
 m_nSizeBytesPerVoxel
 m_nSortKey
 m_nSubSceneObject
+m_nTargetType
 m_nTextureArray >= 0
 m_nTextureDepth
 m_nTextureHeight
 m_nTextureWidth
-m_nThinks
 m_nTimesToFire
 m_nTransmitterMaterialsOffset
 m_nTransmitterMaterialsSize
@@ -2558,15 +2603,13 @@ m_outputName
 m_overlayLayerIndices
 m_overrideParam
 m_pAttachedDest && (m_pAttachedDest->m_pAttachedSource == this)
+m_pAttributes
 m_pBaseClassComponentHelper
 m_pBaseClassInfo
-m_pBatchIndex
 m_pCPPClassname
-m_pCategory
 m_pClass
 m_pClassInfo
 m_pComponentOverrides
-m_pDescription
 m_pEntity
 m_pFirstByClass != pEntity
 m_pFirstByClass->m_pPrevByClass == NULL
@@ -2575,7 +2618,6 @@ m_pHeader->m_nPageDataTotalSize >= m_pHeader->m_pageOffsets[ nVirtualPageIndex ]
 m_pId
 m_pInfo
 m_pInputs
-m_pInterfaces
 m_pMaterial
 m_pName
 m_pNetworkDataReferencedDescription
@@ -2593,6 +2635,8 @@ m_pPrev
 m_pPrevByClass
 m_pSceneWorld == NULL || m_pSceneWorld == pSceneWorld
 m_pSchemaType != NULL
+m_pTarget
+m_pTargetInput
 m_pTypeOf != NULL
 m_pWorldData
 m_pWorldNodeData
@@ -2614,6 +2658,8 @@ m_skin
 m_status.Load() < JOB_OK
 m_tail != QUEUE_ITERATOR_INVALID
 m_tail == QUEUE_ITERATOR_INVALID
+m_targetDesc
+m_targetInput
 m_targetName
 m_targetType
 m_texture
@@ -2622,10 +2668,10 @@ m_type == FIELD_COLOR32
 m_type == FIELD_FLOAT
 m_type == FIELD_HSCRIPT
 m_type == FIELD_INTEGER
-m_uuid
+m_uint
 m_vBoundsMax
 m_vBoundsMin
-m_vCubeMapOrigin
+m_vLightingOrigin
 m_vMaxBounds
 m_vMaxs
 m_vMinBounds
@@ -2641,6 +2687,8 @@ m_vTransform
 m_vUVEnd
 m_vUVStart
 m_vWorldUnitsPerTile
+m_valueOverride
+m_variantValue
 m_visDataDwords
 m_worldGroupId
 m_worldNodePrefix
@@ -2658,8 +2706,6 @@ materials/grass/grasstile.vmat
 materials/tools/encode_environment_map.vmat
 matrix3x4_t
 matrix3x4a_t
-maxLen > 0
-maxLen >= sizeof( *pDest )
 meshsystem
 mffff.
 msk<8
@@ -2671,8 +2717,6 @@ nArguments == 2
 nArguments == 3
 nArguments == 5
 nAttrIdx < MAX_SOA_FIELDS
-nAttrIdx >= 0
-nAttributeIdx < MAX_SOA_FIELDS
 nBits <= nBytes*8
 nBlockSize <= 128 * 1024
 nBlockSize >= 16 * sizeof( MemoryBlock_t )
@@ -2684,19 +2728,21 @@ nCount
 nFace < ENVIRONMENT_MAP_NUM_FACES
 nFace >= 0
 nFlags >= 0 && nFlags <= UINT8_MAX
-nGlobalTileIndex == pHeader->m_nTotalTiles
+nHeight == GRASS_QUAD_SIZE
 nIdx >= 0 && nIdx <= INT8_MAX
 nIndex >= 0 && nIndex <= 255
 nMaxChars > 0
 nMaxGrassVertices <= 65536
 nMemRequired == ( int )nBufSize
 nNode >= 0 && nNode < m_pWorldData->m_worldNodes.Count()
+nPitchInBytes == GRASS_QUAD_SIZE * 4
 nPixelCount == NumCols() * NumRows() * NumSlices()
 nPositions
 nRef == 0
 nRenderSize >= nFaceSize
 nRequiredTextureSizeFallback >= 0 && nRequiredTextureSizeFallback <= UINT16_MAX
 nResourceType != RESOURCE_TYPE_NONE
+nResourceType == DeduceResourceTypeFromResourceName( pReferencedResourceName )
 nSize != 0
 nStartX % m_pHeader->m_channelPageResX[int] == 0
 nStartY % m_pHeader->m_channelPageResY[int] == 0
@@ -2704,12 +2750,11 @@ nStartZ % m_pHeader->m_channelPageResZ[int] == 0
 nStride >= 3
 nTexels == MAX_TILE_SIZE * MAX_TILE_SIZE
 nTraversalOffset == 0
+nTries < 10000000
 nVertices < nMaxLerpWeights
+nWidth == GRASS_QUAD_SIZE
 nWorld >= 0 && nWorld < m_worldList.Count()
 nWorld >= 0 && nWorld <= m_worldList.Count()
-nX < m_nColumns
-nY < m_nRows
-nZ < m_nSlices
 newBuildPath.m_nNextStartBit <= ( sizeof( RayTracingEnvironmentHierarchyPathBits_t ) * 8 )
 nfffff.
 normal
@@ -2731,22 +2776,19 @@ other.m_atomicFields.Count() == 0
 other.m_outputFields.Count() == 0
 other.m_postUnserializeHandlers.Count() == 0
 other.m_ptrFields.Count() == 0
-outStrings.Count() == 0
 outputid
-p(pxp
+p(pxRApHpXRAp(pxp
 p0Hc{01
-p8p0p
 p8p8p
-p8p8ppVATARAp
+p8p8p@VATARAp
 pActivePointWalk->pNext != NULL
 pActivePointWalk->point.fPlaneDist <= fCheckSorting
+pActualDesc != nullptr
 pAllocation->m_hTexture != RENDER_TEXTURE_HANDLE_INVALID
 pAtomicType
-pBatchCount[nBatchIndex] <= nEntityCount
 pBlob
 pBoundaryDesc
 pCallback == NULL
-pComponent
 pContext
 pCurrent->bConcaveVisited == false
 pCurrentKey
@@ -2799,14 +2841,13 @@ pNodeData
 pNodeData->m_sceneObjects.Count() == pNodeData->m_sceneObjectLayerIndices.Count()
 pOnPlaneLineWalk->pLine->pPolygons[pOnPlaneLineWalk->iReferenceIndex] == pPolygon
 pOnPlaneLineWalk->pLine->planarity == LINE_ONPLANE
+pPVBRAp
 pParamClass && pParamClass->GetClass()
 pPoint->planarity != POINT_ALIVE
 pPool->m_SpaceUsed < 0xFFFF
 pPositionBuffer->m_BlockBoundingSpheres.Count() == pLightInfo->m_BlockBits.Count()
 pPrtMatrix
 pRedundantLine->pNext == pSurvivingLine
-pReferencedResourceName != NULL
-pReferencedResourceName == NULL
 pRelightData0->m_ChunkCoefficientStarts.Count() == pRelightDatai->m_ChunkCoefficientStarts.Count()
 pRelightData0->m_nReceiverCount == pRelightDatai->m_nReceiverCount
 pRelightDatai->m_nReceiverCount * pOutIndirectLight->m_nStride == pOutIndirectLight->m_LightBuffer.Count()
@@ -2820,7 +2861,6 @@ pResult->width == size.x && pResult->height == size.y && pResult->depth == size.
 pReturn
 pRootLump
 pSchemaSystem != NULL
-pSearch
 pSourceDesc
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
@@ -2839,10 +2879,10 @@ pWorldNode
 pWorldRep->m_refCount == 0
 pXRERA
 pXRERAp
-pXRESBp p
+pXRESAp
 pXRESC
 pXp8p
-pfffff.
+p[A\A^A_]
 phHc{h1
 pos<4
 position
@@ -2858,7 +2898,7 @@ pszOverrideComponent
 pxHc{x1
 qangle
 quaternion
-r(fff.
+r'ffffff.
 r)ffff.
 r-fff.
 r5fffff.
@@ -2872,15 +2912,19 @@ r_drawworld
 r_grass_alpha_test
 r_grass_density_mode
 r_grass_end_fade
+r_grass_max_brightness_change
 r_grass_quality
 r_grass_quality.GetInt() > 0
 r_grass_start_fade
 r_grass_vertex_lighting
-r_grass_wind_dir
-r_grass_wind_frequency
-r_grass_wind_speed
-r_grass_wind_strength
 r_render_world_node_bounds
+r_world_frame_load_threshold_ms
+r_world_wind_dir
+r_world_wind_frequency_grass
+r_world_wind_frequency_trees
+r_world_wind_offset_speed
+r_world_wind_smooth_time
+r_world_wind_strength
 radr://5614542
 resourceName
 resourcehandle
@@ -2903,8 +2947,6 @@ scripts/vscripts/
 scripts/vscripts/%short
 size < 1024 * 1024
 size >= 0
-size_t CSOAContainer::ItemByteStride(int) const
-sm_nOutputId
 sm_pMemoryPool
 sm_pMemoryPool == pMemoryPool
 src.HasAllocatedMemory( nSrcAttr )
@@ -2959,7 +3001,6 @@ static void CWorldVisNode::Schema_VerifyBindingIsRegistered()
 static void CWorldVisibility::Schema_VerifyBindingIsRegistered()
 static void EntClassComponentOverride_t::Schema_VerifyBindingIsRegistered()
 static void EntComponentInfo_t::Schema_VerifyBindingIsRegistered()
-static void EntComponentInterface_t::Schema_VerifyBindingIsRegistered()
 static void EntInput_t::Schema_VerifyBindingIsRegistered()
 static void EntOutput_t::Schema_VerifyBindingIsRegistered()
 static void EntityIOConnectionData_t::Schema_VerifyBindingIsRegistered()
@@ -2987,36 +3028,41 @@ std::terminate()
 strnlen
 t$ Ic
 t$8[A\A^A_]
-t$H9[8u
-t5I;O
-t7I;|$
-t8ffffff.
+t.ff.
+t2ffffff.
+t3ff.
+t5ffff.
 t9IcG
 tBfffff.
 tCfffff.
+tHD;long double
+tHD;unsigned long
+tHfff.
 tIffff.
 tLMc~
 tMff.
+tOA;L$
 tOffffff.
 tRff.
 tSfffff.
 tTfffff.
-tUffffff.
+tUfffff.
+tVffffff.
 tangent
 texcoord
 texcoordH
+this->m_bOkToLock
 thisEntity
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
 u$L;}
 u'...%H
 u-...+L
-u<fff.
 u=D;{
 uFLcI
 uFzDH
 uGetResourceManifest
-uPzNH
+uTzRH
 uWire <= UINT32_MAX
 uezcH
 uiKey != UnusedElementKey()
@@ -3040,9 +3086,9 @@ unsigned short#fff.
 unsigned short%fffff.
 unsigned short&H9[8tUH
 unsigned short+ff.
+unsigned short,A;_
 unsigned short-L9`
-unsigned short/ffff.
-unsigned short@fffff.
+unsigned short<A;O
 unsigned short^D9+uCD9s
 unsigned short{fff.
 utHc]
@@ -3052,6 +3098,7 @@ value
 value { %short }
 variant
 vbfff.
+vecSave
 vector
 vector2d
 vector4d
@@ -3078,6 +3125,7 @@ virtual bool CLightQuery::QueryLightEnabled(QueryLightHandle_t)
 virtual bool CSingleWorldRep::GetWorldBounds(Vector &, Vector &)
 virtual bool CStreamingEnvironmentMapMgr::EnvironmentMapSkyRelightEnabled(EnvironmentMapHandle_t)
 virtual bool CStreamingEnvironmentMapMgr::UpdateEnvironmentMapFace(EnvironmentMapHandle_t, HRenderTexture, int)
+virtual bool IResourceTypeManager::IsStreamingDataAlreadyLoaded(ResourceHandle_t)
 virtual const AABB_t &CStreamingEnvironmentMapMgr::EnvironmentMapBoxProjection(EnvironmentMapHandle_t)
 virtual const LightDesc_t &CLightQuery::QueryLightGetDesc(QueryLightHandle_t)
 virtual const NodeData_t *CWorld::GetNodeData(int)
@@ -3186,10 +3234,11 @@ virtual void CAtomicManipulator<CResourceArray<unsigned int> >::Copy(void *, con
 virtual void CAtomicManipulator<CResourceArray<unsigned int> >::Deallocate(void *) [T = CResourceArray<unsigned int>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Copy(void *, const void *) [T = CResourceArray<unsigned short>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Deallocate(void *) [T = CResourceArray<unsigned short>]
+virtual void CAttributeDictSaveDataOps::Restore(const SaveRestoreFieldInfo_t &, IRestore *)
+virtual void CAttributeDictSaveDataOps::Save(const SaveRestoreFieldInfo_t &, ISave *)
 virtual void CBaseIntrospectedTypeManager::AllocateResource(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *)
 virtual void CConCommandMemberAccessor<CWorldRendererMgr>::CommandCallback(const CCommandContext &, const CCommand &) [T = CWorldRendererMgr]
-virtual void CEntityComponentHelperT<CScriptComponent, CEntityComponentHelperReferenced<CScriptComponent> >::BatchSpawnDependencyIsland(SpawnPhaseType_t, int, AbstractComponentInfo_t *) [COMPONENT_TYPE = CScriptComponent, STORAGE_SPECIFIER_TYPE = CEntityComponentHelperReferenced<CScriptComponent>]
-virtual void CEntityInstance::Activate()
+virtual void CEntityInstance::Activate(ActivateType_t)
 virtual void CEntityInstance::AddedToEntityDatabase()
 virtual void CEntityInstance::Connect()
 virtual void CEntityInstance::OnSetDormant(EntityDormancyType_t, EntityDormancyType_t)
@@ -3202,7 +3251,8 @@ virtual void CLightQuery::QueryLightDestroy(QueryLightHandle_t)
 virtual void CLightQuery::QueryLightEnable(QueryLightHandle_t, bool)
 virtual void CLightQuery::QueryLightSetDesc(QueryLightHandle_t, const LightDesc_t &)
 virtual void CPRTMatrixManager::Deallocate(void *, IResourceDeallocatorUtils *)
-virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, bool, FieldIntrospectionHandle_t)
+virtual void CReadGrassTexturePixelsCallback::OnReadTexturePixels(const uint8 *, ImageFormat, int, int, int)
+virtual void CResourceReferenceFixupTraversal::HandleExtref(ResourceType_t, CResourceExtReferenceBase *, FieldIntrospectionHandle_t)
 virtual void CStreamingEnvironmentMapMgr::DestroyEnvironmentMap(EnvironmentMapHandle_t)
 virtual void CStreamingEnvironmentMapMgr::FrameUpdate()
 virtual void CStreamingEnvironmentMapMgr::SetEnvironmentMapAttachedCubeMapCross(EnvironmentMapHandle_t, FloatBitMap_t *)
@@ -3219,6 +3269,8 @@ virtual void CStreamingEnvironmentMapMgr::SetEnvironmentMapTransform(Environment
 virtual void CStreamingIrradVolumeMgr::SetIrradVolumeData(StreamingIrradVolumeHandle_t, const IrradVolume_t &)
 virtual void CStreamingPrtMatrixMgr::DestroyLight(PrtLightHandle_t)
 virtual void CStreamingPrtMatrixMgr::DestroyPrtMatrix(StreamingPrtMatrixHandle_t)
+virtual void CVariantSaveDataOps::Restore(const SaveRestoreFieldInfo_t &, IRestore *)
+virtual void CVariantSaveDataOps::Save(const SaveRestoreFieldInfo_t &, ISave *)
 virtual void CWorld::Init(ISceneWorld *, bool, SpawnGroupHandle_t)
 virtual void CWorld::PrecacheAllWorldNodes(WorldNodeFlags_t, ResourceManifestLoadBehavior_t, bool)
 virtual void CWorldRendererMgr::ServiceWorldRequests()
@@ -3233,7 +3285,8 @@ virtual void ConVar::InternalSetValue(const char *)
 virtual void IResourceTypeManager::LoadStreamingData(ResourceHandle_t, IResourceSystemUtils *)
 virtual void ISceneObjectDesc::GeneratePrimitives(CSceneObject *, float, LODGroupMask_t, CMeshPrimitiveOutputBuffer &, const ISceneView *, ISceneLayer *, uint32, GeneratePrimitivesFlags_t, int, float)
 vltre
-vmatL
+vmat1
+vmatu?E
 void *CKeyValues_Data::Internal_GetPtr()
 void *CStackMemoryDispenser::Allocate(size_t, size_t)
 void *CUtlMemoryPoolBase::Alloc()
@@ -3247,10 +3300,10 @@ void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBit
 void CConcreteEntityList::CList::LinkBefore(CEntityIdentity *, CEntityIdentity *)
 void CConcreteEntityList::FreeEntity(CEntityIdentity *, bool)
 void CDeferredCallStackMarkerProxy::Detach()
+void CDynamicVertexData<VertexPos2DTex2D_t>::Lock(int) [T = VertexPos2DTex2D_t]
+void CDynamicVertexData<VertexUVPosNormalAndTangent_t>::Lock(int) [T = VertexUVPosNormalAndTangent_t]
 void CEntityClass::AddToClassList(CEntityIdentity *)
 void CEntityClass::RemoveFromClassList(CEntityIdentity *)
-void CEntityComponentHelper::OnDestroyBegin(CEntityIdentity *, void *)
-void CEntityComponentHelper::SetPriority(int)
 void CEntityIOOutput::RemoveConnection(EntityIOConnectionHandle_t)
 void CEntityIdentity::OnEntityNameChanged(CEntityInstance *, const int32 *)
 void CEntityKeyValues::AddConnectionDesc(const char *, EntityIOTargetType_t, const char *, const char *, const char *, int, float)
@@ -3259,10 +3312,7 @@ void CEntityKeyValues::SetValue(EntityKeyId_t, const char *)
 void CEntityKeyValuesModifyScope::BeginModify(CEntityKeyValues *)
 void CEntitySystem::AddEntityIOEvent(EntityIOQueuePrioritizedEvent_t *)
 void CEntitySystem::AddEntityToNameMap(CEntityIdentity *)
-void CEntitySystem::BuildBatchedComponentList(EntityBatchHelperType_t, uint32, int, E *, int *, T *) [T = ComponentInfo_t<void>, E = CEntitySystem::DestructionInfo_t]
-void CEntitySystem::DestroyEntityImmediate(CEntityIdentity *)
 void CEntitySystem::ExecuteQueuedDeallocation()
-void CEntitySystem::ExecuteQueuedDeletion(bool)
 void CEntitySystem::QueueDestroyEntity(CEntityIdentity *)
 void CEntitySystem::RemoveEntityFromNameMap(CEntityIdentity *)
 void CEntitySystem::SuppressAutoDeletionExecution(bool)
@@ -3271,10 +3321,10 @@ void CEnvironmentMapTextureCoordinator::IO_HandleUnservicedRequests()
 void CEnvironmentMapTextureCoordinator::IO_OnIrradTextureStreamComplete(IAsyncFileRequest *, HRenderTexture)
 void CGrassTileObjectDesc::CreateGrass(IRenderDevice *)
 void CGrassTileObjectDesc::DrawInstanced(class IRenderContext *, IMaterialMode *, const Vector &, CGrassWorld *, int, matrix3x4a_t *, Vector4D *, int)
-void CGrassWorld::UpdateDensitySlice(int, int, uint8 *, int)
-void CGrassWorld::UpdateDepthSlice(int, int, float16 *, int)
-void CGrassWorld::UpdateSkewBrightnessSlice(int, int, uint8 *, int)
-void CGrassWorld::UpdateTintSlice(int, int, uint8 *, int)
+void CGrassWorld::UpdateDensitySlice(IRenderContext *, int, int, uint8 *, int)
+void CGrassWorld::UpdateDepthSlice(IRenderContext *, int, int, float16 *, int)
+void CGrassWorld::UpdateSkewBrightnessSlice(IRenderContext *, int, int, uint8 *, int)
+void CGrassWorld::UpdateTintSlice(IRenderContext *, int, int, uint8 *, int)
 void CIrradVolumeTextureCoordinator::FreeResources(IrradTextureMap_t::IndexType_t)
 void CIrradVolumeTextureCoordinator::IO_OnIrradTextureStreamComplete(IAsyncFileRequest *, HRenderTexture)
 void CKeyValuesErrorStack::Pop()
@@ -3283,17 +3333,20 @@ void CKeyValuesTokenReader::SeekBackOneToken()
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
 void CMemberFuncProxyBase<CEnvironmentMapTextureCoordinator *, void (CEnvironmentMapTextureCoordinator::*)(IAsyncFileRequest *, CWeakHandle<InfoForResourceTypeCTextureBase>), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CEnvironmentMapTextureCoordinator *, FUNCTION_TYPE = void (CEnvironmentMapTextureCoordinator::*)(IAsyncFileRequest *, CWeakHandle<InfoForResourceTypeCTextureBase>), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CGrassTileObjectDesc *, bool (CGrassTileObjectDesc::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, unsigned char *, int, int, bool, ImageFormat), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CGrassTileObjectDesc *, FUNCTION_TYPE = bool (CGrassTileObjectDesc::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, unsigned char *, int, int, bool, ImageFormat), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CGrassTileObjectDesc *, bool (CGrassTileObjectDesc::*)(CWeakHandle<InfoForResourceTypeIMaterial2>, CWeakHandle<InfoForResourceTypeCTextureBase>, int, bool), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CGrassTileObjectDesc *, FUNCTION_TYPE = bool (CGrassTileObjectDesc::*)(CWeakHandle<InfoForResourceTypeIMaterial2>, CWeakHandle<InfoForResourceTypeCTextureBase>, int, bool), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CIrradVolumeTextureCoordinator *, void (CIrradVolumeTextureCoordinator::*)(IAsyncFileRequest *, CWeakHandle<InfoForResourceTypeCTextureBase>), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CIrradVolumeTextureCoordinator *, FUNCTION_TYPE = void (CIrradVolumeTextureCoordinator::*)(IAsyncFileRequest *, CWeakHandle<InfoForResourceTypeCTextureBase>), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CParallelProcessorAbstract<CParallelLoopProcessor<FloatBitMap_t, CLoopMemberFuncJobItemProcessor<FloatBitMap_t, FloatBitMap_t, FloatBitMap_t> > > *, void (CParallelProcessorAbstract<CParallelLoopProcessor<FloatBitMap_t, CLoopMemberFuncJobItemProcessor<FloatBitMap_t, FloatBitMap_t, FloatBitMap_t> > >::*)(int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelProcessorAbstract<CParallelLoopProcessor<FloatBitMap_t, CLoopMemberFuncJobItemProcessor<FloatBitMap_t, FloatBitMap_t, FloatBitMap_t> > > *, FUNCTION_TYPE = void (CParallelProcessorAbstract<CParallelLoopProcessor<FloatBitMap_t, CLoopMemberFuncJobItemProcessor<FloatBitMap_t, FloatBitMap_t, FloatBitMap_t> > >::*)(int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> > *, void (CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> >::*)(int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> > *, FUNCTION_TYPE = void (CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor *, false> >, CCallQueueT<CTSQueue<CFunctor *, false> > >, 1> >::*)(int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CParallelProcessorAbstract<CStreamingPrtMatrixParallelController> *, void (CParallelProcessorAbstract<CStreamingPrtMatrixParallelController>::*)(int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelProcessorAbstract<CStreamingPrtMatrixParallelController> *, FUNCTION_TYPE = void (CParallelProcessorAbstract<CStreamingPrtMatrixParallelController>::*)(int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, const CSOAContainer *, int, int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, const CSOAContainer *, int, int), MEM_POLICY = CFuncMemPolicyNone]
-void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, int, float), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, int, float), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, int, __attribute__((__vector_size__(4 * sizeof(float)))) float), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, int, __attribute__((__vector_size__(4 * sizeof(float)))) float), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CStreamingPrtMatrixInstance *, void (CStreamingPrtMatrixInstance::*)(), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CStreamingPrtMatrixInstance *, FUNCTION_TYPE = void (CStreamingPrtMatrixInstance::*)(), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CStreamingPrtMatrixInstance *, void (CStreamingPrtMatrixInstance::*)(bool), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CStreamingPrtMatrixInstance *, FUNCTION_TYPE = void (CStreamingPrtMatrixInstance::*)(bool), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CStreamingPrtMatrixInstance *, void (CStreamingPrtMatrixInstance::*)(int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CStreamingPrtMatrixInstance *, FUNCTION_TYPE = void (CStreamingPrtMatrixInstance::*)(int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CStreamingPrtMatrixInstance *, void (CStreamingPrtMatrixInstance::*)(int, int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CStreamingPrtMatrixInstance *, FUNCTION_TYPE = void (CStreamingPrtMatrixInstance::*)(int, int), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CVirtualVolumeTextureManager *, void (CVirtualVolumeTextureManager::*)(IAsyncFileRequest *, CVirtualVolumeTexture *, LoadRequest_t *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CVirtualVolumeTextureManager *, FUNCTION_TYPE = void (CVirtualVolumeTextureManager::*)(IAsyncFileRequest *, CVirtualVolumeTexture *, LoadRequest_t *), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CWorldNode *, void (CWorldNode::*)(GrassLoadRequest_t *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CWorldNode *, FUNCTION_TYPE = void (CWorldNode::*)(GrassLoadRequest_t *), MEM_POLICY = CFuncMemPolicyNone]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
 void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
@@ -3308,7 +3361,6 @@ void CPRTMatrix::SetSecondarySkyRelightData(PrtRelightDataHandle_t, int)
 void CPRTMatrix::SetTransmitterPositions(PrtPositionBufferHandle_t, int)
 void CSOAContainer::AllocateConstantMemory()
 void CSOAContainer::AllocateDataMemory()
-void CSOAContainer::AssertDataType(int, EAttributeDataType) const
 void CSOAContainer::CopyAttrFrom(const CSOAContainer &, int, int)
 void CSOAContainer::CopyRegionFrom(const CSOAContainer &, int, int, int, int, int, int, int, int, int, int, int)
 void CSOAContainer::QuarterSizeAttrWithBoxFilter(const CSOAContainer &, int, int, CCallQueue *)
@@ -3320,9 +3372,11 @@ void CSchemaFieldIterator::Advance()
 void CSchemaFieldIterator::Reset()
 void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
 void CScriptComponent::AttachToScriptEntityClass(HSCRIPT, const char *)
+void CStreamingEnvironmentMapMgr::FrameUpdate_ServiceFinishedStreamingRequests()
 void CStreamingEnvironmentMapMgr::UpdateSceneEnvironmentMap(StreamingEnvironmentMap_t *, bool)
 void CStreamingIrradVolumeMgr::FrameUpdate_ActivateSceneObjects()
 void CStreamingIrradVolumeMgr::FrameUpdate_PruneActiveIrradVolumes()
+void CStreamingIrradVolumeMgr::FrameUpdate_ServiceIrradianceTextureAllocations()
 void CStreamingIrradVolumeMgr::PrintStats()
 void CStreamingPrtMatrixInstance::ParallelCalculateShadowRays(int, int)
 void CStreamingPrtMatrixMgr::PostLoad(CStreamingPrtMatrixInstance *)
@@ -3335,6 +3389,7 @@ void CStrongHandle<InfoForResourceTypePRTMatrixData_t>::Shutdown() [TResourceInf
 void CStrongHandle<InfoForResourceTypeWorldEnvironmentMaps_t>::Shutdown() [TResourceInfoData = InfoForResourceTypeWorldEnvironmentMaps_t]
 void CStrongHandle<InfoForResourceTypeWorldLighting_t>::Shutdown() [TResourceInfoData = InfoForResourceTypeWorldLighting_t]
 void CStrongHandle<InfoForResourceTypeWorld_t>::Shutdown() [TResourceInfoData = InfoForResourceTypeWorld_t]
+void CStrongHandle<ResourceBindingVoid_t>::Shutdown() [TResourceInfoData = ResourceBindingVoid_t]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, &CUtlMemoryPoolBase::FreeList_t::pNext>::Push(T *) [T = CUtlMemoryPoolBase::FreeList_t, POINTER_TYPE = CUtlMemoryPoolBase::FreeList_t, CONTAINER_TYPE = CUtlMemoryPoolBase::FreeList_t, LINKED_LIST_PTR = &CUtlMemoryPoolBase::FreeList_t::pNext]
 void CTSPointerList<CRenderAttributesDoubleBuffered>::Purge() [T = CRenderAttributesDoubleBuffered]
@@ -3381,6 +3436,7 @@ void CUtlRBTree<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, un
 void CUtlRBTree<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, unsigned short, CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, I = unsigned short, L = CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, unsigned short, CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, I = unsigned short, L = CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CWeakHandle<InfoForResourceTypePRTMatrixData_t>, int, unsigned short, bool (*)(const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &, const CWeakHandle<InfoForResourceTypePRTMatrixData_t> &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, unsigned short, CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, I = unsigned short, L = CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, unsigned short, CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, I = unsigned short, L = CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const EntityIOQueuePrioritizedEvent_t *, CAsyncCallStackTracker *, unsigned short, bool (*)(const EntityIOQueuePrioritizedEvent_t *const &, const EntityIOQueuePrioritizedEvent_t *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::SetLessFunc(const LessFunc_t &) [T = CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, WorldTraversal_t *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
@@ -3406,7 +3462,7 @@ void CWorld::ReleaseSceneObjectRef(CWorldSceneObjectRef *)
 void CWorld::SetNodeStatus(int, EWorldNodeStatusFlags_t)
 void CWorld::UncacheNode(int)
 void CWorldNode::CreateSceneObjects(CWorld *, int, ISceneWorld *)
-void CWorldNode::LoadGrassForNode(CWorld *, int, ISceneWorld *)
+void CWorldNode::HandleThrottledGrassTileLoading(GrassLoadRequest_t *)
 void CallPostConnect()
 void ClearDirtyFlag(StreamingEnvironmentMap_t *, int, int)
 void ClearDirtyFlags(StreamingEnvironmentMap_t *, int)
@@ -3458,7 +3514,7 @@ void FloatBitMap_t::WriteToBufferRGBFloat(T *, int) const [T = RGB323232F_t]
 void FloatBitMap_t::WriteToBufferRGBX(T *, int) const [T = RGBA8888_t]
 void FloatBitMap_t::WriteToBufferRGFloat(T *, int) const [T = RG3232F_t]
 void FloatBitMap_t::WriteToBufferRGFloat16(T *, int) const [T = RG1616F_t]
-void GenerateGGXBlurredMipLevelsForCubemapInTextureArray(IRenderContext *, HRenderTexture, HRenderTexture, HMaterial, int, int)
+void GenerateGGXBlurredMipLevelsForCubemapInTextureArray(IRenderContext *, HRenderTexture, HRenderTexture, HMaterial, int, int, bool, bool)
 void Haar(T *, const T *, int, T *) [T = Vector]
 void IEntityKeyComplex::Release()
 void ImageLoader::ConvertFromATIxN(const uint8 *, CDestPixel *, int, int, bool) [CDestPixel = BGRA8888_t]
@@ -3489,7 +3545,6 @@ void ImageLoader::DecodeColorBlock(CDestPixel *, ImageLoader::DXTColBlock *, int
 void ImageLoader::DecodeColorBlock(CDestPixel *, ImageLoader::DXTColBlock *, int, BGRA8888_t *, BGRA8888_t *, BGRA8888_t *, BGRA8888_t *) [CDestPixel = BGRA8888_t]
 void ImageLoader::DecodeColorBlock(CDestPixel *, ImageLoader::DXTColBlock *, int, BGRA8888_t *, BGRA8888_t *, BGRA8888_t *, BGRA8888_t *) [CDestPixel = RGB888_t]
 void ImageLoader::DecodeColorBlock(CDestPixel *, ImageLoader::DXTColBlock *, int, BGRA8888_t *, BGRA8888_t *, BGRA8888_t *, BGRA8888_t *) [CDestPixel = RGBA8888_t]
-void Impl_DefaultGeneralComponentInspector(CEntityInstance *, void *, CEntityComponentHelper *, const EntComponentInfo_t *, eInspectionDetail_t, KeyValues &)
 void IncrementDirtyFlag(StreamingEnvironmentMap_t *, int)
 void IncrementDirtyFlags(StreamingEnvironmentMap_t *)
 void KeyValues::AddSubKey(KeyValues *)
@@ -3517,10 +3572,8 @@ void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectio
 void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = TraverseCaller]
 void ScriptFuncDescriptor_t::AddParameterType(ScriptDataType_t)
 void UnCoordinate(IrradTextureAllocation_t *)
-void V_SplitString2(const char *, const char **, int, CUtlVector<char *> &)
 void Validate(const CPrtRelightingData *)
 void VectorTransform(const float *, const matrix3x4_t &, float *)
-void _V_strncpy(char *, const char *, int)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
@@ -3553,11 +3606,10 @@ ys == 0
 |$ E1
 |$@ffffff.
 |fff.
-|jffff.
 }HA;EP}
 }aD;K\}[E
 ~ A;wchar_t
 ~!fff.
 ~$IcF
 ~$fffff.
-~)ffff.
+~+ffffff.

@@ -12,7 +12,7 @@
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"Expecting response group with >= 1 elements"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!H`DAp
+!@`IAp
 !IsFlagSet( FCVAR_NEVER_AS_STRING )
 !IsInitialized()
 !bCreate
@@ -80,7 +80,6 @@ $ffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/lzmadecoder.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlsymbol.cpp
@@ -90,7 +89,6 @@ $ffff.
 /usr/lib/libiconv.2.dylib
 0P@00P
 6[A\A^A_]
-6~Lfffff.
 8VSIFu
 8[A\A]A^A_]
 8[A^A_]
@@ -105,6 +103,7 @@ $ffff.
 @CUniformRandomStream::CUniformRandomStream()
 @DevMsg(char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
+@V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
@@ -115,19 +114,33 @@ $ffff.
 @_KeyValuesSystem
 @_LOG_GENERAL
 @_LoggingSystem_IsChannelEnabled
+@_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
-@_Plat_GetModuleFilename
-@_Plat_GetModuleProcAddress
-@_Plat_IsInDebugSession
-@_Plat_LoadModuleRaw
+@_Plat_IsInDebugSessionRaw
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_RandomInt
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
+@_V_FixSlashes
+@_V_atof
+@_V_atoi
+@_V_qsort_s
+@_V_snprintf
+@_V_sscanf
+@_V_stricmp_fast
+@_V_strlower_fast
+@_V_strtod
+@_V_strtok
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_wcstoi64
 @_Warning
-@__DefaultRuneLocale
 @__Unwind_Resume
+@__V_SetExtension
+@__V_strncat
+@__V_strncpy
+@__V_strnicmp_fast
 @___bzero
 @___cxa_atexit
 @___cxa_begin_catch
@@ -136,9 +149,7 @@ $ffff.
 @___cxa_guard_acquire
 @___cxa_guard_release
 @___cxa_pure_virtual
-@___exp10
 @___gxx_personality_v0
-@___maskrune
 @___stack_chk_fail
 @___stack_chk_guard
 @__float128 short::*
@@ -150,19 +161,12 @@ $ffff.
 @_memcpy
 @_memmove
 @_memset_pattern16
-@_printf
 @_pthread_mutex_destroy
 @_raise
-@_sscanf
 @_strchr
 @_strcmp
 @_strcpy
 @_strlen
-@_strncat
-@_strtod
-@_strtok
-@_vsnprintf
-@_wcstol
 @dyld_stub_binder
 @loader_path
 @rpath/libscenefilecache.dylib
@@ -174,9 +178,7 @@ $ffff.
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
 A rule dictionary has %double elements; this exceeds the %double that can be packed into an index.
-A8CFmtStrNILi1024ELb0EE
 A9^$|
-A;G ~
 A;\$@|
 A;]long long|
 AI Concept has invalid string symbol.
@@ -201,7 +203,7 @@ AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
-AZBSC
+AZBSBp
 A[ATAp
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
 AlignValue( m_nBytesFree, 16 ) == m_nBytesFree
@@ -223,6 +225,7 @@ CBaseAppSystem<IResponseRulesFileCache>
 CBaseAppSystem<ISceneFileCache>
 CDefaultAccessor
 CEmptyConVar
+CFmtStrN<1024, false>
 CFmtStrN<1024, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
 CGameResponseSystem
 CGameResponseSystem::CGameResponseSystem(const char *, IResponseRulesFileCache *, bool)
@@ -261,9 +264,6 @@ CTier1AppSystem<IResponseRulesFileCache, 0>
 CUniformRandomStream::CUniformRandomStream()
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCStringConversion
-CUtlCharConversion
-CUtlCharConversion::CUtlCharConversion(char, const char *, int, CUtlCharConversion::ConversionArray_t *)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlString::SetDirect does not support resizing strings in place.
@@ -308,11 +308,11 @@ Found %int matching rules, selecting slot %int
 From Class Binding
 From Enum Binding
 G8H	p(]
+GA#D$
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 H	p(]
-H volatile;]
 H!wchar_t(]
 HSCRIPT CScriptAutoRef::Set(HSCRIPT)
 H[A\A]A^A_]
@@ -378,6 +378,7 @@ IcG I9
 IcG(I9
 IcGPI9
 IcO E1
+Ic_ D
 Ic_ H
 InputService_001
 InputStackSystemVersion001
@@ -391,16 +392,19 @@ IsValidIndex(int) && (int != InvalidIndex())
 KeyValueCache001
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues::FindKey called on NULL pointer!
+L volatile;long double
 L7pH%
 LET COUPLAND KNOW: RR matcher unexpected disagreement: Criteria '%short', Value: '%short', Matcher: '%short' [dota:%double, l4d:%double, new:%double]
 LightingBuilderMgr001
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 MATCHFRAMEWORK_001
+MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 Matched rule '%short', 
 MaterialUtils_001
+Mc.E9
 MeshSystem001
 MeshUtils001
 ModelDocCommandSystem001
@@ -421,13 +425,14 @@ PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostProcessingSystem_001
 PropertyEditorSystem_001
 QueuedLoaderVersion001
 RBRAp
-RBRBRA
+RBRBRBXATARBRBRBRBRAp
 RESPONSE_ENTITYIO
 RESPONSE_NONE
 RESPONSE_PRINT
@@ -439,7 +444,7 @@ RESPONSE_SPEAK
 Reading: %short
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
-RenderDevice002
+RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
@@ -448,8 +453,7 @@ RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem009
-ResourceSystemTools001
+ResourceSystem013
 Response rules fail: no IResponseEngineEmulator
 Response too big to fit in m_szResponseName: %short
 ResponseFollowup
@@ -459,7 +463,6 @@ ResponseRulePartition::tIndex ResponseRulePartition::Next(const tIndex &)
 ResponseRulesCache001
 Rule is disabled.
 SARAp
-SATAp
 SNDLVL_
 SNDLVL_100dB
 SNDLVL_105dB
@@ -509,7 +512,7 @@ SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
 SoundSystem001
-Source2Client001
+Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
 Source2EngineToClient001
@@ -520,12 +523,11 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers001
+Source2ServerSerializers002
 Speaker contexts: '%short', 
 StatsService_001
 T *CUtlLeanVectorImpl<CUtlLeanVectorBase<ParserResponse, short>, ParserResponse, short>::AddToTailGetPtr() [B = CUtlLeanVectorBase<ParserResponse, short>, T = ParserResponse, I = short]
 T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned short, 6, short>, unsigned short, short>::AddToTailGetPtr() [B = CUtlLeanVectorFixedGrowableBase<unsigned short, 6, short>, T = unsigned short, I = short]
-TBRBSATAp
 TBYATAp
 TCUAp
 TCWAp
@@ -537,7 +539,7 @@ TextLayout_001
 TextMessageMgr_001
 Token parsing mysteriously failed.
 Too many response rules! Overflow! Doom!
-ToolFramework2_001
+ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
@@ -578,6 +580,7 @@ VR_001
 VRenderDeviceSetupV001
 VScriptManager010
 VStringTokenSystem001
+V_stristr_fast(char const*, char const*)
 V_strlen(responseName) < sizeof( m_szResponseName )
 VisBuilder_001
 WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
@@ -607,22 +610,36 @@ _InstallSchemaBindings
 _KeyValuesSystem
 _LOG_GENERAL
 _LoggingSystem_IsChannelEnabled
+_Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_FloatTime
-_Plat_GetModuleFilename
-_Plat_GetModuleProcAddress
-_Plat_IsInDebugSession
-_Plat_LoadModuleRaw
+_Plat_IsInDebugSessionRaw
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _RandomInt
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
+_V_FixSlashes
+_V_atof
+_V_atoi
+_V_qsort_s
+_V_snprintf
+_V_sscanf
+_V_stricmp_fast
+_V_strlower_fast
+_V_strtod
+_V_strtok
+_V_vsnprintf
+_V_vsnprintfRet
+_V_wcstoi64
 _Warning
 __DATA
-__DefaultRuneLocale
 __LINKEDIT
 __TEXT
 __Unwind_Resume
+__V_SetExtension
+__V_strncat
+__V_strncpy
+__V_strnicmp_fast
 ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
@@ -631,9 +648,7 @@ ___cxa_guard_abort
 ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
-___exp10
 ___gxx_personality_v0
-___maskrune
 ___stack_chk_fail
 ___stack_chk_guard
 __bss
@@ -643,7 +658,6 @@ __cstring
 __data
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -659,20 +673,13 @@ _memchr
 _memcpy
 _memmove
 _memset_pattern16
-_printf
 _pthread_mutex_destroy
 _raise
-_sscanf
 _strchr
 _strcmp
 _strcpy
 _strlen
-_strncat
 _strnlen
-_strtod
-_strtok
-_vsnprintf
-_wcstol
 `[A\A^A_]
 `unsigned char[A\A^A_]
 applycontext
@@ -685,7 +692,6 @@ bool CResponseSystem::Compare(const char *, Criteria *, bool)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bufsize > 0
 calledforhelp
-char *_V_strncat(char *, const char *, int, int)
 classname
 concept
 const Criteria *Rule::RecursiveGetPointerForRuleCriterionByName(CResponseSystem *, const Criteria *, const CUtlSymbol &)
@@ -693,12 +699,10 @@ const char *CRR_Concept::GetStringConcept() const
 const char *ConVarRef::GetString() const
 const char *ResponseRulePartition::GetElementName(const tIndex &) const
 const char *Rule::RecursiveGetValueForRuleCriterionByName(CResponseSystem *, const Criteria *, const CUtlSymbol &)
-const char *V_stristr_fast(const char *, const char *)
 criteria
 criterion
 defaultdelay
 delay
-destBufferSize >= 0
 displayfirst
 displaylast
 dyld_stub_binder
@@ -721,18 +725,11 @@ followup_entityioinput
 followup_entityiotarget
 followup_target
 hotdog
-info.m_pReplacementString == 0
 int == check
 int CKeyValues_Data::Internal_GetInt()
 int CResponseFileParser::ParseOneCriterion(const char *)
 int CResponseSystem::SelectWeightedResponseFromResponseGroup(ResponseGroup *, IResponseFilter *)
-int V_snprintf(char *, int, const char *, ...)
-int V_vsnprintf(char *, int, const char *, __va_list_tag *)
-int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
-int _V_strnicmp_fast(const char *, const char *, int)
-int64 V_atoi64(const char *)
 lfff.
-lfffff.
 libscenefilecache.dylib
 long long&HcH
 m_ElementCount == 0
@@ -771,8 +768,6 @@ m_szSpeakerContext
 m_szWorldContext
 matched, weight %4.2f (short %4.2f long long char %4.2f)
 matchonce
-maxLen > 0
-maxLen >= sizeof( *pDest )
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nBlockSize <= 128 * 1024
 nBlockSize >= 16 * sizeof( MemoryBlock_t )
@@ -787,7 +782,6 @@ operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
-p XATARBRBRBRBRAp
 p8p8p
 pCallback == NULL
 pCrit
@@ -799,7 +793,6 @@ pName
 pNewCriterion->subcriteria.Count() == 0
 pPool->m_SpaceUsed < 0xFFFF
 pSchemaSystem != NULL
-pSearch
 pSystem
 pXRERA
 permitrepeats
@@ -843,7 +836,6 @@ static void ResponseParams::Schema_VerifyBindingIsRegistered()
 std::terminate()
 stop_on_nonidle
 strnlen
-t$H9[8u
 t2ff.
 t3ff.
 t4ffff.
@@ -932,7 +924,6 @@ void DisconnectInterfaces()
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void ResponseGroup::MarkResponseUsed(int)
-void _V_strncpy(char *, const char *, int)
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
