@@ -60,7 +60,7 @@
 	Current enemy drawn in red
 	Current target entity drawn in magenta
 	Cyan	- detour around an object (triangulation)
-	D9%ow
+	D9%?long long
 	DEM_Error
 	Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
 	ENameItem
@@ -2682,12 +2682,12 @@ $wDE1
 ( x2 - x1 ) > cFloatEpsilon && ( y2 - y1 ) > cFloatEpsilon
 ("%short")
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(%!T_
 (%0.2f) %short
 (%0.2f): %short
 (%1.3f)
 (%2.2f - %2.2f - %2.2f)
 (%2.2f)
-(%QT_
 (%__float128 %__float128 %__float128 %__float128)
 (%__float128 %__float128 %__float128)
 (%__float128 %__float128)
@@ -3175,13 +3175,15 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%J#/
-.%U:__float128
-.%[yG
-.%_zm
-.%e.;
+.%%:__float128
+.%+zG
+.%/zm
+.%5/;
 .%llu
-.-RcD
+.%long]D
+.-"dD
+.-c_D
+.-{8R
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
@@ -8865,7 +8867,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5
+AVSLc5r
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -10106,7 +10108,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=S^
+C#H9=
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -27277,12 +27279,12 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
+D%=>...
 D%pD9
-D%unsigned long=...
+D%{3P
 D)T@u
 D+ E1
 D+(E1
-D+5-wchar_t
 D+c$D
 D+h$+X,
 D+h$D+long long,D
@@ -27291,9 +27293,10 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-&4z
-D-double{(
-D-unsigned long long#...
+D-4|(
+D-I$z
+D-^@...
+D-y7z
 D0 	L0
 D0,Ic
 D08	L0(D
@@ -27317,6 +27320,7 @@ D93t&H
 D93t)H
 D93t+H
 D947u
+D95Qx
 D98ta
 D98te
 D98tg
@@ -27326,6 +27330,7 @@ D9;unsigned short&H
 D9;unsigned short)H
 D9;unsigned short+I
 D9<9u
+D9=Y&char
 D9Q(}
 D9` short
 D9b@unsigned short<H
@@ -27368,38 +27373,43 @@ D9{(~
 D;#unsigned short&H
 D;)u"
 D;+u!
-D;-YW4
-D;-`[O
+D;-)X4
+D;-0\O
+D;-].
 D;... u 
 D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5&!;
-D;5'unsigned long long;
-D;5*.S
-D;5-J
-D;52X5
-D;54W,
-D;5@__float128complex 
-D;5C}A
-D;5Fu>
-D;5Ho
-D;5H}char
-D;5J<=
-D;5QJ8
-D;5R1>
-D;5aX,
-D;5hp
-D;5i!O
-D;5iO;
-D;5zsR
-D;5zv>
-D;5|~A
+D;5!K8
+D;5"2>
+D;51Y,
+D;58q
+D;59"O
+D;59P;
+D;5@ A
+D;5JsR
+D;5Jw>
+D;5Sk
+D;5U	>
+D;5V3>
+D;5]U
+D;5^Q;
+D;5_1j
+D;5eo/
+D;5gr
+D;5k8:
+D;5nT:
+D;5q A
+D;5sz#
+D;5t#O
+D;5v?=
+D;5wx>
 D;8}D
-D;=6ZO
-D;=Y$
-D;=wchar_t==
+D;=)%
+D;=G>=
+D;=Q~char
+D;=_&
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -27502,7 +27512,6 @@ D;~,|
 D< K9D, trK
 D<(K9D,(tnK
 D<PfA
-D=G]...
 DAMAGE_EVENTS_ONLY
 DAMAGE_NO
 DAMAGE_TYPES
@@ -32360,6 +32369,8 @@ HaticsType_None
 Have Entity say string, and teamOnly or not
 Have we received the post match signout message that includes reward information
 HaveAllPlayersJoined
+Hc5Xuq
+Hc5_Qe
 Hc@XHi
 Hc@pH
 Hc@pI
@@ -35604,13 +35615,16 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L959N
-L95W3z
-L95mN
+L95	O
+L95'4z
+L95=O
+L95O9`
+L95lu
+L95{long long
 L98t"H
 L98t5H
 L98tY
-L9=a3
+L9=14
 L9` u	I
 L9h u
 L9p u
@@ -35705,9 +35719,8 @@ LaunchLootInitialHeight
 LayoutPositionType_e
 Lc1E9
 Lc2E1
-Lc5KCP
-Lc=signed char-	
-Lc=wL!
+Lc=.	
+Lc=GM!
 LcGhf
 LcO,D
 LcOhf
@@ -41276,7 +41289,6 @@ T$tE1
 T,XH9
 T0xRAp
 T1wHc
-T5#double]
 TARARARARARARARC`
 TARBRB]ARBRAp
 TARBRD`
@@ -41387,6 +41399,7 @@ TB`NBp
 TB`PATAp
 TB`ZATAp
 TB`ZBRB`ZBRB`ZBRB`ZBRB`YARB`
+TB`\AWBp
 TB`_ARB`ZBRB`
 TB`vATAp
 TBp p
@@ -42935,11 +42948,11 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
-W%,5X
-W%Q3o
-W%gz&
+W%!3o
+W%7{&
 W(I94
 W0Lcs(G
+W5b2X
 W8I94
 W8IcL
 W8ff.
@@ -43132,9 +43145,10 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%%P_
-X%ve_
+X%Fe_
 X(A;X,uo
+X-TNE
+X5afW
 X<[A^]
 XATAp
 XAxis
@@ -43174,9 +43188,12 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%4`signed char
-Y%dng
-Y5x0L
+Y%4ng
+Y%[tr
+Y%gsr
+Y%unsigned long long~r
+Y5H1L
+Y=bool)X
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43301,6 +43318,7 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
+]%YaT
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -52190,6 +52208,7 @@ long long signed char::* view roll angle
 long long!IcN
 long long"A9^
 long long#D9{
+long long%9=r
 long long'A9^
 long long*[A^]
 long long+A9^
@@ -72374,7 +72393,7 @@ tN9D1
 tN9L:
 tN9T9
 tND9;L
-tND;5@
+tND;5
 tNL;long double
 tN~*C
 tO9D1
@@ -73465,11 +73484,8 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
-unsigned __int128%<wJ
-unsigned __int128--{N
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
-unsigned char;55-
 unsigned char=unsigned short	H
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
@@ -73592,7 +73608,6 @@ unsigned short+(vTJ
 unsigned short+9D1
 unsigned short+9D2
 unsigned short+9L:
-unsigned short+;55+
 unsigned short+B9D
 unsigned short+B9L
 unsigned short+H9z0u%H
@@ -73701,7 +73716,7 @@ unsigned short=ffffff.
 unsigned short>0E1
 unsigned short>9D1
 unsigned short>9L:
-unsigned short>D;5
+unsigned short>D;5h
 unsigned short>IcG
 unsigned short>fffff.
 unsigned short?9D1

@@ -48,7 +48,7 @@
  ;{}:repeat-long long
  = { <proto text format> }". To set fields within it, use syntax like "
  Average %short commands per frame: %u, %u bytes
- D;5m
+ D;5M
  F;|  |
  Outdent() without matching Indent().
  PP`P
@@ -2155,7 +2155,7 @@ DragScrollEnd
 DragScrollMouseMove
 DragScrollStart
 DragStart
-DrawBorder with rounded corners must use same color on all sides
+DrawBorder with rounded corners must use same color on all sides with non-zero width
 DropdownMenuFocusChanged
 DummyWizardOpen
 DumpMemory
@@ -3098,6 +3098,9 @@ L% Hc
 L+V(I
 L90t*H
 L90u"A
+L95R;
+L95[long
+L95d-
 L9v@u
 L;>unsigned short!L9
 L;>unsigned short)L9
@@ -3118,7 +3121,7 @@ Layout FPS:
 Layout FPS:	%1.2f
 LayoutFilePtr_t panorama::CLayoutManager::GetCLayoutFile(const char *, bool)
 LayoutFilePtr_t panorama::CLayoutManager::GetLayoutFileFromString(const char *, bool)
-Lc5{unsigned __int128
+Lc5+unsigned __int128
 Lc;fB
 LcO,D
 Lcc0E
@@ -5453,7 +5456,6 @@ m_position.GetHorizontalLength().IsSet()
 m_position.GetVeriticalAlignment() != k_EVerticalAlignmentUnset
 m_position.GetVeriticalAlignment() == k_EVerticalAlignmentBottom
 m_position.GetVerticalLength().IsSet()
-m_rgbaBorderColors[0] == m_rgbaBorderColors[1] && m_rgbaBorderColors[0] == m_rgbaBorderColors[2] && m_rgbaBorderColors[0] == m_rgbaBorderColors[3]
 m_stackCompositionLayers.Count()
 m_stackCompositionLayers.Count() != 0
 m_stackCompositionLayers.Count() <= 1
@@ -6086,6 +6088,7 @@ responseText
 result == k_ELoadLayoutFileOK
 reverse
 rffffff.
+rgbaEffectiveBorderColor == m_rgbaBorderColors[int]
 right
 right-wrap
 ro_RO
