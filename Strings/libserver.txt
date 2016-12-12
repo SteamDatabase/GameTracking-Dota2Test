@@ -11,6 +11,7 @@
 		Matcher token: %short
 		[%int]=%float
 		if g_reloadState == nil then 			g_reloadState = {} 			for k, void in pairs( package.loaded ) do 				g_reloadState[k] = void 			end 		else 			for k, void in pairs( package.loaded ) do 				if g_reloadState[k] == nil then 					package.loaded[k] = nil 				end 			end 		end
+		pU	
 	  -> PANICKING
 	"%short" "%.2f"
 	"%short" "%int"
@@ -1254,6 +1255,7 @@
 !pPrev || (pPrev->GetMoveParent() == GetMoveParent())
 !pReturn
 !pStaticSystem->DoesGameSystemReallocate()
+!pSystem->symSystemName.IsNullString()
 !pTokens
 !pTool->BIsStaticRecipe()
 !pTool->BIsStaticRecipe() || GetIsOutput()
@@ -1493,6 +1495,7 @@
 "long double" must be followed by exponent.
 "need_to_choose_most_helpful_friend
 "notification_body_localization_key
+#		P%	
 ################################################################################
 ##GameUI_Disconnect_BadRelayPassword
 ##GameUI_Disconnect_ReliableOverflow
@@ -2681,7 +2684,6 @@ $wDE1
 ( x2 - x1 ) > cFloatEpsilon && ( y2 - y1 ) > cFloatEpsilon
 ("%short")
 (#GameUI_Disconnect_LoopLevelLoadActivate
-(%!T_
 (%0.2f) %short
 (%0.2f): %short
 (%1.3f)
@@ -2690,9 +2692,11 @@ $wDE1
 (%__float128 %__float128 %__float128 %__float128)
 (%__float128 %__float128 %__float128)
 (%__float128 %__float128)
+(%_g_
 (%double %double %double %double)
 (%double) Name: %short (%short)
 (%float, %float, %float)
+(%lg_
 ((CSosFilterSetSoundEventFieldsInfo_t *)( *pEvent ))->m_nGuid.GetRaw() == nGuid.GetRaw()
 ((equipped_slot_t)-1) != m_unFirstValidItemSlot
 ()+-*/
@@ -2702,6 +2706,7 @@ $wDE1
 (;T0(
 (;T1(H
 (;T1(}
+(=unsigned int(]
 (A;] |
 (A;_ |
 (ACTIVE)
@@ -3174,18 +3179,17 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%%:__float128
-.%**/
-.%+ H
-.%/zm
-.%E5;
+.%5c;
+.%^...]
 .%llu
-.%|cD
-.-jD
-.-seD
+.-,&2
+.-X1:
+.-{lR
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
+.5g%bool
+.=unsigned __int128@__float128
 .@(wSA
 .@,sT
 .@Ts|
@@ -6033,7 +6037,6 @@ $wDE1
 7AtuI
 7CMsgServerToGCCompendiumInGamePredictionResultsResponse
 7Ic^@H
-7Lc-^
 7[A\A^A_]
 7fffff.
 7y5Hc
@@ -6257,6 +6260,7 @@ $wDE1
 ?w9Hc
 ?wJHc
 ?wTHc
+@		pA	
 @    
 @ 00  
 @ ;C<u
@@ -6724,7 +6728,6 @@ $wDE1
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
 @std::__1::__basic_string_common<true>::__throw_length_error() const
-@std::__1::__function::__base<CNavPoly* ()>
 @std::__1::__next_prime(unsigned long)
 @std::__1::__vector_base_common<true>::__throw_length_error() const
 @std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
@@ -8599,6 +8602,7 @@ AR0xp0p p
 AR2AltFire
 ARARAp
 ARARB
+ARASBRBTBRBTBRBTBRBRAp
 ARATAp
 ARA`5B`,B`
 ARA`6ATAp
@@ -8787,7 +8791,6 @@ ARB`YARB`
 ARB`YARB`YARB`
 ARB`YARB`YARB`YARB`
 ARB`YARB`YARB`YARB`YARB`
-ARB`YARB`YARB`ZBRB`
 ARB`YARB`YARB`ZBRB`YARB`
 ARB`YARB`ZBRB`
 ARB`YARB`ZBRB`YARB`
@@ -8869,7 +8872,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5
+AVSLc5R
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -9455,6 +9458,7 @@ Assembling with Humans - %short
 Assertion Failed in function %short():
 Asset Modifiers
 Asset modifier index %double must be greater than or equal to zero
+AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetModifier
 AssetPreviewSystem_001
@@ -9813,6 +9817,7 @@ BRB`[ARB`YARB`YARB`
 BRB`[ARB`YARB`YARB`YARB`
 BRB`[ARB`YARB`YARB`YARB`YARB`YARB`YARB`
 BRB`[ARB`[ARB`
+BRB`[ARB`[ARB`YARB`YARB`YARB`YARB`
 BRB`[ARB`[ARB`ZBRB`YARB`YARB`YARB`
 BRB`[ARB`[ARB`[ARB`YARB`
 BRB`[ARB`\BRB`YARB`ZBRAp
@@ -9821,7 +9826,6 @@ BRB`\AVAp
 BRB`\AWBp
 BRB`\BRB`
 BRB`\BRB`YARB`YARB`
-BRB`\BRB`YARB`YARB`YARB`YARB`
 BRB`\BRB`ZBRB`ZBRB`
 BRB`]AWAVB
 BRB`]AWAVB`
@@ -9968,6 +9972,7 @@ Bidirectional_Messages
 BigShot
 BinaryProperties_GetValue
 BlackBoxVersion001
+Blend Node
 Blink
 Block Headers | 
 Block loading of the navmesh. Unplayable, only used for memory sampling.
@@ -10111,7 +10116,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=#bool
+C#H9=C
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -10213,6 +10218,7 @@ CAmbientGeneric
 CAmbientGeneric::CEntityInstanceEntityClass
 CAmmoDef
 CAnchorList
+CAnimNode
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (1)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (2)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (3)
@@ -10697,6 +10703,7 @@ CBidirMsg_RelayPacket_SignedDestinationAddress_t
 CBitVec
 CBitVecAccessor CBitVecT<CFixedBitVecBase<64> >::operator[](int) [BASE_OPS = CFixedBitVecBase<64>]
 CBitVecAccessor CBitVecT<CVarBitVecBase<unsigned short, 32> >::operator[](int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
+CBlendAnimNode
 CBlood
 CBlood::CEntityInstanceEntityClass
 CBodyComponent
@@ -20628,6 +20635,7 @@ CRestore::ReadFunction() implementation does not currently support unspecified b
 CRestore::ReadString() implementation does not currently support unspecified bytes available
 CRevertSaved
 CRevertSaved::CEntityInstanceEntityClass
+CRootAnimNode
 CRopeKeyframe
 CRopeKeyframe::CEntityInstanceEntityClass
 CRopeKeyframe::Precache:: path '%short' is signed char vmt! Fixing for now.
@@ -21505,6 +21513,7 @@ CSchemaNonConstructibleClassBinding<CAdditionalWearable::CEntityInstanceEntityCl
 CSchemaNonConstructibleClassBinding<CAdditionalWearable>
 CSchemaNonConstructibleClassBinding<CAmbientGeneric::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CAmbientGeneric>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CAreaPortal::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CAreaPortal>
 CSchemaNonConstructibleClassBinding<CBaseAnimating::CEntityInstanceEntityClass>
@@ -21560,6 +21569,7 @@ CSchemaNonConstructibleClassBinding<CBaseViewModel::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CBaseViewModel>
 CSchemaNonConstructibleClassBinding<CBeam::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CBeam>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
 CSchemaNonConstructibleClassBinding<CBlood::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CBlood>
 CSchemaNonConstructibleClassBinding<CBodyComponent>
@@ -25411,6 +25421,7 @@ CSchemaNonConstructibleClassBinding<CResponseQueue::CDeferredResponse>
 CSchemaNonConstructibleClassBinding<CResponseQueue>
 CSchemaNonConstructibleClassBinding<CRevertSaved::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CRevertSaved>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
 CSchemaNonConstructibleClassBinding<CRopeKeyframe::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CRopeKeyframe>
 CSchemaNonConstructibleClassBinding<CRopeKeyframeAlias_move_rope::CEntityInstanceEntityClass>
@@ -25445,6 +25456,7 @@ CSchemaNonConstructibleClassBinding<CScriptTriggerOnce::CEntityInstanceEntityCla
 CSchemaNonConstructibleClassBinding<CScriptTriggerOnce>
 CSchemaNonConstructibleClassBinding<CScriptTriggerPush::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CScriptTriggerPush>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
 CSchemaNonConstructibleClassBinding<CServerOnlyEntity::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CServerOnlyEntity>
 CSchemaNonConstructibleClassBinding<CServerOnlyModelEntity::CEntityInstanceEntityClass>
@@ -25487,6 +25499,7 @@ CSchemaNonConstructibleClassBinding<CSpriteAlias_env_glow::CEntityInstanceEntity
 CSchemaNonConstructibleClassBinding<CSpriteAlias_env_glow>
 CSchemaNonConstructibleClassBinding<CSpriteOriented::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CSpriteOriented>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBinding<CStripWeapons::CEntityInstanceEntityClass>
 CSchemaNonConstructibleClassBinding<CStripWeapons>
 CSchemaNonConstructibleClassBinding<CSun::CEntityInstanceEntityClass>
@@ -25779,6 +25792,7 @@ CScriptTriggerOnce
 CScriptTriggerOnce::CEntityInstanceEntityClass
 CScriptTriggerPush
 CScriptTriggerPush::CEntityInstanceEntityClass
+CSequenceAnimNode
 CSequenceTransitioner
 CSequenceTransitioner2
 CSerializedCombatLog
@@ -25934,6 +25948,7 @@ CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal
 CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal, 0>
 CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal, 0>
 CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal, 0>
+CStateMachineAnimNode
 CSteamWorksGameStatsServer
 CSteamWorksGameStatsUploader
 CStepSimulationHook
@@ -27282,8 +27297,9 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%]Dz
+D%]tz
 D%pD9
+D%{M)
 D)T@u
 D+ E1
 D+(E1
@@ -27295,14 +27311,15 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-int*...
-D-~Fz
+D-iZz
+D-~vz
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
+D5L@*
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27312,6 +27329,7 @@ D9#unsigned short)H
 D9#unsigned short-A
 D9#unsigned short-H
 D9#uuHcC
+D9%-wC
 D9(te
 D9(ts
 D9(unsigned short"f.
@@ -27329,9 +27347,7 @@ D9;unsigned short&H
 D9;unsigned short)H
 D9;unsigned short+I
 D9<9u
-D9=U&char
-D9=X%char
-D9=unsigned short'char
+D9=)char volatile
 D9Q(}
 D9` short
 D9b@unsigned short<H
@@ -27372,8 +27388,6 @@ D9{$A
 D9{$|
 D9{(~
 D;#unsigned short&H
-D;%:]T
-D;%c7
 D;)u"
 D;+u!
 D;... u 
@@ -27381,38 +27395,33 @@ D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5!u
-D;5"short
-D;5& 
-D;5'W*
-D;5+ 
-D;541;
-D;5=(A
-D;5I!
-D;5Nt
-D;5N|=
-D;5TV
-D;5W+O
-D;5c6>
-D;5gc5
-D;5iF;
-D;5j.S
-D;5kw5
-D;5l)A
-D;5rW
-D;5t"%
-D;5tg=
-D;5v68
-D;5vh
-D;5zu
-D;5{}=
+D;5 fA
+D;5$Y0
+D;5&:
+D;5&`
+D;5+`
+D;54q;
+D;58B0
+D;5=hA
+D;5>$<
+D;5E	'
+D;5G@Y
+D;5Ia
+D;5P<1
+D;5Q(;
+D;5WkO
+D;5cv>
+D;5eP'
+D;5liA
+D;5r%<
+D;5tb%
+D;5v98
+D;5vv8
+D;5y=1
+D;5zJ
 D;8}D
-D;=3.
-D;=@mC
-D;=QF6
-D;=[/
-D;=unsigned char)__float128
-D;=~`O
+D;=3n
+D;=[unsigned __int128
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -27515,7 +27524,6 @@ D;~,|
 D< K9D, trK
 D<(K9D,(tnK
 D<PfA
-D=7dz
 DAMAGE_EVENTS_ONLY
 DAMAGE_NO
 DAMAGE_TYPES
@@ -29220,6 +29228,7 @@ E9w0}*H
 E9x(|
 E9|$ 
 E9|$$
+E9|$(u
 E9|$(wchar_t*H
 E9|long long~
 E9|long long~nI
@@ -29780,6 +29789,7 @@ Encountered unknown entity int/unsigned __int128 target type!
 Encountered unknown enum value %short for field %short
 Encountered unknown resource type "%short" for resource "%short"!
 End  : %.0f
+End Frame
 End the tutorial.
 End-of-file inside block comment.
 EndChannel
@@ -30378,6 +30388,7 @@ Fields of oneofs must themselves have label LABEL_OPTIONAL.
 FightRecapLevel
 File %double: %short Size:%double
 File '%short' not found or failed to open.
+File Path
 File already exists in database: 
 File appears to be in generated pool but wasn'unsigned short registered: 
 File is already registered: 
@@ -30628,6 +30639,7 @@ FrameTime
 FrameTimeAvg
 FrameTimeMax
 FrameUpdatePostEntityThink
+Frames
 Francis Bot
 Francisco Bot
 Free Sound List is full!
@@ -32165,7 +32177,8 @@ H90t!L
 H91t8H
 H91tRH
 H92t	H
-H9=9'2
+H9=36/
+H9=9g2
 H9A@u
 H9B0u
 H9C unsigned short
@@ -35618,10 +35631,11 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L95MU
+L95-[
 L98t"H
 L98t5H
 L98tY
+L9=FW
 L9` u	I
 L9h u
 L9p u
@@ -35714,9 +35728,9 @@ LaunchInternalProcess FAILED!
 LaunchLoot
 LaunchLootInitialHeight
 LayoutPositionType_e
+Lc%mq	
 Lc1E9
 Lc2E1
-Lc=nF6
 LcGhf
 LcO,D
 LcOhf
@@ -35990,6 +36004,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MEntityPostUnserializerHandler
@@ -36287,7 +36302,10 @@ MOVETYPE_PUSH
 MOVETYPE_STEP
 MOVETYPE_VPHYSICS
 MOVETYPE_WALK
+MPropertyAttributeEditor
 MPropertyFriendlyName
+MPropertyGroupName
+MPropertyHideField
 MRenderAttr
 MRenderAttrCount
 MRenderAttrOffset
@@ -37708,7 +37726,7 @@ PPP@@
 PPP@P
 PPPPP P
 PPPPPP@
-PPPPPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPPPPPPP
 PPPPPPPPPPPPPPPPp
 PPPPPPPPPPP`@PPPPP@PPP`PPPP@PPPPP`PP`pPPPP`P```PPPPPP
 PPPPPP`PPPPPP`P`
@@ -37723,7 +37741,6 @@ PP`PP``P
 PP`P`@
 PP`P```
 PP``PPPPPPPPPPPPPPPPPP````PPPPpp``PPPPppp
-PPp@p@`P
 PPpP``PpP`P```PP`P
 PR:GetSelectedHeroName called with bogus player id %double, ignoring
 PR:OnFullyJoinedServer %double:%short
@@ -37782,7 +37799,7 @@ PXL;long double
 P[A\A^A_]
 P[A^]
 P`L;}
-P`Lc5R
+P`Lc5
 P`P0 0
 P`P`P
 P`` @
@@ -38101,6 +38118,7 @@ Pottery.Medium
 Pottery.Small
 Power: %2.0f/%2.0f, Tankiness: %2.2f, Lifesteal: %double, Block: %double
 Pp P@`@
+Pp p@
 PpH9E
 Pp`p`
 PreAttackSound
@@ -38304,6 +38322,7 @@ QuitServer() called while already terminating
 QuitServer() executing "disconnect"
 QuitServer() executing "quit"
 QyOIc
+R		@S	
 RADIANT
 RADIATION
 RANDOM
@@ -38315,6 +38334,7 @@ RAY TEST: %double hits, %double misses, %.2fms   (%double rays, %double sweeps a
 RA[Ap
 RA^Ap
 RAp(p
+RAp(p8p8p
 RAp(pxRAp(pxRAp(pxRAp(pxRAp(pxRAp(pxRAp(pxRAp(pxRGp
 RAp(pxRCp
 RAp(pxRGp8p
@@ -38994,6 +39014,7 @@ RollCredits
 RollOutroCredits
 RollPercentage
 Rolls signed char number from 1 to 100 and returns true if the roll is less than or equal to the number specified
+Root Node
 Root class of all server-side entities
 Root entity class
 RopeMaterial
@@ -39990,6 +40011,7 @@ Sends signed char message on behalf of signed char player.
 Sensitivity
 Sentence
 Sequence
+Sequence Node
 Sequence: (%3d) %short
 SequenceDuration
 SerializedNetAddress_t
@@ -40978,6 +41000,7 @@ StackDepth
 StacksWithOtherOwners
 Standard nav area minimum size
 Start
+Start Frame
 Start an auto save game test
 Start continuously adding to the selected set.
 Start continuously removing from the selected set.
@@ -41055,6 +41078,7 @@ State = %double
 State: %short
 State: Disabled
 State: Enabled
+StateMachine Node
 State_Get
 State_Think_POST_GAME found the game paused! Unpausing it now.
 States
@@ -41286,6 +41310,7 @@ T$tE1
 T,XH9
 T0xRAp
 T1wHc
+T5hw]
 TARARARARARARARC`
 TARBRB]ARBRAp
 TARBRD`
@@ -41496,7 +41521,9 @@ TCZATAp
 TCZAp
 TCZBR0
 TCZBRAp
+TCZBRBXBRBTBRBp
 TCZBRBZBRAp
+TCZBRB[ARAp
 TCZBSATAp
 TC[ARAp
 TC[ATAp
@@ -41815,6 +41842,8 @@ TS_GOING_DOWN
 TS_GOING_UP
 TSocketIterator<CItemSocket_AssetModifier>
 TSocketIterator<CItemSocket_Color>
+TSocketIterator<CItemSocket_Effect>
+TSocketIterator<CItemSocket_Spectator>
 TSocketIterator<CItemSocket_Strange>
 TUTORIAL_BOSS
 TUUUUUU
@@ -42945,10 +42974,9 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
-W%!3o
 W(I94
 W0Lcs(G
-W5b2X
+W5B6X
 W8I94
 W8IcL
 W8ff.
@@ -43141,11 +43169,13 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%Fe_
+X%0d_
+X%6 unsigned long
+X%he_
 X(A;X,uo
-X-dTE
-X5afW
+X5AjW
 X<[A^]
+X=B&unsigned __int128
 XATAp
 XAxis
 XBRAp
@@ -43184,12 +43214,12 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%4ng
-Y%[tr
-Y%gsr
-Y%unsigned long long~r
-Y5X7L
-Y=bool)X
+Y%(%u
+Y%7CY
+Y-<-L
+Y5HeL
+Y5v@wchar_t
+Y=B-X
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43314,7 +43344,7 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
-]%YaT
+]%9eT
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -52188,7 +52218,6 @@ long double->GetType() == CChoreoEvent::SECTION
 long double->HasEndTime()
 long long	IcN
 long long	IcO
-long long 9=7
 long long D9d
 long long Ic^
 long long L9p unsigned short
@@ -52211,7 +52240,6 @@ long long*[A^]
 long long+A9^
 long long,@H>
 long long-D9s
-long long/9=\
 long long:D9xH~D9xd|.Ic
 long long@D9{ 
 long long@E9uP~:Ic
@@ -52444,6 +52472,7 @@ m_FactionRelationship
 m_FadeDuration
 m_FallSpeed
 m_FieldType
+m_Filepath
 m_Filter
 m_FilterFlags
 m_FilteredAngles
@@ -54446,6 +54475,7 @@ m_flForwardMove
 m_flFountainConstantManaRegen
 m_flFountainPercentageHealthRegen
 m_flFountainPercentageManaRegen
+m_flFps
 m_flFrame
 m_flFrameRate
 m_flFrameTime
@@ -56319,6 +56349,7 @@ m_nEconConsumableItemIndex
 m_nEffectIndex
 m_nElementCount
 m_nElementSizeInBytes
+m_nEndframe
 m_nEnemyStartingPosition
 m_nEntityId
 m_nEntityIds[nHandle] != 0
@@ -56513,6 +56544,8 @@ m_nNextThinkTick
 m_nNextUnitThink
 m_nNextUpdatePlayer
 m_nNightmareSwapCount
+m_nNodeID
+m_nNodeIndex
 m_nNumBeamEnts
 m_nNumBeamEnts >= 2
 m_nNumCrateHudHints
@@ -56666,6 +56699,7 @@ m_nSpriteWidth
 m_nStartBrightness
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nStartingGold
 m_nStartingNameListCount == m_pNameList->Count()
 m_nStartingStatOffset
@@ -57342,6 +57376,7 @@ m_sLandmarkName
 m_sLevelName == pWorldName
 m_sMapName
 m_sMaster
+m_sName
 m_sNoise
 m_sPath
 m_sScriptDirectory
@@ -57907,6 +57942,7 @@ m_vecPlayerMountPositionTop
 m_vecPlayerSimInfo
 m_vecPlayerSnapshots
 m_vecPlayerTeamData
+m_vecPosition
 m_vecPosition1
 m_vecPosition2
 m_vecPredictions
@@ -61568,7 +61604,6 @@ p8p8p
 p8pHRAp(p(pHRAp
 p8pXp
 p<[A^]
-p@ 0P
 p@@@@@@
 p@@P`
 p@RB`
@@ -63898,6 +63933,7 @@ portrait_background_map
 portrait_background_model
 portrait_background_particle
 portrait_game
+portraits
 ports
 pos && start
 pos >= 0.0f
@@ -71705,6 +71741,7 @@ status_effect_index
 std::__1::__basic_string_common<true>::__throw_length_error() const
 std::__1::__bind<bool (CDOTAGCServerSystem::*)(CMsgCustomGameInstallStatus const&), CDOTAGCServerSystem*, std::__1::placeholders::__ph<1>&>
 std::__1::__bind<void (CFuncNavBlocker::*)(CNavArea&) const, CFuncNavBlocker*, std::__1::placeholders::__ph<1>&>
+std::__1::__function::__base<CNavPoly* ()>
 std::__1::__function::__base<NavSearchAreaResult_t (CNavArea&, NavSearchAreaInfo_t*)>
 std::__1::__function::__base<NavSearchPosResult_t (Vector const&)>
 std::__1::__function::__base<bool (CMsgCustomGameInstallStatus const&)>
@@ -73354,8 +73391,8 @@ uaff.
 uaz_I
 ubz`A
 ubz`H
-ucLc-8@
-ud9=|~long double
+ucLc-
+ud9=|
 udM9n
 uezcA
 ufLce
@@ -73390,7 +73427,6 @@ uint64 CKeyValues_Data::Internal_GetUint64()
 uint64 CVariantBase<CVariantDefaultAllocator>::operator unsigned long long() const [CValueAllocator = CVariantDefaultAllocator]
 uint8
 uint8 CFoW::GetHeightGroup(uint32, uint32)
-uizgH
 ujA;^
 ukD;u
 ukIcE A
@@ -73493,7 +73529,7 @@ unsigned int CUtlStringMap<CCustomGameEventManager::CCustomGameEventInfo *, CUtl
 unsigned int CUtlStringMap<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, CUtlSymbolTable>::Count() const [T = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<IModifierFactory *, CUtlSymbolTable>::Count() const [T = IModifierFactory *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<int, CUtlSymbolTable>::Count() const [T = int, SymbolTableType_t = CUtlSymbolTable]
-unsigned long long!Hc=!A
+unsigned long long!Hc=
 unsigned long long;D;u
 unsigned long long<D;unsigned long
 unsigned long long=E;~`u&I
@@ -73712,7 +73748,7 @@ unsigned short=ffffff.
 unsigned short>0E1
 unsigned short>9D1
 unsigned short>9L:
-unsigned short>D;5X
+unsigned short>D;5
 unsigned short>IcG
 unsigned short>fffff.
 unsigned short?9D1
@@ -74424,6 +74460,7 @@ virtual ServerClass *CDOTA_Ability_Necrolyte_Death_Pulse::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Necrolyte_ReapersScythe::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Necrolyte_Sadist::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Nevermore_Requiem::GetServerClass()
+virtual ServerClass *CDOTA_Ability_Nevermore_Shadowraze::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Nian_Apocalypse::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Nian_Eruption::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Nian_Frenzy::GetServerClass()
@@ -75550,6 +75587,7 @@ virtual void CDOTA_Modifier_Juggernaut_Omnislash::OnIntervalThink()
 virtual void CDOTA_Modifier_Lesser_NightCrawler_Pounce::OnCreated(KeyValues *)
 virtual void CDOTA_Modifier_Lua::DoCreate(KeyValues *)
 virtual void CDOTA_Modifier_Mirana_Leap::OnCreated(KeyValues *)
+virtual void CDOTA_Modifier_MonkeyKing_Transform::OnIntervalThink()
 virtual void CDOTA_Modifier_Nian_Apocalypse::OnDestroy()
 virtual void CDOTA_Modifier_SandKing_Epicenter::OnIntervalThink()
 virtual void CDOTA_Modifier_Slark_Pounce::OnCreated(KeyValues *)
@@ -78145,6 +78183,7 @@ writeback_queue
 wrong submessage type
 wyvern_splinter_blast
 x$D9s
+x.9=long
 x3E9~
 x7A9D$x~0Hc
 x7A9Fx~1Hc
@@ -78278,6 +78317,7 @@ zuus_thundergods_wrath
 |^fff.
 |fff.
 |xfff.
+}		0~	
 }	[A\A^A_]
 } E;}$usH
 }%D9{<r

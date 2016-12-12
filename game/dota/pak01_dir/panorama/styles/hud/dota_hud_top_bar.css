@@ -784,7 +784,9 @@ DOTAUGCImage
 // Custom game SetHUDVisible support
 .HIDE_TOP_TIMEOFDAY #TimeOfDayLeftFlare,
 .HIDE_TOP_TIMEOFDAY #TimeOfDay,
-.HIDE_TOP_TIMEOFDAY #TimeOfDayRightFlare
+.HIDE_TOP_TIMEOFDAY #TimeOfDayRightFlare,
+.HIDE_TOP_TIMEOFDAY #TimeOfDayBG,
+.HIDE_TOP_TIMEOFDAY #TimeUntil
 {
 	visibility: collapse;
 }
@@ -792,7 +794,7 @@ DOTAUGCImage
 .HIDE_TOP_HEROES #TopBarRadiantTeam,
 .HIDE_TOP_HEROES #TopBarDireTeam,
 .HIDE_TOP_HEROES #TopBarLeftFlare,
-.HIDE_TOP_HEROES #TopBarRightFlare,
+.HIDE_TOP_HEROES #TopBarRightFlare
 {
 	visibility: collapse;
 }

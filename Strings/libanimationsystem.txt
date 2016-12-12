@@ -78,11 +78,7 @@ $Hc3H
 $XD;long double
 $ffffff.
 %16.16s(%short):  %short
-%16.16s:  %short
-%16.16s:  %short -> %short interruptible %short : %short
 %16.16s:  %short(=%short) %short %short
-%16.16s:  none
-%16.16s:  state='%short'
 %__float128 %__float128
 %__float128 %__float128 %__float128
 %__float128 %__float128 %__float128 %__float128
@@ -101,9 +97,7 @@ $ffffff.
 %d.Worldspace( %short, %double, %.2f )
 %double %double %double %double
 %double : 
-%double : %short
 %double conditions
-%double hops:  
 %double layers
 %double parameters
 %ffff.
@@ -122,8 +116,6 @@ $ffffff.
 %short failed, couldn'unsigned short load KeyValues data from specified string on model: %short
 %short failed: expected an array of floats for pose parameters
 %short failure, expected int or string as argument
-%short:  [%.2f %.2f]
-%short:  transition using unknown node name %short:%double or %short:%double, discarding
 %short: "%short" failed ignoring activity %double, expected float for parameter "%short" on model: %short
 %short: "%short" failed ignoring ikLock %double, expected float for parameter "%short" on model: %short
 %short: "%short" failed, "%short" parameter is not an array on model: %short
@@ -165,10 +157,8 @@ $ffffff.
 %short: arg %double, expected signed char <%short> = <%short> pair, got: %short = %short on model %short
 %short: bonemask %double %short
 %short: empty conditions conditions table on model: %short
-%short: empty layers table on model: %short
 %short: empty parameters table on model: %short
 %short: empty states table on model: %short
-%short: empty transitions table on model: %short
 %short: expected int, float or string for %short on model: %short
 %short: failed expected table as arg, got <%short> on model: %short
 %short: failed for node %short %short[%double], bad param on model: %short
@@ -223,7 +213,6 @@ $ffffff.
 %short: unknown block %short on model: %short
 &YA1H
 &YA1L
-&ffffff.
 &qt != &q
 &vOutput != &d1
 &vOutput != &d2
@@ -262,7 +251,6 @@ $ffffff.
 +fff.
 +short ~"
 ,@Nct
-,E9|	
 ,ffff.
 -animdecodecachemem
 -sse2
@@ -279,11 +267,16 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/animationsystem/release/osx64/compression_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/animationsystem/release/osx64/ianimationsystem_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/animationsystem/release/osx64/sequenceresource_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/animnode_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/blendanimnode_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/boneconstraints_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/model_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/modelbuilder_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/permrendermeshdata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/rendermesh_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/rootanimnode_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/sequenceanimnode_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/statemachineanimnode_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/surfaceproperties_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_collisionmesh_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_level_resource_h_schema.gen_cpp
@@ -308,7 +301,7 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/kv3transfer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animationophistory.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animstategraph.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animgraph/animstategraph.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/model.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
@@ -318,7 +311,7 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/modellib/ianimstategraph.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/modellib/animgraph/ianimstategraph.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/introspectedtypemanager.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
@@ -339,6 +332,7 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmultilist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vscript/ivscript.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vscript/vscript_templates.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
@@ -397,7 +391,6 @@ $ffffff.
 8[A\A]A^A_]
 8[A^A_]
 92tBH
-9Aht3H
 9F(t6H
 9Hc8A
 9Hc>A
@@ -418,7 +411,6 @@ $ffffff.
 <INcd
 <NULL>
 <fff.
-<ffffff.
 <unknown>
 =unsigned long long;Ic
 >fffff.
@@ -458,7 +450,6 @@ $ffffff.
 @THc{T1
 @V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
 @[A\A^A_]
-@[A^]
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
 @_CommandLine
@@ -481,7 +472,6 @@ $ffffff.
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_VirtualAlloc
 @_Plat_VirtualFree
-@_RandomInt
 @_RegisterStringToken
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
@@ -598,12 +588,10 @@ A+ux~
 A+w8~
 A+wX~
 A+wchar_t ~
-A+wchar_t(~)L
 A+wchar_t@~
 A+wchar_t`~
 A,LcK,1
 A9D$0u0H
-A9Eht/A
 A9Q8A
 A9T$ }
 A9V |fA
@@ -611,7 +599,6 @@ A9V }
 A9V }	A
 A9\unsigned char
 A9]H} 
-A9]ht
 A9]unsigned char} 
 A;4$|
 A;D$ ~
@@ -626,8 +613,6 @@ A;]`u
 A;]long long|
 A;^(u
 A;^`u
-A;^hu*
-A;_ u
 A;_hu
 A;t$Xu0I
 A;|$4H
@@ -646,6 +631,7 @@ ANIMATION_SNAPSHOT_FINAL_COMPOSITE
 ANIMATION_SNAPSHOT_MAX
 ANIMATION_SNAPSHOT_SERVER_SIMULATION
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+ARASBRBTBRBTBRBTBRBRAp
 ARAp0p
 ARBRB`
 ARBTBRB]ARBRAp
@@ -678,7 +664,6 @@ ATTACHMENT_INFLUENCE_FLAGS_ROOT_TRANSFORM
 AWATAp
 AWAVATS
 AWAVATSA
-AWAVATSE
 AWAVATSH
 AWAVATSI
 AWAVATSM
@@ -701,8 +686,6 @@ AWAVSPI
 AWAVSPM
 AZBSBp
 A[ATAp
-AddAnimationToState:  no such node %short
-AddAnimationToState:  no such sequence %short
 AddEventTypeFlags
 Adds or merges the pose parameter range of the specified pose paramater
 Adds the the specified type flags for specified event on the sequence
@@ -756,6 +739,7 @@ AnimationSystem
 AnimationSystemUtils_001
 AnimationSystem_001
 AppendDataChannels( %short, %double, %short )
+AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -788,6 +772,7 @@ BaseConstraint_t
 BenchmarkService001
 BinaryProperties_GetValue
 BitVec_IsBitSet( m_pReadableBones, int )
+Blend Node
 BoneChannel
 BoneSetup
 BuilderModelBoneFlexDriverControl_t
@@ -797,12 +782,18 @@ Burst Randomize
 Burst Scale
 C [A^]
 C(yTI
-C+t58~:L
+C+t5(~8K
 C+unsigned short&`~
 C,[A\A^A_]
 CAimConstraint
 CAnimContainer
 CAnimContainer_Imp
+CAnimNode
+CAnimNodeFactory::CFactoryMaker
+CAnimNodeFactory::CFactoryMakerT<CBlendAnimNode>
+CAnimNodeFactory::CFactoryMakerT<CRootAnimNode>
+CAnimNodeFactory::CFactoryMakerT<CSequenceAnimNode>
+CAnimNodeFactory::CFactoryMakerT<CStateMachineAnimNode>
 CAnimResourceSequence
 CAnimationBucket
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (1)
@@ -970,6 +961,7 @@ CBaseIntrospectedTypeManager
 CBaseIntrospectedTypeManager:  Bindings don'unsigned short match.
 CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
 CBindPoseSequence
+CBlendAnimNode
 CBoneSetup
 CBuilderModelInfo
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
@@ -1087,6 +1079,8 @@ CPhysSurfacePropertiesGame
 CPhysSurfacePropertiesPhysics
 CPhysSurfacePropertiesSoundNames
 CPointConstraint
+CRefCountServiceBase<true, CRefMT>
+CRefCounted<CRefCountServiceBase<true, CRefMT> >
 CReferenceCleanupTraversal
 CRenderMesh
 CRenderSkeleton
@@ -1096,6 +1090,7 @@ CResourceExtReference
 CResourcePointer
 CResourceReferenceFixupTraversal
 CResourceString
+CRootAnimNode
 CSceneObjectData
 CSchemaClassBinding<AnimResourceActivity_t>
 CSchemaClassBinding<AnimResourceAnimDesc_t>
@@ -1376,7 +1371,12 @@ CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_animationsystem
@@ -1426,8 +1426,10 @@ CScriptCreatableSequence
 CSeqResourceCmdSequence
 CSeqResourceMultiSequence
 CSeqResourceS1Sequence
+CSequenceAnimNode
 CSequenceGroupTypeManager
 CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
+CStateMachineAnimNode
 CStrongHandle
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
@@ -1458,6 +1460,7 @@ CUtlString
 CUtlString CAnimationGraphVariant_t::ToString() const
 CUtlString GetEnumValueAsString(E) [E = fieldtype_t]
 CUtlString::SetDirect does not support resizing strings in place.
+CUtlStringMap inserted signed char string and got index %double, but there are only %double entries already inside.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CUtlSymbol NodeIdToSym(int16)
 CUtlVector
@@ -1521,15 +1524,12 @@ D$0JcD
 D$8D9
 D$XHc
 D$xHc
-D9%Sp
-D9%wchar_t*
 D98u31
 D9h0H
-D9s }
 D9sXu
 D;... u$H
 D;9u}
-D;=PW
+D;=09
 D;`(|
 D;`PL
 D;cx|
@@ -1538,7 +1538,6 @@ D;qhu!H
 D;x0H
 D;xT}"H
 D;xX|
-D;{ |nH
 D;{(|
 D<PfA
 D>,Hc
@@ -1568,25 +1567,21 @@ E9e
 E9t$pL
 E;__int128 ~0
 E;e8u
-E;eX|
+E;e8|
 E;fHu
 E;l$8u
 E;l$P
 E;t$8L
 E;t$8u
 E;t$8u"
-E;t$P|
 E;u8u
 E;uD}\A
 E;uPu$I
-E;uX|
 E;|$(L
 E;|$8u
 E;|$8u"
 E;}8u
 E;}8|
-E;~P|
-E;~X|
 EINAu"H
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CCompressor
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
@@ -1599,6 +1594,7 @@ ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
 ERROR: Problem allocating permanent data for resource in file '%short'. See above for reason(short)
 EconItemToolModel_001
 Encountered too many releases for resource "%short"
+End Frame
 EngineServiceMgr001
 EntryNode
 EnvironmentMapBuilder_001
@@ -1617,7 +1613,8 @@ F,Hcz,1
 F0Hc@
 F4Hcz41
 F8Hcz81
-F;double*(u/J
+F8[A^]
+F;double; uEH
 F<Hcz<1
 FCVAR_NEVER_AS_STRING
 FDHcL:
@@ -1706,6 +1703,7 @@ Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in ex
 Failed to run initial animationsystem script
 Failed to save unsupported class
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
+File Path
 Find signed char named animation index for the model
 Find signed char named pose parameter index for the model
 Find signed char named sequence index for the model
@@ -1716,6 +1714,7 @@ FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String:
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Fp[A^]
+Frames
 From Class Binding
 From Enum Binding
 Ft[A^]
@@ -1760,9 +1759,6 @@ Given signed char name or signed char sequence handle, returns an instance of th
 Given signed char pose parameter array, return the highest frame number for the sequence
 H	p(]
 H!wchar_t(]
-H91t+H
-H91t8H
-H91tRH
 H;A(usH
 H;A(uuH
 HAnimationDecodeDesc CAnimationDecodeContext::AddAnimationDecodeDesc(HModel, float, const uint32 *, int, const CAnimationDecodeOp *, int, const float *, int, LODGroupMask_t, uint32)
@@ -1775,7 +1771,6 @@ HSCRIPT CModelVScriptCompile::CreateSequence(HSCRIPT)
 HSCRIPT CModelVScriptCompile::GetSequence(const ScriptVariant_t &) const
 HSCRIPT CVariantBase<CVariantDefaultAllocator>::operator HSCRIPT__ *() const [CValueAllocator = CVariantDefaultAllocator]
 HSequence
-HSequence CAnimationStateGraphLayer::FindTransitionSequence(CAnimationStateGraph *, const IAnimationStateGraphOwner *, HSequence, HSequence, bool)
 HSequenceGroup_Internal
 H[A\A]A^A_]
 H[A^A_]
@@ -1833,9 +1828,6 @@ I CUtlRBTree<CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &
 I CUtlRBTree<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
@@ -1868,9 +1860,6 @@ IVConCommDataReceived
 IVSSequence
 Ic4$A
 Ic4$H
-IcD$PH
-IcD$hH
-IcFhH
 IcF|H
 IcG(Hc
 IcGtH
@@ -1878,10 +1867,8 @@ IcGxH
 IcL$DHcP(1
 IcT$hH
 IcU(H
-IcUhHk
 Ic\$ H
 Ic\$(D9
-Ic^(H
 Ic^PH
 Ic_ H
 Ic_(D
@@ -1934,7 +1921,6 @@ IsValidList(list)
 Jc41H
 KV Conditional Evaluation Error
 Kc4.H
-KcL/(H
 KeyValueCache001
 KeyValueText
 KeyValueTextString
@@ -1957,13 +1943,13 @@ KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 L$(Lc
 L$0Hc
 L$XJc
-L; Lc$
 LINUX
 LOWVIOLENCE
 Lc#D;long double
 LcC(H
 Lc`TI
 LccLC
+Lci8M
 LckLC
 LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
@@ -1993,6 +1979,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -2005,7 +1992,10 @@ MODEL_BONE_FLEX_TZ
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPreSerializationCallback
+MPropertyAttributeEditor
 MPropertyFriendlyName
+MPropertyGroupName
+MPropertyHideField
 MResourceTypeForInfoType
 MResourceVersion
 MULTIPLAYER_BREAK_CLIENT
@@ -2019,7 +2009,6 @@ Mc.D;unsigned long
 Mc7D;u
 Mc<$J
 McN8M
-Mce8M
 Mcn0M
 Mcu0D9
 McwHG
@@ -2149,9 +2138,11 @@ Quaternion
 QuaternionIsNormalized( m_dataChannel[ nChannel ].m_data.m_pQuaternion[ nIndex ], s_flQuatNormEps )
 QueuedLoaderVersion001
 QyOIc
+RAp(p8p8p
 RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
+RBRBRBWARBWARBWARBRBRA
 RBRGp
 RBSAXAp
 RESOURCE_TYPE_ANIMATION_GROUP_INTERNAL
@@ -2235,6 +2226,7 @@ Returns true if the sequence is flagged as snapped
 Returns true if the sequence is frame cacheable
 Returns true if the sequence is signed char script based sequence
 Returns true if the sequence is signed char single animation sequence
+Rffff.
 RnCapsuleDesc_t
 RnHullDesc_t
 RnMeshDesc_t
@@ -2242,8 +2234,8 @@ RnSoftbodyCapsule_t
 RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
+Root Node
 RyPIc
-SATISFIED
 SAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 SBRAp
 SBRGp8p
@@ -2315,6 +2307,7 @@ SeqResourceS1SeqDesc_t
 SeqResourceSeqDesc_t_Flag_t
 SeqResourceSynthAnimDesc_t
 SeqResourceTransition_t
+Sequence Node
 Sequence out of range: %double
 Sequence( %short, %.3f ) : %.3f
 SequenceGetName
@@ -2347,6 +2340,8 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2ServerSerializers002
+Start Frame
+StateMachine Node
 StatsService_001
 Surface Prop Hash
 SurfacePropertiesList
@@ -2354,9 +2349,7 @@ T KeyValues3::GetAsNumeric() const [T = float]
 T KeyValues3::GetAsNumeric() const [T = int]
 T KeyValues3::GetAsNumeric() const [T = long long]
 T$$D9
-T5(KcL5(D
 TARARB`?ATAp
-TARAp
 TARBRB]ARBREp
 TAUAp
 TAUBRAp
@@ -2366,8 +2359,8 @@ TBRAp
 TBRBRAp
 TBSATAp
 TBSAp
-TBSBp
 TBTAp
+TBWAp
 TBXATAp
 TB]ARA
 TB`5A`GB`=ASATAp
@@ -2377,13 +2370,15 @@ TB`>ATAp
 TB`?ATAp
 TBpXp
 TCRAp
-TCRBRA
 TCRBRDXBRBp
 TCRBTBp
 TCRB`AATAp
 TCTBRBRBSATAp
 TCUATAp
 TCWBp
+TCWCRAp
+TCYARAp
+TCYASATAp
 TC^BRBRAp
 TC^BRBRB^BRBRB^BRBRB^BRBRB^BRBRB^BRBRB^BRBRBp
 TC^BRBRB^BRBRB^BRBRBp
@@ -2414,6 +2409,7 @@ Unable to allocate %double bytes for the animation decode cache
 Unhandled field type for field '%short': '%short' (Why did it pass SchemaRecurseType?)
 Unhandled type
 Unknown KV3 type '%double'.
+Unnamed
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 UtlHashHandle_t CUtlHash<BoneHashPairing_t, bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), unsigned int (*)(const BoneHashPairing_t &)>::BuildHandle(int, int) const [Data = BoneHashPairing_t, C = bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), K = unsigned int (*)(const BoneHashPairing_t &)]
@@ -2422,6 +2418,7 @@ UtlHashHandle_t CUtlHash<CUtlHashDict<ChannelElementMap_t, true, true>::Entry_t,
 UtlHashHandle_t CUtlHash<CUtlHashDict<UserDataElement_t, true, false>::Entry_t, CUtlHashDict<UserDataElement_t, true, false>::CCompare<true>, CUtlHashDict<UserDataElement_t, true, false>::CHash<true> >::BuildHandle(int, int) const [Data = CUtlHashDict<UserDataElement_t, true, false>::Entry_t, C = CUtlHashDict<UserDataElement_t, true, false>::CCompare<true>, K = CUtlHashDict<UserDataElement_t, true, false>::CHash<true>]
 UtlHashHandle_t CUtlHash<CUtlHashDict<short, true, false>::Entry_t, CUtlHashDict<short, true, false>::CCompare<true>, CUtlHashDict<short, true, false>::CHash<true> >::BuildHandle(int, int) const [Data = CUtlHashDict<short, true, false>::Entry_t, C = CUtlHashDict<short, true, false>::CCompare<true>, K = CUtlHashDict<short, true, false>::CHash<true>]
 UtlHashHandle_t CUtlHash<CUtlHashDict<short, true, true>::Entry_t, CUtlHashDict<short, true, true>::CCompare<true>, CUtlHashDict<short, true, true>::CHash<true> >::BuildHandle(int, int) const [Data = CUtlHashDict<short, true, true>::Entry_t, C = CUtlHashDict<short, true, true>::CCompare<true>, K = CUtlHashDict<short, true, true>::CHash<true>]
+UtlSymId_t CUtlStringMap<CSmartPtr<CAnimNodeFactory::CFactoryMaker, CRefCountAccessor>, CUtlSymbolTable>::Insert(const char *, const T &) [T = CSmartPtr<CAnimNodeFactory::CFactoryMaker, CRefCountAccessor>, SymbolTableType_t = CUtlSymbolTable]
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -2492,7 +2489,6 @@ Vector4D
 Velocity
 VisBuilder_001
 VpropBreakablePartData_t
-W%A|	
 WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Missing data block for file: %short
 WARNING: Missing introspection manifest for file: %short
@@ -2508,10 +2504,10 @@ WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
-XBRBXBRBXBRBXBRBXBRBXBSATAp
+XBRAp
+XBRBXBRBXBRBXBRBXBRBXBRAp
 XBRB]ARBRB]ARAp
 XBRB`
-XBRBp
 XBSARBSAXBSARBSAXBTBRB]ARBRAp
 XBSARBSAXBTBRB]ARBRAp
 XBTBRBRBRBSAXBRAp
@@ -2560,7 +2556,6 @@ _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_VirtualAlloc
 _Plat_VirtualFree
-_RandomInt
 _RegisterStringToken
 _ThreadGetCurrentId
 _ThreadInterlockedExchange64
@@ -2625,6 +2620,7 @@ __cstring
 __data
 __gcc_except_tab__TEXT
 __got
+__int128 < m_Vector.Count()
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -2679,6 +2675,7 @@ audioparams
 audioreflectivity
 audioroughnessfactor
 audiosounds
+auto CAnimationStateGraph::AddAnimNode(int, const char *, const Vector2D &)::(anonymous class)::operator()() const
 auto CKeyValues3Context::FreeKV_Internal(KeyValues3 *)::(anonymous class)::operator()() const
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto CRetargetBiped::ConvertAnimation(CAnimationResult &)::(anonymous class)::operator()() const
@@ -2695,7 +2692,6 @@ bonemask %double : channel %double : pattern %double : count %double
 bool CAnimContainer_Imp::AppendAnimGroup(const CModel *, int, HAnimationGroup_Internal)
 bool CAnimContainer_Imp::BuildAnimGroupList(const CModel *, HAnimationGroup_Internal, int)
 bool CAnimationBlendList::AddSequence(HSequence, float)
-bool CAnimationStateTransition::IsSatisified(const CAnimationStateGraph *) const
 bool CAnimationStateTransitionCondition::IsSatisfied() const
 bool CBitVecT<CFixedBitVecBase<3> >::IsBitSet(int) const [BASE_OPS = CFixedBitVecBase<3>]
 bool CBitVecT<CVarBitVecBase<unsigned short, 1024> >::IsBitSet(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 1024>]
@@ -2739,7 +2735,6 @@ boolean
 break
 buffer
 bulletimpact
-candidates.Count() >= 1
 chain
 char&&|&PD9
 character
@@ -2752,6 +2747,7 @@ conditions
 const CAnimContainer_Imp::AnimationGroupImp_t *CAnimContainer_Imp::GetAnimGroupImp(int) const
 const QAngle &CVariantBase<CVariantDefaultAllocator>::operator const QAngle &() const [CValueAllocator = CVariantDefaultAllocator]
 const ResourceBlockEntry_t *Resource_GetBlockEntry(const ResourceFileHeader_t *, ResourceBlockId_t)
+const T &CUtlStringMap<CSmartPtr<CAnimNodeFactory::CFactoryMaker, CRefCountAccessor>, CUtlSymbolTable>::operator[](UtlSymId_t) const [T = CSmartPtr<CAnimNodeFactory::CFactoryMaker, CRefCountAccessor>, SymbolTableType_t = CUtlSymbolTable]
 const Vector &CVariantBase<CVariantDefaultAllocator>::operator const Vector &() const [CValueAllocator = CVariantDefaultAllocator]
 const char *CFmtStrN<256, false>::Format(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 const char *CFmtStrN<256, false>::sprintf(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
@@ -2776,7 +2772,6 @@ deltaAngle
 deltaMovement
 density
 description
-distances.Count() > 0
 duration
 dyld_stub_binder
 eTokenParam == TK_ENTRY || eTokenParam == TK_EXIT
@@ -2815,8 +2810,6 @@ float64
 float\IcFX1
 floatcomplex [A\A^A_]
 floor
-found %double paths
-found path from %short to %short %double hops
 frame
 framecacheable
 framerangesequence
@@ -2828,9 +2821,7 @@ g_pResourceSystem
 gamematerial
 gameproperties
 getinfo
-graph:  %short:  animations:  %short
 graph:  %short:  states:  %short
-graph:  %short:  transition:  %short
 graph:  %short: condition name = '%short' : condition = '%short' on model: %short
 graph:  %short: param name = '%short' : type = '%short' on model: %short
 hAnimGroup != ANIMATION_GROUP_HANDLE_INVALID
@@ -2846,6 +2837,7 @@ hidden
 hscript
 hscript_lightbinding
 iActivityIndex > g_FirstPrivateActivity
+iLayer < m_Layers.Count()
 iLayer >= 0
 iStart
 ikLocks
@@ -2862,7 +2854,6 @@ int CAnimContainer_Imp::AppendSeqGroup(const CModel *, int, HSequenceGroup_Inter
 int CAnimContainer_Imp::EstimateHashSize()
 int CAnimationState::GetBonesInWorldSpace(const matrix3x4_t &, int, matrix3x4_t *, const uint32 *)
 int CAnimationState::SetBonesFromWorldSpace(const matrix3x4_t &, int, const matrix3x4_t *)
-int CAnimationStateGraphLayer::FindStateBySequence(HSequence) const
 int CDisjointSetForest::Find(int)
 int CKeyValues_Data::Internal_GetInt()
 int CModelVScriptCompile::CreateWeightlist(const char *, HSCRIPT)
@@ -2885,7 +2876,6 @@ int16 SymToNodeId(CUtlSymbol)
 int32
 int64
 integer
-interrupting %short to advance to %short
 invalid
 iv_debugbone
 iygIc
@@ -2921,6 +2911,7 @@ m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_ExtParts
+m_Filepath
 m_FirstFree == InvalidIndex()
 m_Frame1
 m_Frame2
@@ -3106,6 +3097,7 @@ m_flEnd
 m_flFPS
 m_flFadeInTime
 m_flFadeOutTime
+m_flFps
 m_flInertiaScale
 m_flJumpFactor
 m_flLinearDamping
@@ -3239,6 +3231,7 @@ m_nElementSizeInBytes
 m_nElementType
 m_nElementUniqueID
 m_nEndFrame
+m_nEndframe
 m_nEntIndex
 m_nEntityIndex
 m_nFadeMax
@@ -3275,6 +3268,8 @@ m_nLocalWeightlist
 m_nMaterial
 m_nMaxUniqueFrameIndex
 m_nNameHash
+m_nNodeID
+m_nNodeIndex
 m_nNumParameters < MAX_SCRIPT_FUNCTION_PARAMETERS
 m_nParent
 m_nPeakFrame
@@ -3296,6 +3291,7 @@ m_nSrcResult
 m_nStartFrame
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nSubCycles
 m_nSurfaceProp
 m_nSurfacepropertyIndices
@@ -3469,6 +3465,7 @@ m_vecBoneWorldMin
 m_vecCenter
 m_vecMax
 m_vecMin
+m_vecPosition
 m_vecRootMax
 m_vecRootMin
 m_vecSize
@@ -3488,7 +3485,7 @@ model bone %double is out of bounds, probably attempting to use an animation fro
 modellib
 motionflags
 multiplayerBreak_t
-multiple candidates with distance %double to %short, choosing %double: %short
+mykIc
 nActualPoseParamCount >= nPoseParamCount
 nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
@@ -3564,7 +3561,6 @@ pAtomicType
 pBlob
 pBound->m_vMeshMin.IsReasonable() && pBound->m_vMeshMax.IsReasonable()
 pCallback == NULL
-pCondition
 pContext
 pCurrentKey
 pDHc{D1
@@ -3694,9 +3690,7 @@ spline
 stackLevel >= 0 && stackLevel < m_errorIndex
 start
 startframe
-state
 states
-states.Count() == 1
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AnimationProcessingType_t>::Get() [T = AnimationProcessingType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AnimationSnapshotType_t>::Get() [T = AnimationSnapshotType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AttachmentInfluenceFlags_t>::Get() [T = AttachmentInfluenceFlags_t]
@@ -3791,8 +3785,10 @@ static void BuilderModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistere
 static void BuilderModelBoneFlexDriverList_t::Schema_VerifyBindingIsRegistered()
 static void BuilderModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
 static void CAimConstraint::Schema_VerifyBindingIsRegistered()
+static void CAnimNode::Schema_VerifyBindingIsRegistered()
 static void CAttachment::Schema_VerifyBindingIsRegistered()
 static void CBaseConstraint::Schema_VerifyBindingIsRegistered()
+static void CBlendAnimNode::Schema_VerifyBindingIsRegistered()
 static void CBuilderModelInfo::Schema_VerifyBindingIsRegistered()
 static void CCompressorGroup::Schema_VerifyBindingIsRegistered()
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
@@ -3811,7 +3807,10 @@ static void CPhysSurfacePropertiesSoundNames::Schema_VerifyBindingIsRegistered()
 static void CPointConstraint::Schema_VerifyBindingIsRegistered()
 static void CRenderMesh::Schema_VerifyBindingIsRegistered()
 static void CRenderSkeleton::Schema_VerifyBindingIsRegistered()
+static void CRootAnimNode::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectData::Schema_VerifyBindingIsRegistered()
+static void CSequenceAnimNode::Schema_VerifyBindingIsRegistered()
+static void CStateMachineAnimNode::Schema_VerifyBindingIsRegistered()
 static void CStudioConstraintBones::ComputeTwistConstraint(matrix3x4a_t *, const CModel *, const CTwistConstraint *)
 static void CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
 static void CTwistConstraint::Schema_VerifyBindingIsRegistered()
@@ -3906,13 +3905,12 @@ u,...*H
 u,G	|
 u.z,1
 u8z61
-u9A;^8u
+u9A;^(u
 u9z71
-u;fff.
 uCLc=
 uGetResourceManifest
 uMHcC
-uZff.
+uRff.
 uiKey != UnusedElementKey()
 uint32 CBitVecT<CVarBitVecBase<unsigned short, 1024> >::Get(uint32) const [BASE_OPS = CVarBitVecBase<unsigned short, 1024>]
 uint32 CBitVecT<CVarBitVecBase<unsigned short, 32> >::GetDWord(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
@@ -3931,9 +3929,9 @@ unsigned short Hc4
 unsigned short Ic0
 unsigned short#HcK(H
 unsigned short#IcO(H
-unsigned short%4Lk
 unsigned short%ffff.
 unsigned short&9C0u!I
+unsigned short&A;_
 unsigned short&H9[8tUH
 unsigned short(IcN(H9
 unsigned short)A#F
@@ -3941,7 +3939,6 @@ unsigned short)A#G
 unsigned short,A#D$
 unsigned short,fff.
 unsigned short-L9`
-unsigned short/ffffff.
 unsigned short<fff.
 unsigned short>4E1
 unsigned short?ffffff.
@@ -4394,7 +4391,6 @@ void CAnimationResult::Slerp(const ChannelWeightlist_t *, const CAnimationResult
 void CAnimationResult::Subtract(const ChannelWeightlist_t *, const CAnimationResult &, float)
 void CAnimationResult::WorldspaceSlerp(const ChannelWeightlist_t *, const CAnimationResult &, float)
 void CAnimationState::ComputeHasNonTransformAnimationData()
-void CAnimationStateGraphLayer::BuildPaths(int, int, CUtlVector<int> &) const
 void CBaseIntrospectedTypeManager::SetDiskDataBinding(const CSchemaClassBindingBase *)
 void CBitVecT<CVarBitVecBase<unsigned short, 1024> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 1024>]
 void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Clear(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
@@ -4461,8 +4457,6 @@ void CUtlRBTree<CUtlMap<const char *, CUtlString, int, bool (*)(const char *cons
 void CUtlRBTree<CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlString, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CCopyableUtlVector<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 void CUtlScratchMemoryPool::FreeAll()
 void CUtlScratchMemoryPool::Init(int, void *)
@@ -4532,7 +4526,6 @@ xyA9^
 yxxxH
 |  E1
 |$<Hi
-|$XIcL$hH
 |( E1
 |fff.
 }HA;EP}

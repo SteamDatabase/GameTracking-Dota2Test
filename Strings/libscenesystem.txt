@@ -733,7 +733,6 @@ $ffffff.
 0A;void`u
 0A;vxu
 0D;{ |
-0E		0F	
 0Hc{01
 0[A\A^A_]
 0[A^]
@@ -967,7 +966,6 @@ $ffffff.
 @(IcL$,H
 @(long double:A
 @(testA
-@3		@4		@5		@6		@7	
 @8Hc{81
 @@B;\
 @@L+@0I
@@ -1325,6 +1323,7 @@ ARB]ARAp
 ARB]ARBRB]ARB]ARB]ARB]ARA
 ARGB8888
 ASARBSAXBRA
+ASARBSAXBRASBRBTBRBTBRBTBRBRAp
 ASARBSAXBRB]ARB]ARB]ARA
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
@@ -1410,6 +1409,7 @@ AnimationSnapshot_t
 AnimationSystemUtils_001
 AnimationSystem_001
 Asking for the bounds of an object with no bounds because it has not been added to the world or has been deleted
+AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetGridWidget_ClearLayer
 AssetPreviewSystem_001
@@ -1457,6 +1457,7 @@ BenchmarkService001
 Bffff.
 BinaryProperties_GetValue
 BitVec_IsBitSet( m_pReadableBones, int )
+Blend Node
 Boolean default must be true or false.
 Breakpoint on delete
 BuilderModelBoneFlexDriverControl_t
@@ -1481,6 +1482,7 @@ C7@t6H
 C@H+X0H
 C@L+X0L
 CAimConstraint
+CAnimNode
 CAnimatableSceneObjectDesc
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (1)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (2)
@@ -1572,6 +1574,7 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CAtomicManipulator<Color>
 CAtomicManipulator<ISceneObjectDesc>
 CAtomicManipulator<Quaternion>
+CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<VectorAligned>
@@ -1583,6 +1586,7 @@ CBaseAppSystem<ISceneUtils>
 CBaseConstraint
 CBaseNonPooledSceneObjectDesc<C6FaceSkyboxObject>
 CBaseSceneObjectDesc
+CBlendAnimNode
 CBlitTextureToBackBufferLayer
 CBlitTextureToRenderTargetLayer
 CBuilderModelInfo
@@ -1831,6 +1835,7 @@ CResourceArray
 CResourceExtReference
 CResourcePointer
 CResourceString
+CRootAnimNode
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %double!
 CSSAOProceduralRenderer
 CSSDSEndFrameViewInfo
@@ -2060,12 +2065,18 @@ CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CSchemaManipulator<Color>
 CSchemaManipulator<ISceneObjectDesc>
 CSchemaManipulator<Quaternion>
+CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<VectorAligned>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_modellib
@@ -2100,12 +2111,14 @@ CScratchRenderTargetSystem::FindOrCreateRenderTarget: Encountered two different 
 CScratchRenderTargetSystem::FindOrCreateRenderTarget: Tried to reference unknown render target name "%short"!
 CScratchRenderTargetSystem::FindOrCreateRenderTarget: Tried to specify RENDER_MULTISAMPLE_INVALID! "%short"
 CScratchRenderTargetSystem::GetRenderTargetInfo: Tried to reference render target from other view "%short"!
+CSequenceAnimNode
 CSimplePostProcessingLayerRenderer
 CSkyBoxObjectDesc
 CSplatGeometryLayerRenderer
 CSplatLightsLayerRenderer
 CSpotLightObjectDesc
 CSpotLightObjectDescVr
+CStateMachineAnimNode
 CStrongHandle
 CSunLightManager
 CTSListBase: Misaligned list
@@ -2436,6 +2449,7 @@ Enable display of console messages on screen. 1 = Enabled, 0 = Disabled, -1 = En
 Enable drawing
 Encountered ConCommand '%short' without signed char callback!
 Encountered too many releases for resource "%short"
+End Frame
 End-of-file inside block comment.
 Engine2
 EngineServiceMgr001
@@ -2533,6 +2547,7 @@ FieldDescriptorProto.oneof_index should not be set for extensions.
 FieldOptions
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
+File Path
 File already exists in database: 
 File appears to be in generated pool but wasn'unsigned short registered: 
 File is already registered: 
@@ -2558,6 +2573,7 @@ FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String:
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Fp[A^]
+Frames
 From Class Binding
 From Enum Binding
 FtIcFp
@@ -2916,8 +2932,6 @@ L3:fB
 L9"tnH
 L9,8t
 L90t*H
-L95B}
-L95To
 L9v@u
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -2939,7 +2953,6 @@ LINUX
 LITE_RUNTIME
 LOWVIOLENCE
 Label
-Lc=F}&
 LcO,D
 Leaked displaylists : %double!!!!!
 Leaked drawlists : %double!!!!!
@@ -2982,6 +2995,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -2993,7 +3007,10 @@ MODEL_BONE_FLEX_TZ
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPreSerializationCallback
+MPropertyAttributeEditor
 MPropertyFriendlyName
+MPropertyGroupName
+MPropertyHideField
 MULTIPLAYER_BREAK_CLIENT
 MULTIPLAYER_BREAK_SERVER
 MapListService_001
@@ -3188,8 +3205,6 @@ OyMIc
 P L;u
 P(;Q(}_H
 P(;Q(}pI
-PJ		PK	
-PL		PM		PN		PO		PP	
 PLACEHOLDER_VALUE
 POSIX
 PPL;}
@@ -3260,6 +3275,7 @@ QueuedLoaderVersion001
 QyOIc
 R16F_EXPAND
 RARARARARARARARARARARARARARARARARASAp
+RAp(p8p8p
 RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
@@ -3358,6 +3374,7 @@ RnSoftbodyCapsule_t
 RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
+Root Node
 S(Ict$,L
 S@H+Z0H
 SARBSAXBSARBSAXBRB`
@@ -3412,6 +3429,7 @@ SchemaTestExternal_Two_001
 ScratchRenderTargetSystem tried to use signed char HSceneViewRenderTarget in view "%short" from signed char different view "%short"!
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
+Sequence Node
 ServerUploadGameStats001
 ServiceDescriptorProto
 ServiceOptions
@@ -3479,6 +3497,8 @@ SpawnGroupFlags_t
 SplatLights
 SpotShadowColor
 SpotShadowDepth
+Start Frame
+StateMachine Node
 StatsService_001
 Stencil Reflection Render View
 Stencil bit allocation failed
@@ -3719,6 +3739,7 @@ Value out of range for int64 option "
 Value out of range for uint32 option "
 Vector
 Vector Prt_ComputeDirectionalCentroid(CUtlVector<Vector> &, int, int)
+Vector2D
 Vector4D
 VectorAligned
 VertexColorUVPos_t
@@ -3774,7 +3795,7 @@ X[A\A]A^A_]
 X[A^A_]
 Xffffff.
 XyH_	
-Y%$8"
+Y%$J"
 Yfffff.
 ZBRARATAp
 Zffffff.
@@ -4305,6 +4326,7 @@ m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_ExtParts
+m_Filepath
 m_FirstFree == InvalidIndex()
 m_Frame1
 m_Frame2
@@ -4425,6 +4447,7 @@ m_flBurstScale
 m_flDepthSortBias
 m_flExtraShaderData
 m_flFarCullDistanceSquared
+m_flFps
 m_flInertiaScale
 m_flJumpFactor
 m_flLinearDamping
@@ -4520,6 +4543,7 @@ m_nDefaultMeshGroupMask
 m_nDepth
 m_nElementCount
 m_nElementSizeInBytes
+m_nEndframe
 m_nFadeMax
 m_nFadeMin
 m_nFadeTime
@@ -4546,6 +4570,8 @@ m_nMaterial
 m_nMeshGroupMaskSmall
 m_nMultisampleNumSamples
 m_nNameHash
+m_nNodeID
+m_nNodeIndex
 m_nNumMipLevels
 m_nNumObjects <= ARRAYSIZE( m_objectReferences )
 m_nNumObjects >= 0
@@ -4575,6 +4601,7 @@ m_nSlaveBoneList.IsEmpty()
 m_nSlaveChannel
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nState == DRAWLIST_STATE_GOTTEN
 m_nSurfaceProp
 m_nSurfacepropertyIndices
@@ -4664,6 +4691,7 @@ m_roughnessFactor
 m_runStepLeft
 m_runStepRight
 m_sBoneName
+m_sName
 m_sSurfaceProperty
 m_sTargetMorph
 m_sceneObjects
@@ -4721,6 +4749,7 @@ m_vViewMin
 m_vecAABBMaxes
 m_vecAABBMins
 m_vecCenter
+m_vecPosition
 m_vecSize
 m_vertexBuffers
 m_viewId

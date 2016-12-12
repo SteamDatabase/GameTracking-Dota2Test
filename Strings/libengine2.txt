@@ -1031,7 +1031,7 @@ $ffffff.
 )#GameUI_Disconnect_PureServer_ClientExtra
 )#GameUI_Disconnect_SteamDeny_BadAntiCheat
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)D;5YNS
+)D;5YqS
 )NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS
 )NETWORK_DISCONNECT_PURESERVER_CLIENTEXTRA
 )NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE
@@ -1088,6 +1088,9 @@ $ffffff.
 , to "%short"
 , udp
 ,#GameUI_Disconnect_Splitpacket_Send_Overflow
+,5/5X
+,5:5X
+,5E5X
 ,@C9\
 ,NETWORK_DISCONNECT_SPLITPACKET_SEND_OVERFLOW
 ,NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT
@@ -1610,9 +1613,9 @@ $ffffff.
 1 = Pause the game when pressing ~ to open the console. CTRL+~ opens the console without pause.
 1 CPU, Frequency: %.f %short,  Features: %short
 1.0.2, 30-Dec-2001
+10:53:12
 127.0.0.1
 127.0.0.H
-13:13:34
 180.0
 1sAL"
 2 - bottom-left
@@ -2569,6 +2572,7 @@ ARB]ARB]ARB]ARB]ARB]ARA
 ARB`8BRB`
 ARGB8888
 ASARBSAXBRA
+ASARBSAXBRASBRBTBRBTBRBTBRBRAp
 ASARBSAXBRB]ARB]ARB]ARA
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
@@ -2748,6 +2752,7 @@ AssertOnceTest( %short ) end
 AssertOnceTest( %short ) start
 AssertTest( %short ) end
 AssertTest( %short ) start
+AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -2836,6 +2841,7 @@ BitBuf Error
 BitmapImagePanel
 BlackBoxVersion001
 BlankImage
+Blend Node
 Blink specified convar value between two values at the specified duration.
 Bogus DAC index %double
 Bogus DAC value 0x%long long
@@ -2930,6 +2936,7 @@ C@L+X0L
 CA;t$(u
 CActivateMainMenuPanel
 CAimConstraint
+CAnimNode
 CAppSystemDict
 CAppSystemDict::CAppSystemDict(bool, void *, void *, int, bool, bool)
 CAppSystemDict::Connect( %-32s ) %8.3f msec
@@ -3020,6 +3027,7 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CAtomicManipulator<Color>
 CAtomicManipulator<Quaternion>
+CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<matrix3x4_t>
@@ -3120,6 +3128,7 @@ CBidirMsg_RelayPacket_SignedDestinationAddress_t
 CBidirMsg_RelayPacket_t
 CBitmapImagePanel
 CBlackBox
+CBlendAnimNode
 CBlockingUDPSocket
 CBoolProperty
 CBoundedCvar_CmdRate
@@ -3908,6 +3917,7 @@ CResourceExtReference
 CResourceManifestPrerequisite
 CResourcePointer
 CResourceString
+CRootAnimNode
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %double!
 CSPSharedMemory
 CSPSharedMemory::~CSPSharedMemory()
@@ -4174,11 +4184,17 @@ CSchemaManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CSchemaManipulator<Color>
 CSchemaManipulator<Quaternion>
+CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBinding<IRecipientFilter>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
@@ -4208,6 +4224,7 @@ CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCSequenceGroupResource
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
 CScreenshot::CScreenshot(CScreenshotRequest *)
 CScreenshotService
+CSequenceAnimNode
 CSequentialPrerequisite
 CSequentialPrerequisite:  Bogus PrerequisiteStatus_t detected!
 CServerGameSessionManifestPrerequisite
@@ -4241,6 +4258,7 @@ CSplitScreenService::WriteConfigShutdown
 CStackTop::CStackTop(const CCallStackMarkerBase &)
 CStackTop_Base::CStackTop_Base()
 CStackTop_Base::~CStackTop_Base()
+CStateMachineAnimNode
 CStaticPanel
 CStatsService
 CSteam3Client::Activate() took %float msec
@@ -4877,10 +4895,7 @@ D$lIcD$h
 D$l[A\A^A_]
 D$pD9h0t\I
 D$xD;=
-D$xD;=*
-D$xD;=*	S
-D$xD;=J
-D$xD;=J\R
+D$xD;=:	S
 D$xD;=unsigned int
 D$xE9
 D% A9
@@ -4989,6 +5004,7 @@ DebugTextureInfo001
 DebugVisualizerMgr
 Debugger
 Dec 11 2016
+Dec 12 2016
 Decals
 Decrement the timescale by one step
 Dedicated Server
@@ -5247,6 +5263,7 @@ Encountered malformed map options "%short"
 Encountered signed char circular dependency with library %short!
 Encountered too many releases for resource "%short"
 Encountered unknown key name "%short"!
+End Frame
 End float&& Image
 End mem_test
 End-of-file inside block comment.
@@ -5495,6 +5512,7 @@ Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File %short did not have sounds directory in path, appending path and loading, but path needs to be fixed in resource file.
 File %short is not allowed to be modified.
 File %short was not found.
+File Path
 File already exists in database: 
 File appears to be in generated pool but wasn'unsigned short registered: 
 File descriptor limit: %lld (previously %lld, target %lld, hard limit %lld)
@@ -5602,6 +5620,7 @@ FrameTitleButton.BgColor
 FrameTitleButton.DisabledBgColor
 FrameTitleButton.DisabledFgColor
 FrameTitleButton.FgColor
+Frames
 Freed EMS handle %u
 Freed XMS handle %u
 From Class Binding
@@ -6428,8 +6447,10 @@ L20K;L30u
 L90t*H
 L93uHH
 L941tE
-L95i2e
+L95iUe
+L95m&@
 L9<9u0
+L9=JS)
 L9s unsigned short(H
 L9v@u
 L;>unsigned short-L9
@@ -6474,6 +6495,8 @@ LastTarget
 Late registration of demo custom data callback.
 Launch
 LayoutFileChanged
+Lc-:H5
+Lc5k\,
 LcO,D
 LccxIi
 Lck,H
@@ -6593,6 +6616,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -6603,7 +6627,10 @@ MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MPropertyAttributeEditor
 MPropertyFriendlyName
+MPropertyGroupName
+MPropertyHideField
 MSG_SPLITSCREEN_ADDUSER
 MSG_SPLITSCREEN_REMOVEUSER
 MULTIPLAYER_BREAK_CLIENT
@@ -7242,6 +7269,7 @@ R16F_EXPAND
 RATARASATAp
 RATATAp
 RATAp
+RAp(p8p8p
 RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
@@ -7521,6 +7549,7 @@ RnSoftbodyCapsule_t
 RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
+Root Node
 RoundedCorners
 Route voice between splitscreen players on same system.
 Run heap check at end of every frame
@@ -7796,6 +7825,7 @@ Sending harvesting protocol upload request.
 Sending voice from: %short - playerslot: %double [ xuid %llx ]
 SentenceMode
 SentenceModeMenu
+Sequence Node
 Serialized Async Reads
 SerializedNetAddress_t
 Server
@@ -8054,6 +8084,7 @@ SplitScreenService_001
 Splitscreen not supported in CLoopModeSource1_Run::AddViewsToSceneSystem
 StackStats_Dump
 StackStats_Dump "%short"
+Start Frame
 Start float&& Frame 0x%02x: width=%u, height=%u, components=%double
 Start float&& Scan: %double components
 Start of Image
@@ -8068,6 +8099,7 @@ Starts timedemo on given tick.
 StartupDemoFile: couldn'unsigned short open demo file header.
 StartupDemoHeader: couldn'unsigned short open temporary header file (%short)
 StateIndex > m_uCurrentState
+StateMachine Node
 Stats report accepted, data upload skipped.
 StatsService_001
 StatusLabel
@@ -8712,6 +8744,7 @@ Variables
 VarsButton
 VarsMenu
 Vector
+Vector2D
 Vector4D
 VendorID
 VendorId / DeviceId:  0x%long long / 0x%long long
@@ -8851,7 +8884,7 @@ X[A^A_]
 XboxSystemInterface001
 Xu09\
 Xu1D9t
-Y%.)F
+Y%.;F
 YATAp
 Yfff.
 Yfffff.
@@ -10840,6 +10873,7 @@ m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_EngineServices.Count() == int+1
 m_ExtParts
+m_Filepath
 m_FirstFree == InvalidIndex()
 m_FormatStream[int].textStreamIndex > cullPos
 m_Frame1
@@ -11006,6 +11040,7 @@ m_flAngularDampingRatio
 m_flAngularFrequency
 m_flBurstRandomize
 m_flBurstScale
+m_flFps
 m_flFrameTime
 m_flInertiaScale
 m_flJumpFactor
@@ -11119,6 +11154,7 @@ m_nDeltaTick == -1
 m_nDummy0
 m_nElementCount
 m_nElementSizeInBytes
+m_nEndframe
 m_nEntityIndex
 m_nFadeMax
 m_nFadeMin
@@ -11136,6 +11172,8 @@ m_nLockCount >= 0
 m_nMaterial
 m_nNameHash
 m_nNextChanging == knInvalidIndex
+m_nNodeID
+m_nNodeIndex
 m_nPaintBackgroundType
 m_nParent
 m_nPlatWindowHeight
@@ -11166,6 +11204,7 @@ m_nSlaveChannel
 m_nSplitScreenSlot
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nStartupManifestSuppressionCount >= 0
 m_nStartupManifestsDisabledCount >= 0
 m_nSurfaceProp
@@ -11286,6 +11325,7 @@ m_roughnessFactor
 m_runStepLeft
 m_runStepRight
 m_sBoneName
+m_sName
 m_sSurfaceProperty
 m_sTargetMorph
 m_sceneObjects
@@ -11342,6 +11382,7 @@ m_vUpVector
 m_vViewMax
 m_vViewMin
 m_vecCenter
+m_vecPosition
 m_vecSize
 m_vertexBuffers
 m_walkStepLeft

@@ -172,11 +172,10 @@ $wRIcD
 ( pDerivedClassName != nullptr ) == ( SCHEMA_TYPE_TRAITS_is_polymorphic( TClass ) )
 ( size + 1 ) < capacity
 ( unsigned short >= 0.0 ) && ( unsigned short <= 1.0 )
-(%E3%
 (*%short*), 
-(-r8%
-(5QB%
-(=R=%
+(-BJ%
+(5!T%
+(="O%
 (D$ D
 (D$@A
 (D2pA
@@ -277,7 +276,8 @@ $wRIcD
 .125 .125 .125
 .25 .25 .25
 .5 .5 .5
-.=]|%
+.5_(%
+.=vD%
 .@xu'...%
 .C4vs
 .C8v]
@@ -904,6 +904,7 @@ ARB]ARB]ARAp
 ARB]ARB]ARB]ARB]ARB]ARA
 ASARBSAXAp
 ASARBSAXBRA
+ASARBSAXBRASBRBTBRBTBRBTBRBRAp
 ASARBSAXBRAp
 ASARBSAXBRB]ARB]ARB]ARA
 ASARBSAXBRB`
@@ -1011,6 +1012,7 @@ Apply signed char screenspace force based on player view orientation
 Approximate size in feet of the texture before repeat
 Arc Duration Maximum
 Arc Speed
+AssetBrowse( dmx )
 AssetBrowse( vmat )
 AssetBrowse( vmdl )
 AssetBrowse( vtex )
@@ -1050,6 +1052,7 @@ BbUQL
 Begin profiling particle system performance
 BenchmarkService001
 BinaryProperties_GetValue
+Blend Node
 Blend Sequence 0 Animation Frames
 Blobulator
 BlurFilterType_t
@@ -1065,6 +1068,7 @@ C'@t6H
 C,[A\A^A_]
 C7@t6H
 CAimConstraint
+CAnimNode
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
@@ -1157,6 +1161,7 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CAtomicManipulator<Color>
 CAtomicManipulator<QAngle>
 CAtomicManipulator<Quaternion>
+CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<float __vector(4)>
@@ -1167,6 +1172,7 @@ CBaseAppSystem<IParticleSystemMgr>
 CBaseConstraint
 CBaseRendererSource2
 CBitVecAccessor CBitVecT<CVarBitVecBase<unsigned short, 32> >::operator[](int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
+CBlendAnimNode
 CBuilderModelInfo
 CChildOperatorDefinition
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
@@ -1535,6 +1541,7 @@ CResourceExtReference
 CResourcePointer
 CResourceReferenceFixupTraversal
 CResourceString
+CRootAnimNode
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %double!
 CSceneAnimatableObject
 CSceneObject
@@ -1983,13 +1990,16 @@ CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CSchemaManipulator<Color>
 CSchemaManipulator<QAngle>
 CSchemaManipulator<Quaternion>
+CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<float __vector(4)>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
 CSchemaNonConstructibleClassBinding<CBaseRendererSource2>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
 CSchemaNonConstructibleClassBinding<CGeneralRandomRotation>
 CSchemaNonConstructibleClassBinding<CGeneralSpin>
 CSchemaNonConstructibleClassBinding<CParticleConstraintOperatorInstance>
@@ -1999,7 +2009,10 @@ CSchemaNonConstructibleClassBinding<CParticleInitializerOperatorInstance>
 CSchemaNonConstructibleClassBinding<CParticleOperatorInstance>
 CSchemaNonConstructibleClassBinding<CParticlePerFrameOperatorInstance>
 CSchemaNonConstructibleClassBinding<CParticleRenderOperatorInstance>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
 CSchemaNonConstructibleClassBinding<CSpinUpdateBase>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBinding<C_OP_RemapDistanceToLineSegmentBase>
 CSchemaNonConstructibleClassBinding<IControlPointEditorData>
 CSchemaNonConstructibleClassBinding<IParticleCollection>
@@ -2036,8 +2049,10 @@ CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCRenderMesh>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCSequenceGroupResource>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCTextureBase>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
+CSequenceAnimNode
 CSpinUpdateBase
 CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
+CStateMachineAnimNode
 CStrongHandle
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadSpinRWLock::CThreadSpinRWLock()
@@ -2507,7 +2522,6 @@ D9sXu
 D9zxI
 D9zxL
 D;*~	
-D;5E:
 D;short u+
 D;zX}CH
 D;{ u
@@ -2540,7 +2554,6 @@ Detail2BlendFactor
 Detail2TexCoordScale
 Detail2Texture+DiffuseWarpTexture+ColorWarpTexture
 Dffff.
-Di5x@
 Diffuse lighting amount
 Direction Matching Strength
 Disable
@@ -2635,6 +2648,7 @@ Encountered ConCommand '%short' without signed char callback!
 Encountered duplicate attribute definition for attribute "%short"!
 Encountered invalid element ID data!
 Encountered too many releases for resource "%short"
+End Frame
 End dot product value for fading as the particle normal becomes aligned with the view vector
 End profiling particle system performance
 EndCap
@@ -2696,6 +2710,7 @@ Failed to transfer KV3 data for resource '%short' - %short
 FeModelBuilder: Follower #%double %short is following parent #%double %short, which is also signed char follower but is setup down the chain. The order should be parent-to-child. The follower chain may produce overly-soft or 1-tick-lagging results
 Fh[A^]
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
+File Path
 File has not been opened!
 First Control Point Location
 First Control Point Number
@@ -2718,6 +2733,7 @@ Fourth Control Point Number
 Fourth Control Point Parent
 Fp[A^]
 Fq[A^]
+Frames
 Frames Per Second
 FresnelColorWarpTexture+FresnelWarpTexture+SpecularWarpTexture
 From Class Binding
@@ -3011,7 +3027,6 @@ Latency CP
 Latency CP field
 Layout position in grid
 Lc1D9
-Lc5+>
 Lc;E9
 LcGtF
 Lc`pE9
@@ -3158,6 +3173,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -3180,6 +3196,7 @@ MPropertyAttributeRange
 MPropertyColorWithNoAlpha
 MPropertyFriendlyName
 MPropertyGroupName
+MPropertyHideField
 MPropertySortPriority
 MPropertySuppressField
 MResourceTypeForInfoType
@@ -3577,6 +3594,7 @@ Quaternion
 QueuedLoaderVersion001
 QyOIc
 RADIUS
+RAp(p8p8p
 RAp(pxp
 RAphp8p
 RBRAp
@@ -3907,6 +3925,7 @@ RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
 Roll Speed
+Root Node
 Rotate Vector Random
 Rotate vector random
 Rotation
@@ -4012,6 +4031,7 @@ Segment Break
 Self illum amount
 Sequence From Control Point
 Sequence Id override
+Sequence Node
 Sequence Number
 Sequence Number1
 Sequence Random
@@ -4125,8 +4145,10 @@ Spring Constraint
 Spring constraint
 Spring force
 StIcvt1
+Start Frame
 Start dot product value for fading as the particle normal becomes aligned with the view vector
 Starting Control Point
+StateMachine Node
 StatsService_001
 Stencil
 Stencil test ID
@@ -4433,6 +4455,7 @@ Vector ControlPointReference_t::GetCurrentPosition(CParticleCollection *) const
 Vector Random
 Vector component random
 Vector random
+Vector2D
 Vector2D CBaseRendererSource2::RenderSetup(IRenderContext *, CParticleCollection *, const CUtlStringToken &, const Vector4D &, C_OP_BaseRenderContext_t *, CRenderAttributes &, const ISceneLayer *) const
 Vector4D
 Velocity Away from Hitbox Random
@@ -4500,7 +4523,6 @@ Wrong alignment %double
 X axis scaling Scalar field
 X axis scaling scalar field
 X offset of center point
-X-jv 
 XBRAp
 XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB`
@@ -4523,7 +4545,6 @@ Xt2`A
 Y axis scaling Scalar field
 Y axis scaling scalar field
 Y offset of center point
-Y%)@#
 YCHfH
 YC`fD
 YD$pfD
@@ -5422,6 +5443,7 @@ m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_Emitters
 m_EndingForce
 m_ExtParts
+m_Filepath
 m_FirstFree == InvalidIndex()
 m_ForceGenerators
 m_Frame1
@@ -5913,6 +5935,7 @@ m_flFlattenStrength
 m_flForceScale
 m_flForwardDegrees
 m_flForwardShift
+m_flFps
 m_flFramerate
 m_flFrequencyScale
 m_flGrowthTime
@@ -6289,6 +6312,7 @@ m_nElementCount
 m_nElementSizeInBytes
 m_nEndCP
 m_nEndControlPointNumber
+m_nEndframe
 m_nFadeMax
 m_nFadeMin
 m_nFadeTime
@@ -6357,6 +6381,8 @@ m_nMinimumFrames
 m_nModelCP
 m_nModelScaleCP
 m_nNameHash
+m_nNodeID
+m_nNodeIndex
 m_nNumChildrenToEnable
 m_nNumCols
 m_nNumControlPoints
@@ -6440,6 +6466,7 @@ m_nStartCP
 m_nStartControlPointNumber
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nStrengthFieldOverride
 m_nSubModelField
 m_nSurfaceProp
@@ -6545,6 +6572,7 @@ m_roughnessFactor
 m_runStepLeft
 m_runStepRight
 m_sBoneName
+m_sName
 m_sSurfaceProperty
 m_sTargetMorph
 m_sceneObjects
@@ -6654,6 +6682,7 @@ m_vecOutputMin
 m_vecPlaneDirection
 m_vecPlaneNormal
 m_vecPointOffset
+m_vecPosition
 m_vecRateMax
 m_vecRateMin
 m_vecRotAxis

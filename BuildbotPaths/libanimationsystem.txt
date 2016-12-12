@@ -4,11 +4,16 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/animationsystem/release/osx64/compression_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/animationsystem/release/osx64/ianimationsystem_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/animationsystem/release/osx64/sequenceresource_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/animnode_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/blendanimnode_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/boneconstraints_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/model_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/modelbuilder_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/permrendermeshdata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/rendermesh_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/rootanimnode_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/sequenceanimnode_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/statemachineanimnode_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/surfaceproperties_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_collisionmesh_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_level_resource_h_schema.gen_cpp
@@ -33,7 +38,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/kv3transfer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animationophistory.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animstategraph.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/animgraph/animstategraph.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/model.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
@@ -43,7 +48,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/modellib/ianimstategraph.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/modellib/animgraph/ianimstategraph.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/introspectedtypemanager.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
@@ -64,6 +69,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlmultilist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vscript/ivscript.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vscript/vscript_templates.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp

@@ -714,6 +714,7 @@ ARB]ARA
 ARB]ARAp
 ARB]ARBRB]ARB]ARB]ARB]ARA
 ASARBSAXBRA
+ASARBSAXBRASBRBTBRBTBRBTBRBRAp
 ASARBSAXBRB]ARB]ARB]ARA
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
@@ -778,6 +779,7 @@ AimConstraint: %short - Cannot Find Aim Up Target Bone
 Already saw decimal point or exponent; can'unsigned short have another one.
 AnimationSystemUtils_001
 AnimationSystem_001
+AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -797,6 +799,7 @@ BakedLODBuilderMgr001
 BaseConstraint_t
 BenchmarkService001
 BinaryProperties_GetValue
+Blend Node
 Boolean default must be true or false.
 BuilderModelBoneFlexDriverControl_t
 BuilderModelBoneFlexDriverList_t
@@ -813,6 +816,7 @@ C0[A\A^A_]
 C@H+X0H
 C@L+X0L
 CAimConstraint
+CAnimNode
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
@@ -894,6 +898,7 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CAtomicManipulator<Color>
 CAtomicManipulator<Quaternion>
+CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<matrix3x4_t>
@@ -909,6 +914,7 @@ CBaseAppSystem<IPredictionDiffMgr>
 CBaseAppSystem<ISaveRestoreDataMgr>
 CBaseAppSystem<ISource2Host>
 CBaseConstraint
+CBlendAnimNode
 CBuilderModelInfo
 CDebugDrawQueueMgr
 CDefaultAccessor
@@ -1120,6 +1126,7 @@ CResourceExtReference
 CResourceManifestPrerequisite
 CResourcePointer
 CResourceString
+CRootAnimNode
 CSVCMsgList_GameEvents
 CSVCMsgList_GameEvents_event_t
 CSVCMsgList_UserMessages
@@ -1325,11 +1332,17 @@ CSchemaManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CSchemaManipulator<Color>
 CSchemaManipulator<Quaternion>
+CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_host
@@ -1356,7 +1369,9 @@ CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCPhysAggregateData>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCRenderMesh>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCSequenceGroupResource>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
+CSequenceAnimNode
 CSource2HostBase
+CStateMachineAnimNode
 CStrongHandle
 CTestGameSystem
 CThreadSyncObject::~CThreadSyncObject()
@@ -1505,6 +1520,7 @@ E\IcEX
 E`H9B
 EconItemToolModel_001
 Encountered too many releases for resource "%short"
+End Frame
 End-of-file inside block comment.
 EngineLoopState_t
 EngineServiceMgr001
@@ -1626,6 +1642,7 @@ FieldDescriptorProto.oneof_index should not be set for extensions.
 FieldOptions
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
+File Path
 File already exists in database: 
 File appears to be in generated pool but wasn'unsigned short registered: 
 File is already registered: 
@@ -1643,6 +1660,7 @@ FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String:
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Fp[A^]
+Frames
 From Class Binding
 From Enum Binding
 FtIcFp
@@ -1910,8 +1928,9 @@ L$ Lc,
 L$(IcV,L
 L$8A;D$<
 L$@L+a0I
-L95P;
-L95h<
+L95#:
+L950^
+L95H_
 L9v@u
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -1945,6 +1964,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -1955,7 +1975,10 @@ MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MPropertyAttributeEditor
 MPropertyFriendlyName
+MPropertyGroupName
+MPropertyHideField
 MULTIPLAYER_BREAK_CLIENT
 MULTIPLAYER_BREAK_SERVER
 MapListService_001
@@ -2133,6 +2156,7 @@ Protocol message was modified concurrently during serialization.
 Quaternion
 QueuedLoaderVersion001
 QyOIc
+RAp(p8p8p
 RAp(pxp
 RBRAp
 RBRBRBRBRBRAp
@@ -2182,6 +2206,7 @@ RnSoftbodyCapsule_t
 RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
+Root Node
 S(Ict$,L
 S@H+Z0H
 SAXBRAp
@@ -2207,6 +2232,7 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
+Sequence Node
 ServerUploadGameStats001
 ServiceDescriptorProto
 ServiceOptions
@@ -2249,6 +2275,8 @@ Source2Server001
 Source2ServerSerializers002
 SourceCodeInfo
 SpawnGroupFlags_t
+Start Frame
+StateMachine Node
 StatsService_001
 SteamToursHost001
 String field
@@ -2414,6 +2442,7 @@ Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
 Vector
+Vector2D
 Vector4D
 VisBuilder_001
 VpropBreakablePartData_t
@@ -2431,9 +2460,9 @@ WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
+XBRAp
 XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB`
-XBRBp
 XBSARBSAXBRB`
 XBTBRB]ARBRAp
 XHc{X1
@@ -2771,6 +2800,7 @@ m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_ExtParts
+m_Filepath
 m_FirstFree == InvalidIndex()
 m_Frame1
 m_Frame2
@@ -2876,6 +2906,7 @@ m_flAngularDampingRatio
 m_flAngularFrequency
 m_flBurstRandomize
 m_flBurstScale
+m_flFps
 m_flFrameTime
 m_flInertiaScale
 m_flJumpFactor
@@ -2968,6 +2999,7 @@ m_nDefaultMeshGroupMask
 m_nDummy0
 m_nElementCount
 m_nElementSizeInBytes
+m_nEndframe
 m_nEntityIndex
 m_nFadeMax
 m_nFadeMin
@@ -2982,6 +3014,8 @@ m_nInfluences
 m_nInstanceCount
 m_nMaterial
 m_nNameHash
+m_nNodeID
+m_nNodeIndex
 m_nParent
 m_nPlatWindowHeight
 m_nPlatWindowWidth
@@ -2999,6 +3033,7 @@ m_nSlaveChannel
 m_nSplitScreenSlot
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nSurfaceProp
 m_nSurfacepropertyIndices
 m_nTargetAxis
@@ -3056,6 +3091,7 @@ m_roughnessFactor
 m_runStepLeft
 m_runStepRight
 m_sBoneName
+m_sName
 m_sSurfaceProperty
 m_sTargetMorph
 m_sceneObjects
@@ -3107,6 +3143,7 @@ m_vUpVector
 m_vViewMax
 m_vViewMin
 m_vecCenter
+m_vecPosition
 m_vecSize
 m_vertexBuffers
 m_walkStepLeft

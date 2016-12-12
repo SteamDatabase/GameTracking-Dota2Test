@@ -387,6 +387,7 @@ A;t$D|
 A;t$Xu0I
 AABB_t ComputeBoundingVolume(CUtlVector<InstancedRayTracingEnvironmentReference_t *> &, int, int)
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+ARARARARARARARARARARARARARARARARMQ
 ARAp0p
 ARBTBRB]ARAp
 ARB]ARA
@@ -394,7 +395,8 @@ ARB]ARAp
 ARB]ARBRB]ARB]ARB]ARA
 ARB]ARB]ARB]ARB]ARBRBRBRAp
 ARB]ARB]ARB]ARB]ARB]ARA
-ASARBSAXBRARARARARARARARARARARARARARARARMQ
+ASARBSAXBRASBRBTBRBTBRBTBRBRAp
+ASARBSAXBRAp
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBRB`
@@ -444,6 +446,7 @@ AnimationSystemUtils_001
 AnimationSystem_001
 Array didn'unsigned short have enough elements (provided %double, needed %double)
 Assertion Failed in function %short():
+AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -464,6 +467,7 @@ BaseConstraint_t
 BaseSceneObjectDesc
 BenchmarkService001
 BinaryProperties_GetValue
+Blend Node
 BuilderModelBoneFlexDriverControl_t
 BuilderModelBoneFlexDriverList_t
 BuilderModelBoneFlexDriver_t
@@ -477,6 +481,7 @@ C([A^]
 C,[A\A^A_]
 C;\7(uQK
 CAimConstraint
+CAnimNode
 CAtomicManipulator<CCopyableUtlVector<VsInputSignatureElement_t> >
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
@@ -569,6 +574,7 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CAtomicManipulator<Color>
 CAtomicManipulator<Quaternion>
+CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<matrix3x4_t>
@@ -580,6 +586,7 @@ CBaseConstraint
 CBaseIntrospectedTypeManager
 CBaseIntrospectedTypeManager:  Bindings don'unsigned short match.
 CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
+CBlendAnimNode
 CBuilderModelInfo
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
 CCopyableUtlVector
@@ -652,6 +659,7 @@ CResourceReferenceFixupTraversal
 CResourceStream
 CResourceStreamVM
 CResourceString
+CRootAnimNode
 CSceneObject
 CSceneObjectData
 CSceneSkeletonObject
@@ -847,11 +855,17 @@ CSchemaManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
 CSchemaManipulator<Color>
 CSchemaManipulator<Quaternion>
+CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
+CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
+CSchemaNonConstructibleClassBinding<CBlendAnimNode>
+CSchemaNonConstructibleClassBinding<CRootAnimNode>
+CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
+CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_modellib
@@ -880,7 +894,9 @@ CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCRenderMesh>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCSequenceGroupResource>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCTextureBase>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
+CSequenceAnimNode
 CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
+CStateMachineAnimNode
 CStrongHandle
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
@@ -998,6 +1014,7 @@ EconItemToolModel_001
 Efff.
 Empty VB array found for this draw descriptor
 Encountered too many releases for resource "%short"
+End Frame
 EngineServiceMgr001
 EnvironmentMapBuilder_001
 Error loading resource "%short" (Invalid resource version: %double != %double)
@@ -1090,6 +1107,7 @@ Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in ex
 Failed to save unsupported class
 Failed trying to Commit %u bytes, used %u bytes, reserved %u bytes
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
+File Path
 FixupResourceName: Illegal full path passed in ("%short")!
 FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FlattenedSerializersVersion001
@@ -1099,6 +1117,7 @@ FlexOp_t
 FlexRule_t
 FontManager_001
 Fp[A^]
+Frames
 From Class Binding
 From Enum Binding
 Ft[A^]
@@ -1278,6 +1297,7 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
+MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -1288,7 +1308,10 @@ MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MPropertyAttributeEditor
 MPropertyFriendlyName
+MPropertyGroupName
+MPropertyHideField
 MResourceTypeForInfoType
 MResourceVersion
 MULTIPLAYER_BREAK_CLIENT
@@ -1424,6 +1447,7 @@ Quaternion
 QueuedLoaderVersion001
 QyOIc
 R@CMemberFunctor8<RayTracingEnvironment*, void (RayTracingEnvironment::*)(int, int const*, int, TriangleBounds_t const*, Vector, Vector, int, CUtlMultiJobProcessor*), int, int*, int, TriangleBounds_t*, Vector, Vector, int, CUtlMultiJobProcessor*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
+RAp(p8p8p
 RAp(pxp
 RBRAp
 RBRBRBRBRBRBRAp
@@ -1525,6 +1549,7 @@ RnSoftbodyCapsule_t
 RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
+Root Node
 SARBSAXBSARBSAXBTBRBRBRAp
 SAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 SBRAp
@@ -1539,6 +1564,7 @@ Schema Field
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
+Sequence Node
 ServerUploadGameStats001
 SkeletonBoneBbox_t
 SoundOpSystem001
@@ -1557,6 +1583,8 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2ServerSerializers002
+Start Frame
+StateMachine Node
 StatsService_001
 Surface Prop Hash
 SurfacePropertiesList
@@ -1688,6 +1716,7 @@ VStringTokenSystem001
 VUUUH
 V_stristr_fast(char const*, char const*)
 Vector
+Vector2D
 Vector4D
 VertexPaintBlendParams
 VertexPaintBlendParams1
@@ -1696,7 +1725,6 @@ VisBuilder_001
 VpropBreakablePartData_t
 VsInputSignatureElement_t
 VsInputSignature_t
-W-+unsigned long	
 W8fffff.
 WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Invalid mesh version '%double' for file: %short
@@ -1939,6 +1967,7 @@ m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_ExtParts
+m_Filepath
 m_FirstFree == InvalidIndex()
 m_FlexControllers
 m_FlexDesc
@@ -2047,6 +2076,7 @@ m_flAngularDampingRatio
 m_flAngularFrequency
 m_flBurstRandomize
 m_flBurstScale
+m_flFps
 m_flInertiaScale
 m_flJumpFactor
 m_flLinearDamping
@@ -2133,6 +2163,7 @@ m_nDefaultMeshGroupMask
 m_nElementCount
 m_nElementSizeInBytes
 m_nEncodingType
+m_nEndframe
 m_nFadeMax
 m_nFadeMin
 m_nFadeTime
@@ -2151,6 +2182,8 @@ m_nInstanceStepRate
 m_nLookupType
 m_nMaterial
 m_nNameHash
+m_nNodeID
+m_nNodeIndex
 m_nOffset
 m_nParent
 m_nPrimitiveType
@@ -2166,6 +2199,7 @@ m_nSlot
 m_nSlotType
 m_nStartIndex
 m_nStartInstance
+m_nStartframe
 m_nSurfaceProp
 m_nSurfacepropertyIndices
 m_nTargetAxis
@@ -2237,6 +2271,7 @@ m_roughnessFactor
 m_runStepLeft
 m_runStepRight
 m_sBoneName
+m_sName
 m_sSurfaceProperty
 m_sTargetMorph
 m_sceneObjects
@@ -2293,6 +2328,7 @@ m_vUpVector
 m_vViewMax
 m_vViewMin
 m_vecCenter
+m_vecPosition
 m_vecSize
 m_vertexBuffers
 m_walkStepLeft
@@ -2539,7 +2575,7 @@ tlIcG
 tqJ94
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
-u	L9%Y
+u	L9%
 u'...%A
 uGetResourceManifest
 uiKey != UnusedElementKey()
