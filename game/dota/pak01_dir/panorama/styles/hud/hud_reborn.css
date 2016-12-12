@@ -83,6 +83,11 @@ DOTAHud.IsBeforeGameplay #lower_hud
 	transition-delay: 2s;	
 }
 
+DOTAHud.IsBeforeGameplay.HUDFlipped #lower_hud
+{
+	transform: translateY(230px) scaleX(-1);
+}
+
 .ShowLowerHUD #lower_hud
 {
 	visibility: visible;
@@ -1030,6 +1035,12 @@ DOTAHud.IsBeforeGameplay #lower_hud
 .HasAbilityToSpend #buffs
 {
 	transform: translateY(-32px);
+}
+
+.HUDFlipped .HasAbilityToSpend #debuffs,
+.HUDFlipped .HasAbilityToSpend #buffs
+{
+	transform: translateY(-32px) ScaleX(-1);
 }
 
 #debuffs

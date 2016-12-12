@@ -435,6 +435,7 @@ $ffffff.
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 ...(;unsigned long long(H
 ...-index
+...^ed,i$
 ../include/libparsifal/optcfg.h
 .>N^__int128~
 .ETv*H
@@ -3117,7 +3118,7 @@ Layout FPS:
 Layout FPS:	%1.2f
 LayoutFilePtr_t panorama::CLayoutManager::GetCLayoutFile(const char *, bool)
 LayoutFilePtr_t panorama::CLayoutManager::GetLayoutFileFromString(const char *, bool)
-Lc5+p
+Lc5Ko
 Lc;fB
 LcO,D
 Lcc0E
@@ -6071,7 +6072,6 @@ registered:
 registerforreadyevents
 rememberchildfocus
 removePositionBeforeDrop
-renderCommand.needs_clear
 repeat
 repeat-unsigned long long
 repeatCount
@@ -6771,7 +6771,6 @@ virtual void panorama::CSource2Surface::PopClipLayer(const panorama::PopClipLaye
 virtual void panorama::CSource2Surface::PopCompositingLayer(const panorama::PopCompositingLayerRenderCommand_t &)
 virtual void panorama::CSource2Surface::PopPanelContextInLayer(const panorama::PopPanelContextInLayerRenderCommand_t &)
 virtual void panorama::CSource2Surface::PushClipLayer(const panorama::PushClipLayerRenderCommand_t &)
-virtual void panorama::CSource2Surface::PushCompositingLayer(const panorama::PushCompositingLayerRenderCommand_t &)
 virtual void panorama::CSource2Surface::PushPanelContextInLayer(const panorama::PushPanelContextInLayerRenderCommand_t &)
 virtual void panorama::CStylePropertyAnimationProperties::ToString(CFmtStr1024 *) const
 virtual void panorama::CStylePropertyBackgroundImage::Interpolate(panorama::IUIPanel *, const panorama::CStyleProperty &, float)

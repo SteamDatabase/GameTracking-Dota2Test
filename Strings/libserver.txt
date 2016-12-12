@@ -60,7 +60,6 @@
 	Current enemy drawn in red
 	Current target entity drawn in magenta
 	Cyan	- detour around an object (triangulation)
-	D9%?{
 	DEM_Error
 	Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
 	ENameItem
@@ -2682,6 +2681,7 @@ $wDE1
 ( x2 - x1 ) > cFloatEpsilon && ( y2 - y1 ) > cFloatEpsilon
 ("%short")
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(%!T_
 (%0.2f) %short
 (%0.2f): %short
 (%1.3f)
@@ -3174,7 +3174,12 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+.%%:__float128
+.%/zm
+.%J)/
+.%e4;
 .%llu
+.-RiD
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
@@ -6025,6 +6030,7 @@ $wDE1
 7AtuI
 7CMsgServerToGCCompendiumInGamePredictionResultsResponse
 7Ic^@H
+7Lc-~
 7[A\A^A_]
 7fffff.
 7y5Hc
@@ -6055,6 +6061,7 @@ $wDE1
 97t"H
 97t~H
 999999
+9=short~long double
 9A ~*H
 9A`t6H
 9A`unsigned short*H
@@ -6352,6 +6359,7 @@ $wDE1
 @ConColorMsg(Color const&, char const*, ...)
 @ConMsg(char const*, ...)
 @D0uTH
+@D;5|
 @DevMsg(char const*, ...)
 @DevWarning(char const*, ...)
 @E unsigned short*H
@@ -8776,6 +8784,7 @@ ARB`YARB`
 ARB`YARB`YARB`
 ARB`YARB`YARB`YARB`
 ARB`YARB`YARB`YARB`YARB`
+ARB`YARB`YARB`ZBRB`
 ARB`YARB`YARB`ZBRB`YARB`
 ARB`YARB`ZBRB`
 ARB`YARB`ZBRB`YARB`
@@ -8787,7 +8796,6 @@ ARB`[ARASAp
 ARB`[ARB`
 ARB`[ARB`YARB`
 ARB`\AWBp
-ARB`\BRB`YARB`YARB`YARB`YARB`
 ARB`_AWAVBRB`YARB`\AWBp
 ARB``BRB`
 ARDMDisabled
@@ -8858,7 +8866,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5B
+AVSLc5
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -9810,6 +9818,7 @@ BRB`\AVAp
 BRB`\AWBp
 BRB`\BRB`
 BRB`\BRB`YARB`YARB`
+BRB`\BRB`YARB`YARB`YARB`YARB`
 BRB`\BRB`ZBRB`ZBRB`
 BRB`]AWAVB
 BRB`]AWAVB`
@@ -10099,7 +10108,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=3b
+C#H9=signed charcomplex 
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -27270,9 +27279,8 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%+tH
-D%1Dz
 D%pD9
+D%}...complex 
 D)T@u
 D+ E1
 D+(E1
@@ -27284,14 +27292,13 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-f8z
+D-6:...
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
-D560z
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27309,7 +27316,7 @@ D93t&H
 D93t)H
 D93t+H
 D947u
-D95Q{
+D95!}
 D98ta
 D98te
 D98tg
@@ -27319,9 +27326,9 @@ D9;unsigned short&H
 D9;unsigned short)H
 D9;unsigned short+I
 D9<9u
-D9=5&char
-D9=8%char
-D9=T'char
+D9=U&char
+D9=X%char
+D9=unsigned short'char
 D9Q(}
 D9` short
 D9b@unsigned short<H
@@ -27362,42 +27369,39 @@ D9{$A
 D9{$|
 D9{(~
 D;#unsigned short&H
+D;%:]T
 D;)u"
 D;+u!
-D;- `O
 D;... u 
 D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5!],
-D;5(u
-D;5)&O
-D;5)T;
-D;5+#A
-D;5:{>
-D;5Co
-D;5F7>
-D;5J.S
-D;5MY
-D;5NU;
-D;5Us/
-D;5Wv
-D;5[<:
-D;5^X:
-D;5a$A
-D;5c~#
-D;5d'O
-D;5fC=
-D;5g|>
-D;5qr
-D;5rp
-D;5wT*
+D;5%u/
+D;5'long long
+D;5+>:
+D;5.Z:
+D;51&A
+D;54)O
+D;56E=
+D;57~>
+D;5At
+D;5Br
+D;5GV*
+D;5T0;
+D;5]'A
+D;5i 
+D;5j.S
+D;5ns
+D;5n{=
+D;5tU
+D;5w*O
 D;8}D
-D;= mC
-D;=7B=
-D;=H)__float128
-D;=O*
+D;=@mC
+D;=S-
+D;=qE6
+D;=unsigned char)__float128
+D;={.
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -27500,6 +27504,7 @@ D;~,|
 D< K9D, trK
 D<(K9D,(tnK
 D<PfA
+D=Wcz
 DAMAGE_EVENTS_ONLY
 DAMAGE_NO
 DAMAGE_TYPES
@@ -32149,6 +32154,7 @@ H90t!L
 H91t8H
 H91tRH
 H92t	H
+H9=Y&2
 H9A@u
 H9B0u
 H9C unsigned short
@@ -32357,7 +32363,6 @@ HaticsType_None
 Have Entity say string, and teamOnly or not
 Have we received the post match signout message that includes reward information
 HaveAllPlayersJoined
-Hc5OUe
 Hc@XHi
 Hc@pH
 Hc@pI
@@ -35602,13 +35607,12 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L95-S
-L95\unsigned long long
-L95k|
+L95,{
+L95;~
+L95mT
 L98t"H
 L98t5H
 L98tY
-L9=!8
 L9` u	I
 L9h u
 L9p u
@@ -35701,7 +35705,7 @@ LaunchInternalProcess FAILED!
 LaunchLoot
 LaunchLootInitialHeight
 LayoutPositionType_e
-Lc%]/	
+Lc%-1	
 Lc1E9
 Lc2E1
 LcGhf
@@ -37710,6 +37714,7 @@ PP`PP``P
 PP`P`@
 PP`P```
 PP``PPPPPPPPPPPPPPPPPP````PPPPpp``PPPPppp
+PPp@p@`P
 PPpP``PpP`P```PP`P
 PR:GetSelectedHeroName called with bogus player id %double, ignoring
 PR:OnFullyJoinedServer %double:%short
@@ -37768,7 +37773,7 @@ PXL;long double
 P[A\A^A_]
 P[A^]
 P`L;}
-P`Lc5
+P`Lc5r
 P`P0 0
 P`P`P
 P`` @
@@ -42931,11 +42936,10 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
+W%!3o
 W(I94
-W-3"9
-W-^kJ
 W0Lcs(G
-W5R2X
+W5b2X
 W8I94
 W8IcL
 W8ff.
@@ -43128,10 +43132,9 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%6e_
-X%pR_
+X%Fe_
 X(A;X,uo
-X5QfW
+X5afW
 X<[A^]
 XATAp
 XAxis
@@ -43171,16 +43174,13 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%$ng
-Y%/da
-Y%Ktr
-Y%Wsr
-Y%int~r
-Y%r[r
-Y%tda
-Y%|[r
-Y=R)X
-Y=V:short
+Y%4fa
+Y%4ng
+Y%[tr
+Y%gsr
+Y%unsigned long long~r
+Y5x6L
+Y=bool)X
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43305,7 +43305,7 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
-]%IaT
+]%YaT
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -43438,7 +43438,7 @@ Zffffff.
 ^<A+^8I
 ^<A+^8~short
 ^<A+^8~zffff.
-^=gK 
+^='M 
 ^@A;^Dum
 ^DA+^@~wf.
 ^DA+^@~zffff.
@@ -52180,6 +52180,7 @@ long double->GetType() == CChoreoEvent::SECTION
 long double->HasEndTime()
 long long	IcN
 long long	IcO
+long long 9=W
 long long D9d
 long long Ic^
 long long L9p unsigned short
@@ -52197,12 +52198,13 @@ long long signed char::* view roll angle
 long long!IcN
 long long"A9^
 long long#D9{
-long long%9=bool
+long long%9=2
 long long'A9^
 long long*[A^]
 long long+A9^
 long long,@H>
 long long-D9s
+long long/9=|
 long long:D9xH~D9xd|.Ic
 long long@D9{ 
 long long@E9uP~:Ic
@@ -61484,7 +61486,6 @@ p p(p
 p p0p
 p p0p0p
 p p8p8p
-p p@`P
 p(RAp
 p([ARAp
 p(p(p0p0p
@@ -73346,7 +73347,7 @@ uaff.
 uaz_I
 ubz`A
 ubz`H
-ucLc-
+ucLc-X?
 udM9n
 uezcA
 ufLce
@@ -73471,8 +73472,7 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
-unsigned __int128%wFf
-unsigned __int128%|{J
+unsigned __int128%<}J
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char=unsigned short	H
@@ -73486,7 +73486,7 @@ unsigned int CUtlStringMap<CCustomGameEventManager::CCustomGameEventInfo *, CUtl
 unsigned int CUtlStringMap<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, CUtlSymbolTable>::Count() const [T = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<IModifierFactory *, CUtlSymbolTable>::Count() const [T = IModifierFactory *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<int, CUtlSymbolTable>::Count() const [T = int, SymbolTableType_t = CUtlSymbolTable]
-unsigned long long!Hc=q>
+unsigned long long!Hc=A@
 unsigned long long;D;u
 unsigned long long<D;unsigned long
 unsigned long long=E;~`u&I
@@ -73705,7 +73705,7 @@ unsigned short=ffffff.
 unsigned short>0E1
 unsigned short>9D1
 unsigned short>9L:
-unsigned short>D;5h
+unsigned short>D;5x
 unsigned short>IcG
 unsigned short>fffff.
 unsigned short?9D1
@@ -78138,7 +78138,7 @@ writeback_queue
 wrong submessage type
 wyvern_splinter_blast
 x$D9s
-x.9=\
+x.9=,
 x3E9~
 x7A9D$x~0Hc
 x7A9Fx~1Hc
