@@ -85,9 +85,9 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(137): ERROR! Empty shader mode string found! Use "Default" instead!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(149): ERROR! Shader mode "%s" has unsupported type "%s" specified gameinfo.gi!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2300): pVfx == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2351): pVfx == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2615): Error reading index!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2299): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2350): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2614): Error reading index!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(319): ERROR!!! Materials not released by other systems on shutdown! (See spew above)
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(324): ERROR!!! Shaders not freed on shutdown, likely due to unreleased materials! (See spew above)
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(338): GetErrorMaterial() called when m_pMaterialTypeManager == NULL!

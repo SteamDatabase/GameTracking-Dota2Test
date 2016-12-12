@@ -794,6 +794,8 @@ H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
+Hc5?5	
+Hc@pH
 Hc@pI
 HcCHH
 HcH H
@@ -900,6 +902,7 @@ L1xffffff.
 L90t*H
 L;>unsigned short!L9
 LIGHT_SOURCE_SHAPE_SPHERE
+Lc5+K
 Leaked reference to ERROR resource for type %short!
 Leaked resource: Refcount %short for %short%short resource "%short" (%016llX).  This may result in signed char crash.
 LightDesc_t
@@ -1117,7 +1120,7 @@ TBRB`
 TBSATAp
 TBTBp
 TBXBSATAp
-TB`VAUAYAVATAp
+TB`WAUAYAVATAp
 TBp p
 TCRAp
 TCRBRA
@@ -1126,7 +1129,7 @@ TCSATAp
 TCTBp
 TCTBp p
 TCUARB
-TFVAp
+TCVAp
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
@@ -1877,7 +1880,7 @@ tqJ94
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
 u wchar_t*H
-u(L9=E
+u(L9=long double
 u1D9t
 u2A;^Pu
 uGetResourceManifest
@@ -1886,7 +1889,7 @@ unsigned short	[A\A^A_]
 unsigned short&E;unsigned __int128
 unsigned short&ffffff.
 unsigned short,ffff.
-unsigned short>Lc=1
+unsigned short>Lc=signed char
 unsigned short>fffff.
 unsigned short@A;_
 vCenter
@@ -2078,6 +2081,7 @@ virtual void CConCommandMemberAccessor<CResourceSystemProfiler>::CommandCallback
 virtual void CNullTypeManager::AllocateResource(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *)
 virtual void CResourceDeallocatorUtils::ReleaseControl(const void *)
 virtual void CResourceManifestTypeManager::AllocateResource(ResourceHandle_t, ResourceId_t, const ResourceFileHeader_t *, IRD_RegisterResourceDataUtils *)
+virtual void CResourceSystem::BlockingFinishAllCurrentlyLoadingManifests()
 virtual void CResourceSystem::DeleteResource(ResourceHandle_t)
 virtual void CResourceSystem::DestroyResourceManifest(HResourceManifest)
 virtual void CResourceSystem::ForceSynchronizationAndBlockUntilManifestLoaded(HResourceManifest)

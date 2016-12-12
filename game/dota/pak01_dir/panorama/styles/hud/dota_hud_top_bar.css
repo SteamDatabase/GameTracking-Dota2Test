@@ -210,6 +210,11 @@ DOTAUGCImage
 	contrast: 1;
 }
 
+.HIDE_TOP_BAR_BACKGROUND .TopBarHeroImage
+{
+	background-color: none;
+}
+
 #BuybackIcon
 {
 	background-image: url("s2r://panorama/images/hud/reborn/buyback_icon_psd.vtex");
@@ -659,6 +664,11 @@ DOTAUGCImage
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #000 ), color-stop( 0.03, #000a ), color-stop( 0.1, #0000 ), color-stop( 0.91, #0000 ), color-stop( 0.95, #0006 ),  to( #000a ) );
 }
 
+.HIDE_TOP_BAR_BACKGROUND #PlayerColorShadow
+{
+	visibility: collapse;
+}
+
 #TopBarDirePlayersContainer #PlayerColor
 {
 	background-size: 93% 100%;
@@ -845,7 +855,7 @@ DOTAUGCImage
 	overflow: clip;
 }
 
-.Reborn.CustomHUDSkin #HUDSkinTopBarBG
+.Reborn.CustomHUDSkin:not(.HIDE_TOP_BAR_BACKGROUND) #HUDSkinTopBarBG
 {
 	visibility: visible;
 }

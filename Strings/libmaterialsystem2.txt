@@ -374,9 +374,9 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(137): ERROR! Empty shader mode string found! Use "Default" instead!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(149): ERROR! Shader mode "%short" has unsupported type "%short" specified gameinfo.gi!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2300): pVfx == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2351): pVfx == NULL!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2615): Error reading index!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2299): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2350): pVfx == NULL!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(2614): Error reading index!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(319): ERROR!!! Materials not released by other systems on shutdown! (See spew above)
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(324): ERROR!!! Shaders not freed on shutdown, likely due to unreleased materials! (See spew above)
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/materialsystem2/materialsystem2.cpp(338): GetErrorMaterial() called when m_pMaterialTypeManager == NULL!
@@ -1728,6 +1728,7 @@ StatsService_001
 T &CUtlBlockMemory<CVfxStaticComboData, int>::operator[](I) [T = CVfxStaticComboData, I = int]
 TASAp
 TA[A`
+TA[Ap
 TA[BSAYATAp
 TA]ATAp
 TBRBVATAp
@@ -1893,7 +1894,6 @@ Wrong number of args left on stack!
 X360_DST16
 X360_DST24
 X360_DST24F
-XJV2S?__int128
 XM96u/H
 X[A\A]A^A_]
 X[A\A^A_]
@@ -2451,6 +2451,7 @@ pFontName
 pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
 pList
 pMaterial
+pMaterial->IsLoaded()
 pName
 pParamClass && pParamClass->GetClass()
 pPool->m_SpaceUsed < 0xFFFF
@@ -2758,6 +2759,7 @@ void CMaterialSystem2::DynamicShaderCompile_FlushShaderCompileTaskList()
 void CMaterialSystem2::DynamicShaderCompile_UnloadAllMaterials()
 void CMaterialSystem2::LoadMaterialShaders(CMaterial2 *, HMaterial, ShaderLoadMode_t)
 void CMaterialSystem2::LoadPendingShaders()
+void CMaterialSystem2::RefreshMaterials()
 void CMaterialSystem2Utils::RenderLineBatch(IRenderContext *, const CUtlVector<Vector2D> *, const Color &, const CRenderAttributes *, LayoutPositionType_e)
 void CMemberFuncProxyBase<CMaterial2 *, void (CMaterial2::*)(IAsyncResourceDataRequest *, unsigned char *, int, MaterialStaticComboLoadRequest_t *, int, CWeakHandle<InfoForResourceTypeIMaterial2>), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CMaterial2 *, FUNCTION_TYPE = void (CMaterial2::*)(IAsyncResourceDataRequest *, unsigned char *, int, MaterialStaticComboLoadRequest_t *, int, CWeakHandle<InfoForResourceTypeIMaterial2>), MEM_POLICY = CFuncMemPolicyNone]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]

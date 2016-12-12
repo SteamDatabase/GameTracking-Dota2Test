@@ -19,8 +19,8 @@
 	})();
 	</script>
 
-	<DOTAHud hittest="false">
-		<Panel id="HUDElements" hittest="false" >
+	<DOTAHud hittest="false" disallowedstyleflags="hover,descendantfocus">
+		<Panel id="HUDElements" hittest="false" disallowedstyleflags="hover,descendantfocus">
 
 			<DOTAFightRecap id="FightRecap" />
 			<DOTATopBar id="topbar" hittest="false"/>
@@ -35,7 +35,7 @@
 			<Panel id="StatBranchDrawer" hittest="false">
 				<DOTAStatBranch id="statbranchdialog" hittest="false" />
 			</Panel>
-			<Panel id="lower_hud" hittest="false">
+			<Panel id="lower_hud" hittest="false" disallowedstyleflags="hover,descendantfocus">
 				<Panel id="minimap_block" hittest="false" >
 					<DOTAMinimap id="minimap" />
                 </Panel>
@@ -54,8 +54,8 @@
 					<DOTAStatsRegion id="stats" hittest="false" />
 				</Panel>				
 				<DOTASpellCard id="InvokerSpellCard" hittest="false"/>
-				<Panel id="center_with_stats" hittest="false" >
-					<Panel id="center_block" hittest="false" >
+				<Panel id="center_with_stats" hittest="false" disallowedstyleflags="hover,descendantfocus" >
+					<Panel id="center_block" hittest="false" disallowedstyleflags="hover,descendantfocus" >
 						<Panel id="left_flare" />
 					    <Panel id="center_bg" />
 					    <Panel id="HUDSkinPortrait" hittest="false"/>

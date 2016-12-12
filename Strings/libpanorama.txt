@@ -48,7 +48,6 @@
  ;{}:repeat-long long
  = { <proto text format> }". To set fields within it, use syntax like "
  Average %short commands per frame: %u, %u bytes
- D;5M
  F;|  |
  Outdent() without matching Indent().
  PP`P
@@ -618,9 +617,9 @@ $ffffff.
 1.5.2
 120.0f
 123456789
-13:09:54
 1HcDu
 1fffff.
+20:36:23
 29C |.
 29K }
 333333
@@ -1356,7 +1355,7 @@ A style file cannot import itself recursively: %short trying to import '%short'
 A style file cannot import itself: %short trying to import '%short'
 A!;I2
 A#Md	
-A#double&&	
+A#Nd	
 A(3A<3A
 A+D$ 
 A+D$$Hc
@@ -3098,9 +3097,6 @@ L% Hc
 L+V(I
 L90t*H
 L90u"A
-L95R;
-L95[long
-L95d-
 L9v@u
 L;>unsigned short!L9
 L;>unsigned short)L9
@@ -3121,7 +3117,7 @@ Layout FPS:
 Layout FPS:	%1.2f
 LayoutFilePtr_t panorama::CLayoutManager::GetCLayoutFile(const char *, bool)
 LayoutFilePtr_t panorama::CLayoutManager::GetLayoutFileFromString(const char *, bool)
-Lc5+unsigned __int128
+Lc5+p
 Lc;fB
 LcO,D
 Lcc0E
@@ -4920,6 +4916,7 @@ developer
 dimgray
 dimgrey
 disabled
+disallowedstyleflags
 displayPanel
 doctype
 document element

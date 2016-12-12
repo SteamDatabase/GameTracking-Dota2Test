@@ -2168,10 +2168,6 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDuration"				"10"
-		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -2195,7 +2191,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"duration_tooltip"			"10"
+				"fiery_soul_stack_duration"			"10"
 			}
 		}
 	}
@@ -18476,7 +18472,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"						"1"
 		"HotKeyOverride"				"C"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -29774,7 +29770,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5716"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	

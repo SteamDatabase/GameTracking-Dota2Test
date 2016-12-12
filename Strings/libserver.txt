@@ -60,7 +60,7 @@
 	Current enemy drawn in red
 	Current target entity drawn in magenta
 	Cyan	- detour around an object (triangulation)
-	D9%?long long
+	D9%?{
 	DEM_Error
 	Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
 	ENameItem
@@ -2682,7 +2682,6 @@ $wDE1
 ( x2 - x1 ) > cFloatEpsilon && ( y2 - y1 ) > cFloatEpsilon
 ("%short")
 (#GameUI_Disconnect_LoopLevelLoadActivate
-(%!T_
 (%0.2f) %short
 (%0.2f): %short
 (%1.3f)
@@ -3175,15 +3174,7 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%%:__float128
-.%+zG
-.%/zm
-.%5/;
 .%llu
-.%long]D
-.-"dD
-.-c_D
-.-{8R
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
@@ -8867,7 +8858,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5r
+AVSLc5B
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -10108,7 +10099,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=
+C#H9=3b
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -27279,9 +27270,9 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%=>...
+D%+tH
+D%1Dz
 D%pD9
-D%{3P
 D)T@u
 D+ E1
 D+(E1
@@ -27293,16 +27284,14 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-4|(
-D-I$z
-D-^@...
-D-y7z
+D-f8z
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
+D560z
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27320,7 +27309,7 @@ D93t&H
 D93t)H
 D93t+H
 D947u
-D95Qx
+D95Q{
 D98ta
 D98te
 D98tg
@@ -27330,7 +27319,9 @@ D9;unsigned short&H
 D9;unsigned short)H
 D9;unsigned short+I
 D9<9u
-D9=Y&char
+D9=5&char
+D9=8%char
+D9=T'char
 D9Q(}
 D9` short
 D9b@unsigned short<H
@@ -27373,43 +27364,40 @@ D9{(~
 D;#unsigned short&H
 D;)u"
 D;+u!
-D;-)X4
-D;-0\O
-D;-].
+D;- `O
 D;... u 
 D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5!K8
-D;5"2>
-D;51Y,
-D;58q
-D;59"O
-D;59P;
-D;5@ A
-D;5JsR
-D;5Jw>
-D;5Sk
-D;5U	>
-D;5V3>
-D;5]U
-D;5^Q;
-D;5_1j
-D;5eo/
-D;5gr
-D;5k8:
-D;5nT:
-D;5q A
-D;5sz#
-D;5t#O
-D;5v?=
-D;5wx>
+D;5!],
+D;5(u
+D;5)&O
+D;5)T;
+D;5+#A
+D;5:{>
+D;5Co
+D;5F7>
+D;5J.S
+D;5MY
+D;5NU;
+D;5Us/
+D;5Wv
+D;5[<:
+D;5^X:
+D;5a$A
+D;5c~#
+D;5d'O
+D;5fC=
+D;5g|>
+D;5qr
+D;5rp
+D;5wT*
 D;8}D
-D;=)%
-D;=G>=
-D;=Q~char
-D;=_&
+D;= mC
+D;=7B=
+D;=H)__float128
+D;=O*
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -32369,8 +32357,7 @@ HaticsType_None
 Have Entity say string, and teamOnly or not
 Have we received the post match signout message that includes reward information
 HaveAllPlayersJoined
-Hc5Xuq
-Hc5_Qe
+Hc5OUe
 Hc@XHi
 Hc@pH
 Hc@pI
@@ -35615,16 +35602,13 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L95	O
-L95'4z
-L95=O
-L95O9`
-L95lu
-L95{long long
+L95-S
+L95\unsigned long long
+L95k|
 L98t"H
 L98t5H
 L98tY
-L9=14
+L9=!8
 L9` u	I
 L9h u
 L9p u
@@ -35717,10 +35701,9 @@ LaunchInternalProcess FAILED!
 LaunchLoot
 LaunchLootInitialHeight
 LayoutPositionType_e
+Lc%]/	
 Lc1E9
 Lc2E1
-Lc=.	
-Lc=GM!
 LcGhf
 LcO,D
 LcOhf
@@ -37635,7 +37618,7 @@ P8[A\A^A_]
 P8fff.
 P@ @`
 P@+C D9
-P@000
+P@000P
 P@;CPu'H
 P@L;long double
 P@P@@`
@@ -38344,7 +38327,7 @@ RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRB
 RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRG
 RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRC
 RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRC
-RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRG
+RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRG
 RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRC
 RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRGp8p
 RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRC
@@ -42948,11 +42931,11 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
-W%!3o
-W%7{&
 W(I94
+W-3"9
+W-^kJ
 W0Lcs(G
-W5b2X
+W5R2X
 W8I94
 W8IcL
 W8ff.
@@ -43145,10 +43128,10 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%Fe_
+X%6e_
+X%pR_
 X(A;X,uo
-X-TNE
-X5afW
+X5QfW
 X<[A^]
 XATAp
 XAxis
@@ -43188,12 +43171,16 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%4ng
-Y%[tr
-Y%gsr
-Y%unsigned long long~r
-Y5H1L
-Y=bool)X
+Y%$ng
+Y%/da
+Y%Ktr
+Y%Wsr
+Y%int~r
+Y%r[r
+Y%tda
+Y%|[r
+Y=R)X
+Y=V:short
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43318,7 +43305,7 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
-]%YaT
+]%IaT
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -43451,6 +43438,7 @@ Zffffff.
 ^<A+^8I
 ^<A+^8~short
 ^<A+^8~zffff.
+^=gK 
 ^@A;^Dum
 ^DA+^@~wf.
 ^DA+^@~zffff.
@@ -43966,7 +43954,7 @@ _wcslen
 `\AWBp
 `\BRB`
 `]AWAp
-`^BRB`ZBRB`
+`^BRB`
 `_AVAWB
 `_AWAVB
 ``  pp
@@ -48534,6 +48522,7 @@ fiery_soul_attack_speed_bonus
 fiery_soul_cast_point_bonus
 fiery_soul_max_stacks
 fiery_soul_move_speed_bonus
+fiery_soul_stack_duration
 fight %double
 fight_details
 fight_score
@@ -52208,7 +52197,7 @@ long long signed char::* view roll angle
 long long!IcN
 long long"A9^
 long long#D9{
-long long%9=r
+long long%9=bool
 long long'A9^
 long long*[A^]
 long long+A9^
@@ -59328,7 +59317,6 @@ modifier_monkey_king_quadruple_tap_counter
 modifier_monkey_king_right_click_jump_activity
 modifier_monkey_king_spring_slow
 modifier_monkey_king_spring_thinker
-modifier_monkey_king_strike_crit
 modifier_monkey_king_transform
 modifier_monkey_king_tree_dance_activity
 modifier_monkey_king_tree_dance_hidden
@@ -65391,7 +65379,6 @@ shoptype
 short
 short [A^]
 short fffff.
-short ffffff.
 short wchar_t%H
 short wchar_t&H
 short wchar_t(H
@@ -73484,6 +73471,8 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
+unsigned __int128%wFf
+unsigned __int128%|{J
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char=unsigned short	H
@@ -73497,7 +73486,7 @@ unsigned int CUtlStringMap<CCustomGameEventManager::CCustomGameEventInfo *, CUtl
 unsigned int CUtlStringMap<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, CUtlSymbolTable>::Count() const [T = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<IModifierFactory *, CUtlSymbolTable>::Count() const [T = IModifierFactory *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<int, CUtlSymbolTable>::Count() const [T = int, SymbolTableType_t = CUtlSymbolTable]
-unsigned long long!Hc=
+unsigned long long!Hc=q>
 unsigned long long;D;u
 unsigned long long<D;unsigned long
 unsigned long long=E;~`u&I
@@ -78149,6 +78138,7 @@ writeback_queue
 wrong submessage type
 wyvern_splinter_blast
 x$D9s
+x.9=\
 x3E9~
 x7A9D$x~0Hc
 x7A9Fx~1Hc
@@ -78373,7 +78363,6 @@ zuus_thundergods_wrath
 ~PIcGpA
 ~T$Hf
 ~Vff.
-~Yffffff.
 ~[ff.
 ~^fff.
 ~^fffff.
