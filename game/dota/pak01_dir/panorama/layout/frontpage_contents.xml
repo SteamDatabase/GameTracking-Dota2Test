@@ -82,12 +82,13 @@
 		</DOTAFrontpageCarousel> -->
 		
 		<Panel id="700Container">
-			<DOTAScenePanel class="ScenePanel" map="scenes/700_frontpage" camera="camera_1" antialias="true" hittest="false"/>
+			<Panel id="700BG"/>
 			<Panel id="MKBlock" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_monkeyking.xml)">
 				<DOTAScenePanel id="MKImage" map="backgrounds/700_mk" camera="hero_camera" light="hero_light" antialias="true" hittest="false"/>
 				<Label id="MKLabel" text="#FrontPage_MonkeyKing1" hittest="false"/>
 				<Label id="MKSubtitle" text="#FrontPage_MonkeyKing2"/>
-			</Panel>						
+			</Panel>			
+			<DOTAScenePanel class="ScenePanel" map="scenes/700_frontpage" camera="camera_1" antialias="true" hittest="false"/>
 			<Panel id="ArcanaBlock" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_arcana_mk.xml)">
 				<Panel id="ArcanaImage" hittest="false"/>
 				<Label id="ArcanaLabel" text="#Debut_Arcana_MonkeyKing_Title" hittest="false"/>
@@ -98,9 +99,7 @@
 				<Label id="700Label" text="#FrontPage_700Subtitle" hittest="false"/>
 				<Label id="700Subtitle" text="#FrontPage_700Subtitle2"/>
 			</Panel>
-		
 		</Panel>
-
 	</DOTAFrontpageContents>
 
 </root>

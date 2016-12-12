@@ -175,7 +175,7 @@ DOTAScoreboardPlayer
 
 .EmptyPlayerRow .ScoreboardHeroImage
 {
-	visibility: collapse;
+	opacity: 0;
 }
 
 #PlayerAndHeroNameContainer
@@ -238,6 +238,11 @@ DOTAScoreboardPlayer
 	vertical-align: center;
 	margin-left: 7px;
 	margin-bottom: 2px;
+}
+
+.EmptyPlayerRow .ScoreboardXP
+{
+	opacity: 0;
 }
 
 #LevelLabel

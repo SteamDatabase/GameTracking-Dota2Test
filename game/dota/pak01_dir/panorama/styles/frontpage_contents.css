@@ -75,9 +75,11 @@
 #700Container
 {
 	width: 100%;
-	height: 100%;
+	height: 510px;
+	
+	vertical-align: bottom;
 //	background-color: black;
-	background-color: gradient( radial, 50% 50%, 0% 0%, 600px 600px, from( #C3661C46 ), color-stop( .5, #6A1E0A43 ), to( #000000a6 ) );
+	
 }
 
 #700Logo
@@ -98,6 +100,14 @@
 	transition-timing-function: ease-in-out;	
 }
 
+#700BG
+{
+	width: 100%;
+	height: 480px;
+	vertical-align: bottom;
+	background-color: gradient( radial, 50% 50%, 0% 0%, 600px 600px, from( #C3661C46 ), color-stop( .5, #6A1E0A43 ), to( #000000a6 ) );	
+}
+
 #700Block:hover #700Logo
 {
 	opacity: 1;
@@ -115,9 +125,10 @@
 #700Block
 {
 	width: 400px;
-	height: 100%;
+	height: 480px;
 	horizontal-align: center;
-	vertical-align: middle;
+	vertical-align: bottom;
+
 }
 
 #MKBlock,
@@ -132,14 +143,17 @@
 
 #MKBlock
 {
+	margin-top: 2px;
 	horizontal-align: left;
-	z-index: -1;
+	z-index: 0;
+	overflow: noclip;
 }
 
 .ScenePanel
 {
 	width: 100%;
-	height: 100%;	
+	height: 480px;
+	vertical-align: bottom;	
 	opacity-mask: url("s2r://panorama/images/masks/matrix_mask_psd.vtex") 1;	
 	opacity: 2;
 }

@@ -11,7 +11,6 @@
 		Matcher token: %short
 		[%int]=%float
 		if g_reloadState == nil then 			g_reloadState = {} 			for k, void in pairs( package.loaded ) do 				g_reloadState[k] = void 			end 		else 			for k, void in pairs( package.loaded ) do 				if g_reloadState[k] == nil then 					package.loaded[k] = nil 				end 			end 		end
-		pU	
 	  -> PANICKING
 	"%short" "%.2f"
 	"%short" "%int"
@@ -1495,7 +1494,6 @@
 "long double" must be followed by exponent.
 "need_to_choose_most_helpful_friend
 "notification_body_localization_key
-#		P%	
 ################################################################################
 ##GameUI_Disconnect_BadRelayPassword
 ##GameUI_Disconnect_ReliableOverflow
@@ -2692,11 +2690,9 @@ $wDE1
 (%__float128 %__float128 %__float128 %__float128)
 (%__float128 %__float128 %__float128)
 (%__float128 %__float128)
-(%_g_
 (%double %double %double %double)
 (%double) Name: %short (%short)
 (%float, %float, %float)
-(%lg_
 ((CSosFilterSetSoundEventFieldsInfo_t *)( *pEvent ))->m_nGuid.GetRaw() == nGuid.GetRaw()
 ((equipped_slot_t)-1) != m_unFirstValidItemSlot
 ()+-*/
@@ -2706,7 +2702,6 @@ $wDE1
 (;T0(
 (;T1(H
 (;T1(}
-(=unsigned int(]
 (A;] |
 (A;_ |
 (ACTIVE)
@@ -3179,17 +3174,18 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%5c;
-.%^...]
+.%#>U
+.%&"u
+.%:R/
+.%;HH
+.%U];
 .%llu
-.-,&2
-.-X1:
-.-{lR
+.-L 2
+.-long long+:
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
-.5g%bool
-.=unsigned __int128@__float128
+.=17=
 .@(wSA
 .@,sT
 .@Ts|
@@ -5067,6 +5063,7 @@ $wDE1
 00`00
 00`` p
 00p@@00P
+01		 2	
 0123456789abcdef
 08:0@6666@:J6
 0;0~tA
@@ -5259,7 +5256,7 @@ $wDE1
 13609
 13655
 13694
-13718
+13700
 13740
 13779
 13825
@@ -5301,8 +5298,8 @@ $wDE1
 15309
 15355
 15394
-15406
 15440
+15452
 15479
 15525
 15564
@@ -5350,8 +5347,8 @@ $wDE1
 17310
 17349
 17395
-17422
-17426
+17419
+17423
 17434
 17480
 17519
@@ -5360,9 +5357,9 @@ $wDE1
 17650
 17689
 17735
-17761
+17758
 17774
-17792
+17789
 17820
 17859
 17905
@@ -5386,12 +5383,12 @@ $wDE1
 18585
 18624
 18670
-18694
+18691
 18709
 18755
 18794
 18840
-18862
+18859
 18879
 18925
 18964
@@ -5601,7 +5598,7 @@ $wDE1
 200000
 20030
 20069
-20096
+20093
 20115
 20154
 20200
@@ -6260,7 +6257,6 @@ $wDE1
 ?w9Hc
 ?wJHc
 ?wTHc
-@		pA	
 @    
 @ 00  
 @ ;C<u
@@ -6365,8 +6361,7 @@ $wDE1
 @ConColorMsg(Color const&, char const*, ...)
 @ConMsg(char const*, ...)
 @D0uTH
-@D;5\
-@D;=|
+@D;5|
 @DevMsg(char const*, ...)
 @DevWarning(char const*, ...)
 @E unsigned short*H
@@ -8872,7 +8867,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5R
+AVSLc5
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -10116,7 +10111,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=C
+C#H9=short
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -27297,9 +27292,9 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%]tz
+D%[J)
 D%pD9
-D%{M)
+D%}nz
 D)T@u
 D+ E1
 D+(E1
@@ -27311,15 +27306,14 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-iZz
-D-~vz
+D-6ez
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
-D5L@*
+D5,=*
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27329,7 +27323,6 @@ D9#unsigned short)H
 D9#unsigned short-A
 D9#unsigned short-H
 D9#uuHcC
-D9%-wC
 D9(te
 D9(ts
 D9(unsigned short"f.
@@ -27347,7 +27340,7 @@ D9;unsigned short&H
 D9;unsigned short)H
 D9;unsigned short+I
 D9<9u
-D9=)char volatile
+D9=$Tc
 D9Q(}
 D9` short
 D9b@unsigned short<H
@@ -27388,6 +27381,7 @@ D9{$A
 D9{$|
 D9{(~
 D;#unsigned short&H
+D;%_&?
 D;)u"
 D;+u!
 D;... u 
@@ -27395,33 +27389,35 @@ D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5 fA
-D;5$Y0
-D;5&:
-D;5&`
-D;5+`
-D;54q;
-D;58B0
-D;5=hA
-D;5>$<
-D;5E	'
-D;5G@Y
-D;5Ia
-D;5P<1
-D;5Q(;
-D;5WkO
-D;5cv>
-D;5eP'
-D;5liA
-D;5r%<
-D;5tb%
-D;5v98
-D;5vv8
-D;5y=1
-D;5zJ
+D;5+_A
+D;53W
+D;59bO
+D;5:P+
+D;5;?
+D;5@WC
+D;5EI>
+D;5Fs>
+D;5I"<
+D;5L^#
+D;5N.+
+D;5O>1
+D;5P'
+D;5RA6
+D;5SX
+D;5[long long:
+D;5a`A
+D;5jJ>
+D;5kB6
+D;5n#<
+D;5tR0
+D;5tcO
+D;5v3
+D;5vY
+D;5{Y
 D;8}D
-D;=3n
-D;=[unsigned __int128
+D;=7~=
+D;=float&&
+D;=xLg
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -32177,8 +32173,6 @@ H90t!L
 H91t8H
 H91tRH
 H92t	H
-H9=36/
-H9=9g2
 H9A@u
 H9B0u
 H9C unsigned short
@@ -33436,6 +33430,7 @@ Human
 HurtThinH
 HurtToucH
 Hurts the player.
+I		 J	
 I	F H
 I CUtlLinkedList<CBaseCombatWeapon *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CBaseCombatWeapon *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CBaseCombatWeapon *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CBaseCombatWeapon *, unsigned short>, unsigned short>]
 I CUtlLinkedList<CCoroutine, int, false, int, CUtlMemory<UtlLinkedListElem_t<CCoroutine, int>, int> >::AllocInternal(bool) [T = CCoroutine, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<CCoroutine, int>, int>]
@@ -35623,6 +35618,7 @@ L9 unsigned short*H
 L9#unsigned short)H
 L9(unsigned short'H
 L9)t3H
+L9-U,O
 L90t*H
 L90tXH
 L90tYH
@@ -35631,11 +35627,17 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L95-[
+L95%Cu
+L95'tz
+L95\unsigned shortimaginary 
+L95_$O
+L95d$`
+L95eO
 L98t"H
 L98t5H
 L98tY
-L9=FW
+L9=A3O
+L9=t
 L9` u	I
 L9h u
 L9p u
@@ -35728,9 +35730,10 @@ LaunchInternalProcess FAILED!
 LaunchLoot
 LaunchLootInitialHeight
 LayoutPositionType_e
-Lc%mq	
 Lc1E9
 Lc2E1
+Lc5;WP
+Lc=am	
 LcGhf
 LcO,D
 LcOhf
@@ -38322,7 +38325,6 @@ QuitServer() called while already terminating
 QuitServer() executing "disconnect"
 QuitServer() executing "quit"
 QyOIc
-R		@S	
 RADIANT
 RADIATION
 RANDOM
@@ -39758,6 +39760,7 @@ Script_IsInToolsMode
 Script_IsItemPurchasedFromSecretShop
 Script_IsItemPurchasedFromSideShop
 Script_IsLocationPassable
+Script_IsPermanent
 Script_IsPlayerInHeroSelectionControl
 Script_IsPurgable
 Script_IsPurgeException
@@ -41310,7 +41313,7 @@ T$tE1
 T,XH9
 T0xRAp
 T1wHc
-T5hw]
+T5#	&
 TARARARARARARARC`
 TARBRB]ARBRAp
 TARBRD`
@@ -42976,7 +42979,6 @@ Vulkan
 W$A+W Hc
 W(I94
 W0Lcs(G
-W5B6X
 W8I94
 W8IcL
 W8ff.
@@ -43169,13 +43171,11 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%0d_
-X%6 unsigned long
-X%he_
+X%Pd_
+X%pb_
 X(A;X,uo
-X5AjW
+X-unsigned short|E
 X<[A^]
-X=B&unsigned __int128
 XATAp
 XAxis
 XBRAp
@@ -43214,12 +43214,11 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%(%u
-Y%7CY
-Y-<-L
-Y5HeL
-Y5v@wchar_t
-Y=B-X
+Y%Rmr
+Y%W=Y
+Y%\mr
+Y-\'L
+Y5h_L
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43344,7 +43343,7 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
-]%9eT
+]%ycT
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -44052,6 +44051,7 @@ _wcslen
 `pp`p
 `ppp``
 `pt H
+`q		 r	
 `sA`%A[ASA`7F
 `unsigned char[A\A^A_]
 `xff.
@@ -52235,6 +52235,7 @@ long long signed char::* view roll angle
 long long!IcN
 long long"A9^
 long long#D9{
+long long%9=bool
 long long'A9^
 long long*[A^]
 long long+A9^
@@ -61966,6 +61967,7 @@ pRet == pTypedRet
 pReturn
 pRole->m_PassengerSeats.IsValidIndex( nSeatIndex )
 pRule
+pS		0T	
 pSOCache
 pSOCache->BIsSubscribed()
 pSaveData->DefineSymbol( pszTokenList, int )
@@ -65838,6 +65840,7 @@ specgui
 special1
 special2
 special3
+special_bonus_
 special_bonus_20_bash_2
 special_bonus_agility_10
 special_bonus_agility_13
@@ -66681,7 +66684,6 @@ static bool CMemberScriptBinding0<CDOTA_Bot_Script *, float (CDOTA_Bot_Script::*
 static bool CMemberScriptBinding0<CDOTA_Bot_Script *, int (CDOTA_Bot_Script::*)(), int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Bot_Script *, FUNC_TYPE = int (CDOTA_Bot_Script::*)(), FUNCTION_RETTYPE = int]
 static bool CMemberScriptBinding0<CDOTA_Bot_Script *, void (CDOTA_Bot_Script::*)(), void>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Bot_Script *, FUNC_TYPE = void (CDOTA_Bot_Script::*)(), FUNCTION_RETTYPE = void]
 static bool CMemberScriptBinding0<CDOTA_Buff *, HSCRIPT__ *(CDOTA_Buff::*)(), HSCRIPT__ *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = HSCRIPT__ *(CDOTA_Buff::*)(), FUNCTION_RETTYPE = HSCRIPT__ *]
-static bool CMemberScriptBinding0<CDOTA_Buff *, bool (CDOTA_Buff::*)(), bool>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = bool (CDOTA_Buff::*)(), FUNCTION_RETTYPE = bool]
 static bool CMemberScriptBinding0<CDOTA_Buff *, const char *(CDOTA_Buff::*)(), const char *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = const char *(CDOTA_Buff::*)(), FUNCTION_RETTYPE = const char *]
 static bool CMemberScriptBinding0<CDOTA_Buff *, float (CDOTA_Buff::*)(), float>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = float (CDOTA_Buff::*)(), FUNCTION_RETTYPE = float]
 static bool CMemberScriptBinding0<CDOTA_Buff *, int (CDOTA_Buff::*)(), int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [OBJECT_TYPE_PTR = CDOTA_Buff *, FUNC_TYPE = int (CDOTA_Buff::*)(), FUNCTION_RETTYPE = int]
@@ -72425,7 +72427,7 @@ tN9D1
 tN9L:
 tN9T9
 tND9;L
-tND;5
+tND;5P
 tNL;long double
 tN~*C
 tO9D1
@@ -73392,7 +73394,6 @@ uaz_I
 ubz`A
 ubz`H
 ucLc-
-ud9=|
 udM9n
 uezcA
 ufLce
@@ -73516,6 +73517,7 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
+unsigned __int128%WXf
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char=unsigned short	H
@@ -73529,6 +73531,7 @@ unsigned int CUtlStringMap<CCustomGameEventManager::CCustomGameEventInfo *, CUtl
 unsigned int CUtlStringMap<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, CUtlSymbolTable>::Count() const [T = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<IModifierFactory *, CUtlSymbolTable>::Count() const [T = IModifierFactory *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<int, CUtlSymbolTable>::Count() const [T = int, SymbolTableType_t = CUtlSymbolTable]
+unsigned long long		...*	
 unsigned long long!Hc=
 unsigned long long;D;u
 unsigned long long<D;unsigned long
@@ -73640,6 +73643,7 @@ unsigned short+(vTJ
 unsigned short+9D1
 unsigned short+9D2
 unsigned short+9L:
+unsigned short+;5ej
 unsigned short+B9D
 unsigned short+B9L
 unsigned short+H9z0u%H
@@ -78183,7 +78187,6 @@ writeback_queue
 wrong submessage type
 wyvern_splinter_blast
 x$D9s
-x.9=long
 x3E9~
 x7A9D$x~0Hc
 x7A9Fx~1Hc
@@ -78317,7 +78320,6 @@ zuus_thundergods_wrath
 |^fff.
 |fff.
 |xfff.
-}		0~	
 }	[A\A^A_]
 } E;}$usH
 }%D9{<r

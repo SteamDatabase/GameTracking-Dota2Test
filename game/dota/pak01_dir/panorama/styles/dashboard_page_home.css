@@ -58,14 +58,15 @@ DOTADashboard.InitialDisplay #TodayPages
 	//border: 1px solid red;
 	margin-left: 16px;
 	flow-children: none;
+	z-index: -1;
 }
 
 #FrontpageContents
 {
 	width: 1040px;
-	margin-top: 30px;
+	padding-top: 0px;
 	margin-right: 16px;
-	height: 480px;
+	height: 510px;
 }
 
 #BottomLeftSection
