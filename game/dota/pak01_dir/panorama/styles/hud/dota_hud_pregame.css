@@ -1801,7 +1801,7 @@ DOTAHeroPickingHeroIcon.Dragging
 
 .HasSelectedHero.RepickAvailable #EnterGameRepickButton,
 .HasSelectedHero.ReRandomAvailable #EnterGameReRandomButton,
-.HasSelectedHero.LocalGame #SkipIntoGame
+.HasSelectedHero.CanSkipStrategyTime #SkipIntoGame
 {
 	visibility: visible;
 }

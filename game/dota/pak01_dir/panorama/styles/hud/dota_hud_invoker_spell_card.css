@@ -18,6 +18,11 @@ DOTASpellCard
 	transition-timing-function: ease-in-out;
 }
 
+.HUDFlipped DOTASpellCard
+{
+	transform: translateX(0px) translateY(0px) scaleX(-1.0);
+}
+
 #SpellRowContainer
 {
 	flow-children: down;
@@ -26,6 +31,13 @@ DOTASpellCard
 }
 
 .Hidden
+{
+	transform: translateX(190px) translateY(170px) scaleX(-1.0);
+	pre-transform-scale2d: .2;
+	opacity: 0;
+}
+
+.HUDFlipped DOTASpellCard.Hidden
 {
 	transform: translateX(190px) translateY(170px);
 	pre-transform-scale2d: .2;

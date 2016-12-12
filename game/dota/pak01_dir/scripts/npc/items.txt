@@ -446,6 +446,7 @@
 		"ItemInitialCharges"			"1"
 		"SideShop"						"0"
 		"ItemHideCharges"				"1"
+		"IsTempestDoubleClonable"		"0"
 		
 		// Sounden
 		//-------------------------------------------------------------------------------------------------------------			
@@ -1302,6 +1303,7 @@
 		"ItemKillable"					"0"
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"AllowedInBackpack"				"0"
+		"IsTempestDoubleClonable"		"0"
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -1415,6 +1417,7 @@
 		"ItemInitialCharges"			"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemContributesToNetWorthWhenDropped"	"0"
+		"IsTempestDoubleClonable"		"0"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1630,6 +1633,7 @@
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
 		"SideShop"						"0"
+		"IsTempestDoubleClonable"		"0"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1676,6 +1680,7 @@
 		"ItemInitialCharges"			"1"
 		"SideShop"						"0"
 		"ItemHideCharges"				"1"
+		"IsTempestDoubleClonable"		"0"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1722,6 +1727,7 @@
 		"ItemStackable"					"1"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1769,6 +1775,7 @@
 		"ItemInitialCharges"			"2"		  
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
 
 
 		// Special	
@@ -1826,6 +1833,7 @@
 		"ItemPermanent"					"1"
 		"ItemInitialCharges"			"3"
 		"ItemDisplayCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1890,6 +1898,7 @@
 		"ItemStockTime"					"150.0"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1950,6 +1959,7 @@
 		"ItemInitialCharges"			"2"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
 
 		
 		// Special	
@@ -2036,6 +2046,7 @@
 		"ItemPurchasable"				"0"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"IsTempestDoubleClonable"		"0"
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -2128,7 +2139,8 @@
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"4"
 		"SideShop"						"0"
-		
+		"IsTempestDoubleClonable"		"0"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -2187,6 +2199,7 @@
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"IsTempestDoubleClonable"		"0"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2236,6 +2249,7 @@
 		"ItemStockMax"					"1"
 		"ItemStockTime"					"120.0"
 		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
 
 	}
 	
@@ -3662,7 +3676,7 @@
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"270.0"
 		"ItemSupport"					"1"
-
+		"IsTempestDoubleClonable"		"0"
 	}
 	
 	//=================================================================================================================
@@ -5468,7 +5482,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"warrior_damage_tooltip"	"50 70 90"
+				"warrior_damage_tooltip"	"75 100 125"
 			}
 			"06"
 			{
@@ -5578,7 +5592,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"warrior_damage_tooltip"	"50 70 90"
+				"warrior_damage_tooltip"	"75 100 125"
 			}
 			"06"
 			{
@@ -5685,7 +5699,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"warrior_damage_tooltip"	"50 70 90"
+				"warrior_damage_tooltip"	"75 100 125"
 			}
 			"06"
 			{
@@ -6150,6 +6164,8 @@
 		"ItemKillable"					"1"
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"AllowedInBackpack"				"0"
+		"IsTempestDoubleClonable"		"0"
+
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
@@ -7026,6 +7042,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"AllowedInBackpack"				"0"
+		"IsTempestDoubleClonable"		"0"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10046,6 +10063,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemSupport"					"1"
 		"ItemAlertable"					"1"
+		"IsTempestDoubleClonable"		"0"
 
 
 		// Special	
@@ -10107,6 +10125,7 @@
 		"ItemInitialStockTime"			"690.0"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
 
 
 		// Special	

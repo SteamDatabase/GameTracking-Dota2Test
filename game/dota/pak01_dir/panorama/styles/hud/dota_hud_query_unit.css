@@ -41,6 +41,16 @@ DOTAQueryUnit.IsDead Label
 	color: red;
 }
 
+#QueryContainer
+{
+	flow-children: right;
+}
+
+.HUDFlipped #QueryContainer
+{
+	flow-children: left;
+}
+
 DOTAQueryUnit.HallOfFame #QueryContainer,
 DOTAQueryUnit.HeroStatue #QueryContainer,
 DOTAQueryUnit.PAGrave #QueryContainer
@@ -81,6 +91,11 @@ DOTAQueryUnit.Hidden
 	width: fit-children;
 	height: fit-children;
 	flow-children: down;
+}
+
+#stragiint
+{
+	margin-top: 55px;
 }
 
 #MidSection

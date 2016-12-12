@@ -12,6 +12,11 @@ DOTAHUDStrAgiInt.ShowStrAgiInt
 	visibility: visible;
 }
 
+.Reborn DOTAHUDStrAgiInt.QueryUnit
+{
+	flow-children: down;
+}
+
 .AspectRatio4x3 DOTAHUDStrAgiInt
 {
 	padding-left: 1px;
@@ -172,6 +177,11 @@ DOTAHUDStrAgiInt.ShowStrAgiInt
     z-index: 60;
 }
 
+.Reborn DOTAHUDStrAgiInt.QueryUnit
+{
+	width: 48px;
+}
+
 .Reborn .StatIcon
 {
     width: 32px;
@@ -230,6 +240,14 @@ DOTAHUDStrAgiInt.ShowStrAgiInt
 {
 	pre-transform-scale2d: 1;
 	opacity: 1;
+}
+
+.Reborn DOTAHUDStrAgiInt.QueryUnit #Intelligence,
+.Reborn DOTAHUDStrAgiInt.QueryUnit #Agility,
+.Reborn DOTAHUDStrAgiInt.QueryUnit #Strength
+{
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 .Reborn #Strength

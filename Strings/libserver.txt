@@ -60,7 +60,7 @@
 	Current enemy drawn in red
 	Current target entity drawn in magenta
 	Cyan	- detour around an object (triangulation)
-	D9%/bool
+	D9%ow
 	DEM_Error
 	Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
 	ENameItem
@@ -2643,6 +2643,7 @@ $wDE1
 ( m_nHierarchyType == HIERARCHY_BONE_MERGE && int != 0 ) || ( m_pBoneTransformOverride || !animationParentTransforms.IsValid() || ( GetPhysicsBoneCount() > 1 ) || TransformsAreEqual( currentParentTransform, animationParentTransforms[int] ) )
 ( m_nNumberOfTeams > 0 ) && ( m_nNumberOfTeams <= MAX_FOW_TEAMS )
 ( m_nStateFlags & FL_EDICT_DIRTY_PVS_INFORMATION ) == 0
+( m_pCurrentObstruction != pNextObstruction ) || ( m_pCurrentObstruction == pInsideObstruction )
 ( m_pNuggetType == NULL ) && ( m_Handle == UTLHANDLE_INVALID )
 ( m_skeleton.GetFlags( nParent ) & nFlagMask ) == nFlagEq
 ( m_vecPlayerLoadoutSlots.Count() - 1 ) <= GetLastValidItemSlot()
@@ -2686,6 +2687,7 @@ $wDE1
 (%1.3f)
 (%2.2f - %2.2f - %2.2f)
 (%2.2f)
+(%QT_
 (%__float128 %__float128 %__float128 %__float128)
 (%__float128 %__float128 %__float128)
 (%__float128 %__float128)
@@ -2888,7 +2890,6 @@ $wDE1
 )k_ESuspiciousActivity_SuspectedBotFarming
 )k_ESuspiciousBuildType_NoSignificantItems
 )k_ETourneyQueueDeadlineState_ExpiringSoon
-*		`+	
 * If the error can be repeatably reproduced, this is signed char bug in
 * If the error cannot be reproduced, and/or happens at different
 ** ERROR: .NAV FILE NOT WRITABLE!!!      **
@@ -3174,12 +3175,13 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%: /
-.%KvG
-.%U+;
+.%J#/
+.%U:__float128
+.%[yG
+.%_zm
+.%e.;
 .%llu
-.%~long double]
-.-B`D
+.-RcD
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
@@ -3524,7 +3526,6 @@ $wDE1
 .vpcf
 .vrman
 .xXB%
-/		02	
 /CHAT_MESSAGE_LOW_PRIORITY_COMPLETED_EXPLANATION
 /CMsgRequestItemPurgatory_RefundPurchaseResponse
 /CMsgServerToGCCompendiumInGamePredictionResults
@@ -5253,7 +5254,7 @@ $wDE1
 13609
 13655
 13694
-13725
+13718
 13740
 13779
 13825
@@ -5295,7 +5296,7 @@ $wDE1
 15309
 15355
 15394
-15413
+15406
 15440
 15479
 15525
@@ -5344,8 +5345,8 @@ $wDE1
 17310
 17349
 17395
-17429
-17433
+17422
+17426
 17434
 17480
 17519
@@ -5354,9 +5355,9 @@ $wDE1
 17650
 17689
 17735
-17768
+17761
 17774
-17799
+17792
 17820
 17859
 17905
@@ -5380,12 +5381,12 @@ $wDE1
 18585
 18624
 18670
-18701
+18694
 18709
 18755
 18794
 18840
-18869
+18862
 18879
 18925
 18964
@@ -5595,7 +5596,7 @@ $wDE1
 200000
 20030
 20069
-20103
+20096
 20115
 20154
 20200
@@ -6110,6 +6111,7 @@ $wDE1
 ;@  0
 ;@unsigned short,H
 ;A }(
+;AXt H
 ;AX|3
 ;AX~!I
 ;B u$H
@@ -8754,7 +8756,6 @@ ARBVBRBRAp
 ARBXBSATAp
 ARBYATBRB]ARBRAp
 ARBZAp
-ARBZBR0
 ARB[ARAp
 ARB\A`'Bp
 ARB]0
@@ -8785,49 +8786,17 @@ ARB`YARB`YARB`YARB`YARB`
 ARB`YARB`YARB`ZBRB`YARB`
 ARB`YARB`ZBRB`
 ARB`YARB`ZBRB`YARB`
-ARB`YARB`ZBRB`YARB`ZBRB`
-ARB`YARB`ZBRB`YARB`ZBRB`ZBRB`
-ARB`YARB`ZBRB`ZBRB`
-ARB`YARB`ZBRB`ZBRB`YARB`
-ARB`YARB`ZBRB`ZBRB`ZBRB`YARB`
 ARB`YARB`\AVAp
 ARB`YARB`]AWAVB
-ARB`ZBRAp
 ARB`ZBRB`
 ARB`ZBRB`YARB`
-ARB`ZBRB`YARB`YARAp
-ARB`ZBRB`YARB`YARB`
-ARB`ZBRB`YARB`YARB`ZBRAp
-ARB`ZBRB`YARB`YARB`ZBRB`
-ARB`ZBRB`YARB`YARB`ZBRB`ZBRA`6ATAp
-ARB`ZBRB`YARB`YARB`ZBRB`ZBRB`
-ARB`ZBRB`YARB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`\BRB`ZBRB`ZBRB`
-ARB`ZBRB`YARB`ZBRB`
-ARB`ZBRB`YARB`ZBRB`YARB`
-ARB`ZBRB`YARB`ZBRB`ZBRB`YARB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`
-ARB`ZBRB`YARB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`
-ARB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`
-ARB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`
-ARB`ZBRB`YARB`ZBRB`ZBRB`_AWAVBRB`
-ARB`ZBRB`YASATA`5Ap
-ARB`ZBRB`ZBRB`
-ARB`ZBRB`ZBRB`YARB`YARB`YARB`ZBRB`ZBRB`
-ARB`ZBRB`ZBRB`ZBRB`
-ARB`ZBRB`ZBRB`ZBRB`ZBRB`
-ARB`ZBRB`ZBRB`ZBRB`^BRB`YARB`ZBRB`^BRB`YARB`ZBRB`ZBRB`
-ARB`ZBRB`\BRB`
-ARB`ZBRB`_ARB`
-ARB`ZBRB`_ARB`ZBRB`
 ARB`[ARASAp
 ARB`[ARB`
 ARB`[ARB`YARB`
 ARB`\AWBp
-ARB`\BRB`YARB`YARB`
 ARB`\BRB`YARB`YARB`YARB`YARB`
-ARB`\BRB`ZBRB`ZBRB`
 ARB`_AWAVBRB`YARB`\AWBp
 ARB``BRB`
-ARB``BRB`YARB`
 ARDMDisabled
 ARDVBRAp
 ARDVBRB[ARAp
@@ -8984,7 +8953,6 @@ A\BRB`
 A]ATAp
 A]ATB`
 A]ATC`
-A]A]0
 A`!ATAp
 A`"A\A
 A`"A\AR0
@@ -9004,8 +8972,6 @@ A`(ATAp
 A`AC`
 A`YARB`YARB`YARB`YARB`
 A`ZBRB`YARB`^BRB`
-A`ZB`
-A`ZB`ZBRB`ZBRB`
 A`eAYAR0
 A`eAYARBRB`
 A`eAYARBRB`YARB`
@@ -9373,7 +9339,6 @@ Allows definition of signed char table of hero XP values.
 Allows definition of the max level heroes can achieve (default is 25).
 Allows heroes in the map to give signed char specific amount of XP (this value must be set).
 Allows team members to injure other members of their team
-Ally-talk vector on %short tried to track more than %double allies! Ally greetings are broken now.
 AllyPhantomFragmentBoost
 AllyShiningFragmentBoost
 Alpha
@@ -9751,6 +9716,7 @@ BRBRBp
 BRBSATAp
 BRBVBRBRATAp
 BRBWARB`
+BRBZBR0
 BRBZBRBRAp
 BRB]0
 BRB`!A`'Ap
@@ -9791,6 +9757,11 @@ BRB`YARB`YARB`\BRB`YARB`ZBRB`YARB`[ARB`ZBRB`ZBRB`[ARB`ZBRB`
 BRB`YARB`ZBRB`
 BRB`YARB`ZBRB`YARB`
 BRB`YARB`ZBRB`YARB`YARB`YARB`YARB`YARB`YARB`
+BRB`YARB`ZBRB`YARB`ZBRB`
+BRB`YARB`ZBRB`YARB`ZBRB`ZBRB`
+BRB`YARB`ZBRB`ZBRB`
+BRB`YARB`ZBRB`ZBRB`YARB`
+BRB`YARB`ZBRB`ZBRB`ZBRB`YARB`
 BRB`YARB`ZBRB`^BRB`YARB`YARB`
 BRB`YARB`ZBRB`_ARB`
 BRB`YARB`[ARB`
@@ -9803,13 +9774,34 @@ BRB`YARB`\AWBp
 BRB`YARB`^BRB`YARB`^BRB`
 BRB`YARB`_AWAVB
 BRB`YASATA`#ASA`
+BRB`ZBRAp
 BRB`ZBRB`
 BRB`ZBRB`YARB`
+BRB`ZBRB`YARB`YARAp
 BRB`ZBRB`YARB`YARB`
+BRB`ZBRB`YARB`YARB`ZBRAp
+BRB`ZBRB`YARB`YARB`ZBRB`
+BRB`ZBRB`YARB`YARB`ZBRB`ZBRA`6ATAp
+BRB`ZBRB`YARB`YARB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`\BRB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`YARB`
+BRB`ZBRB`YARB`ZBRB`ZBRB`YARB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`ZBRB`_AWAVBRB`
+BRB`ZBRB`YASATA`5Ap
 BRB`ZBRB`ZBRB`
+BRB`ZBRB`ZBRB`YARB`YARB`YARB`ZBRB`ZBRB`
 BRB`ZBRB`ZBRB`ZBRB`
 BRB`ZBRB`ZBRB`ZBRB`YARB`
+BRB`ZBRB`ZBRB`ZBRB`ZBRB`
+BRB`ZBRB`ZBRB`ZBRB`^BRB`YARB`ZBRB`^BRB`YARB`ZBRB`ZBRB`
 BRB`ZBRB`[ARB`[ARB`
+BRB`ZBRB`\BRB`
+BRB`ZBRB`_ARB`
+BRB`ZBRB`_ARB`ZBRB`
 BRB`[ARBRB`[ARB`
 BRB`[ARB`
 BRB`[ARB`YARB`
@@ -9824,6 +9816,8 @@ BRB`[AWAp
 BRB`\AVAp
 BRB`\AWBp
 BRB`\BRB`
+BRB`\BRB`YARB`YARB`
+BRB`\BRB`ZBRB`ZBRB`
 BRB`]AWAVB
 BRB`]AWAVB`
 BRB`^BRB`
@@ -9836,6 +9830,7 @@ BRB`_AWAVBRB`ZBRB`
 BRB`_AWAVBRB`[ARB`
 BRB`_AWAVBRB`^BRB`
 BRB``BRB`
+BRB``BRB`YARB`
 BSATAYAUAWAp
 BSATA`5Ap
 BSATAp
@@ -9850,10 +9845,13 @@ BUF_VOICE
 BUILDING_STATE
 BULLET
 BYAYAYAYAYAYA`
+B]A]0
 B`(ATAp
 B`YARB`
 B`YARB`YARB`]AWAVB
 B`ZBRB`'ARBRBp
+B`ZB`
+B`ZB`ZBRB`ZBRB`
 B`^BRB`
 B`p@p
 B`pp0 
@@ -10108,7 +10106,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=
+C#H9=S^
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -27279,11 +27277,12 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%]:...
 D%pD9
+D%unsigned long=...
 D)T@u
 D+ E1
 D+(E1
+D+5-wchar_t
 D+c$D
 D+h$+X,
 D+h$D+long long,D
@@ -27292,15 +27291,15 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-int ...
-D-~<...
+D-&4z
+D-double{(
+D-unsigned long long#...
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
-D5L~8
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27310,9 +27309,6 @@ D9#unsigned short)H
 D9#unsigned short-A
 D9#unsigned short-H
 D9#uuHcC
-D9%!long double
-D9%M>C
-D9%lnt
 D9(te
 D9(ts
 D9(unsigned short"f.
@@ -27321,7 +27317,6 @@ D93t&H
 D93t)H
 D93t+H
 D947u
-D95Ab
 D98ta
 D98te
 D98tg
@@ -27371,50 +27366,40 @@ D9{$A
 D9{$|
 D9{(~
 D;#unsigned short&H
-D;%Hr
-D;%[{long double
 D;)u"
 D;+u!
-D;-1ze
-D;-YB4
-D;-`FO
+D;-YW4
+D;-`[O
 D;... u 
 D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5'double;
-D;5,vN
-D;52C5
-D;54B,
-D;5=}8
-D;5@.__float128
-D;5ChA
-D;5F`>
-D;5Hic
-D;5J'=
-D;5Kw+
-D;5L	#
-D;5Q58
-D;5Vp;
-D;5XZ
-D;5aC,
-D;5cs@
-D;5ct,
-D;5h[
-D;5i:;
-D;5k	A
-D;5mu1
-D;5qZ
-D;5xx+
-D;5za>
-D;5|iA
+D;5&!;
+D;5'unsigned long long;
+D;5*.S
+D;5-J
+D;52X5
+D;54W,
+D;5@__float128complex 
+D;5C}A
+D;5Fu>
+D;5Ho
+D;5H}char
+D;5J<=
+D;5QJ8
+D;5R1>
+D;5aX,
+D;5hp
+D;5i!O
+D;5iO;
+D;5zsR
+D;5zv>
+D;5|~A
 D;8}D
-D;=2o@
-D;=6EO
-D;=Dk
-D;=pYC
-D;=wchar_t(=
+D;=6ZO
+D;=Y$
+D;=wchar_t==
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -27517,7 +27502,7 @@ D;~,|
 D< K9D, trK
 D<(K9D,(tnK
 D<PfA
-D=7Zz
+D=G]...
 DAMAGE_EVENTS_ONLY
 DAMAGE_NO
 DAMAGE_TYPES
@@ -29796,6 +29781,7 @@ EndSprite
 EndTime
 EndTouch
 Ended Debug History Dump of Category %double
+Enemy heroes nearer than this distance will poll for the TLK_ENEMY_NEARBY concept.
 Engine2
 EngineLoopState_t
 EngineServiceMgr001
@@ -35262,6 +35248,7 @@ IsSubtreeBalanced( node.Shallow() )
 IsSummoned
 IsSwap
 IsTailAlive
+IsTempestDoubleClonable
 IsText() && !ContainsCRLF()
 IsToggle
 IsTopLevel() == newAction->IsTopLevel()
@@ -35617,12 +35604,13 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L9599
-L95m9
-L95u}
+L959N
+L95W3z
+L95mN
 L98t"H
 L98t5H
 L98tY
+L9=a3
 L9` u	I
 L9h u
 L9p u
@@ -35717,8 +35705,9 @@ LaunchLootInitialHeight
 LayoutPositionType_e
 Lc1E9
 Lc2E1
-Lc5K/P
-Lc=w7!
+Lc5KCP
+Lc=signed char-	
+Lc=wL!
 LcGhf
 LcO,D
 LcOhf
@@ -37531,6 +37520,7 @@ Original Damage: %float
 Otfff.
 Other
 Other Players
+Other hero-talk vector on %short tried to track more than %double heroes! Hero greetings are broken now.
 Out of scope
 OutColor
 OutValue
@@ -41286,6 +41276,7 @@ T$tE1
 T,XH9
 T0xRAp
 T1wHc
+T5#double]
 TARARARARARARARC`
 TARBRB]ARBRAp
 TARBRD`
@@ -41701,6 +41692,7 @@ TLK_DOTA_DEATH
 TLK_DOTA_DEFEAT
 TLK_DOTA_DENY
 TLK_DOTA_EMOTE
+TLK_DOTA_ENEMY_NEARBY
 TLK_DOTA_FOLLOWUP_GENERIC
 TLK_DOTA_FOLLOWUP_NEGATIVE
 TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING
@@ -42943,7 +42935,9 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
-W%Ww&
+W%,5X
+W%Q3o
+W%gz&
 W(I94
 W0Lcs(G
 W8I94
@@ -43138,11 +43132,9 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%0Q_
-X%PO_
+X%%P_
+X%ve_
 X(A;X,uo
-X-tJE
-X5V<U
 X<[A^]
 XATAp
 XAxis
@@ -43182,12 +43174,9 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%$]signed char
-Y%)}r
-Y%<Zr
-Y%E~r
-Y%Zr
-Y5h-L
+Y%4`signed char
+Y%dng
+Y5x0L
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43312,7 +43301,6 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
-]%	`T
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -43367,11 +43355,11 @@ Zffffff.
 ]ARISAp
 ]ARIp
 ]ARJUAR0
-]ARJZ0
 ]ARJ`
 ]ARKp0p p
 ]ARLZBR0
 ]ARMp
+]ARNZ0
 ]ARNZBR0
 ]ARN`
 ]A]A]0
@@ -45389,7 +45377,7 @@ bool CDOTA_BaseNPC::CheckForCollisionsWithNPCs(const Vector &, CollisionResultLi
 bool CDOTA_BaseNPC::IsEnemyPriorityGreater(CDOTA_BaseNPC *, CDOTA_BaseNPC *)
 bool CDOTA_BaseNPC::IsInvisibleTo(CDOTA_BaseNPC *)
 bool CDOTA_BaseNPC::ShouldUseCollisionPaddingWithUnit(CDOTA_BaseNPC *)
-bool CDOTA_BaseNPC_Hero::CAllyTalk::SpeakToAlly(CDOTA_BaseNPC_Hero *, CDOTA_BaseNPC_Hero *)
+bool CDOTA_BaseNPC_Hero::COtherHeroTalk::SpeakToOtherHero(CDOTA_BaseNPC_Hero *, CDOTA_BaseNPC_Hero *)
 bool CDOTA_BaseNPC_Hero::CanFetchItemsFromStash(CUtlStringList &)
 bool CDOTA_Bot_Script::HasBlink(bool)
 bool CDOTA_Bot_Script::HasInvisibility(bool)
@@ -47550,6 +47538,7 @@ dota_speech_missinglane_call_threshold
 dota_speech_mute_time
 dota_speech_proximity_interval
 dota_speech_proximity_radius
+dota_speech_proximity_radius_enemy
 dota_speech_shop_dawdle_interval
 dota_speech_shop_enter_interval
 dota_speech_shopkeeper
@@ -53489,6 +53478,7 @@ m_bIsSprite
 m_bIsStableMode
 m_bIsStoreItem
 m_bIsSummoned
+m_bIsTempestDoubleClonable
 m_bIsTemporaryNight
 m_bIsTournament
 m_bIsTower
@@ -56838,7 +56828,6 @@ m_pCounter
 m_pCountryKeyValues
 m_pCurrentCommand
 m_pCurrentKeyFrame
-m_pCurrentObstruction != pNextObstruction
 m_pCustomData->m_vecEquipped[ int ].m_unEquippedClass != m_pCustomData->m_vecEquipped[ unsigned int ].m_unEquippedClass
 m_pCustomData->m_vecEquipped[ int ].m_unEquippedSlot != INVALID_EQUIPPED_SLOT
 m_pData
@@ -60616,6 +60605,7 @@ nb_warp_selected_here
 near_damage
 near_radius
 nearby_ally
+nearby_enemy
 nearz
 necro_gear1
 necrolyte_death_pulse
@@ -61588,7 +61578,6 @@ pAbilityParam->GetCaster() == this
 pAchievement
 pAchievement->GetComponentPrefix()
 pAggregate != NULL
-pAlly
 pAnim2
 pAnimating != NULL
 pArea
@@ -61863,6 +61852,7 @@ pOperator[0] == '-' && pOperator[1] == '-'
 pOrb2
 pOrigin
 pOriginal
+pOtherHero
 pOutFilter
 pOutInfo != NULL
 pOuter
@@ -65033,6 +65023,7 @@ scepter_bonus
 scepter_bounces
 scepter_buffer
 scepter_cooldown
+scepter_crit_bonus
 scepter_delay
 scepter_duration
 scepter_jumps
@@ -65381,6 +65372,7 @@ shoptype
 short
 short [A^]
 short fffff.
+short ffffff.
 short wchar_t%H
 short wchar_t&H
 short wchar_t(H
@@ -72382,7 +72374,7 @@ tN9D1
 tN9L:
 tN9T9
 tND9;L
-tND;5
+tND;5@
 tNL;long double
 tN~*C
 tO9D1
@@ -73207,6 +73199,7 @@ u*J9\)
 u+...)H
 u+...)I
 u+...)float
+u,...*1
 u,...*H
 u,fffff.
 u-...+H
@@ -73472,10 +73465,11 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
-unsigned __int128%,tJ
-unsigned __int128%7Ef
+unsigned __int128%<wJ
+unsigned __int128--{N
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
+unsigned char;55-
 unsigned char=unsigned short	H
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
@@ -73598,7 +73592,7 @@ unsigned short+(vTJ
 unsigned short+9D1
 unsigned short+9D2
 unsigned short+9L:
-unsigned short+;5E
+unsigned short+;55+
 unsigned short+B9D
 unsigned short+B9L
 unsigned short+H9z0u%H
@@ -73734,6 +73728,7 @@ unsigned short\9L0
 unsigned short]9D1
 unsigned short]9D:
 unsigned short]9L0
+unsigned short]B9D
 unsigned short]D9D
 unsigned short]Dk}
 unsigned short^9D1
@@ -74246,6 +74241,7 @@ virtual ServerClass *CDOTA_Ability_AncientApparition_IceBlast::GetServerClass()
 virtual ServerClass *CDOTA_Ability_AncientApparition_IceVortex::GetServerClass()
 virtual ServerClass *CDOTA_Ability_AntiMage_Blink::GetServerClass()
 virtual ServerClass *CDOTA_Ability_AntiMage_ManaVoid::GetServerClass()
+virtual ServerClass *CDOTA_Ability_AntiMage_SpellShield::GetServerClass()
 virtual ServerClass *CDOTA_Ability_ArcWarden_MagneticField::GetServerClass()
 virtual ServerClass *CDOTA_Ability_ArcWarden_SparkWraith::GetServerClass()
 virtual ServerClass *CDOTA_Ability_ArcWarden_TempestDouble::GetServerClass()

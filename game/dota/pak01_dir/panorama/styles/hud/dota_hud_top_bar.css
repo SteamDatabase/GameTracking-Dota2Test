@@ -705,7 +705,7 @@ DOTAUGCImage
      transition-timing-function: ease-in-out;
 }
 
-.AltPressed .TopBarHealthBar
+.AltPressed .TopBarHealthBar, .IsLocalPlayerSpectating .TopBarHealthBar
 {
     opacity: 1;
     transform: translateY( 12px );

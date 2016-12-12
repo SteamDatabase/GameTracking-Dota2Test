@@ -253,6 +253,7 @@ DOTAHud.IsBeforeGameplay #lower_hud
 .HIDE_ACTION_PANEL #debuffs,
 .HIDE_ACTION_PANEL #StatDrawerTopRight,
 .HIDE_ACTION_MINIMAP #minimap_block,
+.Reborn.CustomHUDSkin.HIDE_ACTION_MINIMAP #HUDSkinMinimap,
 .HIDE_ACTION_MINIMAP #GlyphScanContainer
 {
 	visibility: collapse;
@@ -1346,6 +1347,7 @@ DOTAHud.IsBeforeGameplay #lower_hud
 	horizontal-align: right;
 	vertical-align: bottom;
 	margin-bottom: 172px;
+	z-index: 8;
 }
 
 .HUDFlipped #shop

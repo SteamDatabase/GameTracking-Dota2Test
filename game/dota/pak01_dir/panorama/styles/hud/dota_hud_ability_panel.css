@@ -465,6 +465,10 @@ DOTAAbilityPanel.Hidden
 	width: 100%;
 	height: 100%;
 	background-color: #000000DD;
+
+	transition-property: clip;
+	transition-duration: 0.06s;
+	transition-timing-function: linear;
 }
 
 #InactiveOverlay
@@ -773,7 +777,7 @@ DOTAAbilityPanel.Hidden
 	width: 100%;
 	height: 100%;
 
-	opacity: 0;
+	opacity: 0.00001;
 	animation-name: none; 
 	animation-duration: 0.4s;	
 	animation-timing-function: ease-in-out;
@@ -790,13 +794,13 @@ DOTAAbilityPanel.Hidden
 	0%
 	{
 		transform: translateX(-32px) translateY(32px);
-		opacity: 1;
+		opacity: 1.0;
 	}
 
 	100%
 	{
 		transform: translateX(32px) translateY(-32px);
-		opacity: 1;
+		opacity: 1.0;
 	}
 }
 
