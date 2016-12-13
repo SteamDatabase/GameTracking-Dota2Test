@@ -371,7 +371,8 @@ DOTAQueryUnit.Hidden
 
 DOTAInventory
 {
-	width: 132px;
+	width: 133px;
+	height: 100%;
 	visibility: collapse;
     //margin-bottom: 4px;
 }
@@ -400,10 +401,10 @@ DOTAQueryUnit:not(.Hero) #StatBranchContainer
 
 .HUDFlipped #StatBranchContainer
 {
-    transform: scaleX(-1);
 	horizontal-align: right;
 	margin-right: 5px;
 	//flow-children: left;
+	background-image: url("s2r://panorama/images/hud/reborn/query_statbranch_gradient_hudflipped_psd.vtex");
 }
 
 #HeroViewButton,

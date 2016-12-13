@@ -4,7 +4,7 @@
 		<include src="s2r://panorama/styles/hudstyles.vcss_c" />
 		<include src="s2r://panorama/styles/hud/dota_hud_portrait.vcss_c" />
 	</styles>
-	<DOTAPortrait acceptsinput="true" >
+	<DOTAPortrait>
 		<Button id="InspectButton" class="PortraitButton" onactivate="DOTAHUDInspectClicked();" always-cache-composition-layer="true" />
 		<Button id="HeroViewButton" class="PortraitButton" onactivate="DOTAHUDHeroViewClicked();" always-cache-composition-layer="true" />
 	</DOTAPortrait>

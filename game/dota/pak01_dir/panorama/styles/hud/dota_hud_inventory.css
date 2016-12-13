@@ -51,14 +51,16 @@ DOTAInventory
 
 .Reborn #inventory_items
 {
-	margin-top: 4px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 	horizontal-align: center;
+	height: 100%;
+	horizontal-align: left;
 }
 
 .Reborn .QueryUnit #inventory_items
 {
-	flow-children: right;
+	flow-children: down;
 	margin-left: 0px;
 	margin-top: 0px;
 	horizontal-align: left;
@@ -67,7 +69,8 @@ DOTAInventory
 .Reborn .QueryUnit #inventory_list
 {
 	//max-width: 750px;
-	padding: 6px;
+	padding: 2px;
+	padding-bottom: 2px;
 }
 
 .QueryUnit #Backpack Label
@@ -90,7 +93,7 @@ DOTAInventory
 .QueryUnit .BackpackSlot
 {
 	margin-top: 5px;
-	width: 40px;
+	//width: 40px;
 	height: 20px;
 }
 
@@ -144,30 +147,28 @@ ClientUIDialogPanel #inventory_items
 {
 	width: 40px;
 	width: 47px;
+	width: fill-parent-flow( 1 );
 	height: 30px;
-	margin-right: 8px;
-	margin-top: 10px;
-	//border: 1px solid red;
+
+	//border: 1px solid #333;
+	vertical-align: middle;
 }
 
 #inventory_slot_6
 {
-
-	margin-left: 4px;
-	margin-right: 4px;
+	horizontal-align: left;
 }
 
 #inventory_slot_7
 {
-	margin-left: 4px;
-	margin-right: 4px;
+	horizontal-align: center;
 }
 
 #inventory_slot_8
 {
-	margin-left: 4px;
-	margin-right: 0px;
+	horizontal-align: right;
 }
+
 
 #inventory_slot_6 #ItemImage,
 #inventory_slot_7 #ItemImage,
@@ -188,7 +189,7 @@ ClientUIDialogPanel #inventory_items
 #HUDSkinInventoryBG
 {
 	width: 235px;
-	height: 275px;
+	height: 276px;
 	background-size: 100%;
 	vertical-align: bottom;
 	visibility: collapse;
@@ -203,4 +204,20 @@ ClientUIDialogPanel #inventory_items
 .Reborn.CustomHUDSkin #center_block #HUDSkinInventoryBG
 {
     visibility: visible;
+}
+
+
+#inventory_backpack_list
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+	padding-top: 6px;
+}
+
+#QueryUnit #inventory_backpack_list
+{
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
 }

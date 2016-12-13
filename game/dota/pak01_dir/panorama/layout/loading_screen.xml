@@ -15,7 +15,7 @@
 				<Panel id="LoadingScreenBattleCupWinnerContainer" />
 			</Panel>
 			<Panel class="ChatTipBox" hittest="false">
-				<DOTAChat id="LoadingScreenChat" chatstyle="hud" oncancel="SetInputFocus( LoadingScreenContent )" />
+				<DOTAChat id="LoadingScreenChat" chatstyle="hudpregame" oncancel="SetInputFocus( LoadingScreenContent )" />
 				<Label class="Tip" text="#LoadingScreen_TipText" />
 			</Panel>
 		</Panel>

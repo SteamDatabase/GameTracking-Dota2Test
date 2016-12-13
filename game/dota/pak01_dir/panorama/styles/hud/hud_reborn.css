@@ -6,6 +6,11 @@ DOTAHud
 	height: 100%;
 }
 
+.Hidden
+{
+	visibility: collapse;
+}
+
 DOTACustomUIRoot
 {
 	width: 100%;
@@ -275,7 +280,7 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #lower_hud
 	transition-duration: .32s;
 	transition-property: transform, pre-transform-scale2d;
 	transition-timing-function: ease-in-out;
-	animation-duration: 0.18s;
+	animation-duration: 0.181s;
 	animation-timing-function: linear;
 }
 
@@ -284,6 +289,10 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #lower_hud
 	animation-name: ScreenShake;
 }
 
+#center_block.UnitStunned.UnitMiniStunned
+{
+	animation-name: none;
+}
 
 @keyframes 'ScreenShake'
 {
@@ -294,13 +303,13 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #lower_hud
     }
     30%
     {
-        pre-transform-scale2d: 0.95;
-		transform: rotateZ(2deg) rotateX(-1deg) translateY(22px);
+        pre-transform-scale2d: 0.975;
+		transform: rotateZ(2deg) rotateX(-1deg) translateY(12px);
     }               
     60%
     {
-        pre-transform-scale2d: 0.95;
-		transform: rotateZ(-2deg) rotateX(1deg) translateY(16px);
+        pre-transform-scale2d: 0.975;
+		transform: rotateZ(-2deg) rotateX(1deg) translateY(7px);
     }               	
     100%
     {

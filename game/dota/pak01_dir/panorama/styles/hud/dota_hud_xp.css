@@ -104,12 +104,38 @@ DOTAXP
 	height:14px;
 	margin: 0px;
 	opacity: 0;
+	text-align: center;
 }
 
 .ShowLifetimeBar:not(.ShowXPBar) #LifetimeProgress
 {
 	opacity: 1.0;
 }
+
+.ShowLifetimeBar #LifetimeProgress
+{
+	opacity: 1.0;
+}
+
+.Reborn .ShowLifetimeBar #LevelLabel
+{
+	opacity: 0;
+}
+
+
+.Reborn .ShowLifetimeBar.ShowXPBar #CircularXPProgressBlur,
+.Reborn .ShowLifetimeBar.ShowXPBar #CircularXPProgress
+{
+	visibility: collapse;
+}
+
+.Reborn .ShowLifetimeBar.ShowXPBar #StatBranchChannel
+{
+	visibility: collapse;
+}
+
+
+
 
 //----------------------------------------------------------------------
 // Reborn HUD

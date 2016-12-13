@@ -504,12 +504,16 @@ DOTAHealthMana
 
 .Reborn .QueryUnit #HealthRegenLabel
 {
-	visibility: collapse;
+	font-size: 12px;
+    font-weight: normal;
+    margin-top: 0px;
 }
 
 .Reborn .QueryUnit #ManaRegenLabel
 {
-	visibility: collapse;
+	font-size: 12px;
+    font-weight: normal;
+    margin-top: 0px;
 }
 
 .Reborn .QueryUnit #DeathPanel

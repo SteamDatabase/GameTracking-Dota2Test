@@ -12,7 +12,7 @@
 		<ProgressBar id="XPProgress" onactivate="DOTAHUDXPBarClicked();" >
 			<Label id="XPLabel" text="#DOTA_Hud_XP" hittest="false" />
 		</ProgressBar>
-		<Label id="LifetimeLabel" text="#DOTA_Hud_Lifetime" hittest="false" />
+		<Label id="LifetimeLabel" class="MonoNumbersFont" text="#DOTA_Hud_Lifetime" hittest="false" />
 		<ProgressBar id="LifetimeProgress" class="MonoNumbersFont" hittest="false" />
 			
 	</DOTAXP>

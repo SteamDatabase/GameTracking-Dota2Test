@@ -401,6 +401,7 @@ DOTAChat.ChatExpanded #ParticipantArea
 {
     overflow: squish noclip;
     width: 100%;
+
 }
 
 #ChatLinesPanel 
@@ -413,6 +414,18 @@ DOTAChat.ChatExpanded #ParticipantArea
 
 	/* Reverse the transform done in #ChatLinesContainer so the text is rightside up */
     transform: scaleY( -1.0 );
+	
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0000 ), color-stop( 0.01, #0000 ), color-stop( 0.1, #0000 ), to( #0000 ) );
+	
+	
+	transition-property: background-color;
+	transition-duration: .23s;
+	transition-timing-function: ease-in-out;
+}
+
+#HudChat.Active #ChatLinesPanel 
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0000 ), color-stop( 0.01, #000a ), color-stop( 0.5, #000a ), to( #0000 ) );
 }
 
 #ChatLinesPanel VerticalScrollBar
@@ -1388,6 +1401,7 @@ DOTAChat#HudChat #ChatHeaderPanel
 
 	background-color: #00000000;
 	opacity-mask:none;
+	opacity-mask: url("s2r://panorama/images/masks/hudchat_mask_psd.vtex") 1.0;
 }
 
 DOTAChat#HudChat #ChatControls
@@ -1414,7 +1428,7 @@ DOTAChat#HudChat .ChatLine
 	max-width: 650px;
 	font-weight: bold;
 
-	text-shadow: 2px 2px 2px 1.5 #000000;
+	text-shadow: 1px 1.5px 1px 2 #000000;
 }
 
 DOTAChat#HudChat .ChatTarget
@@ -1434,18 +1448,20 @@ DOTAChat#HudChat .ChatPersona
 DOTAChat .ChatLine .HeroIcon
 {
 	width: 40px;
-	height: 24px;
+	height: 23px;
+
 	margin-bottom: -3px;
 	margin-top: 0px;
 	margin-bottom: -6px;
 	margin-right: 4px;
 	transform: translateY( 2px );
+	border: 1px solid black;
 }
 
 DOTAChat#HudChat .ChatLine.Expired
 {
 	transition-property: opacity!immediate;
-	transition-duration: 0.6s;
+	transition-duration: 0.3s;
 
 	opacity: 0;
 }
@@ -1458,10 +1474,14 @@ DOTAChat#HudChat.Active .ChatLine.Expired
 	opacity: 1;
 }
 
-DOTAChat#HudChat #ChatLinesContainer #VerticalScrollBar,
-DOTAChat#HudChat .ChatTimestamp
+DOTAChat#HudChat #ChatLinesContainer #VerticalScrollBar
 {
 	opacity: 0;
+}
+
+DOTAChat#HudChat .ChatTimestamp
+{
+    visibility: collapse;
 }
 
 DOTAChat#HudChat .PlayerColor0 { color: HeroSlot0Color; }
@@ -1497,7 +1517,8 @@ DOTAChat#HudChat .RuneBounty { color: RuneBountyColor; font-weight: bold; }
 DOTAChat#HudChat .GameAllChat,
 DOTAChat#HudChat .GameAlliesChat
 {
-	font-weight: bold;
+	//font-weight: bold;
+	letter-spacing: 1px;
 }
 
 DOTAChat#HudChat #ChatMissedContainer

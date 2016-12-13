@@ -2687,6 +2687,7 @@ $wDE1
 (%1.3f)
 (%2.2f - %2.2f - %2.2f)
 (%2.2f)
+(%Ah_
 (%__float128 %__float128 %__float128 %__float128)
 (%__float128 %__float128 %__float128)
 (%__float128 %__float128)
@@ -2702,6 +2703,8 @@ $wDE1
 (;T0(
 (;T1(H
 (;T1(}
+(=9)]
+(=L,]
 (A;] |
 (A;_ |
 (ACTIVE)
@@ -3174,18 +3177,16 @@ $wDE1
 -vscriptdebug
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.%#>U
-.%&"u
-.%:R/
-.%;HH
-.%U];
 .%llu
-.-L 2
-.-long long+:
+.-#	p
+.-+uR
+.-JbH
+.-_bU
 ...(;unsigned long long(H
 ...:K<!-- kv3 
 ...done!
-.=17=
+.5'.bool
+.=oAg
 .@(wSA
 .@,sT
 .@Ts|
@@ -3679,6 +3680,7 @@ $wDE1
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_solar_crest.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_tango.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_teleport_scroll.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_tome_of_knowledge.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_ultimate_scepter.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_urn_of_shadows.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/server_dota/release/osx64/../../../../game/shared/dota/items/dota_item_veil_of_discord.cpp
@@ -5063,7 +5065,6 @@ $wDE1
 00`00
 00`` p
 00p@@00P
-01		 2	
 0123456789abcdef
 08:0@6666@:J6
 0;0~tA
@@ -5435,6 +5436,7 @@ $wDE1
 1k_UnpackBundle_Failed_UnableToCreateContainedItem
 1sAL"
 1v1mid
+2		`3	
 2 .CBidirMsg_RelayInfo.Operation_t
 2 .CDOTAUserMsg_BoosterStatePlayer")
 2 .CMsgConnectedPlayers.SendReason
@@ -6361,7 +6363,7 @@ $wDE1
 @ConColorMsg(Color const&, char const*, ...)
 @ConMsg(char const*, ...)
 @D0uTH
-@D;5|
+@D;=,
 @DevMsg(char const*, ...)
 @DevWarning(char const*, ...)
 @E unsigned short*H
@@ -6841,16 +6843,16 @@ A$Hc{$1
 A+D$$
 A+D$$H
 A+D$$Hc
+A+D$$L
 A+D$$Lc
 A+D$,
+A+D$,A
 A+D$<A
 A+D$H~ D
 A+E$H
 A+E$Hc
-A+E$L
 A+E$Lc
 A+E(~
-A+E,A
 A+E`~ H
 A+F$H
 A+F$Hc
@@ -6911,10 +6913,10 @@ A+wp~%M
 A,LcK,1
 A9@0}6H
 A9D$(
+A9D$(|
 A9D$0
 A9D$0uUM
 A9D$x~
-A9E(|
 A9E0}6H
 A9F u
 A9F u)A
@@ -6965,7 +6967,7 @@ A9^$t$M
 A9^$|
 A9^(wchar_t*H
 A9^0t!M
-A9^ht7I
+A9^pt7I
 A9_$t$M
 A9_(wchar_t*H
 A9_(|
@@ -7047,6 +7049,8 @@ A;\$ u I
 A;\$ u-I
 A;\$ |
 A;\$ |*H
+A;\$$
+A;\$(
 A;\$(E
 A;\$(u
 A;\$(|
@@ -8867,7 +8871,7 @@ AUATAp
 AVATAp
 AVOID
 AVSHc
-AVSLc5
+AVSLc5b
 AVelocity: %.2f %.2f %.2f
 AWAVATS
 AWAVATS1
@@ -9622,7 +9626,7 @@ B(A;F
 B8Lcb
 B9D+0
 B9T0 D
-B9\8Tt;N
+B9\8\unsigned short;N
 B;L ,
 B;L0(
 B;\1,u
@@ -9792,7 +9796,7 @@ BRB`ZBRB`YARB`ZBRB`YARB`
 BRB`ZBRB`YARB`ZBRB`ZBRB`YARB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`
 BRB`ZBRB`YARB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`
 BRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`
-BRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`ZBRB`
+BRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`ZBRB`YARB`ZBRB`ZBRB`ZBRB`
 BRB`ZBRB`YARB`ZBRB`ZBRB`_AWAVBRB`
 BRB`ZBRB`YASATA`5Ap
 BRB`ZBRB`ZBRB`
@@ -10111,7 +10115,7 @@ C LcK
 C [A\A^A_]
 C [A^]
 C ffff.
-C#H9=short
+C#H9=
 C$ teH
 C$;CXuSL
 C$A;F$t(L
@@ -10166,7 +10170,7 @@ C8L;}
 C9D< tF
 C9T<$tPL
 C9T<(tPL
-C9\>ht<K
+C9\>pt<K
 C9t&(uJM
 C;<u
 C;D'p}2H
@@ -16039,6 +16043,7 @@ CDOTA_Modifier_Tiny_Avalanche_Stun
 CDOTA_Modifier_Tiny_CraggyExterior
 CDOTA_Modifier_Tiny_Grow
 CDOTA_Modifier_Tiny_Toss
+CDOTA_Modifier_Tome_Of_Knowledge
 CDOTA_Modifier_Tornado_Tempest
 CDOTA_Modifier_Tornado_Tempest_Debuff
 CDOTA_Modifier_Tower_Aura
@@ -19312,6 +19317,7 @@ CModifierFactory<CDOTA_Modifier_Tiny_Avalanche_Stun>
 CModifierFactory<CDOTA_Modifier_Tiny_CraggyExterior>
 CModifierFactory<CDOTA_Modifier_Tiny_Grow>
 CModifierFactory<CDOTA_Modifier_Tiny_Toss>
+CModifierFactory<CDOTA_Modifier_Tome_Of_Knowledge>
 CModifierFactory<CDOTA_Modifier_Tornado_Tempest>
 CModifierFactory<CDOTA_Modifier_Tornado_Tempest_Debuff>
 CModifierFactory<CDOTA_Modifier_Tower_Aura>
@@ -27292,9 +27298,8 @@ D$pD9h0t\I
 D$xA;D$`
 D$xLc
 D$|IcD$x
-D%[J)
+D%[Y)
 D%pD9
-D%}nz
 D)T@u
 D+ E1
 D+(E1
@@ -27306,14 +27311,15 @@ D+k,D
 D+k,H
 D+{$E
 D, fC
-D-6ez
+D-vtz
 D0 	L0
 D0,Ic
 D08	L0(D
 D3 B;T3 uP
 D3,Ic
 D4@L9
-D5,=*
+D5,L*
+D5Flz
 D8,fff.
 D8T@uqI9
 D9 tg
@@ -27323,6 +27329,7 @@ D9#unsigned short)H
 D9#unsigned short-A
 D9#unsigned short-H
 D9#uuHcC
+D9%-|C
 D9(te
 D9(ts
 D9(unsigned short"f.
@@ -27340,7 +27347,8 @@ D9;unsigned short&H
 D9;unsigned short)H
 D9;unsigned short+I
 D9<9u
-D9=$Tc
+D9=)[char
+D9=VM
 D9Q(}
 D9` short
 D9b@unsigned short<H
@@ -27381,7 +27389,7 @@ D9{$A
 D9{$|
 D9{(~
 D;#unsigned short&H
-D;%_&?
+D;%/:?
 D;)u"
 D;+u!
 D;... u 
@@ -27389,35 +27397,35 @@ D;0u8
 D;1u$
 D;3t&H
 D;3t*H
-D;5+_A
-D;53W
-D;59bO
-D;5:P+
-D;5;?
-D;5@WC
-D;5EI>
-D;5Fs>
-D;5I"<
-D;5L^#
-D;5N.+
-D;5O>1
-D;5P'
-D;5RA6
-D;5SX
-D;5[long long:
-D;5a`A
-D;5jJ>
-D;5kB6
-D;5n#<
-D;5tR0
-D;5tcO
-D;5v3
-D;5vY
-D;5{Y
+D;5	vO
+D;5 0<
+D;5 ;
+D;5"U6
+D;5#long
+D;5'('
+D;50sA
+D;51tA
+D;5:^>
+D;5;V6
+D;5>7<
+D;5Df0
+D;5DwO
+D;5FG
+D;5Fm
+D;5GEY
+D;5Km
+D;5T~;
+D;5V*%
+D;5XO0
+D;5]uA
+D;5^1<
+D;5in
+D;5pI1
+D;5q5;
+D;5zSS
 D;8}D
-D;=7~=
-D;=float&&
-D;=xLg
+D;=S{
+D;={|
 D;D7(u
 D;H(|
 D;I(|9L9
@@ -29226,12 +29234,13 @@ E9|$
 E9|$$
 E9|$(u
 E9|$(wchar_t*H
+E9|$,
+E9|$0}1
 E9|long long~
 E9|long long~nI
 E9|unsigned char
 E9} w31
 E9}0}1
-E9}0}:f.
 E9}H~X
 E9~,wchar_t*H
 E9~PtsE
@@ -29385,6 +29394,7 @@ E;|$
 E;|$ unsigned short%I
 E;|$ ~<
 E;|$(L
+E;|$,
 E;|$0
 E;|$0u I
 E;|$8u
@@ -30082,10 +30092,12 @@ F8Hcz81
 F9$1uSD9
 F9,0u<B
 F94(u
-F9D8|tVJ
-F9T8xtVJ
 F9d((tIJ
-F9d8HtCN
+F9d8PtCN
+F9t8<u
+F9t8@u!J
+F9t8Du!J
+F9t8Hu
 F9|(,tEN
 F9|3(u
 F;d18|
@@ -30353,7 +30365,6 @@ FeModel combiner: Too many ropes (%u) or links (%u): cannot fit sum in uint16
 Fetched %double bytes item schema version %08X via HTTP; update is queued.
 Fetching info about latest revision
 Ffff.
-Fh9Cht9H
 Field "
 Field "%short" of class "%short" cannot be labelled with MGenerateArrayKeynames if it is not signed char fixed array!
 Field "%short" of class "%short" cannot unserialized yet (lacking array support)!
@@ -30529,6 +30540,7 @@ Fixing player blocking train!
 FixupResourceName: Illegal full path passed in ("%short")!
 FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FizzThinH
+Fl9Clt9H
 FlIcFh
 Flag this unit as signed char champion creature.
 Flags
@@ -30655,7 +30667,6 @@ Frostivus.Item.Snowball.Cast
 Frostivus.Item.Snowball.Target
 Frostivus.Revive
 FrostyPointKV
-Ft9Ctt9H
 FtIcFp
 Ft[A^]
 FullObserverMove
@@ -32173,6 +32184,8 @@ H90t!L
 H91t8H
 H91tRH
 H92t	H
+H9=3C/
+H9=Yt2
 H9A@u
 H9B0u
 H9C unsigned short
@@ -32694,6 +32707,7 @@ Hero_DoomBringer.InfernalBlade.Target
 Hero_DoomBringer.ScorchedEarthAura
 Hero_DragonKnight.BreathFire
 Hero_DragonKnight.DragonTail.Cast
+Hero_DragonKnight.DragonTail.DragonFormCast
 Hero_DragonKnight.DragonTail.Target
 Hero_DragonKnight.ElderDragonForm
 Hero_DragonKnight.ElderDragonForm.Revert
@@ -33430,7 +33444,6 @@ Human
 HurtThinH
 HurtToucH
 Hurts the player.
-I		 J	
 I	F H
 I CUtlLinkedList<CBaseCombatWeapon *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CBaseCombatWeapon *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CBaseCombatWeapon *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CBaseCombatWeapon *, unsigned short>, unsigned short>]
 I CUtlLinkedList<CCoroutine, int, false, int, CUtlMemory<UtlLinkedListElem_t<CCoroutine, int>, int> >::AllocInternal(bool) [T = CCoroutine, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<CCoroutine, int>, int>]
@@ -35618,7 +35631,6 @@ L9 unsigned short*H
 L9#unsigned short)H
 L9(unsigned short'H
 L9)t3H
-L9-U,O
 L90t*H
 L90tXH
 L90tYH
@@ -35627,17 +35639,13 @@ L92tTH
 L93t#H
 L93t&H
 L93t*H
-L95%Cu
-L95'tz
-L95\unsigned shortimaginary 
-L95_$O
-L95d$`
-L95eO
+L95,[unsigned short
+L955c
+L95]unsigned char
 L98t"H
 L98t5H
 L98tY
-L9=A3O
-L9=t
+L9=vd
 L9` u	I
 L9h u
 L9p u
@@ -35730,10 +35738,9 @@ LaunchInternalProcess FAILED!
 LaunchLoot
 LaunchLootInitialHeight
 LayoutPositionType_e
+Lc%unsigned long~	
 Lc1E9
 Lc2E1
-Lc5;WP
-Lc=am	
 LcGhf
 LcO,D
 LcOhf
@@ -37761,7 +37768,7 @@ PR:SetPossibleHeroSelection %double:%short %short(%double)
 PR:SetRank %double:%short %double (%double)
 PR:SetSelectedHero %double:%short %short(%double)
 PR:SetSelectedHero called with bogus player id %double for hero %short, ignoring
-PR:SetSuggestedHeroSelection %double:%short %short(%double)
+PR:SetSuggestedHeroSelection %double:%short %double
 PR:SetTextChatBanned %double:%short %short
 PR:SetVoiceChatBanned %double:%short %short
 PRACTICE
@@ -41310,10 +41317,11 @@ T$8fffff.
 T$HE1
 T$hH9
 T$tE1
+T%:E=
 T,XH9
+T-U.u
 T0xRAp
 T1wHc
-T5#	&
 TARARARARARARARC`
 TARBRB]ARBRAp
 TARBRD`
@@ -41425,7 +41433,6 @@ TB`PATAp
 TB`ZATAp
 TB`ZBRB`ZBRB`ZBRB`ZBRB`YARB`
 TB`\AWBp
-TB`_ARB`ZBRB`
 TB`vATAp
 TBp p
 TCRARARARARARARARARARARARARARARARARARASATBp
@@ -41586,6 +41593,7 @@ TC`MATAp
 TC`RATAp
 TC`ZBRB`
 TC`ZBRB`YARB`ZBRB`
+TC`_ARB`ZBRB`
 TDRATBp
 TDSARBp
 TDSAp
@@ -42977,7 +42985,10 @@ VoteSystem
 VpropBreakablePartData_t
 Vulkan
 W$A+W Hc
+W%AGo
+W%l9X
 W(I94
+W-short[9
 W0Lcs(G
 W8I94
 W8IcL
@@ -43171,10 +43182,10 @@ WriteSBitLong: 0x%08x does not fit in %double bits
 WriteToBuffer Message %short is not initialized! Probably missing required fields!
 Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 Wrong alignment %double
-X%Pd_
-X%pb_
+X%6!unsigned long
+X%fy_
+X%unsigned short= 
 X(A;X,uo
-X-unsigned short|E
 X<[A^]
 XATAp
 XAxis
@@ -43214,11 +43225,9 @@ X[A\A]A^A_]
 X[A^A_]
 X[A^]
 XboxSystemInterface001
-Y%Rmr
-Y%W=Y
-Y%\mr
-Y-\'L
-Y5h_L
+Y%^>Y
+Y-10T
+Y56Iw
 Y?[A^]
 YARBYARBYARBYARBYARBYARAp
 YAYAYAYAYAYAYAYAYAYAp
@@ -43343,7 +43352,6 @@ Zffffff.
 ] A;]$ur
 ] Mc}@
 ] v1H
-]%ycT
 ]?CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot_Hero_Earthshaker>
 ]A;t$(u
 ]AR0xp
@@ -43395,12 +43403,12 @@ Zffffff.
 ]ARF`)ARAp
 ]ARGp
 ]ARGp(p
-]ARISAp
 ]ARIp
 ]ARJUAR0
 ]ARJ`
 ]ARKp0p p
 ]ARLZBR0
+]ARMSAp
 ]ARMp
 ]ARNZ0
 ]ARNZBR0
@@ -43453,6 +43461,7 @@ Zffffff.
 ^,A+^(~float restrict
 ^,A+^(~zffff.
 ^,A+^(~|ffffff.
+^-UbU
 ^0;^4uwL
 ^0A;^4ug
 ^0A;^4ukL
@@ -43746,6 +43755,7 @@ __float128 char::*(M
 __float128:l4d2,
 __gcc_except_tab__TEXT
 __got
+__int128		0o	
 __int128 * nBlockSize >= num
 __int128 < m_Vector.Count()
 __int128 E+__int128<
@@ -43803,6 +43813,7 @@ _fclose
 _female
 _feof
 _ferror
+_fff.
 _ffffff.
 _fflush
 _filter H
@@ -44051,7 +44062,6 @@ _wcslen
 `pp`p
 `ppp``
 `pt H
-`q		 r	
 `sA`%A[ASA`7F
 `unsigned char[A\A^A_]
 `xff.
@@ -47833,7 +47843,6 @@ eEvent == GCSDK::eSOCacheEvent_Subscribed || eEvent == GCSDK::eSOCacheEvent_Resu
 eFailure >= k_ECustomGameInstallStatus_FailedGeneric
 eFlag_InstantRerollUncompleted
 eFlag_QuestChallenge
-eHA9E$
 eKeypoints
 eLiteralHandType
 eLogicalHandType
@@ -48387,7 +48396,7 @@ extrapolated [1.0] (single sample)
 eycIc
 eyes_follow
 eyes_radius
-f$F9d8Lt@N
+f$F9d8Tt@N
 f0D9{(
 f0Mco0D
 f0[A\A^A_]
@@ -51851,6 +51860,7 @@ l$ E9
 l$0E;l$4ujA
 l$0Mc
 l$0ff.
+l$HA9D$$
 l$HE;l$Xu I
 l4 C;\40u$K
 l4d_airport05_runway
@@ -52235,7 +52245,7 @@ long long signed char::* view roll angle
 long long!IcN
 long long"A9^
 long long#D9{
-long long%9=bool
+long long%9=2
 long long'A9^
 long long*[A^]
 long long+A9^
@@ -59181,6 +59191,7 @@ modifier_item_sphere_target
 modifier_item_staff_of_wizardry
 modifier_item_stout_shield
 modifier_item_talisman_of_evasion
+modifier_item_tome_of_knowledge
 modifier_item_tranquil_boots
 modifier_item_tranquil_boots2
 modifier_item_tranquil_boots_heal
@@ -60299,6 +60310,7 @@ nPitch
 nPlanes
 nPlayerID
 nPlayerID < DOTA_MAX_TEAM_PLAYERS
+nPlayerID == -1 || pPlayer != nullptr
 nPlayerID >= 0 && nPlayerID < DOTA_MAX_PLAYERS
 nPlayerids_stick
 nPolys == 2
@@ -60398,6 +60410,7 @@ n_creep_SatyrSoulstealer.ManaBurn
 n_creep_SatyrTrickster.Purge
 n_creep_Spawnlord.Freeze
 n_creep_Spawnlord.Stomp
+n_creep_Thunderlizard_Big.Roar
 n_creep_Thunderlizard_Big.Stomp
 n_creep_TrollWarlord.Ensnare
 n_creep_TrollWarlord.RaiseDead
@@ -61931,6 +61944,7 @@ pPlaceDir
 pPlayer
 pPlayer != NULL
 pPlayer && "courier owner is signed char player entity"
+pPlayer == nullptr
 pPlayer->IsBot() || player == pPlayer
 pPlayerHost
 pPointEnt
@@ -61967,7 +61981,6 @@ pRet == pTypedRet
 pReturn
 pRole->m_PassengerSeats.IsValidIndex( nSeatIndex )
 pRule
-pS		0T	
 pSOCache
 pSOCache->BIsSubscribed()
 pSaveData->DefineSymbol( pszTokenList, int )
@@ -72427,7 +72440,7 @@ tN9D1
 tN9L:
 tN9T9
 tND9;L
-tND;5P
+tND;5
 tNL;long double
 tN~*C
 tO9D1
@@ -73269,13 +73282,13 @@ u0w*H
 u0z.H
 u0z.f
 u1D9t
+u1Kct
 u2A;]0u
 u2A;^(u
 u2D+P$A9
 u2D;}
 u2E;__float128
 u2E;~
-u2Ict
 u3D;unsigned long
 u4D;long double
 u4ff.
@@ -73517,7 +73530,7 @@ unsigned
 unsigned __int128 D;+D
 unsigned __int128 char::* I
 unsigned __int128 char::*,Ii
-unsigned __int128%WXf
+unsigned __int128%XkN
 unsigned __int128\P float
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char=unsigned short	H
@@ -73531,7 +73544,6 @@ unsigned int CUtlStringMap<CCustomGameEventManager::CCustomGameEventInfo *, CUtl
 unsigned int CUtlStringMap<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, CUtlSymbolTable>::Count() const [T = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<IModifierFactory *, CUtlSymbolTable>::Count() const [T = IModifierFactory *, SymbolTableType_t = CUtlSymbolTable]
 unsigned int CUtlStringMap<int, CUtlSymbolTable>::Count() const [T = int, SymbolTableType_t = CUtlSymbolTable]
-unsigned long long		...*	
 unsigned long long!Hc=
 unsigned long long;D;u
 unsigned long long<D;unsigned long
@@ -73606,6 +73618,7 @@ unsigned short'B9D
 unsigned short'B9D	
 unsigned short'B9L
 unsigned short'B9t
+unsigned short'D9t> u I
 unsigned short'D9|
 unsigned short'IcO,I
 unsigned short'[A\A^A_]
@@ -73615,7 +73628,6 @@ unsigned short(9D9
 unsigned short(9D:
 unsigned short(9L:
 unsigned short(B9L
-unsigned short(D9t> u!I
 unsigned short(fffff.
 unsigned short(ffffff.
 unsigned short)9D1
@@ -73643,7 +73655,6 @@ unsigned short+(vTJ
 unsigned short+9D1
 unsigned short+9D2
 unsigned short+9L:
-unsigned short+;5ej
 unsigned short+B9D
 unsigned short+B9L
 unsigned short+H9z0u%H
@@ -73752,7 +73763,7 @@ unsigned short=ffffff.
 unsigned short>0E1
 unsigned short>9D1
 unsigned short>9L:
-unsigned short>D;5
+unsigned short>D;5h+
 unsigned short>IcG
 unsigned short>fffff.
 unsigned short?9D1
@@ -74526,6 +74537,7 @@ virtual ServerClass *CDOTA_Ability_SandKing_BurrowStrike::GetServerClass()
 virtual ServerClass *CDOTA_Ability_SandKing_Epicenter::GetServerClass()
 virtual ServerClass *CDOTA_Ability_SandKing_SandStorm::GetServerClass()
 virtual ServerClass *CDOTA_Ability_SatyrTrickster_Purge::GetServerClass()
+virtual ServerClass *CDOTA_Ability_ShadowShaman_Shackles::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Shadow_Demon_Disruption::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Shadow_Demon_Shadow_Poison::GetServerClass()
 virtual ServerClass *CDOTA_Ability_Shadow_Demon_Soul_Catcher::GetServerClass()
@@ -74710,6 +74722,7 @@ virtual ServerClass *CDOTA_Item_Solar_Crest::GetServerClass()
 virtual ServerClass *CDOTA_Item_Tango::GetServerClass()
 virtual ServerClass *CDOTA_Item_Tango_Single::GetServerClass()
 virtual ServerClass *CDOTA_Item_TeleportScroll::GetServerClass()
+virtual ServerClass *CDOTA_Item_Tome_Of_Knowledge::GetServerClass()
 virtual ServerClass *CDOTA_Item_TranquilBoots2::GetServerClass()
 virtual ServerClass *CDOTA_Item_TranquilBoots::GetServerClass()
 virtual ServerClass *CDOTA_Item_UltimateScepter::GetServerClass()
@@ -76949,7 +76962,6 @@ void CNetworkArrayBase<int, 14, CDOTAGamerules::NetworkVar_m_CustomGameTeamMaxPl
 void CNetworkArrayBase<int, 2, CDOTAGamerules::NetworkVar_m_iCaptainPlayerIDs>::Set(int, const type &) [type = int, count = 2, Changer = CDOTAGamerules::NetworkVar_m_iCaptainPlayerIDs]
 void CNetworkArrayBase<int, 2, CDOTAGamerules::NetworkVar_m_nARDMHeroesRemaining>::Set(int, const type &) [type = int, count = 2, Changer = CDOTAGamerules::NetworkVar_m_nARDMHeroesRemaining]
 void CNetworkArrayBase<int, 2, CPropHMDAvatar::NetworkVar_m_hLogicalControllerSlots>::Set(int, const type &) [type = int, count = 2, Changer = CPropHMDAvatar::NetworkVar_m_hLogicalControllerSlots]
-void CNetworkArrayBase<int, 2, PlayerResourcePlayerTeamData_t::NetworkVar_m_nSuggestedHeroes>::Set(int, const type &) [type = int, count = 2, Changer = PlayerResourcePlayerTeamData_t::NetworkVar_m_nSuggestedHeroes]
 void CNetworkArrayBase<int, 24, CDOTA_DataSpectator::NetworkVar_m_iNetWorth>::Set(int, const type &) [type = int, count = 24, Changer = CDOTA_DataSpectator::NetworkVar_m_iNetWorth]
 void CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCoinReward>::Set(int, const type &) [type = int, count = 24, Changer = CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCoinReward]
 void CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCoinSplash>::Set(int, const type &) [type = int, count = 24, Changer = CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCoinSplash]
@@ -76959,6 +76971,7 @@ void CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChalle
 void CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeSequenceID>::Set(int, const type &) [type = int, count = 24, Changer = CIngameEvent_Base::NetworkVar_m_CompendiumChallengeSequenceID]
 void CNetworkArrayBase<int, 24, CIngameEvent_FM2015::NetworkVar_m_CompendiumCoinWager>::Set(int, const type &) [type = int, count = 24, Changer = CIngameEvent_FM2015::NetworkVar_m_CompendiumCoinWager]
 void CNetworkArrayBase<int, 24, CIngameEvent_FM2015::NetworkVar_m_CompendiumCoinWagerResults>::Set(int, const type &) [type = int, count = 24, Changer = CIngameEvent_FM2015::NetworkVar_m_CompendiumCoinWagerResults]
+void CNetworkArrayBase<int, 4, PlayerResourcePlayerTeamData_t::NetworkVar_m_nSuggestedHeroes>::Set(int, const type &) [type = int, count = 4, Changer = PlayerResourcePlayerTeamData_t::NetworkVar_m_nSuggestedHeroes]
 void CNetworkArrayBase<int, 64, CDOTASpectatorGraphManager::NetworkVar_m_rgDireNetWorth>::Set(int, const type &) [type = int, count = 64, Changer = CDOTASpectatorGraphManager::NetworkVar_m_rgDireNetWorth]
 void CNetworkArrayBase<int, 64, CDOTASpectatorGraphManager::NetworkVar_m_rgDireTotalEarnedGold>::Set(int, const type &) [type = int, count = 64, Changer = CDOTASpectatorGraphManager::NetworkVar_m_rgDireTotalEarnedGold]
 void CNetworkArrayBase<int, 64, CDOTASpectatorGraphManager::NetworkVar_m_rgDireTotalEarnedXP>::Set(int, const type &) [type = int, count = 64, Changer = CDOTASpectatorGraphManager::NetworkVar_m_rgDireTotalEarnedXP]
@@ -78187,6 +78200,7 @@ writeback_queue
 wrong submessage type
 wyvern_splinter_blast
 x$D9s
+x.9=long
 x3E9~
 x7A9D$x~0Hc
 x7A9Fx~1Hc
@@ -78220,6 +78234,7 @@ xp_delta
 xp_multiplier
 xp_per_min
 xp_per_minute
+xp_per_use
 xp_reward_details
 xqaBCFHTTFFFT
 xyA9^
