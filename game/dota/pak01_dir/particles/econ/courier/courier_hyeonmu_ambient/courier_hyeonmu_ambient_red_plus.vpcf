@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_hyeonmu_ambient/courier_hyeonmu_ambient_magic.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_hyeonmu_ambient/courier_hyeonmu_ambient_trail_wiggle_red.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_hyeonmu_ambient/courier_hyeonmu_ambient_trail_steam_red.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_hyeonmu_ambient/courier_hyeonmu_ambient_trail_rope_red.vpcf"
+		},
+	]
+}

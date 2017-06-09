@@ -1,0 +1,42 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_fire_lvl18.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_eye_lvl16.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_eye_lvl16.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_c_lvl18.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_wing_l_b_lvl20.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_wing_l_lvl20.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_eyes_lvl16.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_wing_r_b_lvl20.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_wing_r_lvl20.vpcf"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+			m_bSetOrientation = true
+		},
+	]
+}

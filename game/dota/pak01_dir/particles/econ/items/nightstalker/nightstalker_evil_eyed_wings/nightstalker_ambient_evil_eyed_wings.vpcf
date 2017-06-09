@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/nightstalker/nightstalker_evil_eyed_wings/nightstalker_ambient_evil_eyed_wings_controlpoints.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/nightstalker/nightstalker_evil_eyed_wings/nightstalker_ambient_evil_eyed_wings_embers.vpcf"
+			m_bDisableChild = true
+		},
+	]
+	m_ConstantColor = 
+	[
+		253,
+		4,
+		244,
+		255,
+	]
+	m_nMaxParticles = 0
+}

@@ -1,0 +1,28 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flNoDrawTimeToGoToSleep = 2.000000
+	m_bShouldSort = false
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetSingleControlPointPosition"
+			m_vecCP1Pos = 
+			[
+				40.000000,
+				37.000000,
+				30.000000,
+			]
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_weapon_dragon_axe/axe_dragon_axe_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_weapon_dragon_axe/axe_dragon_axe_glow.vpcf"
+		},
+	]
+}

@@ -1,0 +1,28 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_center.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_flek.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_steam.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_ember.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_battleranger/windrunner_battleranger_bow_ambient_v2_core.vpcf"
+		},
+	]
+}

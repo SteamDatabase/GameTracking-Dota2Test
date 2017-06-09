@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_shaman/shadow_shaman_spiteful/shadowshaman_stick_spite_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_shaman/shadow_shaman_spiteful/shadowshaman_stick_spite_head_rim.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_shaman/shadow_shaman_spiteful/shadowshaman_stick_spite_head_glow.vpcf"
+		},
+	]
+}

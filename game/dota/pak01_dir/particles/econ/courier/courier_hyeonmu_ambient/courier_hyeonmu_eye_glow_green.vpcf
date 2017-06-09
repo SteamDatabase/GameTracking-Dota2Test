@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_bSetOrientation = true
+			m_nNumControlPoints = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_hyeonmu_ambient/courier_hyeonmu_eye_glow_steam_green.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_hyeonmu_ambient/courier_hyeonmu_eye_glow_steam_green.vpcf"
+		},
+	]
+}

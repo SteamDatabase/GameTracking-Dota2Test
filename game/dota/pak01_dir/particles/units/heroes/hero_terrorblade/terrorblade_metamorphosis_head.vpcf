@@ -1,0 +1,28 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_bSetOrientation = true
+			m_nNumControlPoints = 3
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_terrorblade/terrorblade_ambient_eye_demon.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_terrorblade/terrorblade_ambient_eye_demon.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_terrorblade/terrorblade_ambient_mouth.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient_beams_b.vpcf"
+		},
+	]
+}

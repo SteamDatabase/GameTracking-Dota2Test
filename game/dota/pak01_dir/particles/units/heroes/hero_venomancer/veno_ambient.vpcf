@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 8
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_venomancer/portrait_veno_ambient_dripl.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_venomancer/portrait_veno_ambient_dripr.vpcf"
+		},
+	]
+}

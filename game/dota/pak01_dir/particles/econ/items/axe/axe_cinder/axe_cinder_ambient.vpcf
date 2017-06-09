@@ -1,0 +1,25 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_warp.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_edge.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_face.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_face_b.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

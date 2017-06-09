@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/mirana/mirana_darkfall_warden/mirana_darkfall_mount_eyes_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/mirana/mirana_darkfall_warden/mirana_darkfall_mount_eyes_b.vpcf"
+		},
+	]
+}

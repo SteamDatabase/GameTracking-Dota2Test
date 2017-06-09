@@ -1,0 +1,32 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_darken.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_top.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_ember.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_energy.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_flare.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_arcs.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/leshrac/leshrac_spirethorn/leshrac_spirethorn_staff_beams.vpcf"
+		},
+	]
+}

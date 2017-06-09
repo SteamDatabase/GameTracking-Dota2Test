@@ -1,0 +1,117 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetControlPointPositions"
+			m_Notes = "This sets the scale for the child fires"
+			m_nCP1 = 10
+			m_vecCP1Pos = 
+			[
+				0.600000,
+				0.000000,
+				0.000000,
+			]
+			m_nCP2 = 11
+			m_vecCP2Pos = 
+			[
+				0.800000,
+				0.000000,
+				0.000000,
+			]
+			m_nCP3 = 12
+			m_vecCP3Pos = 
+			[
+				1.000000,
+				0.000000,
+				0.000000,
+			]
+			m_nCP4 = 13
+			m_vecCP4Pos = 
+			[
+				1.100000,
+				0.000000,
+				0.000000,
+			]
+			m_bUseWorldLocation = true
+		},
+		{
+			_class = "C_OP_SetControlPointPositions"
+			m_Notes = "This sets the scale for the child fires"
+			m_nCP1 = 14
+			m_vecCP1Pos = 
+			[
+				0.600000,
+				0.000000,
+				0.000000,
+			]
+			m_nCP2 = 15
+			m_vecCP2Pos = 
+			[
+				0.800000,
+				0.000000,
+				0.000000,
+			]
+			m_nCP3 = 16
+			m_vecCP3Pos = 
+			[
+				1.000000,
+				0.000000,
+				0.000000,
+			]
+			m_nCP4 = 17
+			m_vecCP4Pos = 
+			[
+				1.100000,
+				0.000000,
+				0.000000,
+			]
+			m_bUseWorldLocation = true
+		},
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_Notes = "This sets positions for the child fires from attachments"
+			m_nNumControlPoints = 8
+			m_bSetOrientation = true
+		},
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_Notes = "This redirects the scales in CP's to the same CP per child"
+			m_nChildControlPoint = 1
+			m_nNumControlPoints = 8
+			m_nFirstSourcePoint = 10
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/doom/doom_baphomet_set/doom_skullwing_smoke.vpcf"
+		},
+	]
+}

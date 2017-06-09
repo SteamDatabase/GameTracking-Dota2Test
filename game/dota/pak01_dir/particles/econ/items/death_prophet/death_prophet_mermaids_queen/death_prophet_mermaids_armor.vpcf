@@ -1,0 +1,13 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/death_prophet/death_prophet_mermaids_queen/death_prophet_mermaids_armor_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/death_prophet/death_prophet_mermaids_queen/death_prophet_mermaids_armor_r.vpcf"
+		},
+	]
+}

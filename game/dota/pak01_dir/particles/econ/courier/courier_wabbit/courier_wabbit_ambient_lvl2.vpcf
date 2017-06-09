@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_body_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_tail_trail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_scroll_lvl2_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_salve_lvl2_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_salve_lvl2_magic_trail.vpcf"
+		},
+	]
+}

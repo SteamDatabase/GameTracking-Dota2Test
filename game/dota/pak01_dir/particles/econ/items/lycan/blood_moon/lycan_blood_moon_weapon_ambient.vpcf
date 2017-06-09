@@ -1,0 +1,35 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nChildControlPoint = 10
+			m_nNumControlPoints = 6
+			m_nFirstSourcePoint = 1
+			m_bSetOrientation = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_weapon_ambient_blade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_weapon_ambient_blade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_weapon_ambient_blade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_weapon_ambient_blade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_weapon_ambient_blade.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_weapon_ambient_blade.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

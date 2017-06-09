@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_howling_wind/drow_weapon_eyes_howling_wind_glow_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_howling_wind/drow_weapon_eyes_howling_wind_glow_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_howling_wind/drow_weapon_eyes_howling_wind_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_howling_wind/drow_weapon_eyes_howling_wind_b.vpcf"
+		},
+	]
+}

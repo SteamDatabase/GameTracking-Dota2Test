@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_weapon_wyvernguard_edge/axe_weapon_glow_wyvernguard_edge_eye_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_weapon_wyvernguard_edge/axe_weapon_glow_wyvernguard_edge_eye_r.vpcf"
+		},
+	]
+}

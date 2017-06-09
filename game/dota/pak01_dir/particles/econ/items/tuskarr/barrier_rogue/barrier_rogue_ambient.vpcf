@@ -1,0 +1,55 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 64
+	m_nInitialParticles = 1
+	m_ConstantColor = 
+	[
+		165,
+		98,
+		21,
+		255,
+	]
+	m_ConstantNormal = 
+	[
+		1.000000,
+		2.000000,
+		1.000000,
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetSingleControlPointPosition"
+			m_vecCP1Pos = 
+			[
+				28.000000,
+				8.000000,
+				-9.000000,
+			]
+			m_nHeadLocation = 4
+			m_nCP1 = 5
+		},
+		{
+			_class = "C_OP_SetSingleControlPointPosition"
+			m_nCP1 = 6
+			m_vecCP1Pos = 
+			[
+				0.000000,
+				-20.000000,
+				-28.000000,
+			]
+			m_nHeadLocation = 4
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_nControlPointNumber = 4
+		},
+		{
+			_class = "C_INIT_RemapInitialCPDirectionToRotation"
+			m_nCP = 4
+		},
+	]
+}

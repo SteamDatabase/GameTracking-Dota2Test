@@ -1,0 +1,57 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		{
+			_class = "C_OP_Decay"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_CreateWithinSphere"
+		},
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 1.000000
+			m_fLifetimeMax = 1.000000
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 1
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderTreeShake"
+			m_flTransitionTime = 0.200000
+			m_flShakeDuration = 2.000000
+			m_flOpStartFadeInTime = 0.000000
+			m_flOpEndFadeInTime = 0.000000
+			m_flOpStartFadeOutTime = 0.000000
+			m_flOpEndFadeOutTime = 0.000000
+			m_flOpFadeOscillatePeriod = 0.000000
+			m_flOpTimeOffsetMin = 0.000000
+			m_flOpTimeOffsetMax = 0.000000
+			m_nOpTimeOffsetSeed = 0
+			m_nOpStrengthScaleSeed = 0
+			m_flOpStrengthMinScale = 1.000000
+			m_flOpStrengthMaxScale = 1.000000
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.000000
+			m_flOpTimeScaleMax = 1.000000
+			m_bDisableOperator = false
+			m_nOpEndCapState = -1
+			m_nOpScaleCP = -1
+			m_Notes = ""
+		},
+	]
+	m_nMaxParticles = 1
+}

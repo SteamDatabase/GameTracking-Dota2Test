@@ -1,0 +1,26 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_gold_mid_streak.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_gold_ambient_eyes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_gold_top_streak.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_gold_mid_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_gold_ambient_energy.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_gold_ambient_magic.vpcf"
+		},
+	]
+}

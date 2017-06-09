@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/clockwerk/clockwerk_paraflare/clockwerk_paraflare_ambient_burner.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/clockwerk/clockwerk_paraflare/clockwerk_paraflare_front_ambient.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/clockwerk/clockwerk_paraflare/clockwerk_paraflare_ambient_lights.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/clockwerk/clockwerk_paraflare/clockwerk_paraflare_ambient_fire.vpcf"
+		},
+	]
+}

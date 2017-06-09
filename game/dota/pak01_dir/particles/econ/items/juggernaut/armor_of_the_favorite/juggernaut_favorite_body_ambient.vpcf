@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/juggernaut/armor_of_the_favorite/juggernaut_favorite_body_ambient_belt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/juggernaut/armor_of_the_favorite/juggernaut_favorite_body_ambient_back.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/juggernaut/armor_of_the_favorite/juggernaut_favorite_body_back_power_cent.vpcf"
+		},
+	]
+	m_nMaxParticles = 1
+}

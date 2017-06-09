@@ -1,0 +1,26 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_dpits3/drow_bowstring_a_glow_dpits3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_dpits3/drow_bowstring_b_glow_dpits3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_dpits3/drow_bowstring_a_dpits3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_dpits3/drow_bowstring_b_dpits3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_dpits3/drow_bowstring_a_end_dpits3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_dpits3/drow_bowstring_b_end_dpits3.vpcf"
+		},
+	]
+}

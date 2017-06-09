@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/death_prophet/death_prophet_mermaids_queen/death_prophet_mermaids_head_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/death_prophet/death_prophet_mermaids_queen/death_prophet_mermaids_head_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/death_prophet/death_prophet_mermaids_queen/death_prophet_mermaids_head_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/death_prophet/death_prophet_mermaids_queen/death_prophet_mermaids_head_e.vpcf"
+		},
+	]
+}

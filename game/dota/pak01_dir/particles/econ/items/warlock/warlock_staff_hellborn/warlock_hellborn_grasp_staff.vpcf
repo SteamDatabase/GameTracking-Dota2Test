@@ -1,0 +1,32 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_pnt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_ember.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_energy.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_flame.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_light.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/warlock/warlock_staff_hellborn/warlock_hellborn_grasp_staff_distort.vpcf"
+		},
+	]
+}

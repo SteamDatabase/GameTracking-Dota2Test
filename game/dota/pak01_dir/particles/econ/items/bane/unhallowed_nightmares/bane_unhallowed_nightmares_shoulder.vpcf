@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nChildControlPoint = 10
+			m_nNumControlPoints = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/bane/unhallowed_nightmares/bane_unhallowed_nightmares_shoulder_orb.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/bane/unhallowed_nightmares/bane_unhallowed_nightmares_shoulder_orb.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

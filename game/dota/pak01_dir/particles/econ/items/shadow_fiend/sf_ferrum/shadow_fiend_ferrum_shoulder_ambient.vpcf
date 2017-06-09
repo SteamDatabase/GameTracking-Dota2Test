@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_fiend/sf_ferrum/shadow_fiend_ferrum_shoulder_top_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_fiend/sf_ferrum/shadow_fiend_ferrum_shoulder_top_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_fiend/sf_ferrum/shadow_fiend_ferrum_shoulder_bot_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_fiend/sf_ferrum/shadow_fiend_ferrum_shoulder_bot_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shadow_fiend/sf_ferrum/shadow_fiend_ferrum_shoulder_ambient_arcs.vpcf"
+		},
+	]
+}

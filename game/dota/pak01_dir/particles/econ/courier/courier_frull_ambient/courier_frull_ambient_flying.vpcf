@@ -1,0 +1,23 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_frull_ambient/courier_frull_ambient_pot_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_frull_ambient/courier_frull_ambient_pot_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_frull_ambient/courier_frull_ambient_tent_flare.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_frull_ambient/courier_frull_ambient_magic_flying.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_frull_ambient/courier_frull_ambient_dust_flying.vpcf"
+		},
+	]
+}

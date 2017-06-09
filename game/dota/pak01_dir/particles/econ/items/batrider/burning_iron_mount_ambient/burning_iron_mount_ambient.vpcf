@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/batrider/burning_iron_mount_ambient/burning_iron_mount_ambient_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/batrider/burning_iron_mount_ambient/burning_iron_mount_ambient_a.vpcf"
+		},
+	]
+}

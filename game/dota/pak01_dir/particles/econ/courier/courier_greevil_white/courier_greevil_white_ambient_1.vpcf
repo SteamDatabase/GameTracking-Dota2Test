@@ -1,0 +1,33 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flMaxRecreationTime = -1.000000
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetRandomControlPointPosition"
+			m_flReRandomRate = 0.050000
+			m_bUseWorldLocation = true
+			m_vecCPMaxPos = 
+			[
+				180.000000,
+				180.000000,
+				180.000000,
+			]
+			m_vecCPMinPos = 
+			[
+				-64.000000,
+				-64.000000,
+				-64.000000,
+			]
+			m_nCP1 = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_greevil_generic/courier_greevil_body_generic.vpcf"
+		},
+	]
+}

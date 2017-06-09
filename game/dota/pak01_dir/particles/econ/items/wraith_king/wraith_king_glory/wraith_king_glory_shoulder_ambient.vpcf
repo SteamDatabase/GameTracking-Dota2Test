@@ -1,0 +1,13 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/wraith_king/wraith_king_glory/wraith_king_glory_shoulder_ambient_trace.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/wraith_king/wraith_king_glory/wraith_king_glory_shoulder_ambient_gem.vpcf"
+		},
+	]
+}

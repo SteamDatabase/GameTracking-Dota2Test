@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_bSetOrientation = true
+			m_nNumControlPoints = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_eye_glow_02/courier_eye_glow_02a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_eye_glow_02/courier_eye_glow_02a.vpcf"
+		},
+	]
+}

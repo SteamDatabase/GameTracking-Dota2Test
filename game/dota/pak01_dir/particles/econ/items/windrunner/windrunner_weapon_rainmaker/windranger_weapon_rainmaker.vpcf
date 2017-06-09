@@ -1,0 +1,15 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flMaxRecreationTime = -1.000000
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_weapon_rainmaker/windranger_weapon_rainmaker_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/windrunner/windrunner_weapon_rainmaker/windranger_weapon_rainmaker_b.vpcf"
+		},
+	]
+}

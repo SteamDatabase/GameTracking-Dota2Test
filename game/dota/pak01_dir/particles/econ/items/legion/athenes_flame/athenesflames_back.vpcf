@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_back_left_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_back_right_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_back_left_ember.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_back_right_ember.vpcf"
+			m_bDisableChild = true
+		},
+	]
+	m_nMaxParticles = 0
+}

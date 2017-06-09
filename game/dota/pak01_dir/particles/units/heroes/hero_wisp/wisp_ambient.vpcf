@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_wisp/wisp_ambient_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_wisp/wisp_ambient_heart.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_wisp/wisp_ambient_f.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_wisp/wisp_ambient_hurt.vpcf"
+		},
+	]
+	m_flCullRadius = 150.000000
+}

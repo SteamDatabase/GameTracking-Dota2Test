@@ -1,0 +1,30 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_pink_ambient_eye_lvl10.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_pink_ambient_eye_lvl10.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_blue_ambient_eyes_lvl10.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_pink_ambient_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_onibi/courier_onibi_pink_ambient_c.vpcf"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+			m_bSetOrientation = true
+		},
+	]
+}

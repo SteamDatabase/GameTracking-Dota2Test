@@ -1,0 +1,13 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/winter_wyvern/pleiades/wyvern_pleiades_ambient_horn.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/winter_wyvern/pleiades/wyvern_pleiades_ambient_eyes.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

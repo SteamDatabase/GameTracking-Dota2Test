@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_belt_ambient_glyph.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_belt_ambient_glyph.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_belt_ambient_glyph.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_belt_ambient_glow.vpcf"
+		},
+	]
+}

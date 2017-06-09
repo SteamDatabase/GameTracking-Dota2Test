@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/omniknight/omni_sacred_light_head/omni_ambient_sacred_light_gem_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/omniknight/omni_sacred_light_head/omni_ambient_sacred_light_gem_rays.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/omniknight/omni_sacred_light_head/omni_ambient_sacred_light_halo_ring.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

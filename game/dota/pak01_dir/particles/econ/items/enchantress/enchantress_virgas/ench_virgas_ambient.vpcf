@@ -1,0 +1,31 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_red_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_red_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_orange_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_yellow_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_orange_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_yellow_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_core.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enchantress/enchantress_virgas/ench_virgas_ambient_b.vpcf"
+		},
+	]
+}

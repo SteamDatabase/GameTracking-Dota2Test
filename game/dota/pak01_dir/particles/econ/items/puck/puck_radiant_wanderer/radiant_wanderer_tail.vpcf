@@ -1,0 +1,60 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wandered_back_l_wing.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_orb.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wandered_tail_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wandered_back_r_wing.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_sparks.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_orb_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_rope_a.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_rope_b.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_rope_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_rope_ringlet_l.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/puck/puck_radiant_wanderer/radiant_wanderer_tail_contour.vpcf"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetControlPointFromObjectScale"
+			m_nCPOutput = 5
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_PositionWarp"
+			m_nScaleControlPointNumber = 5
+		},
+	]
+	m_nSnapshotControlPoint = 6
+	m_pszSnapshotName = "particles/models/items/puck/radiant_wanderer_tail/radiant_wanderer_tail_model_fx.psf"
+}

@@ -1,0 +1,28 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_vapor.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_thrust.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_plasma_burst.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_thrust_ember.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_steam_core.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_steam.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/shredder/timber_controlled_burn/timber_controlled_burn_ambient_thrust_light.vpcf"
+		},
+	]
+}

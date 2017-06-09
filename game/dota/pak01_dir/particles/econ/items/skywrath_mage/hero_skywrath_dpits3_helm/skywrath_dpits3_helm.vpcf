@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flConstantRadius = 0.900000
+	m_ConstantColor = 
+	[
+		62,
+		225,
+		255,
+		255,
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/skywrath_mage/hero_skywrath_dpits3_helm/skywrath_dpits3_helm_main.vpcf"
+		},
+	]
+}

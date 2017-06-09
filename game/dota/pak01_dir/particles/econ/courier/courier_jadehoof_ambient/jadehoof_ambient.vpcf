@@ -1,0 +1,38 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_RemapSpeedtoCP"
+			m_nOutControlPointNumber = 8
+			m_flInputMax = 16.000000
+			m_flInputMin = 16.000000
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_ambient_eyes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_tail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_feet_effects_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_special_blossoms.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_feet_effects_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_feet_effects.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_jadehoof_ambient/jadehoof_body_ambient.vpcf"
+		},
+	]
+}

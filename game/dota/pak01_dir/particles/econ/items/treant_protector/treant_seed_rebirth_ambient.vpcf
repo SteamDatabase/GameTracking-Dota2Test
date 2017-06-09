@@ -1,0 +1,31 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_trail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_l_shoulder_seeds.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_l_shoulder_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_r_shoulder_seeds.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_seed_line.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_l_sparks.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/treant_protector/treant_seed_rebirth_ambient_r_sparks.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

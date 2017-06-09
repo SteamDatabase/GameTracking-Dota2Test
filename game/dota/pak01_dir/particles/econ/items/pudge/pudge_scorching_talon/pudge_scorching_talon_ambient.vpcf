@@ -1,0 +1,13 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_pszSnapshotName = "particles/models/items/pudge/scorching_talon/pudge_scorching_talon_part.psf"
+	m_nSnapshotControlPoint = 6
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_scorching_talon/pudge_scorching_talon_fire.vpcf"
+		},
+	]
+}

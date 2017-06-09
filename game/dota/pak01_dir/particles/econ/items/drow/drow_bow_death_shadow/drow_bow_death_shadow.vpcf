@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_death_shadow/drow_death_shadow_flare.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_bow_death_shadow/drow_death_shadow_flare.vpcf"
+		},
+	]
+}

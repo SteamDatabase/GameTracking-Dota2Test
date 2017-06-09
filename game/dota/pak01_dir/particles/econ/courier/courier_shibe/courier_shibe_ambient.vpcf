@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_shibe/courier_shibe_ambient_salve_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_shibe/courier_shibe_ambient_glow_soft.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_shibe/courier_shibe_ambient_glow_soft_b.vpcf"
+		},
+	]
+}

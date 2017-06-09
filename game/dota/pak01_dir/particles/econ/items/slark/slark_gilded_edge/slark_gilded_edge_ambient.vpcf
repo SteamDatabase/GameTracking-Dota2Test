@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/slark/slark_gilded_edge/slark_gilded_edge_blade_ambient.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/slark/slark_gilded_edge/slark_gilded_edge_gem_ambient.vpcf"
+		},
+	]
+}

@@ -1,0 +1,61 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/dark_seer/dark_seer_tactician/dark_seer_tactician_back_ring.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dark_seer/dark_seer_tactician/dark_seer_tactician_back_rays.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dark_seer/dark_seer_tactician/dark_seer_tactician_back_ropes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dark_seer/dark_seer_tactician/dark_seer_tactician_back_ropes_debris.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/dark_seer/dark_seer_tactician/dark_seer_tactician_back_flare.vpcf"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetControlPointPositions"
+			m_vecCP1Pos = 
+			[
+				5.000000,
+				0.000000,
+				10.000000,
+			]
+			m_vecCP2Pos = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			m_vecCP3Pos = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			m_vecCP4Pos = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		{
+			_class = "C_OP_SetControlPointOrientation"
+			m_vecRotation = 
+			[
+				-50.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+	]
+}

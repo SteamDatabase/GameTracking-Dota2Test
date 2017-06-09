@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/storm_spirit/storm_spirit_tormenta_armor/storm_spirit_tormenta_ambient_back.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/storm_spirit/storm_spirit_tormenta_armor/storm_spirit_tormenta_ambient_front.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/storm_spirit/storm_spirit_tormenta_armor/storm_spirit_tormenta_ambient_cuff.vpcf"
+		},
+	]
+	m_nMaxParticles = 1
+}

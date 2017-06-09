@@ -1,0 +1,34 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 6
+			m_bSetOrientation = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/tinker_bots_ambient_side.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/tinker_bots_ambient_side.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/tinker_bots_ambient_front.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/tinker_bots_ambient_front.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/tinker_bots_ambient_back.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/tinker_bots_ambient_back.vpcf"
+		},
+	]
+}

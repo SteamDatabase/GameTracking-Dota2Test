@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/centaur/centaur_ti6_gold/centaur_ti6_ambient_gold_eyes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/centaur/centaur_ti6_gold/centaur_ti6_ambient_gold_horn.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/centaur/centaur_ti6_gold/centaur_ti6_ambient_gold_shoulders.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/centaur/centaur_ti6_gold/centaur_ti6_ambient_gold_shoulders_r.vpcf"
+		},
+	]
+}

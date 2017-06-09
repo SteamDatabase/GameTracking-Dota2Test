@@ -1,0 +1,17 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/mirana/mirana_starstorm_bow/mirana_bowstring_starstorm_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/mirana/mirana_starstorm_bow/mirana_bowstring_starstorm_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/mirana/mirana_starstorm_bow/mirana_bow_starstorm.vpcf"
+		},
+	]
+}

@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6/drow_ti6_ambient_shoulder.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6/drow_ti6_ambient_shoulder_2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6/drow_ti6_ambient_shoulder_3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6/drow_ti6_ambient_shoulder_4.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6/drow_ti6_ambient_shoulder_5.vpcf"
+		},
+	]
+}

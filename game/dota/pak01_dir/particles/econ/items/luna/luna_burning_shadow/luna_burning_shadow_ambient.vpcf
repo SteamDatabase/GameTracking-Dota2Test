@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nSnapshotControlPoint = 6
+	m_pszSnapshotName = "particles/models/items/luna/the_burning_shadow_head/the_burning_shadow_head_model_fx.psf"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/luna/luna_burning_shadow/luna_burning_shadow_ambient_rays.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/luna/luna_burning_shadow/luna_burning_shadow_ambient_bloom.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/luna/luna_burning_shadow/luna_burning_shadow_ambient_outer_sparks.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/luna/luna_burning_shadow/luna_burning_shadow_ambient_outer_heat_glow.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

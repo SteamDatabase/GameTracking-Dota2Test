@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_oracle/oracle_ambient_gem.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_oracle/oracle_ambient_gem_light.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_oracle/oracle_ambient_ball.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_oracle/oracle_ambient_body.vpcf"
+		},
+	]
+}

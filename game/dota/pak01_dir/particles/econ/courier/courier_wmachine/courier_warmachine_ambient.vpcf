@@ -1,0 +1,27 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 3
+			m_bSetOrientation = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wmachine/courier_warmachine_ambient_a.vpcf"
+		},
+		{
+			m_flDelay = 0.500000
+			m_ChildRef = resource:"particles/econ/courier/courier_wmachine/courier_warmachine_ambient_a.vpcf"
+		},
+		{
+			m_flDelay = 0.900000
+			m_ChildRef = resource:"particles/econ/courier/courier_wmachine/courier_warmachine_ambient_a.vpcf"
+		},
+	]
+}

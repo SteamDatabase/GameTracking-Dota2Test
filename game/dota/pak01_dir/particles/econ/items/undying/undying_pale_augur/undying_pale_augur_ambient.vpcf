@@ -1,0 +1,24 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_flConstantRadius = 50.000000
+	m_flConstantLifespan = 0.500000
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_pale_augur/undying_pale_augur_ambient_grubs.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_pale_augur/undying_pale_augur_ambient_swirl.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_pale_augur/undying_pale_augur_ambient_segment_ray.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_pale_augur/undying_pale_augur_ambient_segment_ray_mid.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_pale_augur/undying_pale_augur_ambient_segment_mid_glow.vpcf"
+		},
+	]
+}

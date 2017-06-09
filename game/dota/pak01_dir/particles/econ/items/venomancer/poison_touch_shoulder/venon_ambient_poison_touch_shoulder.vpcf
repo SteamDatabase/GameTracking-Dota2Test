@@ -1,0 +1,18 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_pszSnapshotName = "particles/models/items/venomancer/poison_touch_shoulder/poison_touch_model_fx.psf"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/poison_touch_shoulder/venon_ambient_poison_touch_shoulder_outline.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/poison_touch_shoulder/venon_ambient_poison_touch_shoulder_wings.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/poison_touch_shoulder/venon_ambient_poison_touch_shoulder_sparks.vpcf"
+		},
+	]
+	m_nSnapshotControlPoint = 6
+	m_nMaxParticles = 0
+}

@@ -1,0 +1,17 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_siren/siren_ambient_trail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_siren/siren_ambient_lamp.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_siren/siren_ambient_lamp_portrait.vpcf"
+		},
+	]
+}

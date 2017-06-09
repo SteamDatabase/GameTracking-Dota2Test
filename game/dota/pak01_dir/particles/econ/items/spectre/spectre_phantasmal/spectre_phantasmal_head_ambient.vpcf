@@ -1,0 +1,25 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flConstantRadius = 0.900000
+	m_ConstantColor = 
+	[
+		62,
+		225,
+		255,
+		255,
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_phantasmal/spectre_phantasmal_head_ambient_pnt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_phantasmal/spectre_phantasmal_head_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_phantasmal/spectre_phantasmal_head_ambient_ember.vpcf"
+		},
+	]
+}

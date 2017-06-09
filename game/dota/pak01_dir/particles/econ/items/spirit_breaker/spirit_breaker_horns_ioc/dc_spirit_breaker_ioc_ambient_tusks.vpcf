@@ -1,0 +1,13 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/spirit_breaker/spirit_breaker_horns_ioc/dc_spirit_breaker_ioc_ambient_tusks_left.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spirit_breaker/spirit_breaker_horns_ioc/dc_spirit_breaker_ioc_ambient_tusks_right.vpcf"
+		},
+	]
+}

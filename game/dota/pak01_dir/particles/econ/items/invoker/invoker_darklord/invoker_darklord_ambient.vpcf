@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_darklord/invoker_darklord_ambient_gem_front.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_darklord/invoker_darklord_ambient_gem_back.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_darklord/invoker_darklord_ambient_trace.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_darklord/invoker_darklord_ambient_trace_r.vpcf"
+		},
+	]
+}

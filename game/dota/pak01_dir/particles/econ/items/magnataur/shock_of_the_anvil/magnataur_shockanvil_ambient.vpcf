@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_ambient_energy_balls.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_ambient_energy_wave.vpcf"
+		},
+	]
+}

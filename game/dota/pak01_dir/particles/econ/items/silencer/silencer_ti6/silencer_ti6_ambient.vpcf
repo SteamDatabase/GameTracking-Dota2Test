@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/silencer/silencer_ti6/silencer_ti6_ambient_eyes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/silencer/silencer_ti6/silencer_ti6_ambient_head_dark.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/silencer/silencer_ti6/silencer_ti6_ambient_head_steam.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/silencer/silencer_ti6/silencer_ti6_ambient_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/silencer/silencer_ti6/silencer_ti6_ambient_ember.vpcf"
+		},
+	]
+}

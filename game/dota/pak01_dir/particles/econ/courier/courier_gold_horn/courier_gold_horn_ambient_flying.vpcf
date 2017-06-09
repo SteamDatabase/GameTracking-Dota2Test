@@ -1,0 +1,26 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_RemapSpeedtoCP"
+			m_flInputMin = 16.000000
+			m_flInputMax = 16.000000
+			m_nOutControlPointNumber = 8
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_gold_horn/courier_gold_horn_ambient_eyes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_gold_horn/courier_gold_horn_body_ambient.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_gold_horn/courier_gold_horn_ambient_feather.vpcf"
+		},
+	]
+}

@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_minipudge/courier_minipudge_rot_body.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_minipudge/courier_minipudge_drag_dirt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_minipudge/courier_minipudge_dust.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_minipudge/courier_minipudge_ambient_flies.vpcf"
+		},
+	]
+}

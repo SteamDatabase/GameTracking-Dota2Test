@@ -1,0 +1,21 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+			m_bSetOrientation = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/antimage/antimage_weapon_godeater/antimage_godeater_bracer_ambient_flare.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/antimage/antimage_weapon_godeater/antimage_godeater_bracer_ambient_flare.vpcf"
+		},
+	]
+}

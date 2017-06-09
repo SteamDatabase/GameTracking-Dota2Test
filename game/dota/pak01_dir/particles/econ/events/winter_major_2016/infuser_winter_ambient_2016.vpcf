@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/events/winter_major_2016/infuser_winter_ambient_2016_magic.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/winter_major_2016/infuser_winter_ambient_2016_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/winter_major_2016/infuser_winter_ambient_2016_shine.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/winter_major_2016/infuser_winter_ambient_2016_twinkle.vpcf"
+		},
+	]
+}

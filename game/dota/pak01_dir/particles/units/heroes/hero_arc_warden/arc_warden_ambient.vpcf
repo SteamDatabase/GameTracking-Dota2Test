@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_arc_warden/arc_warden_head_ambient_plasma.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_arc_warden/arc_warden_ambient_head.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_arc_warden/arc_warden_ambient_body.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_arc_warden/arc_warden_eyes.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

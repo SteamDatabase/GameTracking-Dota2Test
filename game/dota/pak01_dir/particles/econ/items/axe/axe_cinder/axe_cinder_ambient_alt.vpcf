@@ -1,0 +1,37 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_warp.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_edge_alt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_face_alt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_face_b_alt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_shoulder_l_alt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_shoulder_l_b_alt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_shoulder_r_alt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/axe/axe_cinder/axe_cinder_ambient_shoulder_r_b_alt.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

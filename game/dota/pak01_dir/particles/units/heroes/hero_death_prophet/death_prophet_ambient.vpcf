@@ -1,0 +1,38 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_BoundingBoxMin = 
+	[
+		-50.000000,
+		-50.000000,
+		-50.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		50.000000,
+		50.000000,
+		50.000000,
+	]
+	m_flConstantRadius = 300.000000
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+			m_nFirstSourcePoint = 1
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_ambient_hand.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_ambient_hand.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_death_prophet/death_prophet_ambient_glow_ground2.vpcf"
+		},
+	]
+}

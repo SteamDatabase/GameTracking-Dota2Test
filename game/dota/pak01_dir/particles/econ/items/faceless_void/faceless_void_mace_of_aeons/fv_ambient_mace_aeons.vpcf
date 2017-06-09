@@ -1,0 +1,45 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flConstantRadius = 6.000000
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_plate1.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_plate2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_plate3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_i.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_h.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_e.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_g.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_f.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void_mace_of_aeons/fv_ambient_mace_aeons_glint.vpcf"
+		},
+	]
+}

@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_weapon_ember_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_weapon_ember_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_weapon_haze_a.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/legion/athenes_flame/athenesflames_weapon_haze_b.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

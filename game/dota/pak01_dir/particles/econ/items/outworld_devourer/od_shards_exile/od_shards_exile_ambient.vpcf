@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/outworld_devourer/od_shards_exile/od_shards_exile_ambient_root1.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/outworld_devourer/od_shards_exile/od_shards_exile_ambient_root2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/outworld_devourer/od_shards_exile/od_shards_exile_ambient_root3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/outworld_devourer/od_shards_exile/od_shards_exile_staff.vpcf"
+		},
+	]
+}

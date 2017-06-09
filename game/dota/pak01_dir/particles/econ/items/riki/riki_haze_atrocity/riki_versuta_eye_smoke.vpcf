@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 32
+	m_flConstantRadius = 10.000000
+	m_bShouldSort = false
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/riki/riki_haze_atrocity/riki_versuta_red_eye_r_parent.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/riki/riki_haze_atrocity/riki_versuta_red_eye_l_parent.vpcf"
+		},
+	]
+}

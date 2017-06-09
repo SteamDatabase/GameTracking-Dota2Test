@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flMaxRecreationTime = -1.000000
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_terrorblade/terrorblade_ambient_sword_workshop_right_a.vpcf"
+		},
+	]
+	m_nSnapshotControlPoint = 6
+	m_pszSnapshotName = "particles/models/heroes/terrorblade/weapon.psf"
+}

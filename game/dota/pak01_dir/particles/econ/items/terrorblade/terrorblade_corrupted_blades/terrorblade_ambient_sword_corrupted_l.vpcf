@@ -1,0 +1,13 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_nCullControlPoint = -5
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/terrorblade/terrorblade_corrupted_blades/terrorblade_ambient_sword_corrupted_glow_l.vpcf"
+		},
+	]
+	m_pszSnapshotName = "particles\models\items\terrorblade\corrupted_weapons\corrupted_weapons_fx.psf"
+}

@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_pszSnapshotName = "particles/models/items/nightstalker/black_nihility/black_nihility_back_fx.psf"
+	m_nSnapshotControlPoint = 6
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/nightstalker/nightstalker_black_nihility/nightstalker_black_nihility_ambient_wing_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/nightstalker/nightstalker_black_nihility/nightstalker_black_nihility_ambient_wing_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/nightstalker/nightstalker_black_nihility/nightstalker_black_nihility_ambient_wing_trail_pnt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/nightstalker/nightstalker_black_nihility/nightstalker_black_nihility_ambient_wing_glow.vpcf"
+		},
+	]
+}

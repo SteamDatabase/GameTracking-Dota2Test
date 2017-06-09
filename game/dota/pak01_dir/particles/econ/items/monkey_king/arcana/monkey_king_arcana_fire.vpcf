@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/monkey_king/arcana/monkey_king_arcana_fire_body.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/monkey_king/arcana/monkey_king_arcana_fire_hands_left.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/monkey_king/arcana/monkey_king_arcana_fire_hands_right.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/monkey_king/arcana/monkey_king_arcana_fire_body_flareout.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/monkey_king/arcana/fire/mk_arcana_fire_eyes.vpcf"
+		},
+	]
+}

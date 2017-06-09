@@ -1,0 +1,12 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_nSnapshotControlPoint = 6
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/tidehunter/tidehunter_ancient_leviathan/tide_ancient_leviathan_ambient_warp.vpcf"
+		},
+	]
+}

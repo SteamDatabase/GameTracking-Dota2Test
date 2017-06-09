@@ -1,0 +1,24 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flMaxRecreationTime = -1.000000
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_elder_legs_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_elder_legs_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_elder_hand_l.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_elder_hand_r.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_elder_ambient_skined.vpcf"
+		},
+	]
+}

@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 30
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 2
+			m_bSetOrientation = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/chaos_knight/chaos_knight_diabolic_aspect/chaos_knight_diabolic_aspect_ambient_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/chaos_knight/chaos_knight_diabolic_aspect/chaos_knight_diabolic_aspect_ambient_smoke.vpcf"
+		},
+	]
+}

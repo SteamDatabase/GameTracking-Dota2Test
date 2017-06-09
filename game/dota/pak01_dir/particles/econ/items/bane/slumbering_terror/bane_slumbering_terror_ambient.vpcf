@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/bane/slumbering_terror/bane_slumbering_terror_ambient_right.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/bane/slumbering_terror/bane_slumbering_terror_ambient_left.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/bane/slumbering_terror/bane_slumbering_ambient_glows_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/bane/slumbering_terror/bane_slumbering_ambient_glows.vpcf"
+		},
+	]
+	m_nSnapshotControlPoint = 13
+	m_pszSnapshotName = "particles/models/items/bane/slumbering_terror/slumbering_terror.psf"
+}

@@ -1,0 +1,32 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_ambient_feet.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_ambient_feet_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_ambient_feet_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_ambient_mist_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_ambient_mist.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_eyes.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_ambient_feet_e.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_abaddon/abaddon_mount_feet_effects.vpcf"
+		},
+	]
+}

@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_scourge/undying_scourge_golem_head_ambient.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_scourge/undying_scourge_golem_armor_ambient.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_scourge/undying_scourge_golem_arm_ambient.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_scourge/undying_scourge_golem_ambient_light.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/undying/undying_scourge/undying_scourge_golem_ambient_gut_splash.vpcf"
+		},
+	]
+}

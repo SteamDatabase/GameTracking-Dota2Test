@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_shapeshift_ambient_blades.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_shapeshift_ambient_mist.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_shapeshift_ambient_eyes.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

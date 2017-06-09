@@ -93,10 +93,13 @@
 ]
 
 
-@PointClass light() base(light_base, light_base_legacy_params) editormodel("models/editor/sun") global( sun ) = light_directional : "A directional light source."
+@PointClass light() base(light_base, light_base_legacy_params) editormodel("models/editor/sun") global( sun ) bakeskylight( skycolor, skyintensity, lower_hemisphere_is_black ) = light_environment :  "Sets the color and angle of the light from the sun and sky."
 [
 	numcascades(integer) : "Cascade Count" : 3 : "Number of shadow cascades to use."
-	angulardiameter(float) : "Light diameter" : "0.5" : "The size of the light source in degrees"
+	angulardiameter(float) : "SunSpreadAngle" : "5.0" : "The angular extent of the sun for casting soft shadows. Higher numbers are more diffuse. 5 is a good starting value."
+	skycolor(color255) : "Sky Color" : "255 255 255"
+	skyintensity(float) : "Sky Intensity" : "1.0"
+	lower_hemisphere_is_black(boolean) : "Lower Hemisphere Is Black" : "1"
 ]
 
 
@@ -151,16 +154,6 @@
 	autogen_irrads_softness(float) : "Soft Overlap of Auto-Generated Irradiance Volumes" : "256.0"
 	autogen_irrads_fademindist(float) : "Start Fade Dist of Auto-Generated Irradiance Volumes" : "1024.0"
 	autogen_irrads_fadeaxdist(float) : "End Fade Dist of Auto-Generated Irradiance Volumes" : "1536.0"
-]
-
-
-@PointClass base(Targetname, Parentname) editormodel("models/editor/sky_helper") global( sky ) skybox() = env_sky : 
-	"Controls the sky."
-[
-	skyname(resource:material) report : "Sky Material" : "materials/dev/default_sky.vmat"
-	lightoverride(boolean) : "Override Lighting" : 0 : "Override sky lighting with a constant"
-	lightoverride_color(color255) : "Override Light Color" : "255 255 255" : "Override sky lighting with a constant"
-	lightoverride_brightness(float) : "Override Light Brightness" : "1.0" : "Override sky lighting with a constant"
 ]
 
 
@@ -930,43 +923,5 @@
 	""
 [
 	script(string) : "Script" : "env_time_of_day" : ""
-]
-
-
-//-------------------------------------------------------------------------
-//
-// Cube map sample
-//
-//-------------------------------------------------------------------------
-@PointClass base( Targetname ) editormodel("models/editor/env_cubemap") leansphere(influenceradius,128,128,255) cubemap() = env_cubemap : 
-	"An entity that creates a sample point for the Cubic Environment Map."
-[
-	//cubemapsize(choices) : "Cubemap Size" : 0 =
-	//[
-	//	0 : "Default"
-	//	1 : "1x1"
-	//	2 : "2x2"
-	//	3 : "4x4"
-	//	4 : "8x8"
-	//	5 : "16x16"
-	//	6 : "32x32"
-	//	7 : "64x64"
-	//	8 : "128x128"
-	//	9 : "256x256"
-	//]
-
-	influenceradius(float) : "Influence Radius" : "512.0" : "The radius of influence for this cubemap"
-	overridetexture(string) : "Override Texture" : "" : "Name of the texture to use as an override"
-	
-	//sides(sidelist) : "Brush faces": : "(Optional) Brushes faces to directly attach to the env_cubemap. Press Pick then click on faces in the 3D View to select them. Use CTRL while clicking to add or remove from the selection."
-]
-
-@PointClass base( Targetname ) editormodel("models/editor/env_cubemap") orientedwirebox(boxproject_mins,boxproject_maxs) cubemap() = env_cubemap_box : 
-	"An entity that creates a sample point for the Cubic Environment Map."
-[
-	boxproject_mins(vector) : "Mins" : "-100 -100 -100"
-	boxproject_maxs(vector) : "Maxs" : "100 100 100"
-	influenceradius(float) : "Influence Radius" : "512.0" : "The radius of influence for this cubemap"
-	overridetexture(string) : "Override Texture" : "" : "Name of the texture to use as an override"
 ]
 

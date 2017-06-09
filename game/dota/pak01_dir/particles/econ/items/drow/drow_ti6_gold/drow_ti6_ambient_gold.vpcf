@@ -1,0 +1,22 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6_gold/drow_ti6_ambient_gold_shoulder.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6_gold/drow_ti6_ambient_gold_shoulder_2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6_gold/drow_ti6_ambient_gold_shoulder_3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6_gold/drow_ti6_ambient_gold_shoulder_4.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_ti6_gold/drow_ti6_ambient_gold_shoulder_5.vpcf"
+		},
+	]
+}

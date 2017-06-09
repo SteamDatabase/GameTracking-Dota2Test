@@ -1,0 +1,26 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/bloodseeker/bloodseeker_relentless_hunter/bloodseeker_relentless_hunter_ambient_eye.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/bloodseeker/bloodseeker_relentless_hunter/bloodseeker_relentless_hunter_ambient_eye.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/bloodseeker/bloodseeker_relentless_hunter/bloodseeker_relentless_hunter_ambient_trails.vpcf"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nChildControlPoint = 8
+			m_nNumControlPoints = 2
+			m_nFirstSourcePoint = 1
+			m_bSetOrientation = true
+		},
+	]
+	m_nMaxParticles = 0
+}

@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_pszSnapshotName = "particles/models/items/razor/razor_helmet_blade/razor_helmet_blade.psf"
+	m_nSnapshotControlPoint = 6
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/razor/razor_punctured_crest_golden/razor_helmet_blade_ambient_a_golden.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/razor/razor_punctured_crest_golden/razor_helmet_blade_ambient_l_a_golden.vpcf"
+		},
+	]
+}

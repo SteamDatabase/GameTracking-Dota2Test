@@ -1,0 +1,14 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/enigma/enigma_world_chasm/enigma_world_chasm_ambient_part.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/enigma/enigma_world_chasm/enigma_world_chasm_stars.vpcf"
+		},
+	]
+}

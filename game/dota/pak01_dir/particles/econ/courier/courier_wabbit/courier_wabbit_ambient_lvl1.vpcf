@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_scroll_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_salveglow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_wabbit/courier_wabbit_ambient_salvemagic_trail.vpcf"
+		},
+	]
+}

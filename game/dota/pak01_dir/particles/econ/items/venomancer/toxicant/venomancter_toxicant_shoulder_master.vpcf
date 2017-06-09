@@ -1,0 +1,25 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/venomancter_toxicant_shoulder_r_2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/venomancter_toxicant_shoulder_r_3.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/venomancter_toxicant_shoulder_r_1.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/venomancter_toxicant_shoulder_l_1.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/venomancter_toxicant_shoulder_l_2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/venomancter_toxicant_shoulder_l_3.vpcf"
+		},
+	]
+	m_nMaxParticles = 1
+}

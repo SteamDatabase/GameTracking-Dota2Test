@@ -1,0 +1,19 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/meepo/meepo_meepalot/meepo_meepalot_sword_ambient_contour.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/meepo/meepo_meepalot/meepo_meepalot_sword_ambient_trail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/meepo/meepo_meepalot/meepo_meepalot_sword_ambient_gems.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/meepo/meepo_meepalot/meepo_meepalot_sword_ambient_fracture.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

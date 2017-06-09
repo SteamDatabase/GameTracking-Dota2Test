@@ -1,0 +1,25 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_bSetOrientation = true
+			m_nFirstSourcePoint = 2
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_arvalias_legacy/drow_bowstring_arvalias_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_arvalias_legacy/drow_bowstring_arvalias_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/drow/drow_arvalias_legacy/drow_weapon_arvalias.vpcf"
+		},
+	]
+}

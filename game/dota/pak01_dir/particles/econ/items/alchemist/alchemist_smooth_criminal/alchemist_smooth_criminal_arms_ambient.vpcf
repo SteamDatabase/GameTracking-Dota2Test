@@ -1,0 +1,24 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_arms_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_arms_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_arms_ambient_glow.vpcf"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_SetParentControlPointsToChildCP"
+			m_nNumControlPoints = 3
+			m_bSetOrientation = true
+		},
+	]
+}

@@ -1,0 +1,16 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/riki/riki_immortal_ti6/riki_immortal_ti6_ambient_gold_trail_l_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/riki/riki_immortal_ti6/riki_immortal_ti6_ambient_gold_trail_r_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/riki/riki_immortal_ti6/riki_immortal_ti6_ambient_gold_blade_r.vpcf"
+		},
+	]
+}

@@ -1,0 +1,20 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_seekling_gold/courier_seekling_gold_ambient_magic.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_seekling_gold/courier_seekling_gold_ambient_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_seekling_gold/courier_seekling_gold_ambient_shine.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_seekling_gold/courier_seekling_gold_ambient_twinkle.vpcf"
+		},
+	]
+}

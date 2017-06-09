@@ -1,0 +1,28 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_flame_drips.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_smoke_color.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_flame_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_flame_core.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_flame.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/alchemist/alchemist_smooth_criminal/alchemist_smooth_criminal_offhand_ambient_core.vpcf"
+		},
+	]
+}

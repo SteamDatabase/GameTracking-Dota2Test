@@ -1,0 +1,41 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_warp.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_trail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_trail_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_trail_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_trail_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_trail_e.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_trail_f.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_ink.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_ink_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_ink_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_oculopus/courier_oculopus_ambient_drops.vpcf"
+		},
+	]
+}

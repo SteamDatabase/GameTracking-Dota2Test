@@ -1,0 +1,37 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal/pudge_ti6_ambient_drip_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal/pudge_ti6_ambient_puddle.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal/pudge_ti6_ambient_rings.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal/pudge_ti6_ambient_ripple.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal/pudge_ti6_ambient_water.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal_gold/pudge_ti6_ambient_gold_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal_gold/pudge_ti6_ambient_gold_magic.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal_gold/pudge_ti6_ambient_gold_shine.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal_gold/pudge_ti6_ambient_gold_twinkle.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/pudge/pudge_ti6_immortal_gold/pudge_ti6_ambient_trace_gold.vpcf"
+		},
+	]
+}

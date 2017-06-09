@@ -1,0 +1,26 @@
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_puddle.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_puddle_dark.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_bubble.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_water.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_coins.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/courier/courier_flopjaw/courier_flopjaw_ambient_trail.vpcf"
+		},
+	]
+}
