@@ -195,15 +195,15 @@ $ffffff.
 *** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(181): __int128 noexcept'unsigned short call VfxInit() more than once!
 *** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(190): g_pFullFileSystem must be set up before calling VfxInit!
 *** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(191): g_pFullFileSystem must be set up before calling VfxInit!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5026): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5176): Error opening include file in features list"%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5215): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5444): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5478): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5517): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5621): Error opening file "%short"!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6075): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
-*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6076): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5029): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5179): Error opening include file in features list"%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5218): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5447): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5481): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5520): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(5624): Error opening file "%short"!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6078): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
+*** /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6079): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!
 *** A dynamic combo in %short doesn'unsigned short start with "D_"! Aborting shader compile!
 *** A feature in %short doesn'unsigned short start with "F_"! Aborting shader compile!
 *** A static combo in %short doesn'unsigned short start with "S_"! Aborting shader compile!
@@ -464,11 +464,11 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(3506): Error! Ref count !=0 for static combo data cache entry!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(3593): Error! Ref count !=0 for static combo data cache entry!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6747): Error opening file %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6821): VCS %short Unserialize failed
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6835): VCS %short Unserialize hit EOF
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6973): Error opening file %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6980): Error calling SkipAndValidateVCSHeader() for %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6750): Error opening file %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6824): VCS %short Unserialize failed
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6838): VCS %short Unserialize hit EOF
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6976): Error opening file %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_common.cpp(6983): Error calling SkipAndValidateVCSHeader() for %short
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_helpers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vfx/vfx_compile_target_expr.cpp(106): : Failed to create lexer from "%short"
@@ -783,7 +783,7 @@ A9^$|
 A9^,~
 A9^8w*H
 A9_8w*H
-A;APuv
+A;AHuv
 A;F(u]M
 A;F,H
 A;G@ujA
@@ -1178,13 +1178,7 @@ D$,	A
 D$.!A
 D$0Ic
 D$0fB
-D$@;C@u=A
-D$D;CDu3A
-D$H;CHu)A
-D$L;CLu
 D$XF;unsigned short(
-D'@A;A@
-D'DA;AD
 D.@C;D,@u/K
 D1 Jc
 D15S1
@@ -1202,6 +1196,8 @@ D9sXu
 D;0u(H
 D;bhu
 D;xHu@
+D<`A;A`
+D<hA;Ah
 D=`fD
 D=`fE
 DATAL
@@ -1322,9 +1318,13 @@ G$IcO
 G0I;G8
 G0[A\A^A_]
 G8H	p(]
+G@;C@u>A
 GAMEROOT
+GD;CDu5A
+GH;CHu,A
 GHA;E
 GHC;D.
+GL;CLu#A
 GP;FP
 GZL;unsigned long
 GameResourceServiceClientV001
@@ -1650,6 +1650,7 @@ PanoramaUIClient001
 PanoramaUIEngine001
 Parser encountered %int errors parsing compile targets expression "%short"
 ParticleSystemMgr002
+Pffff.
 Pffffff.
 PhL;u
 Physics2 Interface Old v0.5

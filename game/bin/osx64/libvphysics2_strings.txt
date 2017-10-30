@@ -839,7 +839,7 @@ $fffff.
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
-A Icp
+A Icr
 A LcK 1
 A#D$ 1
 A#D$ =
@@ -1016,7 +1016,7 @@ ATCRAp
 ATTACHMENT_INFLUENCE_FLAGS_NONE
 ATTACHMENT_INFLUENCE_FLAGS_ROOT_TRANSFORM
 AUATAp
-AVSLc5b
+AVSLc5R
 AWAVATS
 AWAVATSA
 AWAVATSH
@@ -1387,7 +1387,7 @@ CMaterialDrawDescriptor
 CMemberFunctor1<CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16ul>, CRnWorld::UpdateContactsParallel(CContactArray&)::$_2, EmptySequentialFunctor_t, 1>*, void (CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16ul>, CRnWorld::UpdateContactsParallel(CContactArray&)::$_2, EmptySequentialFunctor_t, 1>::*)(CPostUpdateContacts*), CPostUpdateContacts*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor1<CRnBody*, void (CRnBody::*)(float), float, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMessageSender::~CMessageSender()
-CMicroProfiler &PhysicsStats_t<43>::operator[](int) [nCount = 43]
+CMicroProfiler &PhysicsStats_t<44>::operator[](int) [nCount = 44]
 CMorphConstraint
 CNameIndex
 CO@t6H
@@ -3486,7 +3486,7 @@ ProxyCount
 PullKinematicTransformsWorker
 PullKinematicTransformsWorker_PerWorld_Deprecated
 PushDynamicTransformsWorker
-Q IcX
+Q Icr
 QAngle
 QAngle RnSoftbodyRefl_t::m_vSimAngles
 QUAT_ORTHOTWIST_JOINT
@@ -4396,6 +4396,8 @@ VisBuilder_001
 Visited: Nodes/Tris/Mesh
 VpropBreakablePartData_t
 VxHcs(H
+W5Fb*
+W=gr)
 WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Missing data block for file: %short
 WARNING: Missing introspection manifest for file: %short
@@ -4447,9 +4449,8 @@ X[A\A]A^A_]
 X[A^A_]
 Xt2`A
 Y IcE
-Y-SG,
-Y-qo*
-Y=xA,
+Y-!void*
+Y=(H,
 You do not delete serialized hulls: it'short impossible
 Y|,8I
 Y|,HL
@@ -7109,7 +7110,7 @@ void CKeyValues3Cluster::Free(KeyValues3 *)
 void CKeyValues3Context::FreeKV_Internal(KeyValues3 *)
 void CKeyValues_Data::Internal_ClearData()
 void CMaterialDrawDescriptor::TransferPostLoadFn(CKV3TransferLoadContext *)
-void CMemberFuncProxyBase<CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1663:3), EmptySequentialFunctor_t, 1> *, void (CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1663:3), EmptySequentialFunctor_t, 1>::*)(CPostUpdateContacts *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1663:3), EmptySequentialFunctor_t, 1> *, FUNCTION_TYPE = void (CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1663:3), EmptySequentialFunctor_t, 1>::*)(CPostUpdateContacts *), MEM_POLICY = CFuncMemPolicyNone]
+void CMemberFuncProxyBase<CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1674:3), EmptySequentialFunctor_t, 1> *, void (CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1674:3), EmptySequentialFunctor_t, 1>::*)(CPostUpdateContacts *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1674:3), EmptySequentialFunctor_t, 1> *, FUNCTION_TYPE = void (CParallelForAndPostProcessor<CUtlVectorFixedGrowable<CPostUpdateContacts, 16>, (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/rubikon/world.cpp:1674:3), EmptySequentialFunctor_t, 1>::*)(CPostUpdateContacts *), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CRnBody *, void (CRnBody::*)(float), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CRnBody *, FUNCTION_TYPE = void (CRnBody::*)(float), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CSoftbodyStepper *, void (CSoftbodyStepper::*)(), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSoftbodyStepper *, FUNCTION_TYPE = void (CSoftbodyStepper::*)(), MEM_POLICY = CFuncMemPolicyNone]
 void CMesh::AllocateAndCopyMesh(int, const float *, int, int, const uint32 *, int, CMeshVertexAttribute *, int)
@@ -7453,6 +7454,7 @@ zfff.
 |wH;]
 }2D9c
 }5D9q
+}:E9w
 }@fff.
 }A9^
 }D9{

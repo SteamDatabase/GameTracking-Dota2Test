@@ -31,7 +31,7 @@
             </Button>
           </Panel>
         </Panel>
-        <Label class="GuideNameSubTitle Workshop" text="#DOTA_HeroGuideViewer_Rating" />
+        <Label class="GuideNameSubTitle Workshop Rating" text="#DOTA_HeroGuideViewer_Rating" />
       </Panel>
       <Label class="GuideNameTitle WorkshopTitle" text="#DOTA_HeroGuideViewer_Favorite" />
       <ToggleButton id="FavoriteStar" onmouseover="UIShowTextTooltip( #DOTA_HeroGuide_Favorites_Tooltip )" onmouseout="UIHideTextTooltip()" />

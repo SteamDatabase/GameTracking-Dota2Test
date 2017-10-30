@@ -77,9 +77,14 @@ DOTANotificationsMenu.MenuVisible
 {
 	width: 100%;
 	height: 32px;
-	margin: 0px 16px 16px 16px;
+	margin: 16px 16px 0px 16px;
 	flow-children: down;
 }
+
+.IsShowingAllNotifications .NotificationsViewAll
+{
+	visibility: collapse;
+} 
 
 .NotificationsViewAll Label
 {

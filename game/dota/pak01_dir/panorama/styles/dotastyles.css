@@ -4032,7 +4032,7 @@ DOTAShopItem:not(.CanPurchase) #RecipeContainer
 .EventPointsValue.Season_PrimeSubscription		{ color: #db4c34; }
 
 .RankTierImage { }
-.RankTier0 .RankTierImage { background-image: url("s2r://panorama/images/rank_tier_icons/rank0_psd.vtex"); }
+.RankTier0 .RankTierImage { background-image: url("s2r://panorama/images/rank_tier_icons/rank0_psd.vtex"); opacity: 0.2; }
 .RankTier1 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank1_psd.vtex"); }
 .RankTier2 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank2_psd.vtex"); }
 .RankTier3 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank3_psd.vtex"); }
@@ -4042,7 +4042,7 @@ DOTAShopItem:not(.CanPurchase) #RecipeContainer
 .RankTier7 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank7_psd.vtex"); }
 
 .RankPipImage { }
-.RankPips0 .RankPipImage { background-image: url("s2r://panorama/images/rank_tier_icons/pip0_psd.vtex"); }
+.RankPips0 .RankPipImage {  /*background-image: url("s2r://panorama/images/rank_tier_icons/pip_empty_psd.vtex"); opacity: 0.5;*/ }
 .RankPips1 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip1_psd.vtex"); }
 .RankPips2 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip2_psd.vtex"); }
 .RankPips3 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip3_psd.vtex"); }

@@ -91,6 +91,11 @@ DOTAHeroGuideViewer
     margin-top: -4px;
 }
 
+.GuideNameSubTitle.Rating
+{
+	margin-top: 2px;
+}
+
 .IsWorkshopGuide:not(.IsCopiedGuide) .GuideNameSubTitle.Workshop,
 .IsCloudGuide:not(.IsCopiedGuide) .GuideNameSubTitle.Cloud
 {
@@ -314,7 +319,8 @@ ToggleButton#FavoriteStar .Label { visibility: collapse; }
 .StatBranchBackground
 {
     margin-left: 16px;
-    width: 400px; 
+    width: 424px; 
+	padding: 12px 12px 8px 12px;
     vertical-align: center;
     horizontal-align: center;
     background-color: gradient( linear, 0% 0%, 0% 100%, from ( #181b1d), to ( #22292f ) );

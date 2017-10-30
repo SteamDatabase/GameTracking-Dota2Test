@@ -7,6 +7,11 @@ DOTAGuideBrowser
     z-index: 300;
 }
 
+DOTAHud DOTAGuideBrowser
+{
+	z-index: 0;
+}
+
 DOTAGuideBrowser.SmallMode 
 {
 	width: 788px;
