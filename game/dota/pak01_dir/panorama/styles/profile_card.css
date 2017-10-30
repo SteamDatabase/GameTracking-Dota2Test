@@ -574,6 +574,16 @@ DOTAProfileCard #RankTier, DOTAProfileCard #RankPips
 	background-size: 100%;
 }
 
+DOTAProfileCard #RankTierInfo
+{
+	width: 24px;
+	height: 24px;
+	horizontal-align: right;
+	background-image: url("s2r://panorama/images/icon_info_png.vtex");
+	background-size: 100%;
+	opacity: 0.25;
+}
+
 DOTAProfileCard #ProfileBadge
 {
 	horizontal-align: right;

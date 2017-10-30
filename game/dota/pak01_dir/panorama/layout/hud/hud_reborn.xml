@@ -146,7 +146,7 @@
 		<DOTAPingWheel id="PingWheel" hittest="false"  class="VisGroup_Top"/>
 		<DOTASpectatorItems id="SpectatorItems"  class="VisGroup_Top"/>
 		<DOTAPaused id="PausedInfo"  class="VisGroup_Top"/>
-		<DOTAGuideBrowser id="GuideBrowser"  class="SmallMode VisGroup_Top" />
+		<DOTAGuideBrowser id="GuideBrowser" acceptsinput="true" class="SmallMode VisGroup_Top" />
 		<DOTAHUDCharms id="Charms" />
 		<DOTAHeroDisplay id="HeroDisplay" />
 		<DOTACameraman id="Cameraman" />

@@ -175,11 +175,11 @@ $ffff.
 ( pDerivedClassName != nullptr ) == ( SCHEMA_TYPE_TRAITS_is_polymorphic( TClass ) )
 ( size + 1 ) < capacity
 ( unsigned short >= 0.0 ) && ( unsigned short <= 1.0 )
-(%59,
-(%Ax,
-(%int%,
+(%!unsigned long long,
+(%I&,
+(%b0,
 (*%short*), 
-(-aK,
+(-AL,
 (D$ D
 (D$@A
 (D* A
@@ -275,8 +275,9 @@ $ffff.
 -sse2
 -sse3
 -sse4
-.%F8,
-.-|Z,
+.%&9,
+.--__int128	
+.-\[,
 .02 .02 .02
 .125 .125 .125
 .25 .25 .25
@@ -304,7 +305,7 @@ $ffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_emitters.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_opsnew.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp(6440): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/../../../../particles/builtin_particle_render_ops.cpp(6462): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_constraints_cpp_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_initializers_cpp_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/particles/release/osx64/builtin_initializersnew_cpp_schema.gen_cpp
@@ -4134,6 +4135,7 @@ ScaleformUI001
 Scene Object Pointer
 SceneObjectData_t
 SceneSystem/DrawParticleChildrenSeparateFromParents
+SceneSystem/PerObjectLightingSetup
 SceneSystem_002
 SceneUtils_001
 Schema Field
@@ -4337,7 +4339,6 @@ T *CParticleSnapshot::ElementPointer(int, int, int, int) const [T = int]
 T KeyValues3::GetValueAsNumeric() const [T = float]
 T KeyValues3::GetValueAsNumeric() const [T = int]
 T KeyValues3::GetValueAsNumeric() const [T = long long]
-T-mn	
 TARBRB]ARBRAp
 TBRATAp
 TBRAp
@@ -4657,7 +4658,6 @@ X axis scaling scalar field
 X offset of center point
 X2:jH
 X2:jL
-X=n6'
 XBRB`
 XBRD`
 XBSARBSAXBTBRB]ARBRAp
@@ -4674,9 +4674,9 @@ Xt2`A
 Y axis scaling Scalar field
 Y axis scaling scalar field
 Y offset of center point
-Y%Y3*
-Y5	;%
-Y5vY,
+Y5D@'
+Y5VZ,
+Y=float;%
 YCHfH
 YClfD
 YFHfH
@@ -4699,6 +4699,7 @@ Z axis scaling scalar field
 \$HHc
 \t2PA
 \unsigned long fD
+]%G;!
 ^fff.
 ^fffff.
 _AssertMsg_ConditionFailed

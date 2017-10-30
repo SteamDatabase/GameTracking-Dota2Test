@@ -14043,8 +14043,8 @@
 				"SlotText"		"#LoadoutSlot_Head_Accessory"
 				"TextureWidth"		"256"       // TODO
 				"TextureHeight"		"256"       // TODO
-				"MaxPolygonsLOD0"		"250"   // TODO
-				"MaxPolygonsLOD1"		"250"   // TODO
+				"MaxPolygonsLOD0"		"1000"   // TODO
+				"MaxPolygonsLOD1"		"500"   // TODO
 			}
 			"1"
 			{
@@ -14053,8 +14053,8 @@
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"256"       // TODO
 				"TextureHeight"		"256"       // TODO
-				"MaxPolygonsLOD0"		"250"   // TODO
-				"MaxPolygonsLOD1"		"250"   // TODO
+				"MaxPolygonsLOD0"		"1000"   // TODO
+				"MaxPolygonsLOD1"		"500"   // TODO
 			}
 			"2"
 			{
@@ -14063,12 +14063,23 @@
 				"SlotText"		"#LoadoutSlot_Arms"
 				"TextureWidth"		"256"       // TODO
 				"TextureHeight"		"256"       // TODO
-				"MaxPolygonsLOD0"		"250"   // TODO
-				"MaxPolygonsLOD1"		"250"   // TODO
+				"MaxPolygonsLOD0"		"1000"   // TODO
+				"MaxPolygonsLOD1"		"600"   // TODO
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
+				"SlotName"		"tail"
+				"SlotText"		"#LoadoutSlot_Tail"
+				"TextureWidth"		"256"       // TODO
+				"TextureHeight"		"256"       // TODO
+				"MaxPolygonsLOD0"		"600"   // TODO
+				"MaxPolygonsLOD1"		"300"   // TODO
+			}
+
+			"4"
+			{
+				"SlotIndex"		"4"
 				"SlotName"		"ambient_effects"
 				"SlotText"		"#LoadoutSlot_Ambient_Effects"
 				"DisplayInLoadout"		"0"
@@ -21704,8 +21715,8 @@
 				"SlotText"			"#LoadoutSlot_Weapon"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"	"600"
-				"MaxPolygonsLOD1"	"300"
+				"MaxPolygonsLOD0"	"1000"
+				"MaxPolygonsLOD1"	"500"
 			}
 			"1"
 			{
@@ -21732,10 +21743,10 @@
 				"SlotIndex"			"3"
 				"SlotName"			"offhand_weapon"
 				"SlotText"			"#LoadoutSlot_Offhand_Weapon"
-				"TextureWidth"		"256"   // TODO
-				"TextureHeight"		"256"   // TODO
-				"MaxPolygonsLOD0"	"1000"  // TODO
-				"MaxPolygonsLOD1"	"500"   // TODO
+				"TextureWidth"		"256"   
+				"TextureHeight"		"256"   
+				"MaxPolygonsLOD0"	"1000"  
+				"MaxPolygonsLOD1"	"500"  
 			}
 			"4"
 			{
