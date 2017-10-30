@@ -1869,6 +1869,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"npc_dota_zeus_cloud"	    				    "Nimbus"
 		"npc_dota_hero_creep_radiant"					"Radiant Creeps"
 		"npc_dota_hero_creep_dire"						"Dire Creeps"
+		"npc_dota_wraith_king_skeleton_warrior"			"Wraith King Skeleton"
 		"dota_unkown"									"Unknown"
 		
 		"npc_dota_creep_badguys_melee"					"Melee Creep"
@@ -7016,7 +7017,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_dark_willow_terrorize_destination_status_duration"		"FEAR DURATION:"
 
 		"DOTA_Tooltip_ability_dark_willow_bedlam"					"Bedlam"
-		"DOTA_Tooltip_ability_dark_willow_bedlam_Description"		"Dark Willow's pet wisp roams around her for the duraton, rapidly atacking nearby enemies.  Bedlam cannot be used while Terrorize is active."
+		"DOTA_Tooltip_ability_dark_willow_bedlam_Description"		"Dark Willow's pet wisp roams around her for the duraton, rapidly attacking nearby enemies.  Bedlam cannot be used while Terrorize is active."
 		"DOTA_Tooltip_ability_dark_willow_bedlam_Lore"				""
 		"DOTA_Tooltip_ability_dark_willow_bedlam_attack_damage"		"ATTACK DAMAGE:"
 		"DOTA_Tooltip_ability_dark_willow_bedlam_attack_interval"		"ATTACK INTERVAL:"
@@ -7608,7 +7609,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_special_bonus_unique_luna_2"	"-2s Lucent Beam Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_luna_3"	"+24 Luna Blessing Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_luna_4"	"+0.25s Lucent Beam Ministun"
-		"DOTA_Tooltip_ability_special_bonus_unique_luna_5"	"Eclipse Uses Lucent Ministun"
+		"DOTA_Tooltip_ability_special_bonus_unique_luna_5"	"+0.25s Eclipse Lucent Ministun"
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void"	"+500 Timewalk Cast Range"
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_2"	"+175 Chronosphere AoE"
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_3"	"+100 Time Lock Damage"
@@ -7696,7 +7697,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_special_bonus_unique_ember_spirit_1"	"+150 Flame Guard Absorption"
 		"DOTA_Tooltip_ability_special_bonus_unique_ember_spirit_2"	"+1s Searing Chains"
 		"DOTA_Tooltip_ability_special_bonus_unique_ember_spirit_3"	"+30 Flame Guard DPS"
-		"DOTA_Tooltip_ability_special_bonus_unique_ember_spirit_4"	"2 Slight of Fist Charges"
+		"DOTA_Tooltip_ability_special_bonus_unique_ember_spirit_4"	"2 Sleight of Fist Charges"
 		"DOTA_Tooltip_ability_special_bonus_unique_ember_spirit_5"	"-25 Remnant Charge Replenish"
 		"DOTA_Tooltip_ability_special_bonus_unique_lifestealer"	"+2s Rage Duration"
 		"DOTA_Tooltip_ability_special_bonus_unique_lifestealer_2"	"+50% Open Wounds Heal"
@@ -7861,6 +7862,9 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_special_bonus_unique_dark_willow_1"			"+300 Shadow Realm Max Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_dark_willow_2"			"+1 Terrorize Duration"
 		"DOTA_Tooltip_ability_special_bonus_unique_pangolier_2"			"2s Shield Crash CD in Ball"
+		"DOTA_Tooltip_ability_special_bonus_unique_pangolier_3"			"+30 Swashbuckle Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_pangolier_4"			"-3s Swashbuckle Cooldown"
+		"DOTA_Tooltip_ability_special_bonus_unique_pangolier_5"			"-12s Rolling Thunder"
 
 		//-----
 
@@ -9354,16 +9358,14 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_skeleton_king_hellfire_blast_Description"	"Movement speed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and taking damage over time"
 		"DOTA_Tooltip_modifier_skeleton_king_vampiric_aura_buff"				"Vampiric Aura"
 		"DOTA_Tooltip_modifier_skeleton_king_vampiric_aura_buff_Description"	"Regaining health with each attack"
-		"DOTA_Tooltip_modifier_skeleton_king_mortal_strike_drain_buff"				"Mortal Strike"
-		"DOTA_Tooltip_modifier_skeleton_king_mortal_strike_drain_buff_Description"	"Stealing HP from an enemy hero."
-		"DOTA_Tooltip_modifier_skeleton_king_mortal_strike_drain_debuff"				"Mortal Strike"
-		"DOTA_Tooltip_modifier_skeleton_king_mortal_strike_drain_debuff_Description"	"HP stolen from Wraith King."
 		"DOTA_Tooltip_modifier_skeleton_king_reincarnate_slow"				"Reincarnate"
 		"DOTA_Tooltip_modifier_skeleton_king_reincarnate_slow_Description"	"Affected by Wraith King's Reincarnation. Move speed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and attack speed slowed by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 		"DOTA_Tooltip_modifier_skeleton_king_reincarnation_scepter"				"Wraith Delay"
 		"DOTA_Tooltip_modifier_skeleton_king_reincarnation_scepter_Description"	"If slain, will become a wraith for 7 seconds before dying."
 		"DOTA_Tooltip_modifier_skeleton_king_reincarnation_scepter_active"				"Death Delay"
 		"DOTA_Tooltip_modifier_skeleton_king_reincarnation_scepter_active_Description"	"Became a wraith to delay death, but will die shortly."
+		"DOTA_Tooltip_modifier_skeleton_king_mortal_strike"					"Mortal Strike Skeleton Charges"
+		"DOTA_Tooltip_modifier_skeleton_king_mortal_strike_Description"					"Current number of skeletons."
 		
 		
 		
@@ -13692,7 +13694,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_item_rapier_bonus_damage"							"+$damage"
 		
 		
-		"DOTA_Tooltip_ability_item_combo_breaker_Description"					"<h1>Passive: Combo Breaker</h1> When you take damage and your health falls below %health_threshold_pct%%, a strong dispell is applied and you gain a %buff_duration% second buff that causes all damage you deal and are dealt to be reduced to zero. \n\n<h1>Passive: Status Resistance</h1> Reduces status effect durations by %status_resistance%%. "
+		"DOTA_Tooltip_ability_item_combo_breaker_Description"					"<h1>Passive: Combo Breaker</h1> When you take damage and your health falls below %health_threshold_pct%%, a strong dispel is applied and you gain a %buff_duration% second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\n<h1>Passive: Status Resistance</h1> Reduces status effect durations by %status_resistance%%. "
 		"DOTA_Tooltip_ability_item_combo_breaker_lore"					"A powerful artifact long ago smuggled out of the Ivory Incubarium. Or so many believe."
 		"DOTA_Tooltip_ability_item_combo_breaker_bonus_health"					"+$health"
 		"DOTA_Tooltip_ability_item_combo_breaker_bonus_mana"					"+$mana"

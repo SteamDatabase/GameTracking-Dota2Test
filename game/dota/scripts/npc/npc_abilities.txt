@@ -12258,7 +12258,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"beam_interval_scepter"				"0.6"
+				"beam_interval_scepter"				"0.3"
 			}
 			"05"
 			{
@@ -49682,8 +49682,8 @@
 		{
 			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"0"
+				"var_type"					"FIELD_FLOAT"
+				"value"				"0.25"
 			}
 		}
 	}
@@ -55473,6 +55473,78 @@
 			{
 				"var_type"			"FIELD_FLOAT"
 				"value"				"2.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+
+	"special_bonus_unique_pangolier_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"9060"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"				"25"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+
+	"special_bonus_unique_pangolier_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"9061"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"value"				"3.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+
+	"special_bonus_unique_pangolier_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"9062"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"value"				"12.0"
 			}
 		}
 	}

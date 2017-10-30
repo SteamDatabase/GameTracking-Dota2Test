@@ -315,7 +315,6 @@ $ffff.
 -sse2
 -sse3
 -sse4
-.%6n!
 ...:ISchemaSearchTester<CSchemaClassInfo const*> const
 .ETv*H
 .Elv*H
@@ -2483,11 +2482,12 @@ D9x8A
 D;...`u
 D;0t:I
 D;0u&H
-D;= wchar_t
-D;= {
-D;=`_
-D;=`p
-D;=char*
+D;=0c
+D;=@_
+D;=@p
+D;=`~
+D;=p)
+D;=py
 D;cX|
 D;char@|
 D;k(u
@@ -3138,7 +3138,7 @@ L9;unsigned short%
 LINUX
 LOWVIOLENCE
 Last pole vector is invalid
-Lc=`P-
+Lc=@P-
 LcC(H
 Lc`xM
 LcppL
@@ -5949,6 +5949,7 @@ qMid.IsValid()
 qWsKnee.IsValid()
 qWsThigh.IsValid()
 qangle
+qcp(T
 qt.IsValid()
 quaternion
 qxMcl$,I

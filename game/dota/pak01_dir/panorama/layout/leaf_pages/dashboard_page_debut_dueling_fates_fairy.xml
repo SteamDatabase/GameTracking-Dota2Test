@@ -47,7 +47,7 @@
 									<Button id="ToLoadout" class="ButtonBevel" onactivate="DOTAShowHeroLoadoutPage( 119 );" >
 										<Label text="#DOTA_HeroDemo_Button_ToLoadout"/>
 									</Button>
-									<DemoModeButton id="DemoHeroButton" category="npc_dota_hero_dark_willow" onactivate="DOTADemoHero( npc_dota_hero_sylph, 0 )" />									
+									<DemoModeButton id="DemoHeroButton" category="npc_dota_hero_dark_willow" onactivate="DOTADemoHero( npc_dota_hero_dark_willow, 0 )" />
 								</Panel>
 								<Panel id="InformationBundleHeader">
 									<Panel class="TopBottomFlow">
@@ -75,7 +75,7 @@
 									</Panel>									
 									<Movie id="DarkWillowImmortalVideo" class="VideoPanel" src="file://{resources}/videos/promo/duelingfates_bundle_2.webm" controls="none" repeat="true" autoplay="onload"  />	
 									<Panel id="BundleButtons" hittest="false">
-										<DemoModeButton id="DemoImmortalButton" class="SmallDemoButton" category="#DOTA_HeroLoadout_ImmortalFilterName" onactivate="DOTADemoHero( npc_dota_hero_sylph, 21142 )" />									
+										<DemoModeButton id="DemoImmortalButton" class="SmallDemoButton" category="#DOTA_HeroLoadout_ImmortalFilterName" onactivate="DOTADemoHero( npc_dota_hero_dark_willow, 21142 )" />									
 										<DOTAPurchaseButton itemdef="21142" itemsource="takeover" />
 									</Panel>
 									<Label id="ButWaitTheresMore" text="#Debut_DuelingFates_TheresMore"/>

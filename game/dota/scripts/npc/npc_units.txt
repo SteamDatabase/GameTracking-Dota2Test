@@ -8354,8 +8354,8 @@
 		"AttackDamageMax"			"27"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"275"		// Range within a target can be acquired.
-		"AttackRange"				"275"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
+		"AttackRange"				"250"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
 
@@ -8427,8 +8427,8 @@
 		"AttackDamageMax"			"45"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"275"		// Range within a target can be acquired.
-		"AttackRange"				"275"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
+		"AttackRange"				"250"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
 
@@ -8446,7 +8446,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"310"		// Speed.			
+		"MovementSpeed"				"300"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------

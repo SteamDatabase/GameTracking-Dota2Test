@@ -2417,7 +2417,8 @@ L$`I;L$hH
 L(,A;N
 L9+uPD
 L90t*H
-L958N
+L953)
+L95XN
 L9v@u
 L;>unsigned short-L9
 L?333?
@@ -3284,7 +3285,7 @@ _strtoll
 _strtoul
 _strtoull
 _vsnprintf
-`$ATAp
+`%ATAp
 `(Hcx
 `0A9](
 `@pp 
@@ -3605,7 +3606,6 @@ input_type
 int >= 0
 int CNetChan::ProcessPacketHeader(NetPacket_t *)
 int CNetChan::SendSplitPacket(const char *, int, int)
-int CNetworkMessages::ComputeOrderForPriority(int) const
 int CNetworkSystem::AddSteamNetConnection(HSteamNetConnection, const SteamNetConnectionInfo_t &)
 int CNetworkSystem::QueuePacketForSend(CNetChan *, bool, const char *, int, uint32)
 int CNetworkSystem::SendNetChanPacket(CNetChan *, const unsigned char *, int, bf_write *, bool)
@@ -4410,6 +4410,7 @@ virtual int CFlattenedSerializers::RemoveArrayElementsOutsideOfArrayMetadataBoun
 virtual int CNetChan::GetLatencyBreakdown(NetChanStat_t *, NetChanStat_t *, NetChanStat_t *, NetChanStat_t *)
 virtual int CNetChan::GetNumBitsWritten(NetChannelBufType_t) const
 virtual int CNetChan::Transmit(const char *, bf_write *)
+virtual int CNetworkMessages::ComputeOrderForPriority(int) const
 virtual int CNetworkSystem::AddExtraSocket(int, const char *)
 virtual int CNetworkSystem::SendPacket(int, const ns_address &, const void *, int)
 virtual int CQueuedPacketSender::Run()
