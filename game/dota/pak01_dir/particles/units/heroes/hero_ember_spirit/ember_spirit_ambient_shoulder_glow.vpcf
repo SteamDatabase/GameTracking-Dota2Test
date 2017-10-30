@@ -18,4 +18,52 @@
 			m_ChildRef = resource:"particles/units/heroes/hero_ember_spirit/ember_spirit_ambient_armor_glow.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_shoulder_glow_r"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_shoulder_glow_l"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/heroes/ember_spirit/shoulder.vmdl"
+			}
+		},
+	]
 }

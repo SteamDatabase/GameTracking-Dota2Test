@@ -14,13 +14,12 @@
 			m_nBodyGroupField = 19
 			m_nAnimationField = 19
 			m_nAnimationScaleField = 19
-			m_EconSlotName = "weapon"
 			m_nModelCP = 9
 			m_bSuppressTint = true
 			m_ModelList = 
 			[
 				{
-					m_model = resource:"models/heroes/troll_warlord/troll_warlord_axe_ranged_r.vmdl"
+					m_model = resource:"models/heroes/troll_warlord/troll_warlord_weapon_fx.vmdl"
 				},
 			]
 			m_bAnimated = true
@@ -82,8 +81,8 @@
 	[
 		{
 			_class = "C_INIT_RandomRadius"
-			m_flRadiusMax = 2.000000
-			m_flRadiusMin = 2.000000
+			m_flRadiusMax = 1.750000
+			m_flRadiusMin = 1.750000
 		},
 		{
 			_class = "C_INIT_RandomLifeTime"

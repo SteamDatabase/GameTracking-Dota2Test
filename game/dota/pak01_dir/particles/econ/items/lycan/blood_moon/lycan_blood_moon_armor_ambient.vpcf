@@ -151,4 +151,47 @@
 			m_ChildRef = resource:"particles/econ/items/lycan/blood_moon/lycan_blood_moon_armor_ambient_smoke_b.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "self"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_fur"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+		},
+	]
 }

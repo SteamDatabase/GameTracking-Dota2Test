@@ -111,4 +111,34 @@
 			m_ChildRef = resource:"particles/econ/items/bounty_hunter/bounty_hunter_weapon_left_master_assassin/bounty_hunter_hand_l_flash_master_assassin.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_weapon2"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/bounty_hunter/offhand_assasin.vmdl"
+			}
+		},
+	]
 }

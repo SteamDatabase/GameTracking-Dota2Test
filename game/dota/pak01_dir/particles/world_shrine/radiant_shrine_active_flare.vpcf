@@ -28,10 +28,6 @@
 			_class = "C_OP_Decay"
 		},
 		{
-			_class = "C_OP_FadeInSimple"
-			m_bDisableOperator = true
-		},
-		{
 			_class = "C_OP_RemapControlPointDirectionToVector"
 			m_nFieldOutput = 21
 		},
@@ -64,6 +60,7 @@
 			_class = "C_OP_RenderSprites"
 			m_hTexture = resource:"materials/particle/yellowflare2.vtex"
 			m_bAdditive = true
+			m_bTintByFOW = true
 		},
 	]
 	m_Initializers = 

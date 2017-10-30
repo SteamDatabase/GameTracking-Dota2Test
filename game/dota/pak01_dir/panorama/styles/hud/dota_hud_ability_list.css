@@ -42,15 +42,11 @@ DOTAAbilityList.SixAbilities
 	width: fit-children;
 	min-height: 80px;
 	padding-left: -2px;
-    padding-right: -2px;
-	
+    padding-right: -2px;	
 }
 
 .Reborn #abilities
 {
-	margin-bottom: 56px;
-	margin-bottom: 46px;
-	margin-bottom: 40px;
 }
 
 .Reborn #QueryUnit #abilities
@@ -61,15 +57,17 @@ DOTAAbilityList.SixAbilities
 	
 }
 
+
 .Reborn DOTAAbilityPanel
 {
 	width: 72px;
+	width: 65px;
 	margin-left: 0px;
 	margin-right: 0px;	
 }
 
-.Reborn .npc_dota_hero_morphling.HasMorph #Ability2,
-.Reborn .npc_dota_hero_morphling.HasMorph #Ability3
+.Reborn .npc_dota_hero_morphling.HasMorph #Ability3,
+.Reborn .npc_dota_hero_morphling.HasMorph #Ability4
 {
 	width: 44px;
 }
@@ -81,15 +79,31 @@ DOTAAbilityList.SixAbilities
 }
 
 
-.Reborn.FiveAbilities DOTAAbilityPanel
+.Reborn .FiveAbilities DOTAAbilityPanel:not(.Hidden)
 {
+	width: 58px;
 	margin-top: 0px;
 }
 
-.Reborn.SixAbilities DOTAAbilityPanel
+.Reborn .SixAbilities DOTAAbilityPanel:not(.Hidden)
 {
+	width: 58px;
 	margin-top: 0px;
 }
+
+.Reborn .FiveAbilities .QueryUnit DOTAAbilityPanel:not(.Hidden)
+{
+	width: 39px;
+	margin-top: 0px;
+}
+
+.Reborn .SixAbilities .QueryUnit DOTAAbilityPanel:not(.Hidden)
+{
+	width: 40px;
+	margin-top: 0px;
+}
+
+
 
 //----------------------------------------------------------------------
 // Reborn Query

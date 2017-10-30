@@ -114,6 +114,149 @@ DOTAHeroPageNew
 	transform: translateY( -70px ) translateX( -45px );
 }
 
+#LargeModelPreviewControls
+{
+	width: 100%;
+	vertical-align: bottom;
+	margin-bottom: 122px;
+	margin-right: 10px;
+}
+
+#FullscreenButton
+{
+	horizontal-align: right;
+
+	width: 31px;
+	height: 31px;
+
+	background-image: url("s2r://panorama/images/control_icons/expand_png.vtex");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: #00000088;
+	vertical-align: bottom;
+
+	wash-color: #777;
+}
+
+#FullscreenButton:hover
+{
+	wash-color: #fff;
+	background-color: black;
+	transition-property: background-color, wash-color;
+	transition-duration: .2s;
+}
+
+#FullscreenButton:active
+{
+	wash-color: #bbb;
+}
+
+.FullscreenPage #PageContents,
+.FullscreenPage .HeroPageNavigation,
+.FullscreenPage #LargeModelPreviewControls,
+.FullscreenPage #HeroBadge
+{
+	visibility: collapse;
+}
+
+.FullscreenPage #LargeModelPreview
+{
+	horizontal-align: center;
+}
+
+#ModelSelector
+{
+	horizontal-align: right;
+	vertical-align: middle;
+
+	flow-children: down;
+	margin-right: 40px;
+
+	visibility: collapse;
+}
+
+.HasMultipleModels #ModelSelector
+{
+	visibility: visible;
+}
+
+#ModelSelector > Label
+{
+	horizontal-align: left;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #999;
+	margin-left: 1px;
+}
+
+#ModelButtons
+{
+	flow-children: right;
+}
+
+#ModelButtons RadioButton
+{
+	vertical-align: middle;
+	width: 31px;
+	height: 31px;
+
+	background-color: #00000088;
+	//border: 1px solid #999;
+	margin: 0px 2px;
+	padding: 1px 0px 0px 0px;
+}
+
+#ModelButtons RadioButton:selected
+{
+	background-color: #51686f; 
+}
+
+#ModelButtons RadioButton:hover
+{
+	background-color: #000000; 
+}
+
+#ModelButtons RadioButton Label
+{
+	margin: 0px;
+	horizontal-align: center;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#ModelButtons RadioButton .RadioBox
+{
+	visibility: collapse;
+}
+
+#ExitFullscreenHint
+{
+	horizontal-align: center;
+	color: white;
+	padding: 4px 16px;
+	background-color: black;
+	border-radius: 4px;
+	font-size: 24px;
+
+	opacity: 0.0;
+}
+
+@keyframes 'FullscreenHintAnimation2'
+{
+	0% { opacity: 0.0; }
+	20% { opacity: 1.0; }
+	100% { opacity: 0.0; }
+}
+
+#ExitFullscreenHint.AnimateHint
+{
+	animation-name: FullscreenHintAnimation2;
+	animation-duration: 3.0s;
+	animation-iteration-count: 1;
+}
+
 #PageContents
 {
 	width: 100%;
@@ -127,16 +270,17 @@ DOTAHeroPageNew
 .LeftContents
 {
 	width: fill-parent-flow( 1.0 );
+	height: 100%;
 }
 
 .RightContents
 {
 	flow-children: down;
-	width: 900px;
+	width: 950px;
 	margin-right: 20px;
 }
 
-.AspectRatio4x3 .RightContents, .AspectRatio5x4 .RightContents
+.AspectRatio4x3 .RightContents
 {
 	width: 750px;
 }
@@ -308,33 +452,51 @@ DOTAHeroPageNew.Intelligence  #PrimaryAttribute { background-image: url("s2r://p
 {
 	color: white;
 	text-transform: uppercase;
+	margin-top: 8px;
 }
 
 #OwnedItemsContents
 {
 	flow-children: right;
+	//background-color: #000000aa;
+	//padding: 12px;
 }
 
 #HeroSetPicker
 {
 	width: 160px;
-	height: 282px;
+	height: 287px;
 	margin-right: 20px;
 	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
+
+.AspectRatio16x9 #HeroSetPicker
+{
+	height: 285px;
+}
+
+
 
 #HeroSlots
 {
 	flow-children: right-wrap;
 	width: 600px;
+	margin-left: 2px;
 }
 
 #HeroSlots DOTAHeroSlotItemPicker
 {
 	width: 101px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-right: 10px;
 }
+
+.DefaultItemEquipped:not(.HasItemsForSlot) #MenuArrowContainer
+{
+   visibility: collapse;
+}
+
 
 
 #LoadoutTabContents
@@ -345,7 +507,7 @@ DOTAHeroPageNew.Intelligence  #PrimaryAttribute { background-image: url("s2r://p
 #AvailableItems
 {
 	flow-children: down;
-	margin-top: 16px;
+	margin-top: 8px;
 	width: 840px;
 }
 
@@ -426,6 +588,7 @@ DOTAHeroPageNew.Intelligence  #PrimaryAttribute { background-image: url("s2r://p
 	flow-children: down;
 	padding: 10px 12px 12px 12px;
 	height: 580px;
+	overflow: squish scroll;
 
 	background-color: #000000ef;
 }
@@ -443,7 +606,6 @@ DOTAHeroPageNew.Intelligence  #PrimaryAttribute { background-image: url("s2r://p
 {
 	color: #999;
     padding-right: 10px;
-	overflow: squish scroll;
 
 	/* Hardcode the width so that the text flowing works correctly */
     width: 715px;
@@ -451,10 +613,6 @@ DOTAHeroPageNew.Intelligence  #PrimaryAttribute { background-image: url("s2r://p
 .AspectRatio4x3 .HeroDescriptionText
 {
 	width: 610px;
-}
-.AspectRatio5x4 .HeroDescriptionText
-{
-	width: 600px;
 }
 
 #HeroRoleDetails
@@ -493,3 +651,102 @@ DOTAHeroPageNew.Intelligence  #PrimaryAttribute { background-image: url("s2r://p
 {
 	background-image: url("s2r://panorama/images/hero_complexity_full_png.vtex");
 }
+
+
+#HeroStats
+{
+	flow-children: right;
+}
+
+.HeroStatsSection
+{
+	flow-children: down;
+	margin-right: 16px;
+
+	tooltip-position: top;
+	tooltip-body-position: 50% 50%;
+}
+
+.HeroStatsHeader
+{
+	text-transform: uppercase;
+	color: #ccc;
+}
+
+
+.HeroStatsRow
+{
+	flow-children: right;
+}
+
+.HeroStatsRow > Label
+{
+	color: #aaa;
+}
+
+.HeroStatsIcon
+{
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#ProjectileSpeedRow
+{
+	visibility: collapse;
+}
+.RangedAttack #ProjectileSpeedRow
+{
+	visibility: visible;
+}
+
+.HeroResourceRow
+{
+	width: 140px;
+	border-radius: 4px;
+	margin-bottom: 4px;
+}
+
+.MaxResource
+{
+	horizontal-align: center;
+	text-shadow: 1px 1px 0px 2.0 #000000;
+	font-weight: bold;
+	color: white;
+	margin-top: 2px;
+}
+
+.ResourceRegen
+{
+	margin-top: 2px;
+	margin-left: 4px;
+	margin-right: 2px;
+	font-size: 16px;
+	font-weight: bold;
+	vertical-align: middle;
+	horizontal-align: right;
+	text-shadow: 1px 1px 0px 1.0 #000000;
+} 
+
+#HealthRow
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1A3D1A  ), color-stop( 0.2, #67A163 ), color-stop( .5, #187019), to( #175D17 ) );
+}
+#HealthRow .ResourceRegen
+{
+	color: #3ed038;
+}
+
+#ManaRow
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #6A90BA  ), color-stop( 0.4, #144B91 ), to( #2E5187 ) );	
+}
+#ManaRow .ResourceRegen
+{
+	color: #83C2FE;
+}
+

@@ -10,10 +10,9 @@ PopupManager
 {
     width: 100%;
     height: 100%;
-    background-color: #060606;
-    opacity: 0.94;
+    background-color: #060606F0;
 
-    transition-property: opacity;
+    transition-property: background-color;
    	transition-duration: 0.3s;
     transition-timing-function: ease-in;
 	transition-delay: 0s;
@@ -21,7 +20,7 @@ PopupManager
 
 #DimBackground.Hidden
 {
-    opacity: 0.0;
+    background-color: #06060600;
 }
 
 #BlurBackground
@@ -29,7 +28,6 @@ PopupManager
 	width: 100%;
 	height: 100%;
 	background-color: #00000055;
-	opacity: 1.0;
 	
 	transition-property: background-color;
 	transition-duration: 0.3s;
@@ -38,10 +36,10 @@ PopupManager
 
 #BlurBackground.Hidden
 {
-	opacity: 0.0;
+	background-color: #00000000;
 }
 
-#BlurBackground:hover
+#BlurBackground:not(.Hidden):hover
 {
 	background-color: #00000055;
 }

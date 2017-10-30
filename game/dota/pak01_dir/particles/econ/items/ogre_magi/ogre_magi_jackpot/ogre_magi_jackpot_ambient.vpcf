@@ -17,4 +17,52 @@
 			m_ChildRef = resource:"particles/econ/items/ogre_magi/ogre_magi_jackpot/ogre_magi_jackpot_ambient_wheel_glow.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_wheel"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_back"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/ogre_magi/auspice_of_the_whyrlegyge/mesh/auspice_of_the_whyrlegyge_model.vmdl"
+			}
+		},
+	]
 }

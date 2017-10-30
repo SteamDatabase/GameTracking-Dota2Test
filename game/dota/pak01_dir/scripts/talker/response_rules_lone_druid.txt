@@ -7,6 +7,7 @@ criterion "IsLoneDruidBearReturn" "abilityname" "lone_druid_spirit_bear_return" 
 criterion "IsLoneDruidTransformToBear" "abilityname" "lone_druid_true_form" weight 5 required
 criterion "IsLoneDruidTransformToHuman" "abilityname" "lone_druid_true_form_druid" weight 5 required
 criterion "IsLoneDruidBattleCry" "abilityname" "lone_druid_true_form_battle_cry" weight 5 required
+criterion "IsLoneDruidLoadoutSpawn" "special_spawn" "lone_druid_loadout_spawn" weight 5 required
 criterion "IsSpiritBear1" "creaturename" "npc_dota_lone_druid_bear1" weight 5 required
 criterion "IsSpiritBear2" "creaturename" "npc_dota_lone_druid_bear2" weight 5 required
 criterion "IsSpiritBear3" "creaturename" "npc_dota_lone_druid_bear3" weight 5 required
@@ -48,6 +49,28 @@ Rule lone_druid_CustomIsGameStart_Rule
 {
 	criteria Custom Islone_druid IsGameStart
 	response lone_druid_CustomIsGameStart
+}
+
+Response lone_druid_CustomIsLoneDruidLoadoutSpawn
+{
+	scene "scenes/lone_druid/lone_druid_lone_druid_spawn_01.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_spawn_02.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_spawn_03.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_spawn_04.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_spawn_05.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_attack_09.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_cast_01.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_ability_spiritbear_02.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_level_06.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_kill_02.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_win_03.vcd" nodelay noscene 
+	scene "scenes/lone_druid/lone_druid_lone_druid_cast_03.vcd" nodelay noscene 
+}
+
+Rule lone_druid_CustomIsLoneDruidLoadoutSpawn_Rule
+{
+	criteria Custom Islone_druid IsLoneDruidLoadoutSpawn
+	response lone_druid_CustomIsLoneDruidLoadoutSpawn
 }
 
 Response lone_druid_KillIsFirstBlood
@@ -1471,6 +1494,17 @@ Rule lone_druid_PowerupIsPowerupInvisibilityChance_25%_Rule
 	response lone_druid_PowerupIsPowerupInvisibilityChance_25%
 }
 
+Response lone_druid_PowerupIsPowerupArcane
+{
+	scene "scenes/lone_druid/lone_druid_lone_druid_happy_02.vcd" nodelay noscene respeakdelay 300
+}
+
+Rule lone_druid_PowerupIsPowerupArcane_Rule
+{
+	criteria Powerup Islone_druid IsPowerupArcane
+	response lone_druid_PowerupIsPowerupArcane
+}
+
 Response lone_druid_PowerupIsBearFormIsPowerupHaste
 {
 	scene "scenes/lone_druid/lone_druid_lone_druid_bearform_haste_01.vcd" nodelay noscene 
@@ -1583,12 +1617,24 @@ Rule lone_druid_PowerupIsBearFormIsPowerupInvisibilityChance_25%_Rule
 
 Response lone_druid_PowerupIsBearFormIsPowerupBounty
 {
+	scene "scenes/lone_druid/lone_druid_lone_druid_bearform_lasthit_06.vcd" nodelay noscene respeakdelay 300
 }
 
 Rule lone_druid_PowerupIsBearFormIsPowerupBounty_Rule
 {
 	criteria Powerup Islone_druid IsBearForm IsPowerupBounty
 	response lone_druid_PowerupIsBearFormIsPowerupBounty
+}
+
+Response lone_druid_PowerupIsPowerupArcaneIsBearForm
+{
+	scene "scenes/lone_druid/lone_druid_lone_druid_bearform_happy_02.vcd" nodelay noscene respeakdelay 300
+}
+
+Rule lone_druid_PowerupIsPowerupArcaneIsBearForm_Rule
+{
+	criteria Powerup Islone_druid IsPowerupArcane IsBearForm
+	response lone_druid_PowerupIsPowerupArcaneIsBearForm
 }
 
 Response lone_druid_Bottling

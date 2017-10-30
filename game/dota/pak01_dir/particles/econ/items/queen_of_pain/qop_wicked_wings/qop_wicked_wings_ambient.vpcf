@@ -93,4 +93,33 @@
 			m_ChildRef = resource:"particles/econ/items/queen_of_pain/qop_wicked_wings/qop_wicked_wings_ambient_d.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/queenofpain/tpl_wing_lvl1/tpl_wing_lvl1.vmdl"
+			}
+		},
+	]
 }

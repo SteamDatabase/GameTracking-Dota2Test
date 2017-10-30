@@ -2,6 +2,175 @@
 
 "change_log.txt"
 {
+
+	"change"
+	{
+		"date"			"1509346800"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_HeroGuides"
+		"event"			"DOTAShowHeroGuidesPage()"
+	}
+
+	"change"
+	{
+		"date"			"1503278021"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MiniGameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/31846/)"
+	}
+
+ 	"change"
+	{
+		"date"			"1501776000"
+		"type"			"BattlePass"
+		"expiration_date" "1502125200"
+		"description"	"#DOTA_ChangeLog_TI7BracketPrediction"
+		"event"			"DOTAShowCompDoubleElimBracketPage( EVENT_ID_INTERNATIONAL_2017, 2 )"
+	}
+
+	"change"
+	{
+		"date"			"1501447855"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_TI7Groups"
+		"event"			"BrowserGoToURL( http://www.dota2.com/international/replays/0/1/)"
+	}
+	"change"
+	{
+		"date"			"1499702400"
+		"type"			"BattlePass"
+		"expiration_date" "1502125200"
+		"description"	"#DOTA_ChangeLog_AllStarVoting"
+		"event"			"DOTAShowCompTI7AllStarPage()"
+	}
+
+	"change"
+	{
+		"date"			"1499048438"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MiniGameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/)"
+	}
+
+	"change"
+	{
+		"date"			"1498250276"
+		"type"			"BattlePass"
+		"expiration_date" "1502125200"
+		"description"	"#DOTA_ChangeLog_QualifierPredictions"
+		"event"			"DOTAShowCompTI7PredictionsPage()"
+	}
+
+	"change"
+	{
+		"date"			"1497188020"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MiniGameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/30017/ )"
+	}
+
+	"change"
+	{
+		"date"			"1496035285"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MiniGameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/29717/ )"
+	}
+
+	"change"
+	{
+		"date"			"1494866741"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_GameplayPatch"
+		"event"			"BrowserGoToURL( https://www.dota2.com/706 )"
+	}
+	"change"
+	{
+		"date"			"1492724082"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MatchmakingUpdate"
+		"event"			"BrowserGoToURL( http://blog.dota2.com/2017/04/matchmaking-update/ )"
+	}
+	"change"
+	{
+		"date"			"1492207200"
+		"type"			"BattlePass"
+		"expiration_date" "1493010000"
+		"description"	"#DOTA_ChangeLog_Winter2017MainEventPredictions"
+		"event"			"DOTAShowCompKiev2017MainEventPredictionsPage()"
+	}
+	"change"
+	{
+		"date"			"1492207199"
+		"type"			"BattlePass"
+		"expiration_date" "1493010000"
+		"description"	"#DOTA_ChangeLog_Winter2017Casters"
+		"event"			"DOTAShowCompKiev2017CastersPage()"
+	}
+	"change"
+	{
+		"date"			"1491665553"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_GameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/28756/ )"
+	}
+	"change"
+	{
+		"date"			"1490217809"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_GameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/28351/ )"
+	}
+
+	"change"
+	{
+		"date"			"1489601541"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_GameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/bladeformlegacy/ )"
+	}
+
+	"change"
+	{
+		"date"			"1489601541"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_FreeWeekendBattleCup"
+		"event"			"BrowserGoToDOTAURLAnchor( battlecup, top )"
+	}
+
+	"change"
+	{
+		"date"			"1488479041"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_KievMajorInvites"
+		"event"			"DOTAShowCompKiev2017InvitesPage()"
+	}
+
+	"change"
+	{
+		"date"			"1486591948"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MiniGameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/27381/ )"
+	}
+
+	"change"
+	{
+		"start_time"	"1482408000"
+		"date"			"1482408000"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_TrueSightEpisode3"
+		"event"			"DOTAShowCompBoston2016TrueSightPage()"
+	}
+
+	"change"
+	{
+		"date"			"1482267453"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_MiniGameplayPatch"
+		"event"			"BrowserGoToURL( http://www.dota2.com/news/updates/26467/ )"
+	}
+
 	"change"
 	{
 		"date"			"1481572805"
@@ -55,6 +224,7 @@
 	{
 		"date"			"1480924800"
 		"type"			"BattlePass"
+		"expiration_date" "1483573638"
 		"description"	"#DOTA_ChangeLog_Fall2016BracketPrediction"
 		"event"			"DOTAShowCompSingleElimBracketPage( EVENT_ID_FALL_MAJOR_2016, 2 )"
 	}
@@ -63,6 +233,7 @@
 	{
 		"date"			"1478628002"
 		"type"			"BattlePass"
+		"expiration_date" "1483573638"
 		"description"	"#DOTA_ChangeLog_Fall2016MainEventPredictions"
 		"event"			"DOTAShowCompBoston2016MainEventPredictionsPage()"
 	}
@@ -71,6 +242,7 @@
 	{
 		"date"			"1478628002"
 		"type"			"BattlePass"
+		"expiration_date" "1483573638"
 		"description"	"#DOTA_ChangeLog_Fall2016Casters"
 		"event"			"DOTAShowCompBoston2016CastersPage()"
 	}
@@ -79,6 +251,7 @@
 	{
 		"date"			"1478628002"
 		"type"			"BattlePass"
+		"expiration_date" "1483573638"
 		"description"	"#DOTA_ChangeLog_Fall2016PlayerCards"
 		"event"			"DOTAShowCompBoston2016PlayerCardsPage()"
 	}
@@ -87,6 +260,7 @@
 	{
 		"date"			"1478628001"
 		"type"			"BattlePass"
+		"expiration_date" "1483573638"
 		"description"	"#DOTA_ChangeLog_Fall2016Fantasy"
 		"event"			"DOTAShowCompBoston2016FantasyPage( -1 )"
 	}

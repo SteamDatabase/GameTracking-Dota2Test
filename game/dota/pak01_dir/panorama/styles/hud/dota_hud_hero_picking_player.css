@@ -12,7 +12,7 @@ DOTAHudHeroPickingPlayer
 	context-menu-body-position: 50% 50%;
 }
 
-.AspectRatio4x3 DOTAHudHeroPickingPlayer, .AspectRatio5x4 DOTAHudHeroPickingPlayer
+.AspectRatio4x3 DOTAHudHeroPickingPlayer
 {
 	margin-left: -4px;
 	margin-right: -4px;
@@ -67,7 +67,7 @@ DOTAHudPreGame.WaitingForPlayers DOTAHudHeroPickingPlayer.PlayerConnecting
 	transition-timing-function: ease-in-out;
 }
 
-.AspectRatio4x3 #HeroImage, .AspectRatio5x4 #HeroImage
+.AspectRatio4x3 #HeroImage
 {
 	width: 100px;
 }
@@ -94,7 +94,7 @@ DOTAHudPreGame.WaitingForPlayers DOTAHudHeroPickingPlayer.PlayerConnecting
 	wash-color: black;
 }
 
-.AspectRatio4x3 #HeroImageBorder, .AspectRatio5x4 #HeroImageBorder
+.AspectRatio4x3 #HeroImageBorder
 {
 	width: 110px;
 	height: 66px;
@@ -197,7 +197,8 @@ DOTAHudPreGame.WaitingForPlayers DOTAHudHeroPickingPlayer.PlayerConnecting
 .Slot8 #HeroImagePickBar { wash-color: HeroSlot8Color; }
 .Slot9 #HeroImagePickBar { wash-color: HeroSlot9Color; }
 
-.DOTA_GAMEMODE_AP .PlayerInControl #HeroImagePickBar
+.DOTA_GAMEMODE_AP .PlayerInControl #HeroImagePickBar,
+.DOTA_GAMEMODE_TURBO .PlayerInControl #HeroImagePickBar
 {
 	visibility: collapse;
 }
@@ -220,7 +221,7 @@ DOTAHudPreGame.WaitingForPlayers DOTAHudHeroPickingPlayer.PlayerConnecting
 	transition-duration: .2s;
 }
 
-.AspectRatio5x4 #HeroImageContainer, .AspectRatio4x3 #HeroImageContainer
+.AspectRatio4x3 #HeroImageContainer
 {
 	height: 62px;
 }
@@ -357,7 +358,7 @@ DOTAHudPreGame.StartPregameIntro #HeroImageContainer
 	transition-duration: 0.3s;
 }
 
-.AspectRatio5x4 #NameContainer, .AspectRatio4x3 #NameContainer
+.AspectRatio4x3 #NameContainer
 {
 	margin-top: 68px;
 }
@@ -414,13 +415,15 @@ DOTAHudPreGame.StartPregameIntro #NameContainer
 .Slot9.PlayerInControl #NameContainer > Label { text-shadow: 0px 0px 12px 2 HeroSlot9ColorHalf; }
 
 .DOTA_GAMEMODE_AP .IsLocalPlayer.PlayerInControl #NameContainer > Label,
+.DOTA_GAMEMODE_TURBO .IsLocalPlayer.PlayerInControl #NameContainer > Label,
 .IsLocalPlayer #NameContainer > Label
 {
 	color: white;
 	font-weight: bold;
 }
 
-.DOTA_GAMEMODE_AP .PlayerInControl #NameContainer > Label
+.DOTA_GAMEMODE_AP .PlayerInControl #NameContainer > Label,
+.DOTA_GAMEMODE_TURBO .PlayerInControl #NameContainer > Label
 {
 	text-shadow: none;
 	color: #7a8a9d;
@@ -557,7 +560,7 @@ DOTAHudPreGame.StartPregameIntro #NameContainer
 	opacity: 1;
 }
 
-.AspectRatio4x3 #DisconnectedIcon, .AspectRatio5x4 #DisconnectedIcon
+.AspectRatio4x3 #DisconnectedIcon
 {
 	width: 80px;
 	margin-left: 14px;
@@ -568,7 +571,7 @@ DOTAHudPreGame.StartPregameIntro #NameContainer
 {
 	horizontal-align: center;
 	padding: 2px 4px 0px 4px;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( .25, #532E35dd), color-stop( .75, #532E35dd ), to( #00000000 ) );
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( .25, #532E35f4), color-stop( .75, #532E35f4 ), to( #00000000 ) );
 	color: #C5A97A;
 	color: gradient( linear, 0% 0%, 0% 100%, from( #C5A97A ), to( #C5A97A44 ) );
 	font-size: 14px;
@@ -592,7 +595,39 @@ DOTAHudPreGame.StartPregameIntro #NameContainer
 	visibility: visible;
 }
 
-.AspectRatio4x3 #PlayerMMR, .AspectRatio5x4 #PlayerMMR
+.AspectRatio4x3 #PlayerMMR
 {
 	margin-top: 36px;
+}
+
+
+#CaptainOverlay
+{
+	width: 38px;
+	height: 32px;
+	margin-top: 4px;
+	margin-left: 8px;
+
+	background-image: url("s2r://panorama/images/status_icons/captain_overlay_psd.vtex");
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	wash-color: #f28b2a;
+	pre-transform-scale2d: 0.3;
+	opacity: 0;
+	transition-property: opacity, pre-transform-scale2d;
+	transition-duration: 0.3s;
+}
+
+#DireTeamPlayers #CaptainOverlay
+{
+	horizontal-align: right;
+	margin-left: 0px;
+	margin-right: 8px;
+}
+
+.IsCaptain #CaptainOverlay
+{
+	opacity: 1;
+	pre-transform-scale2d: 1;
 }

@@ -257,4 +257,34 @@
 			m_ChildRef = resource:"particles/econ/items/omniknight/hammer_ti6_immortal/omniknight_hammer_ambient_side.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_attack1"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/omniknight/light_hammer/mesh/light_hammer_model.vmdl"
+			}
+		},
+	]
 }

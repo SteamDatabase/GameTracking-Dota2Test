@@ -21,7 +21,6 @@
  DevMsg
  DevMsg(char const*, ...)
  DevWarning(char const*, ...)
- EarlyInit_Tier0
  GetCPUInformation
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
@@ -41,6 +40,7 @@
  Plat_GetClockStart
  Plat_GetMonitorResolution
  Plat_GetOSType
+ Plat_GetThreadIndex
  Plat_GlobalMemoryStatus
  Plat_IsHighDPI
  Plat_IsInDebugSessionRaw
@@ -75,7 +75,7 @@
  V_UTF32ToUTF8
  V_atof
  V_atoi
- V_log2
+ V_logf
  V_qsort
  V_qsort_s
  V_snprintf
@@ -86,6 +86,7 @@
  V_strtod
  V_strtoi64
  V_strtoui64
+ V_swscanf
  V_vsnprintf
  V_vsnprintfRet
  V_vsnprintfSize
@@ -126,7 +127,6 @@
  g_pMemAlloc
  g_pThreadPool
  getenv
- logf
  longjmp
  malloc
  memchr
@@ -145,12 +145,19 @@
  raise
  setjmp
  sscanf
+ std::__1::__basic_string_common<true>::__throw_length_error() const
+ std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::__1::__vector_base_common<true>::__throw_out_of_range() const
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
  std::terminate()
  strchr
  strcmp
+ strdup
  strlen
  strstr
- strtol
  typeinfo for IStack_Annotation
  typeinfo for std::bad_alloc
  vtable for __cxxabiv1::__class_type_info

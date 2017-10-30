@@ -1,8 +1,7 @@
 	6RtcZO"
 	Evcomplex 
-	PerfTraceDepot
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-                      ***  ERROR  ***                              
+	wchar_t+ffff.
        Sum (ms)            Avg Time/Frame (ms)     Avg Time/Call (ms)
     00 00
    00
@@ -20,9 +19,9 @@
   PP p
   Scope                                                      Calls Calls/Frame  Time+Child    Pct        Time    Pct   Avg/Frame    Avg/Call Avg-NoChild        Peak
   found matching debug info in %short
+ 30HandleFirstWriteLockTransitionER14CEventListNode
+ 5WaitForReadLockTransitionER14CEventListNodej
  Avg Time/Frame (ms)
- CVirtualMachineCallStackTranslationEncoder
- Write_LockForReadER14CEventListNode
  [A\A^A_]
  [A^]
  bytes
@@ -30,30 +29,28 @@
  failed to dlopen %short error=%short
  fffff.
  ffffff.
- rLfff.
 !"Plat_SetWindowTitleW SDL_iconv_string failed."
 !((IAssertionFailureListener_Tier0Manipulator *)pListener)->GetRegisteredVar()
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
+!CVirtualMachineCallStackTranslationEncoder
+!Write_LockForReadER14CEventListNode
 !bAllAccess
 !bInherit
 !bNeedToKeepBookmark
 !count || ptr
+!fffff.
 !g_bEnforceLoggingSystemSingleton
 !m_EventSend.Check()
 !m_bAlive.Load()
 !m_pCurrentJobFunc && m_StackMemoryRange.pLow
-"2AllocOrFreeReadLockMemEPNS0_17TrackedReadLock_tE
 "></img>
-"Internal_
-"fffff.
 #16@0:8
-#EndScope
-#HangImageRGBA
-#dicateActivity
+#2AllocOrFreeReadLockMemEPNS0_17TrackedReadLock_tE
+#Internal_
 #ffff.
 #fffff.
-$Qt_GetCustomAllocators
-$engthOfMatchingPaths
+$HangImageRGBA
+$dicateActivity
 %%.%if%short
 %.0f pct of time accounted for
 %02X%02X/
@@ -61,12 +58,17 @@ $engthOfMatchingPaths
 %8.4f / %9.2f:  Writing profile data to '%short'
 %8.8x-%4.4x-%4.4x-%2.2x%2.2x-%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x
 %8x-%4x-%4x-%2x%2x-%2x%2x%2x%2x%2x%2x
+%EndScope
 %PlatUserNotificationCenterDelegate
+%Qt_GetCustomAllocators
 %double frames sampled for %.2f seconds
+%engthOfMatchingPaths
 %llu,%u,%u,%short
 %p is outside range %p-%p
 %s.dSYM/Contents/Resources/DWARF/%short
 %s.dbg
+%s.txt
+%s.vstackstats
 %short %int %short
 %short '%short'
 %short (%double) : %short
@@ -84,6 +86,7 @@ $engthOfMatchingPaths
 %short():
 %short/%short
 %short: %short
+%short: Unable to get executable filename (%double byte buffer).
 %short: different number of names and flags
 %short: different number of names and pointers
 %short: invalid flag byte count
@@ -92,7 +95,6 @@ $engthOfMatchingPaths
 %short: unable to load '%short', error %double
 %uxE9
 &#039;
-&5V_Unicode
 &AElig;
 &Aacute;
 &Acirc;
@@ -100,7 +102,6 @@ $engthOfMatchingPaths
 &Aring;
 &Atilde;
 &Auml;
-&BackdoorLoggingListener
 &Ccedil;
 &D9c0
 &ETH;
@@ -112,7 +113,6 @@ $engthOfMatchingPaths
 &Icirc;
 &Igrave;
 &Iuml;
-&Listener
 &Ntilde;
 &Oacute;
 &Ocirc;
@@ -169,7 +169,6 @@ $engthOfMatchingPaths
 &ndash;
 &not;
 &ntilde;
-&nvalidTag
 &oacute;
 &ocirc;
 &ograve;
@@ -202,18 +201,18 @@ $engthOfMatchingPaths
 &yen;
 &yuml;
 '%short' %short
-'5ColorPKcz
-'V_UnicodeValidatePK
+'5V_Unicode
+'BackdoorLoggingListener
+'Listener
 'ffff.
 'ffffff.
+'nvalidTag
 (%double) + %double bytes
 ((IAssertionFailureListener_Tier0Manipulator *)pListener)->GetRegisteredVar()
 ((pReplacementTop->m_pParentStackTrace + pReplacementTop->m_nParentStackTraceLength) <= pReturnAddressesOut) || ((pReturnAddressesOut + nArrayCount) <= pReplacementTop->m_pParentStackTrace)
 (++pFiber->m_nRefCount) == (1)
-(BackdoorLoggingState
-(EnableBackdoorLoggingListeners
-(LoggingMetaData_t
-(UnregisterLoggingListener
+(5ColorPKcz
+(V_UnicodeValidatePK
 ([A\A]A^A_]
 ([A^A_]
 (fff.
@@ -229,39 +228,42 @@ $engthOfMatchingPaths
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (m_nTier0ThreadID != 0) || (this == s_MainThreadThreadLocalConstructionScope.CastPointer())
 (m_nWrittenBytes + m_nWriteMarker) >= (nFileWritePosition + iDataSize)
-(m_pJmpBuf_IN != nullptr) == (m_pStackFramePatch != nullptr)
 (m_pReleaseInstance == pReleaseInstance) && (m_pFN_Release == pFN_Release) && (dependant.m_pDependencyLL == m_pNext)
 (nEncodedIndex & m_pInternalData->m_nIndexBitMask) == nEncodedIndex
 (nEncodedOffset & m_pInternalData->m_nLineOffsetBitMask) == nEncodedOffset
 (nIndex >= 0) && (nIndex < m_nParmCount)
 (pHigh >= m_StackMemoryRange.pLow) && (pHigh <= m_StackMemoryRange.pHigh)
+(pInsert->m_pParent == nullptr) && (registry.pListHead != pInsert)
 (size_t)ftell( m_pFile ) == m_nWrittenBytes
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
-)AddTagToChannel
-)Channel
-)CurrentStateIndex
-)opLoggingState
+)5ColorPKcz
+)BackdoorLoggingState
+)EnableBackdoorLoggingListeners
+)LoggingMetaData_t
 ***** OUT OF MEMORY! /+/ attempted allocation size: %llu ****
 ******** BEGIN VPROF REPORT ********
 ******** END VPROF REPORT ********
-*******************************************************************
-*FirstChannelID
-*HasTag
-*NextChannelID
-*NextTag
+*AddTagToChannel
+*Channel
+*CurrentStateIndex
+*UnregisterLoggingListener
 *fffff.
+*opLoggingState
+*pMarker == THREAD_INIT_ONCE_IN_INIT
 *pMemIter == 0xFFEEFFEE
-*rstTag
-+Color
-+Flags
-+LoggingMetaData_t const*
++FirstChannelID
++HasTag
++NextChannelID
++fffff.
++rstTag
 +tPOu
 +wchar_t A+u
 ,%03d
 ,/$`,
-,5ColorPKcz
-,9V_wcsistrPKwS0_
-,Assert
+,Color
+,Flags
+,LoggingMetaData_t const*
+,NextTag
 ,fff.
 -&B'-
 -- Hierarchical Call Graph --
@@ -273,10 +275,11 @@ $engthOfMatchingPaths
 -- Profile scopes sorted by time (without children) --
 -- Summary --
 --m_nWritingThreadLockCount == 0
--0V_UnicodeCaseCo
+-5ColorPKcz
+-9V_wcsistrPKwS0_
 -?[`/?291?
+-Assert
 -NOINITMEMORY
--PK17LoggingMetaData_tPKc
 -RANDOMIZEMEMORY
 -allowmultiple
 -clearassertstate
@@ -285,8 +288,9 @@ $engthOfMatchingPaths
 -dedicated
 -emaildumps
 -etwprofile
--export:RunWithAlternateStack-export:JmpToAlternateStackUH
 -ignorecontentasserts
+-memstackstats
+-memstackstats_keep_pools
 -mpi_worker
 -noassert
 -noautoargs
@@ -299,25 +303,27 @@ $engthOfMatchingPaths
 -testmode
 -vulkan
 ...`%1Is}
-.17LoggingMetaData_tPKc
-.5ColorPK
-.LeafCodeInfo_t const&
+.1V_UnicodeBufferLengthPK
 .dylib
 .gnu_debuglink
 .gnu_debuglink doesn'unsigned short have signed char filename
 .gnu_debuglink doesn'unsigned short have string terminator
 .gnu_debuglink filename string too long
 .u Ic
-/FreeScratch
-/Scratch
+/17LoggingMetaData_tPKc
+/5ColorPK
+/LeafCodeInfo_t const&
+/PK17LoggingMetaData_tPKc
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-/TagName
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/common/stackhelpers/stackhelpers_dwarf_translation.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/fibertools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/globallist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/stackstats_base.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/assert_dialog.cpp
@@ -334,10 +340,12 @@ $engthOfMatchingPaths
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/platform.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/platform_sdl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/platwindow.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/stackcontext.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/stackhelpers_virtualmachine_capture.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/stackstats.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/stacktools.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/threadtools.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/tier0_stdlib.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/tier0_strtools.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/tier0_unicode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/vprof.cpp
@@ -346,6 +354,7 @@ $engthOfMatchingPaths
 /long double%short%short
 /mnt/symbols
 /tmp/source_engine_%u.lock
+/uUI9
 /unsigned short	L9
 /usr/bin/sw_vers
 /usr/lib/libSystem.B.dylib
@@ -353,44 +362,48 @@ $engthOfMatchingPaths
 /usr/lib/libiconv.2.dylib
 /usr/lib/libobjc.A.dylib
 0'>0c*>
-00@@P
 0123456789ABCDEF
-0AllocFunc
+017LoggingMetaData_tPKc
 0CTestSuite
 0Call
 0DevWarningPKcz
 0DoesHaveAnyReadLocksER14CEventListNode
-0Dump
 0FiberYieldEPFbPvES0_
-0FreeFunc
+0FreeScratch
 0GetSTUBFunctionTableEv
-0ReallocFunc
+0Icw(H
 0STUB_Get
-0StrDupWrapperFunc
+0Scratch
+0TagName
 0ThreadProcEPv
 0UnlockReadAccountingEj
 0UnlockReadEv
+0V_UnicodeCaseCo
 0WaitForJobCompletionER14CEventListNode
-0ZeroMemory
 0[A\A^A_]
 0[A^]
-0atchAndWriteMiniDump
-0croProfilerAddTS
 10CVProfNodeiR20CVProfSummingContext
 11SetMaxSpinsEi
 17DuplicateReadLockER14CEventListNode
 17DuplicateReadLockEv
-1Append
+1AllocFunc
 1CThreadMultiWaitEvent
 1ConColorMsgRK5ColorPKcz
-1EP16ThreadHandle_t__
+1EP16ThreadHandle_t(bool)
 1EPFvPS_bE
 1EPKcP10ITestSuite
+1EbPKcbb
+1EiiPKcb
+1FreeFunc
 1FreeNodes_REP10CVProfNode
-1SetFiberJobEPFvPvES0_m
-1SetMiniDumpComment
+1GetSizeFunc
+1OpenSemaphoreInternalEPKcb
+1ReachedZeroReferencesEv
+1ReallocFunc
 1SetPriorityEi
+1StrDupWrapperFunc
 1WaitForCallE
+1ZeroMemory
 1ffff.
 21WaitForCreateCompleteEP12CThreadEvent
 22GetCounterNameAndValueEiRi
@@ -401,25 +414,19 @@ $engthOfMatchingPaths
 2ChangeMarkerERK20CCallStackMarkerBase
 2CloseSemaphoreInternalEibPKc
 2DetachFromStackContextEv
-2EP16ThreadHandle_t__
 2EPFiPPviiEjj
 2EPFvPS_bE
 2EPKc
 2EPKcP10ITestSuite
 2EbPKcbb
 2EiiPKcb
-2GetAdditionalFileAttachmentCallback
-2Handler
-2HardwareClockReliably
 2LockForWriteEv
 2MiniDumpStandardData_t21HandlerQueueHeartBeatEv
-2Options
 2OutputReportEiPKci
 2RemoveDeferredFunctionEPFvPvES0_
 2STUB_GetStatStruct
 2WaitForReplyEj
-2vtune
-30HandleFirstWriteLockTransitionER14CEventListNode
+2atchAndWriteMiniDump
 30HandleFirstWriteLockTransitionEv
 30LoggingSystem_IsChannelEnabledi18LoggingVerbosity_t
 30OnFrameBoundaryExecuteCallbackEPv
@@ -430,36 +437,41 @@ $engthOfMatchingPaths
 3CWorkerThread
 3CWorkerThread12GetCallParamEv
 3CreateAnonymousSyncObjectInternalEib
+3CreateSemaphoreInternalEPKcibPb
 3DLine
 3IsRunningInThreadMemoryEv
 3LoggingSystem_LogDirecti17LoggingSeverity_t
 3ResetCountersE14CounterGroup_t
 3SetEv
 3Unlock
-3stallProgressReportHandler
-3terateCapturedStackAnnotations
+3croProfilerAddTS
+3roximateProcessMemoryUsage
+3ttachDebuggerToProcess
+4Append
 4CVProfReporter
 4CallEjjbPFjjPP12CThreadEventijE
-4ExceptionHandler
 4ExecuteDeferredFunctionsEv
-4FilenamePrefix
 4GetMappingSizeEv
 4STUB_LockEntryEj
+4SetMiniDumpComment
 4TermEv
-4ThreadedLoadLibraryFunc
-58CCallStackStatsGatherer_Base
 5CThreadSpinLock
 5ClearEv
 5ColorPK
 5ColorPKcz
 5E9u0}/float
+5GetAdditionalFileAttachmentCallback
 5GetCounter
+5Handler
+5HardwareClockReliably
+5IsReadyToResumeEv
+5Options
 5ReplyEj
 5ResetEv
 5SetCurFrameTimeEm
 5SetThreadFiberMemoryRangeEm
 5TryLockForWriteEv
-5WaitForReadLockTransitionER14CEventListNodej
+5WaitForMultipleEiP
 5WaitForReadLockTransitionEj
 64-bit DWARF format is not supported
 64Table
@@ -467,83 +479,77 @@ $engthOfMatchingPaths
 6CThread
 6CThreadSemaphore
 6ClearUnusedSpaceToFFEEFFEEEPv
-6ForVoidPtrFn
-6OSDetailString
 6ResumeEv
 6SpinLockForWriteEy
 6V_UnicodeAdvanceP
-6ffff.
-6opMiniProfilerTS
-7CThreadSyncObjectntEv
-7Date
+6stallProgressReportHandler
+6terateCapturedStackAnnotations
+7ExceptionHandler
+7FilenamePrefix
 7GetCurrentCThreadEv
 7GetNameEv
 7GetScopeListMutexEv
+7IsSemaphoreOrphanedInternalEii
+7ReleaseEiPi
 7ReleaseEv
 7RunInThreadMemoryEPFxPvES0_
+7ThreadedLoadLibraryFunc
 7V_UnicodeCaseStringInStringPK
-7cTickDiff
-7lockStart
-7rocAddress
-8BenchmarkMode
-8CalcBudgetGroupLHS_RecursiveEP10CVProfNodePjif
+88CCallStackStatsGatherer_Base
 8CallStackStatStructDescFuncs
 8PeekCallEPj
 8ReleaseParentStackReferencesEv
-8ReleasePooledFiberEv
 8ScheduleVProfQueryEPS_
+8WaitImplEj
 8[A\A]A^A_]
 8[A^A_]
 8fff.
-8ffff.
 8ffffff.
 9DumpNodesEP10CVProfNodeibR20CVProfSummingContext
+9ForVoidPtrFn
 9GatherDataAndReportEv
-9ResumeJobEv
-9eckSDL
-9puTimeIsReliable
+9InternalSetFiberJobEPFvPvES0_mb
+9OSDetailString
+9ResumeJobEPv
+9opMiniProfilerTS
 ::<lambda_
 ::_CAssertFastInternal::AssertionFailed
 :>	Q>>
-:ModuleLoaded
-:fff.
-:tFL9
+:Date
+:cTickDiff
+:lockStart
+:rocAddress
+:tDL9
+;BenchmarkMode
 ;C u%
 ;E9|$0
-;TestMode
 ;_$uAH
-;lipboardText
-;unningWithDebugModules
-;upFPUControlWord
 </h1>
 </pre>
 </ul>
 <;r$<
-<Frequency
-<G})C
 <br>A
-<configureWindow
-<easeMouseCapture
+<eckSDL
 <fff.
 <img src="
 <pre>
-<ranslateSymbolicLinks
-<sAfter
+<puTimeIsReliable
 <signed char href=I
-=STime
-=croSec
+=ModuleLoaded
 >::operator ()
 >L97t-H
->croSecTickDiff
->nimizeWindow
+>TestMode
+>lipboardText
+>unningWithDebugModules
+>upFPUControlWord
 ?0,/a,
+?Frequency
 ?M96u/H
-?ashWindow
-?croSecs
-?essageBox
-?ffffff.
-?omputerName
-@ 0 P
+?easeMouseCapture
+?nameFile
+?ranslateSymbolicLinks
+?sAfter
+@ 0 0P
 @"NSString"16@0:8
 @16@0:8
 @24@0:8:16
@@ -552,8 +558,9 @@ $engthOfMatchingPaths
 @@@@@
 @@@@@@@@
 @@@@@@@@@@@
+@@Pl$
 @Fv^k
-@LocalTime
+@STime
 @[A^]
 @_Gestalt
 @_NSUserNotificationDefaultSoundName
@@ -633,6 +640,7 @@ $engthOfMatchingPaths
 @_fchmod
 @_fclose
 @_fcntl
+@_fdopen
 @_feof
 @_ferror
 @_fflush
@@ -664,12 +672,15 @@ $engthOfMatchingPaths
 @_gethostname
 @_getloadavg
 @_getpid
+@_getpriority
 @_getrlimit
 @_getrusage
 @_gettimeofday
 @_gmtime_r
 @_hypot
 @_kill
+@_ldexp
+@_ldexpf
 @_localeconv
 @_localtime
 @_localtime_r
@@ -691,10 +702,13 @@ $engthOfMatchingPaths
 @_memmove
 @_memset
 @_memset_pattern16
+@_mkdir
+@_mktemp
 @_mmap
 @_mprotect
 @_munmap
 @_nanosleep
+@_newlocale
 @_objc_msgSend
 @_open
 @_pclose
@@ -741,7 +755,9 @@ $engthOfMatchingPaths
 @_read
 @_realloc
 @_remove
+@_rename
 @_rewind
+@_rmdir
 @_semctl
 @_semget
 @_semop
@@ -794,13 +810,11 @@ $engthOfMatchingPaths
 @_vfscanf
 @_vprintf
 @_vsnprintf
-@_vsprintf
 @_vsscanf
-@_vswprintf
+@_vswprintf_l
 @_vswscanf
 @_waitpid
 @_wcschr
-@_wcsdup
 @_wcslen
 @_wcsncat
 @_wcsncpy
@@ -808,16 +822,13 @@ $engthOfMatchingPaths
 @_wcstoll
 @_wcstoull
 @_write
+@croSec
 @dyld_stub_binder
-@hreadIndex
-@llectMiniDumpsForFatalErrors
 @loader_path
-@nload
 @operator delete(void*)
 @operator delete[](void*)
 @operator new(unsigned long)
 @operator new[](unsigned long)
-@reate
 @rpath/libtier0.dylib
 @std::__1::__vector_base_common<true>::__throw_length_error() const
 @std::terminate()
@@ -832,13 +843,13 @@ $engthOfMatchingPaths
 @typeinfo name for CallStackStatStructDescFuncs
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
+@vtable for __cxxabiv1::__vmi_class_type_info
 A;^H|
 A;t$h
-A;v0unA
+A;v0uyA
 A>}?E>
 ARBWAp
 ATCSATAp
-AUrlHandler
 AWAVATS
 AWAVATSA
 AWAVATSH
@@ -850,7 +861,9 @@ AWAVAUATSL
 AWAVAUATSP
 AWAVAUATSP9
 AWAVAUATSPA
+AWAVAUATSPD
 AWAVAUATSPE
+AWAVAUATSPE1
 AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPM
@@ -861,24 +874,21 @@ AWAVSPA
 AWAVSPH
 AWAVSPHc
 AWAVSPI
-A\A]A^A_[]
-A\A]]
 AbortMessage({
 AbsolutePath
 AcquireSemaphoreInternalEj
+AcroSecTickDiff
 AddBudgetGroupNameEPKci
 AddDeferredFunctionEPFvPvES0_
 AddTestEP9ITestCase
 Affinity
-AgnoreContentAsserts
-AitializeCOM
 Alloc
 AllocPooledFiberENS_13SizeBuckets_tEm
 Always Ignore
+AnimizeWindow
 Annotation markers are packaging out of order
 Anonymous mutex cannot have bAllAccess == true
 AppendSlash
-ApproximateProcessMemoryUsage
 Assert
 AssertMiniProfilers
 AssertMsg_ConditionFailed_Internal_Result_t AssertMsg_ConditionFailed_Internal(LoggingChannelID_t, AssertionType_t, const tchar *const, int, bool, bool, bool, _AssertStaticVariableStruct_t *, const tchar *)
@@ -893,20 +903,20 @@ Attempt %double to find debug info for %short:
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame
 BCodeToHTML
-BUserName
 Bad node link detected
+BashWindow
 BasicStatStructFieldDesc
 BasicStatStructFieldDesc::DescribeField(unsigned char*, unsigned long)
+BcroSecs
 BeginScope
 BenchmarkMode
-Betwd
+BessageBox
 BinaryProperties_GetValue
 BitWriteMasks
-Blocaltime
+BomputerName
 BoostPriorityEv
 Bounds
 Break
-Btimegm
 BudgetGroupNameEPKc
 BudgetGroupNameToBudgetGroupIDEPKc
 Build ID filename too long
@@ -914,7 +924,6 @@ Build ID too large
 Build ID too large, %double bytes
 BuildVersion:	
 BuiltDebug
-BxecutablePath
 C2EPKcP10ITestSuite
 C2EPKci
 C2ERK20CCallStackMarkerBase
@@ -942,6 +951,7 @@ CCallStackStatsGatherer_Base::STUB_OnLinkedGathererPushed(CCallStackStatsGathere
 CCallStackStatsGatherer_Base::STUB_PopFromLinkedGatherers() const
 CCallStackStatsGatherer_Base::STUB_RemoveSharedInstanceData(CallStackStatsGatherer_SharedInstanceData_t const&)
 CCallStackStatsGatherer_Base::STUB_UnlockEntry(unsigned int)
+CCallStackStatsGatherer_ManagementLayer<MemStdInfo_t, 32, &_GetCallStack_Fast, CCallStackStatsGatherer_StatMutexPool<8192>, CMemStdNoRecurseAllocator, CBareVector, CStackStatsMap_Tier0>::CCallStackStatsGatherer_ManagementLayer(const char *const *, const char *const *, bool) [STATSTRUCT = MemStdInfo_t, CAPTUREDCALLSTACKDEPTH = 32, STACKACQUISITIONFUNCTION = &_GetCallStack_Fast, STATMUTEXHANDLER = CCallStackStatsGatherer_StatMutexPool<8192>, TEMPLATIZEDMEMORYALLOCATOR = CMemStdNoRecurseAllocator, VECTORTYPE = CBareVector, MAPTYPE = CStackStatsMap_Tier0]
 CColorizedLoggingListener
 CCommandLine
 CDefaultLoggingResponsePolicy
@@ -966,23 +976,22 @@ CFiber::DetachFromStackContext()
 CFiber::EstimateBytesUsed(unsigned long) const
 CFiber::FiberYield(bool (*)(void*), void*)
 CFiber::InitStackContext(void*, unsigned long, bool, unsigned long)
+CFiber::InternalSetFiberJob(void (*)(void*), void*, unsigned long, bool)
+CFiber::IsReadyToResume()
 CFiber::IsRunningInThreadMemory()
-CFiber::ReleasePooledFiber()
-CFiber::ResumeJob()
+CFiber::ReachedZeroReferences()
+CFiber::ResumeJob(void*)
 CFiber::RunInThreadMemory(long long (*)(void*), void*)
-CFiber::SetFiberJob(void (*)(void*), void*, unsigned long)
 CFiber::SetThreadFiberMemoryRange(unsigned long)
 CFiber::WaitForJobCompletion(CEventListNode&)
 CFiber::~CFiber()
 CFiberJobPool
-CKeyValuesSystem
-CLoad
+CLocalTime
 CLoggingSystem::AllocTag overflowed!
 CLoggingSystem::CLoggingSystem()
 CLoggingSystem::LoggingState_t *CLoggingSystem::GetCurrentState()
 CPUMonitoringInterval
 CPerfTraceDepotDefault
-CPrint
 CRecursionCallStackMarker::CRecursionCallStackMarker(bool)
 CScopeCreatedOrDestroyedHandler
 CSimpleLoggingListener
@@ -1009,6 +1018,14 @@ CStackTranslationHelper_Dwarf_Local
 CStackTranslationHelper_Local
 CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> > >
 CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> > >
+CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> > >
+CStdMemAlloc_Data<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> > >
+CStdMemAlloc_Data<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> > >
+CStdMemAlloc_Data<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> > >
+CStdMemAlloc_Data_Base
+CStdMemAlloc_Data_StackStats<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> >, false>
+CStdMemAlloc_Data_StackStats<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> >, false>
+CStdMemAlloc_Data_StackStats<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> >, true>
 CTMEH
 CTSList
 CTSListBase: Misaligned list
@@ -1073,10 +1090,11 @@ CThreadFullMutex::IsCreator() const
 CThreadFullMutex::Release()
 CThreadLocalScope::CScopeCreatedOrDestroyedHandler::CScopeCreatedOrDestroyedHandler(void (*)(CThreadLocalScope*, bool))
 CThreadLocalScope::CScopeCreatedOrDestroyedHandler::~CScopeCreatedOrDestroyedHandler()
-CThreadLocalScope::CThreadLocalScope(ThreadHandle_t)
-CThreadLocalScope::CThreadLocalScope(ThreadHandle_t__*)
+CThreadLocalScope::CThreadLocalScope(ThreadHandle_t, bool)
+CThreadLocalScope::CThreadLocalScope(ThreadHandle_t__*, bool)
 CThreadLocalScope::FindScopeForThreadHandle(ThreadHandle_t__*)
 CThreadLocalScope::GetScopeListMutex()
+CThreadLocalScope::IsLocalThreadScope() const
 CThreadLocalScope::SetThreadName(char const*)
 CThreadLocalScope::~CThreadLocalScope()
 CThreadManualEvent
@@ -1164,7 +1182,6 @@ CVProfile::BudgetGroupNameToBudgetGroupID(char const*)
 CVProfile::BudgetGroupNameToBudgetGroupID(char const*, int)
 CVProfile::CVProfile()
 CVProfile::CalcBudgetGroupL2CacheMisses_Recursive(CVProfNode*, unsigned int*, int, float)
-CVProfile::CalcBudgetGroupLHS_Recursive(CVProfNode*, unsigned int*, int, float)
 CVProfile::CalcBudgetGroupTimes_Recursive(CVProfNode*, unsigned int*, int, float)
 CVProfile::DumpNodes(CVProfNode*, int, bool, CVProfSummingContext&)
 CVProfile::ExecuteDeferredFunctions()
@@ -1235,7 +1252,8 @@ CaseSensitive
 Channel
 CharToUnderscore
 CharsToUTF
-CisableIOBuffering
+CheckEv
+ChreadIndex
 Client Game
 Client Input/Output
 Client Physics
@@ -1243,6 +1261,8 @@ Client Rendering
 Client Simulation
 Client VScript
 Client_Animation
+CllectMiniDumpsForFatalErrors
+Cnload
 Color
 CommandLine
 ComposeFileName
@@ -1259,8 +1279,8 @@ Couldn'unsigned short window icon! %short
 Count
 CounterGroup_t CVProfile::GetCounterGroup(int) const
 CounterNameEi
+Create
 CreateInterface
-Crintf
 Current
 CurrentFiberTL
 CurrentIndexCountEv
@@ -1272,19 +1292,17 @@ D$ I)
 D$ I;D$(unsigned short
 D$ L9
 D$0I;L$8v
-D9=:)
 D9c4~%H
 D9{4~%H
 D;r`uXC
 D;vpuXC
 D;wchar_t@wchar_t
 DEBUG_EXITPROCESS
-DOSTypesAreCompatible
-DUUIDImpl
+DUrlHandler
+DUserName
 DWARF: 
 DWARF_LOCAL_TRANSLATE
 DWARF_SYMBOL_PATH
-DWindow
 DebugDraw
 Decode
 DecodeBackslashSequencesInString
@@ -1299,21 +1317,22 @@ DevWarning(char const*, ...)
 Developer
 DeveloperConsole
 DeveloperVerbose
+DgnoreContentAsserts
 Direct
-DktopNotify
+Directory
+DitializeCOM
+DlertUser
 DoAssertDialog: invalid Assert response returned from dialog/vxconsole - breaking to debugger
 DomainNameCharacter
 DoubleSlashes
 Driver
+Dump
 Duplicate abbrev code 0x%long long at 0x%long long
 E9|$4~%H
 E;u0}
-EDescriptionString
-EJmpToAlternateStack
-ELocalHostname
+EKeyValuesSystem
+ELoad
 ENABLE_ASSERT_DIALOG_PRINT
-ENameFromOSType
-EPlatformName
 ERROR: Alloc exceeded allocation limit /+/ %llu > %llu
 ERROR: HangWatchdogInternal_BeginScope() - Hang watchdog not implemented for this platform!
 ERROR: HangWatchdogInternal_EndScope() - Hang watchdog not implemented for this platform!
@@ -1323,23 +1342,28 @@ ERROR: HangWatchdog_SetHangImageRGBA() - Hang watchdog not implemented for this 
 ERROR: HangWatchdog_SetMainThreadWindow() - Hang watchdog not implemented for this platform!
 ERROR: HangWatchdog_Shutdown() - Hang watchdog not implemented for this platform!
 ERROR: Virtual reservation exceeded limit /+/ %llu > %llu
-EVirtualReserve
 EarlyInit_Tier0
-EemPageSize
+Eetwd
+Ehdir
+Elocaltime
 Enable
 Encode
 EncodeAsNativePointerEPKcS1_j
-Enitor
+EnsureSemaphoreClearedInternalEi
+EnsureSemaphorePostedInternalEi
 EnterScopeEv
 Enumerate
+Erintf
 Errno
 Error
 Error reading args file
 Error_AlwaysSpewCallStack_
-EuseCapture
+Etimegm
 Event
 EventRWLock
+ExecutablePathUTF8
 Exists
+ExitCode
 ExitScopeEv
 Exiting due to logging LR_ABORT request.
 Expr: %short
@@ -1347,16 +1371,13 @@ Extension
 ExtraMasks
 ExtractDomainFromURL
 ExtractFile
-F@[A^]
 FAIL: !IsEmpty()
 FAIL: !Validate()
 FAIL: Not all items popped
-FInterface
-FInterfaceFactory
-FProcAddress
+FDirectory
+FPrint
 Failed to create thread (error 0x%long long)
 FakePath
-FeakRSS
 Fiber touched the edge of it'short stack memory. And possibly beyond
 FiberJobPool
 FieldDescriptions
@@ -1366,6 +1387,7 @@ FileNamesEqual
 FileSystem
 Filename
 FindNodeEP10CVProfNodePKc
+FisableIOBuffering
 FixMe
 FloatArray
 ForVoidPtrFn
@@ -1376,13 +1398,18 @@ Frequency
 FrequencyResults
 FullHTMLEntities
 FullMutex
-GConsoleApplication
+GDescriptionString
+GJmpToAlternateStack
+GLocalHostname
+GNameFromOSType
+GOSTypesAreCompatible
+GPlatformName
 GTHRH
+GWindow
 GameInstanceMutex
 GammaToLinearByteTable
-GastVerifyHardwareKey
-GcreenToWindowCoords
 General
+GenericCounters
 GenericMiniDumpHandler
 GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
 GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
@@ -1397,23 +1424,23 @@ GetNumBudgetGroupsEv
 GetResultEv
 GetSubNodeEPKciS1_
 GetThreadHandleEv
-GlobalMiniProfilers
+GktopNotify
 GroupEi
-GutdownCOM
 GxtMH
 H)H(H
 H91t8H
 H91tRH
+H9A short
 H9B short
 H9CHt*H
-H9X short
 H9X void
 H9Y short
 H9y wchar_t
 H9z short
-H;=F^
+H;C short
 H;C unsigned short
 H;C unsigned short*H
+H;K(void
 H>*SL>
 HEADH
 HEAP WARNING: memory block at %p appears to be corrupt
@@ -1421,39 +1448,36 @@ HEAP WARNING: memory block at %p is unexpectedly allocated
 HEAP WARNING: memory block at %p is unexpectedly free
 HEAP WARNING: memory block at %p is unexpectedly unrecognized
 HEAP WARNING: memory pointer %p is invalid
-HFailLimit
-HIsConsoleApplication
-HNeedsLowFragmentation
-HProtect
+HProcAddress
+HVirtualReserve
 H[A\A]A^A_]
 HangWatchdog
 HcCpD9
 HcS H
+HcreenToWindowCoords
 HeadlessMode
-HerifyHardwareKey
+Heap: standard allocator
+HemPageSize
 HideBudgetGroupEib
 High PC attr without addr value
 HistoryEntry.pModule->nGUIDBufferSize < ARRAYSIZE( tempModuleInfo.MoreBuffer )
+Hnitor
 HtmlEntityDecodeToUTF8
-HwWindow
+HuseCapture
 I9_Pt
 I9_PuvI
 I;D$ 
 I;D$ H
 I;D$0s
-I;_ short
 IAnnotationPackager
 ICommandLine
-IDebugSessionRaw
 IFiberJobPool
-IFree
-IHeadlessMode
-IInstructionPointer
+IInterface
+IInterfaceFactory
 ILoggingListener
 ILoggingResponsePolicy
 IMemAlloc
 IPerfTraceDepot
-IRunningOnCustomerMachine
 IStack_Annotation
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
@@ -1463,15 +1487,16 @@ IStack_VM_Segment_Marker::~IStack_VM_Segment_Marker()
 ITestCase
 ITestCase *GetUnitTest(int)
 ITestSuite
-Ic4$H
 IcD$HH
+IcT$X
 IdActive
-IdWatchdogTimer
+IeakRSS
 Ignore
 Ignore All Asserts
 Ignore For 24 Hours
 Ignore This File
-Illoc
+Illegal char string format specifier '%char' (%double) in '%short'
+Illegal wchar_t string format specifier '%char' (%double) in '%short'
 Implicit debug link filename too long
 Information
 InitEv
@@ -1512,44 +1537,49 @@ Invalid statement list line info offset %llx
 InvalidPathCharacters
 IsAliveEv
 IsThreadRunningEv
-J64BitOS
-JBeginWatchdogTimer
-JCustomerMachineMode
-JDirectory
-JIsReadOnly
-JSize
+IutdownCOM
+IwWindow
+JConsoleApplication
+JFailLimit
+JIsConsoleApplication
+JNeedsLowFragmentation
+JastVerifyHardwareKey
 Jobs/Coroutines
 JoinEj
-KFromString
+KDebugSessionRaw
+KFree
+KHeadlessMode
+KInstructionPointer
 KM^bM
+KProtect
 KPt0H
-KWindow
-KagedPoolInfo
+KRunningOnCustomerMachine
 KciR20CVProfSummingContext
+KerifyHardwareKey
 KeyValuesSystem
-L$0t+H
+Klloc
 L)` L
 L90t*H
+L9k short
 L9k void
 L9y void
 L9{0v
 L9{8v
-LHasDefaultMonitorIndexChanged
+LBeginWatchdogTimer
+LCustomerMachineMode
+LDirectory
 LOADING
-LScreenCoords
 LWindow
-LWindowTo
 LastDir
 LastMiniProfiler
 Lcc(A
 LckpE9
+LdWatchdogTimer
 LeadingWhitespace
 LeafCodeInfo_t const&
 Length
 LengthPK
-Lfff.
-LfreshDPI
-Lindow
+Lffffff.
 Line: %int
 Lines
 Linux
@@ -1562,6 +1592,7 @@ Linux 3.5
 Linux 3.6
 ListTests
 LocalScope
+LocalScope18IsLocalThreadScopeEv
 LockForReadEv
 Logging
 LoggingChannelID_t CLoggingSystem::RegisterLoggingChannel(const char *, RegisterTagsFunc, int, LoggingVerbosity_t, Color)
@@ -1586,13 +1617,13 @@ LoggingSystem_LogDirect(int, LoggingSeverity_t, LoggingMetaData_t const*, char c
 LoggingSystem_Logi17LoggingSeverity_t
 LoggingTag_t *CLoggingSystem::AllocTag(const char *)
 Low PC attr without addr value
+M)4$I
+M9&u{I
 M96u/H
 M;<unsigned short
 M;l$ tBH
-MActiveWindow
-MFocused
-MHighDPI
 MSFLH
+MVisible
 MacOS %d.%d.%double
 MacOS 10.10
 MacOS 10.11
@@ -1617,6 +1648,8 @@ Mathlib_
 MeanSpaceW
 MemAlloc
 MemAllocSystemInitialize
+MemPoolInfo_t
+MemStdInH
 Mfff.
 Mfffff.
 MiniDumpAdditionalStringData_t
@@ -1625,8 +1658,8 @@ MiniDumpStandardData_t::HandlerQueueHeartBeat() const
 MiniProfilerFromList
 Module
 Module %short is signed char debug build
+MoregroundWindow
 Msg_ConditionFailed
-MullscreenMinimizeOnFocusLoss
 MultiWaitObject
 Multiple high PC attrs
 Multiple low PC attrs
@@ -1634,23 +1667,22 @@ Multiple name attrs
 Multiple sibling attrs
 Multiple specification attrs
 Multiple statement lists
-NBorder
-NDefaultMonitorIndex
-NFullscreenState
-NIcon
-NMinimized
-NMonitorIndex
+N64BitOS
+NFile
+NIsReadOnly
 NO_GAME_ASSERT_DIALOG
 NO_RAISE_ON_ASSERT
 NSObject
 NSUserNotificationCenterDelegate
-NShellWindow
 NSize
 NTRYH
+NUUIDImpl
+NWindow
 Name attr without string value
 NamesAreEquivalent
+NconfigureWindow
 Networking
-Nfffff.
+Nmove
 No samples
 NodeSpike
 Non-default or mismatched color specified in logging channel long double restrict-registration!
@@ -1661,11 +1693,16 @@ Not enough data for compilation unit header
 Not enough data for compilation unit size
 Not enough data for line set header
 NumCountersEv
-OClient
+OActiveWindow
+OFromString
 OG_GENERAL
+OGlobalListRegistry
+OHighDPI
 OM_TimestampedLog
-OOsSpecificHandleToPlatWindow
-OResolution
+OWindow
+OWindowTo
+OagedPoolInfo
+Offffff.
 OnExitEv
 Only thread can stop self: Use signed char higher-level protocol
 OrCreateCounterEPKc14CounterGroup_t
@@ -1674,7 +1711,6 @@ Ordered object did not begin in signed char zeroed state
 Ordered object'short memory was modified prior to construction
 OsSpecificHandle
 OsSpecificWindowHandle_t Plat_WindowToOsSpecificHandle(PlatWindow_t)
-Osktop
 Other VScript
 Out of logging channels.
 Out of range abbrev code %llu
@@ -1685,15 +1721,15 @@ Out of thread local storage!
 OwnedByCurrentThread()
 P [A^]
 P@ @pP
-PBounds
-PIndexFromName
+PFocused
+PHasDefaultMonitorIndexChanged
+PKcbb
 PKviRK20CCallStackMarkerBase
-PName
 POSIX does not support inheriting full mutexes
 PPPP P
 PP`P`P
-PRawCallStack
 PS_bj
+PScreenCoords
 P[A^]
 Parameter file '%short' not found, skipping...
 Particle Simulation
@@ -1702,16 +1738,22 @@ Path component too long
 Path search filename too long
 PauseEv
 Peak %.2f ms frame
+PerfTraceDepot
+PfreshDPI
+Pindow
 PlatModule_t Plat_GetProcAddresses(const char *, int, const char **, size_t, void *, size_t, uint32 *, bool)
 PlatSDLFunctions_t *Plat_RequireSDL()
-PlatWindow_t Plat_CreateWindow(void *, const char *, int, int, int, int, int)
+PlatWindow_t Plat_CreateWindow(void *, const char *, int, int, int, int, int, uint)
+Plat_AlertUser(PlatWindow_t__*, wchar_t const*, wchar_t const*)
+Plat_AlertUserP14PlatWindow_t__PKwS2_
 Plat_CreateWindow:  Could not create SDL window: %short
 Plat_VirtualAlloc( pNewChunk, sizeof( AllocationChunkLL_t ), PLAT_VIRTUAL_COMMIT, PLAT_VIRTUAL_ACCESS_READ | PLAT_VIRTUAL_ACCESS_WRITE )
 Plat_VirtualFree( pIter, sizeof( AllocationChunkLL_t ), PLAT_VIRTUAL_DECOMMIT )
 Player
 PopThread
+Porting required
 Possible hung thread, call to thread timed out
-Pp@@p
+Ppp@@p
 PreHandlerCallback
 Prediction
 Prefix
@@ -1719,24 +1761,31 @@ Probably deadlock or failure waiting for thread to initialize.
 ProductName:	
 ProductVersion:	
 Prompt
+PullscreenMinimizeOnFocusLoss
 PushPopThread
 PushThread
 Q16@0:8
-Q8CCallStackStatsGatherer_Base
-QPrompt
-QitWin32ConsoleColorContext
+QFullscreenState
+QIcon
+QMinimized
+QMonitorIndex
+QShellWindow
+QSize
 Qkkbal
-QleaseThreadHandle
-QquireSDL
 QueueTests
 Quotes
 RAISE_ON_ASSERT
 RARARASAp p
-RApP`-Ap
+RApP`3Ap
 RBRAp
 RBRBRAp
-RBasicStatStructFieldDesc13DescribeFieldEPhm
+RBRBp
+RBorder
 RD?4KF?=GH?9FJ?8HL?
+RD`3ARBRBp
+ROsSpecificHandleToPlatWindow
+RResolution
+RWLockTranstionResult_t CSemiAutoRWLockT<CThreadRWLock_FastRead>::LockForWrite() [RWLOCK_TYPE = CThreadRWLock_FastRead]
 RWLockTranstionResult_t CThreadRWLock_FastRead::UnlockWrite_LockForRead()
 RWLock_FastRead
 Read off the end of abbrev attr data
@@ -1768,10 +1817,13 @@ ReturnsInt
 Rffffff.
 Right
 RootMiniProfiler
+Rsktop
 RunTestEv
 S>T7W>
 SATA`
 SBRARARARARARARARARARARARARARARARARARARBRA`
+SBounds
+SClient
 SDL_ClearQueuedAudio
 SDL_CloseAudioDevice
 SDL_CreateColorCursor
@@ -1784,6 +1836,7 @@ SDL_DisableScreenSaver
 SDL_EnableScreenSaver
 SDL_FreeCursor
 SDL_FreeSurface
+SDL_GL_SetAttribute
 SDL_GetAudioDeviceName
 SDL_GetClipboardText
 SDL_GetCurrentDisplayMode
@@ -1809,6 +1862,7 @@ SDL_GetRelativeMouseMode
 SDL_GetScancodeFromKey
 SDL_GetScancodeName
 SDL_GetWindowDisplayIndex
+SDL_GetWindowDisplayMode
 SDL_GetWindowFlags
 SDL_GetWindowFromID
 SDL_GetWindowGrab
@@ -1857,6 +1911,7 @@ SDL_SetHint
 SDL_SetRelativeMouseMode
 SDL_SetTextInputRect
 SDL_SetWindowBordered
+SDL_SetWindowDisplayMode
 SDL_SetWindowFullscreen
 SDL_SetWindowGammaRamp
 SDL_SetWindowGrab
@@ -1882,12 +1937,13 @@ SDL_iconv_string
 SDL_setenv
 SDL_wcslen
 SEWD`
-SNotify_
-SStats_
+SIndexFromName
+SName
 STUB_GetStatStructName
 STime
 SYMMH
 SaveState
+ScaleformAllocations_t
 Semaphore
 Semaphore name (%short) is longer than POSIX can handle, truncating.
 SeriousWarning(int, Color, char const*, ...)
@@ -1901,6 +1957,7 @@ Server VScript
 SetHeader
 SetOutputStreamEPFvPKczE
 SetSymbolSearchPath
+ShouldRun
 Shouldn'unsigned short add signed char deferred function to vprof; it'short not currently enabled.
 Sibling attr without ref4 value
 SignalSpike
@@ -1917,6 +1974,7 @@ Source line address out of range
 SpaceToUnderscore
 Specification 0x%long long not found
 Specification attr without ref4 value
+SsktopNotifyIconPath
 Stack capture writing to stack top'short replacement capture. Results will be inconsistent
 StackTop_Base
 Statement list without data4/sec_offset value
@@ -1930,13 +1988,14 @@ Surrounding
 Swap_Buffers
 Symbol name index too large
 Symbol nesting too deep
-T30CStackTop_ReferenceParentStack
 TA`%ATAp
 TBRATAp
+TBRATBp
 TBRBSATAp
 TBRBSAp
 TBSATAp
 TBSAp
+TBSAp p
 TBUATATAp
 TBUAp
 TBVAp
@@ -1946,14 +2005,14 @@ TCRBRBUASARBRAp
 TCRBSATAp
 TCRBUAUAp
 TCUATAp
-TC`-ARAp
-TKnownLoadedModules
+TD`3ARBRBp
 TODO: Virtual machine address space migration.
+TRawCallStack
 TSList cannot hold more that %double nodes
 TSListTests::CListOps
 TSListTests::CQueueOps
 TSListTests::CTestOps
-TVerifyLoadedModuleMappings
+TV_stristr_fastPKcS0_
 Target buffer for V_URLEncode needs to be 3 times larger than source to guarantee enough space
 TerminateEi
 Test bucket %double has an invalid value %double
@@ -1969,25 +2028,26 @@ Thread failed to respond, probably exited
 Thread synchronization object is unuseable
 Thread(%p/0x%llx)
 ThreadGetCurrentId() == (ThreadId_t)m_threadId
-ThreadHandle_t CreateSimpleThread(ThreadFunc_t, void *, ThreadId_t *, unsigned int, bool, const char *)
-ThreadInitOnceCall initialization failed
+ThreadHandle_t CreateSimpleThread(ThreadFunc_t, void *, ThreadId_t *, unsigned int, bool, const char *, size_t)
 ThreadLocalScope
 ThreadRWLock
 Tier1_
+TitWin32ConsoleColorContext
 Title
+TleaseThreadHandle
 ToString
 ToUTF
 TokenWaiting
 Tools
+TquireSDL
 Trailing
 TreesAlreadyDumped.m_nCount < TreesAlreadyDumped.m_nMaxCount
 Tried to create signed char thread that has already been created!
 TypeFlags
-U7Get
-UAUATH
+U8CCallStackStatsGatherer_Base
 UCS-2
+UPrompt
 URLCharacter
-USAWAVAUATH
 UTF-8
 Unable to create event, error %double
 Unable to create semaphore, error %double
@@ -2041,11 +2101,10 @@ Unsupported define_file instruction
 Unsupported maximum number of instruction operations %double
 Usage
 UserStreamInfo
-V0Get
-V3DecodeFromNativePointerEPKvPcjS2_jPi
+UtlVectorAllocationInfo_t
 VALVE_DISABLE_CLOCK_SPEED_CALCULATION
 VALVE_TESTMODE
-VATOM index %double out of range, recompile tier0 with larger atom table
+VBasicStatStructFieldDesc13DescribeFieldEPhm
 VGAME
 VIRTH
 VMIDEv
@@ -2061,6 +2120,9 @@ V_URLDecode needs signed char dest buffer at least as large as the source
 V_UnicodeAdvance(char*, int)
 V_UnicodeAdvance(unsigned short*, int)
 V_UnicodeAdvance(wchar_t*, int)
+V_UnicodeBufferLength(char const*, int, bool&)
+V_UnicodeBufferLength(unsigned short const*, int, bool&)
+V_UnicodeBufferLength(wchar_t const*, int, bool&)
 V_UnicodeCaseCompare(char const*, char const*, int, EStringConvertErrorPolicy)
 V_UnicodeCaseCompare(unsigned short const*, unsigned short const*, int, EStringConvertErrorPolicy)
 V_UnicodeCaseCompare(wchar_t const*, wchar_t const*, int, EStringConvertErrorPolicy)
@@ -2080,7 +2142,6 @@ V_UnicodeValidate(char const*)
 V_UnicodeValidate(unsigned short const*)
 V_UnicodeValidate(wchar_t const*)
 V_stristr_fast(char const*, char const*)
-V_stristr_fastPKcS0_
 V_wcsistr(wchar_t const*, wchar_t const*)
 Valid
 ValueEi
@@ -2090,16 +2151,15 @@ Vffff.
 Virtual Machine
 Virtual Machine "%short"
 VirtualMachineEncoders
-Visible
 Vv16@0:8
-W35GetLineOffsetPostShiftedSignBitMaskEv
 WARNING: Large alloc of %llu bytes of memory (limit %llu)
 WARNING: Large virtual reservation of %llu bytes of memory (limit %llu)
 WARNING: total wall clock time was %.2f seconds, results may be invalid
-WLineOffsetBitShiftEv
-WNameEv
+WNotify_
+WStats_
 WString
 WStringPtr
+WVerifyLoadedModuleMappings
 WaitForReadEv
 WarnLimit
 Warning
@@ -2109,7 +2169,6 @@ WatchDog! Server took too long to process (probably infinite loop)
 Wfff.
 Whitespace
 Win32ConsoleColor
-Win32ConsoleCursorColumnIndex
 Windows
 Windows .11
 Windows 10
@@ -2132,16 +2191,16 @@ WorkerEjjb
 WorkerThread
 WritePtr
 Write_LockForReadEv
-X4EnumerateEncodingIndicesEPFbPS_jPKcS2_jPvES3_
-X5GetIndexBitMaskEv
-X6GetIndexBitShiftEv
-XLineOffsetBitMaskEv
+X30CStackTop_ReferenceParentStack
+XKnownLoadedModules
 XS&Y+
 X[A\A]A^A_]
 X[A^A_]
-Ynexttoken
-Z0CCallStackMarkerBase35TestMarkerAgainstCapturedStackIndexEPKPKvii
-Z8STUB_EvaluateGathererLinkageERS_
+Y1EPKc
+Y7Get
+Z0Get
+Z3DecodeFromNativePointerEPKvPcjS2_jPi
+ZNameEv
 [ func+child      func ]       Count
 [ func+child      func ]  [ func+child   func ]  [ func+child   func ]    Count   Peak
 [/code]
@@ -2152,38 +2211,36 @@ Z8STUB_EvaluateGathererLinkageERS_
 [1;31m%short
 [1;32m:%int:
 [1;33mASSERT: 
-[3STUB_GetVectorData_StoredSubTreesERPKPKS_Rj
+[35GetLineOffsetPostShiftedSignBitMaskEv
+[4EnumerateEncodingIndicesEPFbPS_jPKcS2_jPvES3_
+[5GetIndexBitMaskEv
 [9x)bw
 [A\A]A^A_]
 [A\A^A_]
 [A^A_]
-[VectorData_StatEntriesERPKvRj
+[LineOffsetBitShiftEv
 [code]
 [img]
 [list]
 [url=
-\2STUB_OnGathererRemovedERKS_
-\7STUB_OnLinkedGathererP
-\7STUB_PopFromLinkedGatherersEv
+\6GetIndexBitShiftEv
 \8hA+
-\9STUB_RemoveSharedInstanceDataERK43CallStackStatsGatherer_SharedInstanceData_t
 \D2%4
-\NameEv
+\LineOffsetBitMaskEv
 \fff.
+\nexttoken
 \u"A)
-]6STUB_UnlockEntryEj
-]GetCallStack
 ]ffff.
-]oppedERKS_
-^CDeferredCallStackMarker6
-^GetSharedGlobalInstance
-^Markup_
-^ReleaseSharedGlobalInstance
-^Write_
+^0CCallStackMarkerBase35TestMarkerAgainstCapturedStackIndexEPKPKvii
+^8STUB_EvaluateGathererLinkageERS_
+^fffff.
 ^{_NSZone=}16@0:8
+_3STUB_GetVectorData_StoredSubTreesERPKPKS_Rj
+_7STUB_PopFromLinkedGatherersEv
 _@fff.
 _AppendMiniProfilerToList
 _AssertMsg_ConditionFailed
+_AssertMsg_ConditionFailed_ContextFunc
 _AssertValidStringPtr
 _AssertValidWStringPtr
 _BinaryProperties_GetValue
@@ -2196,6 +2253,7 @@ _CatchAndWriteMiniDumpExReturnsInt
 _CatchAndWriteMiniDumpForVoidPtrFn
 _CommandLine
 _ConDMsg
+_ContextFunc
 _CrackSmokingCompiler
 _CreateCommandLine
 _CreateSimpleProcess
@@ -2203,9 +2261,7 @@ _CreateSimpleThread
 _DeclareCurrentThreadIsMainThread
 _DevMsg
 _DevWarning
-_DumpNamedInstance
 _EarlyInit_Tier0
-_EnumerateRegisteredInstances
 _Fast
 _FreeCommandLine
 _Gestalt
@@ -2225,7 +2281,6 @@ _GetPlatformName
 _GetSymbolNameFromAddress
 _GetThreadedLoadLibraryFunc
 _GetUnitTest
-_GetVAtom
 _GetWin32ConsoleCursorColumnIndex
 _HangWatchdogInternal_BeginScope
 _HangWatchdogInternal_EndScope
@@ -2280,6 +2335,7 @@ _MemAllocScratch
 _MemAlloc_AllocFunc
 _MemAlloc_CallocFunc
 _MemAlloc_FreeFunc
+_MemAlloc_GetSizeFunc
 _MemAlloc_ReallocFunc
 _MemAlloc_StrDupWrapperFunc
 _MemFreeScratch
@@ -2299,13 +2355,17 @@ _OBJC_CLASS_$_NSUserNotification
 _OBJC_CLASS_$_NSUserNotificationCenter
 _OBJC_METACLASS_$_NSObject
 _OSTypesAreCompatible
+_Plat_AlertUser
+_Plat_AppendMiniDumpErrorString
 _Plat_ApproximateProcessMemoryUsage
 _Plat_AttachDebuggerToProcess
 _Plat_BeginWatchdogTimer
 _Plat_ChangeCurrentFrame
 _Plat_CheckSDL
+_Plat_ClearMiniDumpErrorString
 _Plat_CollectMiniDumpsForFatalErrors
 _Plat_ConvertToLocalTime
+_Plat_CreateDirectory
 _Plat_CreateGameInstanceMutex
 _Plat_CreateUUIDImpl
 _Plat_CreateWindow
@@ -2339,10 +2399,11 @@ _Plat_GetDesktopBounds
 _Plat_GetDesktopResolution
 _Plat_GetDocumentDirectory
 _Plat_GetEnv
-_Plat_GetExecutablePath
 _Plat_GetExecutablePathUTF8
+_Plat_GetGlobalListRegistry
 _Plat_GetLocalTime
 _Plat_GetMemPageSize
+_Plat_GetMiniDumpErrorString
 _Plat_GetModuleFilename
 _Plat_GetModuleInterfaceFactory
 _Plat_GetModuleProcAddress
@@ -2376,6 +2437,7 @@ _Plat_InstallUrlHandler
 _Plat_Is64BitOS
 _Plat_IsConsoleApplication
 _Plat_IsDirectory
+_Plat_IsFile
 _Plat_IsHighDPI
 _Plat_IsInBenchmarkMode
 _Plat_IsInDebugSessionRaw
@@ -2386,6 +2448,7 @@ _Plat_IsRunningOnCustomerMachine
 _Plat_IsWindowFocused
 _Plat_IsWindowMinimized
 _Plat_IsWindowVisible
+_Plat_IsWindowsGameDVREnabled
 _Plat_LoadInterface
 _Plat_LoadModule
 _Plat_LoadModuleRaw
@@ -2407,6 +2470,9 @@ _Plat_RefreshDPI
 _Plat_RelativeTickFrequency
 _Plat_RelativeTicks
 _Plat_ReleaseMouseCapture
+_Plat_RemoveDirectory
+_Plat_RemoveFile
+_Plat_RenameFile
 _Plat_RequireSDL
 _Plat_RunningWithDebugModules
 _Plat_ScreenToWindowCoords
@@ -2418,6 +2484,8 @@ _Plat_SetClipboardText
 _Plat_SetCpuTimeIsReliable
 _Plat_SetCurrentFrame
 _Plat_SetDefaultMonitorIndex
+_Plat_SetDesktopNotifyIconPath
+_Plat_SetFileReadOnly
 _Plat_SetForegroundWindow
 _Plat_SetFullscreenMinimizeOnFocusLoss
 _Plat_SetIsConsoleApplication
@@ -2465,7 +2533,6 @@ _Plat_VirtualProtect
 _Plat_WindowToOsSpecificHandle
 _Plat_WindowToScreenCoords
 _Plat_chdir
-_Plat_chmod
 _Plat_ctime
 _Plat_getwd
 _Plat_gmtime
@@ -2484,6 +2551,7 @@ _RestoreWin32ConsoleColor
 _RunTSListTests
 _RunTSQueueTests
 _RunWithAlternateStack
+_SendActionToAssertDialog
 _SeriousWarning
 _SetAssertionCallback
 _SetAssertionPrompt
@@ -2509,16 +2577,16 @@ _StackTools_InstallModuleMappingListener
 _StackTools_RemoveModuleMappingListener
 _StackTools_VerifyLoadedModuleMappings
 _ThreadCloseProcess
-_ThreadFinishInitOnce
 _ThreadGetCurrentHandle
 _ThreadGetCurrentId
 _ThreadGetCurrentProcessHandle
 _ThreadGetCurrentProcessId
 _ThreadGetPriority
 _ThreadGetProcessExitCode
+_ThreadGetProcessPriority
 _ThreadInMainThread
-_ThreadInitOnce
-_ThreadInitOnceCall
+_ThreadInitOnceCall_Finish
+_ThreadInitOnceCall_ShouldRun
 _ThreadInterlockedExchange64
 _ThreadIsProcessActive
 _ThreadIsProcessIdActive
@@ -2648,6 +2716,7 @@ _V_exp2
 _V_exp2f
 _V_expf
 _V_fclose
+_V_fdopen
 _V_feof
 _V_ferror
 _V_fflush
@@ -2657,6 +2726,7 @@ _V_fileno
 _V_fmod
 _V_fmodf
 _V_fopen
+_V_fopenUTF8
 _V_fprintf
 _V_fputc
 _V_fputs
@@ -2683,6 +2753,8 @@ _V_iswdigit
 _V_iswlower
 _V_iswspace
 _V_iswupper
+_V_ldexp
+_V_ldexpf
 _V_localeconv
 _V_log
 _V_log10
@@ -2691,6 +2763,8 @@ _V_log2
 _V_log2f
 _V_logf
 _V_longjmp
+_V_mkostemps
+_V_mkstemps
 _V_normalizeFloatString
 _V_normalizeFloatWString
 _V_pow
@@ -2699,7 +2773,7 @@ _V_pretifymem
 _V_pretifynum
 _V_qsort
 _V_qsort_s
-_V_rand
+_V_rewind
 _V_setjmp
 _V_setvbuf
 _V_sin
@@ -2758,6 +2832,7 @@ _V_wcsnicmp
 _V_wcstod
 _V_wcstoi64
 _V_wcstoui64
+_VectorData_StatEntriesERPKvRj
 _VoidFnPtrLookup_Tier0
 _Warning
 __AssertValidReadPtr
@@ -2842,7 +2917,6 @@ __data
 __dyld_get_image_header
 __dyld_get_image_name
 __dyld_image_count
-__eh_frame
 __exit
 __gcc_except_tab__TEXT
 __got
@@ -2876,7 +2950,6 @@ _atan
 _atan2
 _atan2f
 _atanf
-_athererRegistration
 _atof
 _atoi
 _atoll
@@ -2903,6 +2976,7 @@ _expf
 _fchmod
 _fclose
 _fcntl
+_fdopen
 _feof
 _ferror
 _fflush
@@ -2943,9 +3017,11 @@ _g_VProfNodeSpikeReporting
 _g_VProfSignalSpike
 _g_bPlatCpuTimeIsReliable
 _g_nMiniProfilerFrame
+_g_nMiniProfilerGenericCounters
 _g_pAssertMiniProfilers
 _g_pCurrentFiberTL
 _g_pFiberJobPool
+_g_pGenericMicroProfilers
 _g_pGlobalMiniProfilers
 _g_pLastMiniProfiler
 _g_pMemAlloc
@@ -2957,12 +3033,15 @@ _getenv
 _gethostname
 _getloadavg
 _getpid
+_getpriority
 _getrlimit
 _getrusage
 _gettimeofday
 _gmtime_r
 _hypot
 _kill
+_ldexp
+_ldexpf
 _localeconv
 _localtime
 _localtime_r
@@ -2983,10 +3062,13 @@ _memcpy
 _memmove
 _memset
 _memset_pattern16
+_mkdir
+_mktemp
 _mmap
 _mprotect
 _munmap
 _nanosleep
+_newlocale
 _nexttoken
 _objc_msgSend
 _open
@@ -3033,7 +3115,9 @@ _rand
 _read
 _realloc
 _remove
+_rename
 _rewind
+_rmdir
 _semctl
 _semget
 _semop
@@ -3084,14 +3168,12 @@ _vfprintf
 _vfscanf
 _vprintf
 _vsnprintf
-_vsprintf
 _vsscanf
-_vswprintf
+_vswprintf_l
 _vswscanf
 _vtune
 _waitpid
 _wcschr
-_wcsdup
 _wcslen
 _wcsncat
 _wcsncpy
@@ -3099,15 +3181,15 @@ _wcstod
 _wcstoll
 _wcstoull
 _write
-`EmbeddedScript
-`IStack_Annotation
-`RemoveEv
-`Thread
+`2STUB_OnGathererRemovedERKS_
+`7STUB_OnLinkedGathererP
+`9STUB_RemoveSharedInstanceDataERK43CallStackStatsGatherer_SharedInstanceData_t
+`NameEv
 ``   ``` 
+`oppedERKS_
 `p0`P
-a1EPFiPPviiEjj
-a7CaptureEPFiPPviiEjj
-aThread
+a6STUB_UnlockEntryEj
+aGetCallStack
 ackSmokingCompiler
 aco-nz
 alloc
@@ -3118,6 +3200,7 @@ assertioH
 atchdogHandlerFunction
 ativeTick
 auto CBottomMemoryManager::Reserve(void *, size_t, uintp)::(anonymous class)::operator()() const
+auto CCallStackStatsGatherer_ManagementLayer<MemStdInfo_t, 32, &_GetCallStack_Fast, CCallStackStatsGatherer_StatMutexPool<8192>, CMemStdNoRecurseAllocator, CBareVector, CStackStatsMap_Tier0>::RemoveSharedInstanceData(const CallStackStatsGatherer_SharedInstanceData_t &)::(anonymous class)::operator()() const [STATSTRUCT = MemStdInfo_t, CAPTUREDCALLSTACKDEPTH = 32, STACKACQUISITIONFUNCTION = &_GetCallStack_Fast, STATMUTEXHANDLER = CCallStackStatsGatherer_StatMutexPool<8192>, TEMPLATIZEDMEMORYALLOCATOR = CMemStdNoRecurseAllocator, VECTORTYPE = CBareVector, MAPTYPE = CStackStatsMap_Tier0]
 auto CCommandLine::SetParm(int, const char *)::(anonymous class)::operator()() const
 auto CEventLock::Lock()::(anonymous class)::operator()(CThreadEvent &)::(anonymous class)::operator()() const
 auto CEventRWLock::UnlockWrite_LockForRead(CEventListNode &)::(anonymous class)::operator()() const
@@ -3128,9 +3211,12 @@ auto COrderedConstructor_Create<CFiber, COrderedResolve_NoResolve, false>::AddRe
 auto COrderedConstructor_Create<CFiberJobPool, CResolveOrderedFunc<CFiberJobPool, &s_FiberJobPool_ResolveFunc>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CFiberJobPool, RESOLVECLASS = CResolveOrderedFunc<CFiberJobPool, &s_FiberJobPool_ResolveFunc>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CLoggingSystem, CResolveOrderedFunc<CLoggingSystem, &ResolveGlobalLoggingSystem>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CLoggingSystem, RESOLVECLASS = CResolveOrderedFunc<CLoggingSystem, &ResolveGlobalLoggingSystem>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CMainThreadFiber, COrderedResolve_NoResolve, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CMainThreadFiber, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CRootMiniProfiler, CResolveOrderedDependenciesTuple<CResolveOrderedDependency<COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CMiniProfiler>, COrderedResolve_NoResolve, true>, &s_pLastMiniProfilerTS> >, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CRootMiniProfiler, RESOLVECLASS = CResolveOrderedDependenciesTuple<CResolveOrderedDependency<COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CMiniProfiler>, COrderedResolve_NoResolve, true>, &s_pLastMiniProfilerTS> >, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CThreadFastMutex, COrderedResolve_NoResolve, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CThreadFastMutex, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CThreadFastMutex, COrderedResolve_NoResolve, true>::AddRef(bool)::(anonymous class)::operator()() const [T = CThreadFastMutex, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
+auto COrderedConstructor_Create<CThreadKeyHolder, COrderedResolve_NoResolve, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CThreadKeyHolder, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CThreadLocalScope, CResolveOrderedFunc<CThreadLocalScope, &ResolveOrderedConstructor_MainThreadThreadLocalConstructionScope>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CThreadLocalScope, RESOLVECLASS = CResolveOrderedFunc<CThreadLocalScope, &ResolveOrderedConstructor_MainThreadThreadLocalConstructionScope>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<CThreadLocalScope::CScopeCreatedOrDestroyedHandler, CResolveOrderedFunc<CThreadLocalScope::CScopeCreatedOrDestroyedHandler, &ResolveOrderedConstructor_ThreadCreationEventHandler_ThreadID>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = CThreadLocalScope::CScopeCreatedOrDestroyedHandler, RESOLVECLASS = CResolveOrderedFunc<CThreadLocalScope::CScopeCreatedOrDestroyedHandler, &ResolveOrderedConstructor_ThreadCreationEventHandler_ThreadID>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<GenericThreadLocals::CThreadLocalInt<int>, COrderedResolve_NoResolve, true>::AddRef(bool)::(anonymous class)::operator()() const [T = GenericThreadLocals::CThreadLocalInt<int>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
@@ -3139,7 +3225,9 @@ auto COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CMiniProfil
 auto COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CThreadLocalScope>, COrderedResolve_NoResolve, true>::AddRef(bool)::(anonymous class)::operator()() const [T = GenericThreadLocals::CThreadLocalPtr<CThreadLocalScope>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
 auto COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<LongJmpUnwindLL_t>, COrderedResolve_NoResolve, true>::AddRef(bool)::(anonymous class)::operator()() const [T = GenericThreadLocals::CThreadLocalPtr<LongJmpUnwindLL_t>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
 auto COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<MemoryRange_t>, COrderedResolve_NoResolve, true>::AddRef(bool)::(anonymous class)::operator()() const [T = GenericThreadLocals::CThreadLocalPtr<MemoryRange_t>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
-auto COrderedConstructor_DependencyManagement<CThreadLocalScope::CScopeCreatedOrDestroyedHandler>::InternalConstruct(void (*)(CThreadLocalScope *, bool))::(anonymous class)::operator()() const [T = CThreadLocalScope::CScopeCreatedOrDestroyedHandler]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&OrderedInit_Platform> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&OrderedInit_Platform>]
+auto COrderedConstructor_DependencyManagement<CThreadLocalScope::CScopeCreatedOrDestroyedHandler>::InternalConstruct(void (&&)(CThreadLocalScope *, bool))::(anonymous class)::operator()() const [T = CThreadLocalScope::CScopeCreatedOrDestroyedHandler]
 auto CThreadFastMutex::AssertOwnedByCurrentThread()::(anonymous class)::operator()() const
 auto CThreadMultiWaitEvent::Reset()::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<CRootMiniProfiler> &, COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<CMiniProfiler> > &)::(anonymous class)::operator()() const
@@ -3149,8 +3237,10 @@ auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagemen
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CConstructedMainThreadID> &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CLoggingSystem> &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CMainThreadFiber> &)::(anonymous class)::operator()() const
+auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&OrderedInit_Platform> > &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CRootMiniProfiler> &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CThreadFastMutex> &)::(anonymous class)::operator()() const
+auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CThreadKeyHolder> &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CThreadLocalScope::CScopeCreatedOrDestroyedHandler> &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<CThreadLocalScope> &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalInt<int> > &)::(anonymous class)::operator()() const
@@ -3160,19 +3250,25 @@ auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagemen
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<LongJmpUnwindLL_t> > &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<MemoryRange_t> > &)::(anonymous class)::operator()() const
 auto OrderedDependency_t::LinkDependency(COrderedConstructor_DependencyManagement<void> &, COrderedConstructor_DependencyManagement<void> &)::(anonymous class)::operator()() const
+auto V_mkostemps(char *, int, int)::(anonymous class)::operator()() const
 auto _CCallStackStatsGatherer_Internal_DumpTree(const CCallStackStatsGatherer_Base &, CCallStackStatsGatherer_DumpHelperVars_t &, bool, SimpleVector_t<const CCallStackStatsGatherer_Base *> &)::(anonymous class)::operator()() const
+auto _GlobalListHelpers::AddToSortedRegistry(GlobalListEntryTree_t *, int (*)(GlobalListEntryTree_t *, GlobalListEntryTree_t *), GlobalListTypelessRegistry_t &)::(anonymous class)::operator()() const
 autoargs
 autorelease
-b2CThread
-bCallStackMarker_ThisLineC
+bCDeferredCallStackMarker6
 bContinue ? (nEnumeratedInstances == allGatherers.Count()) : (nEnumeratedInstances <= allGatherers.Count())
+bDumpNamedInstance
 bFound
+bGetSharedGlobalInstance
+bMarkup_
 bPlatCpuTimeIsReliable
+bReleaseSharedGlobalInstance
 bValidName
+bWrite_
 bbreviatePathInPlace
 bool CAnnotationPackager::InternalString(const char *, const void *, int)
 bool CDwarfModule::OpenFile(const char *)
-bool CFiber::ResumeJob()
+bool CFiber::ResumeJob(void *)
 bool CThread::Join(unsigned int)
 bool CThreadSemaphore::Release(int32, int32 *)
 bool CThreadSyncObject::CreateAnonymousSyncObjectInternal(int32, bool)
@@ -3184,7 +3280,7 @@ bool Plat_IsModuleLoaded(const char *)
 bool Plat_IsWindowFocused(PlatWindow_t)
 bool Plat_IsWindowMinimized(PlatWindow_t)
 bool Plat_IsWindowVisible(PlatWindow_t, bool)
-bool ThreadInitOnce(ThreadInitOnce_t *)
+bool ThreadInitOnceCall_ShouldRun(ThreadInitOnce_t *)
 bool ThreadJoin(ThreadHandle_t, unsigned int)
 bool ThreadSetProcessPriority(ProcessHandle_t, ThreadProcessPriority_t)
 bool V_BBCodeToHTML(char *, const int, const char *, const int)
@@ -3202,18 +3298,17 @@ c24@0:8@16
 c25EStringConvertErrorPolicy
 c32@0:8@"NSUserNotificationCenter"16@"NSUserNotification"24
 c32@0:8@16@24
-c9GenericThreadLocals16CThreadLocalBase
+cEmbeddedScript
+cEnumerateRegisteredInstances
 cInitialCount < INT32_MAX
 cPcii25EStringConvertErrorPolicy
 cS0_i25EStringConvertErrorPolicy
-cStackTop_CopyParentStack
-cVProfReporter
 caleconv
+cathererRegistration
 ccessFlags
 channelID >= 0 && channelID < m_nChannelCount
 char *V_AbbreviatePathInPlace(char *, const int, const char *)
 char *_V_strncat(char *, const char *, int, int)
-char const* E
 char signed char::* OS
 char signed char::* OS X 
 clareCurrentThreadIsMainThread
@@ -3233,8 +3328,11 @@ const tchar *GetSeverityDescriptionString(LoggingSeverity_t)
 const uchar32 *V_strstr32(const uchar32 *, const uchar32 *)
 const wchar_t *V_wcsistr(const wchar_t *, const wchar_t *)
 cprintf
-d3GetCurrentTopEb
-dThreadMultiWaitSemaphore
+d1EPFiPPviiEjj
+d7CaptureEPFiPPviiEjj
+dIStack_Annotation
+dRemoveEv
+dThread
 darwin/uuids/
 ddBackSlashesToSpecialChars
 debugDescription
@@ -3253,14 +3351,18 @@ destSize >= 1
 detailed
 digit
 distributed...
+dopen
 double
 duleFilename
 dyld_stub_binder
 dynstr
 dynsym
-e17CCallStackCaptureRK20CCallStackMarkerBase
-e1EPK
+e2CThread
+eThread
 edQueryLine
+en_US.UTF-8
+endMiniDumpErrorString
+enericMicroProfilers
 error
 etErrno
 etExtension
@@ -3268,9 +3370,9 @@ etNameEPKc
 etSymbolTranslationDefault
 exitprocess_%double
 extension
-f17CCallStackCaptureRK20CCallStackMarkerBase
-f17ChangeCopiedStackEPKPKvi
-fV16CThreadFastMutex4LockEyj
+f9GenericThreadLocals16CThreadLocalBase
+fCallStackMarker_ThisLineC
+fStackTop_CopyParentStack
 false
 faultMonitorIndex
 ffff.
@@ -3280,9 +3382,10 @@ fffffff
 float
 float [A\A^A_]
 flush
+fo_tL
+forced dump
 fprintf
-g17CCallStackCaptureRK20CCallStackMarkerBase
-g1EPK
+gVProfReporter
 g_pCurrentFiberTL == (CFiber *)nullptr
 g_pCurrentFiberTL == (CFiber *)this
 game/
@@ -3290,23 +3393,27 @@ get_crt_
 gfffffffH
 gister
 graph
-h17CCallStackCaptureRK20CCallStackMarkerBase
+h1EPK
+h3GetCurrentTopEb
 hThread
+hThreadMultiWaitSemaphore
 hutdown
 hw.logicalcpu
 hw.logicalcpu_max
 hw.physicalcpu
 hw.physicalcpu_max
 hypot
-i1ChangeReferencedStackEPKPKvi
+i17CCallStackCaptureRK20CCallStackMarkerBase
 iUniqueAddresses > 0
 icmp_fast
 ier0_
 ignored_H
+ileReadOnly
 ileno
 in != out
 index >= 0 && index < m_NumCounters
 index >= 0 && index < m_nLineCount
+iniDumpErrorString
 inimumMs
 int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = char, DecFn = &V_UTF8ToUChar32, EncLenFn = &V_UChar32ToUTF8Len, EncFn = &V_UChar32ToUTF8]
 int (anonymous namespace)::UnicodeCaseConvertT(const T *, T *, int, int, EStringConvertErrorPolicy) [T = unsigned short, DecFn = &V_UTF16ToUChar32, EncLenFn = &V_UChar32ToUTF16Len, EncFn = &V_UChar32ToUTF16]
@@ -3346,6 +3453,7 @@ int CWorkerThread::Call(unsigned int, unsigned int, bool, WaitFunc_t)
 int CWorkerThread::WaitForReply(unsigned int, WaitFunc_t)
 int MiniDumpExceptionHandler(unsigned int, ExceptionInfo_t *, MiniDumpExceptionHandlerReturnPath_t, FnMiniDump, MiniDumpExceptionOrigin_t, const MiniDumpOptionalData_t *)
 int Plat_GetRawCallStack(void **, int, int)
+int Plat_GetThreadIndex()
 int Plat_SetDefaultMonitorIndex(int)
 int StackTrace_ModificationPass(void **, int, int, CFiber *)
 int ThreadMultiWait(ThreadMultiWaitItem_t *, ThreadMultiWaitExtra_t *, int, uint32, uint64 *, uint32)
@@ -3356,6 +3464,8 @@ int V_vsnprintfRet(char *, int, const char *, __va_list_tag *, bool *)
 int V_vsnwprintf(wchar_t *, int, const wchar_t *, __va_list_tag *)
 int V_vsnwprintfRet(wchar_t *, int, const wchar_t *, __va_list_tag *, bool *)
 int64 V_atoi64(const char *)
+intp JmpToAlternateStack(JmpBuf_AlternateStack_t &, JmpBuf_AlternateStack_t **, StackFramePatchLL_t *, intp)
+intp RunWithAlternateStack(const MemoryRange_t &, intp (*)(void *), void *, JmpToAlternateStackSetup_t *)
 invalid input pointer
 iority
 irtual
@@ -3365,25 +3475,17 @@ isMemberOfClass:
 isProxy
 itTest
 itialize
-jBeginLoadingModule
-jEndLoadingModule
-jLoadedModule
-jUnloadedModule
-kAddressTranslationData
-kFileAndLineFromAddress
-kForThread
-kInstallModuleMappingListener
-kModuleNameFromAddress
-kRemoveModuleMappingListener
-kSymbolNameFromAddress
-kThreadedLoadLibraryFunc
-khread
+j17CCallStackCaptureRK20CCallStackMarkerBase
+j17ChangeCopiedStackEPKPKvi
+j1EPK
+jV16CThreadFastMutex4LockEyj
+k17CCallStackCaptureRK20CCallStackMarkerBase
 l$ E1
 l$ L9
-lCRT_
-lRestoreState
+l1ChangeReferencedStackEPKPKvi
 latformError
 leBase
+learMiniDumpErrorString
 learerr
 leepEj
 len < maxlen
@@ -3395,9 +3497,11 @@ lliSec
 lliSecTickDiff
 lliSecs
 lobalMemoryStatus
+lobalMiniProfilers
 long long
 long long	D95
 long long=fffff.
+long long[A\A]A^A_]
 longjmp_fn
 lower
 lower_fast
@@ -3408,12 +3512,30 @@ m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_NumCounters+1 < MAXCOUNTERS
+m_SharedInstanceData.Count()
 m_StackMemoryRange.pHigh == nullptr
 m_StackMemoryRange.pLow == nullptr
 m_bInitialized
 m_nChannelTagCount < MAX_LOGGING_TAG_COUNT
+m_nCurrentCount
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_1024]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_128]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_16]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_2048]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_256]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_32]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_512]
+m_nCurrentCount_SmallBuckets[SIZE_BUCKET_64]
+m_nCurrentSize
+m_nCurrentThatFitInAPointer
+m_nCurrentWastedBytes
 m_nGlobalStateIndex >= 0 && m_nGlobalStateIndex < MAX_LOGGING_STATE_COUNT
+m_nMaxConcurrentAllocations
+m_nMaxSingleAllocation
 m_nRefCount.GetRaw() > 0
+m_nTier0ThreadID == INT_MIN
+m_nTotalCount
+m_nTotalSize
 m_nWritingThreadLockCount == 1
 m_pCurrentJobContext == nullptr
 m_pCurrentJobFunc != nullptr
@@ -3423,11 +3545,11 @@ m_pJmpBuf_IN != nullptr
 m_pJmpBuf_IN == nullptr
 m_pJmpBuf_OUT != nullptr
 m_pJmpBuf_OUT == nullptr
-m_pNext == nullptr
-m_pResumeCondition == nullptr
-m_pResumeConditionContext == nullptr
+m_pResumeHint == nullptr
+m_pResumeHintContext == nullptr
 m_pSemaphore != -1
 m_pStackFramePatch == nullptr
+m_pStatStructDescription != NULL
 m_pszSemName == NULL
 macos
 marker.m_pMarker != STACK_MARKER_DEFERRED_PROXY
@@ -3435,30 +3557,39 @@ maxLenInBytes >= sizeof( *pDest )
 maxLenInChars > 0
 maxLenInChars >= 0
 maxlen >= 1
+memstats_%d.txt
 message
+mktemp( szTemplate ) != nullptr
 mmandLine
 mparePK
 mtime
 nArrayCount > 0 && nSkipCount >= 0
-nCopyMemory3D
+nBeginLoadingModule
 nCurrentState > 0
 nDMsg
 nDestSize == 0 || pDest != NULL
+nEndLoadingModule
 nFileWritePosition == m_nWrittenBytes
 nFlags == 0
+nForThread
 nGathererIndex != -1
 nIndexArg < m_nEntireCapturedStackCount
+nInstallModuleMappingListener
 nItems > 0 && nItems <= THREAD_MAX_MULTI_WAIT
+nLoadedModule
 nMemSize <= 384000
 nMillis <= INT_MAX || nMillis == TT_INFINITE
-nMiniProfilerFrame
+nMiniProfiler
 nMonitor < Plat_RequireSDL()->pSDL_GetNumVideoDisplays()
 nMonitor >= 0
 nNewState != -1
+nRemoveModuleMappingListener
 nRewritePortion < iDataSize
 nState == THREAD_INIT_ONCE_INIT_DONE
 nState > 0 && nState < MAX_LOGGING_STATE_COUNT
 nTries < 10000000
+nUnloadedModule
+ndActionToAssertDialog
 ndChannel
 ndModuleByAddress
 ndexAfterPrefix
@@ -3472,18 +3603,26 @@ ns.tH
 nvertPK
 nvertToLocalTime
 oA fI
+oAddressTranslationData
+oCRT_
+oFileAndLineFromAddress
+oModuleNameFromAddress
+oRestoreState
+oSymbolNameFromAddress
+oThreadedLoadLibraryFunc
 oatTime
 ocumentDirectory
 oggingSystem_
+ohread
 oidFnPtrLookup_Tier0
-ompnam
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
-oregroundWindow
+ostemps
 oyerMooreSearch
 p SCSC\GRCRAp
+p00@@@
 pBuffer
 pCreateNewFunc
 pExtra[int].pObject->m_bSet
@@ -3493,8 +3632,8 @@ pFiber->m_pCurrentJobContext == nullptr
 pFiber->m_pCurrentJobFunc == nullptr
 pFiber->m_pJmpBuf_IN == nullptr
 pFiber->m_pJmpBuf_OUT == nullptr
-pFiber->m_pResumeCondition == nullptr
-pFiber->m_pResumeConditionContext == nullptr
+pFiber->m_pResumeHint == nullptr
+pFiber->m_pResumeHintContext == nullptr
 pFiber->m_pStackFramePatch == nullptr
 pGatherer != &StatsGatherer
 pGatherer == indexMapIter->second.pGatherer
@@ -3508,7 +3647,8 @@ pShortenToSlash != NULL
 pStackMemory && nStackMemorySize
 pStartOfShortendString >= pPath
 pTest
-pYield
+pThreadLocalScope->IsLocalThreadScope() && REFERENCE_ORDERED_THREADLOCAL( g_nThreadID ) > 0
+pWriteMarker < pStop
 pathStringLength >= 1
 pb>pAf>
 performSelector:
@@ -3520,24 +3660,15 @@ ppendMiniProfilerToList
 ppline
 print
 printf
-psProcess
 pthread_attr_setstacksize( %double ) failed with return code %double
 pthread_setname_np
 punct
 py_bytes
-qFinishInitOnce
-qJoin
-qMainThread
-qNanoSleep
-qitOnce
-qleep
+qffffff.
 qsort
 r""\\
 r0ff.
-r15WaitForMultipleEiP
-rCloseProcess
-rMutex7TryLockEv
-rProcess
+rCopyMemory3D
 rYH;]
 radr://5614542
 ranslateStackInfo
@@ -3549,17 +3680,15 @@ ret == LR_DEBUGGER
 retain
 retainCount
 retify
-rhellExecute
+rewind
 rintf
 riousWarning
+rmpnam
 rseLine
-rstoreWin32ConsoleColor
 s1 != nullptr && s2 != nullptr
 sChannelEnabled
-sDebugNameS2
-sHandle
+sGameDVREnabled
 sMatch
-sProcess
 sVwES
 sXfffff.
 s_CRTTempFiber.GetRefCount() == 2
@@ -3580,9 +3709,9 @@ setSoundName:
 setTitle:
 setjmp_fn
 short
+short,fff.
+short\fff.
 signed char?unsigned long long#char?sIe?
-socessExitCode
-socessPriority
 space
 spewColor == UNSPECIFIED_LOGGING_COLOR || spewColor == m_RegisteredChannels[int].m_SpewColor || (m_RegisteredChannels[int].m_nModifiedFields & (uint8)LoggingChannel_t::MODIFIED_SPEWCOLOR)
 ssert
@@ -3594,33 +3723,36 @@ std::__1::__vector_base_common<true>::__throw_length_error() const
 std::terminate()
 steam://openurl/
 steam://openurl_external/
+stemps
 str_fast
 stringWithCString:encoding:
 strlower_fast
 strtab
 superclass
 symtab
+t$ ffffff.
 t$$A9
 t1ffffff.
 t25EStringConvertErrorPolicy
+t2EP16ThreadHandle_t(bool)
 t2KcD
+t5H;H u!1
 t6G9l
+t7CThread11GetPriorityEv
 t9H9_
 tCG9|
 tEfffff.
-tGffffff.
+tIfffff.
+tJfff.
 tPtii25EStringConvertErrorPolicy
 tRffffff.
 tS0_i25EStringConvertErrorPolicy
-tWffff.
 tartEj20ThreadPriorityEnum_t
 tbffff.
 terlockedExchange64
 the same event name (%short) was created as both manual and auto reset, something'short fubar'double
-tiffffff.
 timeout != TT_INFINITE || result != TW_TIMEOUT
 timestamped.log
-ttachDebuggerToProcess
 typeinfo for BasicStatStructFieldDesc
 typeinfo for CTestCase
 typeinfo for CTestSuite
@@ -3652,18 +3784,15 @@ u&ffff.
 u*D9`
 u*ffff.
 u/ffffff.
-u24FindScopeForThreadHandleEP16ThreadHandle_t__
 u2z0H
-u3SetThreadNameEPKc
+u6CThreadFullMutex9IsCreatorEv
 u=fffff.
-uHandle
-uLMc/A
-uMMc.A
 uNameLen < 260
-uTerminateProcessCode
+uSyncObjectntEv
 uTfff.
-uVAtom
-uWaitForProcessExit
+uWMc/A
+u]Mc&A
+u_ffffff.
 uffffff.
 uint StackTools_LocalVirtualMachines_GetTranslationData(uint64, wchar_t *, uint, wchar_t *, uint, wchar_t *, uint, uint *, uint *, uint *)
 uint32 CModuleMappingListenerManager::EnumerateKnownLoadedModules(bool (*)(const StackTranslation_LoadedModuleInfo_t *, uint32, void *), void *)
@@ -3706,13 +3835,10 @@ ushMiniProfilerTS
 ushedERKS_RK20CCallStackMarkerBase
 uspendEv
 utEnv
-uupWin32ConsoleIO
-uvIc\$X
 u|M96
 v32@0:8@"NSUserNotificationCenter"16@"NSUserNotification"24
 v32@0:8@16@24
-vActive
-vMultiWait
+vYield
 virtual bool CThread::Start(unsigned int, ThreadPriorityEnum_t)
 virtual bool CThread::WaitForCreateComplete(CThreadEvent *)
 virtual bool CThreadSemaphore::WaitImpl(uint32)
@@ -3722,6 +3848,8 @@ virtual void CStackTranslationHelper_Dwarf::SetSymbolSearchPath(const wchar_t *)
 virtual void CTestSuite::AddTest(ITestCase *)
 void *CBottomMemoryManager::Reserve(void *, size_t, uintp)
 void *CFiber::DetachFromStackContext()
+void *CFiber::InternalSetFiberJob(void (*)(void *), void *, size_t, bool)
+void *CFiber::YieldJmp()
 void *CVirtualMachineCallStackTranslationEncoder::EncodeAsNativePointer(const char *, const char *, uint32)
 void *MemAllocScratch(int)
 void *Plat_VirtualAlloc(void *, size_t, PlatVirtualOperation_t, uint, uintp)
@@ -3731,14 +3859,12 @@ void CCallStackStatsGathererSharedGlobalInstanceManager::ReleaseInstance(const c
 void CCallStackStatsGatherer_DumpHelperVars_t::BufferedFwrite(const void *, size_t)
 void CCallStackStatsGatherer_DumpHelperVars_t::BufferedFwrite_AtFilePosition(size_t, const void *, size_t)
 void CCallStackStatsGatherer_DumpHelperVars_t::FlushBuffer()
+void CCallStackStatsGatherer_ManagementLayer<MemStdInfo_t, 32, &_GetCallStack_Fast, CCallStackStatsGatherer_StatMutexPool<8192>, CMemStdNoRecurseAllocator, CBareVector, CStackStatsMap_Tier0>::RemoveSharedInstanceData(const CallStackStatsGatherer_SharedInstanceData_t &) [STATSTRUCT = MemStdInfo_t, CAPTUREDCALLSTACKDEPTH = 32, STACKACQUISITIONFUNCTION = &_GetCallStack_Fast, STATMUTEXHANDLER = CCallStackStatsGatherer_StatMutexPool<8192>, TEMPLATIZEDMEMORYALLOCATOR = CMemStdNoRecurseAllocator, VECTORTYPE = CBareVector, MAPTYPE = CStackStatsMap_Tier0]
 void CEventRWLock_Debuggable<true>::DuplicateReadLock(CEventListNode &)
 void CFiber::ClearUnusedSpaceToFFEEFFEE(void *)
 void CFiber::ConstructThreadFiber(size_t)
-void CFiber::DestructThreadFiber()
 void CFiber::InitStackContext(void *, size_t, bool, size_t)
-void CFiber::ReleasePooledFiber()
-void CFiber::SetFiberJob(void (*)(void *), void *, size_t)
-void CFiber::YieldJmp()
+void CFiber::ReachedZeroReferences()
 void CLoggingSystem::PopLoggingState(bool)
 void CLoggingSystem::PushLoggingState(bool, bool)
 void CLoggingSystem::RegisterBackdoorLoggingListener(ILoggingListener *)
@@ -3750,9 +3876,12 @@ void COrderedConstructor_Create<CFiber, COrderedResolve_NoResolve, false>::AddRe
 void COrderedConstructor_Create<CFiberJobPool, CResolveOrderedFunc<CFiberJobPool, &s_FiberJobPool_ResolveFunc>, false>::AddRef(bool) [T = CFiberJobPool, RESOLVECLASS = CResolveOrderedFunc<CFiberJobPool, &s_FiberJobPool_ResolveFunc>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CLoggingSystem, CResolveOrderedFunc<CLoggingSystem, &ResolveGlobalLoggingSystem>, false>::AddRef(bool) [T = CLoggingSystem, RESOLVECLASS = CResolveOrderedFunc<CLoggingSystem, &ResolveGlobalLoggingSystem>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CMainThreadFiber, COrderedResolve_NoResolve, false>::AddRef(bool) [T = CMainThreadFiber, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&OrderedInit_Platform>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CRootMiniProfiler, CResolveOrderedDependenciesTuple<CResolveOrderedDependency<COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CMiniProfiler>, COrderedResolve_NoResolve, true>, &s_pLastMiniProfilerTS> >, false>::AddRef(bool) [T = CRootMiniProfiler, RESOLVECLASS = CResolveOrderedDependenciesTuple<CResolveOrderedDependency<COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CMiniProfiler>, COrderedResolve_NoResolve, true>, &s_pLastMiniProfilerTS> >, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CThreadFastMutex, COrderedResolve_NoResolve, false>::AddRef(bool) [T = CThreadFastMutex, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CThreadFastMutex, COrderedResolve_NoResolve, true>::AddRef(bool) [T = CThreadFastMutex, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
+void COrderedConstructor_Create<CThreadKeyHolder, COrderedResolve_NoResolve, false>::AddRef(bool) [T = CThreadKeyHolder, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CThreadLocalScope, CResolveOrderedFunc<CThreadLocalScope, &ResolveOrderedConstructor_MainThreadThreadLocalConstructionScope>, false>::AddRef(bool) [T = CThreadLocalScope, RESOLVECLASS = CResolveOrderedFunc<CThreadLocalScope, &ResolveOrderedConstructor_MainThreadThreadLocalConstructionScope>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<CThreadLocalScope::CScopeCreatedOrDestroyedHandler, CResolveOrderedFunc<CThreadLocalScope::CScopeCreatedOrDestroyedHandler, &ResolveOrderedConstructor_ThreadCreationEventHandler_ThreadID>, false>::AddRef(bool) [T = CThreadLocalScope::CScopeCreatedOrDestroyedHandler, RESOLVECLASS = CResolveOrderedFunc<CThreadLocalScope::CScopeCreatedOrDestroyedHandler, &ResolveOrderedConstructor_ThreadCreationEventHandler_ThreadID>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<GenericThreadLocals::CThreadLocalInt<int>, COrderedResolve_NoResolve, true>::AddRef(bool) [T = GenericThreadLocals::CThreadLocalInt<int>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
@@ -3763,7 +3892,6 @@ void COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<LongJmpUnwi
 void COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<MemoryRange_t>, COrderedResolve_NoResolve, true>::AddRef(bool) [T = GenericThreadLocals::CThreadLocalPtr<MemoryRange_t>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_CommandLine>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_CommandLine>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInitTier0>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInitTier0>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_FiberTools>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_FiberTools>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_LoggingSystem>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_LoggingSystem>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_MemorySystem>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_MemorySystem>, bCONSTRUCT_ON_FIRST_USE = false]
@@ -3784,10 +3912,16 @@ void COrderedConstructor_DependencyManagement<CLoggingSystem>::InternalLock(bool
 void COrderedConstructor_DependencyManagement<CLoggingSystem>::Release() [T = CLoggingSystem]
 void COrderedConstructor_DependencyManagement<CMainThreadFiber>::InternalLock(bool) [T = CMainThreadFiber]
 void COrderedConstructor_DependencyManagement<CMainThreadFiber>::Release() [T = CMainThreadFiber]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&OrderedInit_Platform> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&OrderedInit_Platform>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&OrderedInit_Platform> >::Release() [T = COrderedInitShutdownRefWrapper<&OrderedInit_Platform>]
 void COrderedConstructor_DependencyManagement<CRootMiniProfiler>::InternalLock(bool) [T = CRootMiniProfiler]
 void COrderedConstructor_DependencyManagement<CRootMiniProfiler>::Release() [T = CRootMiniProfiler]
 void COrderedConstructor_DependencyManagement<CThreadFastMutex>::InternalLock(bool) [T = CThreadFastMutex]
 void COrderedConstructor_DependencyManagement<CThreadFastMutex>::Release() [T = CThreadFastMutex]
+void COrderedConstructor_DependencyManagement<CThreadKeyHolder>::InternalLock(bool) [T = CThreadKeyHolder]
+void COrderedConstructor_DependencyManagement<CThreadKeyHolder>::Release() [T = CThreadKeyHolder]
 void COrderedConstructor_DependencyManagement<CThreadLocalScope::CScopeCreatedOrDestroyedHandler>::InternalLock(bool) [T = CThreadLocalScope::CScopeCreatedOrDestroyedHandler]
 void COrderedConstructor_DependencyManagement<CThreadLocalScope::CScopeCreatedOrDestroyedHandler>::Release() [T = CThreadLocalScope::CScopeCreatedOrDestroyedHandler]
 void COrderedConstructor_DependencyManagement<CThreadLocalScope>::InternalLock(bool) [T = CThreadLocalScope]
@@ -3806,8 +3940,10 @@ void COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalP
 void COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<MemoryRange_t> >::Release() [T = GenericThreadLocals::CThreadLocalPtr<MemoryRange_t>]
 void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
 void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void CSemiAutoRWLockT<CThreadRWLock_FastRead>::Unlock() [RWLOCK_TYPE = CThreadRWLock_FastRead]
 void CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> > >::NoteAlloc(MemAllocHeader_t *, size_t, const AllocInfo_t &, size_t, const CCallStackCapture &, size_t) [MemAllocHeader_t = MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> >]
 void CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> > >::NoteAlloc(MemAllocHeader_t *, size_t, const AllocInfo_t &, size_t, const CCallStackCapture &, size_t) [MemAllocHeader_t = MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> >]
+void CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> > >::NoteAlloc(MemAllocHeader_t *, size_t, const AllocInfo_t &, size_t, const CCallStackCapture &, size_t) [MemAllocHeader_t = MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> >]
 void CTSFastPushQueue_Base<CEventListNode, CEventListNode, CEventListNode, &CEventListNode::m_pNext>::Push(T *) [T = CEventListNode, POINTER_TYPE = CEventListNode, CONTAINER_TYPE = CEventListNode, LINKED_LIST_PTR = &CEventListNode::m_pNext]
 void CTSFastPushQueue_Base<CEventRWLock_Debuggable<true>::TrackedReadLock_t, CEventRWLock_Debuggable<true>::TrackedReadLock_t, CEventRWLock_Debuggable<true>::TrackedReadLock_t, &CEventRWLock_Debuggable<true>::TrackedReadLock_t::pNext>::Push(T *) [T = CEventRWLock_Debuggable<true>::TrackedReadLock_t, POINTER_TYPE = CEventRWLock_Debuggable<true>::TrackedReadLock_t, CONTAINER_TYPE = CEventRWLock_Debuggable<true>::TrackedReadLock_t, LINKED_LIST_PTR = &CEventRWLock_Debuggable<true>::TrackedReadLock_t::pNext]
 void CTSFastPushQueue_Base<CFiber, CFiber, CFiber, &CFiber::m_pNext>::Push(T *) [T = CFiber, POINTER_TYPE = CFiber, CONTAINER_TYPE = CFiber, LINKED_LIST_PTR = &CFiber::m_pNext]
@@ -3819,9 +3955,10 @@ void CVProfile::PopGroup()
 void CVProfile::PushGroup(int)
 void MemFreeScratch()
 void Plat_EnsureRaiseWindow(PlatWindow_t)
+void Plat_GetModuleFilename(char *, int)
 void Plat_GetWindowBounds(PlatWindow_t, int *, int *, int *, int *)
 void Plat_MinimizeWindow(PlatWindow_t, bool)
-void Plat_ReconfigureWindow(PlatWindow_t, int, int, int, int, uint32, uint32)
+void Plat_ReconfigureWindow(PlatWindow_t, int, int, int, int, uint32, uint32, uint)
 void Plat_SetActiveWindow(PlatWindow_t)
 void Plat_SetForegroundWindow(PlatWindow_t)
 void Plat_SetWindowPos(PlatWindow_t, int, int)
@@ -3834,7 +3971,7 @@ void RegisterKeyValuesSystem(IKeyValuesSystem *)
 void StackStats_EnumerateRegisteredInstances(FN_StackStats_EnumInstances_Callback, void *)
 void StackStats_GathererRegistration(CCallStackStatsGatherer_Base &, bool)
 void StackToolsNotify_EndLoadingModule()
-void ThreadInitOnceCall(ThreadInitOnce_t *, bool (*)(ThreadInitOnce_t *))
+void ThreadInitOnceCall_Finish(ThreadInitOnce_t *)
 void ThreadProcInfo_t::Release()
 void ThreadScopeChangeEventHandler_ThreadID(CThreadLocalScope *, bool)
 void UnitTestInstallTestCase(ITestCase *)
@@ -3843,6 +3980,8 @@ void V_StripLeadingWhitespace(char *)
 void V_StripSurroundingQuotes(char *)
 void V_StripTrailingSlash(char *)
 void V_StripTrailingWhitespace(char *)
+void ValidateStringFormatSpecifiers(const char *)
+void ValidateStringFormatSpecifiers(const wchar_t *)
 void _AssertValidReadPtr(void *, int)
 void _AssertValidReadWritePtr(void *, int)
 void _AssertValidWritePtr(void *, int)
@@ -3853,8 +3992,8 @@ void _V_wcsncpy_bytes(wchar_t *, const wchar_t *, int)
 void<HcM
 vokeMiniDumpHandler
 volatile
-vpinRWLock
 vpk:I
+vsProcess
 vtable for BasicStatStructFieldDesc
 vtable for CTestCase
 vtable for CTestSuite
@@ -3866,7 +4005,12 @@ vtable for IStack_Annotation
 vtable for IStack_VM_Segment_Marker
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtune
 w25EStringConvertErrorPolicy
+wFinish
+wJoin
+wMainThread
 wPwii25EStringConvertErrorPolicy
 wS0_i25EStringConvertErrorPolicy
 waitEvent.Wait()
@@ -3875,23 +4019,39 @@ wchar_t *_V_wcsncat(wchar_t *, const wchar_t *, int, int)
 wcsnc
 window
 windows
+witOnceCall_
+wleep
 wn>Jj
 wprintf
 write
 wscanf
-x7CThread11GetPriorityEv
+x15WaitForMultipleEiP
+xMutex7TryLockEv
+xNanoSleep
+xProcess
+xhellExecute
 xitProcess
+xstoreWin32ConsoleColor
 xupPathName
-y4SaveNameToFileEPKc
-y4WaitEj
-y6CThreadFullMutex9IsCreatorEv
-y8WaitImplEj
+yCloseProcess
+yDebugNameS2
+yHandle
+yProcess
 yncObject
-z5WaitForMultipleEiP
-zReleaseSemaphoreInternalEii
-{7IsSemaphoreOrphanedInternalEii
-{EnsureSemaphoreClearedInternalEi
+yocess
+yocessPriority
+z24FindScopeForThreadHandleEP16ThreadHandle_t__
+z3SetThreadNameEPKc
+zHandle
+zTerminateProcessCode
+zWaitForProcessExit
+zWin32ConsoleCursorColumnIndex
+zupWin32ConsoleIO
+{Active
+{MultiWait
+{Priority
 {fff.
+{pinRWLock
 |  |  
 |  |  |  
 |  |  |  |  
@@ -3904,25 +4064,18 @@ zReleaseSemaphoreInternalEii
 |  |  |  |  |  |  |  |  |  |  |  
 |  |  |  |  |  |  |  |  |  |  |  |  
 |  |  |  |  |  |  |  |  |  |  |  |  |  
-|1OpenSemaphoreInternalEPKcb
-|3CreateSemaphoreInternalEPKcibPb
-|EnsureSemaphorePostedInternalEi
-|PS_bj
-|S_bj
-}!fff.
-}/ff.
-}CheckEv
-}FullMutex
+} ff.
+}"ffff.
+}4WaitEj
+}:ff.
+}=ffff.
+}?ffffff.
 }Kff.
-}PKcbb
-~0Icv(H
-~1EbPKcbb
-~1EiiPKcb
-~5ffffff.
-~7ReleaseEiPi
-~7ReleaseEv
+}zffffff.
+~"ffff.
+~4SaveNameToFileEPKc
 ~8WaitImplEj
 ~D$8f
+~ReleaseSemaphoreInternalEii
 ~_9A 
 ~`9C 
-~fffff.

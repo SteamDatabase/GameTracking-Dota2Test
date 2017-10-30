@@ -295,6 +295,13 @@
 
 	"dota_ability_changed"
 	{
+		"entityIndex"	"short"
+	}
+
+	"dota_spectator_talent_changed"
+	{
+		"abilityname"	"string"
+		"playerid"		"short"
 	}
 	
 	"dota_portrait_ability_layout_changed"
@@ -501,8 +508,9 @@
 	}
 	"dota_holdout_revive_complete"
 	{
-		"caster" "short"
-		"target" "short"
+		"caster" 			"short"
+		"target" 			"short"
+		"channel_time"		"float"	
 	}
 	"dota_player_killed"
 	{
@@ -875,13 +883,6 @@
 		"reason_code" "int"
 		"reason_desc" "string"
 	}
-	"client_connectionless_packet"
-	{
-		"local"	"1"
-		"buffer" "local"
-		"buffersize" "long"
-		"address" "string"
-	}
 	"hero_selector_preview_set"
 	{
 		"setindex" "short"
@@ -1047,10 +1048,6 @@
 		"display_ui_on_left"	"bool"
 	}
 
-	"ingame_events_changed"
-	{
-	}
-
 	"dota_match_signout"
 	{
 	}
@@ -1120,6 +1117,7 @@
 	}
 	"dota_player_update_assigned_hero"
 	{
+		"playerid"		"short"
 	}
 	"dota_player_hero_selection_dirty"
 	{
@@ -1144,6 +1142,16 @@
 		"userid"		"short"
 		"message"				"short"
 		"coins"				"uint64"
+	}
+	"dota_wager_token"
+	{
+		"userid"		"short"
+		"message"				"short"
+		"amount"				"int"
+	}
+	"dota_rank_wager"
+	{
+		"userid"		"short"
 	}
 	"colorblind_mode_changed"
 	{
@@ -1177,9 +1185,54 @@
 		"player_id"			"short"
 		"chat_message_type"	"short"
 	}
+
+	"dota_buyback"
+	{
+		"entindex"			"int"
+		"player_id"			"int"
+	}
+
 	"bought_back"
 	{
 		"player_id"			"short"
+	}
+
+	"dota_shrine_kill"
+	{
+		"killer_userid"	"short"	
+		"teamnumber"	"short"
+		"gold"			"short"
+	}
+
+	"particle_system_start"
+	{
+		"targetname"			"string"
+	}
+
+	"particle_system_stop"
+	{
+		"targetname"			"string"
+		"immediate"				"bool"
+	}
+
+	"dota_combat_event_message"
+	{
+		"message"				"string"
+		"teamnumber"			"short"
+		"player_id"				"int"
+		"int_value"				"int"
+		"locstring_value"		"string"
+	}
+
+	"dota_item_spawned"
+	{
+		"item_ent_index"	"int"
+		"player_id"				"int"
+	}
+
+	"dota_player_reconnected"
+	{
+		"player_id"				"int"
 	}
 }
 

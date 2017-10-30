@@ -50,6 +50,7 @@
 			_class = "C_INIT_RandomRadius"
 			m_flRadiusMin = 520.000000
 			m_flRadiusMax = 520.000000
+			m_bDisableOperator = true
 		},
 		{
 			_class = "C_INIT_RandomColor"
@@ -81,6 +82,12 @@
 		},
 		{
 			_class = "C_INIT_RandomYawFlip"
+		},
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+			m_nCPInput = 1
+			m_flInputMax = 1000.000000
+			m_flOutputMax = 1040.000000
 		},
 	]
 	m_Emitters = 

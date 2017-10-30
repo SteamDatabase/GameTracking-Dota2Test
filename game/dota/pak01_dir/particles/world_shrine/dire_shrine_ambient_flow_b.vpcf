@@ -17,6 +17,7 @@
 			m_flTessScale = 2.000000
 			m_nOrientationType = 3
 			m_bLightenMode = true
+			m_bTintByFOW = true
 		},
 		{
 			_class = "C_OP_RenderRopes"
@@ -28,6 +29,7 @@
 			m_bAdditive = true
 			m_bLightenMode = true
 			m_hTexture = resource:"materials/particle/riki/beam_blinkstrike_jagged.vtex"
+			m_bTintByFOW = true
 		},
 		{
 			_class = "C_OP_RenderRopes"
@@ -40,6 +42,7 @@
 			m_bSaturateColorPreAlphaBlend = false
 			m_flAddSelfAmount = 1.000000
 			m_flFinalTextureScaleU = 1.200000
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 

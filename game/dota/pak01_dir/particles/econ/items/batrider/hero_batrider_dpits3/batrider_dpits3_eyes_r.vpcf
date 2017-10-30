@@ -89,4 +89,34 @@
 			m_ChildRef = resource:"particles/econ/items/batrider/hero_batrider_dpits3/batrider_dpits3_eyes_inner.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "eye_fx_r"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/batrider/dotapit_s3_firefly/dotapit_s3_firefly.vmdl"
+			}
+		},
+	]
 }

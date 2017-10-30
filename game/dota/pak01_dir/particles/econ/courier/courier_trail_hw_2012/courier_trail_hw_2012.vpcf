@@ -27,4 +27,29 @@
 			m_ChildRef = resource:"particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012_webs.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_RENDERORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+		},
+	]
 }

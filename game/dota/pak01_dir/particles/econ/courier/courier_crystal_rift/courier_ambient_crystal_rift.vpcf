@@ -304,4 +304,29 @@
 			m_ChildRef = resource:"particles/econ/courier/courier_crystal_rift/courier_ambient_crystal_rift_d.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_RENDERORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+		},
+	]
 }

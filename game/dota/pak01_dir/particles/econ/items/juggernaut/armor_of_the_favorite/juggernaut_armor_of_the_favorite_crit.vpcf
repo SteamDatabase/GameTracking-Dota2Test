@@ -186,4 +186,33 @@
 		},
 	]
 	m_nMaxParticles = 20
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN"
+					m_entityName = "self"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/juggernaut/armor_for_the_favorite_weapon/armor_for_the_favorite_weapon.vmdl"
+			}
+		},
+	]
 }

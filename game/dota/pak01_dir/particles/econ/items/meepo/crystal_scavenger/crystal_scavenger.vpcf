@@ -136,4 +136,34 @@
 			m_ChildRef = resource:"particles/econ/items/meepo/crystal_scavenger/crystal_scavenger_ambient_e.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_particles_1"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/meepo/crystal_scavenger_weapon/crystal_scavenger_weapon.vmdl"
+			}
+		},
+	]
 }

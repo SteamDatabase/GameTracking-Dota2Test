@@ -24,7 +24,7 @@
 						<Panel class="TitleBar" >
 							<Panel class="TitleContainer" >
 								<DOTAEconItem id="ItemIcon"/>
-								<Label id="Title" text="#DOTA_econ_item_details_item_name"/>
+								<Label id="Title" text="{s:item_name}{s:item_def_number}"/>
 							</Panel>
 							<Panel class="BrandPanel">
 								<Label class="EconBrandName" text="#DOTA_tooltip_econ_item_partner"/>
@@ -44,7 +44,7 @@
 								<Label id="Slot" text="#DOTA_econ_item_details_item_slot" />
 							</Panel>
 							<Panel class="LeagueInfo">
-								<Label class="LeagueName" text="#DOTA_store_item_details_associated_league_name"/>
+								<Label class="LeagueName" text="{g:dota_league_name:league_id}"/>
 								<Panel class="PrizePoolContainer" >
 									<Label class="PrizePool" text="#DOTA_store_item_details_associated_prize_pool"/>
 									<Label class="PrizePoolAmount" text="#DOTA_store_item_details_associated_prize_pool_amount"/>

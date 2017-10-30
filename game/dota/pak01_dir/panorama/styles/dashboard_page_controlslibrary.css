@@ -268,7 +268,6 @@ DOTAScenePanel
 {
 	width: 600px;
 	height: 600px;
-	margin: 0px 8px;
 }
 
 #ModelTest1 
@@ -524,7 +523,7 @@ DOTAScenePanel
 	text-shadow: 4px 4px 8px 3.0 #000000;
 }
 
-DOTACanvas
+UICanvas
 {
 	width: 100px;
 	height: 100px;
@@ -1259,3 +1258,12 @@ Button.CustomButton:disabled Label
 	}
 }
 
+.forceBuild
+{
+	width: 32px;
+	height: 32px;
+	background-image: url("s2r://panorama/images/status_icons/previousbest_icon_psd.vtex");	
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 4px;
+}

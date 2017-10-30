@@ -7,7 +7,6 @@
 {
 	width: 100%;
 	height: 100%;
-	margin-bottom: 6px;
     margin-left: 7px;
 	visibility: visible;
 	flow-children: right;
@@ -52,6 +51,8 @@
 
 #SelectCourierButton
 {
+	tooltip-position: top;
+	context-menu-position: top;
     margin-top: 13px;
 	background-image: url("s2r://panorama/images/hud/reborn/icon_courier_standard_psd.vtex");
 }
@@ -115,11 +116,16 @@
 
 #DeliverItemsButton
 {
-	height: 52px;
-    width: 52px;
+	height: 60px;
+    width: 58px;
     background-image: url("s2r://panorama/images/hud/reborn/icon_courier_deliver_on_psd.vtex");
-    margin-left: -1px;
-    margin-top: 4px;
+	background-size: 48px 48px;
+	background-position: 0px 6px;
+	background-repeat: no-repeat;
+	tooltip-position: top;
+	context-menu-position: top;
+//    margin-left: -1px;
+    //margin-top: 4px;
 }
 
 .NoCourier #DeliverItemsButton
@@ -130,6 +136,8 @@
 .DeliveringToHero #DeliverItemsButton
 {
 	background-image: none;
+	padding-top: 4px;
+	padding-left: -2px;
 }
 
 .DeliveringToHero #Spinner
@@ -173,10 +181,11 @@
 
 #CourierHasteButton
 {
+	tooltip-position: top;
     margin-top: 13px;
     margin-left: -2px;
     visibility: collapse;
-	background-image: url("s2r://panorama/images/hud/reborn/icon_courier_boost_on_psd.vtex");
+	background-image: url("s2r://panorama/images/hud/reborn/icon_courier_shield_on_psd.vtex");
 }
 
 .HasHasteAbility #CourierHasteButton
@@ -186,7 +195,7 @@
 
 .HasHasteAbility:not(.HasteReady) #CourierHasteButton
 {
-	background-image: url("s2r://panorama/images/hud/reborn/icon_courier_boost_off_psd.vtex");
+	background-image: url("s2r://panorama/images/hud/reborn/icon_courier_shield_off_psd.vtex");
 }
 
 #CourierHasteButton:hover
@@ -196,6 +205,7 @@
 
 #CourierUpgradeButton
 {
+	tooltip-position: top;
     margin-top: 13px;
     margin-left: -2px;
     visibility: visible;
@@ -300,4 +310,49 @@
 .NoCourier #CourierRespawnTimer
 {
 	visibility: collapse;
+}
+
+#ItemsOnCourierBackground
+{
+	margin-top: 6px;
+	margin-left: -22px;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+    background-color: #bf481e;
+//	background-color: gradient( linear, 0% 0%, 100% 0%, from( #aa0000 ), to( #440000 ) );
+// background-color: gradient( radial, 50% 50%, 0% 0%, 40% 40%, from( #FF0000 ), to( #110000 ) );
+border: 1px solid #300;
+	horizontal-align: right;
+	vertical-align: top;
+	pre-transform-scale2d: 0;
+	opacity: 0;
+	
+	transition-property: opacity, pre-transform-scale2d;
+	transition-duration: .28s;
+	transition-timing-function: ease-in-out;
+}
+
+#ItemsOnCourier
+{
+	margin-top: 1px;
+	font-size: 16px;
+	height: 22px;
+	width: 22px;
+	color: white;
+	horizontal-align: right;
+	vertical-align: top;
+	text-align: center;
+}
+
+.HasItemsOnCourier #ItemsOnCourierBackground
+{
+	pre-transform-scale2d: 1;
+	opacity: 1;
+}
+
+.NoItemsOnCourier #ItemsOnCourierBackground
+{
+	pre-transform-scale2d: 0;
+	opacity: 0;
 }

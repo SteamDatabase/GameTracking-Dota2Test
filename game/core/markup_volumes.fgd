@@ -12,7 +12,7 @@
 // Markup volumes
 //
 //--------------------------------------------------------------------------------------------------
-@SolidClass base(Targetname,Parentname) = markup_volume : "Generic markup volume entity, can be queried in-game by name/type/location"
+@SolidClass base(Targetname, Parentname, Global) = markup_volume : "Generic markup volume entity, can be queried in-game by name/type/location"
 [
 	// TODO: add 'EnableDisable' functionality (need to add to CMarkupVolume also)
 ]
@@ -47,6 +47,12 @@
 
 @SolidClass base(markup_volume_tagged) = func_nav_markup : "Tagged NAV markup volume entity, used during export and can be queried in-game by tag/name/type/location"
 [
+	navProperty_NavGen(tag_list) : "Nav Generation Markup" = 
+	[
+		"WALKABLESEED" : "Walkable Seed" : 0
+		"NONAV" : "No Nav" : 0
+	]
+
 	navProperty_NavAttributes(tag_list) : "Nav Attributes"  =
 	[
 		"AVOID": "Avoid" : 0

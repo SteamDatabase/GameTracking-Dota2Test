@@ -36,9 +36,13 @@ DOTAHUDLevelStatsFrame.CanLevelStats
 #LevelUpTab
 {
 	width: 100%;
-	height: 36px;
+	height: 156px;
+	
+	//margin-left:8px;
+	margin-right: 3px;
 
-	margin-top: 70px;
+	margin-bottom: 22px;
+	vertical-align: bottom;
 	
 	opacity: 1;
 	
@@ -49,12 +53,23 @@ DOTAHUDLevelStatsFrame.CanLevelStats
 
 }
 
+.AspectRatio16x10 #LevelUpTab
+{
+	margin-bottom: 23px;
+}
+
+.FiveAbilities #LevelUpTab,
+.SixAbilities #LevelUpTab
+{
+	margin-bottom: 22px;
+}
+
 #LevelUpButton
 {
 	width: 100%;
 	height: 36px;
 
-	background-image: url("s2r://panorama/images/hud/reborn/levelup_button_psd.vtex");
+	background-image: url("s2r://panorama/images/hud/reborn/levelup_button_1_psd.vtex");
 	background-size: 100% 100%;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -62,6 +77,11 @@ DOTAHUDLevelStatsFrame.CanLevelStats
 	transition-property: opacity, brightness, pre-transform-scale2d;
 	transition-timing-function: ease-in-out;
 	transition-duration: .12s;	
+	
+	//margin-top: 1px;
+
+	tooltip-position: top;
+	tooltip-body-position: 50% 50%;
 	
 	margin-bottom: -4px;
 }
@@ -113,27 +133,64 @@ DOTAHUDLevelStatsFrame.CanLevelStats
 
 #LevelUpGlow
 {
-	width: 100%;
-	height: 146px;
-	height: 126px;
+	width: 62px;
+	height: 62px;
 	
-	vertical-align: bottom;
-	background-image: url("s2r://panorama/images/hud/reborn/statbranch_bg_lvlup_psd.vtex");
+	margin-top: 91px;
+	horizontal-align: center;
+	//margin-left: 7px;
+	
+	vertical-align: top;
+	background-image: url("s2r://panorama/images/hud/reborn/statbranch_button_lvlup_psd.vtex");
 	background-size: 100% 100%;
+	
 	background-position: 50% 50%;	
 	opacity: 0;
 	
 	transition-property: opacity;
 	transition-duration: .4s;
 	transition-timing-function: ease-in-out;
-	brightness: 3;
+	brightness: 1.5;
 	
 	animation-name: OpacityPulse;
-	animation-duration: 1.2s;
+	animation-duration: .82s;
 	animation-iteration-count: infinite;	
 }
 
 .CanLevelStats #LevelUpGlow
+{
+	opacity: 1;
+}
+
+.AbilityLearnMode #LevelUpButton
+{
+	background-color: none;
+}
+
+
+#LearnModeButton
+{
+	background-image: url("s2r://panorama/images/hud/reborn/levelup_stat_button_learnmode_psd.vtex");
+	height: 92px;
+	width: 72px;
+	
+	horizontal-align: center;
+	margin-top: 14px;
+	z-index: 6;
+	
+	background-size: 100% 100%;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	
+	opacity: 0;
+	
+	transition-property: opacity, brightness, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: .12s;		
+	
+}
+
+.AbilityLearnMode #LearnModeButton
 {
 	opacity: 1;
 }

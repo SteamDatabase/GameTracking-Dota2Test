@@ -138,4 +138,34 @@
 			m_ChildRef = resource:"particles/econ/items/tinker/tinker_motm_rollermaw/tinker_rollermawster_ambient_eyeglow.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "fx_left_ear"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/tinker/roller_mawster/roller_mawster.vmdl"
+			}
+		},
+	]
 }

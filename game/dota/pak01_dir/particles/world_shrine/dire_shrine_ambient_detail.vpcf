@@ -19,6 +19,7 @@
 			m_hTexture = resource:"materials/particles/light_flare/light_glow_01.vtex"
 			m_flAnimationRate = 0.000000
 			m_flDiffuseAmount = 0.525000
+			m_bTintByFOW = true
 		},
 		{
 			_class = "C_OP_RenderDeferredLight"

@@ -19,6 +19,8 @@
 			m_flAddSelfAmount = 2.000000
 			m_bSaturateColorPreAlphaBlend = false
 			m_hTexture = resource:"materials/particle/web/web.vtex"
+			m_bTintByFOW = true
+			m_bTintByGlobalLight = true
 		},
 	]
 	m_Operators = 
@@ -258,16 +260,9 @@
 			_class = "C_INIT_RandomColor"
 			m_ColorMin = 
 			[
-				111,
-				116,
-				115,
-				255,
-			]
-			m_ColorMax = 
-			[
-				187,
-				230,
-				218,
+				160,
+				160,
+				160,
 				255,
 			]
 			m_flTintPerc = 0.250000
@@ -275,8 +270,8 @@
 		},
 		{
 			_class = "C_INIT_RandomAlpha"
-			m_nAlphaMax = 30
-			m_nAlphaMin = 22
+			m_nAlphaMax = 15
+			m_nAlphaMin = 10
 		},
 		{
 			_class = "C_INIT_PositionOffset"

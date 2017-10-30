@@ -2,6 +2,7 @@
 	<styles>
 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
 		<include src="s2r://panorama/styles/popups/popups_shared.vcss_c" />
+        <include src="s2r://panorama/styles/battle_pass/current_battle_pass.vcss_c" />
 		<include src="s2r://panorama/styles/popups/popup_purchase_battle_pass_levels.vcss_c" />
 	</styles>
 
@@ -47,8 +48,8 @@
 	<PopupPurchaseBattlePassLevels class="PopupPanel Hidden" popupbackground="dim" oncancel="DOTAPurchaseBattlePassLevelsClose()">
 
 		<Panel id="Header" >
-			<DOTAScenePanel id="HeaderBackgroundAnimationRight" map="backgrounds/accept_popup_test" camera="shot_camera"/>
-			<DOTAScenePanel id="HeaderBackgroundAnimationLeft" map="backgrounds/accept_popup_test" camera="shot_camera"/>
+			<DOTAScenePanel id="HeaderBackgroundAnimationRight" map="backgrounds/accept_popup_test" camera="shot_camera" particleonly="true"/>
+			<DOTAScenePanel id="HeaderBackgroundAnimationLeft" map="backgrounds/accept_popup_test" camera="shot_camera" particleonly="true"/>
 			<Panel id="HeaderTitleContainer" class="LeftRightFlow">
 				<Label class="PopupTitle" text="{s:screen_title}" />
 				<Panel class="FillWidth" />
@@ -141,8 +142,8 @@
 			</Panel>
 			
 		</Panel>
-		<Label id="PurchaseEndsLabel" text="#DOTA_TI6_BattlePass_EndDate_Purchase"/>
-		<Label id="PurchasePoolContribution" text="#dota_spring2016_purchase_pool_contribution_levels" />
+		<Label id="PurchaseEndsLabel" text="#DOTA_TI7_BattlePass_EndDate_Purchase"/>
+		<Label id="PurchasePoolContribution" text="#DOTA_TI7BP_purchase_pool_contribution_levels" />
 		
 	</PopupPurchaseBattlePassLevels>
 </root>

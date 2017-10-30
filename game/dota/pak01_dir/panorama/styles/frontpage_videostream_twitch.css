@@ -166,7 +166,7 @@ DOTAFrontpageVideoStreamTwitch
 
 #NotStreamingContainer
 {
-	background-image: url("s2r://panorama/images/front_page/boston_2016_bg_png.vtex");
+	background-image: url("s2r://panorama/images/front_page/ti7_bg_psd.vtex");
 	background-size: cover;
 }
 
@@ -187,8 +187,7 @@ DOTAFrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 	width: 500px;
 	height: 200px;
 
-	margin-left: -10px;
-	background-image: url("s2r://panorama/images/front_page/boston_2016_logo_small_png.vtex");
+	background-image: url("s2r://panorama/images/front_page/ti7_logo_psd.vtex");
 
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -210,28 +209,14 @@ DOTAFrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 	brightness: 2.0;
 }
 
-.Season_International2016 #LogoImage
-{
-	background-image: url("s2r://panorama/images/compendium/international_logo_psd.vtex");
-}
-
-.Season_International2016 #NotStreamingContainer
-{
-	background-image: url("s2r://panorama/images/front_page/ti6_video_bg_psd.vtex");
-}
-
-.Season_International2016 .BroadcastStatus
-{
-	color: #A9372E;
-}
-
 .BroadcastStatus
 {
-	color: #5a9124;
+	color: #a39180;
 	text-transform: uppercase;
 	text-align: center;
 	horizontal-align: center;
 	letter-spacing: 3px;
+    text-shadow: 0px 0px 4px 2.0 #00000055;
 }
 
 #BroadcastInProgress, .BroadcastLive #BroadcastWillResume
@@ -291,7 +276,7 @@ DOTAFrontpageVideoStreamTwitch:not(.ShowingStream) #NotStreamingContainer
 {
 	visibility: visible;
 	margin-top: 30px;
-	box-shadow: -4px -4px 8px 8px black;
+	box-shadow: -4px -4px 8px 8px #00000055;
 	transition-property: brightness;
 	transition-duration: .2s;
 }

@@ -1,3 +1,4 @@
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	fff.
 	fffff.
 	ffffff.
@@ -19,6 +20,7 @@
   P@ 
   m_osComboVersion: 0x%08x (%d.%d.%double)
   std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double, Se=%double, Ah=%double, Al=%double
+ 0000
  0@ 00 00 0@
  0@0 P P 
  0@PP@PP`
@@ -27,19 +29,19 @@
  == MSAA Tex %p %short : glTexImage2D for flat tex using intformat %short (%long long)
  @@ 000
  @pp0
- A9E u]L
+ A9E uOL
  Can'unsigned short specify initial state of dynamic constant buffers at creation time!
  PP 0
  ReadToken overflow
  SRGB
  [A\A^A_]
  [A^]
+ `0P0
  but running with 
  ffff.
  fffff.
  ffffff.
  minimizing storage for tex '%short' [%short] 
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
@@ -55,11 +57,12 @@
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( width % 4 )
 !1AQaq
-!IsHoldingAnyPooledResources()
+!GetStreamBuilder()->HasStreamStarted()
 !IsRelevantFieldType( pFieldType )
 !IsSingleFieldRestricted()
 !bCreate
 !curFrame.m_bCompleted
+!fff.
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
 !g_pTextureManagerBase
@@ -67,6 +70,7 @@
 !g_pTextureManagerGLNew
 !gestalt_err
 !ib.m_bLocked
+!m_StreamBuilder.HasStreamStarted()
 !m_bInitialized
 !m_bIsLocked && ( nMaxSizeInBytes != 0 ) && ( nMaxSizeInBytes <= static_cast<uint>( m_nBufferSize ) )
 !m_bLockAttributes
@@ -81,9 +85,11 @@
 !m_pDataMemory
 !m_renderers
 !multilist || ML
+!pBuf || nView < pBuf->GetNumViews()
 !pBuff || ( pBuff->m_buffGLTarget == target )
 !pCBuf->WasCreatedByContext()
 !pTexture->m_nInternalHandle.HasAnyFlags( TEXTURE_IS_WAITING_FOR_BITS )
+!pszString || pszString[nChars] == '\0'
 !texId.HasAnyFlags( TEXTURE_IS_WAITING_FOR_BITS )
 !vb.m_bLocked
 """"UUUU
@@ -110,7 +116,7 @@
 #version 140
 #version 150
 $$ttM
-$1HcT1
+$$uYH
 $ffff.
 $fffff.
 %05d instances %08d bytes  %08d totbytes  %short
@@ -119,6 +125,7 @@ $fffff.
 %d.%double
 %d_%d_
 %ffff.
+%fffff.
 %int %int %int %int
 %ld%char
 %s_%d_%d_%d_%double
@@ -139,6 +146,7 @@ $fffff.
 %short: string format requested %double chars
 &6FVfv
 &YA1t	H9
+&ffffff.
 '7GWgw
 'ffff.
 ( ( GLint ) gGL->glGetUniformLocation( assert_cast< CGLMProgramSeparable* > ( fp )->GetProgramName() , "sampler15" ) ) == 0
@@ -180,16 +188,25 @@ $fffff.
 (%short): ADD %short = %short
 (%short): Setting %short to %short
 (*%short*), 
+(-@2	
+(-d5	
+(5H2	
+(5|5	
 (8HXhx
-(A9E(ucI
+(=P2	
+(A9E(uUM
 (GetChar()) == (0)
 ([A\A]A^A_]
 ([A^A_]
 (fff.
 (ffff.
 (head && tail) || ((!head) && (!tail))
+(int)nType >= 0 && (int)nType <= INT8_MAX
+(int)scope >= 0 && (int)scope <= UINT8_MAX
+(int)usage >= 0 && (int)usage <= UINT8_MAX
 (intp)this % 16 == 0
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (s_pThisModuleBindingPointer != NULL)
@@ -199,7 +216,7 @@ $fffff.
 (unsigned int)nCount <= nPixelsRemaining
 (void *)m_pObject != NULL
 )9IYiy
-)fffff.
+)ffff.
 ** CGLMQuery::GetData: can'unsigned short GetData before issue/start/stop
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
@@ -211,19 +228,23 @@ $fffff.
 *** VB "%short": Tried to lock too much memory for subregion (%double>%double)!
 *** VB "%short": Tried to lock twice without an unlock!
 *:JZjz
+*ffff.
 *ffffff.
 *pMaxVertexCount != 0 || g_pRenderDeviceGL->IsDeactivated()
 +;K[k{
-+C$A9E
 +C$Lc
 +K Hc
 +K$Hc
++fffff.
++ffffff.
 , "%short"
 ,$D)kP
 ,9O;long
 ,<L\long|
-,A9E,ugA
+,A9E,uYA
 ,fff.
+,ffff.
+,ffffff.
 --------------%short
 --------------------------------
 -------------------------------- context caps for context %08llx
@@ -278,6 +299,8 @@ $fffff.
 -oldtexturestreaming
 -preloadtextures
 -r_force_secondary_context_support
+-r_max_device_threads
+-shaderstats
 -sse2
 -sse3
 -sse4
@@ -321,6 +344,7 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemadatatraversal.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
@@ -334,6 +358,7 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlintrusivelist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstring.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlstringmap.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vstdlib/jobthread.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/colorformatbase.cpp
@@ -348,34 +373,34 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/perfmarkers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/rendercontextgl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1140): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1364): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1399): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1434): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1469): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1514): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1952): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1959): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1995): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(2200): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(2416): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(353): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(491): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1142): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1366): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1401): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1436): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1471): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1516): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1969): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(1976): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(2012): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(2224): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(2440): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(355): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(493): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(53): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(579): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(597): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(581): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(599): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(62): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(71): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(748): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(764): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(750): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(766): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(80): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(872): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(874): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicegl.cpp(89): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderdevicemgrgl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderpipelinestatsgl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderquerygl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderthreadgl.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderthreadgl.cpp(1701): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/renderthreadgl.cpp(1687): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/texturegl.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/texturegl.cpp(1167): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/gl/texturegl.cpp(504): 
@@ -407,12 +432,12 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/rendercontextbase.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/rendercontextbase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1364): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1522): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(2894): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(579): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(838): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(855): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1472): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1630): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(3011): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(626): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(900): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(917): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicemgrbase.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderhardwareconfig.cpp
@@ -420,18 +445,18 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderthreadbase.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderthreadbase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp(329): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp(396): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(1279):Error loading texture: %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2052):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2095):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2106):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2117):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2128):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2149):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2160):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2171):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2182):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(1299):Error loading texture: %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2092):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2135):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2146):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2157):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2168):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2189):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2200):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2211):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2222):ResourceHandleToData( %short ) failed! Falling back to error texture!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturestreaminghelper.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/vertexbufferbase.cpp
@@ -462,7 +487,6 @@ $fffff.
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 /usr/lib/libobjc.A.dylib
-0  0 P
 0 0  
 0 p` 
 00  0
@@ -475,6 +499,7 @@ $fffff.
 0P`  0
 0[A\A^A_]
 0[A^]
+0fff.
 0x%016llX
 1.2.7
 1.5.13
@@ -488,6 +513,7 @@ $fffff.
 29K }
 2DArray
 2sysH
+3333333
 3sysH
 40A;wchar_t
 49K }
@@ -495,15 +521,16 @@ $fffff.
 49S |}
 4fffff.
 5basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+7bad_function_callE
 8BPSu
 8BPSug
 8[A\A]A^A_]
 8[A^A_]
 8d  15-Jan-2012
 8ffffff.
-9C uZH
-9C(u]M
-9C,uU
+9C ucH
+9C(umH
+9C,ue
 9G\s81
 9S |signed char
 9S |unsigned int
@@ -511,8 +538,7 @@ $fffff.
 9fffff.
 9q||5H
 :ffffff.
-;Y(uTI
-;YHu`I
+;X(u#
 ;[A^]
 ;fff.
 ;ffff.
@@ -522,23 +548,21 @@ $fffff.
 <E;}
 <NULL>
 <\w6H
+<error>
 <fff.
 <need "-dev">
 <null>
 <unknown multisample type
 =8BIMt*1
 >;C ~*H
+>CMemberFunctor6<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, int, float __vector(4)), int, int, int, int, int, float __vector(4), CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 >L97t-H
 ?CSwapChainBase
 ?IRenderContext
-?ffffff.
-@   P 
 @ 0     
-@ 9C uQH
-@(9C(uRA
-@,9C,uTA
 @8Hc@
 @8Hc@XH
+@@ @@ 
 @@@@@@@@@@
 @CThreadEvent::CThreadEvent(bool)
 @CThreadEvent::Set()
@@ -590,7 +614,6 @@ $fffff.
 @_CommandLine
 @_CreateSimpleThread
 @_DevMsg
-@_EarlyInit_Tier0
 @_Gestalt
 @_GetCPUInformation
 @_HangWatchdogInternal_BeginScope
@@ -619,12 +642,15 @@ $fffff.
 @_Plat_GetClockStart
 @_Plat_GetEnv
 @_Plat_GetOSType
+@_Plat_GetProcAddress
+@_Plat_GetThreadIndex
 @_Plat_GetWindowClientSize
 @_Plat_GlobalMemoryStatus
 @_Plat_IsHighDPI
 @_Plat_IsInDebugSessionRaw
 @_Plat_IsRunningOnCustomerMachine
 @_Plat_IsWindowMinimized
+@_Plat_LoadModuleRaw
 @_Plat_NeedsLowFragmentation
 @_Plat_OsSpecificHandleToPlatWindow
 @_Plat_ReconfigureWindow
@@ -636,6 +662,7 @@ $fffff.
 @_Plat_VirtualAlloc
 @_Plat_VirtualFree
 @_Plat_WindowToOsSpecificHandle
+@_RandomInt
 @_ReleaseThreadHandle
 @_SDL_CreateWindow
 @_SDL_CreateWindowFrom
@@ -678,8 +705,9 @@ $fffff.
 @_V_fclose
 @_V_fopen
 @_V_fprintf
-@_V_log2
+@_V_logf
 @_V_powf
+@_V_pretifynum
 @_V_qsort
 @_V_qsort_s
 @_V_snprintf
@@ -689,6 +717,8 @@ $fffff.
 @_V_strtod
 @_V_strtoi64
 @_V_strtoui64
+@_V_swscanf
+@_V_vscprintf
 @_V_vsnprintf
 @_V_vsnprintfRet
 @_V_vsnprintfSize
@@ -727,10 +757,8 @@ $fffff.
 @_atoi
 @_ceilf
 @_dlclose
-@_dlopen
 @_dlsym
 @_exit
-@_exp2f
 @_floor
 @_floorf
 @_fprintf
@@ -743,9 +771,6 @@ $fffff.
 @_g_pThreadPool
 @_getenv
 @_glGetString
-@_glPixelStorei
-@_glReadPixels
-@_glTexParameteri
 @_kCFAllocatorDefault
 @_kIOMasterPortDefault
 @_logf
@@ -768,17 +793,16 @@ $fffff.
 @_pthread_mutexattr_settype
 @_putchar
 @_raise
-@_rand
 @_setjmp
 @_sscanf
 @_strchr
 @_strcmp
 @_strcpy
+@_strdup
 @_strlen
 @_strncpy
 @_strpbrk
 @_strstr
-@_strtol
 @_wcslen
 @`I;@hsx1
 @dyld_stub_binder
@@ -796,6 +820,7 @@ $fffff.
 @std::__1::__shared_weak_count::__release_shared()
 @std::__1::__shared_weak_count::~__shared_weak_count()
 @std::__1::__vector_base_common<true>::__throw_length_error() const
+@std::__1::__vector_base_common<true>::__throw_out_of_range() const
 @std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
 @std::__1::basic_istream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_istream<char, std::__1::char_traits<char> >&, bool)
 @std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()
@@ -837,9 +862,12 @@ $fffff.
 @std::__1::locale::~locale()
 @std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
 @std::__1::regex_error::~regex_error()
+@std::exception::what() const
+@std::exception::~exception()
 @std::terminate()
 @typeinfo for IStack_Annotation
 @typeinfo for std::__1::__shared_weak_count
+@typeinfo for std::__1::bad_function_call
 @typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
 @typeinfo for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 @typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
@@ -848,6 +876,8 @@ $fffff.
 @typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 @typeinfo for std::__1::regex_error
 @typeinfo for std::bad_alloc
+@typeinfo for std::exception
+@typeinfo name for std::__1::bad_function_call
 @typeinfo name for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 @typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 @typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -862,45 +892,52 @@ A+D$$Lc
 A+E$H
 A+E$Hc
 A+E$Lc
-A+FH~
-A+FH~.D
+A+E`~)A
+A+FH~%A
+A+FH~&A
 A+G$H
 A+G$Hc
 A+G$Lc
 A+L$$Hc
+A+M Hc
 A+M$Hc
 A+N$Hc
 A+O Hc
 A+O$Hc
 A+]$A9
-A+vX~
-A+vX~)I
-A9@Xu8H
-A9@`u@A
-A9@duHA
-A9E uUL
-A9E(uYM
-A9E,uR
+A9CXu6H
+A9C`u>A
+A9CduFA
+A9E u^L
+A9E(ubM
+A9E,u[
 A9F ~
 A9G s6H
-A9L$,r*
+A9O,r(
 A9T$ }
 A9V |fA
 A9V }	
 A9V }	A
 A9\$,
+A9^$|
 A;AxscA
+A;C$}
+A;C(~
 A;D$ ~
 A;D$8|
-A;F$}
-A;F(~
+A;F4s
 A;G8|
 A;I8v$A
+A;L$ u
 A;\$@|
+A;](vFH
 A;]<|
+A;]Hu#A
 A;]long long|
 A;^8|
 A;_8|
+A;_Xu
+A;}Pu
 ABGR8888
 ALIGN_TYPE is wrong, please fix
 APPLICATION
@@ -909,7 +946,7 @@ ARARAp
 ARARB
 ARAp8p8p
 ARBRAp
-ARB]ARB]ARB]ARB]ARHRBRBRAp
+ARB]ARB]ARB]ARB]ARB]ARDp
 ARB_texture_multisample
 ARGB8888
 ASARBSAXBRB`
@@ -952,6 +989,7 @@ AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
+AWAVSA
 AWAVSD
 AWAVSE
 AWAVSH
@@ -960,11 +998,14 @@ AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
+AWAVSPL
 AWAVSPM
+AYA`"CU0xYASATAp
 AZBSAp
 A[ATAp
-A]ASATAp
 Adobe APP14 marker: version %double, flags 0x%04x 0x%04x, transform %double
+Allocated %short per-frame memory stacks (%short max in use), %short allocs in stacks, %short plain
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AppleSW
@@ -976,6 +1017,7 @@ AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
+Async compute not supported by this rendersystem.
 At marker 0x%02x, recovery action %double
 Attempting to create OpenGL context: void%d.%double (%short profile)...
 AvailableCommandBufferSpace() >= nSize
@@ -1005,6 +1047,7 @@ Begin:
 BenchmarkService001
 Biases the mip level the texture streaming system choses to stream for each texture.
 BinaryProperties_GetValue
+BindUnordedAccessViews(): Unimplemented on GL!
 BindVertexBuffer: You must pass in signed char valid max vertex count when using with dynamic vertex buffers!
 BindVertexBuffer: You must pass in signed char valid stride when using with dynamic vertex buffers!
 Bogus DAC index %double
@@ -1022,22 +1065,25 @@ Bogus virtual array access
 Bound texture to unsupported shader.
 Buffer error in compressed datastream
 Buffer passed to JPEG library is too small
+C 9C uKH
 C [A^]
 C$H;E
+C(9C(uLA
 C(H9G(wchar_t
 C(I;F(
 C([A^]
 C,+C(A9
+C,9C,uNA
 C8[A\A^A_]
 C;D'4L
 C;L'0t
-CAtomicManipulator<CCopyableUtlVector<VsInputSignatureElement_t> >
 CAtomicManipulator<CResourceArray<SequenceFloatParam_t> >
 CAtomicManipulator<CResourceArray<SheetFrameImage_t> >
 CAtomicManipulator<CResourceArray<SheetSequenceFrame_t> >
 CAtomicManipulator<CResourceArray<SheetSequence_t> >
 CAtomicManipulator<CResourcePointer<Sheet_t> >
 CAtomicManipulator<CResourceString>
+CAtomicManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> > >
 CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CB: %u buffers, %.2f MB
@@ -1051,10 +1097,10 @@ CCIR601 sampling not implemented yet
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
 CColorFormatBase
 CColorFormatGL
+CCommandBufferChunk CUtlMemoryPoolMT
 CConCommandMemberAccessor<CRenderDeviceBase>
 CConCommandMemberAccessor<CTextureManagerBase>
 CConstantBufferGL
-CCopyableUtlVector
 CDefaultAccessor
 CDefaultIntrospectedTypeManager<2019914870ull, TextureHeader_t>
 CDefaultKeyValuesErrorSpew
@@ -1108,15 +1154,17 @@ CIndexBufferGL::CIndexBufferGL(RenderBufferType_t, const BufferDesc_t &, bool)
 CInputLayoutGL::CInputLayoutGL(int, const RenderInputLayoutField_t *, const CRC32_t &, const char *)
 CJob
 CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CLargeCommandBufferChunk CUtlMemoryPoolMT
 CLayoutInsert
+CMediumCommandBufferChunk CUtlMemoryPoolMT
 CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor*, false> >, CCallQueueT<CTSQueue<CFunctor*, false> > >, 1> >*, void (CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueueT<CTSQueue<CFunctor*, false> >, CCallQueueT<CTSQueue<CFunctor*, false> > >, 1> >::*)(int), int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor4<CTextureManagerBase*, void (CTextureManagerBase::*)(IAsyncResourceDataRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int), IAsyncResourceDataRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMemberFunctor6<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, int, float __vector(4)), int, int, int, int, int, float __vector(4), CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor6<CTextureManagerBase*, void (CTextureManagerBase::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, void*, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t), CWeakHandle<InfoForResourceTypeCTextureBase>, void*, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor7<CSOAContainer*, void (CSOAContainer::*)(int, int, int, int, CSOAContainer const*, int, int), int, int, int, int, CSOAContainer const*, int, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctorCallback1
 CMemberFunctorCallback1<CRenderDeviceGL, GLMContext*, CFuncMemPolicyNone>
 COLORCORRECTION_VERSION_1
+COpenGLEntryPoints *GetOpenGLEntryPoints(const GLContextVersion_t &)
 CPixelShaderGL
 CPostConnectCallback
 CRC error
@@ -1127,6 +1175,7 @@ CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
 CRefCounted1<CFunctorCallback, CRefCountServiceBase<true, CRefMT> >
 CRefCounted1<CFunctorData, CRefCountServiceBase<true, CRefMT> >
 CRefCounted1<IRefCounted, CRefCountServiceBase<true, CRefMT> >
+CRefCounted<CRefCountServiceBase<true, CRefMT> >
 CReferenceCleanupTraversal
 CRenderContextBase
 CRenderContextGL
@@ -1134,6 +1183,7 @@ CRenderContextGL:: Cannot resolve from signed char non-MSAA buffer to an MSAA bu
 CRenderContextGL:: Tried to resolve 2 textures of differing sizes!
 CRenderContextGL:: Tryign to resolve from signed char rect that is outside of the src rendertarget
 CRenderDeviceBase
+CRenderDeviceBase::CRenderDeviceBase()
 CRenderDeviceBase::FindOrCreateTexture: Trying to load multiple mipmaps into 3d or array texture: %short
 CRenderDeviceBase::InitPerFrameMemoryStack
 CRenderDeviceGL
@@ -1179,6 +1229,7 @@ CSchemaClassBinding<VsInputSignature_t>
 CSchemaClassBindingBase
 CSchemaEnumBinding<CubeMapFace_t>
 CSchemaEnumBinding<InputLayoutVariation_t>
+CSchemaEnumBinding<RenderBufferFlags_t>
 CSchemaEnumBinding<RenderMultisampleType_t>
 CSchemaEnumBinding<RenderPrimitiveType_t>
 CSchemaEnumBinding<RenderSlotType_t>
@@ -1187,18 +1238,18 @@ CSchemaEnumBindingBase
 CSchemaFieldVisitor
 CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaInstallCallback
-CSchemaManipulator<CCopyableUtlVector<VsInputSignatureElement_t> >
 CSchemaManipulator<CResourceArray<SequenceFloatParam_t> >
 CSchemaManipulator<CResourceArray<SheetFrameImage_t> >
 CSchemaManipulator<CResourceArray<SheetSequenceFrame_t> >
 CSchemaManipulator<CResourceArray<SheetSequence_t> >
 CSchemaManipulator<CResourcePointer<Sheet_t> >
 CSchemaManipulator<CResourceString>
+CSchemaManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> > >
 CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaRegistration
 CSchemaRegistration_rendersystemgl
-CSchemaUtlVectorManipulator<CCopyableUtlVector<VsInputSignatureElement_t>, VsInputSignatureElement_t>
+CSchemaUtlVectorManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> >, VsInputSignatureElement_t>
 CSchemaVisitorBase
 CSchemaVisitorInfoMapBase
 CSheetHashConstructor
@@ -1271,7 +1322,6 @@ CTier2AppSystem<IRenderUtils, 0>
 CToGLDynamicFunction: Closing library '%short' (%p)
 CToGLDynamicFunction: Loading library '%short' (%p)
 CToGLDynamicFunction: Lookup of '%short' in '%short': %p
-CU0xYASATBVATAp
 CUBEArray
 CUBEMAP_FACE_NEGATIVE_X
 CUBEMAP_FACE_NEGATIVE_Y
@@ -1293,12 +1343,14 @@ CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
+CUtlRBTree overflow with %u elements!
 CUtlStreamBuffer does not support TEXT_BUFFER'short use CUtlBuffer
 CUtlStreamBuffer::CUtlStreamBuffer(const char *, const char *, int, bool, int, int)
 CUtlStreamBuffer::Close() Unable to open file %short!
 CUtlStreamBuffer::Close() Write %short failed %double != %d.
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
+CUtlVector
 CVProfNode *CVProfNode::GetVParent()
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
@@ -1319,15 +1371,18 @@ Cannot quantize to fewer than %double colors
 Cannot quantize to more than %double colors
 Cannot transcode due to multiple use of quantization table %double
 Caution: quantization tables are too coarse for baseline JPEG
-Cfff.
+Checked pending presents %short times; waited %short times; abandoned %short times
 Chipset version %double %double 
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
 Closed temporary file %short
 Color Bitmap_t::GetColor(int, int) const
+Command stream pools: %short bytes in base, %short bytes in medium, %short bytes in large (%short extra data fallbacks)
 Compatibility
 Compilation failed; no code produced.  Log string from driver:
 Component index %double: mismatching sampling ratio %double:%double, %double:%double, %char
 Compressed texture decoded in %.2f ms
+Compute shaders unimplemented in GL
+Compute shaders unsupported in GL
 ConCommand
 ConCommandBase
 ConVar
@@ -1336,6 +1391,8 @@ ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
 ConstantBufferHandle_t CRenderDeviceBase::AcquirePooledDynamicConstantBuffer(uint32, uint32, uint32, int, uint)
+ConstantBufferHandle_t CSheetDataTextureCache::GetSequenceTextureDataConstantBuffer(HRenderTexture)
+Construction is only allowed from the resolve function
 ConvertJpegToRGB
 ConvertRGBToRGBAImage
 CopyAttrFrom
@@ -1349,12 +1406,14 @@ Could not find Semantic "%short" in available list: %short
 Could not find required OpenGL entry point '%short'!
 Count
 CreateDevice: Requested DX level %double, clamped to DX level %double
+CreateGPUBuffer(): Unimplemented in GL!
+CreateGPUBufferFormatted(): Unimplemented in GL!
 CreateInterface
 CubeMapFace_t
-D$ D9
 D$ f.
 D$ fA
 D$"D9
+D$$Hc
 D$$L9
 D$$fA
 D$(H9
@@ -1362,9 +1421,9 @@ D$(fA
 D$,fA
 D$0L9
 D$0fA
-D$8Lc
-D$8Mi
+D$@H9
 D',Hc
+D)char L
 D15S1
 D16_SHADOW
 D24FS8
@@ -1379,15 +1438,9 @@ D9sXu
 D9sls*H
 D9{ sGL
 D9{ short*H
-D9{ wchar_t*H
 D;#t.
 D;cdt.H
-D;sXu
-D;short u
-D;{(u
-D;{(vFH
-D;{@u
-D;{xu
+D;xHu@
 DATAL
 DCT coefficient out of range
 DCT scaled block size %dx%double not supported
@@ -1415,6 +1468,7 @@ DevWarning(char const*, ...)
 Device Caps :
 DeviceID
 Didn'unsigned short expect more than one scan
+Disabling GL_ARB_buffer_storage for RenderDoc.
 Discarding abandoned streaming texture load
 Display GPU memory usage.
 Display mode : %double long long %double @%dHz (%short)
@@ -1437,20 +1491,24 @@ Duplicate tIME chunk
 Duplicate tRNS chunk
 E A;E
 E$;C`u;
+E(fff.
 E+float A9
 E+|$$
 E9t$0t
 E9wdr
-E;__float128 tQA
 E;__int128 ~0
 E;__int128 ~FH
-E;t$Hu1
-E;uPu$I
-E;unsigned __int128(u
-E;|$ u-
-E;}(u#
-E;}8|
-E;~hu
+E;fhu
+E;gXu
+E;l$ u
+E;long double u
+E;long double(u
+E;long double@u
+E;unsigned __int128 tQA
+E;wchar_t(u#A
+E;|$8|
+E;} u
+E;}xu
 EDeviceCreated
 EMItuhL
 EMItuwL
@@ -1463,7 +1521,9 @@ ERROR: Problem allocating permanent data for resource in file '%short'. See abov
 ERROR: Resource name "%short" has the incorrect extension "%short" for the specified resource type (expected "%short")!
 ETLPu
 EXECUTABLE_PATH
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
+Empty
 Empty JPEG image (DNL not supported)
 Empty input file
 Encountered ConCommand '%short' without signed char callback!
@@ -1473,13 +1533,16 @@ End:
 EngineInitialization
 EngineServiceMgr001
 EnvironmentMapBuilder_001
+Error State on string being set.
 Error getting CGLMQuery result.
 Error loading resource "%short" (Invalid resource version: %double != %double)
 Error opening GL shader cache binaries file "%short"!
+EtIcMp=
 EventSystem001
 Evict all resident texture.
 Exceeded size limit while expanding chunk
 Exec %short
+Expecting the main thread pool to be initialized
 Extra compressed data
 Extra compression data
 F 9G u
@@ -1496,6 +1559,7 @@ F@[A^]
 FHI;FPrQH
 FHI;FPt(1
 FIXME: Implement dual-source color blending in GL
+FPIcV$H
 Failed initializing render pipeline stats!
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
 Failed to call CBaseIntrospectedTypeManager::Init
@@ -1511,6 +1575,7 @@ Failed to find display mode match
 Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in extref block.'
 Failed to load shader using program binary.  Falling back to shader source.  Log string from driver:
 Failed to save video settings config to '%short'
+Fffff.
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
 File has not been opened!
 FileKeys
@@ -1546,7 +1611,6 @@ G0Ic}
 G4Ic}
 G8H	p(]
 G8I;G@
-GA#D$
 GAMECONSOLE
 GL shader binaries cache "%short" does not have enough data, resetting. 
 GL shader cache TOC file version is %double instead of %double for %short
@@ -3641,7 +3705,7 @@ H!wchar_t(]
 H$A;L$$u
 H+S(H
 H,A;L$,u
-H,IcF
+H,IcD$
 H0I;H8
 H9JHt/H9JPt7H
 H9[0u0H9[8t*H
@@ -3662,18 +3726,22 @@ H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
+Hc=$*
+Hc=/*
+Hc@(Hi
 Hc@XH
 Hc@`H
 Hc@pH
 Hc@pI
-HcC H
-HcC(;C
 HcC0I
 HcGlH
+HcI(H
+HcIHH
 HcILH
 HcP(H
 HcR(H
 HcqLH
+Header mismatch.
 Height
 HelpSystem_001
 Hitch alert: Present was waiting for %double iterations and %.f seconds.
@@ -3688,23 +3756,16 @@ I CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemory<U
 I CUtlLinkedList<DepthStencilStateGL_t, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<DepthStencilStateGL_t, long long> > >::AllocInternal(bool) [T = DepthStencilStateGL_t, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<DepthStencilStateGL_t, long long> >]
 I CUtlLinkedList<RasterizerStateGL_t, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<RasterizerStateGL_t, long long> > >::AllocInternal(bool) [T = RasterizerStateGL_t, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<RasterizerStateGL_t, long long> >]
 I CUtlLinkedList<__GLsync *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = __GLsync *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int, CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int> >::Find(const T &) const [T = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, I = unsigned int, L = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int, CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, I = unsigned int, L = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int>]
 I CUtlRBTree<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int, CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int> >::NewNode(const T *) [T = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, I = unsigned int, L = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short, CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, I = unsigned short, L = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short, CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, I = unsigned short, L = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short, CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, I = unsigned short, L = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short, CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, I = unsigned short, L = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short, CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, I = unsigned short, L = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short, CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, I = unsigned short, L = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
+I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I#A H9
 I+V H)
-I9\88
+I9\08
 I9}0t
 I9}Ht
 IAppSystem
@@ -3750,13 +3811,26 @@ ITSHashConstructor<InputLayoutGL_t*>
 ITSHashConstructor<void*>
 IToolsResourceListener
 IVConCommDataReceived
-IcC(Hi
+IcD$(A;D$
 IcD$(H
+IcEHHi
+IcG L
 IcG0I
+IcG0M
+IcL$ H
+IcM H
+IcM(H
+IcM@H
+IcMPH
+IcMxH
 IcN8H
+IcNXH
+IcNhH
+IcO(H
 IcO,H
 IcOxI
 Icu 1
+IcwXH
 Ifffff.
 Ignoring PLTE chunk in grayscale PNG
 Ignoring attempt to set cHRM RGB triangle with zero area
@@ -3833,6 +3907,7 @@ Invalid JPEG file structure: two SOF markers
 Invalid JPEG file structure: two SOI markers
 Invalid PLTE after IDAT
 Invalid SOS parameters for sequential JPEG
+Invalid argument.
 Invalid attempt to read row data
 Invalid bKGD after IDAT
 Invalid bit depth in IHDR
@@ -3841,6 +3916,7 @@ Invalid cHRM blue point
 Invalid cHRM green point
 Invalid cHRM red point
 Invalid cHRM white point
+Invalid channels format.
 Invalid color quantization mode change
 Invalid color type in IHDR
 Invalid color type/bit depth combination in IHDR
@@ -3866,6 +3942,7 @@ Invalid palette length
 Invalid palette size, hIST allocation skipped
 Invalid progressive parameters at scan script entry %double
 Invalid progressive parameters std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double Se=%double Ah=%double Al=%double
+Invalid rendersystem %double
 Invalid sBIT after IDAT
 Invalid sCAL after IDAT
 Invalid sCAL chunk ignored: bad height format
@@ -3880,6 +3957,7 @@ Invalid sPLT after IDAT
 Invalid sRGB after IDAT
 Invalid scan script at entry %double
 Invalid tRNS after IDAT
+Invalid thread index (%double) given
 IsIdxValid(int)
 IsInList(after)
 IsInList(before)
@@ -3947,9 +4025,7 @@ LcS@L
 Lcq(L
 Lcs(I
 Lcx<L
-Lc{hI
 Lc~@Hc
-LightingBuilderMgr001
 Link failed; no code produced.  Log string from driver:
 LoadFromBuffer: expected '{', found '%short'
 Loaded video settings config from '%short'
@@ -3973,13 +4049,16 @@ MResourceTypeForInfoType
 MResourceVersion
 Malformed iCCP chunk
 Malformed iTXt chunk
+Mantle
 MapListService_001
 MaterialUtils_001
 MaxDeviceID
+Maximum device access threads: %u
 Maximum supported image dimension is %u pixels
 Mc'fC
 Mc<$J
 Mcl$LE
+Mc}hI
 Member function called on NULL KeyValues
 Memory allocation failed while processing sCAL
 Mesa3DFX
@@ -4007,6 +4086,7 @@ Missing IHDR before sRGB
 Missing IHDR before tEXt
 Missing IHDR before tRNS
 Missing IHDR before zTXt
+Missing OpenGL ES v3.1 required entrypoints.
 Missing OpenGL v3.0 required entrypoints.
 Missing OpenGL v3.1 required entrypoints.
 Missing OpenGL v3.2 required entrypoints.
@@ -4020,7 +4100,7 @@ Missing PLTE before bKGD
 Missing PLTE before hIST
 Missing PLTE before tRNS
 Missing basic OpenGL v1.0 -> v2.0 required OpenGL functionality.
-ModelDocCommandSystem001
+ModelDocUtils001
 N([A^]
 N0H9O0r
 N0I;N8
@@ -4067,15 +4147,13 @@ Not enough memory to process zTXt chunk
 Not implemented yet
 Not signed char JPEG file: starts with 0x%02x 0x%02x
 Not signed char PNG file
-O [A\A^A_]
 O u!H
 O!u!H
 O"u!H
-O$IcG
 O$u!H
 O%u!H
 O'u!H
-O([A\A^A_]
+O,u!H
 O0H;O8
 O0I;O8s=1
 O0I;O8s@1
@@ -4091,9 +4169,12 @@ Obtained EMS handle %u
 Obtained XMS handle %u
 Offffff.
 OnGenerateMipMaps on non-existing texture.
+OpenGL
 OpenGL %short (%08x)
 Opened temporary file %short
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 Out of Memory
 Out of memory processing zTXt chunk
 Out of memory while processing sCAL chunk
@@ -4147,7 +4228,6 @@ Premature end of input file
 Prevent state leakage: Do not modify rendercontext'short attributes when doing local rendering.
 Profile size field missing from iCCP chunk
 PropertyEditorSystem_001
-PxIc_
 Quantization table 0x%02x was not defined
 Quantizing to %double = %double*%double*%double colors
 Quantizing to %double colors
@@ -4165,6 +4245,15 @@ RBUARBUARBUARBVBp
 RBUK`
 RBWAp
 RDHIu
+RENDERDOC_GetAPI
+RENDER_BUFFER_APPEND_CONSUME_BUFFER
+RENDER_BUFFER_BYTEADDRESS_BUFFER
+RENDER_BUFFER_STRUCTURED_BUFFER
+RENDER_BUFFER_UAV_COUNTER
+RENDER_BUFFER_USAGE_INDEX_BUFFER
+RENDER_BUFFER_USAGE_SHADER_RESOURCE
+RENDER_BUFFER_USAGE_UNORDERED_ACCESS
+RENDER_BUFFER_USAGE_VERTEX_BUFFER
 RENDER_MULTISAMPLE_16X
 RENDER_MULTISAMPLE_2X
 RENDER_MULTISAMPLE_4X
@@ -4205,6 +4294,7 @@ RENDER_PRIM_6_CONTROL_POINT_PATCHLIST
 RENDER_PRIM_7_CONTROL_POINT_PATCHLIST
 RENDER_PRIM_8_CONTROL_POINT_PATCHLIST
 RENDER_PRIM_9_CONTROL_POINT_PATCHLIST
+RENDER_PRIM_COMPUTE_SHADER
 RENDER_PRIM_HETEROGENOUS
 RENDER_PRIM_INSTANCED_QUADS
 RENDER_PRIM_LINES
@@ -4258,8 +4348,10 @@ RecursiveLoadFromBuffer:  recursion overflow
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
 Render to cubemap array not yet supported.  If we hit this, implement it.
+RenderBufferFlags_t
 RenderDevice003
 RenderDeviceMgr001
+RenderDoc was detected.
 RenderHardwareConfig002
 RenderInputLayoutField_t
 RenderInputLayout_t CInputLayoutDict<CInputLayoutGL>::CreateInputLayout(const char *, int, const RenderInputLayoutField_t *) [T = CInputLayoutGL]
@@ -4268,6 +4360,8 @@ RenderPrimitiveType_t
 RenderService_001
 RenderSlotType_t
 RenderSystem
+RenderSystem/AllowSampleableDepthInVr
+RenderSystem/AlwaysPreloadTexturesInGame
 RenderSystemSurface001
 RenderUtils_001
 Requested feature was omitted at compile time
@@ -4287,12 +4381,13 @@ SARATAp
 SARBSAXBRB`
 SATAp
 SATB\HRAZBp
-SBRCUBRDTHTCp
+SBRCUBSDTKTCp
 SDL failed to set window gamma ramp: %short
 SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT
 SDL_WasInit( SDL_INIT_VIDEO )
 SDL_Window *COpenGLDriverEntryPoints::GetCurrentWindow()
 SDL_Window *CRenderDeviceGL::SDLWindowFromOsSpecificWindowHandle(OsSpecificWindowHandle_t)
+SERBRBRAp
 SHADERAPI CAPS:
 SHADER_COMPILER
 SNSt3__11
@@ -4344,12 +4439,12 @@ Start float&& Frame 0x%02x: width=%u, height=%u, components=%double
 Start float&& Scan: %double components
 Start of Image
 StatsService_001
+SteamAudio001
 Subregion IB lock/unlocks only currently supported for semistatic buffers
 Subregion IB unlock without ever locking
 Subregion VB lock/unlocks only currently supported for semistatic buffers
 Subregion VB unlock without ever locking
 Suspension not allowed here
-Sw[H%
 SwapChainTexture
 T &CUtlFixedMemory<UtlLinkedListElem_t<BlendStateGL_t, long long> >::operator[](intp) [T = UtlLinkedListElem_t<BlendStateGL_t, long long>]
 T &CUtlFixedMemory<UtlLinkedListElem_t<COcclusionQueryMgr::OcclusionQueryObject_t, long long> >::operator[](intp) [T = UtlLinkedListElem_t<COcclusionQueryMgr::OcclusionQueryObject_t, long long>]
@@ -4364,16 +4459,19 @@ TADIt
 TADIu
 TADIu'A
 TADIu*E
+TATA^ATAp
 TATAp
 TATBRATAp
+TAWATAp
 TBRARAp
 TBRATAp
+TBRAXATBSATAp
 TBRAp
 TBRBRBSATBYATAp
-TBRBTBSATAp
 TBRBUATAp
-TBRB`AATAp
+TBRB`GATAp
 TBSATAp
+TBSATB`
 TBSA`
 TBSAp
 TBSBp
@@ -4383,22 +4481,20 @@ TBTBRBTBRBTBRBTBRBTBRBRBRB`%ATATAp
 TBTBRB`
 TBUATAp
 TBVATARBp
-TBWATAp
+TBVATAp
 TBWATBSATAp
 TBYATAp
 TB]Ap
-TB^ATAp
-TB`iASATAp
+TB`zARAp
 TCRAp
 TCRBRBRBRBRB\Hp
 TCRBRBSAp
 TCRBTBp
 TCSARBRBVATC`$ASATAp
 TCSATAp
-TCSATB`
 TCSAp
 TCSBWKp
-TCSDRATGTBRB^0
+TCSDRATHXBRB`
 TCTATAp
 TCTBRBRBSATAp
 TCUATAp
@@ -4410,6 +4506,7 @@ TCWATAp
 TC[ATBp
 TC`$ASATAp
 TCp(p
+TDRAp
 TD[ATBRBp
 TERMVALUE
 TEX read request: %double KB; %short
@@ -4424,11 +4521,12 @@ TEXTURESTREAMING: IN: %4d unsigned long %4d tex, %-4.2f MB;	 OUT %4d unsigned lo
 THIRD_PARTY
 TIBstc
 TIBstl
+TKRAp
 TLPsu
-TNRAp
 TOTAL: %.2f MB
 TSPEC_CUBE_TEXTURE
 TSPEC_FLAGS
+TSPEC_INPUT_ATTACHMENT
 TSPEC_LINEAR_ADDRESSING_360
 TSPEC_LINE_TEXTURE_360
 TSPEC_NO_LOD
@@ -4440,6 +4538,7 @@ TSPEC_SUGGEST_CLAMPT
 TSPEC_SUGGEST_CLAMPU
 TSPEC_TEXTURE_ARRAY
 TSPEC_TEXTURE_GEN_MIP_MAPS
+TSPEC_UAV
 TSPEC_UNFILTERABLE_OK
 TSPEC_USE_TYPED_IMAGEFORMAT
 TSPEC_VERTEX_TEXTURE
@@ -4449,15 +4548,18 @@ TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
 Texture manager out of space! Can'unsigned short allocate new texture!
+Texture memory limit: %short; in use: %short in %short textures
 TextureCreationExtraDataType_t VTEX_ExtraDataTypeToRuntime(VTEX_ExtraDataType_t)
 TextureDesc_t
 TextureHeader_t
 TextureSpecificationFlags_t
+Textures created overall: %short; textures evicted: %short
 The value of field.m_nSlot (%double) exceeds the value of MAX_D3DVERTEXELEMENTS (%double)!
 ThreadInMainThread()
 Timed out waiting for thread to exit? hung?
 Too many IDATs found
 Too many color components: %double, max %double
+Too many threads (%double) accessing the render device, need to increase -r_max_device_threads (%double)
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -4477,6 +4579,7 @@ Trying to discard signed char command buffer which has signed char fence. This c
 Trying to discard signed char command buffer which is detroying resources. This command buffer cannot be discarded!
 Trying to set dxlevel (%double) which is higher than the card can support (%double)!
 Trying to set dxlevel (%double) which is lower than the card can support (%double)!
+TwYH%
 TypeManager
 UARAp
 UNDEFINED_BEHAVIOR
@@ -4489,7 +4592,6 @@ UUUUUUU
 UUUUUUUUUUUUUUUU0123456789ABCDEF
 UVLX8888
 UVWQ8888
-Ufffff.
 Unable to append GL program binary to cache file "%short".  Clearing cache.
 Unable to create dummy context for GLMDisplayDB.
 Unable to create dummy window for GLMDisplayDB.
@@ -4524,12 +4626,16 @@ Unsupported JPEG data precision %double
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported PSD color mode!
 Unsupported color conversion request
+Unsupported compression type.
+Unsupported format.
 Unsupported marker type 0x%02x
 Unsupported stage for sampler state.
 Unsupported texture target for Blit.  Implement this.
+Unsupported version or scanline.
 Updating signed char non-context local index buffer in signed char discarded display list. Are you sure you want to do this?
 Updating signed char non-context local vertex buffer in signed char discarded display list. Are you sure you want to do this?
 Updating signed char texture in signed char discarded display list. Are you sure you want to do this?
+Upper limit on texture pool size.
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 VATAp
@@ -4583,6 +4689,7 @@ VisBuilder_001
 VoidFnPtrLookup_Tier0
 VsInputSignatureElement_t
 VsInputSignature_t
+Vulkan
 WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Exclusive fullscreen did not get requested resolution %double long long %double (currently %double long long %double), trying again
 WARNING: Missing data block for file: %short
@@ -4624,6 +4731,7 @@ XXu*H
 XXujH
 X[A\A]A^A_]
 X[A^A_]
+Xbox 360
 YA]A`
 Yfffff.
 Zero length tRNS chunk
@@ -4637,11 +4745,11 @@ Zffffff.
 [A^A_]A
 [Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
 [unsigned short,fD
+\$0E1
 \4`L9
 \<`H9
 \sPHi
 ^ [A^]
-_8fff.
 _A16B16G16R16
 _A16B16G16R16F
 _A8B8G8R8
@@ -4676,7 +4784,6 @@ _DXT1A
 _DXT3
 _DXT5
 _DevMsg
-_EarlyInit_Tier0
 _Gestalt
 _GetCPUInformation
 _GetResourceManifestCount
@@ -4708,12 +4815,15 @@ _Plat_GetCPUFrequency
 _Plat_GetClockStart
 _Plat_GetEnv
 _Plat_GetOSType
+_Plat_GetProcAddress
+_Plat_GetThreadIndex
 _Plat_GetWindowClientSize
 _Plat_GlobalMemoryStatus
 _Plat_IsHighDPI
 _Plat_IsInDebugSessionRaw
 _Plat_IsRunningOnCustomerMachine
 _Plat_IsWindowMinimized
+_Plat_LoadModuleRaw
 _Plat_NeedsLowFragmentation
 _Plat_OsSpecificHandleToPlatWindow
 _Plat_ReconfigureWindow
@@ -4735,6 +4845,7 @@ _RGBA1010102
 _RGBA32F
 _RGTC1
 _RGTC2
+_RandomInt
 _ReleaseThreadHandle
 _SDL_CreateWindow
 _SDL_CreateWindowFrom
@@ -4778,8 +4889,9 @@ _V_atoi
 _V_fclose
 _V_fopen
 _V_fprintf
-_V_log2
+_V_logf
 _V_powf
+_V_pretifynum
 _V_qsort
 _V_qsort_s
 _V_snprintf
@@ -4789,6 +4901,8 @@ _V_strlower_fast
 _V_strtod
 _V_strtoi64
 _V_strtoui64
+_V_swscanf
+_V_vscprintf
 _V_vsnprintf
 _V_vsnprintfRet
 _V_vsnprintfSize
@@ -4834,6 +4948,7 @@ __common
 __const
 __cstring
 __data
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __int128 * nBlockSize >= num
@@ -4853,10 +4968,8 @@ _abort
 _atoi
 _ceilf
 _dlclose
-_dlopen
 _dlsym
 _exit
-_exp2f
 _ffffff.
 _floor
 _floorf
@@ -4870,9 +4983,6 @@ _g_pMemAlloc
 _g_pThreadPool
 _getenv
 _glGetString
-_glPixelStorei
-_glReadPixels
-_glTexParameteri
 _kCFAllocatorDefault
 _kIOMasterPortDefault
 _logf
@@ -4894,21 +5004,21 @@ _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _putchar
 _raise
-_rand
 _setjmp
 _sscanf
 _strchr
 _strcmp
 _strcpy
+_strdup
 _strlen
 _strncpy
 _strnlen
 _strpbrk
 _strstr
-_strtol
 _tools.txt
 _wcslen
 ` 0` 
+` Pp0
 `A;_8|
 `D;s8|
 `E;g8
@@ -4916,13 +5026,19 @@ _wcslen
 `[A\A^A_]
 `[A^]
 ````P`
+`fff.
 `unsigned char[A\A^A_]
+aIcO H
 actualMode.HasUsageType()
 actualSpec.GetArrayCount() >= 6
+affff.
 alpha
 apple
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 auto CRenderDeviceBase::OnPresentCompleted(SwapChainHandle_t, int, CDeviceFence *)::(anonymous class)::operator()() const
+auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 bad adaptive filter value
 binding
 binormal
@@ -4974,6 +5090,10 @@ cfg/moddefaults.txt
 cfg/video.txt
 cfg/video_%02d.txt
 cfg/videodefaults.txt
+channels
+char *CUtlStringBuilder::InternalPrepareBuffer(size_t, bool, size_t)
+char *CUtlStringBuilder::PrepareBuffer(size_t, bool, size_t)
+char(ffff.
 clearInfo.m_nNumColors || ( ( clearInfo.m_nFlags & RENDER_CLEAR_FLAGS_CLEAR_COLOR ) == 0 )
 cmd.m_nCmdSizeInBytes >= sizeof(T)
 cmd.m_pDomainShader->m_pBits
@@ -4984,6 +5104,7 @@ cmd.m_pPixelShader->m_pBits
 cmd.m_pTex != NULL
 cmd.m_pVertexShader->m_pBits
 color
+compression
 const CGLMProgramSeparable *CGLMShaderPipeline::GetShader(RenderShaderType_t) const
 const GLMTexFormatDesc *GetFormatDesc(ImageFormat)
 const HardwareCaps_t &CRenderDeviceMgrBase::GetHardwareCaps(int) const
@@ -5032,6 +5153,7 @@ const T &LoadCmd(const uint8 *&) [T = CommandDeviceRestored_t]
 const T &LoadCmd(const uint8 *&) [T = CommandDeviceThreadCallback_t]
 const T &LoadCmd(const uint8 *&) [T = CommandDrawIndexed_t]
 const T &LoadCmd(const uint8 *&) [T = CommandDraw_t]
+const T &LoadCmd(const uint8 *&) [T = CommandDynamicCBUpdate_t]
 const T &LoadCmd(const uint8 *&) [T = CommandEndPixEventGL_t]
 const T &LoadCmd(const uint8 *&) [T = CommandEndQueryGL_t]
 const T &LoadCmd(const uint8 *&) [T = CommandFence_t]
@@ -5078,21 +5200,25 @@ const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 count >= 0
 curFrame.m_pSamples->Count() == curFrame.m_pQueries->Count()
 dat->m_pPeer == NULL
+dataWindow
 desc.m_nElementSizeInBytes > 0
 device id: 0x%long long
 device-id
 displayFormat != IMAGE_FORMAT_UNKNOWN && renderTargetFormat != IMAGE_FORMAT_UNKNOWN
+displayWindow
 dstStride == 0
 dxsupport
 dxsupport.cfg
 dyld_stub_binder
 error in user chunk
 extreme cHRM chunk cannot be converted to tristimulus values
+f0HcF0H
 failed.
 false
 ffff.
 fffff.
 ffffff.
+fffffff
 field.m_nSlot < GLM_MAX_VERTEX_ELEMENTS
 fields.m_nDisplayMask != 0
 filesystem_stdio
@@ -5109,10 +5235,11 @@ gACol[row][pix].r == 0
 gGL->glDebugMessageCallbackARB
 gGL->glDebugMessageControlARB
 gGL->glDebugMessageInsertARB
+gGL->glGenProgramPipelines != nullptr
 gGL->glGetDebugMessageLogARB
+gGL->glTexImage2DMultisample != nullptr
 gGL->m_bHave_GL_ARB_debug_output
 gGL->m_bHave_GL_ARB_map_buffer_range
-gGL->m_bHave_GL_ARB_separate_shader_objects
 gGL->m_bHave_GL_ARB_sync
 gGL->m_bHave_GL_EXT_texture_sRGB_decode == true
 gGL->m_bHave_GL_GREMEDY_string_marker
@@ -5121,6 +5248,7 @@ g_TSPointerListNodes.IsAllocationWithinPool( pCurrent )
 g_bInitialized
 g_formatDescTable[glTexFormat].m_nTexFormat == glTexFormat
 g_pApplication->GetGameMode( ) == APPLICATION_IS_GAME
+g_pCVar
 g_pRenderDeviceGL->GetIndexBuffer( hIndexBuffer )->GetBufferType() == RENDER_BUFFER_TYPE_DYNAMIC
 g_pRenderDeviceGL->GetIndexBuffer( ib.m_hIndexBuffer )
 g_pRenderDeviceGL->GetVertexBuffer( hVertexBuffer )->GetBufferType() == RENDER_BUFFER_TYPE_DYNAMIC
@@ -5129,6 +5257,7 @@ g_pResourceHandleUtils
 g_pResourceSystem
 g_pTextureManagerBase == this
 g_pTextureManagerGLNew != NULL
+g_pThreadPool
 gamma table being rebuilt
 glActiveShaderProgram
 glActiveTexture
@@ -5165,6 +5294,7 @@ glClearBufferiv
 glClearBufferuiv
 glClearColor
 glClearDepth
+glClearDepthf
 glClearStencil
 glClientWaitSync
 glColorMask
@@ -5202,6 +5332,7 @@ glDepthMask
 glDepthRange
 glDepthRangeArrayv
 glDepthRangeIndexed
+glDepthRangef
 glDetachShader
 glDisable
 glDisableVertexAttribArray
@@ -5371,6 +5502,7 @@ glProgramUniformMatrix4x3fv
 glPushDebugGroup
 glQueryCounter
 glReadBuffer
+glReadPixels
 glRenderbufferStorage
 glRenderbufferStorageMultisample
 glSampleMaski
@@ -5464,7 +5596,6 @@ header crc mismatch
 hffff.
 hfffff.
 http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=772
-iHcK H
 id != UTL_INVAL_SYMBOL
 idx >= 0
 incorrect data check
@@ -5530,7 +5661,6 @@ invalid user transform pixel depth
 invalid window size
 istringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 item.m_hTexture == pTexture->m_nInternalHandle.GetResourceHandle()
-jffff.
 k0L+short
 l$	ffffff.
 layout(location = 0) in  vec4 texCoords;  
@@ -5540,10 +5670,12 @@ layout(location = 0) out vec4 texCoords;
 layout(location = 1) in vec2 inTexCoords;  
 layout\short*\(.*\)\short+(uniform)\short+[A-Za-z0-9_]+
 layout\short*\(.*\)\short+uniform\short+sampler[A-za-z0-9]+\short+[A-Za-z0-9_]+
+len > 0 || HasError()
 libpng does not support gamma+background+rgb_to_gray
 libpng error: %short
 libpng warning: %short
 librendersystemgl.dylib
+lineOrder
 localize
 long long >= 0 && long long < m_nWidth
 long long signed char::* Combined Texture Image Units : %double
@@ -5554,10 +5686,10 @@ long long signed char::* Tess Eval Texture Image Units : %double
 long long signed char::* Texture Dimensions : %double long long %double
 long long signed char::* Vertex Texture Image Units : %double
 long long[A\A]A^A_]
+long long[A^A_]
 m_Blobs.IsPeeked()
 m_Count == 0
 m_DriverInfoString
-m_DynamicCBUpdates.IsEmpty()
 m_ElementCount == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
@@ -5715,6 +5847,7 @@ m_nSlotType
 m_nTexMemory
 m_nTextureCount >= 0
 m_nTextureLoadsInFlight >= 0
+m_nThreadIndex == nThreadIndex
 m_nVidMemory
 m_nWidth
 m_nWidth == 0
@@ -5787,6 +5920,7 @@ nColorModeSize % 3 == 0
 nCount == 1
 nCount == 1 || nCount == 0
 nCount >= 0 && nCount < ARRAYSIZE(m_pViewports)
+nCount >= INT16_MIN && nCount <= INT16_MAX
 nDXLevel != 0
 nDataLeft == 0
 nDataSize <= static_cast<uint>( m_nBufferSize )
@@ -5798,11 +5932,16 @@ nDstMipSlice == 0
 nFieldCount <= RENDER_SYSTEM_MAX_INPUT_LAYOUT_ELEMENTS
 nFlags >= 0 && nFlags <= UINT8_MAX
 nGLBufferType == GLM_VERTEX_BUFFER || nGLBufferType == GLM_INDEX_BUFFER
+nGLProfile == SDL_GL_CONTEXT_PROFILE_ES
 nHeight > 0
 nIndex != -1
+nIndex != pDisabledBlob->m_DisabledModeAllocations.InvalidIndex()
 nInstanceCount > 0
 nMatchCode <= UINT16_MAX
 nMaxChars > 0
+nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
 nMipLevelToBind < m_layout->m_key.m_nNumMipLevels
 nMipLevelToBind >= 0
 nMode < GetModeCount( nAdapter )
@@ -5859,7 +5998,6 @@ nTransparencyChannelIndex <= 3
 nTraversalOffset == 0
 nTries < 10000000
 nView < INT16_MAX
-nView < pBuf->GetNumViews()
 nViewDataSize <= pBuf->GetViewRequestedSize()
 nViewDataSize == pBuf->GetViewRequestedSize()
 nViewport >= 0 && nViewport < g_pRenderHardwareConfigImp->MaxViewports( )
@@ -5952,6 +6090,7 @@ pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
 pLayout
 pLockPtr != NULL
+pMemory[int] == 0
 pMovedTexture
 pMovedTexture->m_nInternalHandle.m_nData == lastHandle.m_nData
 pName
@@ -6005,6 +6144,7 @@ pXp8p
 pXu*H
 pXulH
 p[A\A^A_]
+pixelAspectRatio
 png_do_encode_alpha: unexpected call
 png_do_quantize returned rowbytes=0
 png_do_rgb_to_gray found nongray pixel
@@ -6033,6 +6173,7 @@ rIfffff.
 r_frame_sync_enable
 r_fullscreen_gamma
 r_gpu_mem_stats
+r_max_texture_pool_size
 r_texture_eager_eviction
 r_texture_pool_size
 r_texture_stream_debug_spew
@@ -6047,6 +6188,8 @@ rcCropUnion.m_fBottom_V >= 0.0f && rcCropUnion.m_fBottom_V <= 1.0f
 rcCropUnion.m_fLeft_U >= 0.0f && rcCropUnion.m_fLeft_U <= 1.0f
 rcCropUnion.m_fRight_U >= 0.0f && rcCropUnion.m_fRight_U <= 1.0f
 rcCropUnion.m_fTop_V >= 0.0f && rcCropUnion.m_fTop_V <= 1.0f
+record.m_hConstantBuffer != CONSTANT_BUFFER_HANDLE_INVALID
+renderdoc
 rendersystemgl
 rendersystemgl: FIXME: Can'unsigned short set texture bits of signed char D3D surface
 resolveTex
@@ -6066,6 +6209,8 @@ s_pPerfMarkerProvider != NULL
 sample.m_nType & RENDER_PIPELINE_SAMPLE_TYPE_INCOMPLETED_FLAG
 sample.m_nType == RENDER_PIPELINE_SAMPLE_TYPE_PRESENT
 sampler15
+screenWindowCenter
+screenWindowWidth
 sequence number %double too low in sheet file!!!
 sequential row overflow
 setting.
@@ -6091,6 +6236,8 @@ setting.maxdxlevel
 setting.nowindowborder
 setting.recommendedheight
 setting.recommendedwidth
+setting.refreshrate_denominator
+setting.refreshrate_numerator
 setting.resettodefaults
 setting.shaderquality
 sffffff.
@@ -6106,8 +6253,7 @@ short,fff.
 size < 1024 * 1024
 size >= 0
 size_t CTextureBase::ComputeSize(RenderTextureDetail_t) const
-size_t CTextureManagerBase::MN_BuildRequestedResourcesList(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &)
-size_t CTextureStreamingHelper::LoadExplicitlyRequestedTextures()
+size_t CUtlStringBuilder::VAppendFormat(const char *, __va_list_tag *)
 slice->m_zSize > 0
 sliceCount == 1
 spec.m_nImageFormat != IMAGE_FORMAT_UNKNOWN
@@ -6121,6 +6267,7 @@ stackLevel >= 0 && stackLevel < m_errorIndex
 standardTex
 static CSchemaEnumBindingBase *CSchemaEnumBinding<CubeMapFace_t>::Get() [T = CubeMapFace_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<InputLayoutVariation_t>::Get() [T = InputLayoutVariation_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderBufferFlags_t>::Get() [T = RenderBufferFlags_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderMultisampleType_t>::Get() [T = RenderMultisampleType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderPrimitiveType_t>::Get() [T = RenderPrimitiveType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderSlotType_t>::Get() [T = RenderSlotType_t]
@@ -6131,7 +6278,8 @@ static SDL_GLContext COpenGLDriverEntryPoints::CreateContext(SDL_Window *, const
 static bool COpenGLDriverEntryPoints::SetSDLVisualAttributes()
 static uint32 CBlockCompress::FastCompress(const uint8 *, uint32, uint8 *, uint32)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
-static void CTextureManagerGLNew::RemoveMipLevelsForTextures(const CUtlVector<TextureStreamingPriorityInfo_t> &, int, int, int, int &, int &, uint64 &)
+static void CTextureManagerGLNew::RemoveMipLevelsForTextures(const CUtlVector<TextureStreamingPriorityInfo_t> &, uint64, int, uint64, int &, int &, uint64 &)
+static void ConVarRef::InitDeferredConVarRefs()
 static void RenderInputLayoutField_t::Schema_VerifyBindingIsRegistered()
 static void SequenceFloatParam_t::Schema_VerifyBindingIsRegistered()
 static void SheetFrameImage_t::Schema_VerifyBindingIsRegistered()
@@ -6176,7 +6324,9 @@ std::__1::__shared_weak_count::__add_shared()
 std::__1::__shared_weak_count::__release_shared()
 std::__1::__shared_weak_count::~__shared_weak_count()
 std::__1::__vector_base_common<true>::__throw_length_error() const
+std::__1::__vector_base_common<true>::__throw_out_of_range() const
 std::__1::__word_boundary<char, std::__1::regex_traits<char> >
+std::__1::bad_function_call
 std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
 std::__1::basic_istream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_istream<char, std::__1::char_traits<char> >&, bool)
 std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()
@@ -6222,6 +6372,8 @@ std::__1::locale::use_facet(std::__1::locale::id&) const
 std::__1::locale::~locale()
 std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
 std::__1::regex_error::~regex_error()
+std::exception::what() const
+std::exception::~exception()
 std::terminate()
 stringWithFormat:
 strnlen
@@ -6230,6 +6382,8 @@ t$ wchar_t)H
 t$8[A\A^A_]
 t$A;T$ unsigned short
 t$A;T$(unsigned short
+t$PIc
+t$PIcT$$1
 t.fff.
 t0D9c
 t0fffff.
@@ -6244,10 +6398,9 @@ tEIcD$
 tEIcG
 tFpLi
 tHfff.
-tIffff.
 tLMc~
 tMff.
-tOffffff.
+tPfff.
 tRNS chunk has out-of-range samples for bit_depth
 tRNS chunk not allowed with alpha channel
 tSH9XPt*H
@@ -6270,13 +6423,12 @@ texcoord
 text compression mode is out of range
 textureObject.m_spec.m_nNumMipLevels == texSpec.m_nNumMipLevels
 tfff.
-tlfff.
 too many length or distance symbols
 tqLc{
 transparency
-tw~cM
 typeinfo for IStack_Annotation
 typeinfo for std::__1::__shared_weak_count
+typeinfo for std::__1::bad_function_call
 typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
 typeinfo for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
@@ -6285,10 +6437,12 @@ typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
 typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 typeinfo for std::__1::regex_error
 typeinfo for std::bad_alloc
+typeinfo for std::exception
+typeinfo name for std::__1::bad_function_call
 typeinfo name for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
 typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
-u	D90
+u	D9 
 u	[A\A^A_]
 u$97u$H
 u&HcQ
@@ -6313,6 +6467,9 @@ uiOffset + rc.m_fLeft_U * uiRange >= 0 && uiOffset + rc.m_fLeft_U * uiRange <= 0
 uiOffset + rc.m_fRight_U * uiRange >= 0 && uiOffset + rc.m_fRight_U * uiRange <= 0xFFFF
 uiOffset + rc.m_fTop_V * uiRange >= 0 && uiOffset + rc.m_fTop_V * uiRange <= 0xFFFF
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
+uint64 CKeyValues_Data::Internal_GetUint64()
+uint64 CTextureManagerBase::MN_BuildRequestedResourcesList(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &)
+uint64 CTextureStreamingHelper::LoadExplicitlyRequestedTextures()
 uint8 *PadAndCompressImageDataForPanorama(Bitmap_t &, const TextureSpecification_t *, bool *)
 undefined
 uniform
@@ -6329,33 +6486,37 @@ unsigned char[A\A]A^A_]
 unsigned char[A^A_]
 unsigned long long >= 0 && unsigned long long < m_nHeight
 unsigned short	[A^]
-unsigned short fff.
+unsigned short ffffff.
 unsigned short!D9{hs5H
 unsigned short#HcS
 unsigned short#fff.
 unsigned short%A;L$
-unsigned short%fffff.
 unsigned short%ffffff.
 unsigned short&H9XHtpH
 unsigned short&H9[8tUH
+unsigned short&fffff.
 unsigned short'fff.
+unsigned short'ffff.
 unsigned short(L;}
 unsigned short(ff.
 unsigned short*ffffff.
 unsigned short+ff.
 unsigned short,Lcq
 unsigned short-L9`
+unsigned short/ff.
 unsigned short/ffffff.
 unsigned short:L9 t5A
 unsigned short:fffff.
+unsigned short<D9c w6H
 unsigned short<L98t7A
+unsigned short<fff.
 unsigned short[A;^
 unsigned short[fff.
 unsigned short^D9+uCD9s
 uvCropped
 uvUncropped
-v0HcF0H
 v0ff.
+vHct
 vTexCoordScaleOffset
 vec2 texCoords = texCoords.xy * vTexCoordScaleOffset.xy + vTexCoordScaleOffset.zw;
 vendor id: 0x%long long
@@ -6375,6 +6536,9 @@ virtual DynamicVertexBufferHandle_t CRenderContextGL::LockDynamicVertexBuffer(co
 virtual GraphicsAPISpecificTextureHandle_t CRenderDeviceGL::GetGraphicsAPISpecificTextureHandle(HRenderTexture)
 virtual HRenderTexture CRenderDeviceBase::FindOrCreateTexture(const char *, bool, const CTextureCreationDesc *, const CTextureDesc *, const void *, int, bool)
 virtual HRenderTexture CTextureManagerGL::FindOrCreateProceduralTexture(const char *, bool, const CTextureCreationDesc *)
+virtual RenderBufferHandle_t CRenderDeviceGL::CreateGPUBuffer(RenderBufferType_t, const BufferDesc_t &, RenderBufferFlags_t, void *)
+virtual RenderBufferHandle_t CRenderDeviceGL::CreateGPUBufferFormatted(RenderBufferType_t, const BufferDesc_t &, RenderBufferFlags_t, ImageFormat, void *)
+virtual RenderSemaphoreHandle_t CRenderContextBase::SemaphoreSignalAtEnd()
 virtual RenderShaderHandle_t CRenderDeviceGL::CreateDomainShader(IRenderShaderBuffer *, const char *)
 virtual RenderShaderHandle_t CRenderDeviceGL::CreateGeometryShader(IRenderShaderBuffer *, const char *)
 virtual RenderShaderHandle_t CRenderDeviceGL::CreateHullShader(IRenderShaderBuffer *, const char *)
@@ -6434,6 +6598,8 @@ virtual void CConCommandMemberAccessor<CTextureManagerBase>::CommandCallback(con
 virtual void CExtrefTraversal::VisitRelevantField(void *, CSchemaType *, FieldIntrospectionHandle_t)
 virtual void CRenderContextBase::BindRenderTargets(const RenderTargetDesc_t &)
 virtual void CRenderContextBase::GetViewport(RenderViewport_t *, int)
+virtual void CRenderContextBase::SemaphoreWaitAtBegin(RenderSemaphoreHandle_t)
+virtual void CRenderContextBase::SetAssociatedThreadIndex(int)
 virtual void CRenderContextBase::SetPrimaryContext(IRenderContext *, bool)
 virtual void CRenderContextBase::SetSamplerStatePS(int, RsFilter_t, RsTextureAddressMode_t, RsTextureAddressMode_t, RsTextureAddressMode_t, RsComparison_t)
 virtual void CRenderContextBase::SetSamplerStateVS(int, RsFilter_t, RsTextureAddressMode_t, RsTextureAddressMode_t, RsTextureAddressMode_t, RsComparison_t)
@@ -6442,10 +6608,15 @@ virtual void CRenderContextBase::SubmitSecondaryDisplayList(CDisplayList *, bool
 virtual void CRenderContextBase::UnlockDynamicConstantBuffer(ConstantBufferHandle_t, uint32)
 virtual void CRenderContextGL::BindConstantBufferView(RenderShaderType_t, ConstantBufferHandle_t, uint32, int, int)
 virtual void CRenderContextGL::BindMipLevelOfTexture(int, HRenderTexture, int, RenderTextureDimension_t, RenderShaderType_t, RenderColorSpace_t, int)
-virtual void CRenderContextGL::BindMipLevelOfTextures(int, int, bind_texture_list_t *, RenderShaderType_t)
+virtual void CRenderContextGL::BindMipLevelOfTextures(int, int, bind_resource_list_t *, RenderShaderType_t)
 virtual void CRenderContextGL::BindShader(RenderShaderType_t, RenderShaderHandle_t)
+virtual void CRenderContextGL::BindUnordedAccessViews(int, int, bind_resource_list_t *, RenderShaderType_t)
 virtual void CRenderContextGL::Clear(const RenderClearInfo_t &)
+virtual void CRenderContextGL::CopyGPUBufferHiddenStructureCount(RenderBufferHandle_t, RenderBufferHandle_t, uint32)
 virtual void CRenderContextGL::CopyTexture(HRenderTexture, HRenderTexture, Rect_t *, int, int, uint, uint, uint, uint, uint, uint, CopyTextureFlags_t)
+virtual void CRenderContextGL::DispatchComputeShader(uint32, uint32, uint32)
+virtual void CRenderContextGL::DispatchComputeShaderIndirect(RenderBufferHandle_t, uint32)
+virtual void CRenderContextGL::OnReleaseRenderContext()
 virtual void CRenderContextGL::ReadTexturePixels(HRenderTexture, IReadTexturePixelsCallback *, bool, Rect_t *)
 virtual void CRenderContextGL::SetConstantBufferViewsData(ConstantBufferHandle_t, uint32, uint32, const void *const *, uint32)
 virtual void CRenderContextGL::SetScissorRects(int, const Rect_t *)
@@ -6498,7 +6669,6 @@ void Bitmap_t::SetColor(int, int, Color)
 void CBaseIntrospectedTypeManager::SetDiskDataBinding(const CSchemaClassBindingBase *)
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = int]
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = unsigned int]
-void CCommandStream::Cleanup()
 void CCommandStreamBuilder::EnsureCapacity(int)
 void CCommandStreamBuilder::WriteData(const void *, int)
 void CDependencyDescriptor::Satisfy()
@@ -6539,7 +6709,7 @@ void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int
 void CMemberFuncProxyBase<CSOAContainer *, void (CSOAContainer::*)(int, int, int, int, int, __attribute__((__vector_size__(4 * sizeof(float)))) float), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CSOAContainer *, FUNCTION_TYPE = void (CSOAContainer::*)(int, int, int, int, int, __attribute__((__vector_size__(4 * sizeof(float)))) float), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CTextureManagerBase *, void (CTextureManagerBase::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, void *, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CTextureManagerBase *, FUNCTION_TYPE = void (CTextureManagerBase::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, void *, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CTextureManagerBase *, void (CTextureManagerBase::*)(IAsyncResourceDataRequest *, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CTextureManagerBase *, FUNCTION_TYPE = void (CTextureManagerBase::*)(IAsyncResourceDataRequest *, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int), MEM_POLICY = CFuncMemPolicyNone]
-void CMemoryStack::RegisterAllocation()
+void CMemoryStack::RegisterAllocation(uint32)
 void COcclusionQueryMgr::DestroyOcclusionQueryObject(OcclusionQueryObjectHandle_t)
 void COcclusionQueryMgr::EndOcclusionQueryDrawing(OcclusionQueryObjectHandle_t, IRenderContext *)
 void COcclusionQueryMgr::OcclusionQuery_IssueNumPixelsRenderedQuery(OcclusionQueryObjectHandle_t)
@@ -6547,9 +6717,9 @@ void COcclusionQueryMgr::ResetOcclusionQueryObject(OcclusionQueryObjectHandle_t)
 void COpenGLDriverEntryPoints::DumpContextInfo()
 void COpenGLDriverEntryPoints::MakeCurrent(SDL_Window *)
 void COpenGLDriverEntryPoints::SwapBuffersCurrentWindow(bool)
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CPinnedMemoryBuffer::Append(uint)
 void CRenderContextGL::ApplyDelayedChanges()
 void CRenderContextGL::BindConstantBufferInternal(RenderShaderType_t, ConstantBufferHandle_t, uint32, int, int)
@@ -6617,14 +6787,17 @@ void CTSQueue<DynamicVertexBufferHandle_t__ *, false>::Purge() [T = DynamicVerte
 void CTSQueue<QueuedDisplayListItem_t, false>::Purge() [T = QueuedDisplayListItem_t, bTestOptimizer = false]
 void CTextureBase::Init(const CTextureCreationDesc *, size_t, HRenderTexture)
 void CTextureGL::AssignFallbackTexture()
+void CTextureInfoId::SetPinCount(int32)
 void CTextureInfoId::SetStreamingBitsOffset(int64)
+void CTextureInfoId::SetTextureScope(TextureScope_t)
+void CTextureInfoId::SetTextureUsage(TextureUsage_t)
 void CTextureManagerBase::AbandonOutstandingStreamingRequest(CTextureBase *)
 void CTextureManagerBase::BuildTextureListAndSendToGPUProfiler() const
 void CTextureManagerBase::DeleteQueuedTextureInfosAndCompactArrays()
 void CTextureManagerBase::HookUpTextureBits(HRenderTexture, void *, int, TextureSpecification_t, int32, TextureOnDiskCompressionType_t)
 void CTextureManagerBase::IO_OnResourceFileLoaded(IAsyncResourceDataRequest *, HRenderTexture, TextureSpecification_t, int32)
 void CTextureManagerBase::MN_CacheRequestedResources(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &)
-void CTextureManagerBase::MN_EvictResources(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &, size_t)
+void CTextureManagerBase::MN_EvictResources(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &, uint64)
 void CTextureManagerBase::MN_OnResourceLoadCompleted(const HRenderTexture &, TextureObjectInfo_t &, int32, const int &)
 void CTextureManagerBase::MN_OnResourceLoadFailed(const HRenderTexture &, int32)
 void CTextureManagerBase::RegisterTextureDeallocation(CTextureBase *)
@@ -6634,7 +6807,7 @@ void CTextureManagerGL::FinishDeferredResourceCreation(CGLMTex *)
 void CTextureManagerGLNew::QueueReleaseFallbackTexture(CFallbackTextureGL *)
 void CTextureManagerGLNew::ReleaseFallbackTexture(CFallbackTextureGL *)
 void CTextureStreamingHelper::BalanceStreamableTextureMemory(RemoveMipLevelsCallbackFunc_t)
-void CTextureStreamingHelper::BuildStreamableTextureList(CUtlVector<TextureStreamingPriorityInfo_t> &, size_t *, size_t *, size_t *, int *, int *, int *)
+void CTextureStreamingHelper::BuildStreamableTextureList(CUtlVector<TextureStreamingPriorityInfo_t> &, uint64 *, uint64 *, uint64 *, int *, int *, int *)
 void CTextureStreamingHelper::IssueTextureLoadRequest(CTextureBase *, const TextureSpecification_t &)
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::AssumeMemory(void *, int, int, int)
@@ -6671,18 +6844,19 @@ void CUtlLinkedList<__GLsync *, unsigned short, false, unsigned short, CUtlMemor
 void CUtlLinkedList<__GLsync *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short> >::LinkAfter(I, I) [T = __GLsync *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short>]
 void CUtlLinkedList<__GLsync *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short> >::RemoveAll() [T = __GLsync *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short>]
 void CUtlLinkedList<__GLsync *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short> >::Unlink(I) [T = __GLsync *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<__GLsync *, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int, CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, I = unsigned int, L = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int>]
 void CUtlRBTree<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int, CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int> >::RemoveAll() [T = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, I = unsigned int, L = CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CGLShaderHashValue, ProgramBinaryGL_t, unsigned int, bool (*)(const CGLShaderHashValue &, const CGLShaderHashValue &)>::Node_t, unsigned int>, unsigned int>]
-void CUtlRBTree<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short, CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, I = unsigned short, L = CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<GLMTexLayoutKey, GLMTexLayout *, unsigned short, bool (*)(const GLMTexLayoutKey &, const GLMTexLayoutKey &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short, CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, I = unsigned short, L = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short, CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, I = unsigned short, L = CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<OsSpecificWindowHandle_t__ *, SDL_Window *, unsigned short, bool (*)(OsSpecificWindowHandle_t__ *const &, OsSpecificWindowHandle_t__ *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short, CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, I = unsigned short, L = CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<RenderTargetState_t, CGLMFBO *, unsigned short, bool (*)(const RenderTargetState_t &, const RenderTargetState_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FreeNode(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAt(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlStreamBuffer::Close()
 void CUtlString::SetDirect(const char *, int)
+void CUtlStringBuilder::Data::SetError(bool)
 void CVertexBufferGL::Reset(const BufferDesc_t)
 void CVertexBufferGL::SetVertexData(const void *, uint, uint, CRenderContextGL *)
 void CVertexBufferGL::Unlock(uint, CRenderContextGL *)
@@ -6766,8 +6940,8 @@ void PerfMarkers::SetMarker(Color, const char *, ...)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void ReleaseGLTexture(TextureObjectInfo_t *)
-void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = HandleCaller_t]
-void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = TraverseCaller]
+void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t, bool) [CCaller = HandleCaller_t]
+void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t, bool) [CCaller = TraverseCaller]
 void SetRenderStateCommand(GLMContext *, const CommandBindTextureDS_t &, HardwareStateGL_t *)
 void SetRenderStateCommand(GLMContext *, const CommandBindTextureGS_t &, HardwareStateGL_t *)
 void SetRenderStateCommand(GLMContext *, const CommandBindTextureHS_t &, HardwareStateGL_t *)
@@ -6794,8 +6968,8 @@ vtexH
 vtexL
 vtexu
 w2E;k unsigned short,L
-w5Hcy
-wZH;M
+wTL;]
+wchar_t@Hcq
 which->m_pNext->m_pPrev==which
 which->m_pPrev->m_pNext==which
 wrinkle
@@ -6808,20 +6982,16 @@ zlib memory error
 zlib stream error
 zlib version error
 {8HcK8H
+|$ D9
 |$ E1
 |)0H9
-|7A;\$ u 
-|B11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
 |gffffff.
 }#A9G,r
 }HA;EP}
 ~$IcF
-~'ffffff.
 ~-fff.
 ~3IcBxI
 ~Mfffff.
-~Off.
-~Pfff.
 ~Qfffff.
 ~Wffff.
 ~Yfff.

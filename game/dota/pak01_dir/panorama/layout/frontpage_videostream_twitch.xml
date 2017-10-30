@@ -9,7 +9,7 @@
 
 		<Panel id="Header">
 			<Label id="Live" text="#FrontPage_VideoStream_Live"/>
-			<Label id="LeagueName" text="{s:league_name}" allowtextselection="false" onactivate="FrontpageVideoViewLeague()"/>
+			<Label id="LeagueName" text="{g:dota_league_name:league_id}" allowtextselection="false" onactivate="FrontpageVideoViewLeague()"/>
 			<TextButton class="PopupButton" id="ViewDetailsButton" text="#DOTA_View_Details" onactivate="FrontpageVideoViewLeague()" />
 			<Panel id="HeaderFiller" />
 			<Button id="HideButton" onactivate="FrontpageVideoToggleHidden()">
@@ -50,8 +50,8 @@
 
 		<Panel id="Footer">
 			<Panel class="FooterText">
-				<Label text="#FrontPage_VideoStream_Boston2016_Line1" html="false"/>
-				<Label text="#FrontPage_VideoStream_Boston2016_Line2" html="false"/>
+				<Label text="#FrontPage_VideoStream_International2017_Line1" html="false"/>
+				<Label text="#FrontPage_VideoStream_International2017_Line2" html="false"/>
 			</Panel>
 			<Panel class="FillWidth" />
 			

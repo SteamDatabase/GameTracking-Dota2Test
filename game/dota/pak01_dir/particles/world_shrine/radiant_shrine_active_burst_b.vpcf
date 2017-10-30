@@ -11,6 +11,7 @@
 			m_flOverbrightFactor = 4.000000
 			m_hTexture = resource:"materials/particles/light_flare/light_glow_01.vtex"
 			m_nOrientationType = 2
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
@@ -87,12 +88,6 @@
 				255,
 				255,
 			]
-		},
-		{
-			_class = "C_INIT_RandomAlpha"
-			m_nAlphaMin = 150
-			m_nAlphaMax = 150
-			m_bDisableOperator = true
 		},
 	]
 	m_Emitters = 

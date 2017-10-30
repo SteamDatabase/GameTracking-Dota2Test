@@ -167,9 +167,27 @@ DOTAPurchaseButton.InBundle #SourceIcon
 	visibility: collapse;
 }
 
+#DustPrice
+{
+	color: white;
+}
+.NoDustPrice #DustPrice
+{
+	visibility: collapse;
+}
+DOTAPurchaseButton.DustPurchase #EventIcon
+{
+	background-image: url("s2r://panorama/images/dotaprime_logo_small_png.vtex");
+	visibility: visible;
+	margin-top: 1px;
+	margin-bottom: 2px;
+}
+
+
 .InTreasure #SaleAmount, .AdditionalDropInTreasure #SaleAmount, .InBundle #SaleAmount,
 .Addition #SaleRegularPrice, .AdditionalDropInTreasure #SaleRegularPrice, .InBundle #SaleRegularPrice,
-.InTreasure #Price, .AdditionalDropInTreasure #Price, .InBundle #Price
+.InTreasure #Price, .AdditionalDropInTreasure #Price, .InBundle #Price,
+.InTreasure #DustPrice, .AdditionalDropInTreasure #DustPrice, .InBundle #DustPrice
 {
 	visibility: collapse;
 }
@@ -210,12 +228,20 @@ DOTAPurchaseButton.Market
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #307663 ), to( #245a4b ) );
 }
 
-DOTAPurchaseButton.EventReward.IndividualItem.Season_WinterMajor2016
+DOTAPurchaseButton.DustPurchase
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #a93927 ), to( #7a291c ) );
+}
+
+
+DOTAPurchaseButton.EventReward.IndividualItem.Season_WinterMajor2016,
+DOTAPurchaseButton.EventReward.IndividualItem.Season_Winter2017
 {
     background-image: url("s2r://panorama/images/compendium/winter2016/home_block_backgrounds/silver_png.vtex");
     background-size: 100% 100%;
 }
-DOTAPurchaseButton.EventReward.IndividualItem.Season_WinterMajor2016 #EventIcon
+DOTAPurchaseButton.EventReward.IndividualItem.Season_WinterMajor2016 #EventIcon,
+DOTAPurchaseButton.EventReward.IndividualItem.Season_Winter2017 #EventIcon
 {
     background-image: url("s2r://panorama/images/compendium/winter2016/battlepass_icon_png.vtex");
     visibility: visible;
@@ -238,6 +264,17 @@ DOTAPurchaseButton.EventReward.IndividualItem.Season_Fall2016
 	background-size: 100% 100%;
 }
 DOTAPurchaseButton.EventReward.IndividualItem.Season_Fall2016 #EventIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/battlepass_logo_grayscale_small_png.vtex");
+	visibility: visible;
+}
+
+DOTAPurchaseButton.EventReward.IndividualItem.Season_International2017
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #154e6b ), to( #52a0ae ) );
+	background-size: 100% 100%;
+}
+DOTAPurchaseButton.EventReward.IndividualItem.Season_International2017 #EventIcon
 {
 	background-image: url("s2r://panorama/images/control_icons/battlepass_logo_grayscale_small_png.vtex");
 	visibility: visible;
@@ -307,4 +344,9 @@ DOTAHudPreGame .AvailableEconItem DOTAPurchaseButton #SourceIconArrow
 {
 	width: 80px;
 	height: 36px;
+}
+
+#InnerPanel DOTAPurchaseButton
+{
+	width: fill-parent-flow(1.0 );
 }

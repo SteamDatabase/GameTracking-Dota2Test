@@ -116,4 +116,34 @@
 			m_ChildRef = resource:"particles/econ/courier/courier_g1_octopus/courier_g1_octopus/courier_inky_ambient_debris.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_shell_high"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/courier/g1_courier/g1_courier.vmdl"
+			}
+		},
+	]
 }

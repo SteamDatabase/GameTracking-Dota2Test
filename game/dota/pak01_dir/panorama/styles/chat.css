@@ -387,10 +387,6 @@ DOTAChat.ChatExpanded #ParticipantArea
 {
 	width: 450px;
 }
-.AspectRatio5x4.NotOnTodayPage #ChatLinesContainer
-{
-	width: 400px;
-}
 
 .HudChat #ChatLinesContainer
 {
@@ -431,6 +427,24 @@ DOTAChat.ChatExpanded #ParticipantArea
 #ChatLinesPanel VerticalScrollBar
 {
     opacity: 0.0;
+}
+
+.ChatLinePersonaLabel
+{
+	min-width: 35px;
+	min-height: 20px;
+	font-weight: thin;
+	font-size: 16px;
+	border-radius: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin-bottom: -7px;
+}
+
+.ChatLinePersonaLabel:hover
+{
+	text-decoration: underline;
+	background-color: #6F777D6f;
 }
 
 .ChatLine
@@ -681,7 +695,7 @@ DOTAChat.ChatExpanded #ChatLinesContainer
 DOTAChat.PreGameChat #ChatLinesContainer
 {
 	height: 160px;
-	background-color: #00000088;
+	background-color: #000000ca;
 }
 
 .OnTodayPage DOTAChat.ChatExpanded #ChatLinesContainer
@@ -848,29 +862,36 @@ DOTAChat.ChatExpanded #ChatTotalMissed.HasMissedMessages.MissedMessagesAcknowled
     wash-color: none;
 }
 
-.ScrollUpButton,
-.ScrollDownButton
+#ChatScrollUpButton,
+#ChatScrollDownButton
 {
 	visibility: collapse;
 	wash-color: #303435;
 }
 
-.CanScrollDown .ScrollUpButton:hover,
-.CanScrollUp .ScrollDownButton:hover
-{
-	wash-color: #b3c6cc;
-}
-
-.CanScrollDown .ScrollUpButton,
-.CanScrollUp .ScrollDownButton
+DOTAChat#HudChat.CanScrollDown #ChatScrollUpButton,
+DOTAChat#HudChat.CanScrollUp #ChatScrollDownButton
 {
 	wash-color: #737f83;
 }
 
-DOTAChat#HudChat .ScrollUpButton,
-DOTAChat#HudChat .ScrollDownButton
+DOTAChat#HudChat.CanScrollDown #ChatScrollUpButton:hover,
+DOTAChat#HudChat.CanScrollUp #ChatScrollDownButton:hover
+{
+	wash-color: #b3c6cc;
+}
+
+DOTAChat#HudChat #ChatScrollUpButton,
+DOTAChat#HudChat #ChatScrollDownButton
 {
 	visibility: visible;
+	wash-color: #565f62;
+}
+
+DOTAChat#HudChat #ChatScrollUpButton:hover,
+DOTAChat#HudChat #ChatScrollDownButton:hover
+{
+	wash-color: #707C8044;
 }
 
 .ChatTimestamp
@@ -1397,16 +1418,19 @@ DOTAChat#HudChat #ChatHeaderPanel
 	height: 162px;
 	margin-bottom: 0px;
 
-	opacity-mask: none;
-
 	background-color: #00000000;
-	opacity-mask:none;
+
 	opacity-mask: url("s2r://panorama/images/masks/hudchat_mask_psd.vtex") 1.0;
 }
 
 DOTAChat#HudChat #ChatControls
 {
 	opacity: 0;
+	background-color: #000c;
+	text-shadow: 1px 1.5px 0px 2 #000000;
+	border-radius: 6px;
+	margin-top: -1px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000f ), color-stop( 0.8, #000d ), to( #000a ) );
 }
 
 DOTAChat#HudChat.Active #ChatControls
@@ -1428,7 +1452,7 @@ DOTAChat#HudChat .ChatLine
 	max-width: 650px;
 	font-weight: bold;
 
-	text-shadow: 1px 1.5px 1px 2 #000000;
+	text-shadow: 1px 1.5px 0px 2 #000000;
 }
 
 DOTAChat#HudChat .ChatTarget
@@ -1436,9 +1460,14 @@ DOTAChat#HudChat .ChatTarget
     font-size: 18px;
 	font-style: normal;
 	font-weight: bold;
-	color: #fbe6b9;
 }
 
+DOTAChat#HudChat .WhisperChat .ChatTarget,
+DOTAChat#HudChat .GameAllChat .ChatTarget,
+DOTAChat#HudChat .GameAlliesChat .ChatTarget
+{
+	color: #fbe6b9;
+}
 
 DOTAChat#HudChat .ChatPersona
 {
@@ -1509,6 +1538,7 @@ DOTAChat#HudChat .RuneBounty { color: RuneBountyColor; font-weight: bold; }
 	height: 20px;
 	margin-top: 4px;
 	margin-bottom: -4px;
+	margin-right: 2px;
 
 	vertical-align: top;
 }
@@ -1517,8 +1547,8 @@ DOTAChat#HudChat .RuneBounty { color: RuneBountyColor; font-weight: bold; }
 DOTAChat#HudChat .GameAllChat,
 DOTAChat#HudChat .GameAlliesChat
 {
-	//font-weight: bold;
-	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 DOTAChat#HudChat #ChatMissedContainer

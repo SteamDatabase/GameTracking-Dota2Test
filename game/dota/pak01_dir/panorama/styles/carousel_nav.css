@@ -16,6 +16,18 @@ CarouselNav:disabled
 	vertical-align: middle;
 	margin-right: 5px;
 }
+
+
+DOTABattlePassReward #ItemPips
+{
+	horizontal-align: center;
+}
+
+DOTABattlePassReward CarouselNav
+{
+	flow-children: none;
+}
+
 .OverMaxPips #ItemButtons
 {
 	visibility: collapse;
@@ -46,7 +58,7 @@ CarouselNav:disabled
 	background-color: black;
 	border: 2px solid #63adc8;
 	box-shadow: -1px -1px 3px 3px fill #000;
-	margin: 4px 2px 8px 8px;
+	margin: 8px 2px 8px 8px;
 
 	transition-property: background-color;
 	transition-duration: 0.2s;
@@ -68,6 +80,22 @@ CarouselNav:disabled
 	width: 10px;
 	height: 10px;
 	border-width: 1px;
+	margin: 1px 1px 1px 1px;
+}
+
+.OverlayPips.LockedPips .PaginationButton.Locked
+{
+	background-color: #222222;
+}
+
+.OverlayPips.LockedPips .PaginationButton.Unlocked
+{
+	background-color: #999999;
+}
+
+.OverlayPips .PaginationButton.Unlocked:selected
+{
+	background-color: #63adc8;
 }
 
 

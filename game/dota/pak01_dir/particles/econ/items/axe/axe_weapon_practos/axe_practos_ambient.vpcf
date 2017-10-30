@@ -145,4 +145,34 @@
 			m_ChildRef = resource:"particles/econ/items/axe/axe_weapon_practos/axe_practos_ambient_g.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_weapon"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/axe/axe_practos_weapon/axe_practos_weapon.vmdl"
+			}
+		},
+	]
 }

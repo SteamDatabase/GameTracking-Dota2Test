@@ -1,3 +1,4 @@
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
         
                 IResponseSystem
     H
@@ -6,13 +7,11 @@
   criterion '%25s':'%15s' 
  [A\A^A_]
  [A^]
- fff.
  ffff.
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"Expecting response group with >= 1 elements"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!@`IAp
+!@`GATAp
 !IsFlagSet( FCVAR_NEVER_AS_STRING )
 !IsInitialized()
 !bCreate
@@ -24,30 +23,30 @@
 #fff.
 #include
 $ffff.
-%fff.
-%ffff.
-%fffff.
 %int %int %int %int
 %short allocation count overflow
+%short allocation count overflow( %llu > %llu )
+%short allocation count overflow( %llu >= %llu )
 %short%20s : %40s %5.3f
 %short(token %int) : %short
 %short,%short
 %short/%short:  discarded rule because of invalid criterion %int:  %short
 %short: %short
 '%20s' vs. '%20s' = 
-'ffff.
+'fff.
 'fffff.
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
 ([A\A]A^A_]
 ([A^A_]
-(fff.
 (ffff.
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (s_pThisModuleBindingPointer != NULL)
+(static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
+)ffff.
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
-*fffff.
-+C$A9E
++fffff.
 , score %4.2f
 ,ffff.
 .ETv*H
@@ -60,6 +59,7 @@ $ffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/responserules/iresponserulescache.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/convar.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlleanvector.h
@@ -88,10 +88,12 @@ $ffff.
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 0P@00P
+0[A\A^A_]
 6[A\A^A_]
 8VSIFu
 8[A\A]A^A_]
 8[A^A_]
+8ffffff.
 <null>
 >LZMAt
 >LZMAu
@@ -110,7 +112,6 @@ $ffff.
 @_COM_TimestampedLog
 @_CommandLine
 @_DevMsg
-@_EarlyInit_Tier0
 @_KeyValuesSystem
 @_LOG_GENERAL
 @_LoggingSystem_IsChannelEnabled
@@ -153,8 +154,6 @@ $ffff.
 @___stack_chk_fail
 @___stack_chk_guard
 @__float128 short::*
-@_atof
-@_atoi
 @_g_Tier1_CRC32Table
 @_g_pMemAlloc
 @_memchr
@@ -181,6 +180,7 @@ A rule dictionary has %double elements; this exceeds the %double that can be pac
 A9^$|
 A;\$@|
 A;]long long|
+A;}Pu
 AI Concept has invalid string symbol.
 AI_ResponseSystem:  Unxpected TokenWaiting() with NULL buffer in %short
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
@@ -196,19 +196,20 @@ AWAVAUATSP
 AWAVAUATSPA
 AWAVAUATSPH
 AWAVAUATSPI
-AWAVAUATSPL
 AWAVAUATSPM
 AWAVSH
 AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
+AWAVSPL
 AZBSBp
 A[ATAp
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
-AlignValue( m_nBytesFree, 16 ) == m_nBytesFree
+AlignValue( m_pFirstBlock->m_nBytesFree, 16 ) == m_pFirstBlock->m_nBytesFree
 AlignValue( nBlockSize, 16 ) == nBlockSize
 An RR_Concept couldn'unsigned short find its string in the symbol table!
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -219,6 +220,7 @@ BSATAp
 BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
+C L;u
 C [A^]
 CBaseAppSystem<IAppSystem>
 CBaseAppSystem<IResponseRulesFileCache>
@@ -266,10 +268,10 @@ CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 Cannot allocate abstract class
-Cannot allocate abstract class %short
 Cannot construct abstract class
 Cannot copy abstract class
 Cannot deallocate abstract class
@@ -280,8 +282,8 @@ ConVar(%short) defined with infinite float value (%short)
 ConVarRef %short doesn'unsigned short point to an existing ConVar
 Concept
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 CreateInterface
-Cxffff.
 D&Q$?
 D9sXu
 DO NOT new or delete CRR_Response s.
@@ -290,11 +292,13 @@ DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
 Discarded rule %short
 DotaCardGameClient_001
-E;uPu$I
+E(fff.
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 EngineServiceMgr001
 EnvironmentMapBuilder_001
 EventSystem001
+Exfffff.
 Expecting '{' in enumeration '%short', got '%short'
 Expecting '{' in rule '%short', got '%short'
 Expecting more tokens in enumeration '%short'
@@ -308,7 +312,6 @@ Found %int matching rules, selecting slot %int
 From Class Binding
 From Enum Binding
 G8H	p(]
-GA#D$
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
@@ -325,46 +328,22 @@ Hcs H
 HelpSystem_001
 Hfffff.
 HostStateMgr001
-I CUtlRBTree<CResponseCriteriaSet::CritEntry_t, short, bool (*)(const CResponseCriteriaSet::CritEntry_t &, const CResponseCriteriaSet::CritEntry_t &), CUtlMemory<UtlRBTreeNode_t<CResponseCriteriaSet::CritEntry_t, short>, short> >::Find(const T &) const [T = CResponseCriteriaSet::CritEntry_t, I = short, L = bool (*)(const CResponseCriteriaSet::CritEntry_t &, const CResponseCriteriaSet::CritEntry_t &), M = CUtlMemory<UtlRBTreeNode_t<CResponseCriteriaSet::CritEntry_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::Find(const T &) const [T = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
 I CUtlRBTree<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::NewNode(const T *) [T = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::Find(const T &) const [T = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
 I CUtlRBTree<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::NewNode(const T *) [T = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::Find(const T &) const [T = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
 I CUtlRBTree<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::NewNode(const T *) [T = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::Find(const T &) const [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
-I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::NewNode(const T *) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
-I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::Find(const T &) const [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
-I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
 I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::NewNode(const T *) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
+IAddonListChangeNotify
 IAppSystem
 IConCommandBaseAccessor
 IConVar
@@ -377,9 +356,9 @@ ISchemaBinding
 IcG I9
 IcG(I9
 IcGPI9
+IcMPH
 IcO E1
-Ic_ D
-Ic_ H
+IcO0H
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -393,12 +372,12 @@ KeyValueCache001
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues::FindKey called on NULL pointer!
 L volatile;long double
-L7pH%
+L4pH%
 LET COUPLAND KNOW: RR matcher unexpected disagreement: Criteria '%short', Value: '%short', Matcher: '%short' [dota:%double, l4d:%double, new:%double]
-LightingBuilderMgr001
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 MATCHFRAMEWORK_001
+MClassHasDataDesc
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
@@ -407,7 +386,7 @@ MaterialUtils_001
 Mc.E9
 MeshSystem001
 MeshUtils001
-ModelDocCommandSystem001
+ModelDocUtils001
 Multiple definitions for criteria '%short' [%double]
 NetworkClientService_001
 NetworkMessagesVersion001
@@ -418,8 +397,10 @@ NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 No such enumeration '%short'
 No such response '%short' for rule '%short'
-O [A\A^A_]
+O fffff.
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 P P@@
 PanoramaTextServices001
 PanoramaUIClient001
@@ -432,7 +413,8 @@ PostProcessingSystem_001
 PropertyEditorSystem_001
 QueuedLoaderVersion001
 RBRAp
-RBRBRBXATARBRBRBRBRAp
+RBRBRAp
+RESPONSE_ACTIVITY
 RESPONSE_ENTITYIO
 RESPONSE_NONE
 RESPONSE_PRINT
@@ -506,7 +488,6 @@ Scoring rule '%short' (%int)
 Search criteria:
 ServerUploadGameStats001
 ServerUsesSceneImageFile
-Skipping unrecongized subcriterion '%short' in '%short'
 SoundLevel string appears to be signed char Volume level %float
 SoundOpSystem001
 SoundOpSystemEdit001
@@ -526,14 +507,16 @@ Source2Server001
 Source2ServerSerializers002
 Speaker contexts: '%short', 
 StatsService_001
+SteamAudio001
 T *CUtlLeanVectorImpl<CUtlLeanVectorBase<ParserResponse, short>, ParserResponse, short>::AddToTailGetPtr() [B = CUtlLeanVectorBase<ParserResponse, short>, T = ParserResponse, I = short]
 T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned short, 6, short>, unsigned short, short>::AddToTailGetPtr() [B = CUtlLeanVectorFixedGrowableBase<unsigned short, 6, short>, T = unsigned short, I = short]
-TBYATAp
+TBYAp
 TCUAp
 TCWAp
 THEN token in response had signed char target '%short', but lacked any further info.
 THEN token in response lacked any further info.
 THEN token in response lacked contexts.
+TNRAp
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
@@ -590,14 +573,15 @@ WorkshopSetup001
 World contexts: '%short', 
 WorldRendererBuilderMgr001
 WorldRendererMgr001
+XATARBRBRBRBRAp
 X[A\A]A^A_]
 [%short%03i]
 [%short::%short]
 [A\A]A^A_]
-[A\A]A^A_]A
 [A\A^A_]
 [A^A_]
 [unsigned short,fD
+\$0E1
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
@@ -605,7 +589,6 @@ _COM_TimestampedLog
 _CommandLine
 _CreateInterface
 _DevMsg
-_EarlyInit_Tier0
 _InstallSchemaBindings
 _KeyValuesSystem
 _LOG_GENERAL
@@ -656,6 +639,8 @@ __common
 __const
 __cstring
 __data
+__float128 char::* E
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __la_symbol_ptr
@@ -665,8 +650,6 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_atof
-_atoi
 _g_Tier1_CRC32Table
 _g_pMemAlloc
 _memchr
@@ -685,6 +668,8 @@ _strnlen
 applycontext
 applycontexttoworld
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 bFired
 bool CResponseFileParser::ParseToken()
 bool CResponseFileParser::TokenWaiting()
@@ -692,6 +677,7 @@ bool CResponseSystem::Compare(const char *, Criteria *, bool)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bufsize > 0
 calledforhelp
+char(ffff.
 classname
 concept
 const Criteria *Rule::RecursiveGetPointerForRuleCriterionByName(CResponseSystem *, const Criteria *, const CUtlSymbol &)
@@ -724,6 +710,7 @@ followup_entityiodelay
 followup_entityioinput
 followup_entityiotarget
 followup_target
+g_pCVar
 hotdog
 int == check
 int CKeyValues_Data::Internal_GetInt()
@@ -732,6 +719,7 @@ int CResponseSystem::SelectWeightedResponseFromResponseGroup(ResponseGroup *, IR
 lfff.
 libscenefilecache.dylib
 long long&HcH
+long long[A\A]A^A_]
 m_ElementCount == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
@@ -754,7 +742,6 @@ m_fMatchScore
 m_fnChangeCallbacks.Count() == 0
 m_iConcept.IsValid()
 m_iDataType == TYPE_NONE
-m_nBytesFree == 0
 m_nNumPrefixedContexts
 m_pFollowup
 m_pOuterTypeScope != NULL
@@ -788,13 +775,14 @@ pCrit
 pDict
 pDict >= m_RuleParts && pDict < m_RuleParts + N_RESPONSE_PARTITIONS
 pFilename
-pHpHp
+pMemory[int] == 0
 pName
 pNewCriterion->subcriteria.Count() == 0
 pPool->m_SpaceUsed < 0xFFFF
 pSchemaSystem != NULL
 pSystem
 pXRERA
+pXp8p
 permitrepeats
 predelay
 radr://5614542
@@ -818,7 +806,7 @@ scenes/scenes.image
 scripts/%short
 sequential
 setValue
-short fffff.
+short ffffff.
 size < 1024 * 1024
 size >= 0
 slot != m_Systems.InvalidIndex()
@@ -831,6 +819,7 @@ static const char *CRR_Response::DescribeResponse(ResponseType_t)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 static void CRR_Response::Schema_VerifyBindingIsRegistered()
 static void CRR_Response::operator delete(void *)
+static void ConVarRef::InitDeferredConVarRefs()
 static void ResponseFollowup::Schema_VerifyBindingIsRegistered()
 static void ResponseParams::Schema_VerifyBindingIsRegistered()
 std::terminate()
@@ -842,16 +831,18 @@ t4ffff.
 t6ffffff.
 t7fff.
 targetclassname
-tlfff.
 typeinfo for std::bad_alloc
-uSzQE1
+umfffff.
 unsigned int CLZMA::Uncompress(const unsigned char *, unsigned char *, LZMAReadProgressCallbackFunc_t)
 unsigned short%ffff.
 unsigned short&H9[8tUH
+unsigned short&fffff.
 unsigned short/ffffff.
 unsigned short;ff.
+upzn1
+uufffff.
+vHct
 virtual CGameResponseSystem *CResponseRulesFileCache::LoadResponseSystem(const char *, bool)
-virtual InitReturnVal_t CSceneFileCache::Init()
 virtual bool CSceneFileCache::GetSceneData(const char *, byte *, int)
 virtual short CSceneFileCache::GetSceneCachedSound(int, int)
 virtual void CResponseRulesFileCache::Shutdown()
@@ -862,60 +853,50 @@ virtual void ConVar::Create(const char *, const char *, int64, const char *, boo
 virtual void ConVar::InternalSetFloatValue(float)
 virtual void ConVar::InternalSetIntValue(int)
 virtual void ConVar::InternalSetValue(const char *)
-void *CUtlScratchMemoryPool::AddNewBlock(int)
 void CKeyValues_Data::Internal_ClearData()
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CRR_Response::Init(ResponseType_t, const char *, const ResponseParams &, const char *, const char *, const char *)
 void CResponseFileParser::LoadFromBuffer(const char *, const char *)
 void CResponseFileParser::LoadFromFile(const char *)
 void CResponseFileParser::ParseResponse_Then(ParserResponse &, ResponseGroup &, ResponseParams *)
 void CResponseFileParser::PopScript()
 void CResponseSystem::ComputeMatcher(Criteria *, Matcher &)
+void CSceneFileCache::InitSceneCache()
 void CSchemaClassBindingBase::RegBase(ISchemaSystem *, const char *, const char *, CSchemaClassInfo *, const char *) [I = int]
 void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
 void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
 void CScriptAutoRef::Term()
+void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::Put(const void *, int)
 void CUtlBuffer::VaPrintf(const char *, __va_list_tag *)
 void CUtlLeanVectorBase<ParserResponse, short>::EnsureCapacity(int, bool) [T = ParserResponse, I = short]
 void CUtlLeanVectorFixedGrowableBase<unsigned short, 6, short>::EnsureCapacity(int, bool) [T = unsigned short, N = 6, I = short]
 void CUtlLinkedList<CRR_Concept, unsigned short, false, unsigned int, CUtlMemory<UtlLinkedListElem_t<CRR_Concept, unsigned short>, unsigned int> >::RemoveAll() [T = CRR_Concept, S = unsigned short, ML = false, I = unsigned int, M = CUtlMemory<UtlLinkedListElem_t<CRR_Concept, unsigned short>, unsigned int>]
-void CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FreeNode(I) [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAt(I) [T = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CGameResponseSystem *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
 void CUtlRBTree<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::RemoveAll() [T = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CResponseSystem::Enumeration, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-void CUtlRBTree<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
 void CUtlRBTree<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::RemoveAll() [T = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, Criteria, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-void CUtlRBTree<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
 void CUtlRBTree<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short, CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short> >::RemoveAll() [T = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, I = short, L = CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ResponseGroup, short, bool (*)(const char *const &, const char *const &)>::Node_t, short>, short>]
-void CUtlRBTree<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, const CResponseCriteriaSet::CritEntry_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, Rule *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const char *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(ParserResponse &, ResponseGroup &, ResponseParams *), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(Rule &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, void (CResponseFileParser::*)(const char *, ResponseGroup &, ResponseParams &), unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-void CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 void CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::RemoveAll() [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 void CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::SetLessFunc(const LessFunc_t &) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
-void CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
 void CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::RemoveAll() [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlScratchMemoryPool::FreeAll()
-void CUtlScratchMemoryPool::Init(int, void *)
+void CUtlScratchMemoryPool::Init(int, void *, bool)
 void CUtlString::SetDirect(const char *, int)
 void CallPostConnect()
 void ConVar_Register(int64, IConCommandBaseAccessor *)
@@ -933,9 +914,7 @@ world_auto_NoSpotting
 worldhowitzerwasfired
 {}()':
 |fff.
-}&D9-
 }@HcQ
 }HA;EP}
-~/fff.
+}PD9-
 ~?Lcr
-~fffff.

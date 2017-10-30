@@ -20,7 +20,7 @@
 				116,
 				255,
 			]
-			m_flAlphaScale = 25.000000
+			m_flAlphaScale = 15.000000
 			m_flStartFalloff = 0.100000
 			m_hTexture = resource:"materials/particle/particle_glow_01.vtex"
 		},
@@ -111,6 +111,31 @@
 		{
 			_class = "C_OP_InstantaneousEmitter"
 			m_nParticlesToEmit = 3
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
 		},
 	]
 }

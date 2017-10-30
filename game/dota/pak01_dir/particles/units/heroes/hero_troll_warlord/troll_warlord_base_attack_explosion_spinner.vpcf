@@ -48,7 +48,7 @@
 		{
 			_class = "C_OP_MovementRotateParticleAroundAxis"
 			m_bLocalSpace = true
-			m_nCP = 13
+			m_nCP = 3
 			m_flRotRate = 1400.000000
 			m_vecRotAxis = 
 			[
@@ -59,7 +59,7 @@
 		},
 		{
 			_class = "C_OP_SetSingleControlPointPosition"
-			m_nHeadLocation = 1
+			m_nHeadLocation = 3
 			m_vecCP1Pos = 
 			[
 				0.000000,

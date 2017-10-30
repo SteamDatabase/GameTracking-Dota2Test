@@ -25,7 +25,6 @@
  CVirtualMachineCallStackTranslationEncoder::GetVMID()
  CommandLine
  DevMsg
- EarlyInit_Tier0
  IterateCapturedStackAnnotations
  KeyValuesSystem
  LOG_GENERAL
@@ -73,8 +72,11 @@
  ThreadSetDebugNameS2
  ThreadSleep
  V_UTF32ToUTF8
+ V_atof
+ V_atoi
  V_qsort_s
  V_snprintf
+ V_sscanf
  V_stricmp_fast
  V_vsnprintf
  V_vsnprintfRet
@@ -87,6 +89,7 @@
  __cxa_atexit
  __cxa_begin_catch
  __cxa_call_unexpected
+ __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
  __cxa_pure_virtual
@@ -110,6 +113,7 @@
  raise
  recv
  send
+ setsockopt
  shutdown
  socket
  std::terminate()

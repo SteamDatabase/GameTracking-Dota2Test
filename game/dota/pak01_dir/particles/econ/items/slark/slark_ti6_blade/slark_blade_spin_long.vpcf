@@ -71,11 +71,10 @@
 		},
 		{
 			_class = "C_OP_PositionLock"
-			m_flEndTime_max = 0.500000
-			m_flEndTime_min = 0.500000
-			m_flStartTime_max = 0.300000
-			m_flStartTime_min = 0.300000
-			m_bDisableOperator = true
+			m_flEndTime_max = 0.050000
+			m_flEndTime_min = 0.050000
+			m_flStartTime_max = 0.050000
+			m_flStartTime_min = 0.050000
 		},
 	]
 	m_Initializers = 
@@ -181,6 +180,78 @@
 	[
 		{
 			m_ChildRef = resource:"particles/econ/items/slark/slark_ti6_blade/slark_blade_spin_long_core.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+		{
+			m_name = "point_follow"
+			m_drivers = 
+			[
+				{
+					m_entityName = "self"
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_attachmentName = "attach_blade"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/heroes/slark/slark.vmdl"
+				m_sequenceName = "@run_latch_slash"
+				m_nFireParticleOnSequenceFrame = 30
+				m_bAnimationNonLooping = true
+			}
 		},
 	]
 }

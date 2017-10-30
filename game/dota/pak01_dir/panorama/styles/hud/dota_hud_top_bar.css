@@ -2,7 +2,7 @@ DOTATopBar
 {
 	vertical-align: top;
 	horizontal-align: center;
-	height: 80px;
+	height: 95px;
 	width: 940px;
 
 	transform: translateY(0px);
@@ -10,18 +10,21 @@ DOTATopBar
 	transition-duration: 1s;
 	transition-delay: 2s;
 	transition-timing-function: ease-in-out;
-	
 }
 
-
-DOTAHud.IsBeforeGameplay #topbar
+DOTAHud.HideTopBar #topbar
 {
-	transform: translateY(-78px);
+	visibility: collapse;
 }
 
 DOTATopBar.TournamentGame
 {
-	width: 1096px;
+	width: 1072px;
+}
+
+.HIDE_TOP_BAR DOTATopBar
+{
+    visibility: collapse;
 }
 
 DOTAHeroImage
@@ -31,83 +34,120 @@ DOTAHeroImage
     z-index: 3;
 }
 
+/* old pips under team kills
+
 #Pips
 {
 	horizontal-align: center;
 	vertical-align: center;
+	z-index: 50;
+	visibility: collapse;
 }
 
 #RadiantPips
 {
-	margin-right: 150px;
+	margin-right: 80px;
+	transform: scaleX(-1);
+}
+
+
+*/
+
+#Pips
+{
+	width: 100px;
+	height: 50px;
+	horizontal-align: center;
+	vertical-align: top;
+	z-index: 50;
+    background-size: cover;
+    visibility: collapse;
+}
+
+#RadiantPips
+{
+	width: 100px;
+	height: 50px;
+	horizontal-align: center;
+	vertical-align: top;
+	margin-left: 0px;
+	z-index: 80;
+}
+
+#RadiantGamePip1
+{
+	margin-left: 4px;
+	z-index: 80;
+	transform: scaleX(-1);
+}
+
+#RadiantGamePip2
+{
+	z-index: 80;
+	margin-top: 13px;
+	margin-left: 6px;
+	transform: scaleX(-1);
+}
+
+#RadiantGamePip3
+{
+	z-index: 80;
+	margin-top: 26px;
+	margin-left: 9px;
+	transform: scaleX(-1);
+}
+
+#DirePips
+{
+	width: 100px;
+	height: 50px;
+	horizontal-align: center;
+	vertical-align: top;
+	margin-left: 73px;
+	z-index: 80;
+}
+
+#DireGamePip1
+{
+	margin-left: 2px;
+	z-index: 80;
+}
+
+#DireGamePip2
+{
+	z-index: 80;
+	margin-top: 13px;
+	margin-left: 0px;
+}
+
+#DireGamePip3
+{
+	z-index: 80;
+	margin-top: 26px;
+	margin-left: -2px;
+}
+
+
+
+.TournamentGame.BestOf3 #Pips,
+.TournamentGame.BestOf5 #Pips
+{
+	visibility: visible;
 }
 
 .TournamentGame ToggleButton .TickBox
 {
 	width: 12px;
 	height: 12px;
+	box-shadow: none;
+	background-color: none;
+	border: 0px;
+	background-image: url("s2r://panorama/images/hud/reborn/tournament_pip_off_psd.vtex");
 }
 
-#TournamentBackground
+.TournamentGame ToggleButton:selected .TickBox
 {
-	margin-top: 39px;
-	width: 335px;
-	height: 17px;
-	vertical-align: top;
-
-	background-image: url("s2r://panorama/images/hud/reborn/ability_bg_psd.vtex");
-	horizontal-align: center;
-	visibility: collapse;
-}
-
-.BestOf3 #TournamentBackground,
-.BestOf5 #TournamentBackground
-{
-	visibility: visible;
-}
-
-.TournamentContainer
-{
-	width: 66px;
-	height: 100%;
-	visibility: collapse;
-}
-
-.TournamentGame .TournamentContainer
-{
-	visibility: visible;
-}
-
-#TournamentLeftFlare,
-#TournamentRightFlare
-{
-	margin-top: 41px;
-	background-size: 100%;
-	background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
-    horizontal-align: center;
-    visibility: collapse;
-}
-
-.TournamentGame #TournamentLeftFlare,
-.TournamentGame #TournamentRightFlare,
-{
-	visibility: visible;
-}
-
-#TournamentLeftFlare
-{
-	background-image: url("s2r://panorama/images/hud/reborn/header_endcap_psd.vtex");
-	transform: scaleX(-1);
-	margin-right: 352px;
-	z-index: 1;
-}
-
-#TournamentRightFlare
-{
-	background-image: url("s2r://panorama/images/hud/reborn/header_endcap_psd.vtex");
-	margin-left: 352px;
+	background-image: url("s2r://panorama/images/hud/reborn/tournament_pip_on_psd.vtex");
 }
 
 
@@ -116,6 +156,40 @@ DOTAUGCImage
 	height: 40px;
 	width: 66px;
 	horizontal-align: center;
+	background-color: #131517;
+	visibility: collapse;
+}
+
+.TournamentGame DOTAUGCImage
+{
+	visibility: visible;
+}
+
+.FanCount
+{
+	width: 65px;
+
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+
+	text-align: center;
+
+    text-shadow: 1px 1px 0px 2.0 #00000011;
+	visibility: collapse;
+
+	margin-top: 40px;
+}
+
+.TournamentGame.RadiantHasFans #RadiantFanCount,
+.TournamentGame.DireHasFans #DireFanCount
+{
+	visibility: visible;
+}
+
+#DireFanCount
+{
+	horizontal-align: right;
 }
 
 .BestOf3 #RadiantGamePip3,
@@ -159,7 +233,7 @@ DOTAUGCImage
 .TournamentGame #TopBarRadiantTeam,
 .TournamentGame #TopBarDireTeam
 {
-	width: 446px;
+	width: 460px;
 }
 
 #TopBarRadiantTeam
@@ -217,28 +291,40 @@ DOTAUGCImage
 
 #BuybackIcon
 {
-	background-image: url("s2r://panorama/images/hud/reborn/buyback_icon_psd.vtex");
-    background-size: cover;
+	background-image: url("s2r://panorama/images/hud/reborn/buyback_topbar_alive_psd.vtex");
+    background-size: 100%;
     background-repeat: no-repeat;
 
-	width: 14px;
-	height: 14px;
-	pre-transform-scale2d: 0;
+	width: 100%;
+	height: 11px;
 	opacity: 0;
 	horizontal-align: left;
 	vertical-align: bottom;
-	margin: 2px 8px;
 	z-index: 3;
+	margin-bottom: 10px;
+	margin-left: 6px;
+	transform: translateY(-13px);
 
-	transition-property: opacity, pre-transform-scale2d;
+	transition-property: opacity, pre-transform-scale2d, transform;
 	transition-duration: .12s;
 	transition-timing-function: ease-out;	
 }
 
+#TopBarDirePlayers #BuybackIcon
+{
+	margin-left: 0px;
+	margin-right:6px;
+}
+
 .AltPressed .BuybackReady #BuybackIcon
 {
-	pre-transform-scale2d: 1;
+	transform: translateY(0px);
 	opacity: 1;
+}
+
+.AltPressed .Dead.BuybackReady #BuybackIcon
+{
+	opacity: 0;
 }
 
 #TopBarRadiantPlayersContainer .SlantedContainer
@@ -326,18 +412,29 @@ DOTAUGCImage
     overflow: noclip;
 }
 
+
 .TopBarHealthBar .ProgressBarLeft
 {
-	background-color: #339933;
-    background-image: url("s2r://panorama/images/hud/reborn/topbar_health_psd.vtex");
 	background-size: cover;
     border-radius: 0px;
 }
 
-.ColorBlindModeEnabled .TopBarHealthBar .ProgressBarLeft
+#TopBarRadiantTeam .TopBarHealthBar .ProgressBarLeft
+{
+	background-color: #339933;
+    background-image: url("s2r://panorama/images/hud/reborn/topbar_health_psd.vtex");
+}
+
+#TopBarDireTeam .TopBarHealthBar .ProgressBarLeft
+{
+	background-color: #993333;
+    background-image: url("s2r://panorama/images/hud/reborn/topbar_health_dire_psd.vtex");
+}
+
+.ColorBlindModeEnabled #TopBarRadiantTeam .TopBarHealthBar .ProgressBarLeft
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #658fdf  ), color-stop( 0.2, #a4caff ), color-stop( .5, #3f6fcb), to( #2c56ab ) );
-	
+    background-image: url("s2r://panorama/images/hud/reborn/topbar_health_colorblind_psd.vtex");
 }
 
 .TopBarHealthBar .ProgressBarRight
@@ -347,19 +444,42 @@ DOTAUGCImage
 
 .TopBarUltIndicator
 {
-	vertical-align: center;
+	vertical-align: top;
 	horizontal-align: center;
 
-	width: 18px;
-	height: 18px;
-    background-size: contain;
+	width: 38px;
+	height: 20px;
+    
+	background-size: 18px;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	
 	z-index: 500;
 
 	opacity: 0;
-
-	margin-top: 12px;
+	margin-top: 28px;
 	tooltip-position: bottom;
 	tooltip-body-position: 50% 50%;
+}
+
+#AbilityDraftHitBox
+{
+	visibility: collapse;
+	width: 58px;
+	height: 30px;
+	
+	vertical-align: top;
+	horizontal-align: center;
+	
+	tooltip-position: bottom;
+	tooltip-body-position: 50% 50%;
+	
+	opacity: 1;
+}
+
+.IsAbilityDraft #AbilityDraftHitBox
+{
+	visibility: visible;
 }
 
 .UltLearned
@@ -476,7 +596,7 @@ DOTAUGCImage
     font-weight: bold;
     width: 200px;
     text-align: center;
-    text-shadow: 1px 1px 2px 2.0 #00000011;
+    text-shadow: 1px 1px 0px 2.0 #00000011;
 }
 
 .TimeOfDayIcon
@@ -501,6 +621,117 @@ DOTAUGCImage
     background-image: url("s2r://panorama/images/hud/reborn/icon_moon_psd.vtex");
 }
 
+#SpectatorGoldDisplay
+{
+	margin-top: 40px;
+	width: 210px;
+	//height: 120px;
+	horizontal-align: center;
+	vertical-align: top;
+	z-index: -1;
+    background-size: cover;
+    visibility: collapse;
+}
+
+#SpectatorGoldDisplay.SpectatorGoldVisible 
+{
+	visibility: visible;
+}
+
+#GoldDiscreteDisplay
+{
+	width: 100%;
+	height: 50px;
+	visibility: collapse;
+}
+
+.GoldDeltaDiscrete #GoldDiscreteDisplay
+{
+	visibility: visible;
+}
+
+#RadiantDiscreteDisplay
+{
+	margin-left: 3px;
+	width: 62px;
+	height: 24px;
+	horizontal-align: left;
+	visibility: collapse;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from ( #273f26), to ( #1d2924 ) );
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	flow-children: right;
+}
+
+.RadiantLeadingGold #RadiantDiscreteDisplay
+{
+	visibility: visible;
+}
+
+.GoldDiscreteContainer
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#DireDiscreteDisplay
+{
+	margin-right: 3px;
+	width: 62px;
+	height: 24px;
+
+	horizontal-align: right;
+	visibility: collapse;
+   	background-color: gradient( linear, 0% 0%, 0% 100%, from ( #273f26), to ( #1d2924 ) );
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	flow-children: right;
+}
+
+.GoldDiscrete
+{
+	horizontal-align: center;
+	text-align: center;
+	color: #F4D769;
+	text-shadow: 1px 1px 0px 1.0 #000000;
+	color: gradient( linear, 0% 0%, 0% 100%, from( #976201 ), color-stop( .475, #F4D769 ), color-stop( .525, #EEB811 ), to( #976201 ) );
+    font-size: 15px;
+    margin-top: 2px;
+    margin-left: 2px;
+    font-weight: semi-bold;
+    font-family: RadianceM;
+}
+
+.GoldDiscreteIcon
+{
+    background-image: url("s2r://panorama/images/hud/reborn/gold_small_psd.vtex");
+    vertical-align: middle;
+    horizontal-align: left;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin-left: 1px;
+}
+
+.GoldDiscreteArrow
+{
+    background-image: url("s2r://panorama/images/hud/reborn/arrow_gold_dif_psd.vtex");
+    vertical-align: middle;
+    horizontal-align: right;
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    margin-bottom: 1px;
+    margin-left: 1px;
+}
+
+.DireLeadingGold #DireDiscreteDisplay
+{
+	visibility: visible;
+}
+
+
+
 #RespawnTimer
 {
 	width: 100%;
@@ -508,9 +739,9 @@ DOTAUGCImage
 	z-index: -1;
 	vertical-align: bottom;
 	horizontal-align: center;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from ( #181b1d), to ( #22292f ) );
 	opacity: 0;
 	transform: translateY(-28px) translateX(4px);
+    background-color: gradient( linear, 0% 0%, 0% 100%, from ( #181b1d), to ( #22292f ) );
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 	
@@ -537,7 +768,7 @@ DOTAUGCImage
 	height: 100%;
     font-family: RadianceM;
     font-weight: bold;
-    text-shadow: 0px 0px 3px 2.0 #000000;
+    text-shadow: 0px 0px 0px 2.0 #000000;
 }
 
 .BuybackReady #RespawnTimer
@@ -625,6 +856,12 @@ DOTAUGCImage
 .AltPressed .EnemyTeam #ManaBar
 {
     opacity: 0;
+}
+
+.Spectating #ManaBar
+{
+	opacity: 1;
+	transform: translateY(11px);
 }
 
 #GoldIcon
@@ -718,7 +955,7 @@ DOTAUGCImage
 .AltPressed .TopBarHealthBar, .IsLocalPlayerSpectating .TopBarHealthBar
 {
     opacity: 1;
-    transform: translateY( 12px );
+    transform: translateY( 11px );
 }
 
 #ManaBar
@@ -732,6 +969,7 @@ DOTAUGCImage
     box-shadow: none;
     border-radius: 0px;
     opacity: 0;
+	
 
     transition-property: transform, opacity;
 	transition-duration: 0.12s;
@@ -741,7 +979,7 @@ DOTAUGCImage
 .AltPressed #ManaBar
 {
 	opacity: 1;
-	transform: translateY(12px);
+	transform: translateY(11px);
 }
 
 .Dead #HealthBar,
@@ -786,7 +1024,10 @@ DOTAUGCImage
 .HIDE_TOP_TIMEOFDAY #TimeOfDay,
 .HIDE_TOP_TIMEOFDAY #TimeOfDayRightFlare,
 .HIDE_TOP_TIMEOFDAY #TimeOfDayBG,
-.HIDE_TOP_TIMEOFDAY #TimeUntil
+.HIDE_TOP_TIMEOFDAY #DayGlow,
+.HIDE_TOP_TIMEOFDAY #NightGlow,
+.HIDE_TOP_TIMEOFDAY #TimeUntil,
+.HIDE_TOP_TIMEOFDAY #SpectatorGoldDisplay
 {
 	visibility: collapse;
 }
@@ -804,6 +1045,24 @@ DOTAUGCImage
 .HIDE_TOP_BAR_BACKGROUND #TopBarLeftFlare,
 .HIDE_TOP_BAR_BACKGROUND #TopBarRightFlare,
 .HIDE_TOP_BAR_BACKGROUND .TeamBackground
+{
+	visibility: collapse;
+}
+
+.HIDE_TOP_BAR_RADIANT_TEAM
+{
+	visibility: collapse;
+}
+
+.HIDE_TOP_BAR_DIRE_TEAM #TopBarDireTeam,
+.HIDE_TOP_BAR_DIRE_TEAM #TopBarRightFlare,
+.HIDE_TOP_BAR_DIRE_TEAM #TopBarDireScore
+{
+	visibility: collapse;
+}
+
+.HIDE_TOP_BAR_SCORE #TopBarRadiantScore,
+.HIDE_TOP_BAR_SCORE #TopBarDireScore
 {
 	visibility: collapse;
 }
@@ -830,13 +1089,14 @@ DOTAUGCImage
     font-weight: bold;
     opacity: 0;
     margin-bottom: 14px;
-    text-shadow: 1px 1px 2px 2.0 #00000044;
+    text-shadow: 1px 1px 0px 2.0 #00000044;
 
     transition-property: transform, opacity;
 	transition-duration: 0.18s;
     transition-timing-function: ease-in-out;
     transform: translateY(-4px);
 }
+
 
 #TimeUntil.ShowTimeUntil,
 .AltPressed #TimeUntil

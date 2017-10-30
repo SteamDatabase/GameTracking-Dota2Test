@@ -119,4 +119,34 @@
 			m_ChildRef = resource:"particles/econ/items/juggernaut/lord_sword_ivory/jugg_weapon_glow_variation_ivory_glow.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "blade_attachment"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/juggernaut/lord_wep_ivorysword.vmdl"
+			}
+		},
+	]
 }

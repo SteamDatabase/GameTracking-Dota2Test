@@ -1,6 +1,5 @@
 /* styles for the simple text tooltip */
 
-
 #Contents.TitleImageTextContents
 {
     min-width: 200px;
@@ -204,9 +203,7 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
-	box-shadow: inset #17531a 0px 0px 6px;
-    background-color: #000000ff;
-    border: BRD;
+	background-color: #000000ff;
     height: 12px;
     padding: 4px;
     width: 120px;
@@ -214,6 +211,16 @@
     vertical-align: bottom;
     width: 420px;
     visibility: collapse;
+	
+	/* Winter 2017 */
+	border: 1px solid #3e6bae;
+	box-shadow: inset #1c4661 0px 0px 6px;
+	
+	/* TI7 */
+	border: 1px solid accentColor;
+	box-shadow: inset accentColorSectionBG 0px 0px 6px;
+	
+	
 }
 
 .MultipleGames #ChallengeProgress,
@@ -224,10 +231,22 @@
 
 #ChallengeProgress .ProgressBarLeft
 {
-    background-color: #a2c53a;
+    border-radius: 2px;  
+	
+	/* Fall 2016 */
+	background-color: #a2c53a;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #afe01c ), to( #111111 ) );
     box-shadow: inset accentColorGlow 0px 0px 6px;
-    border-radius: 2px;  
+	
+	/* Winter 2017 */
+	background-color: #46a5db;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #1eadff ), to( #111111 ) );
+    box-shadow: inset #48b4ff 0px 0px 6px;
+	
+	/* TI7 */
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( bp_battlePassLogoColor ), to( #111111 ) );
+    box-shadow: inset bp_battlePassLogoColor 0px 0px 6px;
+    
 }
 
 #ChallengeProgressLabel
@@ -236,9 +255,17 @@
     vertical-align: bottom;
 	margin-left: 20px;
     font-size: 18px;
-    color: #75a92e;
     text-shadow: 0px 0px 8px 1.0 black;
     visibility: collapse;
+	
+	/* Fall 2016 */
+	color: #75a92e;
+	
+	/* Winter 2017 */
+	color: #3484bc;
+	
+	/* TI7 */
+	color: bp_color7;
 }
 
 .ChallengeProgressText 
@@ -340,6 +367,12 @@
 	
 	/* Fall 2016 */
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #487117ff ), to( #48711700 ) );
+	
+	/* Winter 2017 */
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #17295cff ), to( #17295c00 ) );
+	
+	/* TI7 */
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( bp_color1&ff ), to( bp_color1&00 ) );
 }
 
 .CompletedBannerText

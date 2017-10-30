@@ -115,4 +115,34 @@
 			m_ChildRef = resource:"particles/econ/items/ember_spirit/ember_spirit_ashes/ember_spirit_ashes_ambient_head_embers.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_head"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/ember_spirit/rekindled_ashes_head/rekindled_ashes_head.vmdl"
+			}
+		},
+	]
 }

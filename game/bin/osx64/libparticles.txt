@@ -11,7 +11,6 @@
  CVProfNode::GetSubNode(char const*, int, char const*, int)
  CommandLine
  ConMsg(char const*, ...)
- EarlyInit_Tier0
  GetCPUInformation
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
@@ -27,10 +26,12 @@
  Plat_ExitProcess
  Plat_FloatTime
  Plat_GetEnv
+ Plat_GetThreadIndex
  Plat_IsInDebugSessionRaw
  Plat_MSTime
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
+ Plat_UUIDToString
  Plat_VirtualAlloc
  Plat_VirtualFree
  RandomFloat
@@ -46,12 +47,15 @@
  T operator new[](unsigned long)
  T strnlen
  ThreadGetCurrentId
+ ThreadInMainThread
  ThreadInterlockedExchange64
  ThreadSleep
  V_FixSlashes
  V_GetFileExtension
  V_IsAbsolutePath
  V_RemoveDotSlashes
+ V_UTF16ToUTF32
+ V_UTF8ToUTF32
  V_UnqualifiedFileName
  V_acosf
  V_asinf
@@ -61,6 +65,9 @@
  V_atoi
  V_cosf
  V_expf
+ V_fmodf
+ V_frexpf
+ V_log10f
  V_logf
  V_powf
  V_qsort_s
@@ -73,6 +80,7 @@
  V_strtod
  V_strtoi64
  V_strtoui64
+ V_tanf
  V_vsnprintf
  V_vsnprintfSize
  V_wcstoi64
@@ -95,27 +103,18 @@
  __cxa_pure_virtual
  __dynamic_cast
  __gxx_personality_v0
- __sincos_stret
  __sincosf_stret
  __stack_chk_fail
  __stack_chk_guard
- acos
- atan2
  calloc
  ceilf
- cos
  dyld_stub_binder
- exp
  expf
  floor
  floorf
- fmod
- fmodf
- frexpf
  g_Tier1_CRC32Table
  g_VProfCurrentProfile
  g_pMemAlloc
- log10
  malloc
  memchr
  memcmp
@@ -123,8 +122,6 @@
  memmove
  memset
  operator new(unsigned long, std::nothrow_t const&)
- pow
- powf
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -133,10 +130,7 @@
  pthread_mutexattr_settype
  qsort
  raise
- rand
- sin
  sinf
- sprintf
  sscanf
  std::nothrow
  std::terminate()
@@ -144,7 +138,6 @@
  strcmp
  strcpy
  strlen
- tanf
  typeinfo for IStack_Annotation
  typeinfo for std::bad_alloc
  uuid_generate

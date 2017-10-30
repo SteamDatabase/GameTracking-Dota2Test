@@ -7,11 +7,16 @@
 
 	<DOTAWeekendTourneySetup hittest="true" acceptsfocus="true">
 		<Panel id="HeaderContainer" class="LeftRightFlow">
-			<Panel class="BattleCupVictoryIcon" />
-			<Label class="PageHeader" text="#WeekendTourney_Title" />
-			<Label class="PageHeaderSub" text="#WeekendTourney_SetupPage_Subtitle" />
+			<Panel id="TitleContainerNormal" class="LeftRightFlow">
+				<DOTABattleCupVictoryIcon override-streak="1" />
+				<Label class="PageHeader" text="#WeekendTourney_Title" />
+			</Panel>
+			<Panel id="TitleContainerChampionsCup" class="LeftRightFlow">
+				<DOTABattleCupVictoryIcon class="IsChampionsCup" override-streak="1" />
+				<Label class="PageHeaderChampions" text="#WeekendTourney_Title_ChampionsCup" />
+			</Panel>
 			<Panel id="HeaderButtons" class="LeftRightFlow">
-				<Button id="HubButton" class="ControlButton" onactivate="DOTAShowBPFall2016WeekendTourneyHubPage() DOTAPlayPanelCloseButtonClicked(true)">
+				<Button id="HubButton" class="ControlButton" onactivate="DOTAShowBPWinter2017WeekendTourneyHubPage() DOTAPlayPanelCloseButtonClicked(true)">
 					<Label class="ControlButtonLabel" text="#WeekendTourney_HUBButton" />	
 				</Button>
 				<Button id="FaqButton" class="ControlButton" onactivate="BrowserGoToDOTAURLAnchor( battlecup, top ) DOTAPlayPanelCloseButtonClicked(true)">
@@ -220,7 +225,7 @@
 							<Panel id="YourTicketsContainer">
 								<Label id="CurrentTicketsOwnedHeader" text="#WeekendTourney_CurrentTicketsOwnedHeader" />
 								<Label id="CurrentTicketsOwned" text="#WeekendTourney_CurrentTicketsOwned" />
-								<Label id="PurchaseModeLabel" text="#WeekendTourney_PurchaseMoreTickets" />
+								<Label id="PurchaseMoreLabel" text="#WeekendTourney_PurchaseMoreTickets" />
 								<Panel id="TicketPurchaseRow" >
 									<Button id="TicketPurchaseButton" class="PurchaseButton ColoredButton" onactivate="DOTAPurchaseWeekendTourneyTickets()">
 										<Panel id="PurchaseButtonContents">
@@ -233,16 +238,20 @@
 									</DropDown>
 
 								</Panel>
+								<Label id="ChampionsCupTicketRequiredLabel" text="#WeekendTourney_ChampionsCupTicketRequired" />
+								<Label id="ChampionsCupTicketOWnedLabel" text="#WeekendTourney_ChampionsCupTicketOwned" />
 							</Panel>
 						</Panel>
 
 						<!-- If not doing econ stuff, block this section out and catch clicks -->
 						<Panel id="BuyInCoverContainer" hittest="true" acceptsfocus="false" onactivate=";">
-							<Label id="NoBuyInRequiredLabel" text="#WeekendTourney_NoBuyInRequiredBeta" />
+							<Label id="NoBuyInFreeWeekendLabel" text="#WeekendTourney_NoBuyInFreeWeekend" />
 							<Label id="NoBuyInOffseasonLabel" text="#WeekendTourney_NoBuyInOffSeason" />
 						</Panel>
 					</Panel>
 				</Panel>
+
+				<Label id="ChampionsCupTicketTopTierLabel" text="#WeekendTourney_ChampionsCupTopTier" html="true" />
 
 				<!--<Button id="CancelSetupButton" class="BlueButton" onactivate="DOTAWeekendTourneyCancelSetup();" >
 					<Panel class="CancelIcon" />

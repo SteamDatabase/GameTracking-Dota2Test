@@ -6,6 +6,7 @@ criterion "IsGoodEchoSlam" "echoslam_count" ">1,<=3" weight 5 required
 criterion "IsFailEchoSlam" "echoslam_count" "<=0" weight 5 required
 criterion "IsEnchantTotem" "abilityname" "earthshaker_enchant_totem" weight 5 required
 criterion "IsFissure" "abilityname" "earthshaker_fissure" weight 5 required
+criterion "IsEarthShakerLoadoutSpawn" "special_spawn" "earth_shaker_loadout_spawn" weight 5 required
 
 Response earthshaker_Spawn
 {
@@ -69,6 +70,28 @@ Rule earthshaker_CustomIsFailEchoSlam_Rule
 {
 	criteria Custom Isearthshaker IsFailEchoSlam
 	response earthshaker_CustomIsFailEchoSlam
+}
+
+Response earthshaker_CustomIsEarthShakerLoadoutSpawn
+{
+	scene "scenes/earthshaker/earthshaker_erth_spawn_01.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_spawn_02.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_spawn_03.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_spawn_04.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_spawn_05.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_spawn_06.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_battlebegins_01.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_move_06.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_move_09.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_attack_03.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_attack_07.vcd" nodelay noscene 
+	scene "scenes/earthshaker/earthshaker_erth_attack_08.vcd" nodelay noscene 
+}
+
+Rule earthshaker_CustomIsEarthShakerLoadoutSpawn_Rule
+{
+	criteria Custom Isearthshaker IsEarthShakerLoadoutSpawn
+	response earthshaker_CustomIsEarthShakerLoadoutSpawn
 }
 
 Response earthshaker_KillIsFirstBlood
@@ -725,6 +748,17 @@ Rule earthshaker_PowerupIsPowerupBounty_Rule
 {
 	criteria Powerup Isearthshaker IsPowerupBounty
 	response earthshaker_PowerupIsPowerupBounty
+}
+
+Response earthshaker_PowerupIsPowerupArcane
+{
+	scene "scenes/earthshaker/earthshaker_erth_happy_03.vcd" nodelay noscene respeakdelay 300
+}
+
+Rule earthshaker_PowerupIsPowerupArcane_Rule
+{
+	criteria Powerup Isearthshaker IsPowerupArcane
+	response earthshaker_PowerupIsPowerupArcane
 }
 
 Response earthshaker_Bottling

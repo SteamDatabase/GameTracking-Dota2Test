@@ -1,7 +1,7 @@
 DOTAMultiUnit
 {
 	opacity: 0;
-	background-color: #162034aa;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from ( #222629), to ( #0e1011 ) );
 }
 
 DOTAMultiUnit.ShowMultiUnit
@@ -17,6 +17,13 @@ DOTAMultiUnit.ShowMultiUnit
 #UnitFrames
 {
 	flow-children: right-wrap;
+	margin-left: 1px;
+}
+
+DOTAMultiUnit.TwoColumns #UnitFrames,
+DOTAMultiUnit.ThreeColumns #UnitFrames
+{
+	margin-top: 3px;
 }
 
 #PageButtons
@@ -24,20 +31,25 @@ DOTAMultiUnit.ShowMultiUnit
 	flow-children: right;
 	vertical-align: bottom;
 	horizontal-align: center;
-	padding-bottom: 1px;
+	margin-bottom: -8px;
 }
 
 DOTAMultiUnitFrame
 {
-	width: 42px;
-	height: 45px;
 	margin-right: 0px;
 }
 
 #canvas
 {
-	width: 126px;
-	height: 146px;
+	margin-left: 1px;
+	width: 150px;
+	height: 180px;
+}
+
+DOTAMultiUnit.TwoColumns #canvas,
+DOTAMultiUnit.ThreeColumns #canvas
+{
+	margin-top: 3px;
 }
 
 #PageButtons Button

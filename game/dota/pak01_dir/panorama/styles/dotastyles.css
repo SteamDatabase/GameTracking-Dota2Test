@@ -1,12 +1,9 @@
 /*Styles shared across all UI */
 
-@define steamOnlineGreen: #80a438;
-
 @define baseText: #A5ADA2ff;
 @define baseBorder: #444444ff;
 @define offWhite: #ccccccff;
 @define selectedTextBackgroundColor: #66666633;
-@define test: #320000;
 @define goldColor: #ffcc33;
 
 @define dotalevelgradient: gradient( linear, 0% 0%, 0% 100%, from( #BBCAEA ), color-stop( 0.5, #ffffff), color-stop( 0.5, #D9DFEC), to( #BBCAEA ) );
@@ -63,6 +60,7 @@
 Label, TextEntry
 {
 	font-family: Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+
 }
 
 /* Default font, but with monospaced numbers for use in things like the scoreboard */
@@ -76,11 +74,17 @@ Label.TitleFont, TextEntry.TitleFont
 {
 	font-family: Goudy Trajan Medium,FZKai-Z03,TH Sarabun New,YDYGO 540;
 }
+	
 
 /* Monospaced fonts, used mostly for debugging */
 Label.MonoFont, TextEntry.MonoFont
 {
 	font-family: monospaceFont;
+}
+
+.LabelLink
+{
+	text-decoration: underline;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -481,6 +485,11 @@ pre
 	horizontal-align: center;
 }
 
+.VerticalCenter
+{
+	vertical-align: center;
+}
+
 
 .FullWidth
 {
@@ -798,7 +807,16 @@ RadioButton:disabled > Label
 	border-left-color: #2c4d30;
 	border-bottom-color: #091009;
 	border-right-color: #132615;
+}
 
+.ButtonBevel.Bronze
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #b9894c ), to( #dca157) );
+
+	border-top-color: #e0a75e;
+	border-left-color: #dca35b;
+	border-bottom-color: #8d683a;
+	border-right-color: #8f6b3c;
 }
 
 .ButtonBevel:enabled:hover
@@ -831,15 +849,31 @@ RadioButton:disabled > Label
 	border-right-color: #152716;
 }
 
+.ButtonBevel.Bronze:enabled:hover
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dda45a ), to( #fcb965 ) );
+
+	border-top-color: #f2b362;
+	border-left-color: #edb062;
+	border-bottom-color: #966f3e;
+	border-right-color: #966f3e;
+}
+
 .ButtonBevel:disabled
 {
-	wash-color: #999999;
+	wash-color: #AAAAAA;
 	saturation: 0;
+}
+
+.ButtonBevel.Bronze:disabled
+{
+	saturation: 0.75;
+
 }
 
 .ButtonBevel:disabled Label
 {
-	color: #888888;
+	color: #333333;
 }
 
 .ButtonBevel:active
@@ -863,7 +897,7 @@ RadioButton:disabled > Label
 	border-right-color: #264a29;
 }
 
-.ButtonBevel.Green:active
+.ButtonBevel.DarkGreen:active
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #132416), to( #183019 ) );
 
@@ -871,6 +905,16 @@ RadioButton:disabled > Label
 	border-left-color: #0f1b10;
 	border-bottom-color: #1f3820;
 	border-right-color: #172c19;
+}
+
+.ButtonBevel.Bronze:active
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #4d391f), to( #9b713c ) );
+
+	border-top-color: #684e2d;
+	border-left-color: #6d522f;
+	border-bottom-color: #977242;
+	border-right-color: #906c3f;
 }
 
 .ButtonBevel Label
@@ -882,7 +926,7 @@ RadioButton:disabled > Label
 	horizontal-align: center;
 	text-align: center;
 	vertical-align: middle;
-	text-shadow: 2px 2px 4px 1.0 #000000;
+	text-shadow: 2px 2px 0px 1.0 #000000;
 	
 	transition-property: color;
 	transition-duration: 0.35s;
@@ -1698,7 +1742,7 @@ SimpleContextMenu .ContextMenuBody
 
 	background-color: #212828;
 	border: 2px solid black;
-	box-shadow: #000000 2px 2px 8px 0px;
+	box-shadow: fill 4px 4px 4px #0009;
 }
 
 SimpleContextMenu.Wider .ContextMenuBody
@@ -1792,6 +1836,74 @@ ProgressBar
 }
 
 .CloseButton:active
+{
+	wash-color: white;
+	background-size: 20px 20px;
+	//pre-transform-scale2d: 0.8;
+	sound: "ui_friends_slide_in";
+}
+
+//
+//   Maximize BUTTON
+//
+
+.MaximizeButton
+{
+	width: 24px;
+	height: 24px;
+	wash-color: #888888;
+	
+	background-image: url("s2r://panorama/images/control_icons/maximize_icon_psd.vtex");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin: 4px;
+	
+	transition-property: wash-color, pre-transform-scale2d, background-color;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in;
+}
+
+.MaximizeButton:hover
+{
+	wash-color: #bbbbbb;
+}
+
+.MaximizeButton:active
+{
+	wash-color: white;
+	background-size: 20px 20px;
+	//pre-transform-scale2d: 0.8;
+	sound: "ui_friends_slide_in";
+}
+
+//
+//   Restore BUTTON
+//
+
+.RestoreButton
+{
+	width: 24px;
+	height: 24px;
+	wash-color: #888888;
+	
+	background-image: url("s2r://panorama/images/control_icons/restore_icon_psd.vtex");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin: 4px;
+	
+	transition-property: wash-color, pre-transform-scale2d, background-color;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in;
+}
+
+.RestoreButton:hover
+{
+	wash-color: #bbbbbb;
+}
+
+.RestoreButton:active
 {
 	wash-color: white;
 	background-size: 20px 20px;
@@ -1902,6 +2014,8 @@ ProgressBar
 .RefreshButton
 {
 	background-image: url("s2r://panorama/images/control_icons/refresh_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 50%;
 }
 
 .RefreshButton.Activated
@@ -2634,6 +2748,12 @@ EdgeScrollBar.Vertical #MaxButton
 	background-image: url("s2r://panorama/images/control_icons/arrow_solid_down_png.vtex");
 }
 
+EdgeScrollBar.AtMinimum #MinButton,
+EdgeScrollBar.AtMaximum #MaxButton
+{
+	visibility: collapse;
+}
+
 
 /* Pagination arrows and buttons */
 .PaginationArrow
@@ -2728,6 +2848,13 @@ EdgeScrollBar.Vertical #MaxButton
 	background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, color-stop(0.0, #0caa05 ), color-stop(0.5, #20aa05), color-stop(0.6, #00000000 ) );
 }
 
+.Blue.PaginationButton,
+.Blue.PaginationButton:selected
+{
+	background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, color-stop(0.0, #0563aa ), color-stop(0.5, #0563aa), color-stop(0.6, #00000000 ) );
+}
+
+
 .PaginationButton:enabled:hover
 {
 	opacity: 0.6;
@@ -2772,62 +2899,6 @@ EdgeScrollBar.Vertical #MaxButton
 	border-radius: 0px;
 }
 
-/* AvatarImage */
-DOTAAvatarImage .AvatarImage
-{
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-}
-
-DOTAAvatarImage .AvatarBorderImage
-{
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-}
-
-DOTAAvatarImage.EventPointTierBronze .AvatarImage,
-DOTAAvatarImage.EventPointTierSilver .AvatarImage,
-DOTAAvatarImage.EventPointTierGold .AvatarImage,
-DOTAAvatarImage.EventPointTierPlatinum .AvatarImage
-{
-	border: 8% solid #00000000;
-}
-
-DOTAAvatarImage.EventPointTierBronze .AvatarBorderImage,
-DOTAAvatarImage.EventPointTierSilver .AvatarBorderImage,
-DOTAAvatarImage.EventPointTierGold .AvatarBorderImage,
-DOTAAvatarImage.EventPointTierPlatinum .AvatarBorderImage
-{
-	background-image: url("s2r://panorama/images/compendium/avatarborder_gold_psd.vtex");
-	background-size: contain;
-	opacity: 1;
-}
-
-DOTAAvatarImage.EventPointTierBronze .AvatarBorderImage
-{
-	background-image: url("s2r://panorama/images/compendium/avatarborder_default_fall_2016_psd.vtex");
-	saturation: 1;
-}
-
-DOTAAvatarImage.EventPointTierSilver .AvatarBorderImage
-{
-	background-image: url("s2r://panorama/images/compendium/avatarborder_silver_fall_2016_psd.vtex");
-	saturation: 1;
-}
-
-DOTAAvatarImage.EventPointTierGold .AvatarBorderImage
-{
-	background-image: url("s2r://panorama/images/compendium/avatarborder_gold_fall_2016_psd.vtex");
-	saturation: 1;	
-}
-
-DOTAAvatarImage.EventPointTierPlatinum .AvatarBorderImage
-{
-	background-image: url("s2r://panorama/images/compendium/avatarborder_max_fall_2016_psd.vtex");
-	saturation: 1;
-}
 
 
 
@@ -2984,8 +3055,8 @@ DOTAPunchCard.StampCount9 #RewardPanel Label { text-shadow: 0px 0px 9px 5.0 #00f
 
 EconItemImage #Overlay
 {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .FillWidth
@@ -3048,7 +3119,7 @@ EconItemImage #Overlay
 	vertical-align: middle;
 	horizontal-align: right;
 	background-image: url("s2r://panorama/images/control_icons/double_arrow_left_png.vtex");
-    background-position: 0% 50%;
+	background-position: 0% 50%;
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: #91aba6;
@@ -3085,7 +3156,7 @@ EconItemImage #Overlay
 
 .DrawerClosed
 {
-    transform: translateX( -10px );
+	transform: translateX( -10px );
 }
 
 .RightAlign
@@ -3120,6 +3191,11 @@ EconItemImage #Overlay
 	vertical-align: center;
 }
 
+.VisibilityCollapsed
+{
+	visibility: collapse;
+}
+
 
 /* Ability Modifiers */
 .ModifierIcon
@@ -3134,7 +3210,7 @@ EconItemImage #Overlay
 
 .ModifierIcon.Empty 
 {
-    visibility: collapse;
+	visibility: collapse;
 }
 
 .ModifierIcon.icon_replacement
@@ -3164,49 +3240,49 @@ EconItemImage #Overlay
 
 .ModifierIcon.loading_screen
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_loading_screen_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_loading_screen_psd.vtex");
 }
 
 .ModifierIcon.cursor_pack
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_cursor_pack_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_cursor_pack_psd.vtex");
 }
 
 .ModifierIcon.portrait_game
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_portrait_game_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_portrait_game_psd.vtex");
 }
 
 .ModifierIcon.model
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_model_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_model_psd.vtex");
 }
 
 .ModifierIcon.custom_kill_effect
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_kill_effect_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_kill_effect_psd.vtex");
 }
 
 /*these are temp*/
 
 .ModifierIcon.soundscape
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_voice_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_voice_psd.vtex");
 }
 
 .ModifierIcon.sound
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_voice_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_voice_psd.vtex");
 }
 
 .ModifierIcon.announcer
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_voice_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_voice_psd.vtex");
 }
 
 .ModifierIcon.pet
 {
-    background-image: url("s2r://panorama/images/status_icons/modifier_model_psd.vtex");
+	background-image: url("s2r://panorama/images/status_icons/modifier_model_psd.vtex");
 }
 
 
@@ -3219,7 +3295,7 @@ EconItemImage #Overlay
 
 DOTATooltipFriendsMenu #Contents 
 {
-    background-color: #333f3d;
+	background-color: #333f3d;
 }
 
 DOTATooltipFriendsMenu #BottomArrow
@@ -3231,7 +3307,7 @@ DOTATooltipCustomGame #Contents
 {
 	padding: 0px;
 
-    border: 1px solid #9BCAF455;
+	border: 1px solid #9BCAF455;
 }
 
 DOTATooltipCustomGame #LeftArrow, DOTATooltipCustomGame #RightArrow, DOTATooltipCustomGame #TopArrow, DOTATooltipCustomGame #BottomArrow
@@ -3240,32 +3316,32 @@ DOTATooltipCustomGame #LeftArrow, DOTATooltipCustomGame #RightArrow, DOTATooltip
 
 DOTATooltipCustomGame #BottomArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_bottom_customgames_psd.vtex");
-    wash-color: white;
+	background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_bottom_customgames_psd.vtex");
+	wash-color: white;
 }
 DOTATooltipCustomGame #LeftArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_left_customgames_psd.vtex");
-    wash-color: white;
+	background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_left_customgames_psd.vtex");
+	wash-color: white;
 }
 DOTATooltipCustomGame #RightArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_right_customgames_psd.vtex");
-    wash-color: white;
+	background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_right_customgames_psd.vtex");
+	wash-color: white;
 }
 DOTATooltipCustomGame #TopArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_top_customgames_psd.vtex");
-    wash-color: white;
+	background-image: url("s2r://panorama/images/tooltips/tooltip_arrow_top_customgames_psd.vtex");
+	wash-color: white;
 }
 
 /* Custom styling for Profile Card tooltip */
 DOTATooltipProfileCard #Contents
 {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px solid transparent;
-    box-shadow: none;
+	background-color: transparent;
+	padding: 0px;
+	border: 0px solid transparent;
+	box-shadow: none;
 	transition-delay: 0.2s;
 }
 
@@ -3287,7 +3363,7 @@ DOTATooltipProfileCard #RightArrow
 
 DOTATooltipProfileCard #TopArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_top_png.vtex");
+	background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_top_png.vtex");
 	wash-color: #495757;
 
 	width: 32px;
@@ -3298,7 +3374,7 @@ DOTATooltipProfileCard #TopArrow
 
 DOTATooltipProfileCard #LeftArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_left_png.vtex");
+	background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_left_png.vtex");
 	wash-color: #495757;
 	width: 16px;
 	height: 32px;
@@ -3308,7 +3384,7 @@ DOTATooltipProfileCard #LeftArrow
 
 DOTATooltipProfileCard #BottomArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_bottom_png.vtex");
+	background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_bottom_png.vtex");
 	wash-color: #495757;
 
 	width: 32px;
@@ -3319,63 +3395,63 @@ DOTATooltipProfileCard #BottomArrow
 
 .BindingsTooltip #Contents
 {
-    min-width: 576px;
-    max-width: 576px;
-    background-color: #393E3F;
-    border: 2px solid black;
+	min-width: 576px;
+	max-width: 576px;
+	background-color: #393E3F;
+	border: 2px solid black;
 }
 
 .BindingsTooltip .TooltipRow
 {
-    width: 450px;
+	width: 450px;
 }
 
 .BindingsTooltip #LeftArrow,
 .BindingsTooltip #TopArrow
 {
-    opacity: 1;
-    height: 10px;
-    wash-color: #2B2F30;
+	opacity: 1;
+	height: 10px;
+	wash-color: #2B2F30;
 }
 
 .BindingsTooltip .TextContents
 {
-    width: 100%;
-    transform: translateX(5px);
+	width: 100%;
+	transform: translateX(5px);
 }
 
 .BindingsTooltip.TooltipContainer
 {
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 0.1s;
-    margin-top: -2px;
-    margin-left: 8px;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	margin-top: -2px;
+	margin-left: 8px;
 }
 
 .BindingsTooltip.TooltipContainer.TooltipVisible
 {
-    opacity: 1;
+	opacity: 1;
 }
 
 .OptionsTooltip #Contents
 {
-    min-width: 576px;
-    max-width: 576px;
-    background-color: #393E3F;
-    border: 2px solid black;
+	min-width: 576px;
+	max-width: 576px;
+	background-color: #393E3F;
+	border: 2px solid black;
 }
 
 .OptionsTooltip .TooltipRow
 {
-    width: 450px;
+	width: 450px;
 }
 
 .OptionsTooltip #LeftArrow
 {
-    opacity: 1;
-    height: 10px;
-    wash-color: #2B2F30;
+	opacity: 1;
+	height: 10px;
+	wash-color: #2B2F30;
 	margin: 0px;
 	width: fit-children;
 }
@@ -3387,22 +3463,22 @@ DOTATooltipProfileCard #BottomArrow
 
 .OptionsTooltip .TextContents
 {
-    width: 100%;
-    transform: translateX(5px);
+	width: 100%;
+	transform: translateX(5px);
 }
 
 .OptionsTooltip.TooltipContainer
 {
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 0.1s;
-    margin-top: -2px;
-    margin-left: 8px;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	margin-top: -2px;
+	margin-left: 8px;
 }
 
 .OptionsTooltip.TooltipContainer.TooltipVisible
 {
-    opacity: 1;
+	opacity: 1;
 }
 
 .LeaverConsequencesTooltip #Contents
@@ -3424,53 +3500,53 @@ DOTATooltipProfileCard #BottomArrow
 
 #SeasonPassRewardPreview.TooltipContainer
 {
-    pre-transform-scale2d: .3;
+	pre-transform-scale2d: .3;
 
-    transition-property: opacity, pre-transform-scale2d;
-    transition-timing-function: ease-in-out;
+	transition-property: opacity, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
 	//transition-delay: .3s;
 
 
-    animation-duration: 0.61s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;       
+	animation-duration: 0.61s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;       
 }
 
 @keyframes 'BubbleUp'
 {
-    0%
-    {
-        pre-transform-scale2d: .2;
-        opacity: 0;
-    }
-    
-    50%
-    {
-        pre-transform-scale2d: 1.1;
-        opacity: 1;
-    }               
-                
-    100%
-    {
-        pre-transform-scale2d: 1;
-        opacity: 1;
-    }
+	0%
+	{
+		pre-transform-scale2d: .2;
+		opacity: 0;
+	}
+	
+	50%
+	{
+		pre-transform-scale2d: 1.1;
+		opacity: 1;
+	}               
+				
+	100%
+	{
+		pre-transform-scale2d: 1;
+		opacity: 1;
+	}
 }
 
 #SeasonPassRewardPreview.TooltipContainer.TooltipVisible
 {
-    animation-name: BubbleUp;    
-    transition-delay: 0.0s;
-    pre-transform-scale2d: 1;
-    transition-duration: 0.175s, 0.12s;    
-    animation-delay: 0.0s;
+	animation-name: BubbleUp;    
+	transition-delay: 0.0s;
+	pre-transform-scale2d: 1;
+	transition-duration: 0.175s, 0.12s;    
+	animation-delay: 0.0s;
 }
 
 /* Context menu properties moved from context_menu_base.css */
 
 DOTAContextMenuPlayer #RightArrow
 {
-    background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_right_png.vtex");
+	background-image: url("s2r://panorama/images/tooltips/profilecard_tooltip_arrow_right_png.vtex");
 	wash-color: #495757;
 
 	width: 16px;
@@ -3510,6 +3586,17 @@ DOTAContextMenuPlayer #BottomArrow
 	height: 16px;
 
 	margin-top: -1px;
+}
+
+DOTATooltipDroppedItem
+{
+	tooltip-position: top;
+	tooltip-body-position: 50% 50%;
+}
+
+DOTATooltipRune
+{
+	tooltip-position: bottom;
 }
 
 /* Custom styling for customize profile card arrow */
@@ -3682,87 +3769,40 @@ DOTAVRPopupManager
 	height: 100%;
 }
 
-/* Used for static images */
-.BattleCupVictoryIcon
-{
-	background-image: url("s2r://panorama/images/icon_trophy_psd.vtex");
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 18px;
-	height: 18px;
-}
-
-/* Used to show dynamic state of a particulr user */
-DOTABattleCupVictoryIcon
-{
-	background-image: url("s2r://panorama/images/icon_trophy_psd.vtex");
-	background-repeat: repeat-x;
-	background-size: 18px 18px;
-	width: 18px;
-	height: 18px;
-	visibility: collapse;
-}
-
-DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge
-{
-	width: 28px;
-	height: 28px;
-	background-size: 28px 28px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupVictoryVisible
-{
-	visibility: visible;
-}
-
-DOTABattleCupVictoryIcon.BattleCupStreak2
-{
-	width: 36px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupStreak3
-{
-	width: 54px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupStreak4
-{
-	width: 72px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupStreak5
-{
-	width: 90px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak2
-{
-	width: 56px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak3
-{
-	width: 84px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak4
-{
-	width: 112px;
-}
-
-DOTABattleCupVictoryIcon.BattleCupVictoryIconLarge.BattleCupStreak5
-{
-	width: 140px;
-}
-
-
 DOTAItemImage
 {
 	background-image: url("s2r://panorama/images/items/emptyitembg_png.vtex");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 100% 99%;
+	
 }
 
+DOTAItemImage #RecipeOutputImage
+{
+	opacity: 1;
+	saturation: 0.25;
+	brightness: 2.0;
+	pre-transform-scale2d: .7;
+	transform: rotateZ(-8deg) rotateY(30deg) translateX(2px) translateY(1px);
+	border-radius: 1px;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_png.vtex");	
+}
+
+#RecipeContainer
+{
+	wash-color: #d8984bff;
+	width: 100%;
+	height: 100%;
+	contrast: .9;
+	background-color: black;
+	opacity-mask: url("s2r://panorama/images/items/recipe_opacity_mask_png.vtex");		
+}
+
+DOTAShopItem:not(.CanPurchase) #RecipeContainer
+{
+	opacity-mask: url("s2r://panorama/images/items/recipe_opacity_mask_nopurchase_psd.vtex");	
+}
+	
 
 #dragImage
 {
@@ -3900,12 +3940,30 @@ DOTAItemImage
 	}
 }
 
+.ComingSoonSticker
+{
+	background-color: #0FB678dd;
+	font-size: 16px;
+	padding: 2px 8px 2px 8px;
+	border-radius: 4px;
+	border: 1px solid #8f7;
+	text-transform: uppercase;
+	color: #8f7;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 0px 2 #000000;
+	box-shadow: #000000 -2px -2px 4px 4px;
+
+	transition-property: background-color, border, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function:ease-in-out;	
+}
+
 
 .StatBranch
 {	
 	background-image: url("s2r://panorama/images/spellicons/statbranch_psd.vtex");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 .GradientTopBottom
@@ -3917,5 +3975,76 @@ DOTAItemImage
 
 #CourierContextMenu #LeftArrow, #CourierContextMenu #RightArrow,
 {
-    wash-color: black;
+	wash-color: black;
 }
+
+.DevLabel
+{
+	color: #0f0;
+	text-shadow: 1px 1px 0px 2.0 #000000;
+	font-size: 14px;
+	width: 300px;
+	background-color: #000c;
+}
+
+.InspectIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/icon_search_png.vtex");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	width: 32px;
+	height: 32px;	
+	vertical-align: middle;
+	horizontal-align: center;
+	margin: 6px;
+	opacity: 1;
+	
+	transition-property: opacity, pre-transform-scale2d;
+	transition-duration: 0.25s;	
+	transition-timing-function: ease-in-out;
+}
+
+.MainBranchOnly
+{
+	visibility: collapse;
+}
+.MainBranch .MainBranchOnly
+{
+	visibility: visible;
+}
+
+.EventPointsValueIcon
+{
+	width: 15px;
+	height: 15px;
+	margin-right: 4px;
+
+	transform: translateY( 2px );
+
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.EventPointsValueIcon.Season_PrimeSubscription	{ background-image: url("s2r://panorama/images/dotaprime_logo_small_png.vtex"); }
+.EventPointsValue.Season_PrimeSubscription		{ color: #db4c34; }
+
+.RankTierImage { }
+.RankTier0 .RankTierImage { background-image: url("s2r://panorama/images/rank_tier_icons/rank0_psd.vtex"); }
+.RankTier1 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank1_psd.vtex"); }
+.RankTier2 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank2_psd.vtex"); }
+.RankTier3 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank3_psd.vtex"); }
+.RankTier4 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank4_psd.vtex"); }
+.RankTier5 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank5_psd.vtex"); }
+.RankTier6 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank6_psd.vtex"); }
+.RankTier7 .RankTierImage {	background-image: url("s2r://panorama/images/rank_tier_icons/rank7_psd.vtex"); }
+
+.RankPipImage { }
+.RankPips0 .RankPipImage { background-image: url("s2r://panorama/images/rank_tier_icons/pip0_psd.vtex"); }
+.RankPips1 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip1_psd.vtex"); }
+.RankPips2 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip2_psd.vtex"); }
+.RankPips3 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip3_psd.vtex"); }
+.RankPips4 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip4_psd.vtex"); }
+.RankPips5 .RankPipImage {	background-image: url("s2r://panorama/images/rank_tier_icons/pip5_psd.vtex"); }

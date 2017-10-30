@@ -1,10 +1,10 @@
  AssertMsg_ConditionFailed
  CMemAllocSystemInitialize
  COM_TimestampedLog
+ CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
  CThreadSyncObject::~CThreadSyncObject()
  CommandLine
  DevMsg(char const*, ...)
- EarlyInit_Tier0
  GetCPUInformation
  KeyValuesSystem
  LOG_GENERAL
@@ -35,6 +35,8 @@
  T operator new(unsigned long)
  T operator new[](unsigned long)
  T strnlen
+ ThreadGetCurrentId
+ ThreadInterlockedExchange64
  V_GetErrno
  V_SetErrno
  V_UTF16ToUTF8
@@ -47,6 +49,7 @@
  V_atoi
  V_cosf
  V_expf
+ V_frexpf
  V_logf
  V_qsort_s
  V_sinf
@@ -80,19 +83,15 @@
  __dynamic_cast
  __error
  __gxx_personality_v0
- __sincos_stret
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __tolower
- acos
- atan2
  ceilf
  dyld_stub_binder
  fflush
  floorf
  fprintf
- frexpf
  g_Tier1_BitWriteMasks
  g_pMemAlloc
  memchr

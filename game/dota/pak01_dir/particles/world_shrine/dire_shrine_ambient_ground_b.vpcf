@@ -27,6 +27,7 @@
 			m_hTexture = resource:"materials/particle/fire/scenes/ground_ember.vtex"
 			m_bFitCycleToLifetime = true
 			m_flAnimationRate = 1.000000
+			m_bTintByFOW = true
 		},
 		{
 			_class = "C_OP_RenderDeferredLight"

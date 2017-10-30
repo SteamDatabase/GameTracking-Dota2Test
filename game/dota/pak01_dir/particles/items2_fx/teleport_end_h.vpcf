@@ -7,8 +7,6 @@
 		{
 			_class = "C_OP_RenderSprites"
 			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
-			m_flAddSelfAmount = 1.000000
-			m_bSaturateColorPreAlphaBlend = false
 			m_hTexture = resource:"materials/particle/swoop_01.vtex"
 			m_nOrientationType = 2
 		},
@@ -96,6 +94,8 @@
 		},
 		{
 			_class = "C_INIT_RandomAlpha"
+			m_nAlphaMin = 180
+			m_nAlphaMax = 180
 		},
 		{
 			_class = "C_INIT_PositionOffset"

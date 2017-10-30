@@ -78,8 +78,8 @@
 		},
 		{
 			_class = "C_INIT_RandomRadius"
-			m_flRadiusMax = 10.000000
-			m_flRadiusMin = 10.000000
+			m_flRadiusMax = 5.000000
+			m_flRadiusMin = 5.000000
 		},
 		{
 			_class = "C_INIT_RandomAlpha"
@@ -131,6 +131,31 @@
 	[
 		{
 			m_ChildRef = resource:"particles/econ/items/dazzle/dazzle_ti6_gold/dazzle_ti6_shallow_grave_gold_ring_embers.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
 		},
 	]
 }

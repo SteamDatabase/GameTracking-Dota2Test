@@ -94,6 +94,10 @@
 		{
 			"models/heroes/dark_seer/dark_seer.vmdl"   "#DOTA_STATUE_name_model_dark_seer"
 		}
+		"npc_dota_hero_dark_willow"
+		{
+			"models/heroes/dark_willow/dark_willow.vmdl"	"#DOTA_STATUE_name_model_dark_willow"
+		}
 		"npc_dota_hero_dazzle"
 		{
 			"models/heroes/Dazzle/dazzle.vmdl"   "#DOTA_STATUE_name_model_dazzle"
@@ -169,11 +173,12 @@
 		}
 		"npc_dota_hero_jakiro"
 		{
-			"models/heroes/twin_headed_dragon/twin_headed_dragon.vmdl"   "#DOTA_STATUE_name_model_twin_headed_dragon"
+			"models/heroes/jakiro/jakiro.vmdl"   "#DOTA_STATUE_name_model_twin_headed_dragon"
 		}
 		"npc_dota_hero_juggernaut"
 		{
 			"models/heroes/juggernaut/juggernaut.vmdl"   "#DOTA_STATUE_name_model_juggernaut"
+			"models/heroes/juggernaut/juggernaut_arcana.vmdl"   "#DOTA_STATUE_name_model_juggernaut_arcana"
 		}
 		"npc_dota_hero_keeper_of_the_light"
 		{
@@ -278,6 +283,10 @@
 		"npc_dota_hero_oracle"
 		{
 			"models/heroes/oracle/oracle.vmdl"   "#DOTA_STATUE_name_model_oracle"
+		}
+		"npc_dota_hero_pangolier"
+		{
+			"models/heroes/pangolier/pangolier.vmdl"   "#DOTA_STATUE_name_model_pangolier"
 		}
 		"npc_dota_hero_phantom_assassin"
 		{
@@ -889,6 +898,7 @@
 			"injured_idle"		"1"
 			"injured_run"		"1"
 			"teleport"			"1"
+			"taunt_headroll_deathdance_effigy"		"head_roll_gesture"
 		}
 		"models/heroes/crystal_maiden/crystal_maiden.vmdl"
 		{
@@ -904,6 +914,8 @@
 			"stun"			"1"
 			"cm_flail"		"1"
 			"teleport"		"1"
+			"taunt_snowmaiden_effigy"	"freeze"
+			"ward_taunt_snowmaiden_effigy"	"freeze;wardstaff"
 			"cm_immortal_nova"		"glacier"
 			"wardstaff_agg_idle"		"wardstaff"
 			"ward_loadout_idle"			"wardstaff"
@@ -914,8 +926,7 @@
 			"ward_nova"				"wardstaff"
 			"ward_frostbite"			"wardstaff"
 			"ward_run"				"wardstaff"			
-		}
-				
+		}		
 		"models/heroes/crystal_maiden/crystal_maiden_arcana.vmdl"
 		{
 			"arcana_idle"               "1"
@@ -929,6 +940,8 @@
 			"arcana_freezing_field"     "1"
 			"arcana_flail"              "1"
 			"arcana_stun"               "1"
+			"arcana_taunt_snowmaiden_effigy"	"freeze"
+			"wardstaff_arcana_taunt_snowmaiden_effigy"		"freeze;wardstaff"
 			"wardstaff_arcana_idle"         "wardstaff"
 			"wardstaff_run_arcana"          "wardstaff"
 			"wardstaff_arcana_agg_run"      "wardstaff"
@@ -955,6 +968,21 @@
 			"wall"		"1"
 			"stun"		"1"
 			"flail"		"1"
+		}
+		"models/heroes/dark_willow/dark_willow.vmdl"
+		{
+			"cast1_bramble_effigy"			"1"
+			"cast1_bramble_rose_effigy"		"rose"
+			"cast2_shadow_realm_effigy"		"1"
+			"cast3_conduit_effigy"			"1"
+			"cast4_wisp_effigy"			"1"
+			"cast5_fear_effigy"			"1"
+			"defeat_effigy"				"1"
+			"victory_effigy"			"1"
+			"attack_effigy"				"1"
+			"attack_spin_effigy"			"1"
+			"run_corkscrew_effigy"			"1"
+			"loadout_rare_alt_effigy"		"1"
 		}
 		"models/heroes/Dazzle/dazzle.vmdl"
 		{
@@ -1380,6 +1408,19 @@
 			"ghost_walk"		"1"
 			"taunt_juggle_effigy"	"juggle_gesture"
 		}
+		"models/heroes/jakiro/jakiro.vmdl"
+		{
+				"dualbreath_effigy"		"1"
+				"icepath_effigy"		"1"
+				"macropyre_effigy"		"1"
+				"flail_effigy"			"1"
+				"stun_effigy"			"1"
+				"loadout_spawn_new_effigy"		"1"
+				"teleport_start_effigy"			"1"
+				"victory_loop_effigy"			"1"
+				"defeat_effigy"			"1"
+				"taunt_corkscrew_effigy"	"corkscrew_gesture"
+		}
 		"models/heroes/juggernaut/juggernaut.vmdl"
 		{
 			"idle"			"1"
@@ -1405,6 +1446,34 @@
 			"omni"				"1"
 			"flail"				"1"
 			"faes_loadout"		"faces_hakama;faces_wraps;faces_mask;faces_vest;faces_katana"
+		}
+		"models/heroes/juggernaut/juggernaut_arcana.vmdl"
+		{
+			"idle"			"1"
+			"idle2"			"1"
+			"attack_spin"		"1"
+			"taunt_loser"		"loser"
+			"taunt_sharp_blade"		"sharp_blade"
+			"spawn01"		"1"
+			"loadout_default_spawn"		"1"
+			"spawn_odachi"		"odachi"
+			"run_odachi"		"odachi"
+			"idle_odachi"		"odachi"
+			"attack_odachi_01"		"odachi"
+			"attack_odachi_02"		"odachi"
+			"attack_odachi_03"		"odachi"
+			"loadout_default"		"1"
+			"attack"		"1"
+			"attack2"		"1"
+			"attack_crit"		"1"
+			"run_reverse"		"1"
+			"Healing_ward"		"1"
+			"stun"				"1"
+			"omni"				"1"
+			"flail"				"1"
+			"faes_loadout"		"faces_hakama;faces_wraps;faces_mask;faces_vest;faces_katana"
+			"arcana_loadout_alt_effigy"	"1"
+			"arcana_teleport_effigy"	"1"
 		}
 		"models/heroes/keeper_of_the_light/keeper_of_the_light.vmdl"
 		{
@@ -1450,6 +1519,7 @@
 			"teleport_admirals_prow"		"admirals_prow"
 			"armament_leviathan_idle_alt"		"armaments_set"
 			"idle_rare_gunsword"		"1"
+			"taunt_sword_dance_effigy"	"kunkka_dance_gesture"
 		}
 		"models/heroes/lanaya/lanaya.vmdl"
 		{
@@ -1574,6 +1644,7 @@
 			"attack3"		"1"
 			"flail"			"1"
 			"stun"			"1"
+			"taunt_woop_woop_effigy"	"break_gesture"
 		}
 		"models/heroes/lina/lina.vmdl"
 		{
@@ -1727,7 +1798,7 @@
 			"idleSpin"          "1"
 			"lose"          "1"
 			"anvil_cast1_shockWave"     "anvil"
-            "taunt_mag_power"       "mag_power_gesture"
+			"taunt_mag_power"       "mag_power_gesture"
 		}
 		"models/heroes/medusa/medusa.vmdl"
 		{
@@ -1841,8 +1912,8 @@
 			"flail"          "1"
 			"teleport"		"1"
 			"cast_ult_death_protest"		"death_protest"
-            "immosh_run"    "immosh"
-            "immosh_idle"   "immosh"  
+			"immosh_run"    "immosh"
+			"immosh_idle"   "immosh"  
 		}
 		"models/heroes/nerubian_assassin/nerubian_assassin.vmdl"
 		{
@@ -1963,6 +2034,36 @@
 			"forcestaff"		"1"
 			"loadout_spawn"		"1"
 			"cast1_FortunesEnd"		"1"
+		}
+		"models/heroes/pangolier/pangolier.vmdl"
+		{
+			"idle_effigy"				"1"
+			"spawn_loadout_statue"			"1"
+			"teleport_effigy"			"1"
+			"cast1_swashbuckle_effigy"		"1"
+			"cast2_thump_effigy"			"1"
+			"stun_effigy"				"1"
+			"flail_effigy"				"1"
+			"attack_event_effigy"			"1"
+			"attack02_stab_effigy"			"1"
+			"defeat_effigy"				"1"
+			"teleport_end_effigy"			"1"
+			"idle_injured_effigy"			"1"
+			"taunt_kritter_kartwheel_effigy"	"bombadillo"
+			"mskt_taunt_kritter_kartwheel_effigy"	"bombadillo;musket"
+			"mskt_idle_injured_effigy"		"musket"
+			"mskt_idle_effigy"			"musket"
+			"mkst_spawn_loadout_effigy"		"musket"
+			"mskt_teleport_effigy"			"musket"
+			"mskt_cast1_swashbuckle_effigy"		"musket"
+			"mskt_cast1_swashbuckle_end_effigy"	"musket"
+			"mskt_cast2_thump_effigy"		"musket"
+			"mskt_stun_effigy"			"musket"
+			"mskt_flail_effigy"			"musket"
+			"mskt_attack_event_effigy"		"musket"
+			"mskt_attack02_stab_effigy"		"musket"
+			"mskt_defeat_effigy"			"musket"
+			"mskt_teleport_end_effigy"		"musket"
 		}
 		"models/heroes/phantom_assassin/pa_arcana.vmdl"
 		{
@@ -2587,6 +2688,8 @@
 			"fortune_remnant_07"          "ss_fortune"
 			"vortex"          "1"
 			"teleport"		"1"
+			"taunt_meditate_sitting_effigy"		"inner_peace_gesture"
+			"taunt_meditate_reclining_effigy"	"inner_peace_gesture"
 		}
 		"models/heroes/sven/sven.vmdl"
 		{
@@ -2639,6 +2742,8 @@
 			"disable"          "1"
 			"flail"          "1"
 			"spawn"          "1"
+			"taunt_swing_around_effigy"	"swing_around_gesture"
+			"taunt_swing_around_arcana_effigy"	"swing_around_gesture;techies_arcana"
 			"arcana_loadout"		"techies_arcana"
 			"arcana_run"		"techies_arcana"
 			"arcana_run_injured"          "techies_arcana"
@@ -3086,6 +3191,7 @@
 			"cast04_winters_curse_flying_low"       "1"
 			"flail_flying_low"              "1"
 			"stun_flying_statue"               "1"
+			"ww_taunt_smoke_effigy"		"smoke"
 		}
 		"models/heroes/wisp/wisp_effigy.vmdl"
 		{

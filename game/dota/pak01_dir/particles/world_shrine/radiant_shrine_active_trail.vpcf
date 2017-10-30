@@ -31,6 +31,7 @@
 				1.000000,
 				0.000000,
 			]
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
@@ -70,6 +71,16 @@
 			m_Rate = -5.000000
 			m_nField = 7
 			m_nOpEndCapState = 1
+		},
+		{
+			_class = "C_OP_EndCapTimedDecay"
+			m_flDecayTime = 0.250000
+		},
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_nFieldOutput = 10
+			m_flOutput = 0.000000
+			m_flLerpTime = 0.250000
 		},
 	]
 	m_Initializers = 

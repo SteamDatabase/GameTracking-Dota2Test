@@ -27,7 +27,6 @@
  ConMsg(char const*, ...)
  DevMsg(char const*, ...)
  DevWarning(char const*, ...)
- EarlyInit_Tier0
  GetCPUInformation
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
@@ -43,6 +42,7 @@
  Plat_DebugPrint
  Plat_ExitProcess
  Plat_FloatTime
+ Plat_GetCPUFrequency
  Plat_GetComputerName
  Plat_GetEnv
  Plat_GetOSType
@@ -54,6 +54,7 @@
  Plat_RequireSDL
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_UUIDFromString
+ Plat_UUIDToString
  Plat_VirtualAlloc
  Plat_VirtualFree
  Plat_WindowToOsSpecificHandle
@@ -86,7 +87,6 @@
  V_UTF8ToUTF32
  V_acosf
  V_asinf
- V_atan2
  V_atan2f
  V_atanf
  V_atod
@@ -94,12 +94,11 @@
  V_atoi
  V_atoi64
  V_atoui64
- V_cos
  V_cosf
  V_coshf
  V_expf
  V_fmodf
- V_log
+ V_frexpf
  V_log10f
  V_logf
  V_powf

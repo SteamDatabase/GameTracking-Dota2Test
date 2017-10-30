@@ -8,6 +8,7 @@
  B g_VProfSignalSpike
  B g_bPlatCpuTimeIsReliable
  B g_nMiniProfilerFrame
+ B g_nMiniProfilerGenericCounters
  B g_pAssertMiniProfilers
  B g_pCurrentFiberTL
  B g_pFiberJobPool
@@ -19,6 +20,7 @@
  D g_Tier1_FullHTMLEntities
  D g_VProfNodeSpikeMinimumMs
  D g_VProfNodeSpikeMultiplier
+ D g_pGenericMicroProfilers
  D g_pPerfTraceDepot
  D typeinfo for BasicStatStructFieldDesc
  D typeinfo for CTestCase
@@ -67,6 +69,7 @@
  R typeinfo name for IStack_VM_Segment_Marker
  T AppendMiniProfilerToList
  T AssertMsg_ConditionFailed
+ T AssertMsg_ConditionFailed_ContextFunc
  T AssertValidStringPtr
  T AssertValidWStringPtr
  T BasicStatStructFieldDesc::DescribeField(unsigned char*, unsigned long)
@@ -107,11 +110,12 @@
  T CFiber::EstimateBytesUsed(unsigned long) const
  T CFiber::FiberYield(bool (*)(void*), void*)
  T CFiber::InitStackContext(void*, unsigned long, bool, unsigned long)
+ T CFiber::InternalSetFiberJob(void (*)(void*), void*, unsigned long, bool)
+ T CFiber::IsReadyToResume()
  T CFiber::IsRunningInThreadMemory()
- T CFiber::ReleasePooledFiber()
- T CFiber::ResumeJob()
+ T CFiber::ReachedZeroReferences()
+ T CFiber::ResumeJob(void*)
  T CFiber::RunInThreadMemory(long long (*)(void*), void*)
- T CFiber::SetFiberJob(void (*)(void*), void*, unsigned long)
  T CFiber::SetThreadFiberMemoryRange(unsigned long)
  T CFiber::WaitForJobCompletion(CEventListNode&)
  T CFiber::~CFiber()
@@ -174,9 +178,10 @@
  T CThreadFullMutex::Release()
  T CThreadLocalScope::CScopeCreatedOrDestroyedHandler::CScopeCreatedOrDestroyedHandler(void (*)(CThreadLocalScope*, bool))
  T CThreadLocalScope::CScopeCreatedOrDestroyedHandler::~CScopeCreatedOrDestroyedHandler()
- T CThreadLocalScope::CThreadLocalScope(ThreadHandle_t__*)
+ T CThreadLocalScope::CThreadLocalScope(ThreadHandle_t__*, bool)
  T CThreadLocalScope::FindScopeForThreadHandle(ThreadHandle_t__*)
  T CThreadLocalScope::GetScopeListMutex()
+ T CThreadLocalScope::IsLocalThreadScope() const
  T CThreadLocalScope::SetThreadName(char const*)
  T CThreadLocalScope::~CThreadLocalScope()
  T CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
@@ -256,7 +261,6 @@
  T CVProfile::BudgetGroupNameToBudgetGroupID(char const*, int)
  T CVProfile::CVProfile()
  T CVProfile::CalcBudgetGroupL2CacheMisses_Recursive(CVProfNode*, unsigned int*, int, float)
- T CVProfile::CalcBudgetGroupLHS_Recursive(CVProfNode*, unsigned int*, int, float)
  T CVProfile::CalcBudgetGroupTimes_Recursive(CVProfNode*, unsigned int*, int, float)
  T CVProfile::DumpNodes(CVProfNode*, int, bool, CVProfSummingContext&)
  T CVProfile::ExecuteDeferredFunctions()
@@ -347,7 +351,6 @@
  T GetSymbolNameFromAddress
  T GetThreadedLoadLibraryFunc
  T GetUnitTest
- T GetVAtom
  T GetWin32ConsoleCursorColumnIndex
  T HangWatchdogInternal_BeginScope
  T HangWatchdogInternal_EndScope
@@ -420,6 +423,7 @@
  T MemAlloc_AllocFunc
  T MemAlloc_CallocFunc
  T MemAlloc_FreeFunc
+ T MemAlloc_GetSizeFunc
  T MemAlloc_ReallocFunc
  T MemAlloc_StrDupWrapperFunc
  T MemFreeScratch
@@ -434,13 +438,18 @@
  T MinidumpUserStreamInfoSetHeader
  T Msg
  T OSTypesAreCompatible
+ T Plat_AlertUser
+ T Plat_AlertUser(PlatWindow_t__*, wchar_t const*, wchar_t const*)
+ T Plat_AppendMiniDumpErrorString
  T Plat_ApproximateProcessMemoryUsage
  T Plat_AttachDebuggerToProcess
  T Plat_BeginWatchdogTimer
  T Plat_ChangeCurrentFrame
  T Plat_CheckSDL
+ T Plat_ClearMiniDumpErrorString
  T Plat_CollectMiniDumpsForFatalErrors
  T Plat_ConvertToLocalTime
+ T Plat_CreateDirectory
  T Plat_CreateGameInstanceMutex
  T Plat_CreateUUIDImpl
  T Plat_CreateWindow
@@ -474,10 +483,11 @@
  T Plat_GetDesktopResolution
  T Plat_GetDocumentDirectory
  T Plat_GetEnv
- T Plat_GetExecutablePath
  T Plat_GetExecutablePathUTF8
+ T Plat_GetGlobalListRegistry
  T Plat_GetLocalTime
  T Plat_GetMemPageSize
+ T Plat_GetMiniDumpErrorString
  T Plat_GetModuleFilename
  T Plat_GetModuleInterfaceFactory
  T Plat_GetModuleProcAddress
@@ -511,6 +521,7 @@
  T Plat_Is64BitOS
  T Plat_IsConsoleApplication
  T Plat_IsDirectory
+ T Plat_IsFile
  T Plat_IsHighDPI
  T Plat_IsInBenchmarkMode
  T Plat_IsInDebugSessionRaw
@@ -521,6 +532,7 @@
  T Plat_IsWindowFocused
  T Plat_IsWindowMinimized
  T Plat_IsWindowVisible
+ T Plat_IsWindowsGameDVREnabled
  T Plat_LoadInterface
  T Plat_LoadModule
  T Plat_LoadModuleRaw
@@ -542,6 +554,9 @@
  T Plat_RelativeTickFrequency
  T Plat_RelativeTicks
  T Plat_ReleaseMouseCapture
+ T Plat_RemoveDirectory
+ T Plat_RemoveFile
+ T Plat_RenameFile
  T Plat_RequireSDL
  T Plat_RunningWithDebugModules
  T Plat_ScreenToWindowCoords
@@ -553,6 +568,8 @@
  T Plat_SetCpuTimeIsReliable
  T Plat_SetCurrentFrame
  T Plat_SetDefaultMonitorIndex
+ T Plat_SetDesktopNotifyIconPath
+ T Plat_SetFileReadOnly
  T Plat_SetForegroundWindow
  T Plat_SetFullscreenMinimizeOnFocusLoss
  T Plat_SetIsConsoleApplication
@@ -600,7 +617,6 @@
  T Plat_WindowToOsSpecificHandle
  T Plat_WindowToScreenCoords
  T Plat_chdir
- T Plat_chmod
  T Plat_ctime
  T Plat_getwd
  T Plat_gmtime
@@ -619,6 +635,7 @@
  T RunTSListTests
  T RunTSQueueTests
  T RunWithAlternateStack
+ T SendActionToAssertDialog
  T SeriousWarning
  T SeriousWarning(int, Color, char const*, ...)
  T SeriousWarning(int, char const*, ...)
@@ -646,16 +663,16 @@
  T StackTools_RemoveModuleMappingListener
  T StackTools_VerifyLoadedModuleMappings
  T ThreadCloseProcess
- T ThreadFinishInitOnce
  T ThreadGetCurrentHandle
  T ThreadGetCurrentId
  T ThreadGetCurrentProcessHandle
  T ThreadGetCurrentProcessId
  T ThreadGetPriority
  T ThreadGetProcessExitCode
+ T ThreadGetProcessPriority
  T ThreadInMainThread
- T ThreadInitOnce
- T ThreadInitOnceCall
+ T ThreadInitOnceCall_Finish
+ T ThreadInitOnceCall_ShouldRun
  T ThreadInterlockedExchange64
  T ThreadIsProcessActive
  T ThreadIsProcessIdActive
@@ -763,6 +780,9 @@
  T V_UnicodeAdvance(char*, int)
  T V_UnicodeAdvance(unsigned short*, int)
  T V_UnicodeAdvance(wchar_t*, int)
+ T V_UnicodeBufferLength(char const*, int, bool&)
+ T V_UnicodeBufferLength(unsigned short const*, int, bool&)
+ T V_UnicodeBufferLength(wchar_t const*, int, bool&)
  T V_UnicodeCaseCompare(char const*, char const*, int, EStringConvertErrorPolicy)
  T V_UnicodeCaseCompare(unsigned short const*, unsigned short const*, int, EStringConvertErrorPolicy)
  T V_UnicodeCaseCompare(wchar_t const*, wchar_t const*, int, EStringConvertErrorPolicy)
@@ -806,6 +826,7 @@
  T V_exp2f
  T V_expf
  T V_fclose
+ T V_fdopen
  T V_feof
  T V_ferror
  T V_fflush
@@ -815,6 +836,7 @@
  T V_fmod
  T V_fmodf
  T V_fopen
+ T V_fopenUTF8
  T V_fprintf
  T V_fputc
  T V_fputs
@@ -841,6 +863,8 @@
  T V_iswlower
  T V_iswspace
  T V_iswupper
+ T V_ldexp
+ T V_ldexpf
  T V_localeconv
  T V_log
  T V_log10
@@ -849,6 +873,8 @@
  T V_log2f
  T V_logf
  T V_longjmp
+ T V_mkostemps
+ T V_mkstemps
  T V_normalizeFloatString
  T V_normalizeFloatWString
  T V_pow
@@ -857,7 +883,7 @@
  T V_pretifynum
  T V_qsort
  T V_qsort_s
- T V_rand
+ T V_rewind
  T V_setjmp
  T V_setvbuf
  T V_sin
@@ -1037,6 +1063,7 @@
  fchmod
  fclose
  fcntl
+ fdopen
  feof
  ferror
  fflush
@@ -1068,12 +1095,15 @@
  gethostname
  getloadavg
  getpid
+ getpriority
  getrlimit
  getrusage
  gettimeofday
  gmtime_r
  hypot
  kill
+ ldexp
+ ldexpf
  localeconv
  localtime
  localtime_r
@@ -1095,10 +1125,13 @@
  memmove
  memset
  memset_pattern16
+ mkdir
+ mktemp
  mmap
  mprotect
  munmap
  nanosleep
+ newlocale
  objc_msgSend
  open
  operator delete(void*)
@@ -1149,7 +1182,9 @@
  read
  realloc
  remove
+ rename
  rewind
+ rmdir
  semctl
  semget
  semop
@@ -1205,15 +1240,14 @@
  vfscanf
  vprintf
  vsnprintf
- vsprintf
  vsscanf
- vswprintf
+ vswprintf_l
  vswscanf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
+ vtable for __cxxabiv1::__vmi_class_type_info
  waitpid
  wcschr
- wcsdup
  wcslen
  wcsncat
  wcsncpy

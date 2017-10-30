@@ -1,4 +1,9 @@
 @define toGameTransitionDelay: 0.25s;
+@define reserveTimeBackgroundColor: #54709599;
+@define reserveTimeTextColor: #ccc;
+@define reserveTimeTimerColor: #789fd4;
+
+@import url("file://{resources}styles/battle_pass/current_battle_pass.css");
 
 DOTAHudPreGame
 {
@@ -51,6 +56,16 @@ DOTAHudPreGame.Hidden
 	overflow: noclip;
 }
 
+.EventGame DOTAHudPreGame.DarkMoon #DireTeamPlayers
+{
+	opacity: 0;
+}
+
+.EventGame DOTAHudPreGame.Season_International2017 #DireTeamPlayers
+{
+	opacity: 0;
+}
+
 #HeaderCenter
 {
 	width: 338px;
@@ -60,7 +75,7 @@ DOTAHudPreGame.Hidden
 	transition-timing-function: ease-in-out;	
 }
 
-.AspectRatio4x3 #HeaderCenter, .AspectRatio5x4 #HeaderCenter
+.AspectRatio4x3 #HeaderCenter
 {
 	width: 250px;
 }
@@ -98,6 +113,17 @@ DOTAHudPreGame.Hidden
 	font-size: 64px;
 	font-weight: thin;
 	text-align: center;
+	
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;	
+}
+
+.InReserveTime #ClockLabel
+{
+	pre-transform-scale2d: .35;
+	transform: translateY(-26px);
+	opacity: .5;
 }
 
 #PickModeSubtitle
@@ -126,6 +152,19 @@ DOTAHudPreGame.Hidden
 	text-transform: uppercase;
 }
 
+.EventGame DOTAHudPreGame.DarkMoon #BattlePassContainer,
+.EventGame DOTAHudPreGame.DarkMoon #PreMinimapContainer
+{
+	opacity: 0;
+}
+
+.EventGame DOTAHudPreGame.DarkMoon #GameModeLabel
+{
+	text-shadow: 0px 0px 8px 2.0 #BA707045;
+	font-size: 28px;
+	letter-spacing: 2px;
+}
+
 // Custom game SetHUDVisible support
 .HIDE_HERO_SELECTION_GAME_NAME #GameModeLabel,
 .HIDE_HERO_SELECTION_CLOCK #ClockLabel,
@@ -133,6 +172,11 @@ DOTAHudPreGame.Hidden
 .HIDE_HERO_SELECTION_TEAMS #DireTeamPlayers
 {
 	visibility: collapse;
+}
+
+#PickModeSubtitleInfo
+{
+	horizontal-align: center;
 }
 
 #HeaderPenaltyTime
@@ -176,6 +220,27 @@ DOTAHudPreGame.Hidden
 	color: #f33;
 	padding-right: 16px;
 }
+
+#ReserveTimeLabel
+{
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( .25, reserveTimeBackgroundColor ), color-stop( .65, reserveTimeBackgroundColor ), to( #00000000 ) );
+	padding: 3px 60px 0px 60px;
+	color: reserveTimeTextColor;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.5s;
+}
+.InReserveTime #ReserveTimeLabel
+{
+	opacity: 1.0;
+}
+
 
 #WaitingForPlayersLabel,
 #StrategyTimeLabel
@@ -232,6 +297,7 @@ DOTAHudPreGame.Hidden
 	transform: translateY( -30px );	
 	transition-property: transform, opacity;
 	transition-duration: 0.32s;
+	transition-delay: 3s;
 }
 
 .WaitingForPlayers #ConnectingLabelContainer,
@@ -256,7 +322,7 @@ DOTAHudPreGame.Hidden
 	width: 360px;
 }
 
-.AspectRatio5x4 #HeaderRanked, .AspectRatio4x3 #HeaderRanked
+.AspectRatio4x3 #HeaderRanked
 {
 	width: 310px;
 }
@@ -317,6 +383,176 @@ DOTAHudPreGame.Hidden
 	padding-left: 0px;
 }
 
+#HeaderCaptainsMode
+{
+	width: 390px;
+	horizontal-align: center;
+	margin-top: 4px;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.2s;
+
+	visibility: collapse;
+}
+
+.DOTA_GAMERULES_STATE_HERO_SELECTION #HeaderCaptainsMode
+{
+	opacity: 1.0;
+}
+
+.CaptainsModeHeroPicking #HeaderCaptainsMode
+{
+	visibility: visible;
+}
+
+.AspectRatio16x10 #HeaderCaptainsMode
+{
+	width: 360px;
+}
+
+.AspectRatio4x3 #HeaderCaptainsMode
+{
+	width: 310px;
+}
+
+.Ranked #HeaderCaptainsMode
+{
+	width: 370px;
+	margin-top: 48px;
+}
+
+.AspectRatio16x10 .Ranked #HeaderCaptainsMode
+{
+	width: 340px;
+}
+
+.AspectRatio4x3 .Ranked #HeaderCaptainsMode
+{
+	width: 290px;
+}
+
+.HeaderCaptainsModeTeam
+{
+	flow-children: down;
+	overflow: noclip;
+}
+
+.TeamReserveTimeLabel
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 3px 4px 0px 4px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( reserveTimeBackgroundColor ), color-stop( .65, reserveTimeBackgroundColor ), to( #00000000 ) );
+	color: reserveTimeTextColor;
+	font-size: 14px;	
+	padding-left: 20px;
+	padding-right: 34px;
+}
+
+#HeaderCaptainsModeDire .TeamReserveTimeLabel
+{
+	background-color: gradient( linear, 100% 0%, 0% 0%, from( reserveTimeBackgroundColor ), color-stop( .65, reserveTimeBackgroundColor ), to( #00000000 ) );
+	padding-left: 34px;
+	padding-right: 20px;
+}
+
+.TeamReserveTimeValue
+{
+	color: reserveTimeTimerColor;
+	font-size: 20px;
+	font-weight: thin;
+	padding-left: 24px;
+	
+	transition-property: opacity, transform, font-size;
+	transition-duration: 0.4s;	
+	transition-delay: 0.1s;	
+	transition-timing-function: ease-in-out;
+}
+
+.InReserveTime.RadiantPicking #RadiantReserveTime
+{
+	font-size: 56px;
+	transform: translateX(120px) translateY(-10px);
+}
+
+.AspectRatio16x10 .InReserveTime.RadiantPicking #RadiantReserveTime
+{
+	transform: translateX(100px) translateY(-10px);
+}
+
+.AspectRatio4x3 .InReserveTime.RadiantPicking #RadiantReserveTime
+{
+	transform: translateX(81px) translateY(-10px);
+}
+
+.InReserveTime.DirePicking #DireReserveTime
+{
+	font-size: 56px;
+	transform: translateX(-122px) translateY(-10px);
+}
+
+.AspectRatio16x10 .InReserveTime.DirePicking #DireReserveTime
+{
+	transform: translateX(-106px) translateY(-10px);
+}
+
+.AspectRatio4x3 .InReserveTime.DirePicking #DireReserveTime
+{
+	transform: translateX(-84px) translateY(-10px);
+}
+
+.Ranked.InReserveTime.RadiantPicking #RadiantReserveTime
+{
+	transform: translateX(109px) translateY(-55px);
+}
+
+.Ranked.InReserveTime.DirePicking #DireReserveTime
+{
+	transform: translateX(-115px) translateY(-55px);
+}
+
+
+.AspectRatio16x10 .Ranked.InReserveTime.RadiantPicking #RadiantReserveTime
+{
+	transform: translateX(92px) translateY(-55px);
+}
+
+.AspectRatio16x10 .Ranked.InReserveTime.DirePicking #DireReserveTime
+{
+	transform: translateX(-96px) translateY(-55px);
+}
+
+.AspectRatio4x3 .Ranked.InReserveTime.RadiantPicking #RadiantReserveTime
+{
+	transform: translateX(70px) translateY(-55px);
+}
+
+.AspectRatio4x3 .Ranked.InReserveTime.DirePicking #DireReserveTime
+{
+	transform: translateX(-74px) translateY(-55px);
+}
+
+#HeaderCaptainsModeDire .TeamReserveTimeValue
+{
+	padding-right: 24px;
+	padding-left: 0px;
+}
+
+#HeaderCaptainsModeDire
+{
+	horizontal-align: right;
+
+}
+
+#HeaderCaptainsModeDire > Label
+{
+	horizontal-align: right;
+	text-align: right;
+}
+
+
 #MainContents
 {
 	width: 100%;
@@ -338,7 +574,7 @@ DOTAHudPreGame.Hidden
 	horizontal-align: center;
 }
 
-.AspectRatio16x10 #ScreenContainer, .AspectRatio4x3 #ScreenContainer, .AspectRatio5x4 #ScreenContainer
+.AspectRatio16x10 #ScreenContainer, .AspectRatio4x3 #ScreenContainer
 {
 	width: 100%;
 }
@@ -415,21 +651,25 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	transition-duration: 0.8s, 1s;
 }
 
-
 #HeroPickScreenContents
+{
+	width: 100%;
+}
+
+#MainHeroPickScreenContents
 {
 	width: 100%;
 	margin-left: 80px;
 	margin-right: 200px;
 }
 
-.AspectRatio16x10 #HeroPickScreenContents
+.AspectRatio16x10 #MainHeroPickScreenContents
 {
 	margin-left: 0px;
 	margin-right: 103px;
 }
 
- .AspectRatio4x3 #HeroPickScreenContents, .AspectRatio5x4 #HeroPickScreenContents
+ .AspectRatio4x3 #MainHeroPickScreenContents
  {
 	 margin-left: 0px;
 	 margin-right: 92px;
@@ -440,9 +680,10 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	margin: 0px;
 	margin-left: 46px;
 	z-index: -1;
+	width: 100%;
 }
 
-.AspectRatio4x3 #HeroGrid, .AspectRatio5x4 #HeroGrid
+.AspectRatio4x3 #HeroGrid
 {
 	margin-left: 0px;
 }
@@ -461,19 +702,25 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	transition-timing-function: ease-in-out;	
 }
 
-.Hidden #BottomPanelsContainer
+.Hidden #PreMinimapContainer,
+.Hidden #GridTeamComp,
+.Hidden #BattlePassContainer
 {
 	transition-duration: 0s;
 }
 
-.BecomeActive #BottomPanelsContainer,
-.PreLoad #BottomPanelsContainer
+.BecomeActive #PreMinimapContainer,
+.PreLoad #PreMinimapContainer,
+.BecomeActive #GridTeamComp,
+.PreLoad #GridTeamComp,
+.BecomeActive #BattlePassContainer,
+.PreLoad #BattlePassContainer
 {
 	opacity: 0;
 	transition-duration: 1s;
 }
 
-.AspectRatio16x10 #BottomPanelsContainer, .AspectRatio4x3 #BottomPanelsContainer, .AspectRatio5x4 #BottomPanelsContainer
+.AspectRatio16x10 #BottomPanelsContainer, .AspectRatio4x3 #BottomPanelsContainer
 {
 	width: 100%;
 }
@@ -490,9 +737,20 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	transition-duration: 0.5s;
 }
 
+.IsAbilityDraft #BottomPanels
+{
+	margin-bottom: 8px;
+	margin-right: 710px;
+}
+
 .AspectRatio16x10 #BottomPanels
 {
 	margin-right: 103px;
+}
+
+.IsAbilityDraft.AspectRatio16x10 #BottomPanels
+{
+	margin-right: 700px;
 }
 
 .AspectRatio16x10 .StrategyVisible #BottomPanels
@@ -505,14 +763,9 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	margin-right: 12px;
 }
 
-.AspectRatio5x4 #BottomPanels
+.IsAbilityDraft.AspectRatio4x3 #BottomPanels
 {
-	margin-right: 92px;
-}
-
-.AspectRatio5x4 .StrategyVisible #BottomPanels
-{
-	transform: translateX( 85px );
+	margin-right: 510px;
 }
 
 #PreMinimapContainer
@@ -530,7 +783,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	margin-left: -36px;
 }
 
-.AspectRatio4x3 #PreMinimapContainer, .AspectRatio5x4 #PreMinimapContainer
+.AspectRatio4x3 #PreMinimapContainer
 {
 	margin-left: -60px;
 }
@@ -584,16 +837,6 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	width: 418px;
 }
 
-.AspectRatio5x4 #Chat
-{
-	width: 546px;
-}
-
-.AspectRatio5x4 .StrategyVisible #Chat
-{
-	width: 440px;
-}
-
 .SwitchScreenButton
 {
 	vertical-align: middle;
@@ -627,6 +870,11 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-delay: 0.8s;
+}
+
+.CaptainsModeHeroPicking #HeroPickViewStrategy
+{
+	visibility: collapse;
 }
 
 .HasSelectedHero #HeroPickViewStrategy
@@ -678,7 +926,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	z-index: -1;
 }
 
-.AspectRatio5x4 #HeroFilters, .AspectRatio4x3 #HeroFilters
+.AspectRatio4x3 #HeroFilters
 {
 	margin-left: 0px;
 	margin-right: 60px;
@@ -698,7 +946,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	padding-right: 90px;
 }
 
-.AspectRatio4x3 #TitlesContainer, .AspectRatio5x4 #TitlesContainer
+.AspectRatio4x3 #TitlesContainer
 {
 	padding-left: 32px;
 	padding-right: 85px;
@@ -710,6 +958,16 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	flow-children: down;
 	width: 100%;
 	margin-right: 300px;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.8s;
+	transition-delay: 3.0s;
+}
+
+.IsCaptainsModePickPhase #HeroPickLeftColumn
+{
+	opacity: 0.0;
+	transform: translateX( -100px );
 }
 
 #HeroPickRightColumn
@@ -730,6 +988,17 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	opacity: 0;
 }
 
+.IsCaptainsModeSelectPhase #HeroPickRightColumn
+{
+	transition-delay: 3.0s;
+}
+
+.IsCaptainsModePickPhase #HeroPickRightColumn
+{
+	opacity: 0.0;
+	transform: translateX( 100px );
+}
+
 #HeroInspect
 {
 	height: 618px;
@@ -738,6 +1007,26 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	width: 100%;
 }
 
+.CaptainsModeHeroPicking #HeroInspect
+{
+	visibility: collapse;
+}
+
+#CaptainsModePicksBans
+{
+	height: 645px;
+	vertical-align: top;
+	width: 100%;
+
+	visibility: collapse;
+}
+
+.CaptainsModeHeroPicking #CaptainsModePicksBans
+{
+	visibility: visible;
+}
+
+#HitBlocker,
 #HeroPickControls
 {
 	vertical-align: bottom;
@@ -777,9 +1066,29 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 
 .PickButton .PickButtonTitle
 {
-	margin-top: 2px;
 	width: 100%;
-	font-size: 14px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	horizontal-align: right;
+	margin-top: -2px;
+}
+
+.PickButton .CaptainsModeButtonDetails .PickButtonTitle
+{
+	text-shadow: 0px 1px 4px 4.0 #000;
+	margin-top: 6px;
+	width: fit-children;
+}
+
+.IsCoach .PickButton .PickButtonTitle,
+.PickButton .PickButtonTitleCoach
+{
+    visibility: collapse;
+}
+
+.IsCoach .PickButton .PickButtonTitleCoach
+{
+    visibility: visible;
 }
 
 .PickButton .PickButtonHeroNameNone,
@@ -788,7 +1097,27 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	width: 100%;
 	font-size: 36px;
 	text-overflow: shrink;
+	max-width: 256px;
+	color: white;
+	margin-top: -2px;
+	height: 48px;
 }
+
+.Language_english .PickButton .PickButtonHeroNameNone,
+.Language_english .PickButton .PickButtonHeroName
+{
+	margin-top: -8px;
+}
+
+.PickButton .CaptainsModeButtonDetails .PickButtonHeroNameNone,
+.PickButton .CaptainsModeButtonDetails .PickButtonHeroName
+{
+	text-shadow: 0px 1px 4px 4.0 #000;
+	text-align: right;
+	width: fit-children;
+	max-width: 352px;		
+}
+
 
 .InspectingHero .PickButtonHeroNameNone,
 .PickButtonHeroName
@@ -805,9 +1134,14 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 {
 	flow-children: down;
 	width: fill-parent-flow( 1.0 );
-
+	overflow: clip;
 	saturation: 0.0;
 	brightness: 0.2;
+}
+
+#LockInButton.Activated
+{
+	sound: "ui.pick_play";
 }
 
 .LocalPlayerInControl.InspectingHero.InspectedHeroAvailableToPick #LockInButton
@@ -846,6 +1180,13 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	brightness: 0.2;
 }
 
+#RandomButton.Activated,
+#ReRandomButton.Activated,
+#EnterGameReRandomButton.Activated
+{
+	sound: "ui.pick_play";
+}
+
 .LocalPlayerInControl.RandomingEnabled #RandomButton
 {
 	saturation: 1.0;
@@ -859,6 +1200,11 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 .LocalPlayerInControl.RandomingEnabled #RandomButton:active
 {
 	brightness: 1.5;
+}
+
+.IsCoach #RandomButton
+{
+    visibility: collapse;
 }
 
 
@@ -1004,7 +1350,6 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 {
 	width: 100%;
 	height: 100%;
-	margin-top: 77px;
 	horizontal-align: center;
 	vertical-align: middle;
 	background-color: #1C232Cdd;
@@ -1019,7 +1364,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	opacity: 0;
 }
 
-.InspectedHeroBanned #AlreadyBanned
+.InspectedHeroBanned:not(.CaptainsModeHeroPicking) #AlreadyBanned
 {
 	opacity: 1;
 }
@@ -1130,6 +1475,324 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	visibility: visible;
 }
 
+.CaptainsModeHeroPicking #LockInButton,
+.CaptainsModeHeroPicking #RandomButton
+{
+	visibility: collapse;
+}
+
+#CaptainsModeSelectButton
+{
+	width: 100%;
+	flow-children: none;
+
+	saturation: 0.0;
+	brightness: 0.2;
+	padding: 0px;
+	overflow: clip;
+	visibility: collapse;
+}
+
+#CaptainsModeSelectButton.Activated
+{
+	sound: "ui.pick_captains";
+}
+
+#CaptainsModeBanButtonHeroIcon,
+#CaptainsModeSelectButtonHeroIcon
+{
+	vertical-align: middle;
+
+	width: 178px;
+	height: 100px;
+	opacity-mask: url("s2r://panorama/images/masks/gradient_leftright_opaque_psd.vtex");
+}
+
+#CaptainsModeBanButtonHeroIcon
+{
+	wash-color: #c44;
+	
+}
+
+.CaptainsModeHeroPicking.LocalPlayerIsCaptain.NextCaptainActionIsSelect #CaptainsModeSelectButton
+{
+	visibility: visible;
+}
+
+#CaptainsModeBecomeCaptainButton
+{
+	width: 100%;
+	visibility: collapse;
+}
+
+#CaptainsModeBecomeCaptainButton.Activated
+{
+	sound: "ui.pick_captains";
+}
+
+.CaptainsModeHeroPicking.LocalTeamNeedsCaptain #CaptainsModeBecomeCaptainButton
+{
+	visibility: visible;
+}
+
+#CaptainsModeBecomeCaptainButton > Panel
+{
+	vertical-align: middle;
+	margin-top: 2px;
+}
+
+#CaptainsModeBecomeCaptainButtonContents
+{
+	flow-children: right;
+	horizontal-align: center;
+	vertical-align: middle;
+	margin-top: 4px;
+}
+
+.BecomeCaptainIcon
+{
+	width: 40px;
+	height: 32px;
+
+	vertical-align: middle;
+	margin-bottom: 4px;
+	margin-right: 8px;
+
+	wash-color: #ccc;
+
+	background-image: url("s2r://panorama/images/status_icons/captain_overlay_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+}
+
+#CaptainsModeBecomeCaptainButton Label
+{
+	font-size: 28px;
+}
+
+#CaptainsModeBanButton
+{
+	width: 100%;
+	flow-children: none;
+	overflow: clip;
+
+	saturation: 0.0;
+	brightness: 0.2;
+	padding: 0px;
+
+	visibility: collapse;
+}
+
+#CaptainsModeBanButton.Activated
+{
+	sound: "ui.ban_captains";
+}
+
+.CaptainsModeHeroPicking.LocalPlayerIsCaptain.NextCaptainActionIsBan #CaptainsModeBanButton
+{
+	visibility: visible;
+}
+
+.InspectingHero.InspectedHeroAvailableToPick.LocalTeamIsActive #CaptainsModeBanButton,
+.InspectingHero.InspectedHeroAvailableToPick.LocalTeamIsActive #CaptainsModeSelectButton
+{
+	saturation: 1.0;
+	brightness: 1.0;
+}
+
+#HitBlocker
+{
+	z-index: 5;
+	visibility: collapse;
+}
+
+.CaptainsModeHeroPicking.InspectingHero.InspectedHeroAvailableToPick.LocalPlayerIsCaptain:not(.LocalTeamIsActive) #HitBlocker
+{
+	visibility: visible;
+}
+
+.CaptainsModeHeroPicking.LocalTeamNeedsCaptain.InspectingHero.InspectedHeroAvailableToPick #HitBlocker,
+.CaptainsModeHeroPicking.LocalTeamNeedsCaptain #HitBlocker
+{
+	visibility: collapse;
+}
+
+.InspectingHero.InspectedHeroAvailableToPick.LocalTeamIsActive #CaptainsModeBanButton:hover,
+.InspectingHero.InspectedHeroAvailableToPick.LocalTeamIsActive #CaptainsModeSelectButton:hover
+{
+	brightness: 2.0;
+}
+.InspectingHero.InspectedHeroAvailableToPick.LocalTeamIsActive #CaptainsModeBanButton:active,
+.InspectingHero.InspectedHeroAvailableToPick.LocalTeamIsActive #CaptainsModeSelectButton:hover
+{
+	brightness: 1.5;
+}
+
+.BanButtonIcon
+{
+	width: 44px;
+	height: 44px;
+
+	vertical-align: middle;
+	margin-right: 12px;
+}
+
+#CaptainsModeBanButton .BanButtonIcon
+{
+	z-index: 0;
+	height: 96px;
+	width: 96px;
+	horizontal-align: left;
+	opacity: 1;
+	transform: translateX(32px);
+	wash-color: #666;
+	saturation: .8;
+	visibility: collapse;
+
+}
+
+#BanButtonGradient
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #500f ), to( #5000 ) );	
+	z-index: -3;
+}
+
+.BanButtonIcon > .BanButtonIconBackground,
+.BanButtonIcon > .BanButtonIconForeground
+{
+	width: 100%;
+	height: 100%;
+
+	wash-color: #f00;
+
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.BanButtonIcon > .BanButtonIconBackground {	background-image: url("s2r://panorama/images/hud/reborn/ban_outer_psd.vtex"); }
+.BanButtonIcon > .BanButtonIconForeground {	background-image: url("s2r://panorama/images/hud/reborn/ban_bar_psd.vtex"); }
+
+.BanButtonIcon DOTAHeroImage
+{
+	vertical-align: middle;
+	horizontal-align: center;
+
+	width: 32px;
+	height: 32px;
+
+	wash-color: #f99;
+}
+
+#CaptainsModeSuggest
+{
+	height: 100%;
+	width: 100%;
+	flow-children: right;
+	background-color: black;
+
+	visibility: collapse;
+}
+
+.CaptainsModeHeroPicking.IsCaptainsModeBanPhase.InspectingHero.InspectedHeroAvailableToPick:not(.LocalPlayerIsCaptain) #CaptainsModeSuggest,
+.CaptainsModeHeroPicking.IsCaptainsModeSelectPhase.InspectingHero.InspectedHeroAvailableToPick:not(.LocalPlayerIsCaptain) #CaptainsModeSuggest
+{
+	visibility: visible;
+}
+
+.CaptainsModeButtonDetails
+{
+	width: fit-children;
+	flow-children: down;
+	horizontal-align: right;
+	margin-right: 8px;
+}
+
+.CaptainsModeSuggestButton
+{
+	width: fill-parent-flow( 1.0 );
+	flow-children: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #1C1D28;
+}
+
+.CaptainsModeSuggestButton:hover
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #404D65dd ), to( #2B3445dd ) );
+}
+
+.CaptainsModeSuggestButton DOTAHeroImage,
+.CaptainsModeSuggestButton .BanButtonIcon
+{
+	horizontal-align: center;
+}
+
+.CaptainsModeSuggestButton > Label
+{
+	horizontal-align: center;
+	horizontal-align: right;
+	margin-right: 6px;
+	vertical-align: bottom;
+	text-align: center;
+	text-shadow: 0px 0px 6px 4.0 #000;
+}
+
+.CaptainsModeSuggestButton DOTAHeroImage
+{
+	width: 128px;
+	height: 100%;
+	z-index: -2;
+	horizontal-align: left;
+	opacity-mask: url("s2r://panorama/images/masks/gradient_leftright_png.vtex");
+	saturation: 1;
+	//wash-color: #aaa;
+}
+
+#CaptainsModeSuggestBanButton DOTAHeroImage
+{
+	wash-color: #c44;
+	horizontal-align: left;
+	//opacity-mask: url("s2r://panorama/images/masks/gradient_rightleft_png.vtex");
+}
+
+#CaptainsModeSuggestPickButton DOTAHeroImage
+{
+
+}
+
+.CaptainsModeSuggestButton .BanButtonIcon
+{
+	width: 32px;
+	height: 32px;
+	margin-right: 6px;
+	margin-bottom: 18px;
+	horizontal-align: right;
+	z-index: -3;
+	opacity: .4;
+}
+
+#CaptainsModeSuggestPickButton
+{
+	margin-right: 4px;
+}
+
+#CaptainsModeSuggestPickButton.Activated
+{
+	sound: "ui.tick";
+}
+
+#CaptainsModeSuggestBanButton
+{
+	margin-left: 4px;
+}
+
+#CaptainsModeSuggestBanButton.Activated
+{
+	sound: "ui.untick";
+}
 
 #StrategyScreen
 {
@@ -1157,7 +1820,10 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 .StrategyVisible.MapLoadingOutro #BacktoHeroGrid, .StrategyVisible.StrategyVersusTransition #BacktoHeroGrid, .StrategyVisible.MapLoading #BacktoHeroGrid,
 .MapLoadingOutro #SwitchScreenButton, .StrategyVersusTransition .SwitchScreenButton, .MapLoading .SwitchScreenButton,
 .MapLoadingOutro #MainContents, .StrategyVersusTransition #MainContents, .MapLoading #MainContents,
-.MapLoadingOutro #HeaderRanked, .StrategyVersusTransition #HeaderRanked, .MapLoading #HeaderRanked
+.MapLoadingOutro #HeaderRanked, .StrategyVersusTransition #HeaderRanked, .MapLoading #HeaderRanked,
+.MapLoadingOutro #HeaderCaptainsMode, .StrategyVersusTransition #HeaderCaptainsMode, .MapLoading #HeaderCaptainsMode,
+.MapLoadingOutro #QuestPickerHolder.Visible, .StrategyVersusTransition #QuestPickerHolder.Visible, .MapLoading #QuestPickerHolder.Visible
+.MapLoadingOutro #AbilityDraft, .StrategyVersusTransition #AbilityDraft, .MapLoading #AbilityDraft,
 {
 	opacity: 0;
 }
@@ -1182,7 +1848,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	transition-timing-function: ease-in-out;	
 }
 
-.AspectRatio4x3 #HeroModel, .AspectRatio5x4 #HeroModel
+.AspectRatio4x3 #HeroModel
 {
 	transform: translateX( -200px );
 }
@@ -1215,6 +1881,12 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	background-image: url("s2r://panorama/images/control_icons/arrow_solid_left_png.vtex");
 }
 
+.IsCoach #BacktoHeroGrid,
+.CaptainsModeHeroPicking #BackToHeroGrid
+{
+    visibility: collapse;
+}
+
 #RightContainer
 {
 	width: 883px;
@@ -1232,12 +1904,6 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 .AspectRatio4x3 #RightContainer
 {
 	margin-right: 12px;
-	width: 766px;
-}
-
-.AspectRatio5x4 #RightContainer
-{
-	margin-right: 6px;
 	width: 766px;
 }
 
@@ -1261,7 +1927,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	margin-left: 44px;
 }
 
-.AspectRatio4x3 #SelectedHeroPrimaryAttribute, .AspectRatio5x4 #SelectedHeroPrimaryAttribute
+.AspectRatio4x3 #SelectedHeroPrimaryAttribute
 {
 	margin-left: 12px;
 }
@@ -1279,8 +1945,8 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	margin-left: 98px;
 }
 
-.AspectRatio4x3 #SelectedHeroDetails, .AspectRatio5x4 #SelectedHeroDetails,
-.AspectRatio4x3 #SelectedHeroAbilitiesHitTargets, .AspectRatio5x4 #SelectedHeroAbilitiesHitTargets
+.AspectRatio4x3 #SelectedHeroDetails,
+.AspectRatio4x3 #SelectedHeroAbilitiesHitTargets
 {
 	margin-left: 64px;
 }
@@ -1347,7 +2013,8 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	margin-left: 3px;
 }
 
-#SelectedHeroName
+#SelectedHeroName,
+#CoachName
 {
 	width: 684px;
 	height: 64px;
@@ -1361,6 +2028,16 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	text-shadow: 0px 0px 4px 3.0 #101010;
 }
 
+#CoachName,
+.IsCoach #SelectedHeroName
+{
+    visibility: collapse;
+}
+
+.IsCoach #CoachName
+{
+    visibility: visible;
+}
 
 .StrategyTabContents
 {
@@ -1452,12 +2129,6 @@ DOTAHudPreGame.Reconnect.PreGamePhase
 	height: 276px;
 }
 
-.AspectRatio5x4 #StrategyMinimap
-{
-	width: 240px;
-	height: 240px;
-}
-
 #StrategyMapControls
 {
 	margin-left: 12px;
@@ -1490,7 +2161,7 @@ DOTAHudPreGame.Reconnect.PreGamePhase
     letter-spacing: 2px;
 }
 
-.AspectRatio4x3 .StrategyControlTitle, .AspectRatio5x4 .StrategyControlTitle
+.AspectRatio4x3 .StrategyControlTitle
 {
 	letter-spacing: 0px;
 }
@@ -1613,6 +2284,13 @@ DOTAHeroPickingHeroIcon.Dragging
 	color: white;
 }
 
+.IsCoach #LoadoutTabButton,
+.IsCoach #GuidesTabButton,
+.IsCoach .StrategyPhaseTabSeparator
+{
+	visibility: collapse;
+}
+
 .StrategyPhaseTabSeparator
 {
     margin: 0px 19px;
@@ -1643,7 +2321,7 @@ DOTAHeroPickingHeroIcon.Dragging
 	margin-top: 6px;
 }
 
-.AspectRatio4x3 #DashboardButton, .AspectRatio5x4 #DashboardButton
+.AspectRatio4x3 #DashboardButton
 {
 	margin-left: 6px;
 	margin-top: 6px;
@@ -1657,11 +2335,64 @@ DOTAHeroPickingHeroIcon.Dragging
 	wash-color: #9999AA;
 }
 
+#DashboardButton:active,
+#SettingsButton:active
+{
+	wash-color: #898998;
+}
+
+
+.IsAbilityDraft #DashboardButton,
+.IsAbilityDraft #SettingsButton
+{
+	wash-color: #A5E5E5;
+	opacity: .3;
+}
+
+.IsAbilityDraft #DashboardButton:hover,
+.IsAbilityDraft #SettingsButton:hover
+{
+	wash-color: #A5E5E5;
+	opacity: 1;
+}
+
+.IsAbilityDraft #DashboardButton:active,
+.IsAbilityDraft #SettingsButton:active
+{
+	wash-color: #000;
+}
+
+
 .VersusOutro #DashboardButton,
 .VersusOutro #SettingsButton
 {
 	opacity: 0.0;
 }
+
+.LocalPlayerIsSpectating.VersusOutro #DashboardButton,
+.LocalPlayerIsSpectating.VersusOutro #SettingsButton
+{
+	opacity: 1.0;
+}
+
+.LocalPlayerIsSpectating.PreGamePhase #DashboardButton,
+.LocalPlayerIsSpectating.PreGamePhase #SettingsButton
+{
+	wash-color: #ccc;
+}
+
+.LocalPlayerIsSpectating.PreGamePhase #DashboardButton:hover,
+.LocalPlayerIsSpectating.PreGamePhase #SettingsButton:hover
+{
+	wash-color: #fff;
+}
+
+.LocalPlayerIsSpectating.PreGamePhase #DashboardButton:active,
+.LocalPlayerIsSpectating.PreGamePhase #SettingsButton:active
+{
+	wash-color: #d0d0d0;
+}
+
 
 #SettingsButton
 {
@@ -1690,14 +2421,6 @@ DOTAHeroPickingHeroIcon.Dragging
 {
 	margin-left: 36px;
 	margin-top: 8px;
-	width: 24px;
-	height: 24px;
-}
-
-.AspectRatio5x4 #SettingsButton
-{
-	margin-left: 8px;
-	margin-top: 36px;
 	width: 24px;
 	height: 24px;
 }
@@ -1732,7 +2455,7 @@ DOTAHeroPickingHeroIcon.Dragging
 	transition-timing-function: ease-in-out;
 }
 
-.AspectRatio4x3 .EnterGameButton, .AspectRatio5x4 .EnterGameButton
+.AspectRatio4x3 .EnterGameButton
 {
 	margin-left: 10px;
 }
@@ -1785,6 +2508,11 @@ DOTAHeroPickingHeroIcon.Dragging
 	text-shadow: 1px 1px 3px 2 black;
 }
 
+#SkipIntoGame.Activated
+{
+	sound: "ui.click_forward";
+}
+
 .SkipIcon
 {
 	background-image: url("s2r://panorama/images/control_icons/double_arrow_right_png.vtex");
@@ -1792,6 +2520,13 @@ DOTAHeroPickingHeroIcon.Dragging
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+#RepickButton.Activated,
+#EnterGameRepickButton.Activated
+{
+	sound: "ui.pick_repick";
+}
+
 
 #EnterGameRepickButton:hover .RepickIcon,
 #RepickButton:hover .RepickIcon
@@ -1816,13 +2551,14 @@ DOTAHeroPickingHeroIcon.Dragging
 	pre-transform-scale2d: 4;
 	blur: gaussian (2);
 	wash-color: #33336666;	
-	opacity: 0;
+	opacity: 0.01;
 	
 	transition-property: opacity, wash-color;
 	transition-duration: 1s;
 	transition-delay: 0.8s;
 	transition-timing-function: ease-in-out;
 }
+
 
 .ConnectionFailure #PregameBG
 {
@@ -1850,33 +2586,38 @@ DOTAHeroPickingHeroIcon.Dragging
 	transition-duration: 2s;
 }
 
-
 #TeamPurchasesStrategyControl
 {
-	width: 263px;
+	width: fit-children;
+	min-width: 300px;
+	margin-left: 20px;
 }
 
-.AspectRatio4x3 #TeamPurchasesStrategyControl, .AspectRatio5x4 #TeamPurchasesStrategyControl
+.AspectRatio4x3 #TeamPurchasesStrategyControl
 {
-	width: 170px;
-
+	margin-left: 6px;
 }
-
 
 #TeamPurchases
 {
 	flow-children: right;
+	margin-right: -4px;
 }
 
 DOTAPreGameTeamItem
 {
-	margin-right: 9px;
+	margin-right: 4px;
 	flow-children: down;
 }
 
-.TeamItemLast
+DOTAPreGameTeamItem.OptionalTeamPurchase
 {
-	margin-right: 0px;
+	visibility: collapse;
+}
+
+DOTAPreGameTeamItem.OptionalTeamPurchase.HasPurchasedHero
+{
+	visibility: visible;
 }
 
 DOTAPreGameTeamItem > DOTAShopItem,
@@ -1962,13 +2703,18 @@ DOTAPreGameTeamItem > #HeroImage
 
 #StartingItemsGuideStrategyControl
 {
-	width: fill-parent-flow( 1.0 );
+	width: fit-children;
+}
+
+#StartingItemsGuideStrategyControl .StrategyControlHeader
+{
+	width: fit-children;
 }
 
 #StartingItemsGuide
 {
 	flow-children: right-wrap;
-	width: 300px;
+	width: 190px;
 	min-height: 70px;
 }
 
@@ -2003,7 +2749,7 @@ DOTAPreGameTeamItem > #HeroImage
 	width: 600px;
 }
 
-.AspectRatio4x3 #StartingItemsOtherOptions, .AspectRatio5x4 #StartingItemsOtherOptions
+.AspectRatio4x3 #StartingItemsOtherOptions
 {
 	width: 440px;
 }
@@ -2059,6 +2805,14 @@ DOTAPreGameInventoryItem
 
 	height: 46px;
 	width: 62px;
+
+	transition-property: brightness;
+	transition-duration: 0.2s;
+}
+
+DOTAPreGameInventoryItem.DragOverInventoryItem
+{
+	brightness: 2.0;
 }
 
 #StartingItemsBackpackRow
@@ -2121,6 +2875,12 @@ DOTAPreGameInventoryItem.ShowCharges #Charges
 	width: 340px;
 }
 
+.IsAbilityDraft #BattlePassContainer
+{
+	visibility: collapse;
+}
+
+
 .BattlePassNote
 {
     vertical-align: middle;
@@ -2165,7 +2925,7 @@ DOTAHudPreGame:not(.GameEventActive) #BattlePassNotActive
 	letter-spacing: 2px;
 }
 
-.AspectRatio5x4 #QuestsTitle, .AspectRatio4x3 #QuestsTitle
+.AspectRatio4x3 #QuestsTitle
 {
 	letter-spacing: 1px;
 }
@@ -2246,6 +3006,12 @@ DOTAHudPreGame:not(.GameEventActive) #BattlePassNotActive
 	
 	/* Fall 2016 */
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #334e2566 ), to( #334e2500 ) );
+	
+	/* Winter 2017 */
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1c2c50cc ), to( #1c2c5000 ) );
+	
+	/* TI7 */
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( bp_color1&ff ), to( bp_color1&00 ) );
 }
 
 #CurrentQuestDescription
@@ -2278,6 +3044,9 @@ DOTAHudPreGame:not(.GameEventActive) #BattlePassNotActive
 	transition-duration: 0.2s;
 }
 
+.AspectRatio16x10 #QuestPickerHolder { margin-right: 18px; }
+.AspectRatio4x3 #QuestPickerHolder { margin-right: 12px; }
+
 #QuestPickerHolder.Visible
 {
 	opacity: 1.0;
@@ -2305,12 +3074,6 @@ DOTAHudPreGame:not(.GameEventActive) #BattlePassNotActive
 .AspectRatio4x3 #GridTeamComp
 {
 	width: 330px;
-}
-
-.AspectRatio5x4 #GridTeamComp
-{
-	/* No room :( */
-	visibility: collapse;
 }
 
 DOTAHeroPickingTeamComposition
@@ -2353,7 +3116,7 @@ DOTAHeroPickingTeamComposition
 	width: 100%;
 	flow-children: right;
     background-color: #0009;
-    padding: 12px 12px 4px 12px;
+    padding: 12px 12px 2px 12px;
 }
 
 #GlobalLoadoutItems
@@ -2361,7 +3124,7 @@ DOTAHeroPickingTeamComposition
     width: 100%;
     flow-children: right;
     background-color: #0009;
-    padding: 12px 12px 2px 12px;
+    padding: 12px 12px 0px 12px;
     flow-children: right-wrap;
     height: 334px;
 }
@@ -2402,8 +3165,9 @@ DOTAHeroPickingTeamComposition
 {
 	width: 180px;
 	height: 276px;
-	margin-right: 10px;
+	margin-right: 28px;
 }
+
 #HeroLoadoutSetPicker > Label
 {
 	font-size: 24px;
@@ -2432,7 +3196,7 @@ DOTAHeroPickingTeamComposition
 	margin-right: 60px;
 }
 
-.AspectRatio4x3 .GlobalLoadoutSlotCategory, .AspectRatio5x4 .GlobalLoadoutSlotCategory
+.AspectRatio4x3 .GlobalLoadoutSlotCategory
 {
 	margin-right: 8px;
 }
@@ -2468,12 +3232,6 @@ DOTAHeroSlotItemPicker
 	width: 665px;
 }
 
-.AspectRatio5x4 #AvailableItemsContainer
-{
-	margin-left: 0px;
-	width: 530px;
-}
-
 .StrategyVisible #AvailableItemsContainer
 {
 	opacity: 1;
@@ -2485,16 +3243,16 @@ DOTAHeroSlotItemPicker
 	visibility: collapse;
 }
 
+.IsAbilityDraft #AvailableItemsContainer
+{
+	visibility: collapse;
+}
+
 #AvailableItems
 {
 	horizontal-align: center;
 	width: 640px;
 	flow-children: down;
-}
-
-.AspectRatio5x4 #AvailableItems
-{
-	width: 486px;
 }
 
 #AvailableItemsFooter
@@ -2523,12 +3281,6 @@ DOTAHeroSlotItemPicker
 {
 	width: 160px;
 	height: 100px;
-}
-
-.AspectRatio5x4 .AvailableEconItem
-{
-	width: 120px;
-	height: 79px;
 }
 
 .AvailableEconItem #AvailableItemOverlay,
@@ -2590,9 +3342,9 @@ DOTAHeroSlotItemPicker
 	letter-spacing: 2px;
 }
 
-.AspectRatio5x4 #AvailableItemsTitle
+.IsCoach #AvailableItemsTitle
 {
-	letter-spacing: 1px;
+    visibility: collapse;
 }
 
 #GuidesPlaceholder
@@ -2690,6 +3442,7 @@ DOTAHeroSlotItemPicker
     opacity: 0;	
 }
 
+
 #VersusBackground
 {
 	height: 100%;
@@ -2724,6 +3477,10 @@ DOTAHeroSlotItemPicker
 	//visibility: collapse;
 	width: 100%;
 	height: 100%;
+	
+	transition-property: transform, opacity;
+	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
 	
 	animation-name: none;
 	
@@ -2777,16 +3534,19 @@ DOTAHeroSlotItemPicker
 	transition-timing-function: ease-out;	
 }
 
+.TowerShowcase .TeamSection,
 .VersusOutro .TeamSection
 {
 	opacity: 0;
 }
 
+.TowerShowcase #DireTeamSection,
 .VersusOutro #DireTeamSection
 {
 	transform: translateX(600px);
 }
 
+.TowerShowcase #RadiantTeamSection,
 .VersusOutro #RadiantTeamSection
 {
 	transform: translateX(-600px);
@@ -2964,11 +3724,6 @@ DOTAHeroSlotItemPicker
 .AspectRatio4x3 .HeroVSContainer 
 {
 	width: 250px;
-}
-
-.AspectRatio5x4 .HeroVSContainer
-{
-	width: 230px;
 }
 
 /*
@@ -3468,7 +4223,8 @@ DOTAHeroSlotItemPicker
 
 .IsInBanPhase #HeroSelectionText,
 .DirePicking #HeroSelectionText,
-.RadiantPicking #HeroSelectionText
+.RadiantPicking #HeroSelectionText,
+.IsCaptainsModePickPhase #HeroSelectionText
 {
 	opacity: 1;
 	
@@ -3848,10 +4604,6 @@ DOTAHeroSlotItemPicker
 {
 	width: 290px;
 }
-.AspectRatio5x4 .PlayerInfoContainer
-{
-	width: 270px;
-}
 
 .BattlePassLevel,
 .PlayerName
@@ -3859,8 +4611,6 @@ DOTAHeroSlotItemPicker
 	z-index: 1;
 	text-overflow: shrink;
 	text-align: left;
-	margin-left: 102px;
-	width: 168px;
 	height: 32px;
 	vertical-align: middle;
 	text-align: left;
@@ -3870,11 +4620,31 @@ DOTAHeroSlotItemPicker
 	letter-spacing: 0px;
 }
 
+.BattlePassLevel,
+#PlayerNameContainer
+{
+	margin-left: 100px;
+	width: 168px;
+}
+
+#PlayerNameContainer
+{
+	flow-children: right;
+	vertical-align: middle;
+	margin-top: 2px;
+}
 
 #BattlePassInfo
 {
 	flow-children: right;
 	visibility: collapse;
+}
+
+#BattleCupVictoryIcon
+{
+	vertical-align: middle;
+	margin-bottom: 6px;
+	margin-right: 3px;
 }
 
 DOTAHudHeroPickingVersusPlayer.HasBattlePass #BattlePassInfo
@@ -3891,7 +4661,7 @@ DOTAHudHeroPickingVersusPlayer.HasBattlePass #BattlePassInfo
 	margin-top: 28px;
 }
 
-DOTAHudHeroPickingVersusPlayer.HasBattlePass .PlayerName
+DOTAHudHeroPickingVersusPlayer.HasBattlePass #PlayerNameContainer
 {
 	margin-top: 0px;
 	margin-bottom: 16px;
@@ -3900,11 +4670,19 @@ DOTAHudHeroPickingVersusPlayer.HasBattlePass .PlayerName
 .BattlePassLevel
 {
 	visibility: collapse;
-	color: #388125;
 	margin-bottom: 0px;
 	font-size: 16px;
 	margin-top: 30px;
 	margin-left: 0px;
+	
+	/* Fall 2016 */
+	color: #388125;
+	
+	/* Winter 2017 */
+	color: #297cb7;
+	
+	/* TI7 */
+	color: bp_battlePassLogoColor;
 }
 
 DOTAHudHeroPickingVersusPlayer.HasBattlePass .BattlePassLevel
@@ -3952,11 +4730,6 @@ DOTAHudHeroPickingVersusPlayer.HasBattlePass .BattlePassLevel
 	transform: rotateZ(-90deg) translateY(506px) translateX(199px);
 }
 
-.AspectRatio5x4 .HeroName
-{
-	transform: rotateZ(-90deg) translateY(514px) translateX(179px);
-}
-
 
 #DireTeamSection .HeroName
 {
@@ -3974,10 +4747,6 @@ DOTAHudHeroPickingVersusPlayer.HasBattlePass .BattlePassLevel
 .AspectRatio4x3 #DireTeamSection .HeroName
 {
 	transform: rotateZ(90deg) translateY(506px) translateX(-199px);
-}
-.AspectRatio5x4 #DireTeamSection .HeroName
-{
-	transform: rotateZ(90deg) translateY(514px) translateX(-179px);
 }
 
 DOTAHudHeroPickingVersusPlayer #AvatarImage
@@ -3997,10 +4766,6 @@ DOTAHudHeroPickingVersusPlayer #AvatarImage
 {
 	margin-bottom: 75px;
 }
-.AspectRatio5x4 #AvatarImage
-{
-	margin-bottom: 79px;
-}
 
 #DireTeamSection DOTAHudHeroPickingVersusPlayer #AvatarImage
 {
@@ -4012,11 +4777,6 @@ DOTAHudHeroPickingVersusPlayer #AvatarImage
 {
 	margin-bottom: 132px;
 }
-.AspectRatio5x4 #DireTeamSection DOTAHudHeroPickingVersusPlayer #AvatarImage
-{
-	margin-bottom: 128px;
-}
-
 
 .MaskContainer
 {
@@ -4202,7 +4962,7 @@ DOTAHudPreGame.MapLoadingOutro
 	opacity: 0;
 }
 
-.DOTA_GAMEMODE_NONE.LocalPlayerNeedsTeam #TeamPicker,
+.DOTA_GAMEMODE_NONE .LocalPlayerNeedsTeam #TeamPicker,
 .WaitingForPlayers.LocalPlayerNeedsTeam #TeamPicker
 {
 	opacity: 1.0;
@@ -4415,7 +5175,11 @@ DOTAHudPreGame.MapLoadingOutro
 {
 	width: 100%;
 	height: 100%;
+}
 
+.EventGame #PreConnectContainer
+{
+    visibility: collapse;
 }
 
 #PreLoadingRootBackground
@@ -4521,11 +5285,6 @@ DOTAHudPreGame.MapLoadingOutro
 .AspectRatio4x3 .TransitionBox
 { 
 	background-size: 1440px 1080px;
-}
-
-.AspectRatio5x4 .TransitionBox
-{ 
-	background-size: 1350px 1080px;
 }
 
 #a1 { background-position: 0% 0%;	  transition-delay: 1.0s; transform: rotateZ( 0deg ) rotateX( 0deg ) rotateY( 0deg );}
@@ -4743,4 +5502,303 @@ DOTAHudHeroPickingPlayer.Slot4, DOTAHudHeroPickingPlayer.Slot5 { transition-dela
 	opacity: 1;
 	pre-transform-scale2d: 1;
 	wash-color: white;
+}
+
+
+#CaptainsModeHeroPickScreenContents
+{
+	width: 100%;
+	overflow: noclip;
+
+	opacity: 0.0;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.8s;
+	transition-delay: 4.0s;
+}
+
+.IsCaptainsModePickPhase #CaptainsModeHeroPickScreenContents
+{
+	opacity: 1.0;
+	transition-delay: 0.0s;
+}
+
+.StrategyVisible #CaptainsModeHeroPickScreenContents
+{
+	transform: translateX( -1800px );
+}
+
+#CaptainsModeHeroPickModels
+{
+	horizontal-align: center;
+	transform: translateY( -80px );
+}
+
+#CaptainsModeHeroPickModels > DOTAScenePanel
+{
+	width: 600px;
+	height: 800px;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_png.vtex");
+}
+
+#CaptainsModeHeroPickModel1 { margin-left: 0px;    z-index: 1; }
+#CaptainsModeHeroPickModel2 { margin-left: 355px;  z-index: 2; }
+#CaptainsModeHeroPickModel3 { margin-left: 710px;  z-index: 3; }
+#CaptainsModeHeroPickModel4 { margin-left: 1065px; z-index: 2; }
+#CaptainsModeHeroPickModel5 { margin-left: 1420px; z-index: 1; }
+
+.AspectRatio4x3 #CaptainsModeHeroPickModels > DOTAScenePanel
+{
+	width: 500px;
+}
+.AspectRatio16x10 #CaptainsModeHeroPickModel1 { margin-left: 0px;    }
+.AspectRatio16x10 #CaptainsModeHeroPickModel2 { margin-left: 300px;  }
+.AspectRatio16x10 #CaptainsModeHeroPickModel3 { margin-left: 600px;  }
+.AspectRatio16x10 #CaptainsModeHeroPickModel4 { margin-left: 900px;  }
+.AspectRatio16x10 #CaptainsModeHeroPickModel5 { margin-left: 1200px; }
+
+.AspectRatio4x3 #CaptainsModeHeroPickModels > DOTAScenePanel
+{
+	width: 400px;
+}
+.AspectRatio4x3 #CaptainsModeHeroPickModel1 { margin-left: 0px;    }
+.AspectRatio4x3 #CaptainsModeHeroPickModel2 { margin-left: 260px;  }
+.AspectRatio4x3 #CaptainsModeHeroPickModel3 { margin-left: 520px;  }
+.AspectRatio4x3 #CaptainsModeHeroPickModel4 { margin-left: 780px;  }
+.AspectRatio4x3 #CaptainsModeHeroPickModel5 { margin-left: 1040px; }
+
+
+#CaptainsModeHeroPickOptions
+{
+	horizontal-align: center;
+	flow-children: right;
+	margin-top: 580px;
+}
+
+.CaptainsModeHeroPickOption
+{
+	vertical-align: bottom;
+	flow-children: down;
+}
+
+
+DOTAHeroPickingCaptainsModeHeroPickOption
+{
+	width: 342px;
+	height: 70px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.AspectRatio16x10 DOTAHeroPickingCaptainsModeHeroPickOption
+{
+	width: 306px;
+}
+.AspectRatio4x3 DOTAHeroPickingCaptainsModeHeroPickOption
+{
+	width: 270px;
+}
+
+DOTAHeroPickingCaptainsModeHeroPickOption #CaptainsModeHeroPickButton
+{
+	width: 100%;
+	flow-children: down;
+
+	visibility: collapse;
+	padding: 0px;
+}
+
+DOTAHeroPickingCaptainsModeHeroPickOption .PickButtonHeroName
+{
+	visibility: visible;
+	horizontal-align: center;
+	text-align: center;
+}
+
+DOTAHeroPickingCaptainsModeHeroPickOption .PickButton .PickButtonTitle
+{
+	horizontal-align: center;
+	text-align: center;
+	margin-top: 6px;
+}
+
+.CaptainsModeHeroPickOptionInfoBlock
+{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	border: 2px solid #333;
+	box-shadow: #0000008f -6px -6px 12px 12px;
+}
+
+
+#CaptainsModeHeroPickedDetails
+{
+	flow-children: right;
+
+	visibility: collapse;
+}
+
+#CaptainsModeHeroPickAvatarImage
+{
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+.CaptainsModeHeroPickedDetailsText
+{
+	flow-children: down;
+	margin-left: 8px;
+	margin-top: 8px;
+}
+
+.CaptainsModeHeroPickedPlayerName
+{
+	color: #ccc;
+}
+
+.CaptainsModeHeroPickedHeroName
+{
+	font-weight: bold;
+	color: white;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#CaptainsModeHeroPickPending
+{
+	visibility: collapse;
+}
+
+#CaptainsModeHeroPickPendingContents
+{
+	vertical-align: middle;
+	horizontal-align: center;
+	flow-children: right;
+}
+
+#CaptainsModeHeroPickPendingContents Label
+{
+	color: #ccc;
+	margin-left: 8px;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+
+
+DOTAHeroPickingCaptainsModeHeroPickOption.AvailableToPick #CaptainsModeHeroPickButton,
+DOTAHeroPickingCaptainsModeHeroPickOption.PlayerLocked #CaptainsModeHeroPickedDetails,
+DOTAHeroPickingCaptainsModeHeroPickOption.PlayerPending #CaptainsModeHeroPickPending
+{
+	visibility: visible;
+}
+
+
+
+//--------------------------------
+// Tower showcase
+
+#BattlePassTowers
+{
+    opacity: 1.0;
+	transition-property: opacity;
+	transition-duration: 1.2s;
+}
+
+.TowerShowcase #BattlePassTowers
+{
+    opacity: 1.0;
+}
+
+.VersusOutro.TowerShowcase #BattlePassTowers
+{
+	opacity: 0;
+}
+
+.TowerShowcase #VersusFX
+{
+	transform: rotateZ(-90deg);
+}
+
+#AmbientFXContainer
+{
+	opacity: 1;
+	transition-property: transform, opacity;
+	transition-duration: 2s;
+	width: 100%;
+	height: 100%;
+}
+
+.TowerShowcase .TeamSection
+{
+	opacity: 0;
+}
+
+.TowerShowcase #MainLayout,
+.TowerShowcase #AmbientFXContainer
+{
+	transform: rotateZ(-90deg);
+	opacity: 0;
+}
+
+.TowerShowcase #AmbientFXContainer DOTAScenePanel
+{
+	hue-rotation: 0deg;
+}
+
+
+.TowerShowcaseVisible #RadiantAmbient
+{
+    //visibility: collapse;
+}
+
+.TowerShowcaseVisible #DireAmbient
+{
+    //visibility: collapse;
+}
+
+.TowerShowcaseVisible #MainLayout
+{
+    //visibility: collapse;
+}
+
+
+.LocalPlayerIsSpectating #PreMinimapContainer,
+.LocalPlayerIsSpectating #AvailableItemsContainer,
+.LocalPlayerIsSpectating #GridTeamComp,
+.LocalPlayerIsSpectating #BattlePassContainer,
+.LocalPlayerIsSpectating #Chat,
+.LocalPlayerIsSpectating #Header,
+.LocalPlayerIsSpectating #HeaderRanked,
+.LocalPlayerIsSpectating #HeaderCaptainsMode,
+.LocalPlayerIsSpectating #MainContents
+{
+	visibility: collapse;
+}
+.LocalPlayerIsSpectating.RequestedPreGameChat #Chat
+{
+	visibility: visible;
+}
+
+
+.LocalPlayerIsSpectating #BottomPanels
+{
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+.IsAbilityDraft .SwitchScreenButton,
+.IsAbilityDraft #PregameBG,
+.IsAbilityDraft #PreMinimapContainer,
+.IsAbilityDraft #AvailableItemsContainer,
+.IsAbilityDraft #GridTeamComp,
+.IsAbilityDraft #BattlePassContainer,
+.IsAbilityDraft #Header,
+.IsAbilityDraft #HeaderRanked,
+.IsAbilityDraft #HeaderCaptainsMode,
+.IsAbilityDraft #MainContents
+{
+	visibility: collapse;
 }

@@ -162,4 +162,34 @@
 			m_ChildRef = resource:"particles/econ/items/magnataur/seismic_berserker/seismic_berserker_weapon_horn.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_weaponfx"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/magnataur/seismic_berserker_weapon/seismic_berserker_weapon.vmdl"
+			}
+		},
+	]
 }

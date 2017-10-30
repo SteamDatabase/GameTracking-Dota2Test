@@ -15,7 +15,7 @@
 	<DOTABPWinter2016QuestsPage class="DashboardPage" hittest="false">
 		<Panel id="CampaignBody" class="CompendiumBody">
 			<Panel id="QuestLineArt" class="QuestlineBackgroundArt QuestLineActive"/>
-			<DOTAScenePanel id="BackgroundScene" hittest="false" camera="camera_1" map="scenes/campaign_ambient"/>
+			<DOTAScenePanel id="BackgroundScene" hittest="false" camera="camera_1" map="scenes/campaign_ambient" particleonly="true"/>
 			<Panel id="CampaignVignette" class="" hittest="false"/>			
 			<Panel id="CampaignPanelContainer">
 				<Panel id="CampaignPanel">
@@ -33,16 +33,16 @@
 								<Label id="Quest3Title" class="OverviewTitles TitleFont" text="#DOTA_Quest_Winter_2016_Carry_Title"/>
 							</Panel>
 							
-							<DOTAScenePanel id="Lich" class="RewardModel" map="scenes/questline_reward_lich" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false"  antialias="true">
+							<DOTAScenePanel id="Lich" class="RewardModel" map="scenes/questline_reward_lich" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false"  antialias="true" particleonly="false">
 								<Panel id="InspectIcon"/>
 							</DOTAScenePanel>
-							<DOTAScenePanel id="Lina" class="RewardModel" map="scenes/questline_reward_lina" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false"  antialias="true">
+							<DOTAScenePanel id="Lina" class="RewardModel" map="scenes/questline_reward_lina" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false"  antialias="true" particleonly="false">
 								<Panel id="InspectIcon"/>
 							</DOTAScenePanel>
-							<DOTAScenePanel id="Dragonknight" class="RewardModel" map="scenes/questline_reward_dk" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false" antialias="true">
+							<DOTAScenePanel id="Dragonknight" class="RewardModel" map="scenes/questline_reward_dk" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false" antialias="true" particleonly="false">
 								<Panel id="InspectIcon"/>
 							</DOTAScenePanel>
-							<DOTAScenePanel id="EmberSpirit" class="RewardModel" map="scenes/questline_reward_es" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false" antialias="true">
+							<DOTAScenePanel id="EmberSpirit" class="RewardModel" map="scenes/questline_reward_es" camera="hero_camera" light="hero_light" renderdeferred="false" hittest="false" antialias="true" particleonly="false">
 								<Panel id="InspectIcon"/>
 							</DOTAScenePanel>
 
@@ -215,7 +215,7 @@
 				</Panel>
 
 				<Button id="IntroToggle" onactivate="ToggleStyle( CampaignBody, ShowingIntroPanel )">	
-					<DOTAScenePanel id="StartFX" map="backgrounds/accept_popup_test" camera="shot_camera"/>
+					<DOTAScenePanel id="StartFX" map="backgrounds/accept_popup_test" camera="shot_camera" particleonly="true"/>
 					<Panel id="GoToQuests">
 						<Panel id="GoToQuestsIcon">
 							<Label id="GoLabel" text="#DOTA_DB_SeasonPass_QuestIntroStart"/>

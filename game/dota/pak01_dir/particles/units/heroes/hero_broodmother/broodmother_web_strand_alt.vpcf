@@ -21,6 +21,8 @@
 			m_flFinalTextureOffsetU = 1.000000
 			m_flTextureVWorldSize = 400.000000
 			m_nMaxTesselation = 1
+			m_bTintByFOW = true
+			m_bTintByGlobalLight = true
 		},
 	]
 	m_Operators = 
@@ -57,7 +59,7 @@
 		{
 			_class = "C_INIT_RandomAlpha"
 			m_nAlphaMin = 0
-			m_nAlphaMax = 60
+			m_nAlphaMax = 15
 			m_flAlphaRandExponent = 2.500000
 		},
 		{

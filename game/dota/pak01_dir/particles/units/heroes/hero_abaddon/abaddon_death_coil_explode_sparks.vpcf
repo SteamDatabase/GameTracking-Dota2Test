@@ -42,6 +42,10 @@
 			_class = "C_OP_MovementRotateParticleAroundAxis"
 			m_nCP = 3
 		},
+		{
+			_class = "C_OP_PositionLock"
+			m_nControlPointNumber = 3
+		},
 	]
 	m_Initializers = 
 	[

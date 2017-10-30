@@ -15,7 +15,6 @@
 		{
 			_class = "C_OP_RenderTrails"
 			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
-			m_bAdditive = true
 			m_flOverbrightFactor = 2.000000
 			m_hTexture = resource:"materials/particle/particle_cone_gradient_2.vtex"
 			m_bIgnoreDT = true
@@ -28,11 +27,12 @@
 			[
 				0.000000,
 				0.000000,
+				2.000000,
 				1.000000,
-				0.000000,
 			]
 			m_flMaxLength = 1500.000000
 			m_flMinLength = 1000.000000
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
@@ -97,10 +97,6 @@
 			m_flOutput = 0.000000
 			m_flLerpTime = 0.125000
 		},
-		{
-			_class = "C_OP_StopAfterCPDuration"
-			m_flDuration = 5.000000
-		},
 	]
 	m_Initializers = 
 	[
@@ -154,8 +150,8 @@
 		{
 			_class = "C_INIT_CreateWithinSphere"
 			m_fRadiusMax = -25.000000
-			m_fSpeedMin = 100.000000
-			m_fSpeedMax = 150.000000
+			m_fSpeedMin = 80.000000
+			m_fSpeedMax = 100.000000
 		},
 		{
 			_class = "C_INIT_RandomAlpha"

@@ -7,21 +7,20 @@
 	[
 		{
 			_class = "C_OP_RenderSprites"
-			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
 			m_hTexture = resource:"materials/particle/smoke/steam/steam.vtex"
 			m_flAnimationRate = 30.000000
-			VisibilityInputs = 
-			{
-				m_flCameraBias = -10.000000
-			}
 			m_bFitCycleToLifetime = true
 			m_bAnimateInFPS = true
-			m_flAddSelfAmount = 2.000000
+			m_flAddSelfAmount = 10.000000
 			m_bAdditive = true
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
 	[
+		{
+			_class = "C_OP_Decay"
+		},
 		{
 			_class = "C_OP_BasicMovement"
 			m_fDrag = 0.100000
@@ -31,9 +30,6 @@
 				0.000000,
 				650.000000,
 			]
-		},
-		{
-			_class = "C_OP_Decay"
 		},
 		{
 			_class = "C_OP_VectorNoise"
@@ -64,11 +60,12 @@
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade = 
 			[
-				90,
-				157,
-				245,
+				8,
+				115,
+				255,
 				255,
 			]
+			m_flFadeEndTime = 0.650000
 		},
 		{
 			_class = "C_OP_InterpolateRadius"

@@ -23,11 +23,11 @@
 			"heroID"		"73"
 			"tag"		"Alchemist"
 		}
-		//"ancient_apparition"
-		//{
-		//	"heroID"		"68"
-		//	"tag"		"Ancient Apparition"
-		//}
+		"ancient_apparition"
+		{
+			"heroID"		"68"
+			"tag"		"Ancient Apparition"
+		}
 		"antimage"
 		{
 			"heroID"		"1"
@@ -52,6 +52,11 @@
 		{
 			"heroID"		"113"
 			"tag"		"Arc Warden"
+		}
+		"armadillo"
+		{
+			"heroID"		"120"
+			"tag"		    "Armadillo"
 		}
 		"axe"
 		{
@@ -371,6 +376,11 @@
 			"heroID"		"41"
 			"tag"		"Faceless Void"
 		}
+		"fairy"
+		{
+			"heroID"		"119"
+			"tag"		    "Fairy"
+		}
 		"gyrocopter"
 		{
 			"heroID"		"72"
@@ -385,6 +395,11 @@
 		{
 			"heroID"		"74"
 			"tag"		"Invoker"
+		}
+		"jakiro"
+		{
+			"heroID"		"64"
+			"tag"		"Jakiro"
 		}
 		"juggernaut"
 		{
@@ -489,11 +504,11 @@
 			"heroID"		"10"
 			"tag"		"Morphling"
 		}
-		//"monkey_king"
-		//{
-		//	"heroID"		"114"
-		//	"tag"		"Monkey King"
-		//}
+		"monkey_king"
+		{
+			"heroID"		"114"
+			"tag"		"Monkey King"
+		}
 		"siren"
 		{
 			"heroID"		"89"
@@ -686,6 +701,11 @@
 			"heroID"		"46"
 			"tag"		"Templar Assassin"
 		}
+		"techies"
+		{
+			"heroID"		"105"
+			"tag"		"Techies"
+		}
 		"terrorblade"
 		{
 			"heroID"		"109"
@@ -746,11 +766,11 @@
 			"heroID"		"34"
 			"tag"		"Tinker"
 		}
-		"tiny"
-		{
-			"heroID"		"19"
-			"tag"		"Tiny"
-		}
+		//"tiny"
+		//{
+	    //  "heroID"		"19"
+		//  "tag"		"Tiny"
+		//}
 		"treant"
 		{
 			"heroID"		"83"
@@ -914,7 +934,7 @@
 		{
 			"abaddon"		"materials/models/heroes/abaddon/abaddon_body.vmat"
 			"alchemist"		"materials/models/heroes/alchemist/alchemist_body_color.vmat"
-			//"ancient_apparition"	"materials/models/heroes/ancient_apparition/ancientapparition.vmat"
+			"ancient_apparition"	"materials/models/heroes/ancient_apparition/ancientapparition.vmat"
 			"antimage"		"materials/models/heroes/antimage/antimage.vmat"
 			"arc_warden"		"materials/models/heroes/arc_warden/arc_warden_base.vmat"
 			"axe"			"materials/models/heroes/axe/axe_body_color.vmat"
@@ -949,6 +969,7 @@
 			"gyrocopter"		"materials/models/heroes/gyro/gyro_body_color.vmat"
 			"huskar"		"materials/models/heroes/huskar/huskar_body.vmat"
 			"invoker"		"materials/models/heroes/invoker/invoker_color.vmat"
+			"jakiro"		"materials/models/heroes/jakiro/jakiro.vmat"
 			"juggernaut"		"materials/models/heroes/juggernaut/juggernaut_torso.vmat"
 			"keeper_of_the_light"	"materials/models/heroes/keeper_of_the_light/keeper_body.vmat"
 			"lanaya"		"materials/models/heroes/templar_assassin/templar_assassin_base.vmat"
@@ -966,7 +987,7 @@
 			"medusa"		"materials/models/heroes/medusa/medusa_body_color.vmat"
 			"meepo"			"materials/models/heroes/meepo/meepo_color.vmat"
 			"mirana"		"materials/models/heroes/mirana/mirana_color.vmat"
-			//"monkey_king"		"materials/models/heroes/monkey_king/monkey_king.vmat"
+			"monkey_king"		"materials/models/heroes/monkey_king/monkey_king.vmat"
 			"morphling"		"materials/models/heroes/morphling/morphling_color.vmat"
 			"necrolyte"		"materials/models/heroes/necrolyte/necro.vmat"
 			"nerubian_assassin"	"materials/models/heroes/nyx/nyx_color.vmat"
@@ -978,7 +999,7 @@
 			"phantom_lancer"	"materials/models/heroes/phantom_lancer/phantom_lancer_body_color.vmat"
 			"phoenix"		"materials/models/heroes/phoenix/phoenix_body_color.vmat"
 			"puck"			"materials/models/heroes/puck/puck_color.vmat"
-			"pudge"			"materials/models/heroes/pudge/pudge_body_color.vmat"
+			"pudge"			"materials/models/heroes/pudge/pudge2_body.vmat"
 			"pugna"			"materials/models/heroes/pugna/pugna_color.vmat"
 			"queenofpain"		"materials/models/heroes/queenofpain/queenofpain_color.vmat"
 			"rattletrap"		"materials/models/heroes/rattletrap/rattletrap_color.vmat"
@@ -994,7 +1015,7 @@
 			"skywrath_mage"		"materials/models/heroes/skywrath_mage/skywrath_mage_color1.vmat"
 			"slardar"		"materials/models/heroes/slardar/slardar_color.vmat"
 			"slark"			"materials/models/heroes/slark/slark_color.vmat"
-			"sniper"		"materials/models/heroes/sniper/sniper_color.vmat"
+			"sniper"		"materials/models/heroes/sniper/sniper_body_color.vmat"
 			"spectre"		"materials/models/heroes/spectre/spectre_base.vmat"
 			"spirit_breaker"	"materials/models/heroes/spirit_breaker/spirit_breaker_body_color.vmat"
 			"storm_spirit"		"materials/models/heroes/storm_spirit/storm_spirit_base.vmat"

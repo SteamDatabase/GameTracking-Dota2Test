@@ -9,4 +9,34 @@
 			m_ChildRef = resource:"particles/units/heroes/hero_terrorblade/terrorblade_ambient_sword.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_weapon_r"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/heroes/terrorblade/weapon.vmdl"
+			}
+		},
+	]
 }

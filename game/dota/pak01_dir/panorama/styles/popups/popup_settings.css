@@ -49,12 +49,6 @@ PopupSettings
 	height: 930px;
 }
 
-.AspectRatio5x4 PopupSettings
-{
-	width: 1300px;
-	height: 930px;
-}
-
 PopupSettings.Hidden
 {
 	opacity: 0.0;
@@ -264,7 +258,7 @@ PopupSettings Label
 }
 
 
-.AspectRatio4x3 .SettingsColumnContainer, .AspectRatio5x4 .SettingsColumnContainer
+.AspectRatio4x3 .SettingsColumnContainer
 {
 	margin-top: 0px;
 	padding: 0px 0px 0px 16px;
@@ -301,8 +295,7 @@ PopupSettings Label
 	//height:100%;
 }
 
-.AspectRatio4x3 .HotKeySettingsColumn,
-.AspectRatio5x4 .HotKeySettingsColumn
+.AspectRatio4x3 .HotKeySettingsColumn
 {
 	width: 453px;
 }
@@ -475,7 +468,7 @@ PopupSettings Label
 }
 
 
-#BottomNav
+.BottomNav
 {
 	width: 100%;
 	margin-top: -14px;
@@ -660,6 +653,7 @@ PopupSettings Label
 	background-repeat: no-repeat;
     width: 127px;
     height: 128px;
+	wash-color: #666;
 }
 
 #TopChatWheelPanel
@@ -783,8 +777,8 @@ PopupSettings Label
 {
     flow-children: down;
 	height: 100%;
-    width: fill-parent-flow( 0.5 );
-	overflow: clip scroll;
+	width: 100%;
+	overflow: squish scroll;
     padding: 16px;
     background-color: transparent;
 	opacity-mask: url("s2r://panorama/images/masks/softedge_vertical_vscroll_psd.vtex") 1.0;	
@@ -856,7 +850,7 @@ DOTASettingsCheckbox
 	background-color: none;
 	height:40px;
 	//width: 50%;
-	margin: -2px;
+	margin: -4px;
 }
 
 .OptionsRow
@@ -1315,8 +1309,7 @@ DOTASettingsCheckbox
     flow-children: right;
 }
 
-.AspectRatio4x3 .HeroSpecificAbilityQuickcastContainer,
-.AspectRatio5x4 .HeroSpecificAbilityQuickcastContainer
+.AspectRatio4x3 .HeroSpecificAbilityQuickcastContainer
 {
 	height: 128px;
 }
@@ -1465,13 +1458,6 @@ DOTASettingsCheckbox
 	//blur: gaussian( 1, 1, 1 );
 }
 /*
-.AspectRatio5x4 .HeroAbilityIcon
-{
-	width: 48px;
-	height: 48px;
-}
-
-
 .AspectRatio4x3 .HeroAbilityIcon
 {
 	width: 54px;
@@ -1750,6 +1736,7 @@ DOTASettingsCheckbox
 	vertical-align: center;
 	horizontal-align: center;
 //	visibility: collapse;
+	wash-color: #666;
 }
 
 .ChatBindDialogButtonLabel
@@ -1806,14 +1793,19 @@ Slider.HorizontalSlider
 	padding-right: 5px;
 }
 
-.AspectRatio4x3 .ControlGroupRow DOTASettingsKeyBinder,
-.AspectRatio5x4 .ControlGroupRow DOTASettingsKeyBinder
+.AspectRatio4x3 .ControlGroupRow DOTASettingsKeyBinder
 {
 	width: 212px;
 }
 
 
 #TextureEnum 
+{
+    width: 100%;
+    margin-left: 6px;
+}
+
+#ParticleEnum 
 {
     width: 100%;
     margin-left: 6px;
@@ -1854,6 +1846,12 @@ Slider.HorizontalSlider
 	transition-property: transform, background-color, border, color;
 	transition-duration: 0.16s;
 	transition-timing-function: ease-in-out;	
+}
+
+.ChatWheelButton .ChatWheelSoundIcon
+{
+	vertical-align: middle;
+	margin-right: 4px;
 }
 
 
@@ -1951,15 +1949,44 @@ Slider.HorizontalSlider
 
 .ChatWheelPhraseChoiceLine
 {
-	width: 91%;
-	flow-children: right-wrap;
+	width: 100%;
+	flow-children: right;
     margin-left: 4px;
     padding: 1px 4px -1px 4px;
 }
 
-.ChatWheelPhraseChoiceLine:enabled:hover
+#ChatWheelPhraseListContainer.Active .ChatWheelPhraseChoiceLine.MessageIsUnlocked:hover
 {
 	background-color: #0570BB;
+}
+
+.ChatWheelSoundIcon
+{
+	width: 20px;
+	height: 20px;
+
+	background-image: url("s2r://panorama/images/hud/reborn/icon_scoreboard_mute_sound_psd.vtex");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#ChatWheelSoundButton
+{
+	margin-right: 4px;
+
+	visibility: collapse;
+}
+#ChatWheelSoundButton:hover
+{
+	brightness: 2.0;
+}
+#ChatWheelSoundButton:active
+{
+	brightness: 1.5;
+}
+.ChatWheelPhraseChoiceLine.MessageHasSound #ChatWheelSoundButton
+{
+	visibility: visible;
 }
 
 .ChatWheelAllLabel
@@ -1967,43 +1994,119 @@ Slider.HorizontalSlider
 	color: white;
 	transition-property: color;
 	transition-duration: .32s;
+
+	visibility: collapse;
 }
-.ChatWheelPhraseChoiceText
+
+.ChatWheelPhraseChoiceLine.MessageIsToAll .ChatWheelAllLabel
 {
-	color: white;
-	flow-children: right-wrap;
+	visibility: visible;
+}
+
+.ChatWheelPhraseChoiceText, .ChatWheelAllLabel
+{
+	color: #aaa;
+
 	transition-property: color;
 	transition-duration: .32s;	
 }
 
-.ChatWheelPhraseChoiceText:disabled,.ChatWheelAllLabel:disabled
+.ChatWheelPhraseChoiceLine.MessageHasSound.MessageIsUnlocked .ChatWheelPhraseChoiceText,
+#ChatWheelPhraseListContainer.Active .ChatWheelPhraseChoiceLine.MessageHasSound.MessageIsUnlocked .ChatWheelPhraseChoiceText,
+#ChatWheelPhraseListContainer.Active .ChatWheelPhraseChoiceLine.MessageHasSound.MessageIsUnlocked .ChatWheelAllLabel
 {
-	color: #aaaaaa;
+	color: white;
+}
+
+.ChatWheelUnlockLevel
+{
+	text-align: right;
+	margin-right: 6px;
+	width: 90px;
+	letter-spacing: 0px;
+	color: textColoredDarkColor;
+	text-transform: uppercase;
+
+	visibility: collapse;
+}
+
+
+.ChatWheelPhraseChoiceLine.MessageHasSound .ChatWheelPhraseChoiceText
+{
+	color: #555;
+}
+
+.MessageIsUnlocked .ChatWheelUnlockLevel
+{
+	color: textColoredMediumColor;
+}
+
+.MessageUnlockedByEvent .ChatWheelUnlockLevel
+{
+	visibility: visible;
+	
+	
 }
 
 .ChatWheelHeader
 {
-	width: 92%;
-	color:  #939da0;
-	font-size: 20px;
-	text-transform: uppercase;
+	width: 100%;
 	border-bottom: 1px solid #3b3f40;
     margin-top: 10px;
     margin-bottom: 4px;
+	flow-children: right;
+}
+
+.ChatWheelHeader > Label
+{
+	color:  #939da0;
+	font-size: 20px;
+	text-transform: uppercase;
+
 	transition-property: color, border;
 	transition-duration: .32s;		
 }
-
 
 .ChatWheelHeader.First
 {
     margin-top: 0px;
 }
 
-.ChatWheelHeader:disabled
+
+.ChatWheelHeader .CategoryIcon
 {
-	color:#777777;
+	width: 27px;
+	height: 27px;
+
+	margin-right: 4px;
+
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	visibility: collapse;
+
+	tooltip-position: top;
+	tooltip-body-position: 0% 50%;
+
 }
+
+.ChatWheelHeader.ActiveEventCategory
+{
+	border-bottom: 1px solid textColoredVeryBrightColor&33;
+}
+
+.ChatWheelHeader.ActiveEventCategory .CategoryIcon
+{
+	visibility: visible;
+	background-image: url("s2r://panorama/images/badges/international_2017_battle_pass_badge_4_png.vtex");
+}
+
+.ChatWheelHeader.ActiveEventCategory > Label
+{
+	color: textColoredVeryBrightColor;
+}
+
 
 .AudioVideoPanelButton
 {
@@ -2085,13 +2188,13 @@ DropDown
 #RenderQuality
 {
 	margin-left: 10px;
-	margin-top: 24px;
+	margin-top: 12px;
 }
 
 #FpsMaxSlider
 {
 	margin-left: 10px;
-	margin-top: 24px;
+	margin-top: 8px;
 }
 
 #ResolutionPanel, #DisplayModePanel, #FullscreenBrightness
@@ -2116,16 +2219,6 @@ DropDown
 	margin-right: 12px;
 }
 
-.AspectRatio5x4 #DevicePanel
-{
-	margin-right: 26px;
-}
-.AspectRatio5x4 #SpeakerConfig,
-.AspectRatio5x4 #DevicePanel 
-{
-	width: 290px;
-}
-
 
 #BasicVideo SlottedSlider
 {
@@ -2137,7 +2230,7 @@ DropDown
 {
 	width: 100%;
 	margin-left: 28px;
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 	margin-top: 6px;
 }
 
@@ -2460,7 +2553,7 @@ a
 {
 	width: 100%;
 	height: 100%;
-	background-image: url("s2r://panorama/images/textures/minimap_game_psd.vtex");
+	background-image: url("s2r://panorama/images/textures/minimap_game_png.vtex");
 	background-position: 50% 50%;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -2470,7 +2563,7 @@ a
 	transition-timing-function: ease-in-out;		
 }
 
-.MainBranch .SimpleBackground #MinimapImage
+.SimpleBackground #MinimapImage
 {
 	background-image: url("s2r://panorama/images/minimap/dotamap_psd.vtex");
 	background-size: 106%;
@@ -3046,12 +3139,54 @@ DOTASettingsEnum .EnumButton
 	z-index: -1;	
 }
 
+#CursorTickContainer
+{
+	width: 100%;
+	height: 20px;
+	transform: translateY(-20px);
+	z-index: -1;		
+}
+
 #CursorScaleTick
 {
-	transform: translateY(-20px);
-	margin-left: 123px;
-	z-index: -1;	
+	margin-left: 96px;
+	background-color: #738492;
 }
+
+#CursorScaleTick0
+{
+	margin-left: 0px;
+	height: 6px;
+}
+
+#CursorScaleTick1
+{
+	margin-left: 188px;
+	height: 6px;
+}
+
+#CursorScaleTick2
+{
+	margin-left: 324px;
+	height: 6px;
+}
+
+#CursorScaleTick3
+{
+	horizontal-align: right;
+	height: 6px;
+}
+
+#HelpTipsContainer
+{
+	flow-children: right;
+}
+
+#HelpTipsEnabled
+{
+	tooltip-position: left;
+}
+
 
 #dota_minimap_hero_size,
 #CameraSpeedSlider,
@@ -3060,11 +3195,11 @@ DOTASettingsEnum .EnumButton
 	margin-left: 20px;
 }
 
-#NetworkOptions,
+#CameraOptions,
 #ApplicationOptions,
-#CameraOptions
+#NetworkOptions
 {
-	margin-top: 64px;
+	margin-top: 40px;
 }
 
 

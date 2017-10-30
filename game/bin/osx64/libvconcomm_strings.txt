@@ -1,13 +1,14 @@
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	fffff.
+        
   (%short, v. %3d) '%short'
  A;\$H
  [A\A^A_]
  [A^]
  ffff.
  open 
-!!m_LessFunc
-!"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
-!@`gBSBp `'AYATATAp
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!@`kBSBp `'AYATATAp
 !V_stricmp( message.m_Name, m_Pipes[ nPipe ].m_Name.Get() )
 !bCreate
 !fffff.
@@ -16,14 +17,16 @@
 !m_Pipes[int].m_pHelper
 !m_bStoredSubKey
 #fff.
+%int %int %int %int
 'ffff.
 ( error_value != SOCKET_ERROR ) && ( error_value != WSAENOTCONN )
 ([A\A]A^A_]
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-+C$A9E
+*** ConVar "%short" was not unregistered! Shutdown crash imminent!
 ,[A^]
 -consoleapp
 -nofocus
@@ -31,6 +34,8 @@
 -vconmaxlisten
 -vconport
 -vconsole
+.ETv*H
+.Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
@@ -56,11 +61,14 @@
 /usr/lib/libiconv.2.dylib
 00 @@@@ 
 0000`PP
+0[A\A^A_]
 0x%016llX
 49S |}
 8[A\A]A^A_]
+8[A^A_]
 9S |signed char
 <Unknown Shutdown Context>
+<null>
 =============== End VConsole Buffered Messages ===============
 =============== Excessive Messages Truncacted - Buffer Size: %double bytes ===============
 =============== VConsole Buffered Messages ===============
@@ -98,12 +106,11 @@
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @M96u/H
-@[A^]
+@[A\A^A_]
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
 @_CommandLine
 @_DevMsg
-@_EarlyInit_Tier0
 @_IterateCapturedStackAnnotations
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -137,8 +144,11 @@
 @_ThreadSetDebugNameS2
 @_ThreadSleep
 @_V_UTF32ToUTF8
+@_V_atof
+@_V_atoi
 @_V_qsort_s
 @_V_snprintf
+@_V_sscanf
 @_V_stricmp_fast
 @_V_vsnprintf
 @_V_vsnprintfRet
@@ -151,6 +161,7 @@
 @___cxa_atexit
 @___cxa_begin_catch
 @___cxa_call_unexpected
+@___cxa_guard_abort
 @___cxa_guard_acquire
 @___cxa_guard_release
 @___cxa_pure_virtual
@@ -173,6 +184,7 @@
 @_raise
 @_recv
 @_send
+@_setsockopt
 @_shutdown
 @_socket
 @_strchr
@@ -198,9 +210,9 @@ A;F@|6H
 A;FH|6H
 A;GH|6H
 A;O ~
-A;\$@u I
+A;]long long|
 ADONfA
-AINFf
+AINFfA
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
 AWAVATS
@@ -208,18 +220,22 @@ AWAVATSA
 AWAVATSH
 AWAVATSI
 AWAVAUATSH
-AWAVAUATSP
 AWAVAUATSPA
 AWAVAUATSPD
+AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
+AWAVSH
 AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
 AWAVSPL
 AWAVSPM
+AZBSEp
+A[ATAp
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -237,6 +253,7 @@ CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. S
 CConCommandMemberAccessor<CVConComm>
 CDL;long double
 CDefaultAccessor
+CEmptyConVar
 CFGVf
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
@@ -280,6 +297,7 @@ CTier2AppSystem<IVConComm, 0>
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CVARf
 CVConBasePipeHost
@@ -311,17 +329,18 @@ Cannot recover from failed socket shutdown.
 Cannot recover from failure in closesocket()
 ConCommand
 ConCommandBase
+ConVar
+ConVar(%short) defined with infinite float value (%short)
+ConVarRef %short doesn'unsigned short point to an existing ConVar
 ConfigurationSystem_001
 Connection will timeout in %double seconds...
+Construction is only allowed from the resolve function
 Could not unregister helper, not registered to this VConsolePipe_t!
 Count
 CreateInterface
-D$0Hc
-D$0fD
 D$HtY
-D;char u
-D;short@u
-D;{ u
+D9sXu
+D;{@u
 DNMC1
 DebugTextureInfo001
 DependencyClass::m_pDependencyLL == NULL
@@ -330,6 +349,8 @@ Dumps the state of all existing VConsole pipes
 Duplicate PIPE_CLOSE message received for pipe (%double|%short)!
 Duplicate PIPE_OPEN_ACK message received for pipe (%double|%short)!
 Duplicate PIPE_OPEN_REQUEST message received for pipe (%double|%short)!
+E;long double@u
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
 Endpoint index out of range
@@ -341,27 +362,29 @@ FlattenedSerializersVersion001
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
-GA#D$
+G8H	p(]
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
+H	p(]
 H	wchar_t(]
 H!wchar_t(]
 H[A\A]A^A_]
+H[A^A_]
 H__ZdaPv
 H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
+HcK@H
 HelpSystem_001
 HostStateMgr001
-I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 IAppSystem
 ICommandCallback
 ICommandCompletionCallback
 IConCommandBaseAccessor
+IConVar
 IConVarListener
 IConfigValueRegistrationListener
 ILoggingListener
@@ -370,6 +393,7 @@ IQuickTime001
 IVConComm
 IVConCommDataReceived
 IVConPipeHost
+IcM@H
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -387,7 +411,6 @@ KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues::FindKey called on NULL pointer!
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 L90t*H
-LightingBuilderMgr001
 Localize_001
 Log Message
 LoggingSystem_IsChannelEnabled(int, LoggingVerbosity_t)
@@ -409,7 +432,7 @@ Message Version Mismatch: '%short', Expected %double, Got %double
 Message received for VConsolePipe_t with no registered helper (%short)
 Message received on closed VConsole Pipe! (%short)
 Message received on unrecognized VConsolePipe_t!
-ModelDocCommandSystem001
+ModelDocUtils001
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -418,26 +441,27 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 No VConsole, Ignoring.
-O [A\A^A_]
 Only TCP sockets are implemented at the moment.
 Only one helper may be registered per VConsolePipe_t!
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 OwnedByCurrentThread()
 P[A^]
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostProcessingSystem_001
 PropertyEditorSystem_001
 QueuedLoaderVersion001
-RAp p
 RBRAp
 RBRBRBRAp
 RCPPt6H
-RCPPuq9
+RCPPuo9
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Rejecting registering message '%short'. Already registered to an alternate handler.
 Release
@@ -491,6 +515,7 @@ Source2Server001
 Source2ServerSerializers002
 StakRaw8H
 StatsService_001
+SteamAudio001
 TBRBRBRAp
 TBSAVBRBRBSARBTAp
 TCRAp
@@ -562,6 +587,7 @@ VScriptManager010
 VStringTokenSystem001
 VisBuilder_001
 Waiting For VConsole To Connect...
+Warning:  %short = '%short' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
@@ -570,14 +596,12 @@ Xbox VDP is not supported on this platform.
 [A\A]A^A_]
 [A\A^A_]
 [A^A_]
-[unsigned short,fD
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
 _CommandLine
 _CreateInterface
 _DevMsg
-_EarlyInit_Tier0
 _GetResourceManifestCount
 _GetResourceManifests
 _InstallSchemaBindings
@@ -614,8 +638,11 @@ _ThreadInterlockedExchange64
 _ThreadSetDebugNameS2
 _ThreadSleep
 _V_UTF32ToUTF8
+_V_atof
+_V_atoi
 _V_qsort_s
 _V_snprintf
+_V_sscanf
 _V_stricmp_fast
 _V_vsnprintf
 _V_vsnprintfRet
@@ -631,6 +658,7 @@ ___bzero
 ___cxa_atexit
 ___cxa_begin_catch
 ___cxa_call_unexpected
+___cxa_guard_abort
 ___cxa_guard_acquire
 ___cxa_guard_release
 ___cxa_pure_virtual
@@ -667,6 +695,7 @@ _poll
 _raise
 _recv
 _send
+_setsockopt
 _shutdown
 _socket
 _strchr
@@ -675,9 +704,12 @@ _strcpy
 _strlen
 _strnlen
 _wcslen
+`[A\A^A_]
 `unsigned char[A\A^A_]
 arg%double
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 auto CThreadFastMutex::AssertOwnedByCurrentThread()::(anonymous class)::operator()() const
 bool CCommand::Tokenize(const char *, characterset_t *)
 bool CVConBasePipeHost::IsPipeOpen(VConsolePipe_t)
@@ -701,6 +733,7 @@ false
 ffff.
 fffff.
 ffffff.
+g_pCVar
 global
 int CSocketConnection::GetFirstAvailableListeningEndpoint()
 int CSocketTransportCompatible::ReadMessages()
@@ -708,6 +741,7 @@ int CSocketTransportCompatible::WriteMessages()
 int CUtlBuffer::ParseToken(characterset_t *, char *, int, bool)
 invalid
 libvconcomm.dylib
+long long[A\A]A^A_]
 m_ConnectionType == CT_INDETERMINATE && m_SocketProtocol == SP_INDETERMINATE
 m_ConnectionType == CT_SERVER
 m_Count == 0
@@ -729,11 +763,13 @@ m_MessageDataInfosMutex.AssertOwnedByCurrentThread()
 m_NumElements == 0
 m_Pipes[int].m_nVersion == nVersion
 m_Root == InvalidIndex()
+m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
 m_nArgv0Size != 0
 m_pCurrentOutgoingMessage->m_nMessageLength > 0
 m_pOwner && m_CompletionFunc
 m_pOwner && m_Func
+m_pParent == this
 m_pParent->m_fnCompletionCallback
 mffff.
 nArgvBufferSize <= COMMAND_MAX_LENGTH
@@ -756,6 +792,7 @@ operator new[](unsigned long)
 p   00 
 pCallback == NULL
 pHVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBp
+pMemory[int] == 0
 pName
 pSchemaSystem != NULL
 pTarget == ( pData + nDataLength )
@@ -773,6 +810,7 @@ size < 1024 * 1024
 size >= 0
 socketProtocol == SP_TCP
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+static void ConVarRef::InitDeferredConVarRefs()
 std::terminate()
 strnlen
 t3ffff.
@@ -782,6 +820,8 @@ typeinfo for std::bad_alloc
 uGetResourceManifest
 uint16 CVConBasePipeHost::PipeVersion(VConsolePipe_t)
 unsigned char[A\A]A^A_]
+unsigned short&H9[8tUH
+unsigned short<fff.
 uwHcE
 vc_exit %short
 vcon_pipe_dump
@@ -794,17 +834,21 @@ virtual void CConCommandMemberAccessor<CVConComm>::CommandCallback(const CComman
 virtual void CVConsoleLoggingListener::Log(const LoggingContext_t *, const tchar *)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
+virtual void ConVar::ChangeStringValue(const char *, float)
+virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
+virtual void ConVar::InternalSetFloatValue(float)
+virtual void ConVar::InternalSetIntValue(int)
+virtual void ConVar::InternalSetValue(const char *)
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CSocketConnection::ResetEndpoint(int)
 void CTSQueue<VConCommMessage_t *, false>::Purge() [T = VConCommMessage_t *, bTestOptimizer = false]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::Put(const void *, int)
 void CUtlBuffer::VaPrintf(const char *, __va_list_tag *)
-void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
@@ -827,3 +871,4 @@ vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 {}()':
+}HA;EP}

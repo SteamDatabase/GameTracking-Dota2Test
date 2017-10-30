@@ -57,7 +57,6 @@ DOTAHealthMana
 .ColorBlindModeEnabled #HealthProgress .ProgressBarLeft
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #658fdf  ), color-stop( 0.2, #a4caff ), color-stop( .5, #3f6fcb), to( #2c56ab ) );
-	
 }
 
 #HealthProgress .ProgressBarRight
@@ -73,7 +72,7 @@ DOTAHealthMana
 	font-weight: bold;
 	text-align: center;
 	vertical-align: center;
-	text-shadow: 0px 0px 3px 3.7 #000000;
+	text-shadow: 0px 0px 0px 3.7 #000000;
     z-index: 4;
 }
 
@@ -85,7 +84,7 @@ DOTAHealthMana
 	font-weight: bold;
 	text-align: center;
 	vertical-align: center;
-	text-shadow: 0px 0px 3px 3.7 #000000;
+	text-shadow: 0px 0px 0px 3.7 #000000;
     z-index: 4;
 }
 
@@ -147,7 +146,7 @@ DOTAHealthMana
     font-weight: bold;
 	text-align: center;
 	vertical-align: center;
-	text-shadow: 2px 2px 3px #000000;
+	text-shadow: 2px 2px 0px #000000;
     z-index: 4;
 }
 
@@ -159,7 +158,7 @@ DOTAHealthMana
 	font-weight: bold;
 	text-align: center;
 	vertical-align: center;
-	text-shadow: 2px 2px 3px #000000;
+	text-shadow: 2px 2px 0px #000000;
     z-index: 4;
 }
 
@@ -180,12 +179,11 @@ DOTAHealthMana
 {
 	flow-children: down;
     margin-bottom: 8px;
-    margin-left: 264px;
-    margin-right: 188px;
-	margin-right: 264px;
+	margin-left: 223px;
+	margin-right: 266px;
 }
 
-.Reborn.FiveAbilities #HealthManaContainer
+.Reborn .FiveAbilities #HealthManaContainer
 {
 
 }
@@ -194,8 +192,8 @@ DOTAHealthMana
 .Reborn #HealthContainer
 {
     width: 100%;
-	height: 20px;
-	height: 16px;
+	height: 26px;
+//	height: 16px;
     //flow-children: right;
 }
 
@@ -214,6 +212,11 @@ DOTAHealthMana
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #425d25  ), color-stop( 0.2, #5BA539 ), color-stop( .5, #4D9030), to( #425d25) );
 }
 
+.Reborn.ColorBlindModeEnabled #HealthProgress .ProgressBarLeft
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #658fdf  ), color-stop( 0.2, #a4caff ), color-stop( .5, #3f6fcb), to( #2c56ab ) );
+}
+
 .Reborn #HealthProgress .ProgressBarRight
 {
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #17200d  ), color-stop( 0.2, #222e13 ), color-stop( .5, #1e2911), to( #17200d) );
@@ -230,22 +233,22 @@ DOTAHealthMana
     text-align: center;
 	font-weight: bold;
 	font-size: 18px;
-	font-size: 14px;
+	//font-size: 14px;
 	color: white;
     width: 332px;
-    margin-top: 0px;
+    margin-top: 1px;
 	margin-bottom: 2px;
     horizontal-align: center;
-    text-shadow: 2px 2px 4px 1.0 #000000;
+    text-shadow: 1px 1px 0px 2.0 #000000;
     overflow: noclip;
 }
 
-.Reborn.FiveAbilities #HealthLabel
+.Reborn .FiveAbilities #HealthLabel
 {
 
 }
 
-.Reborn.SixAbilities #HealthLabel
+.Reborn .SixAbilities #HealthLabel
 {
 
 }
@@ -253,8 +256,8 @@ DOTAHealthMana
 .Reborn #ManaContainer
 {
     width: 100%;
-	height: 20px;
-	height: 16px;
+	height: 26px;
+//	height: 16px;
 }
 
 .Reborn #ManaProgress
@@ -287,13 +290,14 @@ DOTAHealthMana
 	vertical-align: top;
 	font-weight: bold;
 	font-size: 18px;
-	font-size: 14px;
+	//font-size: 14px;
 	margin-left: 0px;
     width: 332px;
+	margin-top: 1px;
     color: white;
     horizontal-align: center;
-    margin-top: -1px;
-    text-shadow: 2px 2px 4px 1.0 #000000;
+    margin-top: 2px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
     overflow: noclip;
 }
 
@@ -304,12 +308,12 @@ DOTAHealthMana
 	color: #CB1F08;
 }
 
-.Reborn.FiveAbilities #ManaLabel
+.Reborn .FiveAbilities #ManaLabel
 {
 
 }
 
-.Reborn.SixAbilities #ManaLabel
+.Reborn .SixAbilities #ManaLabel
 {
 
 }
@@ -318,14 +322,14 @@ DOTAHealthMana
 .Reborn .MaxHealthLabel
 {
 	color: white;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 
 .Reborn .QueryUnit .MaxManaLabel,
 .Reborn .QueryUnit .MaxHealthLabel
 {
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: normal;
 }
 
@@ -333,7 +337,7 @@ DOTAHealthMana
 .Reborn .Dead.ValidUnit .MaxHealthLabel
 {
 	color: #C23339;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 
@@ -346,14 +350,14 @@ DOTAHealthMana
 .Reborn .MaxManaLabel
 {
     color: #ffffff;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .Reborn #HealthRegenLabel
 {
 	color: #3ED038;
-    font-size: 12px;
-    text-shadow: 2px 2px 4px 1.0 #000000;
+    font-size: 14px;
+    text-shadow: 2px 2px 0px 1.0 #00000066;
     font-weight: bold;
     margin-top: -1px;
     margin-right: 4px;
@@ -363,8 +367,8 @@ DOTAHealthMana
 {
 	color: #83C2FE;
     margin-top: 1px;
-    font-size: 12px;
-    text-shadow: 2px 2px 4px 1.0 #000000;
+    font-size: 14px;
+    text-shadow: 2px 2px 0px 1.0 #00000066;
     font-weight: bold;
     margin-right: 4px;
 }
@@ -403,7 +407,7 @@ DOTAHealthMana
 	visibility: visible;
 }
 
-.Reborn.FiveAbilities .QueryUnit #HealthManaContainer
+.Reborn .FiveAbilities.QueryUnit #HealthManaContainer
 {
 
 }
@@ -413,7 +417,7 @@ DOTAHealthMana
 {
     width: 100%;
 	height: 20px;
-	height: 12px;
+	height: 14px;
 }
 
 .Reborn .QueryUnit.IsEnemy #HealthContainer
@@ -432,11 +436,13 @@ DOTAHealthMana
 .Reborn .QueryUnit #HealthLabel
 {
     width: 100%;
-    margin-top: 3px;
+    margin-top: 4px;
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 11px;
+    font-size: 13px;
 	font-weight: normal;
+    letter-spacing: 1px;
+	
 }
 
 .Reborn .QueryUnit.IsDead #HealthLabel
@@ -450,12 +456,12 @@ DOTAHealthMana
 	hue-rotation: 180deg;
 }
 
-.Reborn.FiveAbilities .QueryUnit #HealthLabel
+.Reborn .FiveAbilities.QueryUnit #HealthLabel
 {
     width: 100%;
 }
 
-.Reborn.SixAbilities .QueryUnit #HealthLabel
+.Reborn .SixAbilities.QueryUnit #HealthLabel
 {
     width: 100%;
 }
@@ -464,7 +470,7 @@ DOTAHealthMana
 {
     width: 100%;
 	height: 20px;
-	height: 12px;
+	height: 14px;
     margin-top: 2px;
     opacity: 1.0;
     visibility: collapse;
@@ -484,20 +490,21 @@ DOTAHealthMana
 .Reborn .QueryUnit #ManaLabel
 {
 	margin-left: 0px;
-    width: 100%;
-    margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
-    font-size: 11px;
+    margin-top: -1px;
+    width: 100%;
+    font-size: 13px;
 	font-weight: normal;
+    letter-spacing: 1px;
 }
 
-.Reborn.FiveAbilities .QueryUnit #ManaLabel
+.Reborn .FiveAbilities.QueryUnit #ManaLabel
 {
     width: 100%;
 }
 
-.Reborn.SixAbilities .QueryUnit #ManaLabel
+.Reborn .SixAbilities.QueryUnit #ManaLabel
 {
     width: 100%;
 }
@@ -553,14 +560,14 @@ DOTAHealthMana
 #ManaBurner,
 #HealthBurner
 {
-	width: 276px;
+	width: 100%;
 	height: 100%;
 }
 
 .SixAbilities #ManaBurner,
 .SixAbilities #HealthBurner
 {
-	width: 422px;
+	width: 100%;
 }
 
 .LowVisualQuality #ManaBurner,

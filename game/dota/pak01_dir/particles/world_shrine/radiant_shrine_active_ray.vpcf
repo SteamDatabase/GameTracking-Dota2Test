@@ -15,6 +15,7 @@
 			m_flAnimationRate = 20.000000
 			m_bFitCycleToLifetime = true
 			m_bAnimateInFPS = true
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
@@ -44,6 +45,10 @@
 				255,
 			]
 			m_flFadeStartTime = 0.500000
+		},
+		{
+			_class = "C_OP_StopAfterCPDuration"
+			m_flDuration = 5.000000
 		},
 	]
 	m_Initializers = 
@@ -110,4 +115,5 @@
 			m_flEmissionDuration = 5.000000
 		},
 	]
+	m_flMaxRecreationTime = -1.000000
 }

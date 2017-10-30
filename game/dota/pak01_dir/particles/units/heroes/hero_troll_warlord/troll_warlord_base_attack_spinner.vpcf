@@ -15,8 +15,7 @@
 		{
 			_class = "C_OP_RenderTrails"
 			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
-			m_flOverbrightFactor = 6.000000
-			m_flAddSelfAmount = 2.000000
+			m_flOverbrightFactor = 4.000000
 			m_bSaturateColorPreAlphaBlend = false
 			m_hTexture = resource:"materials/particle/beam_fire_02.vtex"
 			m_flLengthFadeInTime = 0.050000
@@ -32,6 +31,7 @@
 				1.000000,
 				0.000000,
 			]
+			m_flAddSelfAmount = 1.000000
 		},
 	]
 	m_Operators = 

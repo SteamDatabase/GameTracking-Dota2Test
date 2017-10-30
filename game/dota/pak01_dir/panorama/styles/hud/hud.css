@@ -35,11 +35,6 @@ DOTACustomUIRoot
 	margin-right: 143px;
 	width: 132px;
 }
-.AspectRatio5x4 #NetGraph
-{
-	margin-right: 140px;
-	width: 122px;
-}
 
 #lower_hud
 {
@@ -509,9 +504,6 @@ DOTACustomUIRoot
 	width: 750px;
 
 	transform: translateX( 0px );
-
-	transition-property: transform;
-	transition-duration: 0.05s;
 }
 
 #stash.ShopOpen

@@ -118,4 +118,33 @@
 			m_ChildRef = resource:"particles/econ/items/witch_doctor/wd_monkey/witchdoctor_bonkers_ambient_c.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/witchdoctor/bonkers_the_mad/bonkers_the_mad.vmdl"
+			}
+		},
+	]
 }

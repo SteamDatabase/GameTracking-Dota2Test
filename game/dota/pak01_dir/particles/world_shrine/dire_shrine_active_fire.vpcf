@@ -18,12 +18,14 @@
 			m_hTexture = resource:"materials/particle/fire_particle_10/fire_particle_10_low.vtex"
 			m_flAnimationRate = 0.650000
 			m_bAdditive = true
+			m_bTintByFOW = true
 		},
 		{
 			_class = "C_OP_RenderSprites"
 			m_bAdditive = true
 			m_flOverbrightFactor = 3.000000
 			m_hTexture = resource:"materials/particle/spark_glow_02.vtex"
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 

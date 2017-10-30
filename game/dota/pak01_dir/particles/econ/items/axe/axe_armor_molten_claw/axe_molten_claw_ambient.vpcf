@@ -103,4 +103,33 @@
 			m_ChildRef = resource:"particles/econ/items/axe/axe_armor_molten_claw/axe_molten_claw_ambient_glow.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/axe/molten_claw/molten_claw.vmdl"
+			}
+		},
+	]
 }

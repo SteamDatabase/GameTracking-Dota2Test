@@ -1,9 +1,9 @@
  AssertMsg_ConditionFailed
  B g_VCoverage
  B g_pQuantizedFloatEncoders
- CFiber::DetachFromStackContext()
- CFiber::ReleasePooledFiber()
- CFiber::ResumeJob()
+ CFiber::IsReadyToResume()
+ CFiber::ReachedZeroReferences()
+ CFiber::ResumeJob(void*)
  CMemAllocSystemInitialize
  CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
  CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
@@ -57,7 +57,6 @@
  DevMsg
  DevMsg(char const*, ...)
  DevWarning(char const*, ...)
- EarlyInit_Tier0
  GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
  GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
  GetCPUInformation
@@ -175,6 +174,7 @@
  ThreadTerminateProcessCode
  ThreadWaitForProcessExit
  ThreadYield
+ V_FixDoubleSlashes
  V_GetErrno
  V_SetErrno
  V_StripFilename
@@ -185,7 +185,7 @@
  V_atoi
  V_fclose
  V_fflush
- V_fopen
+ V_fopenUTF8
  V_fprintf
  V_fread
  V_freopen
@@ -197,7 +197,6 @@
  V_powf
  V_qsort
  V_qsort_s
- V_rand
  V_snprintf
  V_sscanf
  V_stricmp_fast
@@ -216,6 +215,7 @@
  _Unwind_Resume
  _V_ComposeFileName
  _V_ExtractFilePath
+ _V_MakeAbsolutePath
  _V_strncat
  _V_strncpy
  _V_strnicmp_fast
@@ -253,6 +253,7 @@
  memmove
  memset
  memset_pattern16
+ open
  pipe
  poll
  pthread_getspecific
@@ -273,6 +274,7 @@
  strlen
  typeinfo for CThread
  typeinfo for std::bad_alloc
+ unlink
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info

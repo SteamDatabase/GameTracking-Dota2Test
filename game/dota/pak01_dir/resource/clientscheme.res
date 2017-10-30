@@ -711,10 +711,31 @@ Scheme
 			"1"
 			{
 				"name"		"Dota Hypatia Bold"
-				"tall"		"16"
-				"weight"	"400"
-				"antialias" 	"1"
-				"dropshadow"	"1"
+				"tall"		"17"				
+				"weight"	"100"
+			}
+		}
+
+		"UnitInfoHeroNameFont2"
+		{
+			"1"
+			{
+				"name"		"Radiance"
+				"tall"		"17"				
+				"weight"	"600"
+				"antialias"	"1"
+			}
+		}
+
+		"UnitInfoPlayerLocalLevelFont"
+		{
+			"1"
+			{
+				"name"		"Dota Hypatia Bold"
+				"tall"		"13"
+				"weight"	"800"
+				"italic"	"0"
+				"antialias" "1"
 			}
 		}
 
@@ -723,11 +744,21 @@ Scheme
 			"1"
 			{
 				"name"		"Dota Hypatia Bold"
-				"tall"		"18"
-				"weight"	"400"
-				"antialias" 	"1"
-				"dropshadow"	"1"
-				"isproportional" "0"
+				"tall"		"13"
+				"weight"	"800"
+				"italic"	"0"
+				"antialias" "1"
+			}
+		}
+
+		"ParticleEffectFont"
+		{
+			"1"
+			{
+				"name"		"Radiance"
+				"tall"		"17"
+				"weight"	"600"
+				"antialias" "1"
 			}
 		}
 
@@ -1016,6 +1047,16 @@ Scheme
         {
         	"font"		"vgui/fonts/cour.ttf" [$OSX||$LINUX]
         	"name"		"Courier New" [$OSX||$LINUX]
+        }
+        "5"
+        {
+        	"font"		"resource/radiance_regular.otf"
+        	"name"		"Radiance"
+        }
+        "6"
+        {
+        	"font"		"resource/radiancem_regular.otf"
+        	"name"		"RadianceM"
         }
 	}
 }

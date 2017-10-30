@@ -9,12 +9,20 @@
  CStackTop_Base::CStackTop_Base()
  CStackTop_Base::GetCurrentTop(bool)
  CStackTop_Base::~CStackTop_Base()
+ CThread::CThread()
  CThread::GetName()
+ CThread::Init()
+ CThread::IsThreadRunning()
  CThread::Join(unsigned int)
+ CThread::SetName(char const*)
+ CThread::Start(unsigned int, ThreadPriorityEnum_t)
+ CThread::WaitForCreateComplete(CThreadEvent*)
+ CThread::~CThread()
  CThreadEvent::CThreadEvent(bool)
  CThreadEvent::Set()
  CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
  CThreadMultiWaitEvent::Set()
+ CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
  CThreadMutex::TryLock()
  CThreadRWLock::LockForWrite()
  CThreadRWLock::UnlockWrite()
@@ -51,6 +59,7 @@
  ConColorMsg(Color const&, char const*, ...)
  ConMsg(char const*, ...)
  CreateNewThreadPool
+ CreateSimpleThread
  D typeinfo for float ()
  D typeinfo for float (*)()
  D typeinfo for std::__1::bad_function_call
@@ -58,7 +67,6 @@
  DevMsg(char const*, ...)
  DevWarning
  DevWarning(char const*, ...)
- EarlyInit_Tier0
  FindOrCreateQuantizedFloatEncoder
  GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
  GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
@@ -95,6 +103,7 @@
  Plat_GetLocalTime
  Plat_GetOSType
  Plat_GetPlatformError
+ Plat_GetThreadIndex
  Plat_GetTime
  Plat_GetTimeString
  Plat_IsHighDPI
@@ -104,8 +113,10 @@
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_TickDiffMilliSecF
+ Plat_TicksAfterMicroSecs
  Plat_USTime
  Plat_UUIDFromString
+ Plat_UUIDToString
  Plat_VirtualAlloc
  Plat_VirtualFree
  Plat_ctime
@@ -119,6 +130,7 @@
  RandomInt
  RandomSeed
  RegisterStringToken
+ ReleaseThreadHandle
  SeriousWarning(int, Color, char const*, ...)
  StackMarkup_RestoreState
  StackMarkup_SaveState
@@ -160,6 +172,7 @@
  ThreadInMainThread
  ThreadInterlockedExchange64
  ThreadSleep
+ ThreadYield
  V_AddBackSlashesToSpecialChars
  V_AreFileNamesEqual
  V_FixSlashes
@@ -181,12 +194,14 @@
  V_StripTrailingSlash
  V_StripTrailingWhitespace
  V_URLDecode
+ V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32ToUTF8
  V_UTF8ToUTF32
  V_UnqualifiedFileName
  V_acosf
  V_asinf
+ V_atan2
  V_atan2f
  V_atod
  V_atof
@@ -195,14 +210,22 @@
  V_atoui64
  V_cosf
  V_expf
+ V_fclose
+ V_feof
+ V_ferror
  V_fmodf
+ V_fopenUTF8
+ V_fprintf
+ V_fread
+ V_frexpf
+ V_fscanf
+ V_fwrite
  V_logf
  V_powf
  V_pretifymem
  V_pretifynum
  V_qsort
  V_qsort_s
- V_rand
  V_sinf
  V_snprintf
  V_snwprintf
@@ -255,11 +278,13 @@
  __cxa_bad_typeid
  __cxa_begin_catch
  __cxa_call_unexpected
+ __cxa_end_catch
  __cxa_free_exception
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
  __cxa_pure_virtual
+ __cxa_rethrow
  __cxa_throw
  __dynamic_cast
  __error
@@ -271,6 +296,7 @@
  __stderrp
  __tolower
  __toupper
+ accept
  acos
  acosf
  asin
@@ -279,8 +305,10 @@
  atan2
  atof
  atoi
+ bind
  ceilf
  chdir
+ close
  cos
  cosf
  daylight
@@ -289,21 +317,14 @@
  exit
  exp
  expf
- fclose
- feof
- ferror
  fflush
  floor
  floorf
  fmod
- fopen
  fork
  fprintf
  fputc
- fread
  free
- frexpf
- fscanf
  fwrite
  g_Tier1_BitWriteMasks
  g_Tier1_CRC32Table
@@ -316,8 +337,9 @@
  getcwd
  gethostbyname
  getpid
+ ioctl
  ldexp
- ldexpf
+ listen
  log
  log10
  longjmp
@@ -330,6 +352,7 @@
  memset_pattern16
  mktime
  nexttoken
+ poll
  pow
  powf
  printf
@@ -346,14 +369,24 @@
  remove
  roundf
  sched_yield
+ send
  setjmp
+ setsockopt
+ shutdown
  sin
  sinf
  snprintf
+ socket
  sprintf
  sscanf
  std::__1::__basic_string_common<true>::__throw_length_error() const
+ std::__1::__get_classname(char const*, bool)
+ std::__1::__get_collation_name(char const*)
+ std::__1::__match_any_but_newline<char>::__exec(std::__1::__state<char>&) const
  std::__1::__next_prime(unsigned long)
+ std::__1::__shared_weak_count::__add_shared()
+ std::__1::__shared_weak_count::__release_shared()
+ std::__1::__shared_weak_count::~__shared_weak_count()
  std::__1::__vector_base_common<true>::__throw_length_error() const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
@@ -372,12 +405,22 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::erase(unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::find(char, unsigned long) const
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
+ std::__1::collate<char>::id
+ std::__1::ctype<char>::id
+ std::__1::locale::locale()
+ std::__1::locale::locale(std::__1::locale const&)
+ std::__1::locale::name() const
+ std::__1::locale::use_facet(std::__1::locale::id&) const
+ std::__1::locale::~locale()
+ std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
+ std::__1::regex_error::~regex_error()
  std::__1::to_string(int)
  std::exception::what() const
  std::exception::~exception()
@@ -402,9 +445,9 @@
  strtoull
  syscall
  tan
- tanf
  time
  timezone
+ typeinfo for CThread
  typeinfo for CVProfReporter
  typeinfo for IStack_Annotation
  typeinfo for bool
@@ -412,10 +455,14 @@
  typeinfo for float
  typeinfo for int
  typeinfo for long long
+ typeinfo for std::__1::__shared_weak_count
+ typeinfo for std::__1::regex_error
  typeinfo for std::bad_alloc
  typeinfo for std::exception
  typeinfo for unsigned int
  typeinfo for unsigned long long
+ void std::__1::__sort<std::__1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, std::__1::__less<unsigned long long, unsigned long long>&)
+ void std::__1::__sort<std::__1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, std::__1::__less<unsigned long, unsigned long>&)
  vsnprintf
  vtable for BasicStatStructFieldDesc
  vtable for __cxxabiv1::__class_type_info

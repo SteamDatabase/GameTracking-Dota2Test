@@ -74,6 +74,81 @@
 				<Label class="Assists" text="{i:assists}" />
 			</Panel>
 		</snippet>
+
+		<snippet name="DarkMoonPlayerRow">
+			<Panel class="DarkMoonPlayerRowContainer">
+				<Panel class="AvatarWell">
+					<DOTAAvatarImage id="PlayerAvatar" />
+				</Panel>
+				<DOTAHeroImage id="HeroIcon" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect" />
+				<Panel class="NameAndHero TopBottomFlow">
+					<DOTAUserName id="PlayerNameScoreboard"/>
+					<Panel class="LeftRightFlow">
+						<Label class="HeroLevelLabel MonoNumbersFont" text="{d:dark_moon_hero_level}"/>
+						<Label class="LevelAndHero" text="{s:dark_moon_hero_name}"/>
+					</Panel>
+				</Panel>
+				<Label class="DarkMoonPlayerStat DarkMoonPlayerKills DarkMoonPlayerKillsColumn" text="{d:dark_moon_kills}" />
+				<Label class="DarkMoonPlayerStat DarkMoonPlayerDeaths DarkMoonPlayerDeathsColumn" text="{d:dark_moon_deaths}" />
+				<Label class="DarkMoonPlayerStat DarkMoonPlayerSaves DarkMoonPlayerSavesColumn" text="{d:dark_moon_saves}" />
+				<Label class="DarkMoonPlayerStat DarkMoonPlayerBags DarkMoonPlayerBagsColumn" text="{d:dark_moon_bags}" />
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsDamageTableHeader">
+			<Panel class="DetailsDamageHeader">
+				<DOTAHeroImage id="DetailsDamageHeroSource" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect" />
+				<Panel id="DamageHeaderHeroes" class="LeftRightFlow">
+					<!-- Columns filled in via code -->
+				</Panel>
+				<Label class="DamageTotal" text="Total" />
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsDamageTableRowBasic">
+			<Panel class="DetailsDamageRow">
+				<Image src="s2r://panorama/images/spellicons/attr_damage_png.vtex" class="DamageBasicIcon" scaling="stretch-to-cover-preserve-aspect" onmouseover="UIShowTextTooltip( #DOTA_HUD_Killcam_AttackDmg )" onmouseout="UIHideTextTooltip()" />
+				<!-- Columns filled in via code -->
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsDamageTableRowUnit">
+			<Panel class="DetailsDamageRow">
+				<Image id="DamageUnitImage" scaling="stretch-to-cover-preserve-aspect" />
+				<!-- Columns filled in via code -->
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsDamageTableRowAbility">
+			<Panel class="DetailsDamageRow">
+				<DOTAAbilityImage id="DamageAbilityImage" />
+				<!-- Columns filled in via code -->
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsDamageTableRowBottom">
+			<Panel class="DetailsDamageRow">
+				<Label class="DamageTotal" text="Total" />
+				<!-- Columns filled in via code -->
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsBuffTableHeader">
+			<Panel class="DetailsBuffHeader">
+				<DOTAHeroImage id="DetailsBuffHeroSource" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect" />
+				<Panel id="BuffHeaderHeroes" class="LeftRightFlow">
+					<!-- Columns filled in via code -->
+				</Panel>
+			</Panel>
+		</snippet>
+
+		<snippet name="DetailsBuffTableRowAbility">
+			<Panel class="DetailsBuffRow">
+				<DOTAAbilityImage id="BuffAbilityImage" />
+				<!-- Columns filled in via code -->
+			</Panel>
+		</snippet>
+		
 	</snippets>
 	
 	<DOTAPostGame>
@@ -150,6 +225,91 @@
 															
 								</DOTAPostGameOverviewHeroContainer>
 
+								<Panel id="DarkMoonContainer">
+									<Panel id="DarkMoonPlayerRows">
+										<Panel class="DarkMoonPlayerRowLegendContainer">
+											<Label class="DarkMoonPlayerKillsColumn" text="#dota_post_game_dark_moon_legend_kills" />
+											<Label class="DarkMoonPlayerDeathsColumn" text="#dota_post_game_dark_moon_legend_deaths" />
+											<Label class="DarkMoonPlayerSavesColumn" text="#dota_post_game_dark_moon_legend_saves" />
+											<Label class="DarkMoonPlayerBagsColumn" text="#dota_post_game_dark_moon_legend_bags" />
+										</Panel>
+										<!-- Full of DarkMoonPlayerRow snippets -->
+									</Panel>
+								</Panel>
+								
+								<Panel id="SiltbreakerContainer">
+									<Panel id="SiltbreakerMapContainer">
+										<Panel id="SiltbreakerMapHolder">
+											<!-- DOTASiltbreakerMapAct1 or DOTASiltbreakerMapAct2 will be added dynamically -->
+										</Panel>
+										<Label text="#DOTA_Siltbreaker_ClickForZoneDetails" />
+									</Panel>
+									<Panel id="SiltbreakerZoneDetails" onactivate="DOTASiltbreakerZoneActivated( '' )">
+										<Panel id="SiltbreakerZoneDetailsContents">
+											<Panel id="SiltbreakerZoneDetailsHeader">
+												<Panel id="SiltbreakerZoneDetailsStars">
+													<Panel id="SiltbreakerZoneDetailsStar1" class="SiltbreakerZoneStar" />
+													<Panel id="SiltbreakerZoneDetailsStar2" class="SiltbreakerZoneStar" />
+													<Panel id="SiltbreakerZoneDetailsStar3" class="SiltbreakerZoneStar" />
+												</Panel>
+												<Label id="SiltbreakerZoneDetailsZoneName" class="TitleFont" text="{s:zone_name}" />
+												<Panel class="FillWidth" />
+												<Panel id="SiltbreakerZoneDetailsDurationIcon" />
+												<Label id="SiltbreakerZoneDetailsDurationLabel" class="MonoNumbersFont" text="{s:completion_time}" />
+											</Panel>
+											<Panel id="SiltbreakerZoneDetailsTeamStats" class="SiltbreakerZoneStatsSection">
+												<Panel id="SiltbreakerZoneDetailsStats">
+													<Panel id="SiltbreakerZoneKills" class="SiltbreakerZoneDetailsStat">
+														<Label class="SiltbreakerZoneDetailsStatTitle" text="#DOTA_ti7_campaign_bp_tab_zonestar_killstats" />
+														<Label class="SiltbreakerZoneDetailsStatValue" text="{d:kills}" />
+													</Panel>
+													<Panel id="SiltbreakerZoneDeaths" class="SiltbreakerZoneDetailsStat">
+														<Label class="SiltbreakerZoneDetailsStatTitle" text="#DOTA_TI7_CampaignDetails_Deaths" />
+														<Label class="SiltbreakerZoneDetailsStatValue" text="{d:deaths}" />
+													</Panel>
+													<Panel id="SiltbreakerZoneDamage" class="SiltbreakerZoneDetailsStat">
+														<Label class="SiltbreakerZoneDetailsStatTitle" text="#DOTA_ti7_campaign_bp_tab_zonestar_dmgstats" />
+														<Label class="SiltbreakerZoneDetailsStatValue" text="#DOTA_Siltbreaker_DamageThousands" />
+													</Panel>
+													<Panel id="SiltbreakerZoneHealing" class="SiltbreakerZoneDetailsStat">
+														<Label class="SiltbreakerZoneDetailsStatTitle" text="#DOTA_ti7_campaign_bp_tab_zonestar_healstats" />
+														<Label class="SiltbreakerZoneDetailsStatValue" text="#DOTA_Siltbreaker_HealingThousands" />
+													</Panel>
+												</Panel>
+												<Panel id="SiltbreakerZoneDetailsPickups">
+													<Panel id="SiltbreakerZoneGoldBags" class="SiltbreakerZoneDetailsPickupCategory">
+														<Panel class="SiltbreakerZoneDetailsPickupCategoryIcon" />
+														<Label class="SiltbreakerZoneDetailsPickupCategoryValue" text="{d:gold_bags}" />
+													</Panel>
+													<Panel id="SiltbreakerZonePotions" class="SiltbreakerZoneDetailsPickupCategory">
+														<Panel class="SiltbreakerZoneDetailsPickupCategoryIcon" />
+														<Label class="SiltbreakerZoneDetailsPickupCategoryValue" text="{d:potions}" />
+													</Panel>
+													<Panel id="SiltbreakerZoneItems" class="SiltbreakerZoneDetailsPickupCategory">
+														<Panel class="SiltbreakerZoneDetailsPickupCategoryIcon" />
+														<Label class="SiltbreakerZoneDetailsPickupCategoryValue" text="{d:items}" />
+													</Panel>
+													<Panel id="SiltbreakerZoneRevives" class="SiltbreakerZoneDetailsPickupCategory">
+														<Panel class="SiltbreakerZoneDetailsPickupCategoryIcon" />
+														<Label class="SiltbreakerZoneDetailsPickupCategoryValue" text="{d:revive_time}" />
+													</Panel>
+												</Panel>
+											</Panel>
+											<Panel id="SiltbreakerZoneDetailsFooter">
+												<Button id="SiltbreakerPreviousZoneDetailsButton" class="SiltbreakerChangeZoneButton">
+													<Panel class="SiltbreakerChangeZoneArrow" />
+													<Label class="TitleFont" text="{s:previous_zone_name}" />
+												</Button>
+												<Panel class="FillWidth" />
+												<Button id="SiltbreakerNextZoneDetailsButton" class="SiltbreakerChangeZoneButton">
+													<Label class="TitleFont" text="{s:next_zone_name}" />
+													<Panel class="SiltbreakerChangeZoneArrow" />
+												</Button>
+											</Panel>
+										</Panel>
+									</Panel>
+								</Panel>
+								
 								<DOTAPostGameHeroStats id="LeftHeroStats" class="HeroStats" hittest="false"/>
 								<DOTAPostGameHeroStats id="RightHeroStats" class="HeroStats" hittest="false"/>
 
@@ -219,7 +379,7 @@
 										<Panel id="LeaguePanel" class="LeftRightFlow">
 											<Label class="MatchDetailsCategory DetailsHeaderLabel" text="#dota_page_match_details_header_league_name" />
 											<Button id="LeagueName" class="MatchDetailsValue MatchDetailsLink" >
-												<Label text="{s:league_name}" />
+												<Label text="{g:dota_league_name:league_id}" />
 											</Button>
 										</Panel>
 										<Panel id="WeekendTourneyPanel" class="MatchDetailsPairContainer">
@@ -250,8 +410,26 @@
 										<Panel class="ReplayExistence" id="ReplayExistenceRequestedNotification">
 											<Label text="#DOTA_RecentGame_Pending" />
 										</Panel>
+									</Panel>	
+								</Panel>
+
+								<Panel class="GuideContainer">
+									<Label class="GuideName" text="{s:guide_name}" />
+									<Panel class="VotingGroup" >
+										<Label text="#Dota_PostGame_RateGuide" />
+										<Button id="VoteUpButton" onactivate="DOTAPostGameVoteGuideUp()" >
+											<Image class="VoteIcon" src="s2r://panorama/images/icon_thumbs_up_png.vtex" scaling="stretch-to-fit-preserve-aspect" />
+										</Button>
+										<Button id="VoteDownButton" onactivate="DOTAPostGameVoteGuideDown()" >
+											<Image class="VoteIcon VoteIconFlipped" src="s2r://panorama/images/icon_thumbs_up_png.vtex" scaling="stretch-to-fit-preserve-aspect" />
+										</Button>
+									</Panel>
+									<Panel class="FavoriteGroup" >
+										<Label text="#Dota_PostGame_FavoriteGuide" />
+										<ToggleButton id="FavoriteStar" class="PublicTitleItem" onmouseover="UIShowTextTooltip( #DOTA_HeroGuide_Favorites_Tooltip )" onmouseout="UIHideTextTooltip()" onactivate="DOTAPostGameToggleFavoriteGuide()" />
 									</Panel>
 								</Panel>
+
 								<Panel id="ScrubberContainer">
 									<Slider id="ItemScrubber" class="HorizontalSlider" direction="horizontal" >
 										<Panel id="SliderThumb" class="TopBottomFlow">
@@ -418,7 +596,7 @@
 							<Label id="DetailsBasicGraphsBottomY2" class="MonoNumbersFont GraphYAxisLabel TeamNetWorthBottomAxisLabel" text="{u:graph_y_2}" />
 							<Label id="DetailsBasicGraphsBottomY3" class="MonoNumbersFont GraphYAxisLabel TeamNetWorthBottomAxisLabel" text="{u:graph_y_3}" />
 						</Panel>
-						<DOTACanvas id="DetailsBasicGraphsCanvas" />
+						<UICanvas id="DetailsBasicGraphsCanvas" />
 						<Panel id="DetailsBasicGraphsKey">
 							<Panel id="NetWorthKeyColorBox" class="KeyColorBox" />
 							<Label text="#dota_page_match_details_legend_net_worth_tooltip" />
@@ -426,8 +604,8 @@
 							<Label text="#dota_page_match_details_legend_experience" />
 						</Panel>
 
-						<DOTACanvas id="DetailsPlayerNetWorthGraphCanvas" />
-						<DOTACanvas id="DetailsPlayerLevelGraphCanvas" />
+						<UICanvas id="DetailsPlayerNetWorthGraphCanvas" />
+						<UICanvas id="DetailsPlayerLevelGraphCanvas" />
 						<Panel id="GraphButtonContainer">
 
 							<RadioButton id="GraphTeamNetWorthButton" class="BlueButton" onactivate="DOTAPostGameSwitchGraph( GraphTeamNetWorth )">
@@ -447,7 +625,7 @@
 					</Panel>
 
 					<Panel id="PlayerItemsGraphContainer">
-						<DOTACanvas id="DetailsPlayerItemsGraphCanvas" />
+						<UICanvas id="DetailsPlayerItemsGraphCanvas" />
 						<Panel id="PlayerItemsRowContainer" />
 					</Panel>
 					
@@ -516,8 +694,8 @@
 					<Panel id="DetailsHeatmaps" class="DetailsPanel">
 						<Panel class="DetailsHeatmapsBlock" id="HeatmapsContainer">
 							<Panel class="DetailsHeatmapsMinimap" />
-							<DOTACanvas class="DetailsHeatmapsHeatmap" id="DetailsHeatmapsHeatmapRadiant" />
-							<DOTACanvas class="DetailsHeatmapsHeatmap" id="DetailsHeatmapsHeatmapDire" />
+							<UICanvas class="DetailsHeatmapsHeatmap" id="DetailsHeatmapsHeatmapRadiant" />
+							<UICanvas class="DetailsHeatmapsHeatmap" id="DetailsHeatmapsHeatmapDire" />
 							<Panel class="HeatmapRadiantHeroIcon" id="HeatmapRadiantHero1" />
 							<Panel class="HeatmapRadiantHeroIcon" id="HeatmapRadiantHero2" />
 							<Panel class="HeatmapRadiantHeroIcon" id="HeatmapRadiantHero3" />
@@ -536,6 +714,18 @@
 						<Button onactivate="TogglePlayPause()" class="BlueButton"><Label text="Play/Pause" /></Button>
 					</Panel>
 					
+					<Panel id="DetailsDamage" class="DetailsPanel">
+						<Panel id="DetailsDamageTable">
+							<!-- Snippets of DetailsDamageTableHeader followed by DetailsDamageTableRowX -->
+						</Panel>
+					</Panel>
+					
+					<Panel id="DetailsBuff" class="DetailsPanel">
+						<Panel id="DetailsBuffTable">
+							<!-- Snippets of DetailsBuffTableHeader followed by DetailsBuffTableRowX -->
+						</Panel>
+					</Panel>
+					
 				</Panel>
 
 				<Panel id="PinnedHeroes" class="LeftRightFlow">
@@ -550,7 +740,7 @@
 								</Panel>
 								<Label id="RadiantTeamScore" class="PinnedTeamScore" text="#dota_page_match_details_radiant_score" html="true"/>
 							</Panel>
-							<ToggleButton id="GraphRadiantSelectedToggleButton" onactivate="DOTAPostGameToggleTeamSelected( 2 )"/>								
+							<ToggleButton id="GraphRadiantSelectedToggleButton" onactivate="DOTAPostGameToggleTeamSelected( 2 )"/>
 							<Panel id="RadiantWinner" class="WinnerPanel LeftRightFlow">
 								<Panel class="WinnerSides"/>
 								<Label class="WinnerTag" text="#DOTATournamentGameWinner"/>
@@ -567,7 +757,7 @@
 								</Panel>
 								<Label id="DireTeamScore" class="PinnedTeamScore" text="#dota_page_match_details_dire_score" html="true"/>
 							</Panel>
-							<ToggleButton id="GraphDireSelectedToggleButton"  onactivate="DOTAPostGameToggleTeamSelected( 3 )"/>							
+							<ToggleButton id="GraphDireSelectedToggleButton" onactivate="DOTAPostGameToggleTeamSelected( 3 )"/>
 							<Panel id="DireWinner" class="WinnerPanel LeftRightFlow">
 								<Panel class="WinnerSides"/>
 								<Label class="WinnerTag" text="#DOTATournamentGameWinner"/>

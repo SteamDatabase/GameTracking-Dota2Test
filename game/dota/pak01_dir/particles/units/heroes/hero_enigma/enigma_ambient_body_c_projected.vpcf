@@ -18,6 +18,8 @@
 			_class = "C_OP_RenderProjected"
 			m_hProjectedMaterial = resource:"materials/particle/particle_glow_01_projected.vmat"
 			m_bFlipHorizontal = true
+			m_bEnableProjectedDepthControls = true
+			m_flMinProjectionDepth = -512.000000
 		},
 	]
 	m_Operators = 
@@ -71,6 +73,31 @@
 		{
 			_class = "C_OP_ContinuousEmitter"
 			m_flEmitRate = 2.000000
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
 		},
 	]
 }

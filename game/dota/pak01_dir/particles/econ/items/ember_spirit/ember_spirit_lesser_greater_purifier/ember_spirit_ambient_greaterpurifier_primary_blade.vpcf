@@ -188,4 +188,34 @@
 			m_ChildRef = resource:"particles/econ/items/ember_spirit/ember_spirit_lesser_greater_purifier/ember_spirit_ambient_sword_primary_blade_c.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_weapon_r"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/ember_spirit/greaterpurifier_weapon/greaterpurifier_weapon.vmdl"
+			}
+		},
+	]
 }

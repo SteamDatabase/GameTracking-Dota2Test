@@ -57,6 +57,23 @@
 			m_flFadeStartTime = 0.250000
 			m_flFadeEndTime = 0.000000
 		},
+		{
+			_class = "C_OP_RemapCPtoVector"
+			m_nCPInput = 15
+			m_nFieldOutput = 6
+			m_vInputMax = 
+			[
+				255.000000,
+				255.000000,
+				255.000000,
+			]
+			m_vOutputMax = 
+			[
+				255.000000,
+				255.000000,
+				255.000000,
+			]
+		},
 	]
 	m_Initializers = 
 	[
@@ -136,6 +153,12 @@
 		},
 		{
 			m_ChildRef = resource:"particles/ui_mouseactions/bounding_area_view_a2.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
 		},
 	]
 }

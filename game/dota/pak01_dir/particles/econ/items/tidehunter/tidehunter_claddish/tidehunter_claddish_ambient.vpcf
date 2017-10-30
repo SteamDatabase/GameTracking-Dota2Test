@@ -69,4 +69,34 @@
 			m_ChildRef = resource:"particles/econ/items/tidehunter/tidehunter_claddish/tidehunter_claddish_ambient_drip.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_claddish_ambient"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/tidehunter/claddish_cudgel/claddish_cudgel.vmdl"
+			}
+		},
+	]
 }

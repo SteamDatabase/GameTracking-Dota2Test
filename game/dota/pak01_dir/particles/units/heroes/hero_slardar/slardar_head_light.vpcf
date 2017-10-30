@@ -87,4 +87,34 @@
 			m_ChildRef = resource:"particles/units/heroes/hero_slardar/slardar_head_light_b.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_light"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/slardar/sea_dragon/slardar_sea_dragon_head.vmdl"
+			}
+		},
+	]
 }

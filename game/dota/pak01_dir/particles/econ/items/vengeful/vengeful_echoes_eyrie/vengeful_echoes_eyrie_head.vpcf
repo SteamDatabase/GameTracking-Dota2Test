@@ -227,4 +227,34 @@
 			m_ChildRef = resource:"particles/econ/items/vengeful/vengeful_echoes_eyrie/vengeful_ambient_head_flames_motenai.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_head"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/vengefulspirit/echoes_eyrie_head/echoes_eyrie_head.vmdl"
+			}
+		},
+	]
 }

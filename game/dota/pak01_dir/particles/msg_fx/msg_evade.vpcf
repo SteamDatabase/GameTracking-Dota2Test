@@ -50,7 +50,7 @@
 			[
 				0.000000,
 				0.000000,
-				100.000000,
+				-1600.000000,
 			]
 		},
 		{
@@ -81,18 +81,27 @@
 		},
 		{
 			_class = "C_INIT_CreateWithinSphere"
-			m_LocalCoordinateSystemSpeedMin = 
-			[
-				0.000000,
-				0.000000,
-				150.000000,
-			]
+			m_fSpeedMax = 100.000000
+			m_fSpeedMin = 10.000000
 			m_LocalCoordinateSystemSpeedMax = 
 			[
 				0.000000,
 				0.000000,
 				150.000000,
 			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				0.000000,
+				0.000000,
+				50.000000,
+			]
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				0.000000,
+				1.000000,
+			]
+			m_fRadiusMax = 40.000000
 		},
 		{
 			_class = "C_INIT_RandomLifeTime"

@@ -17,15 +17,15 @@
 	
 	<DOTATreasureDetailsPage class="DashboardPage OpeningNone" defaultfocus="TreasureContents">
 
-		<DOTAScenePanel id="PreviewRays" class="MainPreviewRays" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false"/>
+		<DOTAScenePanel id="PreviewRays" class="MainPreviewRays" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false" particleonly="false"/>
 		<Panel id="TreasureContentsContainer">
-			<Carousel id="TreasureContents" panels-visible="16" focus="center" clipaftertransform="true">
+			<Carousel id="TreasureContents" panels-visible="23" focus="center" clipaftertransform="true">
 				<!-- filled in dynamically -->
 			</Carousel>
 		</Panel>
-		<DOTAScenePanel id="PreviewRays2" class="MainPreviewRays" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false"/>
+		<DOTAScenePanel id="PreviewRays2" class="MainPreviewRays" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false" particleonly="false"/>
 
-		<DOTAScenePanel id="ItemReceivedParticles" map="scenes/treasure_opening" camera="shot_camera" hittest="false" />
+		<DOTAScenePanel id="ItemReceivedParticles" map="scenes/treasure_opening" camera="shot_camera" hittest="false" particleonly="true" />
 
 		<Panel id="ItemPreviewTempContainer" />
 		
@@ -62,7 +62,7 @@
 				<Panel id="TreasureControlsLeft">
 					<Panel id="TreasureControlsLeftBackground">
 						<Panel id="TreasureControlsLeftBackgroundGradient" />
-						<DOTAScenePanel id="PreviewRaysSmallLeft" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false"/>
+						<DOTAScenePanel id="PreviewRaysSmallLeft" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false" particleonly="false"/>
 					</Panel>
 					<Panel id="TreasureControlsEquip">
 						<Panel id="TreasureControlsEquipButtons">
@@ -104,7 +104,7 @@
 				<Panel id="TreasureControlsRight">
 					<Panel id="TreasureControlsRarity">
 						<Panel id="RarityBackgroundGradient" />
-						<DOTAScenePanel id="PreviewRaysSmall" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false"/>
+						<DOTAScenePanel id="PreviewRaysSmall" map="scenes/loadout_preview_rays" camera="camera_1" hittest="false" particleonly="false"/>
 						<Panel id="TreasureControlsRarityForeground">
 							<Label id="TreasureControlsRarityTitle" text="{s:treasure_item_description}" />
 							<Label id="TreasureControlsRarityValue" text="{s:treasure_item_rarity}" />
@@ -112,6 +112,7 @@
 					</Panel>
 				</Panel>
 			</Panel>
+			<TextButton id="FullPreviewButton" text="#DOTA_Treasure_ZoomOut" onactivate="DOTASetTreasureFullPreview( true )" />
 		</Panel>
 
 		<Panel id="TreasureOpening">
@@ -182,10 +183,12 @@
 			<Panel id="TreasureDetailsContents">
 				<Panel class="TreasureDetailsRow">
 					<Panel id="TreasureIdentity">
-						<Label id="TreasureName" text="{g:dota_item_name:base_treasure_item_def}" onmouseover="DOTAShowSelectedOpenTreasureTooltip()" onmouseout="DOTAHideOpenTreasureTooltip()" />
-						
+						<Label id="TreasureName" text="{g:dota_item_name:base_treasure_item_def}{s:base_treasure_item_def_number}" onmouseover="DOTAShowSelectedOpenTreasureTooltip()" onmouseout="DOTAHideOpenTreasureTooltip()" />
 					</Panel>
-					<EconItemImage id="TreasureImage" />
+					<Panel id="TreasureImageContainer">
+						<EconItemImage id="TreasureImage" />
+						<TextButton id="TreasureGrantButton" text="#DOTA_Grant" onactivate="DOTAGrantSelectedTreasure()" />
+					</Panel>
 				</Panel>
 				
 				<Panel id="AutographRow" class="TreasureDetailsRow">
@@ -289,6 +292,15 @@
 				</Button>
 			</Panel>
 
+			<Panel id="EventRecycling">
+				<Panel id="EventRecyclingHeader">
+					<Label id="EventRecyclingTitle" class="TitleFont" text="{s:event_recycle_event_name}" />
+					<Label id="EventRecyclingSubtitle" text="{s:event_recycle_description}" />
+				</Panel>
+				<Panel class="FillWidth" />
+				<TextButton id="EventRecyclingButton" text="#DOTA_Recycling_Action" onactivate="DOTARecycleSelectedTreasure()" />
+			</Panel>
+
 			<Panel id="OwnedTreasures">
 				<Panel id="OwnedTreasuresCount">
 					<Panel class="OwnedTreasuresCountContents">
@@ -327,12 +339,7 @@
 				</Panel>
 			
 			</Panel>
-		
-			<Panel id="ViewControls">
-				
-				<RadioButton id="FullPreviewButton" group="treasure_view" onactivate="DOTASetTreasureFullPreview( true )" />
-				<RadioButton id="DetailsViewButton" group="treasure_view" onactivate="DOTASetTreasureFullPreview( false )" />
-			</Panel>
+
 		</Panel>
 
 		<Panel id="TreasureExtraInfo">

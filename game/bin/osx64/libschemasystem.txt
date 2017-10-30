@@ -7,7 +7,6 @@
  CThreadSpinRWLock::UnlockWrite()
  CThreadSyncObject::~CThreadSyncObject()
  CommandLine
- EarlyInit_Tier0
  GetCPUInformation
  KeyValuesSystem
  LOG_GENERAL
@@ -51,6 +50,7 @@
  V_qsort
  V_qsort_s
  V_snprintf
+ V_sscanf
  V_stricmp_fast
  V_stristr_fast(char const*, char const*)
  V_strtod

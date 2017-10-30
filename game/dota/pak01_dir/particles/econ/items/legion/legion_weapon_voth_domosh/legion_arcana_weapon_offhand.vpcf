@@ -126,4 +126,35 @@
 			m_ChildRef = resource:"particles/econ/items/legion/legion_weapon_voth_domosh/legion_arcana_weapon_glint_add.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_attack2"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/legion_commander/demon_sword.vmdl"
+			}
+		},
+	]
+	m_nMaxParticles = 30
 }

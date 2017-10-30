@@ -2,7 +2,7 @@
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 84
-	m_pszSnapshotName = "particles\models\items\skywrath_mage\manticore_of_the_eyrie_wings\wings_of_the_manticore.psf"
+	m_pszSnapshotName = "particles/models/items/skywrath_mage/manticore_of_the_eyrie_wings/manticore_wings_fx.psf"
 	m_nSnapshotControlPoint = 6
 	m_flConstantRadius = 3.000000
 	m_flConstantLifespan = 0.000000
@@ -130,6 +130,35 @@
 		},
 		{
 			m_ChildRef = resource:"particles/econ/items/skywrath_mage/manticore/wings_of_the_manticore_ambientfx_smoke_shad.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/skywrath_mage/manticore_of_the_eyrie_wings/manticore_of_the_eyrie_wings.vmdl"
+			}
 		},
 	]
 }

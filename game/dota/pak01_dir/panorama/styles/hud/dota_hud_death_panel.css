@@ -6,7 +6,7 @@ DOTAHUDDeathPanel
 	flow-children: none;
     visibility: collapse;
     vertical-align: bottom;
-	z-index: 3;
+	z-index: 5;
 }
 
 DOTAHUDDeathPanel.Dead.ValidUnit
@@ -77,6 +77,8 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	padding-top: 4px;
 	margin-top: -1px;
 	letter-spacing: 1px;
+	
+	font-weight: bold;
 }
 
 .BuybackDisabled #BuybackCostLabel
@@ -112,11 +114,14 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	font-size: 15px;
 	horizontal-align: center;
 	text-transform: uppercase;
+	
+	font-weight: bold;
+	
 }
 
 #NoBuybackLabel
 {
-	margin-top: 4px;
+	margin-top: 3px;
 }
 
 .BuybackDisabled #BuybackLabel,
@@ -131,6 +136,16 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	color: #ff2020;
 	margin-left: 5px;
 }
+
+.AltPressed.BuybackDisabled #BuybackStatusContainer,
+.AltPressed.BuybackOnCooldown #BuybackStatusContainer,
+.AltPressed.BuybackDisabled #BuybackLabel,
+.AltPressed.BuybackOnCooldown #NoBuybackLabel
+{
+	opacity: 0.05;
+}
+
+
 
 .BuybackDisabled #NoBuybackLabel
 {
@@ -160,13 +175,15 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	horizontal-align: center;
 	text-shadow: 0px 0px 6px 5 #350000dd ;
 	opacity: 1;	
-	width: 100%;
+	width: fit-children;
 	height: 100px;
 	text-align: center;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), to( #680000dd ) );	
-	visibility: collapse;
-}
+	margin-bottom: 51px;
 
+	visibility: collapse;
+	
+	z-index: 5;
+}
 
 #DeathTimer
 {
@@ -201,6 +218,8 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	margin-left: 22px;
 	visibility: collapse;
 	text-shadow: 1px 1px 4px 2 #000000;
+	
+	font-weight: bold;
 }
 
 .BuybackOnCooldown #BuybackCooldownLabel
@@ -271,16 +290,17 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	height: 48px;
 	background-image: url("s2r://panorama/images/hud/reborn/buyback_button_psd.vtex");
 	background-image: none;
-	background-color: gradient( linear, 0% 100%, 0% 0%, from( #4DA18B ), to( #494137 ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #6DA18B ), to( #494137 ) );
     background-repeat: no-repeat;
+	
     background-position: 50% 50%;
     background-size: 100%;
 	visibility: collapse;
-	vertical-align: top;
+	vertical-align: bottom;
 	brightness: 1;
 	z-index: 5;
-	margin-top: 62px;
-	transform: translateY(-50px);
+	//margin-top: 100px;
+	//transform: translateY(-50px);
 	border-top: 2px solid #78d7bF;
 	border-bottom: 2px solid #4C4136;
 	border-left: 2px solid #4C8D79;
@@ -291,6 +311,16 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	transition-duration: .3s;
 	transition-timing-function: ease-in-out;
 	
+	//margin-left: 30px;
+	
+}
+
+#RespawnBacker
+{
+	width: 100%;
+	height: 78px;
+	background-color: gradient( linear, 0% 100%, 0% 0%, from( #260e0e ), color-stop( 0.6, #260e0eee ), to( #260e0e00 ) );
+	vertical-align: bottom;
 }
 
 .BuybackDisabled #BuybackButton
@@ -344,14 +374,15 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 	visibility: collapse;
 }
 
-.BuybackDisabled #Cost,
+.BuybackNotEnoughGold #Cost,
 .BuybackOnCooldown #Cooldown
 {
 	visibility: visible;
+		
 }
 
-
-#death_panel_buyback #RespawnLabel
+.AltPressed.BuybackNotEnoughGold #Cost,
+.AltPressed.BuybackOnCooldown #Cooldown
 {
 	visibility: collapse;
 }
@@ -360,5 +391,5 @@ DOTAHUDDeathPanel.Dead.ValidUnit
 
 #death_panel #BuybackButton
 {
-	visibility: collapse;
+	//visibility: collapse;
 }

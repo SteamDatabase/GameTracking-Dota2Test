@@ -7,7 +7,6 @@
  CommandLine
  ConMsg(char const*, ...)
  DevMsg(char const*, ...)
- EarlyInit_Tier0
  KeyValuesSystem
  LOG_GENERAL
  LoggingSystem_IsChannelEnabled
@@ -15,9 +14,11 @@
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
  Msg
+ Plat_CheckSDL
  Plat_DebugPrint
  Plat_ExitProcess
  Plat_GetDefaultMonitorIndex
+ Plat_GetDesktopBounds
  Plat_GetDesktopResolution
  Plat_GetEnv
  Plat_GetOSType
@@ -66,6 +67,8 @@
  V_strtod
  V_strtoi64
  V_tier0_memset
+ V_vscprintf
+ V_vsnprintf
  V_vsnprintfRet
  V_vsnprintfSize
  V_wcstoi64

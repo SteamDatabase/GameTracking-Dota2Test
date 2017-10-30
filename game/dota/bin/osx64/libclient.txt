@@ -19,8 +19,7 @@
  CFStringGetBytes
  CFStringGetLength
  CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
- CFiber::DetachFromStackContext()
- CFiber::ReleasePooledFiber()
+ CFiber::ReachedZeroReferences()
  CFiber::SetThreadFiberMemoryRange(unsigned long)
  CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
  CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
@@ -29,8 +28,15 @@
  CStackTop_Base::CStackTop_Base()
  CStackTop_Base::GetCurrentTop(bool)
  CStackTop_Base::~CStackTop_Base()
+ CThread::CThread()
  CThread::GetName()
+ CThread::Init()
+ CThread::IsThreadRunning()
  CThread::Join(unsigned int)
+ CThread::SetName(char const*)
+ CThread::Start(unsigned int, ThreadPriorityEnum_t)
+ CThread::WaitForCreateComplete(CThreadEvent*)
+ CThread::~CThread()
  CThreadEvent::CThreadEvent(bool)
  CThreadEvent::Reset()
  CThreadEvent::Set()
@@ -84,7 +90,6 @@
  DevMsg(char const*, ...)
  DevWarning
  DevWarning(char const*, ...)
- EarlyInit_Tier0
  FindOrCreateQuantizedFloatEncoder
  GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
  GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
@@ -120,12 +125,16 @@
  Plat_FloatTime
  Plat_GetCPUFrequency
  Plat_GetClockStart
+ Plat_GetCurrentDate
  Plat_GetDPI
+ Plat_GetDefaultMonitorIndex
+ Plat_GetDesktopResolution
  Plat_GetDocumentDirectory
  Plat_GetEnv
  Plat_GetLocalTime
  Plat_GetOSType
  Plat_GetPlatformError
+ Plat_GetThreadIndex
  Plat_GetTimeString
  Plat_GlobalMemoryStatus
  Plat_Is64BitOS
@@ -141,8 +150,10 @@
  Plat_SetFullscreenMinimizeOnFocusLoss
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_TickDiffMilliSecF
+ Plat_TicksAfterMicroSecs
  Plat_USTime
  Plat_UUIDFromString
+ Plat_UUIDToString
  Plat_VirtualAlloc
  Plat_VirtualFree
  Plat_WindowToScreenCoords
@@ -282,7 +293,6 @@
  V_GetFileExtension
  V_HtmlEntityDecodeToUTF8
  V_IsAbsolutePath
- V_ParseToken
  V_PathContainsPath
  V_RemoveDotSlashes
  V_SetErrno
@@ -330,8 +340,9 @@
  V_expf
  V_fclose
  V_fmodf
- V_fopen
+ V_fopenUTF8
  V_fread
+ V_frexpf
  V_isbreakablewspace32
  V_iswcntrl
  V_iswdigit
@@ -344,7 +355,6 @@
  V_pretifynum
  V_qsort
  V_qsort_s
- V_rand
  V_setjmp
  V_sinf
  V_snprintf
@@ -359,7 +369,6 @@
  V_strtoui64
  V_strupper_fast
  V_swscanf
- V_tan
  V_tanf
  V_vfprintf
  V_vscprintf
@@ -367,6 +376,7 @@
  V_vsnprintfRet
  V_vsnprintfSize
  V_vsnwprintf
+ V_wcsicmp
  V_wcsistr(wchar_t const*, wchar_t const*)
  V_wcstod
  V_wcstoi64
@@ -435,6 +445,7 @@
  atan2f
  atof
  atoi
+ atoll
  bind
  ceil
  ceilf
@@ -455,7 +466,6 @@
  fputc
  fread
  free
- frexpf
  fwrite
  g_Mathlib_GammaToLinearByteTable
  g_Tier1_BitWriteMasks
@@ -468,6 +478,7 @@
  g_pThreadPool
  getenv
  gethostbyname
+ ioctl
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
  kCFAllocatorNull
@@ -504,8 +515,10 @@
  roundf
  sched_yield
  select$DARWIN_EXTSN
+ sendto
  setenv
  setjmp
+ setsockopt
  sin
  sinf
  snprintf
@@ -516,11 +529,13 @@
  std::__1::__get_classname(char const*, bool)
  std::__1::__get_collation_name(char const*)
  std::__1::__match_any_but_newline<char>::__exec(std::__1::__state<char>&) const
+ std::__1::__match_any_but_newline<wchar_t>::__exec(std::__1::__state<wchar_t>&) const
  std::__1::__next_prime(unsigned long)
  std::__1::__shared_weak_count::__add_shared()
  std::__1::__shared_weak_count::__release_shared()
  std::__1::__shared_weak_count::~__shared_weak_count()
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::__1::__vector_base_common<true>::__throw_out_of_range() const
  std::__1::basic_ios<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ios()
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::operator<<(double)
  std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
@@ -558,13 +573,20 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::__init(unsigned long, wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::assign(wchar_t const*)
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::basic_string(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::operator=(wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
+ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::reserve(unsigned long)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
  std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_string()
  std::__1::collate<char>::id
+ std::__1::collate<wchar_t>::id
  std::__1::ctype<char>::id
+ std::__1::ctype<wchar_t>::id
  std::__1::ios_base::getloc() const
  std::__1::ios_base::imbue(std::__1::locale const&)
  std::__1::ios_base::init(void*)
@@ -577,7 +599,6 @@
  std::__1::locale::~locale()
  std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
  std::__1::regex_error::~regex_error()
- std::__1::to_string(int)
  std::__1::to_string(unsigned int)
  std::exception::what() const
  std::exception::~exception()
@@ -609,6 +630,7 @@
  tanf
  time
  timezone
+ typeinfo for CThread
  typeinfo for IStack_Annotation
  typeinfo for bool
  typeinfo for bool*
@@ -700,3 +722,4 @@
  wcsncmp
  wcsncpy
  wcstod
+ wmemcmp

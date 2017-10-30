@@ -1,9 +1,47 @@
+DOTACombatEvents
+{
+	/* Flip the container vertically so that the scroll offset is measured from the bottom,
+	   not the top. This is so that it remains constant when a new line is added or
+	   the container grows/shrinks. */
+	transform: scaleY( -1.0 );
+	height: 385px;
+	width: 1000px;
+	overflow: noclip clip;
+}
+
+DOTACombatEvents.RevealCollapsed
+{
+	overflow: noclip scroll;
+}
+
+#ToastLinesWrapper
+{
+    overflow: noclip noclip;
+    width: 100%;
+}
+
 #ToastManager
 {
 	flow-children: down;
-	//margin-right: 20px;
-	height: 400px;
-    overflow: noclip;
+	overflow: noclip noclip;
+	/* Reverse the transform done in DOTACombatEvents so the lines are rightside up */
+    transform: scaleY( -1.0 );
+    width: 100%;
+}
+
+#ToastManager.RevealCollapsed
+{
+	
+}
+
+VerticalScrollBar
+{
+	horizontal-align: left;
+}
+
+.HUDFlipped VerticalScrollBar
+{
+	horizontal-align: right;
 }
 
 .HUDFlipped #ToastManager
@@ -17,12 +55,19 @@
 #ToastManager > .ToastPanel
 {
 	opacity: 0.0;
-	transform: translateX( 40px );
+	transform: translateX( -40px );
 
-	transition-property: position, opacity, transform;
+	transition-property: opacity, transform;
 	transition-duration: toastExitDuration;
     animation-name: CombatEvent;
     animation-duration: .41s;
+    horizontal-align: left;
+}
+
+.HUDFlipped #ToastManager > .ToastPanel
+{
+	transform: translateX( 40px );
+    horizontal-align: right;
 }
 
 @keyframes 'CombatEvent'
@@ -61,6 +106,7 @@
 #ToastManager.SkipTransition > .ToastPanel
 {
 	transition-duration: 0s;
+	animation-duration: 0s;
 }
 
 #ToastManager.RevealCollapsed > .ToastPanel.Collapse,

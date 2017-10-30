@@ -12,7 +12,7 @@ DOTAUnitName
     font-weight: bold;
 	font-size: 16px;
 	text-overflow: shrink;
-	text-shadow: 1px 1px 2px 3 #00000066;
+	text-shadow: 1px 1px 0px 3 #00000066;
 }
 
 //----------------------------------------------------------------------
@@ -24,4 +24,11 @@ DOTAUnitName
     font-size: 14px;
     letter-spacing: 2px;
     text-overflow: clip;
+	text-overflow: shrink;
+	text-align: center;
+}
+
+.Reborn.CustomHUDSkin #UnitNameLabel
+{
+	text-align: center;
 }

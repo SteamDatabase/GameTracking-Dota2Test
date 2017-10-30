@@ -42,8 +42,7 @@
  CFRunLoopGetCurrent
  CFStringCreateWithCString
  CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
- CFiber::DetachFromStackContext()
- CFiber::ReleasePooledFiber()
+ CFiber::ReachedZeroReferences()
  CFiber::SetThreadFiberMemoryRange(unsigned long)
  CMemAllocSystemInitialize
  CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
@@ -68,7 +67,6 @@
  D vpx_codec_vp8_dx_algo
  DevMsg
  DevMsg(char const*, ...)
- EarlyInit_Tier0
  FSEventStreamCreate
  FSEventStreamInvalidate
  FSEventStreamRelease
@@ -96,6 +94,7 @@
  Plat_ExitProcess
  Plat_FloatTime
  Plat_GetOSType
+ Plat_GetThreadIndex
  Plat_IsHighDPI
  Plat_IsInDebugSessionRaw
  Plat_MSTime

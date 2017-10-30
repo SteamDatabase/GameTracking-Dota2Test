@@ -281,6 +281,7 @@ Panel.AHCStat .Right
 	animation-duration: 1.0s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
+	z-index: 1;
 }
 
 @keyframes 'ActiveHeroIconPulse'
@@ -309,6 +310,12 @@ Panel.AHCStat .Right
 		wash-color: #33FFAACC;
 	}
 }
+
+#AHCHeroGrid .GridRow.ActiveRow
+{
+	z-index: 1;
+}
+
 
 #AHCHeroGrid .GridRow.ActiveRow DOTAHeroImage
 {
@@ -602,6 +609,7 @@ DOTAProfilePage #ProfileCardStats .Stat #StatValue
 {
 	height: 100%;
 	width: height-percentage( 100% );
+	margin-left: 80px;
 }
 
 .EditMode #AvatarImage
@@ -1084,7 +1092,7 @@ Button.SimpleIconButtonSteam Image
 
 .PreviousBattlePass
 {
-	width: 72px;
+	width: 65px;
 	height: 72px;
 	vertical-align: middle;
 	margin-right: 16px;
@@ -1100,8 +1108,26 @@ Button.SimpleIconButtonSteam Image
 	visibility: collapse;
 }
 
-.HasRollupTI6 #TI2016.PreviousBattlePass
+#Fall2016.PreviousBattlePass
 {
+	background-image: url("s2r://panorama/images/compendium/fall2016/profile_previous_psd.vtex");
+}
+
+.HasRollupTI6 #TI2016.PreviousBattlePass,
+.HasRollupFall2016 #Fall2016.PreviousBattlePass
+{
+	visibility: visible;
+}
+
+#Winter2017.PreviousBattlePass
+{
+	background-image: url("s2r://panorama/images/compendium/winter2017/profile_previous_psd.vtex");
+	visibility: visible;
+}
+
+#TI2017
+{
+	background-image: url("s2r://panorama/images/compendium/international2017/profile_previous_psd.vtex");
 	visibility: visible;
 }
 
@@ -2074,6 +2100,36 @@ Panel.RecentGame Label
 	margin-bottom: 7px;
 }
 
+#PreviousBattlePasses
+{
+	margin: 0px 16px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: right;
+	overflow: scroll squish;
+}
+
+DOTAProfilePage #ProfileRankTierContainer
+{
+	margin-top: 55px;
+	margin-left: 240px;
+	width: height-percentage( 100% );
+	height: 110px;
+	background-size: 100%;
+	z-index: 2;
+}
+
+.AspectRatio16x10 #ProfileRankTierContainer
+{
+	margin-left: 140px;
+}
+
+.AspectRatio4x3 #ProfileRankTierContainer
+{
+	margin-left: 0px;
+}
+
+
 #ProfileBadgeContainer
 {
 	horizontal-align: right;
@@ -2099,6 +2155,20 @@ DOTAProfilePage #ProfileBadgeBackground
 	width: 102px;
 	height: 101px;
 	background-size: 102px 101px;
+}
+
+
+DOTAProfilePage #RankTier, DOTAProfilePage #RankPips
+{
+	margin: 0;
+	margin-right: 1px;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+
+DOTAProfilePage #RankTier:hover, DOTAProfilePage #RankPips:hover
+{
 }
 
 DOTAProfilePage #ProfileBadge

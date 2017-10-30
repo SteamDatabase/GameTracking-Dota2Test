@@ -1,19 +1,38 @@
 DOTAKillCam
 {
-	margin-top: 68px;
+	
 	width: 508px;
 	height: 242px;
+	
+	height: 262px;
+	
+	margin-top: 138px;
+	
+	
+	padding-bottom: 20px;
 	flow-children: none;
     horizontal-align: right;
 	opacity: 1;
+	
 	
 	transform: translateX(0px);	
 	transition-property: transform, opacity;
 	transition-duration: .32s;
 	transition-delay: 0s, .4s;
 	transition-timing-function: ease-in-out;
+
 }
 
+.HIDE_KILLCAM DOTAKillCam
+{
+	opacity: 0;
+	visibility: collapse;
+}
+
+.KillCamOnLeft.HeroDisplayVisible DOTAKillCam
+{
+	margin-left: 131px;
+}
 
 #MainKillerContainer
 {
@@ -24,45 +43,49 @@ DOTAKillCam
 	vertical-align: bottom;
 }
 
+.KillCamOnLeft #HeroImageContainer
+{
+	horizontal-align: right;
+}
 
-DOTAKillCam.FiveAbilities.Collapsed #MainKillerContainer,
-DOTAKillCam.FourAbilities.Collapsed #MainKillerContainer,
-DOTAKillCam.ThreeAbilities.Collapsed #MainKillerContainer,
-DOTAKillCam.TwoAbilities.Collapsed #MainKillerContainer,
-DOTAKillCam.OneAbilities.Collapsed #MainKillerContainer,
+DOTAKillCam.KillcamAbilities5.Collapsed #MainKillerContainer,
+DOTAKillCam.KillcamAbilities4.Collapsed #MainKillerContainer,
+DOTAKillCam.KillcamAbilities3.Collapsed #MainKillerContainer,
+DOTAKillCam.KillcamAbilities2.Collapsed #MainKillerContainer,
+DOTAKillCam.KillcamAbilities1.Collapsed #MainKillerContainer,
 DOTAKillCam.Collapsed #MainKillerContainer
 {
 	transform: translateX(218px);
 	
 }
 
-.HUDFlipped DOTAKillCam.FiveAbilities.Collapsed #MainKillerContainer,
-.HUDFlipped DOTAKillCam.FourAbilities.Collapsed #MainKillerContainer,
-.HUDFlipped DOTAKillCam.ThreeAbilities.Collapsed #MainKillerContainer,
-.HUDFlipped DOTAKillCam.TwoAbilities.Collapsed #MainKillerContainer,
-.HUDFlipped DOTAKillCam.OneAbilities.Collapsed #MainKillerContainer,
-.HUDFlipped DOTAKillCam.Collapsed #MainKillerContainer
+.KillCamOnLeft DOTAKillCam.KillcamAbilities5.Collapsed #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.KillcamAbilities4.Collapsed #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.KillcamAbilities3.Collapsed #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.KillcamAbilities2.Collapsed #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.KillcamAbilities1.Collapsed #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.Collapsed #MainKillerContainer
 {
 	transform: translateX(-46px);
 }
 
-DOTAKillCam.OneAbilities #MainKillerContainer {	transform: translateX(173px); }
-DOTAKillCam.TwoAbilities #MainKillerContainer {	transform: translateX(129px); }
-DOTAKillCam.ThreeAbilities #MainKillerContainer { transform: translateX(83px); }
-DOTAKillCam.FourAbilities #MainKillerContainer { transform: translateX(39px); }
-DOTAKillCam.FiveAbilities #MainKillerContainer { transform: translateX(0px); }
+DOTAKillCam.KillcamAbilities1 #MainKillerContainer {	transform: translateX(173px); }
+DOTAKillCam.KillcamAbilities2 #MainKillerContainer {	transform: translateX(129px); }
+DOTAKillCam.KillcamAbilities3 #MainKillerContainer { transform: translateX(83px); }
+DOTAKillCam.KillcamAbilities4 #MainKillerContainer { transform: translateX(39px); }
+DOTAKillCam.KillcamAbilities5 #MainKillerContainer { transform: translateX(0px); }
 
-.HUDFlipped DOTAKillCam.FiveAbilities #MainKillerContainer,
-.HUDFlipped DOTAKillCam.FourAbilities #MainKillerContainer, 
-.HUDFlipped DOTAKillCam.ThreeAbilities #MainKillerContainer, 
-.HUDFlipped DOTAKillCam.OneAbilities #MainKillerContainer,
-.HUDFlipped DOTAKillCam.TwoAbilities #MainKillerContainer
+.KillCamOnLeft DOTAKillCam.KillcamAbilities5 #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.KillcamAbilities4 #MainKillerContainer, 
+.KillCamOnLeft DOTAKillCam.KillcamAbilities3 #MainKillerContainer, 
+.KillCamOnLeft DOTAKillCam.KillcamAbilities1 #MainKillerContainer,
+.KillCamOnLeft DOTAKillCam.KillcamAbilities2 #MainKillerContainer
 {
 	transform: translateX(0px); 
 }
 
 
-.HUDFlipped DOTAKillCam
+.KillCamOnLeft DOTAKillCam
 {
     horizontal-align: left;
 }
@@ -74,7 +97,7 @@ DOTAKillCam.Hidden
 	transition-delay: 0s, 0s;
 }
 
-.HUDFlipped DOTAKillCam.Hidden
+.KillCamOnLeft DOTAKillCam.Hidden
 {
 	transform: translateX(-508px);	
 	opacity: 0;
@@ -90,17 +113,17 @@ DOTAKillCam.Hidden
 	flow-children: down;
 	transform-origin: 50% 0%;
 	background-color: #000000ef;
-	margin-left: 168px;
+	margin-left: 166px;
 	//padding-top: 10px;
 	transition-property: transform;
 	transition-duration: .32s;
 	transition-timing-function: ease-in-out;	
 }
 
-.HUDFlipped #HeroDmgContainer
+.KillCamOnLeft #HeroDmgContainer
 {
 	margin-left: 0px;
-	margin-right: 168px;
+	margin-right: 166px;
 	
 }
 
@@ -110,23 +133,23 @@ DOTAKillCam.Hidden
 }
 
 
-.HUDFlipped DOTAKillCam.OneAbilities.Collapsed #HeroDmgContainer { transform: translateX( -212px ); }
-.HUDFlipped DOTAKillCam.TwoAbilities.Collapsed #HeroDmgContainer { transform: translateX( -212px ); }
-.HUDFlipped DOTAKillCam.ThreeAbilities.Collapsed #HeroDmgContainer { transform: translateX( -294px ); }
-.HUDFlipped DOTAKillCam.FourAbilities.Collapsed #HeroDmgContainer { transform: translateX( -256px ); }
-.HUDFlipped DOTAKillCam.FiveAbilities.Collapsed #HeroDmgContainer { transform: translateX( -294px ); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities1.Collapsed #HeroDmgContainer { transform: translateX( -212px ); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities2.Collapsed #HeroDmgContainer { transform: translateX( -212px ); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities3.Collapsed #HeroDmgContainer { transform: translateX( -294px ); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities4.Collapsed #HeroDmgContainer { transform: translateX( -256px ); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities5.Collapsed #HeroDmgContainer { transform: translateX( -294px ); }
 
 
-.HUDFlipped .Collapsed #HeroDmgContainer
+.KillCamOnLeft .Collapsed #HeroDmgContainer
 {
 	transform: translateX( -212px );
 }
 
-DOTAKillCam.OneAbilities #HeroDmgContainer { width: 168px;	}
-DOTAKillCam.TwoAbilities #HeroDmgContainer { width: 212px;	}
-DOTAKillCam.ThreeAbilities #HeroDmgContainer { width: 258px;	}
-DOTAKillCam.FourAbilities #HeroDmgContainer { width: 302px;	}
-DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
+DOTAKillCam.KillcamAbilities1 #HeroDmgContainer { width: 168px;	}
+DOTAKillCam.KillcamAbilities2 #HeroDmgContainer { width: 212px;	}
+DOTAKillCam.KillcamAbilities3 #HeroDmgContainer { width: 258px;	}
+DOTAKillCam.KillcamAbilities4 #HeroDmgContainer { width: 302px;	}
+DOTAKillCam.KillcamAbilities5 #HeroDmgContainer { width: 428px;	}
 
 #KillerInfo
 {
@@ -138,23 +161,23 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	transition-timing-function: ease-in-out;	
 }
 
-.HUDFlipped #KillerInfo
+.KillCamOnLeft #KillerInfo
 {
 	transform: translateX(46px);
 }
 
-.HUDFlipped DOTAKillCam.OneAbilities #KillerInfo { transform: translateX(46px); }
-.HUDFlipped DOTAKillCam.TwoAbilities #KillerInfo { transform: translateX(90px); }
-.HUDFlipped DOTAKillCam.ThreeAbilities #KillerInfo { transform: translateX(136px); } 
-.HUDFlipped DOTAKillCam.FourAbilities #KillerInfo { transform: translateX(180px); }
-.HUDFlipped DOTAKillCam.FiveAbilities #KillerInfo { transform: translateX(216px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities1 #KillerInfo { transform: translateX(46px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities2 #KillerInfo { transform: translateX(90px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities3 #KillerInfo { transform: translateX(136px); } 
+.KillCamOnLeft DOTAKillCam.KillcamAbilities4 #KillerInfo { transform: translateX(180px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities5 #KillerInfo { transform: translateX(216px); }
 
 
-.HUDFlipped DOTAKillCam.OneAbilities.Collapsed #KillerInfo { transform: translateX(46px); }
-.HUDFlipped DOTAKillCam.TwoAbilities.Collapsed #KillerInfo { transform: translateX(46px); }
-.HUDFlipped DOTAKillCam.ThreeAbilities.Collapsed #KillerInfo { transform: translateX(46px); } 
-.HUDFlipped DOTAKillCam.FourAbilities.Collapsed #KillerInfo { transform: translateX(46px); }
-.HUDFlipped DOTAKillCam.FiveAbilities.Collapsed #KillerInfo { transform: translateX(46px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities1.Collapsed #KillerInfo { transform: translateX(46px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities2.Collapsed #KillerInfo { transform: translateX(46px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities3.Collapsed #KillerInfo { transform: translateX(46px); } 
+.KillCamOnLeft DOTAKillCam.KillcamAbilities4.Collapsed #KillerInfo { transform: translateX(46px); }
+.KillCamOnLeft DOTAKillCam.KillcamAbilities5.Collapsed #KillerInfo { transform: translateX(46px); }
 
 
 #KillCamHeroImage
@@ -174,7 +197,7 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	opacity-mask: url("s2r://panorama/images/masks/killcammask_right_psd.vtex") 1;	
 }
 
-.HUDFlipped #KillCamHeroMovie
+.KillCamOnLeft #KillCamHeroMovie
 {
 	opacity-mask: url("s2r://panorama/images/masks/killcammask_left_psd.vtex") 1;	
 }
@@ -255,7 +278,46 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	opacity-mask: url("s2r://panorama/images/masks/brush_horizontal_psd.vtex")1;
 }
 
-.HUDFlipped #KilledByHeroName
+#InspectHero
+{
+    background-image: url("s2r://panorama/images/control_icons/icon_search_png.vtex");
+    width: 32px;
+    height: 32px;
+    vertical-align: bottom;
+    margin-left: 46px;
+    margin-bottom: -20px;
+    background-size: 70%;
+    background-position: 45% 45%;
+    horizontal-align: left;
+    background-color: #000000ea;
+    background-repeat: no-repeat;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid #722320;
+
+    visibility: collapse;
+
+    transition-property: background-color, border;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+#InspectHero:hover
+{
+    background-color: #750400;
+    border-color: #de0f00;
+}
+
+.KilledByHero #InspectHero
+{
+	visibility: visible;
+}
+
+.HUDFlipped #InspectHero
+{
+    horizontal-align: right;
+    margin-right: 44px;
+}
+.KillCamOnLeft #KilledByHeroName
 {
 	padding-left: 20px;
 	padding-right: 42px;
@@ -268,7 +330,7 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	margin-left: 468px;
 	z-index: 2;
 	vertical-align: bottom;
-	margin-bottom: 6px;
+	margin-bottom: -20px;
 	width: 32px;
 	height: 32px;
 	background-size: 60%;
@@ -279,7 +341,7 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	padding: 8px;
 	border-radius: 50%;
 	border: 2px solid #722320;
-	transform: rotateZ(180deg);
+	transform: rotateZ(0deg);
 	
 	transition-property: transform, background-color, border, wash-color;
 	transition-duration: .32s, .2s, .2s,;
@@ -288,46 +350,55 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 
 #ExpandButton:hover
 {
-	transform: rotateZ(180deg) translateX(-2px);
+	transform: rotateZ(0deg) translateX(-2px);
 	background-color: #750400;
-	wash-color: #DE0F00;
-	border-color: white;
+	border-color: #de0f00;
+}
+
+.HUDFlipped #ExpandButton:hover
+{
+    transform: rotateZ(0deg) translateX(2px);
 }
 
 .Collapsed #ExpandButton:hover
 {
-	transform: rotateZ(0deg) translateX(2px);
+	transform: rotateZ(180deg) translateX(2px);
 	background-color: #750400;
-	wash-color: #DE0F00;
-	border-color: white;
+	border-color: #de0f00;
 }
 
 .Collapsed #ExpandButton
 {
 	background-image: url("s2r://panorama/images/control_icons/double_arrow_right_png.vtex");
-	transform: rotateZ(0deg) translateX(0px);
+	transform: rotateZ(180deg) translateX(0px);
 }
 
-.HUDFlipped #ExpandButton
+.HUDFlipped .Collapsed #ExpandButton:hover
+{
+    transform: rotateZ(180deg) translateX(-2px);
+}
+
+
+.KillCamOnLeft #ExpandButton
 {
 	margin-left: 12px;
 	transform: rotateZ(180deg);
 }
 
-.HUDFlipped #ExpandButton:hover
+.KillCamOnLeft #ExpandButton:hover
 {
 	margin-left: 12px;
 	transform: rotateZ(180deg) translateX(-2px);
 }
 
 
-.HUDFlipped .Collapsed #ExpandButton
+.KillCamOnLeft .Collapsed #ExpandButton
 {
 	margin-left: 12px;
 	transform: rotateZ(0deg);
 }
 
-.HUDFlipped .Collapsed #ExpandButton:hover
+.KillCamOnLeft .Collapsed #ExpandButton:hover
 {
 	margin-left: 12px;
 	transform: rotateZ(0deg) translateX(2px);
@@ -365,7 +436,7 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	horizontal-align: right;
 }
 
-.HUDFlipped #KillCamHeroImageOrMovie
+.KillCamOnLeft #KillCamHeroImageOrMovie
 {
 	horizontal-align: left;
 	transform: translateX(122px);
@@ -376,12 +447,12 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	transform: translateX(0px);	
 }
 
-.HUDFlipped #KillCam.Collapsed #KillCamHeroImageOrMovie
+.KillCamOnLeft #KillCam.Collapsed #KillCamHeroImageOrMovie
 {
 	transform: translateX(0px);
 }
 
-.HUDFlipped .Collapsed #KillerInfoContainer Label
+.KillCamOnLeft .Collapsed #KillerInfoContainer Label
 {
 	horizontal-align: left;
 }
@@ -393,18 +464,18 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 }
 
 
-.HUDFlipped #KillerInfoContainer Label
+.KillCamOnLeft #KillerInfoContainer Label
 {
 	horizontal-align: left;
 	margin-left: 0px;
 }
 
-.HUDFlipped #KillerInfoContainer
+.KillCamOnLeft #KillerInfoContainer
 {
 	min-width: 170px;
 }
 
-.HUDFlipped #KilledByHeroName
+.KillCamOnLeft #KilledByHeroName
 {
 	horizontal-align: right;
 }
@@ -432,21 +503,21 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 
 
 
-.HUDFlipped .CenterBuffer.BufferLeft
+.KillCamOnLeft .CenterBuffer.BufferLeft
 {
 	width: fill-parent-flow( 1.0 );
 }
-.HUDFlipped .CenterBuffer.BufferRight
+.KillCamOnLeft .CenterBuffer.BufferRight
 {
 	width: fill-parent-flow( 0.0 );
 }
 
-.HUDFlipped .Collapsed .CenterBuffer.BufferLeft
+.KillCamOnLeft .Collapsed .CenterBuffer.BufferLeft
 {
 	width: fill-parent-flow( 0.3 );
 }
 
-.HUDFlipped .Collapsed .CenterBuffer.BufferRight
+.KillCamOnLeft .Collapsed .CenterBuffer.BufferRight
 {
 	width: fill-parent-flow( 1 );
 }
@@ -461,7 +532,7 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	transition-timing-function: ease-in-out;		
 }
 
-.HUDFlipped #KillerHeroGradient
+.KillCamOnLeft #KillerHeroGradient
 {
 	transform: scaleX(-1);
 }
@@ -479,12 +550,10 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	opacity-mask: url("s2r://panorama/images/masks/killcammask_right_psd.vtex") 1;	
 }
 
-.HUDFlipped .KillCamHeroRender
+.KillCamOnLeft .KillCamHeroRender
 {
 	opacity-mask: url("s2r://panorama/images/masks/killcammask_left_psd.vtex") 1;	
 }
-
-
 
 #TotalDamageLabel
 {
@@ -508,11 +577,11 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	transition-timing-function: ease-in-out;			
 }
 
-.HUDFlipped #TotalDamageLabel
+.KillCamOnLeft #TotalDamageLabel
 {
 	horizontal-align: left;
-	border-top-left-radius: 0px;
 	border-top-right-radius: 6px;
+	border-top-left-radius: 0px;
 }
 
 .Collapsed #TotalDamageLabel
@@ -542,7 +611,7 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	opacity: 0;
 }
 
-.HUDFlipped #TotalDamageColumnBG
+.KillCamOnLeft #TotalDamageColumnBG
 {
 	horizontal-align: left;
 }
@@ -564,28 +633,28 @@ DOTAKillCam.FiveAbilities #HeroDmgContainer { width: 428px;	}
 	margin-right: 0px;
 }
 
-.HUDFlipped .LabelContainer
+.KillCamOnLeft .LabelContainer
 {
 	margin-left: 16px;
 	margin-right: 16px;
 }
 
-.HUDFlipped .LabelBuffer
+.KillCamOnLeft .LabelBuffer
 {
 	visibility: visible;
 }
 
-.HUDFlipped .LabelBuffer.LabelBufferLeft
+.KillCamOnLeft .LabelBuffer.LabelBufferLeft
 {
 	width: fill-parent-flow( 1 );
 }
 
-.HUDFlipped .Collapsed .LabelBuffer
+.KillCamOnLeft .Collapsed .LabelBuffer
 {
 	width: fill-parent-flow( 1 );
 }
 
-.HUDFlipped .Collapsed .LabelBuffer.LabelBufferLeft
+.KillCamOnLeft .Collapsed .LabelBuffer.LabelBufferLeft
 {
 	width: fill-parent-flow( 0 );
 }

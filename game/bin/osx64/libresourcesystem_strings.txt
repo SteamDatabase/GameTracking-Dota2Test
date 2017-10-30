@@ -8,22 +8,23 @@
 	References grouped by matching call stack of at least 1 frame '%short'
 	References grouped by matching call stack of at least 10 frames '%short'
 	References grouped by matching call stack of at least 4 frames '%short'
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	fff.
 	fffff.
+       
         
                 CStackAnnotation_SimpleString
-    p
-  0  
-  P0 
-  `P 
  A;L$
  L;>u
  [A\A^A_]
  ffff.
+ ffffff.
+ p@p`pppp
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
-!H`kA\ATAp
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!H`tB\ATAp
 !IsForInMemoryData()
 !IsResourceCurrentlyLoading( hResource )
 !V_stricmp( pResourceName, CResourceNameGetter( hResource ).Get() )
@@ -41,11 +42,13 @@
 !multilist || ML
 !pManifest->IsMarkedForDeletion()
 "[A\A^A_]
+#fff.
 %double General references (long double restrict unsigned __int128::* ResourceAddRef() calls than ResourceRelease())
 %double Manifest references (Still holding onto signed char HResourceManifest somewhere)
 %double Schema references (Most likely signed char resource referring to another resource)
 %double Strong handle references (Still holding onto signed char CStrongHandle somewhere)
-%fff.
+%fffff.
+%int %int %int %int
 %lld, 
 %s$Fence%double
 %s.%short
@@ -54,25 +57,29 @@
 %short%-20s%-30s = Total: % 8.2fms, Avg: % 8.2fus, Count: % 7d
 %short%short%short%short
 %short: string format requested %double chars
+&ffffff.
 'ffffff.
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
-( hReferringResource == RESOURCE_HANDLE_INVALID ) || ( pOutHandle != nullptr )
 ( hResource->m_nFlags & RESOURCE_BINDING_LOADED ) || !( hResource->m_nFlags & RESOURCE_BINDING_HAS_EVER_BEEN_LOADED )
-( m_pInMemoryData != nullptr ) == ( m_pFileRequest == nullptr )
-( pManifest->GetType() != RESOURCE_MANIFEST_TYPE_BLOCKING_RELOAD ) || ( pOwnerManifest == pManifest )
+( m_pActiveBlockingManifest == nullptr ) || ( m_pActiveBlockingManifest == pManifest )
 ([A\A]A^A_]
 ([A^A_]
-(int64)m_nLoadSizeBytes <= nAvailableSize
+(fff.
+(ffffff.
+(int)nMsgType >= 0 && (int)nMsgType <= UINT16_MAX
 (intp)this % 16 == 0
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (s_pThisModuleBindingPointer != NULL)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (void *)m_pObject != NULL
+)ffff.
 ** Forcing all resource loads to fail: "%short"
 *** Bad deletion request: Refcount for %short resource "%short" (%016llX) is greater than zero. (%double)!
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *ffffff.
 + CStrongHandle, %double operations: %short
 + CStrongHandle, operation: %lld)
@@ -82,7 +89,8 @@
 + ResourceAddRef(), ResourceReferencePairingId_t: %double, operation: %lld
 + Schematized reference, %double operations: %short
 + Schematized reference, Pairing ID: %double, operation: %lld
-+C$A9E
+,ffff.
+,ffffff.
 - CStrongHandle, %double operations: %short
 - CStrongHandle, operation: %lld)
 - Manifest, %double operations: %short
@@ -101,15 +109,16 @@
 -sse3
 -sse4
 -start_resource_profiling
+.ETv*H
+.Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/aabb_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/fejigglebone_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/femodel_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/femodeldesc_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/lightdesc_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/mathlib_extended/release/osx64/ssequaternion_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceeditinfo_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceextreflist_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourcemanifestfiledata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcesystem/release/osx64/resourcehandletypes_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcesystem/release/osx64/resourcesystemprofileinfo_h_schema.gen_cpp
@@ -121,12 +130,14 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/iresourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcehandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcesystemhelpers.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/resourcesystemprofileinfo.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaloadcontext.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/stacktools.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
@@ -143,11 +154,11 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/asyncresourcedatarequest.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/codemanifestmanager.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/loadingresource.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/loadingresource.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/profilehelpers.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcemanifest.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcesystem/resourcesystem_leaktracker.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
@@ -165,12 +176,17 @@
 2fffff.
 4$A;\$
 4$E;|$
-6Ic^@H
 6[A\A^A_]
 8[A\A]A^A_]
+8[A^A_]
+8ffffff.
+8x9,7
 ;GH|FH
+;J(uB
 <INVALID>
 <NULL>
+<null>
+=ffffff.
 >L97t-H
 ?IVConCommDataReceived
 @CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
@@ -192,7 +208,6 @@
 @CVProfNode::EnterScope()
 @CVProfNode::ExitScope()
 @CVProfNode::GetSubNode(char const*, int, char const*, int)
-@H[A^]
 @IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 @IStack_Annotation::~IStack_Annotation()
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
@@ -204,7 +219,6 @@
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
 @_CommandLine
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_IterateCapturedStackAnnotations
 @_LOG_GENERAL
@@ -232,8 +246,12 @@
 @_V_FixSlashes
 @_V_GetFileExtension
 @_V_IsAbsolutePath
+@_V_UnqualifiedFileName
+@_V_atof
+@_V_atoi
 @_V_qsort_s
 @_V_snprintf
+@_V_sscanf
 @_V_stricmp_fast
 @_V_strlower_fast
 @_V_vsnprintf
@@ -281,35 +299,30 @@
 @std::terminate()
 @typeinfo for IStack_Annotation
 @typeinfo for std::bad_alloc
-@unsigned short;At
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
-A LcK 1
-A(Hc{(1
-A0LcK01
-A8Hc{81
+@|;A|
+A9^$|
+A;N u!A
 A;\$@|
-A;\$HudI
+A;]long long|
 A;^H|*H
-A;_0u
 A;_H|
 A;_H|rH
-A;t$Xu0I
-A@LcK@1
+A;|$Xu
+A;}Pu
 AABB_t
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
 ARBRBRBRAp
-ARB]ARAp8p8p
 ARB]ARBRB]ARCp
 ASARAp
-ASARBRAp
-ASARBSAXBRB]ARB]ARAp8p8p
+ASARBRB`
+ASARBSAXBRB]ARB]ARA
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRA
+ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRAp
 AWAVATS
 AWAVATSA
 AWAVATSH
@@ -323,16 +336,19 @@ AWAVAUATSPD
 AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
-AWAVAUATSPM
+AWAVSA
 AWAVSH
 AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
+AZBSBp
+A[ATAp
 ActiveManifestState_t CResourceManifest::GetState() const
 ActiveManifestState_t CResourceManifest::GetStateInternal() const
 Allocate
 An attempt was made to create signed char resource manifest with debug name "%short" while the resource system was shutting down.
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AqqInv
@@ -342,24 +358,31 @@ AssetSystem001
 AssetSystemTest001
 Attempted to register duplicate manifest name %short!
 Available resource leak tracking configuration aliases:
+BSATAp
 Bad index for CSchemaLoadContext::GetRootObject!
 BakedLODBuilderMgr001
 Base()
+Begin finalizing resource %016llX (file "%short")
+Begin loading streaming data for resource %016llX (file "%short")
 BenchmarkService001
 BinaryProperties_GetValue
 Blocking Manifest Load
+Bump Extref resource %016llX (file "%short") to %double
 C [A^]
 CAsyncCallStackTracker::SynchronousSectionStart() cannot use signed char CDeferredCallStackMarker. Use CDeferredCallStackMarkerProxy instead.
 CAsyncResourceDataRequest
-CAsyncResourceDataRequest::CAsyncResourceDataRequest(ResourceHandle_t, bool, int64, size_t, const char *)
+CAsyncResourceDataRequest::CAsyncResourceDataRequest(ResourceHandle_t, ResourceManifestLoadPriority_t, bool, int64, size_t, const char *)
 CAsyncResourceDataRequest::~CAsyncResourceDataRequest()
+CAtomicManipulator<CResourceArray<CFeIndexedJiggleBone> >
 CAtomicManipulator<CResourceArray<CResourceString> >
 CAtomicManipulator<CResourceArray<CTransform> >
+CAtomicManipulator<CResourceArray<FeAnimStrayRadius_t> >
 CAtomicManipulator<CResourceArray<FeAxialEdgeBend_t> >
 CAtomicManipulator<CResourceArray<FeCollisionPlane_t> >
 CAtomicManipulator<CResourceArray<FeCollisionSphere_t> >
 CAtomicManipulator<CResourceArray<FeCtrlOffset_t> >
 CAtomicManipulator<CResourceArray<FeCtrlOsOffset_t> >
+CAtomicManipulator<CResourceArray<FeCtrlSoftOffset_t> >
 CAtomicManipulator<CResourceArray<FeFitMatrix_t> >
 CAtomicManipulator<CResourceArray<FeFitWeight_t> >
 CAtomicManipulator<CResourceArray<FeFollowNode_t> >
@@ -368,6 +391,7 @@ CAtomicManipulator<CResourceArray<FeNodeIntegrator_t> >
 CAtomicManipulator<CResourceArray<FeNodeReverseOffset_t> >
 CAtomicManipulator<CResourceArray<FeQuad_t> >
 CAtomicManipulator<CResourceArray<FeRodConstraint_t> >
+CAtomicManipulator<CResourceArray<FeSimdAnimStrayRadius_t> >
 CAtomicManipulator<CResourceArray<FeSimdFitMatrices_t> >
 CAtomicManipulator<CResourceArray<FeSimdNodeBase_t> >
 CAtomicManipulator<CResourceArray<FeSimdQuad_t> >
@@ -380,20 +404,12 @@ CAtomicManipulator<CResourceArray<FeTaperedCapsuleRigid_t> >
 CAtomicManipulator<CResourceArray<FeTaperedCapsuleStretch_t> >
 CAtomicManipulator<CResourceArray<FeTreeChildren_t> >
 CAtomicManipulator<CResourceArray<FeWorldCollisionParams_t> >
-CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >
-CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >
-CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >
-CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >
-CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >
-CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >
-CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >
-CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >
-CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >
 CAtomicManipulator<CResourceArray<float> >
 CAtomicManipulator<CResourceArray<unsigned int> >
 CAtomicManipulator<CResourceArray<unsigned short> >
 CAtomicManipulator<CResourceString>
 CAtomicManipulator<CTransform>
+CAtomicManipulator<CUtlString>
 CAtomicManipulator<CUtlStringToken>
 CAtomicManipulator<FourVectors>
 CAtomicManipulator<Quaternion>
@@ -409,10 +425,14 @@ CConCommandMemberAccessor<CResourceSystemProfiler>
 CDefaultAccessor
 CDeferredCallStackMarker::Insert()
 CDeferredCallStackMarker::Remove()
+CEmptyConVar
+CFeIndexedJiggleBone
+CFeJiggleBone
+CFeNamedJiggleBone
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CFunctor
-CLoadingResource::CLoadingResource(ResourceHandle_t, ResourceId_t, ResourceHandle_t, CResourceManifest *)
+CLoadingResource::CLoadingResource(ResourceHandle_t, ResourceId_t, ResourceManifestLoadPriority_t, bool)
 CLoadingResource::~CLoadingResource()
 CMemberFunctor0<CAsyncResourceDataRequest*, void (CAsyncResourceDataRequest::*)(), CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor1<CLoadingResource*, void (CLoadingResource::*)(CAsyncResourceDataRequest*), CAsyncResourceDataRequest*, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
@@ -435,21 +455,23 @@ CResourceArray
 CResourceConstructor
 CResourceDeallocatorUtils
 CResourceExtReference
-CResourceManifest *CResourceSystem::GetLoadingManifest(LoadingResourceManifestIndex_t)
 CResourceManifest::CResourceManifest(ResourceManifestType_t, ResourceManifestLoadPriority_t, bool, const char *)
 CResourceManifest::~CResourceManifest()
 CResourceManifestTypeManager
 CResourcePointer
 CResourceString
 CResourceSystem
-CResourceSystem BeginShutdown()
 CResourceSystem Init
+CResourceSystem PreShutdown()
 CResourceSystem Shutdown
 CResourceSystem shutdown, leaking %short%short [refcount: %double]
 CResourceSystem::FindOrCreateProceduralResource: Passed in signed char NULL debug name for an anonymous resource!
 CResourceSystemLeakTracker
 CResourceSystemProfiler
 CSchemaClassBinding<AABB_t>
+CSchemaClassBinding<CFeIndexedJiggleBone>
+CSchemaClassBinding<CFeJiggleBone>
+CSchemaClassBinding<CFeNamedJiggleBone>
 CSchemaClassBinding<CRCMD_SetProfileMode>
 CSchemaClassBinding<CRMSG_Entity_Event>
 CSchemaClassBinding<CRMSG_Entity_Info>
@@ -460,12 +482,14 @@ CSchemaClassBinding<CRMSG_Resource_ExtReference>
 CSchemaClassBinding<CRMSG_Resource_NewId>
 CSchemaClassBinding<CRMSG_System_Event>
 CSchemaClassBinding<CovMatrix3>
+CSchemaClassBinding<FeAnimStrayRadius_t>
 CSchemaClassBinding<FeAxialEdgeBend_t>
 CSchemaClassBinding<FeBandBendLimit_t>
 CSchemaClassBinding<FeCollisionPlane_t>
 CSchemaClassBinding<FeCollisionSphere_t>
 CSchemaClassBinding<FeCtrlOffset_t>
 CSchemaClassBinding<FeCtrlOsOffset_t>
+CSchemaClassBinding<FeCtrlSoftOffset_t>
 CSchemaClassBinding<FeEdgeDesc_t>
 CSchemaClassBinding<FeFitInfluence_t>
 CSchemaClassBinding<FeFitMatrix_t>
@@ -477,12 +501,14 @@ CSchemaClassBinding<FeNodeIntegrator_t>
 CSchemaClassBinding<FeNodeReverseOffset_t>
 CSchemaClassBinding<FeQuad_t>
 CSchemaClassBinding<FeRodConstraint_t>
+CSchemaClassBinding<FeSimdAnimStrayRadius_t>
 CSchemaClassBinding<FeSimdFitMatrices_t>
 CSchemaClassBinding<FeSimdNodeBase_t>
 CSchemaClassBinding<FeSimdQuad_t>
 CSchemaClassBinding<FeSimdRodConstraint_t>
 CSchemaClassBinding<FeSimdSpringIntegrator_t>
 CSchemaClassBinding<FeSimdTri_t>
+CSchemaClassBinding<FeSoftParent_t>
 CSchemaClassBinding<FeSphereRigid_t>
 CSchemaClassBinding<FeSpringIntegrator_t>
 CSchemaClassBinding<FeTaperedCapsuleRigid_t>
@@ -493,13 +519,12 @@ CSchemaClassBinding<FeWorldCollisionParams_t>
 CSchemaClassBinding<FourCovMatrices3>
 CSchemaClassBinding<FourQuaternions>
 CSchemaClassBinding<FourVectors2D>
-CSchemaClassBinding<InfoForResourceTypeCAnimationGroupResource>
-CSchemaClassBinding<InfoForResourceTypeCAnimationResource>
+CSchemaClassBinding<InfoForResourceTypeAnimationGroupResourceData_t>
+CSchemaClassBinding<InfoForResourceTypeAnimationResourceData_t>
 CSchemaClassBinding<InfoForResourceTypeCDotaItemDefinitionResource>
 CSchemaClassBinding<InfoForResourceTypeCEntityLump>
 CSchemaClassBinding<InfoForResourceTypeCLightTree>
 CSchemaClassBinding<InfoForResourceTypeCModel>
-CSchemaClassBinding<InfoForResourceTypeCMorphSet>
 CSchemaClassBinding<InfoForResourceTypeCNameListEvents>
 CSchemaClassBinding<InfoForResourceTypeCNameListStacks>
 CSchemaClassBinding<InfoForResourceTypeCPanoramaDynamicImages>
@@ -511,19 +536,19 @@ CSchemaClassBinding<InfoForResourceTypeCPhysAggregateData>
 CSchemaClassBinding<InfoForResourceTypeCPostProcessingResource>
 CSchemaClassBinding<InfoForResourceTypeCRenderMesh>
 CSchemaClassBinding<InfoForResourceTypeCResourceManifestInternal>
-CSchemaClassBinding<InfoForResourceTypeCSequenceGroupResource>
 CSchemaClassBinding<InfoForResourceTypeCTextureBase>
 CSchemaClassBinding<InfoForResourceTypeCVMixListResource>
-CSchemaClassBinding<InfoForResourceTypeCVPhysXLevelData>
 CSchemaClassBinding<InfoForResourceTypeCVPhysXSurfacePropertiesList>
 CSchemaClassBinding<InfoForResourceTypeCVirtualVolumeTexture>
+CSchemaClassBinding<InfoForResourceTypeCVoxelVisibility>
 CSchemaClassBinding<InfoForResourceTypeCWorldNode>
-CSchemaClassBinding<InfoForResourceTypeCWorldVisibility>
 CSchemaClassBinding<InfoForResourceTypeIMaterial2>
 CSchemaClassBinding<InfoForResourceTypeIParticleSystemDefinition>
+CSchemaClassBinding<InfoForResourceTypeMorphSetData_t>
 CSchemaClassBinding<InfoForResourceTypePRTMatrixData_t>
 CSchemaClassBinding<InfoForResourceTypeProcessingGraphInstance_t>
 CSchemaClassBinding<InfoForResourceTypeProcessingGraph_t>
+CSchemaClassBinding<InfoForResourceTypeSequenceGroupResourceData_t>
 CSchemaClassBinding<InfoForResourceTypeVBitmapFontRuntimeData_t>
 CSchemaClassBinding<InfoForResourceTypeVSound_t>
 CSchemaClassBinding<InfoForResourceTypeWorldEnvironmentMaps_t>
@@ -532,32 +557,23 @@ CSchemaClassBinding<InfoForResourceTypeWorld_t>
 CSchemaClassBinding<LightDesc_t>
 CSchemaClassBinding<OldFeEdge_t>
 CSchemaClassBinding<PhysFeModelDesc_t>
-CSchemaClassBinding<ResourceAdditionalRelatedFile_t>
-CSchemaClassBinding<ResourceArgumentDependency_t>
-CSchemaClassBinding<ResourceCustomDependency_t>
-CSchemaClassBinding<ResourceEditFloatData_t>
-CSchemaClassBinding<ResourceEditInfoBlock_t>
-CSchemaClassBinding<ResourceEditIntData_t>
-CSchemaClassBinding<ResourceEditStringData_t>
-CSchemaClassBinding<ResourceExtRefList_t>
-CSchemaClassBinding<ResourceInputDependency_t>
-CSchemaClassBinding<ResourceReferenceInfo_t>
-CSchemaClassBinding<ResourceSpecialDependency_t>
 CSchemaClassBindingBase
 CSchemaEnumBinding<LightSourceShape_t>
 CSchemaEnumBinding<LightType_t>
 CSchemaEnumBinding<RMSG_EventType_t>
 CSchemaEnumBinding<RMSG_SubEventType_t>
-CSchemaEnumBinding<ResourceDependencyFlags_t>
 CSchemaEnumBindingBase
 CSchemaInstallCallback
+CSchemaManipulator<CResourceArray<CFeIndexedJiggleBone> >
 CSchemaManipulator<CResourceArray<CResourceString> >
 CSchemaManipulator<CResourceArray<CTransform> >
+CSchemaManipulator<CResourceArray<FeAnimStrayRadius_t> >
 CSchemaManipulator<CResourceArray<FeAxialEdgeBend_t> >
 CSchemaManipulator<CResourceArray<FeCollisionPlane_t> >
 CSchemaManipulator<CResourceArray<FeCollisionSphere_t> >
 CSchemaManipulator<CResourceArray<FeCtrlOffset_t> >
 CSchemaManipulator<CResourceArray<FeCtrlOsOffset_t> >
+CSchemaManipulator<CResourceArray<FeCtrlSoftOffset_t> >
 CSchemaManipulator<CResourceArray<FeFitMatrix_t> >
 CSchemaManipulator<CResourceArray<FeFitWeight_t> >
 CSchemaManipulator<CResourceArray<FeFollowNode_t> >
@@ -566,6 +582,7 @@ CSchemaManipulator<CResourceArray<FeNodeIntegrator_t> >
 CSchemaManipulator<CResourceArray<FeNodeReverseOffset_t> >
 CSchemaManipulator<CResourceArray<FeQuad_t> >
 CSchemaManipulator<CResourceArray<FeRodConstraint_t> >
+CSchemaManipulator<CResourceArray<FeSimdAnimStrayRadius_t> >
 CSchemaManipulator<CResourceArray<FeSimdFitMatrices_t> >
 CSchemaManipulator<CResourceArray<FeSimdNodeBase_t> >
 CSchemaManipulator<CResourceArray<FeSimdQuad_t> >
@@ -578,20 +595,12 @@ CSchemaManipulator<CResourceArray<FeTaperedCapsuleRigid_t> >
 CSchemaManipulator<CResourceArray<FeTaperedCapsuleStretch_t> >
 CSchemaManipulator<CResourceArray<FeTreeChildren_t> >
 CSchemaManipulator<CResourceArray<FeWorldCollisionParams_t> >
-CSchemaManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >
-CSchemaManipulator<CResourceArray<ResourceArgumentDependency_t> >
-CSchemaManipulator<CResourceArray<ResourceCustomDependency_t> >
-CSchemaManipulator<CResourceArray<ResourceEditFloatData_t> >
-CSchemaManipulator<CResourceArray<ResourceEditIntData_t> >
-CSchemaManipulator<CResourceArray<ResourceEditStringData_t> >
-CSchemaManipulator<CResourceArray<ResourceInputDependency_t> >
-CSchemaManipulator<CResourceArray<ResourceReferenceInfo_t> >
-CSchemaManipulator<CResourceArray<ResourceSpecialDependency_t> >
 CSchemaManipulator<CResourceArray<float> >
 CSchemaManipulator<CResourceArray<unsigned int> >
 CSchemaManipulator<CResourceArray<unsigned short> >
 CSchemaManipulator<CResourceString>
 CSchemaManipulator<CTransform>
+CSchemaManipulator<CUtlString>
 CSchemaManipulator<CUtlStringToken>
 CSchemaManipulator<FourVectors>
 CSchemaManipulator<Quaternion>
@@ -653,7 +662,9 @@ CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
+CUtlRBTree overflow with %u elements!
 CUtlReferenceTracker::Release() release counts for group outnumber addref counts for the same group
+CUtlString
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlStringMap inserted signed char string and got index %double, but there are only %double entries already inside.
 CUtlStringToken
@@ -669,33 +680,39 @@ Cannot assign multiple callbacks to signed char CAsyncResourceDataRequest
 Cannot attach to const deferred proxy
 ConCommand
 ConCommandBase
+ConVar
+ConVar(%short) defined with infinite float value (%short)
+ConVarRef %short doesn'unsigned short point to an existing ConVar
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 Count
 CovMatrix3
 CreateInterface
 D$ ffffff.
-D$8Hc
-D$8fA
+D$$D9
 D$HH9
 D%p unsigned short!L
+D9sXu
 D;xH|41
-D;{(u
-D;{0u
-D;{8I
-DATAL
+DATAH
 DISABLED
 DM96u/H
 Deallocate
 Debug Name
 DebugTextureInfo001
 DeleteResource for: "%short" (Reference count = %double)
+Deleting empty loading resource
 DependencyClass::m_pDependencyLL == NULL
 DotaCardGameClient_001
-E;float u!
+E(fff.
+E9t$8
+E;__float128 u
+E;g0u
+E;gHucA
+E;n8I
 E;nHu
 E;t$H
 E;uH|
-E;uPu$I
 E;wH|
 ENABLED
 ERROR: %short resource %016llX is the wrong resource type!
@@ -710,6 +727,7 @@ ERROR: No type manager for resource "%short"!
 ERROR: Reentrant call to CResourceSystem::BlockUntilManifestLoaded() while already in signed char frame update!
 ERROR: Reentrant call to CResourceSystem::FrameUpdate()!
 ERROR: Resource name "%short" has the incorrect extension "%short" for the specified resource type (expected "%short")!
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
 Encountered nonexistent %short: %016llX (file "%short")
@@ -721,21 +739,20 @@ Error loading resource "%short" (Invalid header version: %double != %double)
 Error loading resource file "%short" (Error: %short)
 Error loading resource manifest "%short" (No DATA block)
 EventSystem001
-F Hcz 1
-F0Hcz01
-F@Hcz@1
 FATAL ERROR: %short resource '%short' (%016llX) is the wrong resource type! (This is likely caused by signed char hash collision between the strings '%short' and '%short')
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
 Failed to handle resourcesystem profile command of type '%short'
 Failed to load resource "%short" and -exit_on_resource_load_failure was set and it'short not in badresources_whitelist.txt
 Failed to unserialize resourcesystem profile command received from VConsole!
 Failed to update resource [streaming]: "%short"
+FeAnimStrayRadius_t
 FeAxialEdgeBend_t
 FeBandBendLimit_t
 FeCollisionPlane_t
 FeCollisionSphere_t
 FeCtrlOffset_t
 FeCtrlOsOffset_t
+FeCtrlSoftOffset_t
 FeEdgeDesc_t
 FeFitInfluence_t
 FeFitMatrix_t
@@ -747,12 +764,14 @@ FeNodeIntegrator_t
 FeNodeReverseOffset_t
 FeQuad_t
 FeRodConstraint_t
+FeSimdAnimStrayRadius_t
 FeSimdFitMatrices_t
 FeSimdNodeBase_t
 FeSimdQuad_t
 FeSimdRodConstraint_t
 FeSimdSpringIntegrator_t
 FeSimdTri_t
+FeSoftParent_t
 FeSphereRigid_t
 FeSpringIntegrator_t
 FeTaperedCapsuleRigid_t
@@ -762,6 +781,8 @@ FeTri_t
 FeWorldCollisionParams_t
 FileSystem
 Final operation count %llu
+Finalize resource %016llX (file "%short")
+Finished external request for resource %016llX (file "%short")
 FixupResourceName: Illegal full path passed in ("%short")!
 FixupResourceName: Illegal path, missing extension passed in ("%short")!
 FlattenedSerializersVersion001
@@ -775,6 +796,7 @@ FourVectors
 FourVectors2D
 From Class Binding
 From Enum Binding
+G8H	p(]
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
@@ -783,10 +805,9 @@ GetNamedManifestResources: Manifest name not registered: "%short"
 GetRegistrationForType(%short) != NULL
 GetRegistrationForType(pResourceData->m_nResourceType)->m_pTypeManager == NULL
 GetResourceStatus( pResourceName ) == RESOURCE_STATUS_RESIDENT
+H	p(]
 H	wchar_t(]
 H!wchar_t(]
-H@[A^]
-HHc{H1
 HResourceManifestInternal
 H[A\A]A^A_]
 H__ZdaPv
@@ -794,15 +815,16 @@ H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
-Hc5?5	
 Hc@pH
 Hc@pI
 HcCHH
-HcH H
+HcHXH
+HcN(H
+HcN8Hi
 HelpSystem_001
 HostStateMgr001
-HtA;ItH
-HtA;KtH
+H|A;I|H
+H|A;K|H
 I CUtlLinkedList<CLoadingResource *, unsigned short, true, unsigned short, CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CLoadingResource *, S = unsigned short, ML = true, I = unsigned short, M = CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>]
 I CUtlLinkedList<CResourceManifest *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CResourceManifest *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CResourceManifest *, unsigned short>, unsigned short>]
 I CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int> >::AllocInternal(bool) [T = ExtRefList_t *, S = unsigned int, ML = true, I = unsigned int, M = CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>]
@@ -812,6 +834,7 @@ I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CN
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
+I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I9T=Pt2
 IAppSystem
 IAsyncResourceDataRequest
@@ -821,6 +844,7 @@ ICodeResourceManifestManager
 ICommandCallback
 ICommandCompletionCallback
 IConCommandBaseAccessor
+IConVar
 IQuickTime001
 IRD_RegisterResourceDataUtils
 IRefCounted
@@ -837,17 +861,19 @@ ISchemaManipulator
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
 ITSHashConstructor<ResourceBindingBase_t>
-Ic4$H
-IcT$PH
-Ic]8H
+IcMPH
+IcN H
+IcO H
+IcO0H
+IcOHH
+IcUPH
 Idle (ResourceSystemSleep)
-InfoForResourceTypeCAnimationGroupResource
-InfoForResourceTypeCAnimationResource
+InfoForResourceTypeAnimationGroupResourceData_t
+InfoForResourceTypeAnimationResourceData_t
 InfoForResourceTypeCDotaItemDefinitionResource
 InfoForResourceTypeCEntityLump
 InfoForResourceTypeCLightTree
 InfoForResourceTypeCModel
-InfoForResourceTypeCMorphSet
 InfoForResourceTypeCNameListEvents
 InfoForResourceTypeCNameListStacks
 InfoForResourceTypeCPanoramaDynamicImages
@@ -859,19 +885,19 @@ InfoForResourceTypeCPhysAggregateData
 InfoForResourceTypeCPostProcessingResource
 InfoForResourceTypeCRenderMesh
 InfoForResourceTypeCResourceManifestInternal
-InfoForResourceTypeCSequenceGroupResource
 InfoForResourceTypeCTextureBase
 InfoForResourceTypeCVMixListResource
-InfoForResourceTypeCVPhysXLevelData
 InfoForResourceTypeCVPhysXSurfacePropertiesList
 InfoForResourceTypeCVirtualVolumeTexture
+InfoForResourceTypeCVoxelVisibility
 InfoForResourceTypeCWorldNode
-InfoForResourceTypeCWorldVisibility
 InfoForResourceTypeIMaterial2
 InfoForResourceTypeIParticleSystemDefinition
+InfoForResourceTypeMorphSetData_t
 InfoForResourceTypePRTMatrixData_t
 InfoForResourceTypeProcessingGraphInstance_t
 InfoForResourceTypeProcessingGraph_t
+InfoForResourceTypeSequenceGroupResourceData_t
 InfoForResourceTypeVBitmapFontRuntimeData_t
 InfoForResourceTypeVSound_t
 InfoForResourceTypeWorldEnvironmentMaps_t
@@ -889,41 +915,46 @@ IsInList(before)
 IsPowerOfTwo( m_nAlignment )
 IsResourceManifestGroupKnown: Manifest group name is empty or null
 IsResourceNameValid( pName )
+IsValid()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
-It;JtH
-ItA;HtH
+IsValidIndex(int) && (int != InvalidIndex())
+I|;J|H
+I|A;H|H
 K9t&Xu
 KeyValueCache001
 L$0E1
+L$HHc
 L$PE1
 L&`ffff.
-L1xffffff.
+L+{(I
 L90t*H
 L;>unsigned short!L9
 LIGHT_SOURCE_SHAPE_SPHERE
-Lc5+K
 Leaked reference to ERROR resource for type %short!
 Leaked resource: Refcount %short for %short%short resource "%short" (%016llX).  This may result in signed char crash.
 LightDesc_t
 LightSourceShape_t
 LightType_t
-LightingBuilderMgr001
 Localize_001
+Lock change [%double] for resource %016llX (file "%short")
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
-M+}(M
 M96u/H
 M9?u/H
 MATCHFRAMEWORK_001
 MATERIAL_LIGHT_DIRECTIONAL
 MATERIAL_LIGHT_DISABLE
 MATERIAL_LIGHT_ENVIRONMENT_PROBE
+MATERIAL_LIGHT_ORTHO
 MATERIAL_LIGHT_POINT
 MATERIAL_LIGHT_SPOT
-MATERIAL_LIGHT_UNUSED
+MClassHasDataDesc
+MClassHasEntityLimitedDataDesc
+MGenerateArrayKeynames
+MGenerateArrayKeynamesFirstIndex
 MKeyfieldname
 MN_DeallocateResourceData for: "%short"
 MN_DeleteRequestedResources for: "%short" (Refcount = %double)
@@ -932,7 +963,6 @@ MNoScatter
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPropertySuppressField
-MResourceBlockType
 MResourceTypeForInfoType
 MSerializeAs
 MUnserializationCallback
@@ -942,16 +972,14 @@ ManifestCompletion
 MapListService_001
 MaterialUtils_001
 Mc<$J
+Mcl$8M
 Mc|$$M
 Mc~$M
 MeshSystem001
 MeshUtils001
 MetaTxtAH
-ModelDocCommandSystem001
-N(Hcz(1
-N8Hcz81
-NHHczH1
-Nc$9I
+ModelDocUtils001
+Nc,8I
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -959,17 +987,20 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-Nfffff.
 NotifyManifestFinished
 OldFeEdge_t
+OnResourceDataLoaded for resource %016llX (file "%short") (%llu bytes)
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 P P0@
-PPL;long double
+PPL;}
 P[A^]
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhL;u
 PhysFeModelDesc_t
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
@@ -980,10 +1011,6 @@ QueuedLoaderVersion001
 RAphp8p
 RBRAp
 RBRBRBRBRA
-RESOURCE_INPUT_DEPENDENCY_EXISTS
-RESOURCE_INPUT_DEPENDENCY_GAME_FILE
-RESOURCE_INPUT_DEPENDENCY_NOFLAG
-RESOURCE_INPUT_DEPENDENCY_OPTIONAL
 RESOURCE_MANIFEST_HANDLE_INVALID
 RESOURCE_TYPE_NONE
 RESOURCE_TYPE_RESOURCE_MANIFEST
@@ -1034,7 +1061,9 @@ RMSG_UNUSED_6
 RMSG_UNUSED_7
 RMSG_UNUSED_8
 RSProfilerTool
+Register Referring Resource: for resource %016llX (file "%short"), parent( "%short") ext ref depth [%double]
 RegisterConfigValue: Unknown error constructing config value "%short"!
+Registering resource %016llX (file "%short")
 Release
 RenderDevice003
 RenderDeviceMgr001
@@ -1051,28 +1080,15 @@ Resource Name
 Resource System
 Resource leak tracking is disabled, run with "-resourceleaks" to track references
 Resource system profile mode %short
-ResourceAdditionalRelatedFile_t
-ResourceArgumentDependency_t
 ResourceBinding_t
 ResourceCompilerSystem001
-ResourceCustomDependency_t
-ResourceDependencyFlags_t
-ResourceEditFloatData_t
-ResourceEditInfoBlock_t
-ResourceEditIntData_t
-ResourceEditStringData_t
-ResourceExtRefList_t
 ResourceHandleUtils001
-ResourceHandle_t CResourceManifest::GetLoadingResource(int) const
 ResourceHandle_t CResourceSystem::CreateEmptyResourceInternal(const char *, ResourceType_t, bool)
 ResourceId_t
-ResourceInputDependency_t
 ResourceManifestLoadPriority_t CResourceManifest::GetPriority() const
 ResourceManifestRegistry001
 ResourceManifestType_t CResourceManifest::GetType() const
 ResourceNameHandle_t AllocResourceNameImp(bool, const char *)
-ResourceReferenceInfo_t
-ResourceSpecialDependency_t
 ResourceSystem
 ResourceSystem013
 ResourceSystemWaitingForFutureWork
@@ -1080,7 +1096,6 @@ ResourceTypeIndex_t CResourceSystem::Internal_InstallPlaceholderTypeManager(Reso
 RnPlane_t
 SATAp
 SAXAp
-SBRGp
 SSE and SSE2 are required.
 ScaleformUI001
 SceneSystem_002
@@ -1108,7 +1123,9 @@ Source2Host001
 Source2Server001
 Source2ServerSerializers002
 StakRaw8H
+Started external request for resource %016llX (file "%short")
 StatsService_001
+SteamAudio001
 SubmitResourceFileRequests
 T &CUtlBlockMemory<UtlLinkedListElem_t<CLoadingResource *, unsigned short>, unsigned short>::operator[](I) [T = UtlLinkedListElem_t<CLoadingResource *, unsigned short>, I = unsigned short]
 T &CUtlBlockMemory<UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, unsigned int>::operator[](I) [T = UtlLinkedListElem_t<ExtRefList_t *, unsigned int>, I = unsigned int]
@@ -1116,20 +1133,20 @@ T &CUtlStringMap<CodeResourceManifest_t *, CUtlSymbolTable>::operator[](UtlSymId
 T &CUtlStringMap<ResourceManifestEntry_t *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = ResourceManifestEntry_t *, SymbolTableType_t = CUtlSymbolTable]
 TARBp
 TBRAp
-TBRB`
-TBSATAp
-TBTBp
 TBXBSATAp
 TB`WAUAYAVATAp
-TBp p
 TCRAp
-TCRBRA
 TCRBRBXBRBTASAYATAp
-TCSATAp
+TCRBRCp
 TCTBp
 TCTBp p
 TCUARB
 TCVAp
+TestFormatA
+TestFormatB
+TestFormatC
+TestFormatD
+TestFormatE
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
@@ -1144,6 +1161,7 @@ Tried to double-register resource manager for two resource types! ( "%lld" and "
 Tried to install signed char NULL resource manager for resource type "%lld"!
 Tried to install signed char placeholder resource manager for an existing resource type "%lld"!
 Tried to install two resource managers for the same resource type "%lld"!
+UHffffff.
 Unexpected flags during deallocation for resource (not loaded but has been loaded) '%short'
 Unexpected flags during deallocation for resource (pending_load set) '%short'
 Unrecognized resource leak tracking parameter: "%short", available configuration aliases:
@@ -1204,12 +1222,12 @@ WARNING: Long frame update (%.2fms) for resource type manager '%short' in frame 
 WARNING: Long resource system update - should have taken no more than %dns, but took %.4fs! (Frame #%double)
 WARNING: Resource "%short" references itself!
 WARNING: Resource system exiting at %.2f seconds due to '-resource_exit_after_time' command line flag
-WARNING: Tried to read past the end of in-memory resource buffer for resource '%short'
 WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
 WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
 WARNING: Trying to deallocate signed char resource after the type manager was uninstalled! ("%short")
 WARNING: Trying to deallocate signed char resource with no associated resource type! ("%short")
 WARNING: resource '%short' is an unknown resource type!
+Warning:  %short = '%short' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
@@ -1217,33 +1235,22 @@ XI9t=Xu
 X[A\A]A^A_]
 X[A^]
 Zero refcount resource detected when m_DeletionRequests = 0: '%short'
-[%p] Begin loading streaming data for resource %016llX (file "%short")
-[%p] Bump Extref resource %016llX (file "%short") to %double
-[%p] Finalize resource %016llX (file "%short")
-[%p] Finished external request for resource %016llX (file "%short")
-[%p] Finished loading manifest
-[%p] Lock change [%double] for resource %016llX (file "%short")
-[%p] OnResourceDataLoaded for resource %016llX (file "%short") (%llu bytes)
-[%p] Priority %double Transfer ownership: for resource %016llX (file "%short") [old manifest %p %double]
-[%p] ProcessLoadRequest: Priority [%double] for resource %016llX (file "%short")
-[%p] ProcessLoadRequest: Priority [%double] for resource %016llX (file "%short") Extref Parent %016llX (file "%short")
-[%p] Register Referring Resource: for resource %016llX (file "%short"), parent( "%short") ext ref depth [%double]
-[%p] Registering resource %016llX (file "%short")
-[%p] Started external request for resource %016llX (file "%short")
-[%p] Started loading manifest
+[%p-%short] ProcessLoadRequest: Priority [%double] for resource %016llX (file "%short")
+[%p-%short] ProcessLoadRequest: Priority [%double] for resource %016llX (file "%short") Extref Parent %016llX (file "%short")
+[%p] Finished loading manifest %short
+[%p] Started loading manifest %short
 [A\A]A^A_]
 [A\A^A_]
 [A\A^A_]A
 [A^A_]
 [unsigned short,fD
+\$0E1
 \$HHc
-_0IcG
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
 _CommandLine
 _CreateInterface
-_EarlyInit_Tier0
 _GetCPUInformation
 _GetResourceManifestCount
 _GetResourceManifests
@@ -1274,8 +1281,12 @@ _ThreadNanoSleep
 _V_FixSlashes
 _V_GetFileExtension
 _V_IsAbsolutePath
+_V_UnqualifiedFileName
+_V_atof
+_V_atoi
 _V_qsort_s
 _V_snprintf
+_V_sscanf
 _V_stricmp_fast
 _V_strlower_fast
 _V_vsnprintf
@@ -1309,6 +1320,7 @@ __common
 __const
 __cstring
 __data
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __int128 < m_Vector.Count()
@@ -1333,33 +1345,37 @@ _strcmp
 _strlen
 _strnlen
 ` P`p
+`[A\A^A_]
 `unsigned char[A\A^A_]
 anonymous 
 attenuation0
 attenuation1
 attenuation2
-auto CAsyncResourceDataRequest::InitForInMemoryBuffer(void *, size_t)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 bAlreadyLoaded
-bFound
 bGotProfileEvents
 bLock != m_bLocked
 bStartLoading
 badresources_whitelist.txt
+bakelightindex
+bakelightindexscale
 bfff.
+binary
+binary_bc
 bitNum >= 0 && bitNum < this->GetNumBits()
-bool CAsyncResourceDataRequest::IsForInMemoryData()
 bool CBitVecT<CVarBitVecBase<unsigned short, 32> >::IsBitSet(int) const [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
 bool CLoadingResource::RegisterResourceData(const ResourceFileHeader_t *, uint32)
 bool CLoadingResource::ShouldFail(const ResourceTypeRegistration_t *) const
 bool CResourceManifest::IsMarkedForDeletionAfterLoadCompletion() const
-bool CResourceManifest::RemoveLoadingResource(ResourceHandle_t)
-bool CResourceSystem::AcquireResourceHandleSubmitLoadIfNeeded(CResourceManifest *, ResourceHandle_t, const char *, CStrongHandleVoid *)
 bool CResourceSystem::RegisterResourceExternalReference(ResourceHandle_t, const char *, CStrongHandleVoid *)
 bool CResourceSystem::RemoveManifestFromPendingLoadQueue(CResourceManifest *)
 bool CUtlReferenceTracker<ResourceLeakTrackingGroup_t, unsigned long long, 0, CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options>::Internal_Release_TestGroupCounts(GROUP_TYPE, bool) [GROUP_TYPE = ResourceLeakTrackingGroup_t, UNIQUE_ID_TYPE = unsigned long long, INVALID_UNIQUE_ID_VALUE = 0, OPTIONS_OVERRIDE_CLASS = CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options]
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bouncecolor
 castshadows
+char(ffff.
 color
 const ResourceTypeRegistration_t *CResourceSystem::GetRegistrationForType(ResourceTypeIndex_t) const
 const char *CFmtStrN<256, false>::sprintf(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
@@ -1384,6 +1400,7 @@ ffff.
 fffff.
 ffffff.
 filesystem_stdio
+flAlpha
 flAnimationForceAttraction
 flAnimationVertexAttraction
 flAxialModelDist
@@ -1413,12 +1430,17 @@ flWeight
 flWeight0
 flWorldFriction
 fltx4
+fogcontributionstrength
+g_pCVar
 g_pResourceHandleUtils
 g_pResourceSystem
 g_pResourceSystemImp->InFrameUpdate()
+generic
 hReferringResource != RESOURCE_HANDLE_INVALID
 hResource != RESOURCE_HANDLE_INVALID
 hResource->m_nRefCount > 0
+info.m_hResource != RESOURCE_HANDLE_INVALID
+info.m_pManifest || ( hActuallyLoadingReferringResource != RESOURCE_HANDLE_INVALID )
 innerconeangle
 int CAsyncResourceDataRequest::Release()
 int CUtlString::FormatV(const char *, __va_list_tag *)
@@ -1429,39 +1451,31 @@ libresourcesystem.dylib
 lightcookie
 lightsourceshape
 lighttype
-long double&-entrant calls to CResourceSystem::BeginShutdown()
+long double&-entrant calls to CResourceSystem::PreShutdown()
 long long	IcO
 long long[A\A]A^A_]
-m_AdditionalInputDependencies
-m_AdditionalRelatedFiles
+long long|A;{|
+m_AnimStrayRadii
 m_AnnotiationOrStackMarker.pAnnotations == NULL
-m_ArgumentDependencies
 m_Attenuation0
 m_Attenuation1
 m_Attenuation2
 m_AxialEdges
 m_Blobs.IsPeeked()
 m_BounceColor
-m_ChildResourceList
 m_CollisionPlanes
 m_CollisionSpheres
 m_Color
-m_CompilerIdentifier
-m_ContentRelativeFilename
-m_ContentSearchPath
 m_Count == 0
 m_CtrlHash
 m_CtrlName
 m_CtrlOffsets
 m_CtrlOsOffsets
-m_CustomDependencies
+m_CtrlSoftOffsets
 m_ElementCount == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
-m_ExtraFloatData
-m_ExtraIntData
-m_ExtraStringData
 m_Falloff
 m_FirstFree == InvalidIndex()
 m_FitMatrices
@@ -1473,7 +1487,7 @@ m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
 m_Head.value.pNode->pNext == End()
 m_InitPose
-m_InputDependencies
+m_JiggleBones
 m_LegacyStretchForce
 m_LocalForce
 m_LocalRotation
@@ -1481,38 +1495,32 @@ m_Memory.IsIdxValid( Index )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
 m_Memory.IsValidIterator( it )
 m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
-m_Name
 m_NodeBases
 m_NodeCollisionRadii
 m_NodeIntegrator
 m_NodeInvMasses
 m_NumElements == 0
 m_Objects.Count() == m_ObjectTypes.Count()
-m_ParameterName
-m_ParameterType
 m_Phi
 m_Plane
 m_Quads
 m_Range
-m_RelativeFilename
 m_ResourceName
 m_ReverseOffsets
 m_Rods
 m_Root == InvalidIndex()
 m_Ropes
-m_SearchPath
 m_SectionStartMarker.m_pMarker
 m_Shape
+m_SimdAnimStrayRadii
 m_SimdFitMatrices
 m_SimdNodeBases
 m_SimdQuads
 m_SimdRods
 m_SimdSpringIntegrator
 m_SimdTris
-m_SpecialDependencies
 m_SphereRigids
 m_SpringIntegrator
-m_String
 m_Tail == InvalidIndex()
 m_TaperedCapsuleRigids
 m_TaperedCapsuleStretches
@@ -1523,12 +1531,27 @@ m_TreeParents
 m_Type
 m_WorldCollisionNodes
 m_WorldCollisionParams
-m_activeResourceManifests.IsInList( nIndex )
 m_bCastShadows
 m_bEnableProfiling
 m_bRenderDiffuse
 m_bRenderSpecular
 m_flAddWorldCollisionRadius
+m_flAlongDamping
+m_flAlongStiffness
+m_flAngleLimit
+m_flBakeLightIndexScale
+m_flBaseDamping
+m_flBaseForwardFriction
+m_flBaseLeftFriction
+m_flBaseMass
+m_flBaseMaxForward
+m_flBaseMaxLeft
+m_flBaseMaxUp
+m_flBaseMinForward
+m_flBaseMinLeft
+m_flBaseMinUp
+m_flBaseStiffness
+m_flBaseUpFriction
 m_flDefaultExpAirDrag
 m_flDefaultExpQuadAirDrag
 m_flDefaultExpRodAirDrag
@@ -1539,48 +1562,65 @@ m_flDefaultVelAirDrag
 m_flDefaultVelQuadAirDrag
 m_flDefaultVelRodAirDrag
 m_flDefaultVolumetricSolveAmount
-m_flFloat
+m_flFogContributionStength
 m_flK
+m_flLength
 m_flLightSourceDim0
 m_flLightSourceDim1
+m_flLightSourceSize0
+m_flLightSourceSize1
 m_flLocalForce
 m_flLocalRotation
+m_flMaxPitch
+m_flMaxYaw
+m_flMinPitch
+m_flMinYaw
+m_flPitchBounce
+m_flPitchDamping
+m_flPitchFriction
+m_flPitchStiffness
+m_flPrecomputedMaxRange
 m_flQuadVelocitySmoothRate
 m_flRFactor
 m_flRodVelocitySmoothRate
+m_flShadowCascadeDistance
+m_flTipMass
 m_flWindDrag
 m_flWindage
 m_flXY
 m_flXZ
 m_flYZ
+m_flYawBounce
+m_flYawDamping
+m_flYawFriction
+m_flYawStiffness
+m_fnChangeCallbacks.Count() == 0
 m_hResource->m_nLoadingResource != LOADING_RESOURCE_INDEX_INVALID
 m_hResource->m_nLoadingResource == LOADING_RESOURCE_INDEX_INVALID
+m_jiggleBone
 m_lightCookie
 m_loadingState < LOADING_STATE_WAITING_FOR_OWNER_MANIFEST
 m_loadingState == LOADING_STATE_NOT_STARTED_LOAD
 m_loadingState == LOADING_STATE_WAITING_FOR_DATA
 m_loadingState == LOADING_STATE_WAITING_FOR_OWNER_MANIFEST
+m_nBakeLightIndex
 m_nCollisionSphereInclusiveCount
 m_nDynamicNodeFlags
 m_nEHandle
 m_nEvent
-m_nFileCRC
-m_nFingerprint
-m_nFingerprintDefault
 m_nFitMatrixCount1
 m_nFitMatrixCount2
 m_nFlags
 m_nFrameNumber
-m_nId
 m_nIndexMask + 1 == ( U << m_nIndexShift )
-m_nInt
 m_nLoadType != RESOURCE_LOAD_INVALID
 m_nManifestIndex
 m_nNode
 m_nNodeCount
 m_nObjectId
-m_nParentIndex
 m_nPendingGlobalStreamingDataRequests >= 0
+m_nPendingResourceFileRequests >= 0
+m_nPendingStreamingDataRequests >= 0
 m_nQuadCount1
 m_nQuadCount2
 m_nQuadVelocitySmoothIterations
@@ -1592,6 +1632,9 @@ m_nResourceId
 m_nRodVelocitySmoothIterations
 m_nRopeCount
 m_nRotLockStaticNodes
+m_nShadowBakeChannel
+m_nShadowCascadeCount
+m_nShadowCascadeResolution
 m_nShadowHeight
 m_nShadowWidth
 m_nSimdFitMatrixCount1
@@ -1605,9 +1648,7 @@ m_nStaticNodes
 m_nSubEvent
 m_nTimeUS
 m_nTreeDepth
-m_nUserData
 m_pActiveBlockingManifest == NULL
-m_pActiveBlockingManifest == pManifest
 m_pAttachedDest && (m_pAttachedDest->m_pAttachedSource == this)
 m_pEntityClass
 m_pEntityName
@@ -1616,10 +1657,7 @@ m_pInMemoryData != nullptr
 m_pInMemoryData == NULL && m_pFileRequest == NULL
 m_pInMemoryData->m_pBuffer
 m_pLoadingInfo
-m_pLoadingInfo && m_pLoadingInfo->m_nLoadingIndex != LOADING_RESOURCE_MANIFEST_INDEX_INVALID
 m_pLoadingInfo && m_pLoadingInfo->m_nLoadingIndex == LOADING_RESOURCE_MANIFEST_INDEX_INVALID
-m_pLoadingInfo->m_nPendingResourceFileRequests >= 0
-m_pLoadingInfo->m_nPendingStreamingDataRequests >= 0
 m_pManifestDebugName
 m_pMemory
 m_pMemory[ int ]
@@ -1627,19 +1665,20 @@ m_pOuterTypeScope != NULL
 m_pOwner && m_CompletionFunc
 m_pOwner && m_Func
 m_pParent
+m_pParent == this
 m_pParent->m_fnCompletionCallback
-m_pResourceName
 m_pResourceUpdater == NULL
 m_pResourceUpdater == pUpdater
 m_pSchemaType != NULL
 m_pTypeOf != NULL
 m_pUserCallback == nullptr
-m_resourceRefInfoList
 m_rootResources.Count() == 0
+m_strParentBone
 m_streamingState <= STREAMING_STATE_REQUESTED
 m_streamingState == STREAMING_STATE_REQUESTED
 m_streamingState == STREAMING_STATE_WAITING_FOR_STREAMING_ASYNC_REQUEST || m_streamingState == STREAMING_STATE_WAITING_FOR_STREAMING_DATA
 m_streamingState == STREAMING_STATE_WAITING_FOR_STREAMING_DATA
+m_transform
 m_vDiag
 m_vMaxBounds
 m_vMinBounds
@@ -1670,16 +1709,19 @@ nFirst == m_IdMap.Count()
 nFlags >= 0 && nFlags <= UINT8_MAX
 nFoundIndex != -1
 nGrowSize <= 1 << 27
+nIndex != pDisabledBlob->m_DisabledModeAllocations.InvalidIndex()
 nIndex <= 255
 nIndex >= 0 && nIndex <= 255
 nListBegin
 nListEnd
 nMatrixNode
+nMsgSize >= 0 && nMsgSize <= UINT16_MAX
 nNode
 nNodeX0
 nNodeX1
 nNodeY0
 nNodeY1
+nParent
 nParentNode
 nSide
 nSize != 0
@@ -1691,13 +1733,13 @@ nValid == m_nAnnotations
 nVertexNode
 nameId != m_CodeManifests.InvalidIndex()
 nogroup
-offffff.
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
 outerconeangle
 outputBuffer
+p p8p8p
 p0D9l
 p8p8p
 pBlob
@@ -1708,13 +1750,13 @@ pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
 pHeader->m_nResourceVersion == RESOURCE_MANIFEST_RESOURCE_VERSION
 pItem->IsMarkedForDeletion()
 pLoadingResource
-pLoadingResource->GetOwningManifest() == pManifest
 pManifest
+pManifest != nullptr || FindLoadingResource( hReferringResource )
+pMemory[int] == 0
 pName
 pOutHandle
-pOuterManifest != nullptr
-pOwnerManifest
 pPool->m_SpaceUsed < 0xFFFF
+pReferringResource
 pReg != NULL
 pReg != nullptr
 pRegistration
@@ -1732,15 +1774,15 @@ pResourceExt[6] == 0 || (pResourceExt[6] >= 'signed char' && pResourceExt[6] <= 
 pResourceExt[7] == 0 || (pResourceExt[7] >= 'signed char' && pResourceExt[7] <= '...') || (pResourceExt[7] >= '0' && pResourceExt[7] <= '9')
 pSchemaSystem != NULL
 pTrackingData != NULL
-pXRERA
-pXRERAp0p
-pXRESAp
+pVRMan->m_hLoadingResource != RESOURCE_HANDLE_INVALID
+pVRMan->m_hLoadingResource == RESOURCE_HANDLE_INVALID
+pXRBRAp
 pXRESF
 pXRESGp8p8p
+pXp0p
 pXp8p
-p`pppp
-ptA;qt
-ptA;st
+precomputedmaxrange
+p|A;q|
 qAdjust
 radr://5614542
 range
@@ -1761,19 +1803,28 @@ s_nDLLIdentifier >= 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 schemasystem
+shadowbakechannel
+shadowcascadecount
+shadowcascadedistance%double
+shadowcascaderesolution%double
 shadowtextureheight
 shadowtexturewidth
+size0
+size1
 static CSchemaEnumBindingBase *CSchemaEnumBinding<LightSourceShape_t>::Get() [T = LightSourceShape_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<LightType_t>::Get() [T = LightType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RMSG_EventType_t>::Get() [T = RMSG_EventType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RMSG_SubEventType_t>::Get() [T = RMSG_SubEventType_t]
-static CSchemaEnumBindingBase *CSchemaEnumBinding<ResourceDependencyFlags_t>::Get() [T = ResourceDependencyFlags_t]
 static bool CAsyncAnnotationCapture::IterateStackAnnotationCallback(const void *, int, const char *, void *)
-static bool CLoadingResource::ShouldLoadStreamingData(CResourceManifest *, ResourceHandle_t)
+static bool CLoadingResource::ShouldLoadStreamingData(bool, ResourceHandle_t)
 static void AABB_t::Schema_VerifyBindingIsRegistered()
 static void CAsyncResourceDataRequest::ProcessCompletedRequests(int)
+static void CFeIndexedJiggleBone::Schema_VerifyBindingIsRegistered()
+static void CFeJiggleBone::Schema_VerifyBindingIsRegistered()
+static void CFeNamedJiggleBone::Schema_VerifyBindingIsRegistered()
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
-static void CLoadingResource::ProcessLoadRequest(CResourceManifest *, ResourceHandle_t, ResourceHandle_t, ResourceId_t, const char *)
+static void CLoadingResource::EnsureExtRefStreamingData(CResourceManifest *, bool, ResourceManifestLoadPriority_t, ResourceHandle_t, ResourceHandle_t)
+static void CLoadingResource::ProcessLoadRequest(const LoadRequest_t &, ResourceHandle_t)
 static void CRCMD_SetProfileMode::Schema_VerifyBindingIsRegistered()
 static void CRMSG_Entity_Event::Schema_VerifyBindingIsRegistered()
 static void CRMSG_Entity_Info::Schema_VerifyBindingIsRegistered()
@@ -1783,13 +1834,16 @@ static void CRMSG_Resource_Event::Schema_VerifyBindingIsRegistered()
 static void CRMSG_Resource_ExtReference::Schema_VerifyBindingIsRegistered()
 static void CRMSG_Resource_NewId::Schema_VerifyBindingIsRegistered()
 static void CRMSG_System_Event::Schema_VerifyBindingIsRegistered()
+static void ConVarRef::InitDeferredConVarRefs()
 static void CovMatrix3::Schema_VerifyBindingIsRegistered()
+static void FeAnimStrayRadius_t::Schema_VerifyBindingIsRegistered()
 static void FeAxialEdgeBend_t::Schema_VerifyBindingIsRegistered()
 static void FeBandBendLimit_t::Schema_VerifyBindingIsRegistered()
 static void FeCollisionPlane_t::Schema_VerifyBindingIsRegistered()
 static void FeCollisionSphere_t::Schema_VerifyBindingIsRegistered()
 static void FeCtrlOffset_t::Schema_VerifyBindingIsRegistered()
 static void FeCtrlOsOffset_t::Schema_VerifyBindingIsRegistered()
+static void FeCtrlSoftOffset_t::Schema_VerifyBindingIsRegistered()
 static void FeEdgeDesc_t::Schema_VerifyBindingIsRegistered()
 static void FeFitInfluence_t::Schema_VerifyBindingIsRegistered()
 static void FeFitMatrix_t::Schema_VerifyBindingIsRegistered()
@@ -1801,12 +1855,14 @@ static void FeNodeIntegrator_t::Schema_VerifyBindingIsRegistered()
 static void FeNodeReverseOffset_t::Schema_VerifyBindingIsRegistered()
 static void FeQuad_t::Schema_VerifyBindingIsRegistered()
 static void FeRodConstraint_t::Schema_VerifyBindingIsRegistered()
+static void FeSimdAnimStrayRadius_t::Schema_VerifyBindingIsRegistered()
 static void FeSimdFitMatrices_t::Schema_VerifyBindingIsRegistered()
 static void FeSimdNodeBase_t::Schema_VerifyBindingIsRegistered()
 static void FeSimdQuad_t::Schema_VerifyBindingIsRegistered()
 static void FeSimdRodConstraint_t::Schema_VerifyBindingIsRegistered()
 static void FeSimdSpringIntegrator_t::Schema_VerifyBindingIsRegistered()
 static void FeSimdTri_t::Schema_VerifyBindingIsRegistered()
+static void FeSoftParent_t::Schema_VerifyBindingIsRegistered()
 static void FeSphereRigid_t::Schema_VerifyBindingIsRegistered()
 static void FeSpringIntegrator_t::Schema_VerifyBindingIsRegistered()
 static void FeTaperedCapsuleRigid_t::Schema_VerifyBindingIsRegistered()
@@ -1817,13 +1873,12 @@ static void FeWorldCollisionParams_t::Schema_VerifyBindingIsRegistered()
 static void FourCovMatrices3::Schema_VerifyBindingIsRegistered()
 static void FourQuaternions::Schema_VerifyBindingIsRegistered()
 static void FourVectors2D::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeCAnimationGroupResource::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeCAnimationResource::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeAnimationGroupResourceData_t::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeAnimationResourceData_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCDotaItemDefinitionResource::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCEntityLump::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCLightTree::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCModel::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeCMorphSet::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCNameListEvents::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCNameListStacks::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCPanoramaDynamicImages::Schema_VerifyBindingIsRegistered()
@@ -1835,19 +1890,19 @@ static void InfoForResourceTypeCPhysAggregateData::Schema_VerifyBindingIsRegiste
 static void InfoForResourceTypeCPostProcessingResource::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCRenderMesh::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCResourceManifestInternal::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeCSequenceGroupResource::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCTextureBase::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCVMixListResource::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeCVPhysXLevelData::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCVirtualVolumeTexture::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeCVoxelVisibility::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeCWorldNode::Schema_VerifyBindingIsRegistered()
-static void InfoForResourceTypeCWorldVisibility::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeIMaterial2::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeIParticleSystemDefinition::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeMorphSetData_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypePRTMatrixData_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeProcessingGraphInstance_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeProcessingGraph_t::Schema_VerifyBindingIsRegistered()
+static void InfoForResourceTypeSequenceGroupResourceData_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeVBitmapFontRuntimeData_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeVSound_t::Schema_VerifyBindingIsRegistered()
 static void InfoForResourceTypeWorldEnvironmentMaps_t::Schema_VerifyBindingIsRegistered()
@@ -1856,43 +1911,38 @@ static void InfoForResourceTypeWorld_t::Schema_VerifyBindingIsRegistered()
 static void LightDesc_t::Schema_VerifyBindingIsRegistered()
 static void OldFeEdge_t::Schema_VerifyBindingIsRegistered()
 static void PhysFeModelDesc_t::Schema_VerifyBindingIsRegistered()
-static void ResourceAdditionalRelatedFile_t::Schema_VerifyBindingIsRegistered()
-static void ResourceArgumentDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceCustomDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditFloatData_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditInfoBlock_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditIntData_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditStringData_t::Schema_VerifyBindingIsRegistered()
-static void ResourceExtRefList_t::Schema_VerifyBindingIsRegistered()
-static void ResourceInputDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceReferenceInfo_t::Schema_VerifyBindingIsRegistered()
-static void ResourceSpecialDependency_t::Schema_VerifyBindingIsRegistered()
 std::terminate()
 strnlen
+t$ wchar_t,H
 t.A;_
 t8A;^
+tBLc=
 tHIcD$
 tQD;{
 taL9x
-tlIcG
 tpE;float
+tqIc_
 tqJ94
+tuD9p
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
-u wchar_t*H
-u(L9=long double
+u(L9=u
 u1D9t
-u2A;^Pu
 uGetResourceManifest
 uint64
 unsigned short	[A\A^A_]
+unsigned short%fffff.
 unsigned short&E;unsigned __int128
+unsigned short&H9[8tUH
+unsigned short&fffff.
 unsigned short&ffffff.
 unsigned short,ffff.
-unsigned short>Lc=signed char
+unsigned short/ff.
+unsigned short=Lc=B$	
 unsigned short>fffff.
 unsigned short@A;_
 vCenter
+vHct
 vOffset
 vShape
 vagrp
@@ -1916,10 +1966,14 @@ virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString>
 virtual int IResourceTypeManager::GetNonStreamingDataLoadSize() const
 virtual size_t CAsyncResourceDataRequest::GetResultBufferSize()
 virtual void *CAsyncResourceDataRequest::GetResultBuffer()
+virtual void *CAtomicManipulator<CResourceArray<CFeIndexedJiggleBone> >::Allocate() [T = CResourceArray<CFeIndexedJiggleBone>]
+virtual void *CAtomicManipulator<CResourceArray<CFeIndexedJiggleBone> >::AllocateAndCopy(const void *) [T = CResourceArray<CFeIndexedJiggleBone>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::Allocate() [T = CResourceArray<CResourceString>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceString>]
 virtual void *CAtomicManipulator<CResourceArray<CTransform> >::Allocate() [T = CResourceArray<CTransform>]
 virtual void *CAtomicManipulator<CResourceArray<CTransform> >::AllocateAndCopy(const void *) [T = CResourceArray<CTransform>]
+virtual void *CAtomicManipulator<CResourceArray<FeAnimStrayRadius_t> >::Allocate() [T = CResourceArray<FeAnimStrayRadius_t>]
+virtual void *CAtomicManipulator<CResourceArray<FeAnimStrayRadius_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeAnimStrayRadius_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeAxialEdgeBend_t> >::Allocate() [T = CResourceArray<FeAxialEdgeBend_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeAxialEdgeBend_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeAxialEdgeBend_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeCollisionPlane_t> >::Allocate() [T = CResourceArray<FeCollisionPlane_t>]
@@ -1930,6 +1984,8 @@ virtual void *CAtomicManipulator<CResourceArray<FeCtrlOffset_t> >::Allocate() [T
 virtual void *CAtomicManipulator<CResourceArray<FeCtrlOffset_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeCtrlOffset_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeCtrlOsOffset_t> >::Allocate() [T = CResourceArray<FeCtrlOsOffset_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeCtrlOsOffset_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeCtrlOsOffset_t>]
+virtual void *CAtomicManipulator<CResourceArray<FeCtrlSoftOffset_t> >::Allocate() [T = CResourceArray<FeCtrlSoftOffset_t>]
+virtual void *CAtomicManipulator<CResourceArray<FeCtrlSoftOffset_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeCtrlSoftOffset_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeFitMatrix_t> >::Allocate() [T = CResourceArray<FeFitMatrix_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeFitMatrix_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeFitMatrix_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeFitWeight_t> >::Allocate() [T = CResourceArray<FeFitWeight_t>]
@@ -1946,6 +2002,8 @@ virtual void *CAtomicManipulator<CResourceArray<FeQuad_t> >::Allocate() [T = CRe
 virtual void *CAtomicManipulator<CResourceArray<FeQuad_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeQuad_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeRodConstraint_t> >::Allocate() [T = CResourceArray<FeRodConstraint_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeRodConstraint_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeRodConstraint_t>]
+virtual void *CAtomicManipulator<CResourceArray<FeSimdAnimStrayRadius_t> >::Allocate() [T = CResourceArray<FeSimdAnimStrayRadius_t>]
+virtual void *CAtomicManipulator<CResourceArray<FeSimdAnimStrayRadius_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeSimdAnimStrayRadius_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeSimdFitMatrices_t> >::Allocate() [T = CResourceArray<FeSimdFitMatrices_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeSimdFitMatrices_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeSimdFitMatrices_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeSimdNodeBase_t> >::Allocate() [T = CResourceArray<FeSimdNodeBase_t>]
@@ -1970,24 +2028,6 @@ virtual void *CAtomicManipulator<CResourceArray<FeTreeChildren_t> >::Allocate() 
 virtual void *CAtomicManipulator<CResourceArray<FeTreeChildren_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeTreeChildren_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeWorldCollisionParams_t> >::Allocate() [T = CResourceArray<FeWorldCollisionParams_t>]
 virtual void *CAtomicManipulator<CResourceArray<FeWorldCollisionParams_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FeWorldCollisionParams_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::Allocate() [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::Allocate() [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::Allocate() [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::Allocate() [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::Allocate() [T = CResourceArray<ResourceEditIntData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceEditIntData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::Allocate() [T = CResourceArray<ResourceEditStringData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceEditStringData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Allocate() [T = CResourceArray<ResourceInputDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceInputDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Allocate() [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Allocate() [T = CResourceArray<ResourceSpecialDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceSpecialDependency_t>]
 virtual void *CAtomicManipulator<CResourceArray<float> >::Allocate() [T = CResourceArray<float>]
 virtual void *CAtomicManipulator<CResourceArray<float> >::AllocateAndCopy(const void *) [T = CResourceArray<float>]
 virtual void *CAtomicManipulator<CResourceArray<unsigned int> >::Allocate() [T = CResourceArray<unsigned int>]
@@ -1997,10 +2037,14 @@ virtual void *CAtomicManipulator<CResourceArray<unsigned short> >::AllocateAndCo
 virtual void CAsyncResourceDataRequest::AssignCallback(CFunctor *, AsyncResourceDataRequestBehavior_t)
 virtual void CAsyncResourceDataRequest::KeepResultBuffer()
 virtual void CAsyncResourceDataRequest::ReleaseResultBuffer()
+virtual void CAtomicManipulator<CResourceArray<CFeIndexedJiggleBone> >::Copy(void *, const void *) [T = CResourceArray<CFeIndexedJiggleBone>]
+virtual void CAtomicManipulator<CResourceArray<CFeIndexedJiggleBone> >::Deallocate(void *) [T = CResourceArray<CFeIndexedJiggleBone>]
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Copy(void *, const void *) [T = CResourceArray<CResourceString>]
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Deallocate(void *) [T = CResourceArray<CResourceString>]
 virtual void CAtomicManipulator<CResourceArray<CTransform> >::Copy(void *, const void *) [T = CResourceArray<CTransform>]
 virtual void CAtomicManipulator<CResourceArray<CTransform> >::Deallocate(void *) [T = CResourceArray<CTransform>]
+virtual void CAtomicManipulator<CResourceArray<FeAnimStrayRadius_t> >::Copy(void *, const void *) [T = CResourceArray<FeAnimStrayRadius_t>]
+virtual void CAtomicManipulator<CResourceArray<FeAnimStrayRadius_t> >::Deallocate(void *) [T = CResourceArray<FeAnimStrayRadius_t>]
 virtual void CAtomicManipulator<CResourceArray<FeAxialEdgeBend_t> >::Copy(void *, const void *) [T = CResourceArray<FeAxialEdgeBend_t>]
 virtual void CAtomicManipulator<CResourceArray<FeAxialEdgeBend_t> >::Deallocate(void *) [T = CResourceArray<FeAxialEdgeBend_t>]
 virtual void CAtomicManipulator<CResourceArray<FeCollisionPlane_t> >::Copy(void *, const void *) [T = CResourceArray<FeCollisionPlane_t>]
@@ -2011,6 +2055,8 @@ virtual void CAtomicManipulator<CResourceArray<FeCtrlOffset_t> >::Copy(void *, c
 virtual void CAtomicManipulator<CResourceArray<FeCtrlOffset_t> >::Deallocate(void *) [T = CResourceArray<FeCtrlOffset_t>]
 virtual void CAtomicManipulator<CResourceArray<FeCtrlOsOffset_t> >::Copy(void *, const void *) [T = CResourceArray<FeCtrlOsOffset_t>]
 virtual void CAtomicManipulator<CResourceArray<FeCtrlOsOffset_t> >::Deallocate(void *) [T = CResourceArray<FeCtrlOsOffset_t>]
+virtual void CAtomicManipulator<CResourceArray<FeCtrlSoftOffset_t> >::Copy(void *, const void *) [T = CResourceArray<FeCtrlSoftOffset_t>]
+virtual void CAtomicManipulator<CResourceArray<FeCtrlSoftOffset_t> >::Deallocate(void *) [T = CResourceArray<FeCtrlSoftOffset_t>]
 virtual void CAtomicManipulator<CResourceArray<FeFitMatrix_t> >::Copy(void *, const void *) [T = CResourceArray<FeFitMatrix_t>]
 virtual void CAtomicManipulator<CResourceArray<FeFitMatrix_t> >::Deallocate(void *) [T = CResourceArray<FeFitMatrix_t>]
 virtual void CAtomicManipulator<CResourceArray<FeFitWeight_t> >::Copy(void *, const void *) [T = CResourceArray<FeFitWeight_t>]
@@ -2027,6 +2073,8 @@ virtual void CAtomicManipulator<CResourceArray<FeQuad_t> >::Copy(void *, const v
 virtual void CAtomicManipulator<CResourceArray<FeQuad_t> >::Deallocate(void *) [T = CResourceArray<FeQuad_t>]
 virtual void CAtomicManipulator<CResourceArray<FeRodConstraint_t> >::Copy(void *, const void *) [T = CResourceArray<FeRodConstraint_t>]
 virtual void CAtomicManipulator<CResourceArray<FeRodConstraint_t> >::Deallocate(void *) [T = CResourceArray<FeRodConstraint_t>]
+virtual void CAtomicManipulator<CResourceArray<FeSimdAnimStrayRadius_t> >::Copy(void *, const void *) [T = CResourceArray<FeSimdAnimStrayRadius_t>]
+virtual void CAtomicManipulator<CResourceArray<FeSimdAnimStrayRadius_t> >::Deallocate(void *) [T = CResourceArray<FeSimdAnimStrayRadius_t>]
 virtual void CAtomicManipulator<CResourceArray<FeSimdFitMatrices_t> >::Copy(void *, const void *) [T = CResourceArray<FeSimdFitMatrices_t>]
 virtual void CAtomicManipulator<CResourceArray<FeSimdFitMatrices_t> >::Deallocate(void *) [T = CResourceArray<FeSimdFitMatrices_t>]
 virtual void CAtomicManipulator<CResourceArray<FeSimdNodeBase_t> >::Copy(void *, const void *) [T = CResourceArray<FeSimdNodeBase_t>]
@@ -2051,24 +2099,6 @@ virtual void CAtomicManipulator<CResourceArray<FeTreeChildren_t> >::Copy(void *,
 virtual void CAtomicManipulator<CResourceArray<FeTreeChildren_t> >::Deallocate(void *) [T = CResourceArray<FeTreeChildren_t>]
 virtual void CAtomicManipulator<CResourceArray<FeWorldCollisionParams_t> >::Copy(void *, const void *) [T = CResourceArray<FeWorldCollisionParams_t>]
 virtual void CAtomicManipulator<CResourceArray<FeWorldCollisionParams_t> >::Deallocate(void *) [T = CResourceArray<FeWorldCollisionParams_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::Deallocate(void *) [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::Deallocate(void *) [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceEditIntData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::Deallocate(void *) [T = CResourceArray<ResourceEditIntData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceEditStringData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::Deallocate(void *) [T = CResourceArray<ResourceEditStringData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceInputDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceInputDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Deallocate(void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceSpecialDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceSpecialDependency_t>]
 virtual void CAtomicManipulator<CResourceArray<float> >::Copy(void *, const void *) [T = CResourceArray<float>]
 virtual void CAtomicManipulator<CResourceArray<float> >::Deallocate(void *) [T = CResourceArray<float>]
 virtual void CAtomicManipulator<CResourceArray<unsigned int> >::Copy(void *, const void *) [T = CResourceArray<unsigned int>]
@@ -2095,6 +2125,11 @@ virtual void CResourceSystemLeakTracker::ResourceReferenceLeakTracking_AddRef(Re
 virtual void CResourceSystemLeakTracker::ResourceReferenceLeakTracking_Release(ResourceHandle_t, ResourceLeakTrackingGroup_t, uintp)
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
+virtual void ConVar::ChangeStringValue(const char *, float)
+virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
+virtual void ConVar::InternalSetFloatValue(float)
+virtual void ConVar::InternalSetIntValue(int)
+virtual void ConVar::InternalSetValue(const char *)
 virtual void IResourceTypeManager::LoadStreamingData(ResourceHandle_t, IResourceSystemUtils *)
 vltre
 vmesh
@@ -2106,7 +2141,7 @@ void CAsyncCallStackTracker::SynchronousSectionEnd(bool, FN_GetCallStack, uint32
 void CAsyncCallStackTracker::SynchronousSectionStart(CCallStackMarkerBase &)
 void CAsyncCallStackTracker::SynchronousSectionStart(const CCallStackMarkerBase &)
 void CAsyncResourceDataRequest::IO_HandleAsyncResourceDataRequest()
-void CAsyncResourceDataRequest::InitForFileRead(bool, const char *)
+void CAsyncResourceDataRequest::InitForFileRead(ResourceManifestLoadPriority_t, bool, const char *)
 void CAsyncResourceDataRequest::InitForInMemoryBuffer(void *, size_t)
 void CAsyncStackTop::ExposeAnnotations(CAsyncCallStackTracker *)
 void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
@@ -2117,33 +2152,31 @@ void CLoadingResource::BeginLoadingResource(bool)
 void CLoadingResource::BeginLoadingStreamingData()
 void CLoadingResource::EnsureStreamingDataRequested()
 void CLoadingResource::FinalizeLoadRequest()
-void CLoadingResource::HandleAdditionalLoadRequest(ResourceHandle_t, CResourceManifest *)
+void CLoadingResource::HandleAdditionalLoadRequest(ResourceManifestLoadPriority_t, bool)
+void CLoadingResource::IncreasePriority(ResourceManifestLoadPriority_t)
 void CLoadingResource::InitializeAsAlreadyLoaded()
 void CLoadingResource::Lock(bool)
 void CLoadingResource::NoteResourceDataLoaded(CAsyncResourceDataRequest *)
 void CLoadingResource::OnResourceDataLoaded(CAsyncResourceDataRequest *)
 void CLoadingResource::OnResourceLoadFailed()
 void CLoadingResource::RegisterAsyncDataRequestComplete(CAsyncResourceDataRequest *)
-void CLoadingResource::TransferManifestOwnership(CResourceManifest *)
+void CLoadingResource::RegisterPendingResourceFileRequest(PendingRequestType_t)
+void CLoadingResource::RegisterPendingStreamingDataRequest(PendingRequestType_t)
+void CLoadingResource::RegisterReferringResource(CResourceManifest *, ResourceHandle_t, ResourceManifestLoadPriority_t)
 void CMemberFuncProxyBase<CAsyncResourceDataRequest *, void (CAsyncResourceDataRequest::*)(), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CAsyncResourceDataRequest *, FUNCTION_TYPE = void (CAsyncResourceDataRequest::*)(), MEM_POLICY = CFuncMemPolicyNone]
 void CMemberFuncProxyBase<CLoadingResource *, void (CLoadingResource::*)(CAsyncResourceDataRequest *), CFuncMemPolicyNone>::OnCall() [OBJECT_TYPE_PTR = CLoadingResource *, FUNCTION_TYPE = void (CLoadingResource::*)(CAsyncResourceDataRequest *), MEM_POLICY = CFuncMemPolicyNone]
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void CRMSG_MessageBlock::AddMessage(const void *, RMSG_MessageType_t, int)
 void CResourceManifest::Initialize(int, const char **)
 void CResourceManifest::InitializeInternal(int, const char **)
 void CResourceManifest::InvokeCompletionCallback()
 void CResourceManifest::MarkForDeletionAfterLoadCompletion()
-void CResourceManifest::RegisterDependentManifest(CResourceManifest *)
-void CResourceManifest::RegisterLoadingResource(ResourceHandle_t)
-void CResourceManifest::RegisterPendingResourceFileRequest(PendingRequestType_t)
-void CResourceManifest::RegisterPendingStreamingDataRequest(PendingRequestType_t)
-void CResourceManifest::RegisterRootResource(ResourceHandle_t)
-void CResourceManifest::RemoveAllDependentManifests()
-void CResourceManifest::RemoveDependentManifest(CResourceManifest *)
 void CResourceManifest::StartLoading()
+void CResourceManifestTypeManager::AddToLoadingList(CResourceManifestFromDiskInternal *, ResourceHandle_t)
+void CResourceManifestTypeManager::RemoveFromLoadingList(CResourceManifestFromDiskInternal *)
 void CResourceSystem::ExecuteResourceManifestRequests()
-void CResourceSystem::FinalizeOrAdvanceLoadingManifests(int, CResourceManifest **)
 void CResourceSystem::MN_DeallocateResourceData(ResourceHandleWritable_t)
 void CResourceSystem::MaybeExitBecauseOfResourceLoadFailure(const char *)
 void CResourceSystem::Update_Internal(int, ResourceSystemUpdateMode_t, bool)
@@ -2180,6 +2213,10 @@ void CUtlLinkedList<ExtRefList_t *, unsigned int, true, unsigned int, CUtlBlockM
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FreeNode(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAt(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlReferenceTracker<ResourceLeakTrackingGroup_t, unsigned long long, 0, CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options>::Release(GROUP_TYPE, UNIQUE_ID_TYPE, const CCallStackCapture &) [GROUP_TYPE = ResourceLeakTrackingGroup_t, UNIQUE_ID_TYPE = unsigned long long, INVALID_UNIQUE_ID_VALUE = 0, OPTIONS_OVERRIDE_CLASS = CResourceBindingReferenceTrackingData::CResourceReferenceTracking_Options]
 void CUtlString::SetDirect(const char *, int)
 void CVConResourceProfileCommandHandler::HandleCommand(void *, const CSchemaType *)
@@ -2195,8 +2232,8 @@ void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void ResourceHandleLeak_MetaData_GroupedRecords(CLogging_MetaDataAllocator *, const CResourceBindingReferenceTrackingData *, int)
 void ResourceHandleLeak_MetaData_IndividualRecords(CLogging_MetaDataAllocator *, const CResourceBindingReferenceTrackingData *)
+void|;wchar_t|H
 vphys
-vplev
 vpost
 vpram
 vprtm
@@ -2207,7 +2244,6 @@ vsndevts
 vsndstck
 vstdlib
 vsurf
-vt;wtH
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
@@ -2220,12 +2256,14 @@ wchar_t char::*(M
 xHHc{
 xXu*H
 xXulH
-zD(knN
 {error resource: %short}
 |$@L9?u
 }%E9|$$r
 }'A9^$r!I
 }*D9s$r$H
 },E9t$$r%I
-~.fff.
+}HA;EP}
+~%ffff.
+~&ff.
 ~?fff.
+~Fffffff.

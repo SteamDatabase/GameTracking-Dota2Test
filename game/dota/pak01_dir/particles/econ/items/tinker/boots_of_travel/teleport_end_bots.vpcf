@@ -59,5 +59,8 @@
 			m_bEndCap = true
 			m_ChildRef = resource:"particles/econ/items/tinker/boots_of_travel/teleport_end_bots_dust_bits.vpcf"
 		},
+		{
+			m_ChildRef = resource:"particles/items2_fx/teleport_end_image.vpcf"
+		},
 	]
 }

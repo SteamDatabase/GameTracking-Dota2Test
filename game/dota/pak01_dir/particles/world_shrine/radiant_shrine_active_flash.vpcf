@@ -11,6 +11,7 @@
 			m_hTexture = resource:"materials/particle/particle_flares/combined_flare.vtex"
 			m_nOrientationType = 1
 			m_bAdditive = true
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 

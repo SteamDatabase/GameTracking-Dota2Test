@@ -76,4 +76,34 @@
 			m_ChildRef = resource:"particles/econ/items/sand_king/sandking_scouringdunes_tail_glow/sandking_scouringdunes_tail_glow_smoke.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_tail"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/sand_king/scouringdunes_back/scouringdunes_back.vmdl"
+			}
+		},
+	]
 }

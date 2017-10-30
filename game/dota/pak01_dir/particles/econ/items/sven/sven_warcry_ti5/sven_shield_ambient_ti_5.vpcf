@@ -125,4 +125,33 @@
 			m_ChildRef = resource:"particles/econ/items/sven/sven_warcry_ti5/sven_shield_ambient_ti_5_b.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/sven/arms_of_the_rogue/arms_of_the_rogue.vmdl"
+			}
+		},
+	]
 }

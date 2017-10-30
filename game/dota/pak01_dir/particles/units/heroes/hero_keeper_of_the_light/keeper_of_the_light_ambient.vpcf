@@ -35,7 +35,6 @@
 			}
 			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
 			m_bAdditive = true
-			m_bDisableZBuffering = true
 			m_hTexture = resource:"materials/particle/particle_flares/particle_flare_007b.vtex"
 			m_flAnimationRate = 1.000000
 		},
@@ -117,9 +116,37 @@
 	[
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_ambient_glow2.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_ambient_glow3.vpcf"
+			m_bDisableChild = true
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_attack1"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
 		},
 	]
 }

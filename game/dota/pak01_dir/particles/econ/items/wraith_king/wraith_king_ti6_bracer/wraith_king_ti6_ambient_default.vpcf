@@ -226,4 +226,34 @@
 			m_ChildRef = resource:"particles/econ/items/wraith_king/wraith_king_ti6_bracer/wraith_king_ti6_ambient_default_beams_f.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_weapon"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/wraith_king/blistering_shade/mesh/blistering_shade.vmdl"
+			}
+		},
+	]
 }

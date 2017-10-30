@@ -77,6 +77,12 @@ DOTATooltipEconItem.Seasonal .BackgroundImage
 	wash-color: #ED5649;
 }
 
+.AutographEvent18 #AutographImage
+{
+	wash-color: #64D4CE;
+}
+
+
 #AutographDetails
 {
 	horizontal-align: right;
@@ -183,6 +189,9 @@ DOTATooltipEconItem.Seasonal .BackgroundImage
 	
 	/* Fall 2016 */
 	wash-color: #8ac267;
+	
+	/* Winter 2017 */
+	wash-color: #59bfff;
 }
 
 DOTATooltipEconItem.Seasonal .SeasonalIcon
@@ -310,7 +319,7 @@ DOTATooltipEconItem.Seasonal .SeasonalIcon
 
 .ListedModifier
 {
-	width: 47%;
+	width: 170px;
 	flow-children: right;
 	margin-left: 6px;
 	margin-top: 3px;

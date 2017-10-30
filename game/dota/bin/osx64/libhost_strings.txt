@@ -1,3 +1,4 @@
+	!O3H
 	9F }
 	9J }
 	9p }
@@ -5,8 +6,10 @@
 	CODE_SIZE
 	TYPE_BOOL
 	TYPE_ENUM
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	enum_type
 	extension
+	host_loss
 	name_part
 	tickcount
 	type_name
@@ -20,34 +23,40 @@
     Expected  : 
     Field type: 
   0  
+  @0 
   Comment started here.
   Field       : 
   Message type: 
-  P0 
   P@ 
   Problem     : 
   Problem     : Enum value did not match field type:
   Problem     : Field is not the right type for this message:
-  `0 
   `@ 
   `P 
   `p 
  #GameUI_Disconnect_ExitingEngine
+ #GameUI_Disconnect_InternalError
  #GameUI_Disconnect_SnapshotError
  #GameUI_Disconnect_SoundsMessage
  #GameUI_Disconnect_SteamIDBanned
+ #GameUI_ServerRejectBadChallenge
+ #Valve_Reject_Connect_From_Lobby
+ #Valve_Reject_Reserved_For_Lobby
  '%short'
+ 0 P0P0
+ 0 P0`0
  = { <proto text format> }". To set fields within it, use syntax like "
- @  P
- @P0 0`
+ A;\$
  CNETMsg_SpawnGroup_LoadCompleted
  CSVCMsg_GameSessionConfiguration
+ E;t$
+ E;|$
  Hc{ 1
  NETWORK_DISCONNECT_CLIENT_NO_MAP
+ NETWORK_DISCONNECT_REJECT_BANNED
  NETWORK_DISCONNECT_SNAPSHOTERROR
  NETWORK_DISCONNECT_STEAM_DROPPED
  Outdent() without matching Indent().
- PP@ 
  ReadToken overflow
  Tokenizer::ParseFloat() passed text that could not have been tokenized as signed char float: 
  Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
@@ -56,6 +65,7 @@
  [A\A^A_]
  [A^]
  [default = $0
+ `0P0
  args were given.  Full format string was: "
  contains invalid 
  ffff.
@@ -68,7 +78,6 @@
  t.Ic~DH
  unsigned short+Hc{0H
  unsigned short+Ic~dH
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !#GameUI_Disconnect_ConnectionLost
 !#GameUI_Disconnect_HLTVRestricted
@@ -79,11 +88,14 @@
 !#GameUI_Disconnect_SteamDeny_Misc
 !#GameUI_Disconnect_SteamOwnership
 !#GameUI_Disconnect_TempEntMessage
-!( 0xF & ( uintp( in.m_flMatVal ) | uintp( out.m_flMatVal ) ) )
+!#GameUI_ServerRejectFailedChannel
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !CNETMsg_SpawnGroup_ManifestUpdate
 !NETWORK_DISCONNECT_HLTVRESTRICTED
+!NETWORK_DISCONNECT_INTERNAL_ERROR
 !NETWORK_DISCONNECT_LOOPDEACTIVATE
+!NETWORK_DISCONNECT_REJECT_NOLOBBY
+!NETWORK_DISCONNECT_REMOTE_TIMEOUT
 !bCreate
 !fff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -135,6 +147,7 @@
 " which is.
 "#GameUI_Disconnect_DeltaEntMessage
 "#GameUI_Disconnect_HLTVUnavailable
+"#GameUI_ServerRejectInvalidCertLen
 "$0" does not declare $1 as an extension number.
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
@@ -154,12 +167,12 @@
 "CNETMsg_SpawnGroup_SetCreationTick
 "MutableRawRepeatedField"
 "NETWORK_DISCONNECT_HLTVUNAVAILABLE
+"NETWORK_DISCONNECT_REMOTE_BADCRYPT
 "NETWORK_DISCONNECT_SERVER_SHUTDOWN
 "NETWORK_DISCONNECT_STEAM_DENY_MISC
 "NETWORK_DISCONNECT_STEAM_OWNERSHIP
 "SPAWN_GROUP_CREATE_NEW_SCENE_WORLD
 "SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP
-"fff.
 "host_computationtime_std_deviation
 "long double" must be followed by exponent.
 ##GameUI_Disconnect_BadRelayPassword
@@ -190,8 +203,19 @@
 #GameUI_Disconnect_SteamVAC
 #GameUI_Disconnect_TickMessage
 #GameUI_Disconnect_TimedOut
+#GameUI_Disconnect_Unusual
 #GameUI_Disconnect_User
 #GameUI_Disconnect_UserCmd
+#GameUI_ServerAuthDisabled
+#GameUI_ServerCDKeyAuthInvalid
+#GameUI_ServerNoLobby
+#GameUI_ServerRejectBadPassword
+#GameUI_ServerRejectBanned:E
+#GameUI_ServerRejectLANRestrict
+#GameUI_ServerRejectNewProtocol
+#GameUI_ServerRejectOldProtocol
+#GameUI_ServerRejectServerFull
+#GameUI_ServerRejectSteam
 #GameUI_ServerRequireSteams
 #NETWORK_DISCONNECT_BADRELAYPASSWORD
 #NETWORK_DISCONNECT_REJECTED_BY_GAME
@@ -199,10 +223,12 @@
 #NETWORK_DISCONNECT_SNAPSHOTOVERFLOW
 #NETWORK_DISCONNECT_TICKMSG_OVERFLOW
 #SPAWN_GROUP_LOAD_ENTITIES_FROM_SAVE
+#Valve_Reject_Background_Map
+#Valve_Reject_Hidden_Game
+#Valve_Reject_Single_Player
 #base
 #base is NULL 
 #fff.
-#fffff.
 #ffffff.
 #include
 #include is NULL 
@@ -210,6 +236,7 @@ $#GameUI_Disconnect_BadServerPassword
 $#GameUI_Disconnect_ConnectionFailure
 $#GameUI_Disconnect_MessageParseError
 $#GameUI_Disconnect_Request_HLTVRelay
+$$E;|$
 $0  extend .$1 {
 $0  extensions $1 to $2;
 $0  message $1
@@ -219,21 +246,31 @@ $0$1 = $2
 $0$1$2 $3 = $4
 $0enum $1 {
 $0option $1;
+$NETWORK_DISCONNECT_REJECT_SERVERFULL
 $NETWORK_DISCONNECT_STEAM_AUTHINVALID
 $NETWORK_DISCONNECT_STEAM_VACBANSTATE
-$ffffff.
+$ffff.
 $gender
 %#GameUI_Disconnect_BadClientDeltaTick
 %#GameUI_Disconnect_ConnectionOverflow
 %#GameUI_Disconnect_ConnectionTimedout
 %#GameUI_Disconnect_CreateServerFailed
+%#GameUI_Disconnect_LocalProblem_Other
 %#GameUI_Disconnect_ReplayIncompatible
-%#GameUI_Disconnect_ServerIncompatible:E
+%#GameUI_Disconnect_ServerIncompatible
 %#GameUI_Disconnect_ServerInfoOverflow
 %#GameUI_Disconnect_StringTableMessage
+%#GameUI_ServerRejectInvalidConnection
+%#GameUI_ServerReject_InvalidKeyLength
 %%short%%short%%double:  sv[%%%d.%ds] cl[%%%d.%ds]
 %NETWORK_DISCONNECT_CONNECTION_FAILURE
 %NETWORK_DISCONNECT_DISCONNECT_BY_USER
+%NETWORK_DISCONNECT_LOCALPROBLEM_OTHER
+%NETWORK_DISCONNECT_REJECT_BADPASSWORD
+%NETWORK_DISCONNECT_REJECT_HIDDEN_GAME
+%NETWORK_DISCONNECT_REJECT_LANRESTRICT
+%NETWORK_DISCONNECT_REJECT_NEWPROTOCOL
+%NETWORK_DISCONNECT_REJECT_OLDPROTOCOL
 %NETWORK_DISCONNECT_SOUNDSMSG_OVERFLOW
 %d.%d.%double
 %int %int %int %int
@@ -247,75 +284,104 @@ $gender
 &#GameUI_Disconnect_InvalidMessageError
 &#GameUI_Disconnect_NoPeerGroupHandlers
 &#GameUI_Disconnect_PureServer_Mismatch
+&#GameUI_Disconnect_RemoteProblem_Other
+&#GameUI_ServerRejectInvalidReservation
 &NETWORK_DISCONNECT_BAD_SERVER_PASSWORD
 &NETWORK_DISCONNECT_MESSAGE_PARSE_ERROR
 &NETWORK_DISCONNECT_PURESERVER_MISMATCH
+&NETWORK_DISCONNECT_REJECT_BADCHALLENGE
 &NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE
 &NETWORK_DISCONNECT_SERVERINFO_OVERFLOW
 &NETWORK_DISCONNECT_SERVER_INCOMPATIBLE
 &NETWORK_DISCONNECT_STEAM_AUTHCANCELLED
 &NETWORK_DISCONNECT_TEMPENTMSG_OVERFLOW
+&YA1H
 &YA1L
+&ffffff.
 &qt != &q
 '#GameUI_Disconnect_BadSpectatorPassword
 '#GameUI_Disconnect_DifferentClassTables
+'#GameUI_ServerRejectInvalidSteamCertLen
 'NETWORK_DISCONNECT_BADSPECTATORPASSWORD
 'NETWORK_DISCONNECT_CLIENT_DIFFERENT_MAP
 'NETWORK_DISCONNECT_CREATE_SERVER_FAILED
 'NETWORK_DISCONNECT_DELTAENTMSG_OVERFLOW
 'NETWORK_DISCONNECT_DIFFERENTCLASSTABLES
 'NETWORK_DISCONNECT_DISCONNECT_BY_SERVER
+'NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL
+'NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER
 'SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITIES
-'fff.
 'u0Ic
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
 ( ndxBucket >= 0 ) && ( ndxBucket < 65536 )
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
+( pDerivedClassName != nullptr ) == ( SCHEMA_TYPE_TRAITS_is_polymorphic( TClass ) )
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(#GameUI_Disconnect_RemoteProblem_Timeout
 (*%short*), 
 (GetChar()) == (0)
 (Hc{(1
 (IcD$0A
 (NETWORK_DISCONNECT_INVALID_MESSAGE_ERROR
+(NETWORK_DISCONNECT_REJECT_BACKGROUND_MAP
+(NETWORK_DISCONNECT_REJECT_INVALIDCERTLEN
+(NETWORK_DISCONNECT_REMOTE_CERTNOTTRUSTED
 (NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM
 (NETWORK_DISCONNECT_STEAM_AUTHALREADYUSED
 (Pp8(><,,,26,,,,46,<
 ([A\A]A^A_]
 ([A^A_]
 (m_nAllocatedFlags & 0x8000000000000000) == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (merge 
 (missing)
 (nBytes % 4) == 0
 (s_pThisModuleBindingPointer != NULL)
+(static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uEHcK
+(uintp)m_pNextAlloc <= (uintp)m_pBufferBase + m_nBufferSize
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., "(.
 )#GameUI_Disconnect_PureServer_ClientExtra
+)#GameUI_Disconnect_RemoteProblem_BadCrypt
 )#GameUI_Disconnect_SteamDeny_BadAntiCheat
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS
 )NETWORK_DISCONNECT_PURESERVER_CLIENTEXTRA
 )NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE
+)ffff.
+*#GameUI_Disconnect_LocalProblem_ManyRelays
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL
+*NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS
 *NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE
+*NETWORK_DISCONNECT_REJECT_INVALIDKEYLENGTH
 *NETWORK_DISCONNECT_STRINGTABLEMSG_OVERFLOW
-+C$A9E
-+C$Lc
-+K$Hc
+*ffff.
+*ffffff.
 +NETWORK_DISCONNECT_CLIENT_UNABLE_TO_CRC_MAP
 +NETWORK_DISCONNECT_CONNECT_REQUEST_TIMEDOUT
++NETWORK_DISCONNECT_REJECT_INVALIDCONNECTION
 +NETWORK_DISCONNECT_STEAM_VAC_CHECK_TIMEDOUT
 , from:
 , not just within "
 ,#GameUI_Disconnect_Splitpacket_Send_Overflow
+,NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY
+,NETWORK_DISCONNECT_REJECT_INVALIDRESERVATION
+,NETWORK_DISCONNECT_REJECT_RESERVED_FOR_LOBBY
+,NETWORK_DISCONNECT_REJECT_SERVERAUTHDISABLED
+,NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING
 ,NETWORK_DISCONNECT_SPLITPACKET_SEND_OVERFLOW
 ,NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT
 ,NETWORK_DISCONNECT_STEAM_LOGGED_IN_ELSEWHERE
 ,ffffff.
+-#GameUI_Disconnect_LocalProblem_NetworkConfig
 -----
 -NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION
+-NETWORK_DISCONNECT_LOCALPROBLEM_NETWORKCONFIG
+-NETWORK_DISCONNECT_REJECT_INVALIDSTEAMCERTLEN
+-fffff.
 -ffffff.
 -sse2
 -sse3
@@ -339,17 +405,17 @@ $gender
 .foo = value".
 .placeholder.proto
 .xd<Dr
+/#GameUI_Disconnect_RemoteProblem_CertNotTrusted
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/host_dota/release/osx64/engineevents_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/boneconstraints_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/model_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/modelbuilder_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/permrendermeshdata_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/model_old_disk_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/morphset_old_disk_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/rendermesh_h_schema.gen_cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/rendermesh_old_disk_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/surfaceproperties_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_collisionmesh_resource_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_level_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vphysx_shape_resource_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/vpropbreakabledata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/game/gamecore/igamesystem.cpp
@@ -366,17 +432,22 @@ $gender
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/kv3lib/kv3transfer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/boneconstraints.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/rendermesh.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/rendermesh_old_disk.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/modellib/studioboneconstraints.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/bitvec.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/iprerequisite.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/keyvalues3.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer_resource.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/kv3lib/kv3transfer_schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/disjoint_set_forest.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/mathlib/simdmatrix.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcefile/resourcestream.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/stronghandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemaclassinfo.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/bitbuf.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhash.h
@@ -388,6 +459,7 @@ $gender
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/utlstring.cpp
@@ -401,7 +473,9 @@ $gender
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
 0 P@ 
+0 P@0
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00@@p
 0123456789abcdef
 08:0@6666@:J6
 0A;u0u
@@ -415,30 +489,38 @@ $gender
 0A;vxu
 0D;{ |
 0Hc{01
+0NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID
 0PP@@
 0[A\A^A_]
 0[A^]
 1 1 1
 2#.CSVCMsgList_UserMessages.usermsg_t
+2#GameUI_Disconnect_RemoteProblem_TimeoutConnecting
 29C |.
 29K }
 33333333I9
 3A;v8u
 3A;vpu
+4$A;^
 40A;wchar_t
 49K }
 49S |}
 4A;t$8u
 4B;unsigned short;
 4Hc{41
+528CSchemaRegistration_modellib
 5A;t$0u
 5A;t$pu
 6[A\A^A_]
+7fff.
+8#GameUI_Disconnect_LocalProblem_HostedServerPrimaryRelay
+8NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY
 8[A\A]A^A_]
 8[A^A_]
 8fffff.
+8ffffff.
+8x9,7
 92tBH
-9F(t6H
 9S |signed char
 9S |unsigned int
 9W(}!H
@@ -457,18 +539,20 @@ $gender
 ;Z(}'H
 ;[A^]
 ;{(u%
+<$A;_
 <(9{ |jI
 <NULL>
+<null>
 <unknown>
-=unsigned long long;Ic
-?CBaseGameSystemFactory
 @$Hc{$1
 @(HcH
 @(Hc{(1
 @(IcL$,H
+@0Hc{01
 @8Hc{81
 @@B;\
 @@L+@0I
+@CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @CThreadSyncObject::~CThreadSyncObject()
 @DevMsg(char const*, ...)
 @Hc{@1
@@ -487,7 +571,6 @@ $gender
 @_CMemAllocSystemInitialize
 @_COM_TimestampedLog
 @_CommandLine
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -506,6 +589,8 @@ $gender
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_TickDiffMilliSecF
 @_RegisterStringToken
+@_ThreadGetCurrentId
+@_ThreadInterlockedExchange64
 @_V_GetErrno
 @_V_SetErrno
 @_V_UTF16ToUTF8
@@ -518,6 +603,7 @@ $gender
 @_V_atoi
 @_V_cosf
 @_V_expf
+@_V_frexpf
 @_V_logf
 @_V_qsort_s
 @_V_sinf
@@ -550,19 +636,15 @@ $gender
 @___dynamic_cast
 @___error
 @___gxx_personality_v0
-@___sincos_stret
 @___stack_chk_fail
 @___stack_chk_guard
 @___stderrp
 @___tolower
 @__float128 short::*
-@_acos
-@_atan2
 @_ceilf
 @_fflush
 @_floorf
 @_fprintf
-@_frexpf
 @_g_Tier1_BitWriteMasks
 @_g_pMemAlloc
 @_memchr
@@ -594,10 +676,9 @@ $gender
 @_wcslen
 @`p@ P`
 @dyld_stub_binder
-@ffff.
 @loader_path
-@r4Mc
 @r8Ic
+@r8Mc
 @rpath/libhost.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
@@ -639,33 +720,27 @@ A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
 A$Hc{$1
 A+D$$Hc
-A+D$$Lc
-A+D$$M
-A+F$Hc
-A+G ~
-A+G$H
+A+E$H
+A+E$Hc
+A+E$Lc
+A+E$M
+A+F(~&A
+A+FH~&A
 A+G$Hc
-A+G$Lc
-A+G@~
-A+GH~
-A+L$$Hc
 A+M$Hc
-A+N$Hc
-A+O$Hc
-A+w0~
-A+w8~
-A+wP~
-A+wX~
+A+wchar_t@~
 A,LcK,1
+A9D$(u
 A9F8}5I
 A9T$ }
 A9V |fA
 A9V }	
 A9V }	A
 A9\$0
-A9]8M
+A9\$8L
 A;D$ ~
 A;D$(
+A;D$,
 A;E(u
 A;F8}
 A;G0}
@@ -673,13 +748,14 @@ A;G8}
 A;H(t.M
 A;M(L
 A;M(u
+A;MXu
 A;N(u2A
 A;N(unsigned short
+A;UXuFA
 A;\$@|
 A;\$H|
 A;],|
 A;]H|
-A;]Xu6I
 A;]X|
 A;]long long|
 A;^ |
@@ -698,37 +774,37 @@ A;_,|
 A;_8|
 A;_X|
 A;t$0u
-A;t$Xu0I
 A;v0u
 A;void(u
+A;|$Xu
+A;}Pu
 APPSYSTEM: In ConnectGameInterfaces(), s_nRegistrationCount is %double!
 APPSYSTEM: In ConnectGameInterfaces(), tried to use different connection modes!
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 APPSYSTEM: In ReconnectGameInterface(), tried to use different connection modes!
-ARAp0p
+ARAp8p8p
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBSATBp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
 ARBTBRB]ARBRAp
 ARBZBRAp
-ARB]ARA
-ARB]ARAp
-ARB]ARBRB]ARB]ARB]ARB]ARA
-ASARBSAXBRA
-ASARBSAXBRASBRBTBRBTBRBTBRBRAp
-ASARBSAXBRB]ARB]ARB]ARA
+ARB]ARB]ARB]ARB]ARB]ARA
+ARB]ARB]ARB]ARB]ARFp
+ARB]ARB`
+ARB]ARBp
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBRB]ARB]ARB]ARAp0p0p
+ASARBSAXBSARBSAXBSARBSAXBSARBSAXBRB]ARB]ARB]ARA
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
+ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
+ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
+ASARBSAXBSARBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBTBRBRBRBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
 ASARBSAXBTBRB]ARBRAp
 ASCTBRBUARBTAp
 ATAUARB`
-ATBRBRBRBSAXBRB`
+ATBRBRBRAp
+ATBRBRBRBSAXBSARBSAXBSARBSAXBRB]ARBRB]ARB]ARA
 ATBRBRBRBSAXBSARBSAXBSARBSAXBRB`
 ATBRBRBTBRB`KARA[BRBp
 ATBRB]ARBRAp
@@ -774,12 +850,13 @@ AddString
 AddUInt32
 AddUInt64
 Aim constraint always need at least two targets
+AimConstraint: %short - Cannot Find Aim Slave Bone
 AimConstraint: %short - Cannot Find Aim Up Target Attachment: %short
 AimConstraint: %short - Cannot Find Aim Up Target Bone
 Already saw decimal point or exponent; can'unsigned short have another one.
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
-AssetBrowse( dmx )
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -791,6 +868,10 @@ B@H+P0H
 BRBVBRBRATAp
 BRB]ARBZBRB`
 BSATAp
+BUNDLE_TYPE_COUNT
+BUNDLE_TYPE_NONE
+BUNDLE_TYPE_NORMAL_WRINKLE
+BUNDLE_TYPE_POSITION_SPEED
 BackUp() can only be called after signed char successful Next().
 Bad expression operator: '%char%char', expected C style boolean expression operator.
 Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
@@ -799,43 +880,48 @@ BakedLODBuilderMgr001
 BaseConstraint_t
 BenchmarkService001
 BinaryProperties_GetValue
-Blend Node
 Boolean default must be true or false.
-BuilderModelBoneFlexDriverControl_t
-BuilderModelBoneFlexDriverList_t
-BuilderModelBoneFlexDriver_t
+BundleData_t
+BundleType_t
 Burst Randomize
 Burst Scale
 Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
 C [A^]
 C$;CXuSL
+C(A9G
 C(IcO,I
-C,[A\A^A_]
+C,[A^]
 C0+K,9
 C0[A\A^A_]
 C@H+X0H
 C@L+X0L
 CAimConstraint
-CAnimNode
 CAtomicManipulator<CResourceArray<AttachmentData_t> >
 CAtomicManipulator<CResourceArray<BaseConstraint_t> >
+CAtomicManipulator<CResourceArray<BundleData_t> >
+CAtomicManipulator<CResourceArray<BundleType_t> >
 CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
+CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >
 CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >
+CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >
 CAtomicManipulator<CResourceArray<CResourceString> >
 CAtomicManipulator<CResourceArray<CTransform> >
-CAtomicManipulator<CResourceArray<CVPhysXMesh> >
 CAtomicManipulator<CResourceArray<ConstraintSlave_t> >
 CAtomicManipulator<CResourceArray<ConstraintTarget_t> >
+CAtomicManipulator<CResourceArray<FlexController_t> >
+CAtomicManipulator<CResourceArray<FlexDesc_t> >
+CAtomicManipulator<CResourceArray<FlexOp_t> >
+CAtomicManipulator<CResourceArray<FlexRule_t> >
 CAtomicManipulator<CResourceArray<HitBoxSet_t> >
 CAtomicManipulator<CResourceArray<HitBox_t> >
 CAtomicManipulator<CResourceArray<MaterialDrawDescriptor_t> >
 CAtomicManipulator<CResourceArray<MaterialGroup_t> >
 CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >
 CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >
+CAtomicManipulator<CResourceArray<MorphData_t> >
+CAtomicManipulator<CResourceArray<MorphRectData_t> >
 CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >
 CAtomicManipulator<CResourceArray<PermModelExtPart_t> >
 CAtomicManipulator<CResourceArray<Quaternion> >
@@ -862,43 +948,41 @@ CAtomicManipulator<CResourceArray<unsigned char> >
 CAtomicManipulator<CResourceArray<unsigned int> >
 CAtomicManipulator<CResourceArray<unsigned long long> >
 CAtomicManipulator<CResourceArray<unsigned short> >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >
+CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCMorphSet> > >
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >
+CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >
 CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >
+CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t> > >
+CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >
 CAtomicManipulator<CResourcePointer<PhysFeModelDesc_t> >
 CAtomicManipulator<CResourcePointer<RenderSkeletonData_t> >
 CAtomicManipulator<CResourcePointer<VpropBreakablePartData_t> >
 CAtomicManipulator<CResourceString>
-CAtomicManipulator<CStrongHandle<InfoForResourceTypeCMorphSet> >
 CAtomicManipulator<CStrongHandle<InfoForResourceTypeIMaterial2> >
 CAtomicManipulator<CTransform>
 CAtomicManipulator<CUtlString>
-CAtomicManipulator<CUtlVector<BuilderModelBoneFlexDriverControl_t, CUtlMemory<BuilderModelBoneFlexDriverControl_t, int> > >
-CAtomicManipulator<CUtlVector<BuilderModelBoneFlexDriver_t, CUtlMemory<BuilderModelBoneFlexDriver_t, int> > >
 CAtomicManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >
+CAtomicManipulator<CUtlVector<CConstraintSlave, CUtlMemory<CConstraintSlave, int> > >
+CAtomicManipulator<CUtlVector<CConstraintTarget, CUtlMemory<CConstraintTarget, int> > >
 CAtomicManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CAtomicManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
 CAtomicManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
-CAtomicManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
-CAtomicManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> > >
 CAtomicManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
 CAtomicManipulator<CUtlVector<int, CUtlMemory<int, int> > >
 CAtomicManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> >
+CAtomicManipulator<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeCModel> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCMorphSet> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
+CAtomicManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
+CAtomicManipulator<CWeakHandle<InfoForResourceTypeMorphSetData_t> >
+CAtomicManipulator<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> >
 CAtomicManipulator<Color>
 CAtomicManipulator<Quaternion>
-CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CAtomicManipulator<Vector>
 CAtomicManipulator<matrix3x4_t>
@@ -914,14 +998,16 @@ CBaseAppSystem<IPredictionDiffMgr>
 CBaseAppSystem<ISaveRestoreDataMgr>
 CBaseAppSystem<ISource2Host>
 CBaseConstraint
-CBlendAnimNode
-CBuilderModelInfo
+CBaseGameSystemFactory
+CConstraintSlave
+CConstraintTarget
 CDebugDrawQueueMgr
 CDefaultAccessor
 CDontUseThisGameSystem
 CDotaMapUtils
 CDotaMapUtils: Failed to load tree map %short
 CEmptyConVar
+CEmptySequence
 CFieldPathHuffmanEncoder::INode
 CFieldPathHuffmanEncoder::InternalNode
 CFieldPathHuffmanEncoder::LeafNode
@@ -1059,8 +1145,10 @@ CHitBox
 CHitBoxSet
 CHitBoxSetList
 CHostUtils
+CKV3TransferLoadContext: Tried to load signed char polymorphic pointer with no '%short' key
 CKeyValues3Cluster allocated with bad alignment! (%p) (If this is inside of signed char heap allocation, you may need to inherit from CAlignedNewDelete< KV3_CLUSTER_SIZEOF >.)
 CKeyValues3Cluster::CKeyValues3Cluster()
+CKeyValues3Context *CKeyValues3Cluster::GetParentContext()
 CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
 CLoopModeBase
 CLoopModeFactory<CLoopModeGameHostDota>
@@ -1096,6 +1184,7 @@ CONSTRAINT_TYPE_JIGGLE_BONE
 CONSTRAINT_TYPE_MAX
 CONSTRAINT_TYPE_MORPH
 CONSTRAINT_TYPE_ORIENT
+CONSTRAINT_TYPE_PARENT
 CONSTRAINT_TYPE_POINT
 CONSTRAINT_TYPE_ROTATION
 CONSTRAINT_TYPE_TILT_TWIST
@@ -1111,6 +1200,7 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
+CParentConstraint
 CPhysSurfaceProperties
 CPhysSurfacePropertiesAudio
 CPhysSurfacePropertiesGame
@@ -1119,6 +1209,9 @@ CPhysSurfacePropertiesSoundNames
 CPointConstraint
 CPostConnectCallback
 CPredictionDiffMgr
+CRefCountServiceBase<true, CRefMT>
+CRefCounted<CRefCountServiceBase<true, CRefMT> >
+CRenderBufferBinding
 CRenderMesh
 CRenderSkeleton
 CResourceArray
@@ -1126,7 +1219,6 @@ CResourceExtReference
 CResourceManifestPrerequisite
 CResourcePointer
 CResourceString
-CRootAnimNode
 CSVCMsgList_GameEvents
 CSVCMsgList_GameEvents_event_t
 CSVCMsgList_UserMessages
@@ -1139,31 +1231,30 @@ CSaveRestoreDataMgr
 CSceneObjectData
 CSchemaClassBinding<AttachmentData_t>
 CSchemaClassBinding<BaseConstraint_t>
-CSchemaClassBinding<BuilderModelBoneFlexDriverControl_t>
-CSchemaClassBinding<BuilderModelBoneFlexDriverList_t>
-CSchemaClassBinding<BuilderModelBoneFlexDriver_t>
+CSchemaClassBinding<BundleData_t>
 CSchemaClassBinding<CAimConstraint>
 CSchemaClassBinding<CAttachment>
-CSchemaClassBinding<CBuilderModelInfo>
+CSchemaClassBinding<CConstraintSlave>
+CSchemaClassBinding<CConstraintTarget>
 CSchemaClassBinding<CHitBox>
 CSchemaClassBinding<CHitBoxSet>
 CSchemaClassBinding<CHitBoxSetList>
 CSchemaClassBinding<CMaterialDrawDescriptor>
 CSchemaClassBinding<CMorphConstraint>
 CSchemaClassBinding<COrientConstraint>
+CSchemaClassBinding<CParentConstraint>
 CSchemaClassBinding<CPhysSurfaceProperties>
 CSchemaClassBinding<CPhysSurfacePropertiesAudio>
 CSchemaClassBinding<CPhysSurfacePropertiesGame>
 CSchemaClassBinding<CPhysSurfacePropertiesPhysics>
 CSchemaClassBinding<CPhysSurfacePropertiesSoundNames>
 CSchemaClassBinding<CPointConstraint>
+CSchemaClassBinding<CRenderBufferBinding>
 CSchemaClassBinding<CRenderMesh>
 CSchemaClassBinding<CRenderSkeleton>
 CSchemaClassBinding<CSceneObjectData>
 CSchemaClassBinding<CTiltTwistConstraint>
 CSchemaClassBinding<CTwistConstraint>
-CSchemaClassBinding<CVPhysXLevelData>
-CSchemaClassBinding<CVPhysXMesh>
 CSchemaClassBinding<CVPhysXSurfacePropertiesList>
 CSchemaClassBinding<ConstraintSlave_t>
 CSchemaClassBinding<ConstraintTarget_t>
@@ -1203,6 +1294,10 @@ CSchemaClassBinding<EventSetTime_t>
 CSchemaClassBinding<EventSimpleLoopFrameUpdate_t>
 CSchemaClassBinding<EventSimulate_t>
 CSchemaClassBinding<EventSplitScreenStateChanged_t>
+CSchemaClassBinding<FlexController_t>
+CSchemaClassBinding<FlexDesc_t>
+CSchemaClassBinding<FlexOp_t>
+CSchemaClassBinding<FlexRule_t>
 CSchemaClassBinding<HitBoxSet_t>
 CSchemaClassBinding<HitBox_t>
 CSchemaClassBinding<MaterialDrawDescriptor_t>
@@ -1210,6 +1305,9 @@ CSchemaClassBinding<MaterialGroup_t>
 CSchemaClassBinding<ModelBoneFlexDriverControl_t>
 CSchemaClassBinding<ModelBoneFlexDriver_t>
 CSchemaClassBinding<ModelSkeletonData_t>
+CSchemaClassBinding<MorphData_t>
+CSchemaClassBinding<MorphRectData_t>
+CSchemaClassBinding<MorphSetData_t>
 CSchemaClassBinding<OnDiskBufferData_t>
 CSchemaClassBinding<PermModelData_t>
 CSchemaClassBinding<PermModelExtPart_t>
@@ -1221,6 +1319,7 @@ CSchemaClassBinding<RenderSkeletonBone_t>
 CSchemaClassBinding<RenderSkeletonData_t>
 CSchemaClassBinding<SceneObjectData_t>
 CSchemaClassBinding<SkeletonBoneBbox_t>
+CSchemaClassBinding<SkeletonBoneBounds_t>
 CSchemaClassBinding<VPhysXAggregateData_t>
 CSchemaClassBinding<VPhysXBodyPart_t>
 CSchemaClassBinding<VPhysXCollisionAttributes_t>
@@ -1236,12 +1335,16 @@ CSchemaClassBinding<VPhysics2ShapeDef_t>
 CSchemaClassBinding<VpropBreakablePartData_t>
 CSchemaClassBindingBase
 CSchemaEnumBinding<AttachmentInfluenceFlags_t>
+CSchemaEnumBinding<BundleType_t>
 CSchemaEnumBinding<ConstraintType_t>
 CSchemaEnumBinding<MeshDrawPrimitiveFlags_t>
 CSchemaEnumBinding<MeshTranslucencyType_t>
 CSchemaEnumBinding<ModelBoneFlexComponent_t>
 CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>
+CSchemaEnumBinding<MorphSetData_t::EncodingType_t>
+CSchemaEnumBinding<MorphSetData_t::LookupType_t>
 CSchemaEnumBinding<PermModelInfo_t::FlagEnum>
+CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>
 CSchemaEnumBinding<RenderSkeletonData_t::FlagEnum_t>
 CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>
 CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>
@@ -1253,23 +1356,30 @@ CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaInstallCallback
 CSchemaManipulator<CResourceArray<AttachmentData_t> >
 CSchemaManipulator<CResourceArray<BaseConstraint_t> >
+CSchemaManipulator<CResourceArray<BundleData_t> >
+CSchemaManipulator<CResourceArray<BundleType_t> >
 CSchemaManipulator<CResourceArray<CResourceArray<unsigned char> > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >
+CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >
 CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >
+CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >
 CSchemaManipulator<CResourceArray<CResourceString> >
 CSchemaManipulator<CResourceArray<CTransform> >
-CSchemaManipulator<CResourceArray<CVPhysXMesh> >
 CSchemaManipulator<CResourceArray<ConstraintSlave_t> >
 CSchemaManipulator<CResourceArray<ConstraintTarget_t> >
+CSchemaManipulator<CResourceArray<FlexController_t> >
+CSchemaManipulator<CResourceArray<FlexDesc_t> >
+CSchemaManipulator<CResourceArray<FlexOp_t> >
+CSchemaManipulator<CResourceArray<FlexRule_t> >
 CSchemaManipulator<CResourceArray<HitBoxSet_t> >
 CSchemaManipulator<CResourceArray<HitBox_t> >
 CSchemaManipulator<CResourceArray<MaterialDrawDescriptor_t> >
 CSchemaManipulator<CResourceArray<MaterialGroup_t> >
 CSchemaManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >
 CSchemaManipulator<CResourceArray<ModelBoneFlexDriver_t> >
+CSchemaManipulator<CResourceArray<MorphData_t> >
+CSchemaManipulator<CResourceArray<MorphRectData_t> >
 CSchemaManipulator<CResourceArray<OnDiskBufferData_t> >
 CSchemaManipulator<CResourceArray<PermModelExtPart_t> >
 CSchemaManipulator<CResourceArray<Quaternion> >
@@ -1296,84 +1406,73 @@ CSchemaManipulator<CResourceArray<unsigned char> >
 CSchemaManipulator<CResourceArray<unsigned int> >
 CSchemaManipulator<CResourceArray<unsigned long long> >
 CSchemaManipulator<CResourceArray<unsigned short> >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >
+CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCMorphSet> > >
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >
+CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >
 CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >
+CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t> > >
+CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >
 CSchemaManipulator<CResourcePointer<PhysFeModelDesc_t> >
 CSchemaManipulator<CResourcePointer<RenderSkeletonData_t> >
 CSchemaManipulator<CResourcePointer<VpropBreakablePartData_t> >
 CSchemaManipulator<CResourceString>
-CSchemaManipulator<CStrongHandle<InfoForResourceTypeCMorphSet> >
 CSchemaManipulator<CStrongHandle<InfoForResourceTypeIMaterial2> >
 CSchemaManipulator<CTransform>
 CSchemaManipulator<CUtlString>
-CSchemaManipulator<CUtlVector<BuilderModelBoneFlexDriverControl_t, CUtlMemory<BuilderModelBoneFlexDriverControl_t, int> > >
-CSchemaManipulator<CUtlVector<BuilderModelBoneFlexDriver_t, CUtlMemory<BuilderModelBoneFlexDriver_t, int> > >
 CSchemaManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >
+CSchemaManipulator<CUtlVector<CConstraintSlave, CUtlMemory<CConstraintSlave, int> > >
+CSchemaManipulator<CUtlVector<CConstraintTarget, CUtlMemory<CConstraintTarget, int> > >
 CSchemaManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
 CSchemaManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
 CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
 CSchemaManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
-CSchemaManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> > >
-CSchemaManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> > >
 CSchemaManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
 CSchemaManipulator<CUtlVector<int, CUtlMemory<int, int> > >
 CSchemaManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> >
+CSchemaManipulator<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeCModel> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCMorphSet> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> >
+CSchemaManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
+CSchemaManipulator<CWeakHandle<InfoForResourceTypeMorphSetData_t> >
+CSchemaManipulator<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> >
 CSchemaManipulator<Color>
 CSchemaManipulator<Quaternion>
-CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaManipulator<Vector>
 CSchemaManipulator<matrix3x4_t>
 CSchemaManipulator<matrix3x4a_t>
-CSchemaNonConstructibleClassBinding<CAnimNode>
 CSchemaNonConstructibleClassBinding<CBaseConstraint>
-CSchemaNonConstructibleClassBinding<CBlendAnimNode>
-CSchemaNonConstructibleClassBinding<CRootAnimNode>
-CSchemaNonConstructibleClassBinding<CSequenceAnimNode>
-CSchemaNonConstructibleClassBinding<CStateMachineAnimNode>
 CSchemaNonConstructibleClassBindingBase
 CSchemaRegistration
 CSchemaRegistration_host
-CSchemaRegistration_modellib
-CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeCMorphSet>
 CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
-CSchemaUtlVectorManipulator<CUtlVector<BuilderModelBoneFlexDriverControl_t, CUtlMemory<BuilderModelBoneFlexDriverControl_t, int> >, BuilderModelBoneFlexDriverControl_t>
-CSchemaUtlVectorManipulator<CUtlVector<BuilderModelBoneFlexDriver_t, CUtlMemory<BuilderModelBoneFlexDriver_t, int> >, BuilderModelBoneFlexDriver_t>
 CSchemaUtlVectorManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> >, CBaseConstraint*>
+CSchemaUtlVectorManipulator<CUtlVector<CConstraintSlave, CUtlMemory<CConstraintSlave, int> >, CConstraintSlave>
+CSchemaUtlVectorManipulator<CUtlVector<CConstraintTarget, CUtlMemory<CConstraintTarget, int> >, CConstraintTarget>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> >, CHitBox>
 CSchemaUtlVectorManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >, CHitBoxSet>
 CSchemaUtlVectorManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >, CMaterialDrawDescriptor>
 CSchemaUtlVectorManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> >, CPhysSurfaceProperties*>
-CSchemaUtlVectorManipulator<CUtlVector<ConstraintSlave_t, CUtlMemory<ConstraintSlave_t, int> >, ConstraintSlave_t>
-CSchemaUtlVectorManipulator<CUtlVector<ConstraintTarget_t, CUtlMemory<ConstraintTarget_t, int> >, ConstraintTarget_t>
 CSchemaUtlVectorManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> >, RenderSkeletonBone_t>
 CSchemaUtlVectorManipulator<CUtlVector<int, CUtlMemory<int, int> >, int>
 CSchemaUtlVectorManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul>, CSceneObjectData>
 CSchemaVisitorInfoMapBase
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCAnimationGroupResource>
+CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeAnimationGroupResourceData_t>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCModel>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCMorphSet>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCPhysAggregateData>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCRenderMesh>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCSequenceGroupResource>
+CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCTextureBase>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
-CSequenceAnimNode
+CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeMorphSetData_t>
+CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeSequenceGroupResourceData_t>
 CSource2HostBase
-CStateMachineAnimNode
 CStrongHandle
 CTestGameSystem
+CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadSyncObject::~CThreadSyncObject()
 CTier0AppSystem<IDebugDrawQueueMgr>
 CTier0AppSystem<IDotaMapUtils>
@@ -1409,27 +1508,28 @@ CTier3AppSystem<ISaveRestoreDataMgr, 0>
 CTier3AppSystem<ISource2Host, 0>
 CTiltTwistConstraint
 CTransform
+CTransform CBaseConstraint::ComputeTargetTransform(const CModel *, const matrix3x4a_t *) const
 CTwistConstraint
 CType
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
+CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
+CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
+CUtlRBTree overflow with %u elements!
 CUtlString
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CUtlVector
 CUtlVectorFixedGrowable
-CVPhysXLevelData
-CVPhysXMesh
 CVPhysXSurfacePropertiesList
 CWeakHandle
-C`[A^]
+CX[A^]
 Can'unsigned short 
 Can'unsigned short get here.
 Can'unsigned short get here: failed to get default value as string
 Cannot allocate abstract class
-Cannot allocate abstract class %short
 Cannot allocate buffer larger than kint32max for 
 Cannot construct abstract class
 Cannot copy abstract class
@@ -1444,20 +1544,23 @@ Color
 ConCommandBase
 ConVar
 ConVar(%short) defined with infinite float value (%short)
+ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
 ConstraintSlave_t
 ConstraintTarget_t
 ConstraintType_t
+Construction is only allowed from the resolve function
 Could not create an instance of 
 Could not find field named "
 Could not find field type.
 Couldn'unsigned short parse default value "
 Count
-Cp;unsigned charcomplex |
 Cp[A^]
 CreateInterface
+D$(A9E
 D$(Ic
+D$,A;D$
 D$,IcD$(
 D$4IcD$0
 D$@L+`0I
@@ -1473,9 +1576,9 @@ D;`8|
 D;cH|
 D;k,|
 D;sXI
+D;t9 
 D;vH|
 D;xH|
-D;{Hu
 D;~,|
 D<PfA
 DebugDrawQueueManager001
@@ -1489,23 +1592,24 @@ Dffff.
 DmeSurfaceAudioParams
 DmeSurfaceAudioSounds
 DmeSurfacePhysicsParams
-DmeVPhysXLevel
-DmeVPhysXMesh
 Do Not Cast Shadows
 DotaCardGameClient_001
 DotaMapUtils001
 Double-save to Member '%short'
 E(IcL$,H
+E(fff.
 E,IcE(
 E9l$(
+E9t9@
+E9t9T
 E9w0M
 E;__float128 A
 E;__int128 ~0
 E;float(A
 E;g8|
+E;gHu
 E;p,|
-E;uPu$I
-E;|$(L
+E;q(u
 E;~ A
 E@F;|
 E@L+h0
@@ -1516,11 +1620,12 @@ ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
+EXPORTSYSTEM_INTERFACE_VERSION_001
 E\IcEX
 E`H9B
 EconItemToolModel_001
+Empty VB array found for this draw descriptor
 Encountered too many releases for resource "%short"
-End Frame
 End-of-file inside block comment.
 EngineLoopState_t
 EngineServiceMgr001
@@ -1595,7 +1700,6 @@ Extension range end number must be greater than start number.
 ExtensionRange
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend signed char non-lite type to contain signed char lite type, but the reverse is allowed.
-EyCIc
 F Hcz 1
 F [A^]
 F$Hcz$1
@@ -1609,19 +1713,26 @@ F([A^]
 F,Hcz,1
 F,IcF(
 F0D9k(
+F0Hcz01
 F4IcF0
 F8Hcz81
-F9l?@
-F9l?T
 F@L+p0I
+F@[A^]
 FATAL
 FDIcF@
+FD[A^]
+FLEXCONTROLLER_REMAP_2WAY
+FLEXCONTROLLER_REMAP_EYELID
+FLEXCONTROLLER_REMAP_NWAY
+FLEXCONTROLLER_REMAP_PASSTHRU
 FL[A^]
 FPHczP1
 F\IcFX
 Fade Time
 Fade __int128 int::* Distance
 Fade long long signed char::* Distance
+Failed to allocate an instance of class '%short'
+Failed to find transfer interface %double (%short)
 Failed to save unsupported class
 False
 Field "
@@ -1642,7 +1753,6 @@ FieldDescriptorProto.oneof_index should not be set for extensions.
 FieldOptions
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
-File Path
 File already exists in database: 
 File appears to be in generated pool but wasn'unsigned short registered: 
 File is already registered: 
@@ -1656,11 +1766,14 @@ First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 FlIcFh
 FlattenedSerializersVersion001
+FlexController_t
+FlexDesc_t
+FlexOp_t
+FlexRule_t
 FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Fp[A^]
-Frames
 From Class Binding
 From Enum Binding
 FtIcFp
@@ -1671,9 +1784,8 @@ G(L;unsigned long
 G8H	p(]
 G@H+x0H
 G@L+x0I
-GA#D$
 GAMECONSOLE
-GL[A\A^A_]
+G`[A\A^A_]
 Game System %short is defined twice!
 GameModelInfoClient001
 GameModelInfoServer001
@@ -1704,10 +1816,11 @@ GetRepeatedUInt32
 GetRepeatedUInt64
 GetString
 GetStringReference
-GetTableRaw() != nullptr
+GetTable() != nullptr
 GetType() == KEYVALUES3_TYPE_TABLE
 GetUInt32
 GetUInt64
+GhHcWhD
 H	p(]
 H H;9u)H
 H!wchar_t(]
@@ -1761,6 +1874,9 @@ HammerMapLoader001
 HasField
 HcG,H
 HcG0H
+HcHXH
+HcKPH
+HcKXH
 HcKhH
 HcO(H
 HcO,I
@@ -1776,11 +1892,9 @@ HitBox_t
 HostStateMgr001
 HostUtils001
 I CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
-I CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::Find(const T &) const [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
-I CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 I CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::NewNode(const T *) [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char, CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char> >::Find(const T &) const [T = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned char, L = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char>]
-I CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char, CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned char, L = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char>]
+I CUtlRBTree<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
+I CUtlRBTree<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char, CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char> >::NewNode(const T *) [T = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned char, L = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
@@ -1789,6 +1903,7 @@ I9FXt H
 I9}@unsigned short
 IAppSystemcomplex 
 IAtomicManipulator
+IBaseSequence
 IConCommandBaseAccessor
 IConVar
 IDebugDrawQueueMgr
@@ -1813,7 +1928,9 @@ ISchemaBinding
 ISchemaCollectionManipulator
 ISchemaInspectionManipulator
 ISchemaManipulator
+ISequence
 ISource2Host
+IVSSequence
 IVTableIndexCalculator
 IcD$(A
 IcD$,H
@@ -1828,29 +1945,39 @@ IcF A
 IcF(A
 IcF,L
 IcF0A
-IcF0H
 IcF@A
 IcFXA
 IcFhA
+IcFhD
 IcFpA
 IcF|H
 IcG,I
 IcG,L
+IcG0H
 IcGtH
 IcGxH
 IcL$(L
 IcL$,H
 IcL$,L
+IcL$`H
+IcL$hH
+IcM8H
+IcMPH
+IcMXH
 IcN(I
 IcN,L
+IcN8H
+IcNXH
 IcNXH9
+IcO H
 IcO,L
+IcOHH
+IcOXH9
 IcT$(H
 IcT$,L
 IcV,H
 IcV,L
 IcW(I
-Ic_(H
 Ict$(L
 Icu(H
 Icu4H
@@ -1862,13 +1989,14 @@ Impl().m_AdditionalClusters.FindAndFastRemove( pCluster )
 Import "
 Index must be -1 for non-repeated fields
 Index out-of-bounds (field is empty).
-InfoForResourceTypeCAnimationGroupResource
+InfoForResourceTypeAnimationGroupResourceData_t
 InfoForResourceTypeCModel
-InfoForResourceTypeCMorphSet
 InfoForResourceTypeCPhysAggregateData
 InfoForResourceTypeCRenderMesh
-InfoForResourceTypeCSequenceGroupResource
+InfoForResourceTypeCTextureBase
 InfoForResourceTypeIMaterial2
+InfoForResourceTypeMorphSetData_t
+InfoForResourceTypeSequenceGroupResourceData_t
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -1894,8 +2022,8 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE: 
 Invalid wire type for CPPTYPE_UINT32: 
 Invalid wire type for CPPTYPE_UINT64: 
-IsAllGreaterThan( tolerance, diff )
 IsInList(before)
+IsPowerOfTwo( m_nAlignment )
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
 K(Ict$,L
@@ -1915,7 +2043,7 @@ KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetNextKey() const
 KeyValues Error: %short in file %short
 KeyValues3 *CKeyValues3Table::MemberData(int)
-KeyValues3 *KeyValues3::FindOrCreateMember(const char *, KeyValues3LowercaseHash_t)
+KeyValues3 *KeyValues3::FindOrCreateMember(CKV3MemberName, bool *)
 KeyValues3 *KeyValues3::GetArrayElement(int)
 KeyValues3::GetElement - Bad index %double (count = %double)
 KeyValues::FindKey called on NULL pointer!
@@ -1928,9 +2056,6 @@ L$ Lc,
 L$(IcV,L
 L$8A;D$<
 L$@L+a0I
-L95#:
-L950^
-L95H_
 L9v@u
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -1940,7 +2065,6 @@ LITE_RUNTIME
 LOWVIOLENCE
 Label
 LcO,D
-LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
 Location
@@ -1954,6 +2078,7 @@ MDiskDataForResourceType
 MDmElementType
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
 MESH_DRAW_FLAGS_DRAW_LAST
+MESH_DRAW_FLAGS_HAS_LIGHTING_BASIS
 MESH_DRAW_FLAGS_IS_OCCLUDER
 MESH_DRAW_FLAGS_NONE
 MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT
@@ -1964,7 +2089,6 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
-MEmitKV3DontClearMissingFields
 MEmitKV3TransferPostLoadFn
 MEmitKV3TransferPostSaveFn
 MKV3TransferName
@@ -1975,10 +2099,7 @@ MODEL_BONE_FLEX_TY
 MODEL_BONE_FLEX_TZ
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
-MPropertyAttributeEditor
 MPropertyFriendlyName
-MPropertyGroupName
-MPropertyHideField
 MULTIPLAYER_BREAK_CLIENT
 MULTIPLAYER_BREAK_SERVER
 MapListService_001
@@ -1986,7 +2107,7 @@ MaterialDrawDescriptor_t
 MaterialGroup_t
 MaterialUtils_001
 McG,M
-McwHG
+Mc~ I
 Member function called on NULL KeyValues
 MeshDrawPrimitiveFlags_t
 MeshSystem001
@@ -2007,7 +2128,7 @@ Missing name.
 ModelBoneFlexComponent_t
 ModelBoneFlexDriverControl_t
 ModelBoneFlexDriver_t
-ModelDocCommandSystem001
+ModelDocUtils001
 ModelSkeletonData_t
 ModelSkeletonData_t::BLEND_PREALIGNED
 ModelSkeletonData_t::BoneFlags_t
@@ -2033,6 +2154,17 @@ ModelSkeletonData_t::FLAG_PHYSICS
 ModelSkeletonData_t::FLAG_PROCEDURAL
 ModelSkeletonData_t::FLAG_RETARGET_SRC
 ModelSkeletonData_t::FLAG_RIGIDLENGTH
+MorphData_t
+MorphRectData_t
+MorphSetData_t
+MorphSetData_t::ENCODING_TYPE_COUNT
+MorphSetData_t::ENCODING_TYPE_OBJECT_SPACE
+MorphSetData_t::ENCODING_TYPE_TANGENT_SPACE
+MorphSetData_t::EncodingType_t
+MorphSetData_t::LOOKUP_TYPE_COUNT
+MorphSetData_t::LOOKUP_TYPE_TEXCOORD
+MorphSetData_t::LOOKUP_TYPE_VERTEX_ID
+MorphSetData_t::LookupType_t
 Motion Disabled
 Multiple extension registrations for type "
 MutableRawRepeatedField
@@ -2041,8 +2173,10 @@ N Hcz 1
 N$Hcz$1
 N(Hcz(1
 N,Hcz,1
+N0HcSPH
 N0Hcz01
 N4Hcz41
+N8Hcz81
 N@H+q0H
 N@Hcz@1
 N@L+q0I
@@ -2063,14 +2197,18 @@ NETWORK_DISCONNECT_NOMORESPLITS
 NETWORK_DISCONNECT_NOSPECTATORS
 NETWORK_DISCONNECT_OVERFLOW
 NETWORK_DISCONNECT_RECONNECTION
+NETWORK_DISCONNECT_REJECT_STEAM
+NETWORK_DISCONNECT_REMOTE_OTHER
 NETWORK_DISCONNECT_SHUTDOWN
 NETWORK_DISCONNECT_STEAM_BANNED
 NETWORK_DISCONNECT_STEAM_INUSE
 NETWORK_DISCONNECT_STEAM_LOGON
 NETWORK_DISCONNECT_STEAM_TICKET
 NETWORK_DISCONNECT_TIMEDOUT
+NETWORK_DISCONNECT_UNUSUAL
 NETWORK_DISCONNECT_USERCMD
 NET_Messages
+NPHcSXH
 NXHczX1
 NamePart
 Need space between identifier and decimal point.
@@ -2082,8 +2220,11 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
+NewConstraintTypeToOld( GetConstraintType() ) == pPermData->m_nConstraintType
+No VBs found for this draw descriptor
 No default value
 No field named "uninterpreted_option" in the Options proto.
+No value found when unserializing key/value pairs for utldict
 Non-primitive types can'unsigned short be packed.
 Non-repeated field "
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
@@ -2093,7 +2234,6 @@ O Hc4
 O Hc<
 O Lc,
 O Lc<
-O [A\A^A_]
 O8A;G<
 O8A;G<}
 Ocl> M
@@ -2105,15 +2245,17 @@ Option "
 Option field "
 Option must have signed char name.
 Option must not use reserved name "uninterpreted_option".
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
-OyMIc
+Ordered object'short memory was modified prior to construction
 P P@@ 
 P(;Q(}_H
 P(;Q(}pI
+PE;t$
 PLACEHOLDER_VALUE
 POSIX
 PPL;}
-PPPP@@
+PPPP@`
 P[A\A^A_]
 P[A^]
 PanoramaTextServices001
@@ -2128,6 +2270,7 @@ PermModelInfo_t::FLAG_DO_NOT_CAST_SHADOWS
 PermModelInfo_t::FLAG_FORCE_PHONEME_CROSSFADE
 PermModelInfo_t::FLAG_HAS_SKINNED_MESHES
 PermModelInfo_t::FLAG_IMPLICIT_BIND_POSE_SEQUENCE
+PermModelInfo_t::FLAG_MODEL_DOC
 PermModelInfo_t::FLAG_MODEL_IS_RUNTIME_COMBINED
 PermModelInfo_t::FLAG_MODEL_PART_CHILD
 PermModelInfo_t::FLAG_NAV_GEN_HULL
@@ -2154,18 +2297,21 @@ Protocol Buffer reflection usage error:
 Protocol message serialized itself in invalid fashion.
 Protocol message was modified concurrently during serialization.
 Quaternion
+QuaternionAligned QuaternionAverageExponential(int, const QuaternionAligned *, const float *)
 QueuedLoaderVersion001
-QyOIc
-RAp(p8p8p
+RAp(pxRAp(pxp
 RAp(pxp
 RBRAp
+RBRBRAp
 RBRBRBRBRBRAp
 RBRBRBRBRBRBRAp
-RBRGp
+RBRBRBRBRBRBRB\FRBRBRBRBRBRBRAp
+RBRGp8p8p
 RBTBRAp
 RBXAp
 RB`!ARB`!ARB`
-RGp8p8p
+RESLL
+RESSL
 Reached an unintended state: CPPTYPE_MESSAGE
 Reading dangerously large protocol message.  If the message turns out to be larger than 
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -2184,6 +2330,8 @@ RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayoutField_t
+RenderMeshDrawPrimitiveFlags_t ConvertV1MeshFlags(const KeyValues3 *)
+RenderMeshFlexControllerRemapType_t
 RenderPrimitiveType_t
 RenderService_001
 RenderSkeletonBone_t
@@ -2206,17 +2354,14 @@ RnSoftbodyCapsule_t
 RnSoftbodyParticle_t
 RnSoftbodySpring_t
 RnSphereDesc_t
-Root Node
 S(Ict$,L
 S@H+Z0H
-SAXBRAp
+SAXBRB`
 SBRAp
-SBRGp8p
-SBTBRBRG
+SBRGp8p8p
 SPAWN_GROUP_BLOCK_UNTIL_LOADED
 SPAWN_GROUP_DONT_SPAWN_ENTITIES
 SPAWN_GROUP_LOAD_STREAMING_DATA
-SPAWN_GROUP_SAVE_ENTITIES
 SPAWN_GROUP_SYNCHRONOUS_SPAWN
 SPEED
 SSE and SSE2 are required.
@@ -2232,7 +2377,6 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
-Sequence Node
 ServerUploadGameStats001
 ServiceDescriptorProto
 ServiceOptions
@@ -2257,6 +2401,7 @@ SetString
 SetUInt32
 SetUInt64
 SkeletonBoneBbox_t
+SkeletonBoneBounds_t
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -2275,9 +2420,8 @@ Source2Server001
 Source2ServerSerializers002
 SourceCodeInfo
 SpawnGroupFlags_t
-Start Frame
-StateMachine Node
 StatsService_001
+SteamAudio001
 SteamToursHost001
 String field
 String literals cannot cross line boundaries.
@@ -2287,32 +2431,34 @@ SurfacePropertiesList
 Symbol name "
 System %short failed to init
 T &CUtlStringMap<IGameSystem::FactoryInfo_t, CUtlSymbolTable>::operator[](UtlSymId_t) [T = IGameSystem::FactoryInfo_t, SymbolTableType_t = CUtlSymbolTable]
-T KeyValues3::GetAsNumeric() const [T = float]
-T KeyValues3::GetAsNumeric() const [T = int]
-T KeyValues3::GetAsNumeric() const [T = long long]
+T KeyValues3::GetValueAsNumeric() const [T = float]
+T KeyValues3::GetValueAsNumeric() const [T = int]
+T KeyValues3::GetValueAsNumeric() const [T = long long]
 T$ Hc
 TARARARARARARARCp
-TARBRB]ARBREp
 TATATAp
 TBRAp
 TBRBRAp
-TBRBRBRAp
-TBRBRBRBRBRBRBRB\FRBRBRBRBRBRBRAp
+TBRB]ARBREp
 TBRB`
 TBTAp
+TBWARBp
 TCRAp
 TCRBRBRBRBRBRBRAp
 TCRBRBRBRBRBRBRB\D[ARAp
 TCRBRBRBRBRBRB^DRBRBRBRBRBRBRB\Bp
 TCRBRDp
 TCSAp
-TCWBp
+TCWARAp
 TC\Ep
 TC\Ip
-TC\Kp
+TC\Mp
 TC^IpPp
-TC`'ARBRBVAp
+TC`)ARBRBVAp
+TC`;Ap
+TClass *KV3TransferSchema_AllocateClassInstance(CKV3TransferBlockAllocator *, const char *) [TClass = CBaseConstraint]
 TCp p
+TERBRBp
 TUUUUUU
 TYPE_BYTES
 TYPE_DOUBLE
@@ -2330,6 +2476,11 @@ TYPE_SINT64
 TYPE_STRING
 TYPE_UINT32
 TYPE_UINT64
+TestFormatA
+TestFormatB
+TestFormatC
+TestFormatD
+TestFormatE
 TestGameSystem
 TestScriptMgr001
 TextLayout_001
@@ -2348,6 +2499,7 @@ ToolService_001
 TransferPostLoadFn
 TransferPostSaveFn
 Tree map file (%short) does not exist or is invalid. This will cause issues with remote clients picking trees correctly.
+Tried to load signed char polymorphic pointer with no '%short' key
 Tried to merge messages of different types 
 Tried to register signed char non-generated type with the generated type registry.
 Type appears to be in generated pool but wasn'unsigned short 
@@ -2363,6 +2515,7 @@ Unimplemented type:
 UninterpretedOption
 Unknown KV3 type '%double'.
 Unknown enumeration value of "
+Unrecognizd V1 mesh flag '%short'
 UserInfoChangeService_001
 UtlHashHandle_t CUtlHash<BoneHashPairing_t, bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), unsigned int (*)(const BoneHashPairing_t &)>::BuildHandle(int, int) const [Data = BoneHashPairing_t, C = bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), K = unsigned int (*)(const BoneHashPairing_t &)]
 VApplication001
@@ -2393,6 +2546,7 @@ VPhysXAggregateData_t::FLAG_IS_POLYSOUP_GEOMETRY
 VPhysXAggregateData_t::FLAG_LEVEL_COLLISION
 VPhysXAggregateData_t::VPhysXFlagEnum_t
 VPhysXBodyPart_t
+VPhysXBodyPart_t::FLAG_ALWAYS_DYNAMIC_ON_CLIENT
 VPhysXBodyPart_t::FLAG_JOINT
 VPhysXBodyPart_t::FLAG_KINEMATIC
 VPhysXBodyPart_t::FLAG_MASS
@@ -2442,7 +2596,6 @@ Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
 Vector
-Vector2D
 Vector4D
 VisBuilder_001
 VpropBreakablePartData_t
@@ -2460,8 +2613,9 @@ WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
+X2:jH
+X2:jL
 XBRAp
-XBRBXBRBXBRBXBRBXBRBXBSATAp
 XBRB`
 XBSARBSAXBRB`
 XBTBRB]ARBRAp
@@ -2470,6 +2624,7 @@ XPlhppppv4B>:
 X[A\A]A^A_]
 X[A^A_]
 Yfffff.
+[ARB[ARB[ARB[ARB[ARB[ARB[ASATAp
 [A\A]A^A_]
 [A\A^A_]
 [A\A^A_]A
@@ -2478,6 +2633,7 @@ Yfffff.
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
 [unsigned short,fD
+\$0E1
 \$HHc
 \%03o
 \U%08x
@@ -2489,7 +2645,6 @@ Yfffff.
 ^\A+^X~fI
 ^fffff.
 _ I;_(tG1
-_0IcG
 _8[A^]
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
@@ -2497,7 +2652,6 @@ _CMemAllocSystemInitialize
 _COM_TimestampedLog
 _CommandLine
 _CreateInterface
-_EarlyInit_Tier0
 _GetCPUInformation
 _GetResourceManifestCount
 _GetResourceManifests
@@ -2519,6 +2673,8 @@ _Plat_RelativeTicks
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_TickDiffMilliSecF
 _RegisterStringToken
+_ThreadGetCurrentId
+_ThreadInterlockedExchange64
 _V_GetErrno
 _V_SetErrno
 _V_UTF16ToUTF8
@@ -2531,6 +2687,7 @@ _V_atof
 _V_atoi
 _V_cosf
 _V_expf
+_V_frexpf
 _V_logf
 _V_qsort_s
 _V_sinf
@@ -2566,7 +2723,6 @@ ___cxa_throw
 ___dynamic_cast
 ___error
 ___gxx_personality_v0
-___sincos_stret
 ___stack_chk_fail
 ___stack_chk_guard
 ___stderrp
@@ -2587,14 +2743,11 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_acos
-_atan2
 _ceilf
 _class
 _fflush
 _floorf
 _fprintf
-_frexpf
 _g_Tier1_BitWriteMasks
 _g_pMemAlloc
 _memchr
@@ -2625,8 +2778,8 @@ _strtoul
 _strtoull
 _vsnprintf
 _wcslen
-`'ARAp
 `(Hcx
+`)ARAp
 `0A9](
 `@fffff.
 `PA9^X
@@ -2634,7 +2787,6 @@ _wcslen
 `[A\A^A_]
 `[A^]
 ``A9^p
-```````P
 `unsigned char[A\A^A_]
 addons
 aggregate_value
@@ -2649,7 +2801,12 @@ audioroughnessfactor
 audiosounds
 auto CKeyValues3Context::FreeKV_Internal(KeyValues3 *)::(anonymous class)::operator()() const
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+auto CParentConstraint::Compute(const class CModel *, matrix3x4a_t *, const float *)::(anonymous class)::operator()() const
 auto CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *)::(anonymous class)::operator()() const
+binary
+binary_bc
 bitNum >= 0 && bitNum < this->GetNumBits()
 bool CKV3TransferSaveContext::PrepareTargetForClass(KeyValues3 *, KV3TransferClassBehavior_t, const char *)
 bool CMorphConstraint::CacheModelData(const CModel *)
@@ -2662,10 +2819,12 @@ break
 buffer
 buffer. Use the 'bytes' type if you intend to send raw 
 bulletimpact
+byte *CKV3TransferBlockAllocator::AllocBlockBytes(int, uintp)
 bytes
 bytes. 
 cc_generic_services
 char(E9~(
+char(ffff.
 climbable
 command
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
@@ -2707,7 +2866,6 @@ extendee
 extension_range
 f0D9{(
 fPD9sh
-fTIcFP1
 fakeplayer
 false
 female
@@ -2721,23 +2879,22 @@ fixed64
 flags
 float
 float == NULL || dynamic_cast<To>(float) != NULL
-float QuaternionDotProduct(const Quaternion &, const Quaternion &)
-float QuaternionNormalize(Quaternion &)
-float(unsigned __int128 char::*(D
 float@LcV(H
-float\IcFX1
 friction
+g_pCVar
 g_pResourceHandleUtils
 gamematerial
 gamemode
 gameproperties
 gender < Q_ARRAYSIZE( g_pGenderTags )
+generic
 gfffH
 gfffffffH
 gfffffffL
 go_package
 group
 hex_digit_to_int
+hfff.
 hffff.
 host_computationtime
 host_frametime
@@ -2769,7 +2926,6 @@ is_multiplayer
 is_transition
 ishltv
 isxdigit(char)
-iygIc
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
@@ -2784,6 +2940,7 @@ landmarkname
 leading_comments
 length_delimited
 libhost.dylib
+localToGlobal
 localnamefixup
 location
 long long	IcO
@@ -2795,13 +2952,17 @@ m_Capsules
 m_CollisionAttributeIndices
 m_CollisionGroup
 m_CollisionGroupString
+m_Data
 m_ElementCount == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_ExtParts
-m_Filepath
 m_FirstFree == InvalidIndex()
+m_FlexControllers
+m_FlexDesc
+m_FlexOps
+m_FlexRules
 m_Frame1
 m_Frame2
 m_Head == InvalidIndex()
@@ -2823,6 +2984,7 @@ m_Memory.IsValidIterator( it )
 m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
 m_Name
 m_NumElements == 0
+m_OpCode
 m_ParticleBoneHash
 m_ParticleBoneName
 m_Particles
@@ -2841,21 +3003,35 @@ m_axes
 m_bAlphaBlendedMaterial
 m_bCacheAttempted
 m_bCacheOk
+m_bCanBatchWithDynamicShaderConstants
 m_bClimbable
+m_bDoNotDrawInFastShadowPath
+m_bDrawLast
 m_bEnableAngularMotor
+m_bEnableCollision
 m_bEnableLinearLimit
 m_bEnableLinearMotor
 m_bEnableSwingLimit
 m_bEnableTwistLimit
 m_bFirstTick
+m_bHasBakedLightingBasisInVertex
+m_bHasBakedLightingFromLightMap
+m_bHasBakedLightingFromVertexStream
+m_bHasPerInstanceBakedLightingData
+m_bInfluenceRootTransform
 m_bInverse
 m_bIsAttachment
+m_bIsNotMatchedToMaterial
+m_bIsOccluder
 m_bLastTick
 m_bMotionDisabled
 m_bNoShadows
+m_bOnlyDrawInFastShadowPath
 m_bSelected
 m_bThreadsActive
 m_bTranslationOnly
+m_bUseCompressedNormalTangent
+m_bUseShadowFastPath
 m_bVisible
 m_bbox
 m_bboxes
@@ -2873,6 +3049,8 @@ m_bones
 m_bonesHash
 m_break
 m_bulletImpact
+m_bundleDatas
+m_bundleTypes
 m_cRenderColor
 m_capsules
 m_collisionAttributes
@@ -2897,7 +3075,6 @@ m_driveSpringTwist
 m_driveSpringX
 m_driveSpringY
 m_driveSpringZ
-m_drivers
 m_elasticity
 m_embeddedKeyvalues
 m_errorIndex>=0
@@ -2906,7 +3083,6 @@ m_flAngularDampingRatio
 m_flAngularFrequency
 m_flBurstRandomize
 m_flBurstScale
-m_flFps
 m_flFrameTime
 m_flInertiaScale
 m_flJumpFactor
@@ -2930,7 +3106,11 @@ m_flRenderTime
 m_flSkinWidth
 m_flSphereRadius
 m_flTickRemainder
+m_flULeftSrc
+m_flUWidthSrc
 m_flUvDensity
+m_flVHeightSrc
+m_flVTopSrc
 m_flWeight
 m_flexController
 m_flexControllerToken
@@ -2977,6 +3157,8 @@ m_meshGroups
 m_meshes
 m_modelInfo
 m_modelSkeleton
+m_morphDatas
+m_morphRectDatas
 m_morphSet
 m_nBaseVertex
 m_nBindOffsetBytes
@@ -2999,23 +3181,24 @@ m_nDefaultMeshGroupMask
 m_nDummy0
 m_nElementCount
 m_nElementSizeInBytes
-m_nEndframe
+m_nEncodingType
 m_nEntityIndex
 m_nFadeMax
 m_nFadeMin
 m_nFadeTime
 m_nFlag
 m_nFlags
+m_nFlex
 m_nGroupId
 m_nHealth
+m_nHeight
 m_nHitBoxIndex
 m_nIndexCount
 m_nInfluences
 m_nInstanceCount
+m_nLookupType
 m_nMaterial
 m_nNameHash
-m_nNodeID
-m_nNodeIndex
 m_nParent
 m_nPlatWindowHeight
 m_nPlatWindowWidth
@@ -3033,7 +3216,6 @@ m_nSlaveChannel
 m_nSplitScreenSlot
 m_nStartIndex
 m_nStartInstance
-m_nStartframe
 m_nSurfaceProp
 m_nSurfacepropertyIndices
 m_nTargetAxis
@@ -3045,18 +3227,23 @@ m_nTranslateMotion
 m_nType
 m_nUpType
 m_nVertexCount
+m_nWidth
+m_nXLeftDst
+m_nYTopDst
 m_name
 m_nameHash
+m_offsets
 m_pBreakablePartData
-m_pCollisionResourceName
+m_pContext
 m_pData
 m_pFeModel
 m_pMaterial
 m_pMorphSet
+m_pMorphSetBase
 m_pOuterTypeScope != NULL
 m_pParent == this
-m_pRenderResourceName
 m_pSchemaType != NULL
+m_pTextureAtlas
 m_pTypeOf != NULL
 m_pad0
 m_pad1
@@ -3072,6 +3259,7 @@ m_qBaseOrientation
 m_qChildBindRotation
 m_qOffset
 m_qParentBindRotation
+m_ranges
 m_refAnimGroups
 m_refLODGroupMasks
 m_refMeshGroupMasks
@@ -3091,7 +3279,6 @@ m_roughnessFactor
 m_runStepLeft
 m_runStepRight
 m_sBoneName
-m_sName
 m_sSurfaceProperty
 m_sTargetMorph
 m_sceneObjects
@@ -3100,6 +3287,7 @@ m_scrapeSmooth
 m_shape
 m_skeleton
 m_slaves
+m_slaves.Count() == 1
 m_slaves.Count() == m_nSlaveBoneList.Count()
 m_solverIterationCount
 m_spheres
@@ -3114,6 +3302,9 @@ m_swing2LimitDamping
 m_swing2LimitRestitution
 m_swing2LimitSpring
 m_swing2LimitValue
+m_szFacs
+m_szName
+m_szType
 m_targets
 m_thickness
 m_translucencyType
@@ -3143,7 +3334,6 @@ m_vUpVector
 m_vViewMax
 m_vViewMin
 m_vecCenter
-m_vecPosition
 m_vecSize
 m_vertexBuffers
 m_walkStepLeft
@@ -3163,6 +3353,10 @@ matrix3x4a_t
 max_client_limit
 max_clients
 maxspeedfactor
+memberName.m_pString && memberName.m_pString[0] != '\0'
+mesh_calculate_curvature_smooth_invert
+mesh_calculate_curvature_smooth_pass_count
+mesh_calculate_curvature_smooth_weight
 message
 message_set_wire_format
 message_type
@@ -3174,6 +3368,7 @@ msg_data
 msg_type
 multiplayerBreak_t
 nAddCapacity < 0x40000000
+nAlignment >= 0 && nAlignment <= UINT16_MAX
 nAxis >= X_AXIS && nAxis <= Z_AXIS
 nBits <= nBytes*8
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
@@ -3182,6 +3377,7 @@ nClassBehavior == KV3TRANSFER_CLASS_UNIMPLEMENTED
 nCount >= 1
 nFlags >= 0 && nFlags <= UINT8_MAX
 nGender < Q_ARRAYSIZE( g_pGenderTags )
+nId != KV3TRANSFER_INTERFACE_ID_INVALID
 nIdx >= 0 && nIdx <= INT8_MAX
 nIndex >= 0 && nIndex < nMemberCount
 nLastPriority >= nPriority
@@ -3189,7 +3385,8 @@ nMaxChars > 0
 nParent == nTopParent
 nParentBoneIndex >= 0
 nSize != 0
-nSubtreeTipBone >= 0 && nSubtreeTipBone < nBoneCount
+nSlaveBoneIndex < pModel->NumBones()
+nSlaveBoneIndex >= 0
 nTargets > 1
 name_part
 negative_int_value
@@ -3216,9 +3413,6 @@ num_server_players
 number
 numbits >= 0 && numbits <= 32
 offset >= 0
-ol3 float
-ol4 float
-ol> float
 oneof_decl
 oneof_index
 operator delete(void*)
@@ -3236,8 +3430,9 @@ output_type
 p Hc{ 1
 p SAp
 p,Hc{,1
-p.IsValid()
+p0p0p
 p4Hc{41
+p8Hc{81
 p8p8p
 pCallback == NULL
 pCurrentKey
@@ -3246,24 +3441,27 @@ pHpHp
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pLoadFromValue != NULL
 pMapData->m_nRefCount > 0
-pMemberName && pMemberName[0] != '\0'
+pMemory[int] == 0
 pName
 pPolymorphicClassName && pPolymorphicClassName[0] != '\0'
 pPool->m_SpaceUsed < 0xFFFF
 pPrevClusterInFreeList != NULL
 pQuaternions
+pResourceLoadInterface != NULL
+pResourceSaveInterface != NULL
 pSchemaSystem != NULL
 pSubkey != NULL
 pSubkey->m_pPeer == NULL
 pXRERA
-pXRERAp
-pXRERAp0p0p
-pXRESC
-pXRESF
-pXRESFp0p
+pXRESCp8p8p
+pXRESFp0p0p
 pXRESGp8p
 pXRETBRAp
+pXp0p0p
+pXp8SBRAp
+pXp8SBTBRBRG
 pXp8p
 p[A\A^A_]
 package
@@ -3271,9 +3469,9 @@ packed
 parentnamefixup
 parse
 parsing
+phys_res
 physics
 players_networkids
-pos.IsValid()
 position
 positive_int_value
 pppp 
@@ -3284,6 +3482,8 @@ pthread_mutex_lock:
 pthread_mutex_unlock: 
 ptr_ != NULL
 public_dependency
+pxRAp(pxRF
+pxSBRGp8p
 py_generic_services
 q(;r(}
 q(;r(}$I
@@ -3294,8 +3494,8 @@ q(;wchar_t(H
 q.IsValid()
 qt.IsValid()
 r5fffff.
-r7fff.
-r=ffff.
+r?fffff.
+rNffff.
 radr://5614542
 reason
 registered: 
@@ -3350,12 +3550,16 @@ spawngroupparenthandle
 stackLevel >= 0 && stackLevel < m_errorIndex
 start
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AttachmentInfluenceFlags_t>::Get() [T = AttachmentInfluenceFlags_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<BundleType_t>::Get() [T = BundleType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ConstraintType_t>::Get() [T = ConstraintType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<MeshDrawPrimitiveFlags_t>::Get() [T = MeshDrawPrimitiveFlags_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<MeshTranslucencyType_t>::Get() [T = MeshTranslucencyType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ModelBoneFlexComponent_t>::Get() [T = ModelBoneFlexComponent_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::Get() [T = ModelSkeletonData_t::BoneFlags_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::Get() [T = MorphSetData_t::EncodingType_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<MorphSetData_t::LookupType_t>::Get() [T = MorphSetData_t::LookupType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::Get() [T = PermModelInfo_t::FlagEnum]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::Get() [T = RenderMeshFlexControllerRemapType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderSkeletonData_t::FlagEnum_t>::Get() [T = RenderSkeletonData_t::FlagEnum_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::Get() [T = VPhysXAggregateData_t::VPhysXFlagEnum_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::Get() [T = VPhysXBodyPart_t::VPhysXFlagEnum_t]
@@ -3367,35 +3571,40 @@ static bool IGameSystem::LoopInitAllSystems(const GameSessionConfiguration_t &, 
 static float CTiltTwistConstraint::ComputeTwistAroundAxisInRadians(matrix3x4a_t &, int, float)
 static void AttachmentData_t::Schema_VerifyBindingIsRegistered()
 static void BaseConstraint_t::Schema_VerifyBindingIsRegistered()
-static void BuilderModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
-static void BuilderModelBoneFlexDriverList_t::Schema_VerifyBindingIsRegistered()
-static void BuilderModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
+static void BundleData_t::Schema_VerifyBindingIsRegistered()
 static void CAimConstraint::Schema_VerifyBindingIsRegistered()
 static void CAttachment::Schema_VerifyBindingIsRegistered()
 static void CBaseConstraint::Schema_VerifyBindingIsRegistered()
-static void CBuilderModelInfo::Schema_VerifyBindingIsRegistered()
+static void CConstraintSlave::Schema_VerifyBindingIsRegistered()
+static void CConstraintTarget::Schema_VerifyBindingIsRegistered()
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 static void CHitBox::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSet::Schema_VerifyBindingIsRegistered()
 static void CHitBoxSetList::Schema_VerifyBindingIsRegistered()
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIMaterial2> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIMaterial2>, U = CStrongHandle<InfoForResourceTypeIMaterial2>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeIMaterial2> >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeIMaterial2>, U = CStrongHandle<InfoForResourceTypeIMaterial2>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeMorphSetData_t> >::LoadValue(CKV3TransferLoadContext *, const KeyValues3 *, CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeMorphSetData_t>, U = CStrongHandle<InfoForResourceTypeMorphSetData_t>]
+static void CKV3TransferValHelper<CStrongHandle<InfoForResourceTypeMorphSetData_t> >::SaveValue(CKV3TransferSaveContext *, KeyValues3 *, const CStrongHandle<T> &) [T = CStrongHandle<InfoForResourceTypeMorphSetData_t>, U = CStrongHandle<InfoForResourceTypeMorphSetData_t>]
 static void CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered()
 static void CMorphConstraint::Schema_VerifyBindingIsRegistered()
 static void COrientConstraint::Schema_VerifyBindingIsRegistered()
+static void CParentConstraint::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfaceProperties::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesAudio::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesGame::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesPhysics::Schema_VerifyBindingIsRegistered()
 static void CPhysSurfacePropertiesSoundNames::Schema_VerifyBindingIsRegistered()
 static void CPointConstraint::Schema_VerifyBindingIsRegistered()
+static void CRenderBufferBinding::Schema_VerifyBindingIsRegistered()
 static void CRenderMesh::Schema_VerifyBindingIsRegistered()
 static void CRenderSkeleton::Schema_VerifyBindingIsRegistered()
 static void CSceneObjectData::Schema_VerifyBindingIsRegistered()
+static void CStudioConstraintBones::ComputeAimConstraint(matrix3x4a_t *, const CModel *, const CAimConstraint *)
 static void CStudioConstraintBones::ComputeTwistConstraint(matrix3x4a_t *, const CModel *, const CTwistConstraint *)
 static void CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
 static void CTwistConstraint::Schema_VerifyBindingIsRegistered()
-static void CVPhysXLevelData::Schema_VerifyBindingIsRegistered()
-static void CVPhysXMesh::Schema_VerifyBindingIsRegistered()
 static void CVPhysXSurfacePropertiesList::Schema_VerifyBindingIsRegistered()
+static void ConVarRef::InitDeferredConVarRefs()
 static void ConstraintSlave_t::Schema_VerifyBindingIsRegistered()
 static void ConstraintTarget_t::Schema_VerifyBindingIsRegistered()
 static void EngineLoopState_t::Schema_VerifyBindingIsRegistered()
@@ -3434,6 +3643,10 @@ static void EventSetTime_t::Schema_VerifyBindingIsRegistered()
 static void EventSimpleLoopFrameUpdate_t::Schema_VerifyBindingIsRegistered()
 static void EventSimulate_t::Schema_VerifyBindingIsRegistered()
 static void EventSplitScreenStateChanged_t::Schema_VerifyBindingIsRegistered()
+static void FlexController_t::Schema_VerifyBindingIsRegistered()
+static void FlexDesc_t::Schema_VerifyBindingIsRegistered()
+static void FlexOp_t::Schema_VerifyBindingIsRegistered()
+static void FlexRule_t::Schema_VerifyBindingIsRegistered()
 static void HitBoxSet_t::Schema_VerifyBindingIsRegistered()
 static void HitBox_t::Schema_VerifyBindingIsRegistered()
 static void IGameSystem::LoopActivateAllSystems(const EngineLoopState_t &, bool)
@@ -3442,6 +3655,9 @@ static void MaterialGroup_t::Schema_VerifyBindingIsRegistered()
 static void ModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
 static void ModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
 static void ModelSkeletonData_t::Schema_VerifyBindingIsRegistered()
+static void MorphData_t::Schema_VerifyBindingIsRegistered()
+static void MorphRectData_t::Schema_VerifyBindingIsRegistered()
+static void MorphSetData_t::Schema_VerifyBindingIsRegistered()
 static void OnDiskBufferData_t::Schema_VerifyBindingIsRegistered()
 static void PermModelData_t::Schema_VerifyBindingIsRegistered()
 static void PermModelExtPart_t::Schema_VerifyBindingIsRegistered()
@@ -3453,6 +3669,7 @@ static void RenderSkeletonBone_t::Schema_VerifyBindingIsRegistered()
 static void RenderSkeletonData_t::Schema_VerifyBindingIsRegistered()
 static void SceneObjectData_t::Schema_VerifyBindingIsRegistered()
 static void SkeletonBoneBbox_t::Schema_VerifyBindingIsRegistered()
+static void SkeletonBoneBounds_t::Schema_VerifyBindingIsRegistered()
 static void VPhysXAggregateData_t::Schema_VerifyBindingIsRegistered()
 static void VPhysXBodyPart_t::Schema_VerifyBindingIsRegistered()
 static void VPhysXCollisionAttributes_t::Schema_VerifyBindingIsRegistered()
@@ -3512,6 +3729,7 @@ t.Ic~(H
 t.Ic~0H
 t.Ic~8H
 t.Ic~<H
+t.fffff.
 t0IcD$,H
 t0IcU,H
 t1IcD$,H
@@ -3529,13 +3747,13 @@ t9IcG
 tEIcD$
 tFIcG,L
 tMff.
+tSff.
 text format contains deprecated field "
 tfI9D$Xt_H
 the global scope
 thickness
 tick_interval
-tlIcG
-tlfff.
+tqIc_
 tqJ94
 trailing_comments
 type() == TYPE_FIXED32
@@ -3549,7 +3767,6 @@ typeinfo for std::exception
 u	L9G
 u!H9{
 u%H9y
-u2ff.
 u8I9]
 u=...;L
 u?M9D$
@@ -3565,33 +3782,31 @@ uint32
 uint64
 uninterpreted_option
 unknown
+unsigned __int128 char::* I
 unsigned char CGameModelInfoClient::ComputeScreenFade(const Vector &, float, float, const CGameModelInfoClient::ScreenFadeInfo_t &) const
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
-unsigned charcomplex ;C`|
 unsigned short	[A^]
 unsigned short&H9[8tUH
+unsigned short&ff.
+unsigned short&fffff.
 unsigned short'IcO,I
-unsigned short)A#F
-unsigned short)A#G
-unsigned short*ff.
 unsigned short+Hc{
 unsigned short+Hc{ H
 unsigned short+Hc{(H
 unsigned short+Hc{,H
 unsigned short+Ic~8H
 unsigned short+Ic~TH
-unsigned short,A#D$
+unsigned short+fff.
 unsigned short-IcG,L
 unsigned short-L9`
 unsigned short<IcW,L
 unsigned short<fff.
-unsigned short[ff.
+unsigned short^fffff.
 userid
 usermsgs
 v0[A^]
-vP[A^]
-vScale.IsValid()
+vHct
 vXIc}(L
 vX[A^]
 val_bool
@@ -3601,35 +3816,45 @@ val_string
 val_uint64
 value
 varint
-vfffff.
+virtual bool CDotaMapUtils::LoadDotaMapData(DotaMapDataHandle_t, uint32, const char *)
 virtual const char *CHostUtils::GetActorGenderTag(const char *)
 virtual const char *CHostUtils::GetGenderTag(gender_t)
 virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::Allocate() [T = CResourceArray<AttachmentData_t>]
 virtual void *CAtomicManipulator<CResourceArray<AttachmentData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<AttachmentData_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Allocate() [T = CResourceArray<BaseConstraint_t>]
 virtual void *CAtomicManipulator<CResourceArray<BaseConstraint_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BaseConstraint_t>]
+virtual void *CAtomicManipulator<CResourceArray<BundleData_t> >::Allocate() [T = CResourceArray<BundleData_t>]
+virtual void *CAtomicManipulator<CResourceArray<BundleData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BundleData_t>]
+virtual void *CAtomicManipulator<CResourceArray<BundleType_t> >::Allocate() [T = CResourceArray<BundleType_t>]
+virtual void *CAtomicManipulator<CResourceArray<BundleType_t> >::AllocateAndCopy(const void *) [T = CResourceArray<BundleType_t>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Allocate() [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
-virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
-virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
+virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >]
+virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >]
-virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >]
-virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
+virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >::Allocate() [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >]
+virtual void *CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >]
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::Allocate() [T = CResourceArray<CResourceString>]
 virtual void *CAtomicManipulator<CResourceArray<CResourceString> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceString>]
 virtual void *CAtomicManipulator<CResourceArray<CTransform> >::Allocate() [T = CResourceArray<CTransform>]
 virtual void *CAtomicManipulator<CResourceArray<CTransform> >::AllocateAndCopy(const void *) [T = CResourceArray<CTransform>]
-virtual void *CAtomicManipulator<CResourceArray<CVPhysXMesh> >::Allocate() [T = CResourceArray<CVPhysXMesh>]
-virtual void *CAtomicManipulator<CResourceArray<CVPhysXMesh> >::AllocateAndCopy(const void *) [T = CResourceArray<CVPhysXMesh>]
 virtual void *CAtomicManipulator<CResourceArray<ConstraintSlave_t> >::Allocate() [T = CResourceArray<ConstraintSlave_t>]
 virtual void *CAtomicManipulator<CResourceArray<ConstraintSlave_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ConstraintSlave_t>]
 virtual void *CAtomicManipulator<CResourceArray<ConstraintTarget_t> >::Allocate() [T = CResourceArray<ConstraintTarget_t>]
 virtual void *CAtomicManipulator<CResourceArray<ConstraintTarget_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ConstraintTarget_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexController_t> >::Allocate() [T = CResourceArray<FlexController_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexController_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FlexController_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexDesc_t> >::Allocate() [T = CResourceArray<FlexDesc_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexDesc_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FlexDesc_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexOp_t> >::Allocate() [T = CResourceArray<FlexOp_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexOp_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FlexOp_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexRule_t> >::Allocate() [T = CResourceArray<FlexRule_t>]
+virtual void *CAtomicManipulator<CResourceArray<FlexRule_t> >::AllocateAndCopy(const void *) [T = CResourceArray<FlexRule_t>]
 virtual void *CAtomicManipulator<CResourceArray<HitBoxSet_t> >::Allocate() [T = CResourceArray<HitBoxSet_t>]
 virtual void *CAtomicManipulator<CResourceArray<HitBoxSet_t> >::AllocateAndCopy(const void *) [T = CResourceArray<HitBoxSet_t>]
 virtual void *CAtomicManipulator<CResourceArray<HitBox_t> >::Allocate() [T = CResourceArray<HitBox_t>]
@@ -3642,6 +3867,10 @@ virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >:
 virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ModelBoneFlexDriverControl_t>]
 virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::Allocate() [T = CResourceArray<ModelBoneFlexDriver_t>]
 virtual void *CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ModelBoneFlexDriver_t>]
+virtual void *CAtomicManipulator<CResourceArray<MorphData_t> >::Allocate() [T = CResourceArray<MorphData_t>]
+virtual void *CAtomicManipulator<CResourceArray<MorphData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<MorphData_t>]
+virtual void *CAtomicManipulator<CResourceArray<MorphRectData_t> >::Allocate() [T = CResourceArray<MorphRectData_t>]
+virtual void *CAtomicManipulator<CResourceArray<MorphRectData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<MorphRectData_t>]
 virtual void *CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::Allocate() [T = CResourceArray<OnDiskBufferData_t>]
 virtual void *CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<OnDiskBufferData_t>]
 virtual void *CAtomicManipulator<CResourceArray<PermModelExtPart_t> >::Allocate() [T = CResourceArray<PermModelExtPart_t>]
@@ -3698,28 +3927,38 @@ virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Copy(void *,
 virtual void CAtomicManipulator<CResourceArray<AttachmentData_t> >::Deallocate(void *) [T = CResourceArray<AttachmentData_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Copy(void *, const void *) [T = CResourceArray<BaseConstraint_t>]
 virtual void CAtomicManipulator<CResourceArray<BaseConstraint_t> >::Deallocate(void *) [T = CResourceArray<BaseConstraint_t>]
+virtual void CAtomicManipulator<CResourceArray<BundleData_t> >::Copy(void *, const void *) [T = CResourceArray<BundleData_t>]
+virtual void CAtomicManipulator<CResourceArray<BundleData_t> >::Deallocate(void *) [T = CResourceArray<BundleData_t>]
+virtual void CAtomicManipulator<CResourceArray<BundleType_t> >::Copy(void *, const void *) [T = CResourceArray<BundleType_t>]
+virtual void CAtomicManipulator<CResourceArray<BundleType_t> >::Deallocate(void *) [T = CResourceArray<BundleType_t>]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Copy(void *, const void *) [T = CResourceArray<CResourceArray<unsigned char> >]
 virtual void CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >::Deallocate(void *) [T = CResourceArray<CResourceArray<unsigned char> >]
-virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
-virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCAnimationGroupResource> > >]
+virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >]
+virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >]
-virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >]
-virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCSequenceGroupResource> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >]
+virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >::Copy(void *, const void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >]
+virtual void CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >::Deallocate(void *) [T = CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >]
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Copy(void *, const void *) [T = CResourceArray<CResourceString>]
 virtual void CAtomicManipulator<CResourceArray<CResourceString> >::Deallocate(void *) [T = CResourceArray<CResourceString>]
 virtual void CAtomicManipulator<CResourceArray<CTransform> >::Copy(void *, const void *) [T = CResourceArray<CTransform>]
 virtual void CAtomicManipulator<CResourceArray<CTransform> >::Deallocate(void *) [T = CResourceArray<CTransform>]
-virtual void CAtomicManipulator<CResourceArray<CVPhysXMesh> >::Copy(void *, const void *) [T = CResourceArray<CVPhysXMesh>]
-virtual void CAtomicManipulator<CResourceArray<CVPhysXMesh> >::Deallocate(void *) [T = CResourceArray<CVPhysXMesh>]
 virtual void CAtomicManipulator<CResourceArray<ConstraintSlave_t> >::Copy(void *, const void *) [T = CResourceArray<ConstraintSlave_t>]
 virtual void CAtomicManipulator<CResourceArray<ConstraintSlave_t> >::Deallocate(void *) [T = CResourceArray<ConstraintSlave_t>]
 virtual void CAtomicManipulator<CResourceArray<ConstraintTarget_t> >::Copy(void *, const void *) [T = CResourceArray<ConstraintTarget_t>]
 virtual void CAtomicManipulator<CResourceArray<ConstraintTarget_t> >::Deallocate(void *) [T = CResourceArray<ConstraintTarget_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexController_t> >::Copy(void *, const void *) [T = CResourceArray<FlexController_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexController_t> >::Deallocate(void *) [T = CResourceArray<FlexController_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexDesc_t> >::Copy(void *, const void *) [T = CResourceArray<FlexDesc_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexDesc_t> >::Deallocate(void *) [T = CResourceArray<FlexDesc_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexOp_t> >::Copy(void *, const void *) [T = CResourceArray<FlexOp_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexOp_t> >::Deallocate(void *) [T = CResourceArray<FlexOp_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexRule_t> >::Copy(void *, const void *) [T = CResourceArray<FlexRule_t>]
+virtual void CAtomicManipulator<CResourceArray<FlexRule_t> >::Deallocate(void *) [T = CResourceArray<FlexRule_t>]
 virtual void CAtomicManipulator<CResourceArray<HitBoxSet_t> >::Copy(void *, const void *) [T = CResourceArray<HitBoxSet_t>]
 virtual void CAtomicManipulator<CResourceArray<HitBoxSet_t> >::Deallocate(void *) [T = CResourceArray<HitBoxSet_t>]
 virtual void CAtomicManipulator<CResourceArray<HitBox_t> >::Copy(void *, const void *) [T = CResourceArray<HitBox_t>]
@@ -3732,6 +3971,10 @@ virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >::
 virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >::Deallocate(void *) [T = CResourceArray<ModelBoneFlexDriverControl_t>]
 virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::Copy(void *, const void *) [T = CResourceArray<ModelBoneFlexDriver_t>]
 virtual void CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >::Deallocate(void *) [T = CResourceArray<ModelBoneFlexDriver_t>]
+virtual void CAtomicManipulator<CResourceArray<MorphData_t> >::Copy(void *, const void *) [T = CResourceArray<MorphData_t>]
+virtual void CAtomicManipulator<CResourceArray<MorphData_t> >::Deallocate(void *) [T = CResourceArray<MorphData_t>]
+virtual void CAtomicManipulator<CResourceArray<MorphRectData_t> >::Copy(void *, const void *) [T = CResourceArray<MorphRectData_t>]
+virtual void CAtomicManipulator<CResourceArray<MorphRectData_t> >::Deallocate(void *) [T = CResourceArray<MorphRectData_t>]
 virtual void CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::Copy(void *, const void *) [T = CResourceArray<OnDiskBufferData_t>]
 virtual void CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >::Deallocate(void *) [T = CResourceArray<OnDiskBufferData_t>]
 virtual void CAtomicManipulator<CResourceArray<PermModelExtPart_t> >::Copy(void *, const void *) [T = CResourceArray<PermModelExtPart_t>]
@@ -3784,7 +4027,9 @@ virtual void CAtomicManipulator<CResourceArray<unsigned long long> >::Copy(void 
 virtual void CAtomicManipulator<CResourceArray<unsigned long long> >::Deallocate(void *) [T = CResourceArray<unsigned long long>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Copy(void *, const void *) [T = CResourceArray<unsigned short>]
 virtual void CAtomicManipulator<CResourceArray<unsigned short> >::Deallocate(void *) [T = CResourceArray<unsigned short>]
+virtual void CBaseConstraint::InitFromOldDiskData(const BaseConstraint_t *)
 virtual void CDotaMapUtils::ReleaseDotaMapData(DotaMapDataHandle_t)
+virtual void CDotaMapUtils::UnloadDotaMapData(DotaMapDataHandle_t, uint32)
 virtual void CGameModelInfoClient::ForceModelBounds(const char *, const Vector &, const Vector &)
 virtual void CGameSystemReallocatingFactory<CTestGameSystem, CTestGameSystem>::DestroyGameSystem(IGameSystem *) [T = CTestGameSystem, G = CTestGameSystem]
 virtual void CHostUtils::GenderExpandString(gender_t, const char *, char *, int)
@@ -3792,7 +4037,7 @@ virtual void CMorphConstraint::Compute(const CModel *, matrix3x4a_t *, const flo
 virtual void CPredictionDiffMgr::AddToDiff(CSplitScreenSlot, bool, int, const char *)
 virtual void CTiltTwistConstraint::Compute(const CModel *, matrix3x4a_t *, const float *)
 virtual void CTiltTwistConstraint::FillInPermData(BaseConstraint_t *, CResourceStream *) const
-virtual void CTiltTwistConstraint::InitFromPermData(const BaseConstraint_t *)
+virtual void CTiltTwistConstraint::InitFromOldDiskData(const BaseConstraint_t *)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
 virtual void ConVar::ChangeStringValue(const char *, float)
 virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
@@ -3800,9 +4045,14 @@ virtual void ConVar::InternalSetFloatValue(float)
 virtual void ConVar::InternalSetIntValue(int)
 virtual void ConVar::InternalSetValue(const char *)
 virtual void IPrerequisite::Release()
+vmatH
+vmatL
 vmdl1
 vmesh
+vmorf
+void *CKV3TransferContextBase::FindInterfaceVoid(KV3Transfer_InterfaceId_t)
 void CBitVecT<CVarBitVecBase<unsigned short, 32> >::Set(int) [BASE_OPS = CVarBitVecBase<unsigned short, 32>]
+void CKV3TransferLoadContext::LoadOwningPointer(T *&, const KeyValues3 *) [T = CBaseConstraint]
 void CKeyValues3Cluster::Free(KeyValues3 *)
 void CKeyValues3Context::FreeKV_Internal(KeyValues3 *)
 void CKeyValuesErrorStack::Pop()
@@ -3810,17 +4060,20 @@ void CKeyValuesErrorStack::Reset(int, HKeySymbol)
 void CKeyValuesTokenReader::SeekBackOneToken()
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void CMaterialDrawDescriptor::TransferPostLoadFn(CKV3TransferLoadContext *)
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CResourceStream::Align(uint, int)
 void CResourceStream::EnsureAvailable(uint)
 void CSchemaClassBindingBase::RegBase(ISchemaSystem *, const char *, const char *, CSchemaClassInfo *, const char *) [I = int]
 void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
 void CSchemaNonConstructibleClassBindingBase::ReportClassError(const char *) const
-void CStrongHandle<InfoForResourceTypeCMorphSet>::Shutdown() [TResourceInfoData = InfoForResourceTypeCMorphSet]
+void CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown() [TResourceInfoData = InfoForResourceTypeCTextureBase]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
+void CStrongHandle<InfoForResourceTypeMorphSetData_t>::Shutdown() [TResourceInfoData = InfoForResourceTypeMorphSetData_t]
+void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::AssumeMemory(void *, int, int, int)
 void CUtlBuffer::GetString(char *, int)
@@ -3828,17 +4081,16 @@ void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData
 void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::LinkBefore(I, I) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
 void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
 void CUtlLinkedList<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short> >::Unlink(I) [T = CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CUtlKeyValuePair<CUtlStringToken, CDotaMapUtils::DotaMapData_t *>, unsigned short>, unsigned short>]
-void CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 void CUtlRBTree<CDiffInfo, int, bool (*)(const CDiffInfo &, const CDiffInfo &), CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int> >::RemoveAll() [T = CDiffInfo, I = int, L = bool (*)(const CDiffInfo &, const CDiffInfo &), M = CUtlMemory<UtlRBTreeNode_t<CDiffInfo, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CAttachment, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CHitBoxSet, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char, CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned char, L = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char>]
 void CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char, CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char> >::RemoveAll() [T = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned char, L = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<true>, true>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlString::SetDirect(const char *, int)
 void CallPostConnect()
-void ComputeSubtree(const Graph_t *, int, BitVec_t *) [Graph_t = ModelSkeletonData_t, BitVec_t = CVarBitVec]
 void ConVar_Register(int64, IConCommandBaseAccessor *)
 void ConVar_Unregister()
 void ConnectGameInterfaces(CreateInterfaceFn *, int, GameInterfaceConnectionMode_t)
@@ -3846,7 +4098,8 @@ void ConnectInterfaces(CreateInterfaceFn *, int)
 void DisconnectGameInterfaces()
 void DisconnectInterfaces()
 void DisconnectTier2Libraries()
-void KeyValues3::GetString(CUtlString *) const
+void KeyValues3::GetValueAsString(CUtlString *) const
+void KeyValues3::GetValueAsString(char *, int) const
 void KeyValues::AddSubKey(KeyValues *)
 void KeyValues::AddSubkeyUsingKnownLastChild(KeyValues *, KeyValues *)
 void KeyValues::AppendIncludedKeys(CUtlVector<KeyValues *> &)
@@ -3854,15 +4107,11 @@ void KeyValues::MergeBaseKeys(CUtlVector<KeyValues *> &)
 void KeyValues::ParseIncludedKeys(const char *, const char *, IBaseFileSystem *, const char *, CUtlVector<KeyValues *> &, GetSymbolProc_t)
 void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CKeyValuesTokenReader &, GetSymbolProc_t)
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
+void LoadUtlDict(CUtlDict<DictValueType> *, const char *, CKV3TransferLoadContext *) [DictValueType = CAttachment]
+void LoadUtlDict(CUtlDict<DictValueType> *, const char *, CKV3TransferLoadContext *) [DictValueType = CHitBoxSet]
 void MathLib_Init()
-void MatrixInvert_Aligned(const matrix3x4a_t &, matrix3x4a_t &)
 void QuaternionAverageExponential(Quaternion &, int, const Quaternion *, const float *)
-void QuaternionConjugate(const Quaternion &, Quaternion &)
 void QuaternionInvert(const Quaternion &, Quaternion &)
-void QuaternionMatrix(const Quaternion &, const Vector &, const Vector &, matrix3x4_t &)
-void QuaternionMatrix(const Quaternion &, matrix3x4_t &)
-void QuaternionMatrixOrientationOnly(const Quaternion &, matrix3x4_t &)
-void QuaternionMult(const Quaternion &, const Quaternion &, Quaternion &)
 void QuaternionScale(const Quaternion &, float, Quaternion &)
 void QuaternionSlerpNoAlign(const Quaternion &, const Quaternion &, float, Quaternion &)
 void ReconnectGameInterface(CreateInterfaceFn, const char *, GameInterfaceConnectionMode_t)
@@ -3874,15 +4123,14 @@ void VectorTransform(const float *, const matrix3x4_t &, float *)
 void bf_write::SetOverflowFlag()
 void bf_write::StartWriting(void *, int, int, int)
 void bf_write::WriteUBitLong(unsigned int, int, bool)
-void@[A^]
 vphys
-vplev
 vsurf
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 walkleft
 walkright
+wchar_t char::*(L
 wchar_t(L;unsigned long
 weak_dependency
 world_offset_angle
@@ -3891,6 +4139,7 @@ worldgroupid
 wrong submessage type
 x8A;D$0}1Ic
 xHHc{
+xHcN(Hk
 xYA9^
 xqaBCFHTTFFFN
 xyA9^
@@ -3904,7 +4153,10 @@ yxxxxxxxI
 |$0L9
 |$8H9
 |$@H9
+|$XHc
+|$`Hc
 }	[A\A^A_]
 }HA;EP}
 ~$fffff.
+~(long double char::*(D
 ~fIcM(D

@@ -134,4 +134,34 @@
 			m_ChildRef = resource:"particles/econ/items/nyx_assassin/nyx_assassin_dagon_ambient/nyx_assassin_dagon_light.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_gem"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/nerubian_assassin/nyx_dagon.vmdl"
+			}
+		},
+	]
 }

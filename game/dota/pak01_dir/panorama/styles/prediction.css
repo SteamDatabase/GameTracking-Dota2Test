@@ -1,11 +1,5 @@
 
-@define backgroundVeryDimColor: #1C0803;
-@define backgroundDimColor: #270705;
-@define backgroundMediumColor: #6F2926;
-@define backgroundBrightColor: #912c24;
-@define backgroundVeryBrightColor: #ffd6a5;
 
-@define bp_battleLevelColor: #CD5A4A;
 
 .Prediction 
 {
@@ -33,7 +27,7 @@
 	margin-right: 40px;
 	margin-top: 20px;
 	width: 304px;
-	height: 164px;
+	height: 190px;
 	//background-color: backgroundDimColor;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #2a2a2a ), to( #1e1e1e ) );
     border-top-color: #5D738E00;
@@ -53,11 +47,6 @@
 	font-size: 14px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-}
-
-#MakePrediction .PopupButton 
-{
-	horizontal-align: center;
 }
 
 #MakePrediction 
@@ -106,7 +95,7 @@
 /* CSS about displaying the question and current value */
 #Question, #SingleRanking 
 {
-	height: 44px;
+	height: 40px;
 	width: 228px;
 	text-align: center;
 	margin-left: 6px;
@@ -115,6 +104,7 @@
 	font-size: 16px;
 	color: baseText;
 	line-height: 17px;
+	text-overflow: shrink;
 }
 
 .Small #Question, .Small #SingleRanking 
@@ -197,10 +187,10 @@
 .Small #Picker 
 {
 	width: 202px;
-	height: 52px;
+	height: 80px;
 	border: 0px;
 	margin-top: 22px;
-	margin-left: 20px;
+	margin-left: 0px;
 	horizontal-align: center;
 }
 
@@ -235,6 +225,7 @@
 	horizontal-align: center;
 	vertical-align: center;
 	visibility: collapse;
+	text-overflow: shrink;
 }
 
 .Generic.MadeSelection .GenericLabel 
@@ -269,13 +260,6 @@
 	visibility: visible;
 }
 
-.Prediction .PopupButton 
-{
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #062505 ), to( #143007 ) );
-	border: 1px solid #23430f;
-	
-}
-
 #Picker Label 
 {
 	color: white;
@@ -298,9 +282,9 @@
 	margin-top: 6px;
 }
 
-.PTS 
+.PointsIcon 
 {
-	background-image: url("s2r://panorama/images/compendium/fall2016/totalpoints_psd.vtex");
+	background-image: bp_total_points;
 	background-size: cover;
 	width: 18px;
 	height: 18px;
@@ -428,6 +412,7 @@ i
 #FinalPrizePoolPrediction.Prediction #Question 
 {
 	width: 300px;
+	height: 20px;
 	margin-top: -94px;
 }
 

@@ -1,7 +1,7 @@
 {
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
-	m_nMaxParticles = 50
+	m_nMaxParticles = 8
 	m_flConstantRadius = 1.000000
 	m_flConstantLifespan = 10.000000
 	m_ConstantColor = 
@@ -70,13 +70,8 @@
 	[
 		{
 			_class = "C_INIT_RandomLifeTime"
-			m_fLifetimeMin = 0.800000
-			m_fLifetimeMax = 0.800000
-		},
-		{
-			_class = "C_INIT_RandomSequence"
-			m_nSequenceMax = 1
-			m_nSequenceMin = 1
+			m_fLifetimeMin = 0.290000
+			m_fLifetimeMax = 0.290000
 		},
 		{
 			_class = "C_INIT_InitFromParentKilled"
@@ -115,12 +110,12 @@
 	[
 		{
 			_class = "C_OP_ConstrainDistanceToPath"
-			m_flTravelTime = 0.820000
+			m_flTravelTime = 0.290000
 			m_flMaxDistance0 = 0.000000
 			m_PathParameters = 
 			{
 				m_flMidPoint = 0.750000
-				m_flBulge = 1.500000
+				m_flBulge = 0.500000
 				m_nBulgeControl = 2
 				m_nEndControlPointNumber = 1
 			}
@@ -130,6 +125,65 @@
 	[
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_techies/techies_remote_bomb_trail.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 4
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
 		},
 	]
 }

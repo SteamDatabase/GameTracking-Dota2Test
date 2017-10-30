@@ -166,4 +166,33 @@
 			m_ChildRef = resource:"particles/econ/items/juggernaut/armor_of_the_favorite/juggernaut_favorite_shoulder_ambient_c.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/juggernaut/armor_for_the_favorite_back/armor_for_the_favorite_back.vmdl"
+			}
+		},
+	]
 }

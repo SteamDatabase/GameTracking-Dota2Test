@@ -20,7 +20,6 @@
  CVProfNode::ExitScope()
  CVProfNode::GetSubNode(char const*, int, char const*, int)
  CommandLine
- EarlyInit_Tier0
  GetCPUInformation
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
@@ -65,8 +64,12 @@
  V_FixSlashes
  V_GetFileExtension
  V_IsAbsolutePath
+ V_UnqualifiedFileName
+ V_atof
+ V_atoi
  V_qsort_s
  V_snprintf
+ V_sscanf
  V_stricmp_fast
  V_strlower_fast
  V_vsnprintf

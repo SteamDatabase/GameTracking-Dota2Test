@@ -22,4 +22,34 @@
 			m_ChildRef = resource:"particles/econ/items/spectre/spectre_phantasmal/spectre_phantasmal_head_ambient_ember.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_head"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/spectre/phantasmal_disruptions_head/phantasmal_disruptions_head.vmdl"
+			}
+		},
+	]
 }

@@ -1,3 +1,4 @@
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	fff.
 	fffff.
      
@@ -15,8 +16,10 @@
  Can'unsigned short specify initial state of dynamic constant buffers at creation time!
  ReadToken overflow
  [A\A^A_]
+ `0P0
  but running with 
  ffff.
+ fffff.
  ffffff.
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
@@ -26,6 +29,7 @@
 !IsRelevantFieldType( pFieldType )
 !IsSingleFieldRestricted()
 !bCreate
+!fff.
 !ffff.
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -48,10 +52,10 @@
 #include is NULL 
 #u!ffff.
 #u"ffffff.
-$1HcT1
 $fffff.
 %5EUeu
 %ffff.
+%fffff.
 %int %int %int %int
 %ld%char
 %short : %short
@@ -74,8 +78,10 @@ $fffff.
 (GetChar()) == (0)
 ([A\A]A^A_]
 ([A^A_]
+(int)nType >= 0 && (int)nType <= INT8_MAX
 (intp)this % 16 == 0
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (s_pThisModuleBindingPointer != NULL)
@@ -84,11 +90,11 @@ $fffff.
 (unsigned int)nCount <= nPixelsRemaining
 (void *)m_pObject != NULL
 )9IYiy
+)ffff.
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *:JZjz
 +;K[k{
-+C$A9E
 +C$Lc
 +K Hc
 +K$Hc
@@ -96,6 +102,8 @@ $fffff.
 ,9O;long
 ,<L\long|
 ,fff.
+,ffff.
+,ffffff.
 -=M]unsigned long}
 -autoconfig
 -autoconfig_level
@@ -107,6 +115,8 @@ $fffff.
 -maxtextureres
 -preloadtextures
 -r_force_secondary_context_support
+-r_max_device_threads
+-shaderstats
 -sse2
 -sse3
 -sse4
@@ -140,6 +150,7 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemalib/schemadatatraversal.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/byteswap.h
@@ -150,34 +161,34 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlfixedmemory.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhash.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/commandstreambuilder.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/empty/rendercontextempty.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/empty/renderdeviceempty.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/empty/textureempty.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/indexbufferbase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/occlusionquerymgr.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1364): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1522): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(2894): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(579): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(838): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(855): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1472): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(1630): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(3011): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(626): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(900): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.cpp(917): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicebase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderdevicemgrbase.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/renderhardwareconfig.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp(329): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp(396): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(1279):Error loading texture: %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2095):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2106):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2117):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2128):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2149):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2160):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2171):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2182):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(1299):Error loading texture: %short
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2135):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2146):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2157):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2168):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2189):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2200):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2211):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2222):ResourceHandleToData( %short ) failed! Falling back to error texture!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/vertexbufferbase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
@@ -200,7 +211,6 @@ $fffff.
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
-0  0 P
 0 0  
 0 p` 
 00  0
@@ -212,6 +222,7 @@ $fffff.
 0P`  0
 0[A\A^A_]
 0[A^]
+0fff.
 0x%016llX
 1.2.7
 1.5.13
@@ -222,6 +233,7 @@ $fffff.
 1fffff.
 29C |.
 29K }
+3333333
 40A;wchar_t
 49K }
 49S |}
@@ -236,8 +248,7 @@ $fffff.
 9S |unsigned int
 9fffff.
 9q||5H
-;Y(uTI
-;YHu`I
+;X(u#
 ;fff.
 ;~L}k
 <(9{ |jI
@@ -246,12 +257,13 @@ $fffff.
 <NULL>
 <fff.
 <need "-dev">
+<null>
 <unknown multisample type
 =8BIMt*1
+>ISchemaSearchTester<CSchemaClassInfo const*>
 >L97t-H
-?ffffff.
-@   P 
 @ 0     
+@@ @@ 
 @CThreadEvent::CThreadEvent(bool)
 @CThreadEvent::Set()
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
@@ -283,7 +295,6 @@ $fffff.
 @_CMemAllocSystemInitialize
 @_CommandLine
 @_DevMsg
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -299,6 +310,7 @@ $fffff.
 @_Plat_GetClockStart
 @_Plat_GetMonitorResolution
 @_Plat_GetOSType
+@_Plat_GetThreadIndex
 @_Plat_GlobalMemoryStatus
 @_Plat_IsHighDPI
 @_Plat_IsInDebugSessionRaw
@@ -323,7 +335,7 @@ $fffff.
 @_V_UTF32ToUTF8
 @_V_atof
 @_V_atoi
-@_V_log2
+@_V_logf
 @_V_qsort
 @_V_qsort_s
 @_V_snprintf
@@ -333,6 +345,7 @@ $fffff.
 @_V_strtod
 @_V_strtoi64
 @_V_strtoui64
+@_V_swscanf
 @_V_vsnprintf
 @_V_vsnprintfRet
 @_V_vsnprintfSize
@@ -372,7 +385,6 @@ $fffff.
 @_g_pMemAlloc
 @_g_pThreadPool
 @_getenv
-@_logf
 @_longjmp
 @_malloc
 @_memchr
@@ -393,9 +405,9 @@ $fffff.
 @_sscanf
 @_strchr
 @_strcmp
+@_strdup
 @_strlen
 @_strstr
-@_strtol
 @_wcslen
 @dyld_stub_binder
 @loader_path
@@ -403,6 +415,13 @@ $fffff.
 @rpath/librendersystemempty.dylib
 @rpath/libtier0.dylib
 @rpath/libvstdlib.dylib
+@std::__1::__basic_string_common<true>::__throw_length_error() const
+@std::__1::__vector_base_common<true>::__throw_length_error() const
+@std::__1::__vector_base_common<true>::__throw_out_of_range() const
+@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const
+@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
+@std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
 @std::terminate()
 @typeinfo for IStack_Annotation
 @typeinfo for std::bad_alloc
@@ -414,7 +433,7 @@ A+D$$Hc
 A+E$H
 A+E$Hc
 A+E$Lc
-A+FH~.D
+A+FH~%A
 A+G$H
 A+G$Hc
 A+G$Lc
@@ -422,20 +441,22 @@ A+M$Hc
 A+N$Hc
 A+O$Hc
 A+]$A9
-A+vX~)I
 A9T$ }
 A9V |fA
 A9V }	
 A9V }	A
+A9^$|
 A;AxscA
 A;D$ ~
 A;D$8|
+A;F4s
 A;G8|
 A;I8v$A
 A;]<|
 A;]long long|
 A;^8|
 A;_8|
+A;_Xu
 ABGR8888
 ALIGN_TYPE is wrong, please fix
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
@@ -443,7 +464,7 @@ ARARAp
 ARARB
 ARAp8p8p
 ARBRAp
-ARB]ARB]ARB]ARB]ARBRBRBRAp
+ARB]ARB]ARB]ARB]ARB]ARBRBRBRAp
 ARGB8888
 ASARBSAXBRB`
 ASARBSAXBSARBSAXBSARBSAXBRB`
@@ -475,6 +496,7 @@ AWAVAUATSPH
 AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
+AWAVSA
 AWAVSE
 AWAVSH
 AWAVSI
@@ -483,9 +505,11 @@ AWAVSPA
 AWAVSPH
 AWAVSPI
 AWAVSPM
+AYA`"CU0xYASATAp
 AZBSAp
 A[ATAp
 Adobe APP14 marker: version %double, flags 0x%04x 0x%04x, transform %double
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 Application built with libpng-
@@ -536,13 +560,13 @@ Bogus virtual array access
 Buffer error in compressed datastream
 Buffer passed to JPEG library is too small
 C [A^]
-CAtomicManipulator<CCopyableUtlVector<VsInputSignatureElement_t> >
 CAtomicManipulator<CResourceArray<SequenceFloatParam_t> >
 CAtomicManipulator<CResourceArray<SheetFrameImage_t> >
 CAtomicManipulator<CResourceArray<SheetSequenceFrame_t> >
 CAtomicManipulator<CResourceArray<SheetSequence_t> >
 CAtomicManipulator<CResourcePointer<Sheet_t> >
 CAtomicManipulator<CResourceString>
+CAtomicManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> > >
 CAtomicManipulator<Vector2D>
 CAtomicManipulator<Vector4D>
 CB: %u buffers, %.2f MB
@@ -554,9 +578,9 @@ CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
 CBlendStateCreator
 CCIR601 sampling not implemented yet
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
+CCommandBufferChunk CUtlMemoryPoolMT
 CConCommandMemberAccessor<CRenderDeviceBase>
 CConCommandMemberAccessor<CTextureManagerBase>
-CCopyableUtlVector
 CDefaultAccessor
 CDefaultIntrospectedTypeManager<2019914870ull, TextureHeader_t>
 CDefaultKeyValuesErrorSpew
@@ -572,6 +596,8 @@ CFunctor
 CFunctorJob
 CJob
 CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CLargeCommandBufferChunk CUtlMemoryPoolMT
+CMediumCommandBufferChunk CUtlMemoryPoolMT
 CMemberFunctor4<CTextureManagerBase*, void (CTextureManagerBase::*)(IAsyncResourceDataRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int), IAsyncResourceDataRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 CMemberFunctor6<CTextureManagerBase*, void (CTextureManagerBase::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, void*, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t), CWeakHandle<InfoForResourceTypeCTextureBase>, void*, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 COLORCORRECTION_VERSION_1
@@ -585,6 +611,7 @@ CRefCounted1<IRefCounted, CRefCountServiceBase<true, CRefMT> >
 CReferenceCleanupTraversal
 CRenderContextEmpty
 CRenderDeviceBase
+CRenderDeviceBase::CRenderDeviceBase()
 CRenderDeviceBase::FindOrCreateTexture: Trying to load multiple mipmaps into 3d or array texture: %short
 CRenderDeviceEmpty
 CRenderDeviceMgrBase
@@ -612,6 +639,7 @@ CSchemaClassBinding<VsInputSignature_t>
 CSchemaClassBindingBase
 CSchemaEnumBinding<CubeMapFace_t>
 CSchemaEnumBinding<InputLayoutVariation_t>
+CSchemaEnumBinding<RenderBufferFlags_t>
 CSchemaEnumBinding<RenderMultisampleType_t>
 CSchemaEnumBinding<RenderPrimitiveType_t>
 CSchemaEnumBinding<RenderSlotType_t>
@@ -620,18 +648,18 @@ CSchemaEnumBindingBase
 CSchemaFieldVisitor
 CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaInstallCallback
-CSchemaManipulator<CCopyableUtlVector<VsInputSignatureElement_t> >
 CSchemaManipulator<CResourceArray<SequenceFloatParam_t> >
 CSchemaManipulator<CResourceArray<SheetFrameImage_t> >
 CSchemaManipulator<CResourceArray<SheetSequenceFrame_t> >
 CSchemaManipulator<CResourceArray<SheetSequence_t> >
 CSchemaManipulator<CResourcePointer<Sheet_t> >
 CSchemaManipulator<CResourceString>
+CSchemaManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> > >
 CSchemaManipulator<Vector2D>
 CSchemaManipulator<Vector4D>
 CSchemaRegistration
 CSchemaRegistration_rendersystemempty
-CSchemaUtlVectorManipulator<CCopyableUtlVector<VsInputSignatureElement_t>, VsInputSignatureElement_t>
+CSchemaUtlVectorManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> >, VsInputSignatureElement_t>
 CSchemaVisitorBase
 CSchemaVisitorInfoMapBase
 CSheetHashConstructor
@@ -684,7 +712,6 @@ CTier1AppSystem<IRenderDeviceMgr, 0>
 CTier1AppSystem<IRenderUtils, 0>
 CTier2AppSystem<IRenderDeviceMgr, 0>
 CTier2AppSystem<IRenderUtils, 0>
-CU0xYASATBVATAp
 CUBEMAP_FACE_NEGATIVE_X
 CUBEMAP_FACE_NEGATIVE_Y
 CUBEMAP_FACE_NEGATIVE_Z
@@ -702,7 +729,9 @@ CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
+CUtlVector
 CVProfNode *CVProfNode::GetVParent()
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
@@ -725,9 +754,12 @@ ConCommand
 ConCommandBase
 ConVar
 ConVar(%short) defined with infinite float value (%short)
+ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
 ConstantBufferHandle_t CRenderDeviceBase::AcquirePooledDynamicConstantBuffer(uint32, uint32, uint32, int, uint)
+ConstantBufferHandle_t CSheetDataTextureCache::GetSequenceTextureDataConstantBuffer(HRenderTexture)
+Construction is only allowed from the resolve function
 ConvertJpegToRGB
 ConvertRGBToRGBAImage
 Copyright (C) 2012, Thomas G. Lane, Guido Vollbeding
@@ -741,6 +773,8 @@ CreateInterface
 CubeMapFace_t
 D$"D9
 D$0L9
+D$@H9
+D)char L
 D15S1
 D16_SHADOW
 D24FS8
@@ -750,7 +784,7 @@ D24X8
 D24X8_SHADOW
 D9sXu
 D;#t.
-D;sXu
+D;xHu@
 DATAL
 DCT coefficient out of range
 DCT scaled block size %dx%double not supported
@@ -792,13 +826,16 @@ Duplicate sRGB chunk
 Duplicate tIME chunk
 Duplicate tRNS chunk
 E$;C`u;
+E(fff.
 E+float A9
 E9t$0t
 E9wdr
 E;__int128 ~0
-E;wHu#I
-E;}8|
-E;~hu
+E;fhu
+E;gXu
+E;wHu
+E;|$8|
+E;} u
 EMItuhL
 EMItuwL
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
@@ -809,7 +846,9 @@ ERROR: Problem allocating permanent data for resource in file '%short'. See abov
 ERROR: Resource name "%short" has the incorrect extension "%short" for the specified resource type (expected "%short")!
 ETLPu
 EXECUTABLE_PATH
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
+Empty
 Empty Driver
 Empty JPEG image (DNL not supported)
 Empty input file
@@ -822,6 +861,7 @@ Error loading resource "%short" (Invalid resource version: %double != %double)
 EventSystem001
 Evict all resident texture.
 Exceeded size limit while expanding chunk
+Expecting the main thread pool to be initialized
 Extra compressed data
 Extra compression data
 F(L95
@@ -854,7 +894,6 @@ G(H)p
 G0Ic}
 G4Ic}
 G8H	p(]
-GA#D$
 GAMECONSOLE
 GPU Pipeline statistics: VCONCOMM'short outgoing message queue is too large (%u ) - dropping frame.
 GameResourceServiceClientV001
@@ -880,13 +919,14 @@ H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
-Hc@XH
 Hc@`H
 Hc@pH
 Hc@pI
-HcC H
+HcI(H
+HcIHH
 HcP(H
 HcR(H
+Header mismatch.
 HelpSystem_001
 HookUpTextureBits
 HostStateMgr001
@@ -894,6 +934,7 @@ Huffman code size table overflow
 Huffman table 0x%02x was not defined
 I CUtlLinkedList<COcclusionQueryMgr::OcclusionQueryObject_t, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<COcclusionQueryMgr::OcclusionQueryObject_t, long long> > >::AllocInternal(bool) [T = COcclusionQueryMgr::OcclusionQueryObject_t, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<COcclusionQueryMgr::OcclusionQueryObject_t, long long> >]
 I CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> > >::AllocInternal(bool) [T = CSwapChainBase *, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> >]
+I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I#A H9
 IAppSystem
 IAtomicManipulator
@@ -922,7 +963,6 @@ IResourceTypeManager
 ISchemaBinding
 ISchemaCollectionManipulator
 ISchemaManipulator
-ISchemaSearchTester<CSchemaClassInfo const*>
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
 IT;H0s
@@ -932,10 +972,16 @@ ITSHashConstructor<void*>
 IToolsResourceListener
 IVConCommDataReceived
 IcD$(H
+IcG L
+IcGHHi
+IcM H
 IcN8H
+IcNXH
+IcNhH
 IcO,H
 IcOxI
 Icu 1
+IcwXH
 Ignoring PLTE chunk in grayscale PNG
 Ignoring attempt to set cHRM RGB triangle with zero area
 Ignoring attempt to set negative chromaticity value
@@ -999,6 +1045,7 @@ Invalid JPEG file structure: two SOF markers
 Invalid JPEG file structure: two SOI markers
 Invalid PLTE after IDAT
 Invalid SOS parameters for sequential JPEG
+Invalid argument.
 Invalid attempt to read row data
 Invalid bKGD after IDAT
 Invalid bit depth in IHDR
@@ -1007,6 +1054,7 @@ Invalid cHRM blue point
 Invalid cHRM green point
 Invalid cHRM red point
 Invalid cHRM white point
+Invalid channels format.
 Invalid color quantization mode change
 Invalid color type in IHDR
 Invalid color type/bit depth combination in IHDR
@@ -1031,6 +1079,7 @@ Invalid palette length
 Invalid palette size, hIST allocation skipped
 Invalid progressive parameters at scan script entry %double
 Invalid progressive parameters std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double Se=%double Ah=%double Al=%double
+Invalid rendersystem %double
 Invalid sBIT after IDAT
 Invalid sCAL after IDAT
 Invalid sCAL chunk ignored: bad height format
@@ -1053,6 +1102,7 @@ IsResourceWeakHandle( pHandleType )
 IsValid()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
+IsValidIndex(int) && (int != InvalidIndex())
 IsValidIterator( it )
 J9\)8u
 JFIF APP0 marker: version %d.%02d, density %dx%double  %double
@@ -1100,7 +1150,6 @@ Lc;fB
 Lcq(L
 Lcs(I
 Lcx<L
-LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Loaded video settings config from '%short'
 Localize_001
@@ -1121,6 +1170,7 @@ MResourceTypeForInfoType
 MResourceVersion
 Malformed iCCP chunk
 Malformed iTXt chunk
+Mantle
 MapListService_001
 MaterialUtils_001
 MaxDeviceID
@@ -1158,7 +1208,7 @@ Missing PLTE before IDAT
 Missing PLTE before bKGD
 Missing PLTE before hIST
 Missing PLTE before tRNS
-ModelDocCommandSystem001
+ModelDocUtils001
 N([A^]
 NTROL
 NULL row buffer
@@ -1196,8 +1246,11 @@ Not signed char PNG file
 OSX: Requested mode %double long long %double, efs %double
 Obtained EMS handle %u
 Obtained XMS handle %u
+OpenGL
 Opened temporary file %short
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 Out of Memory
 Out of memory processing zTXt chunk
 Out of memory while processing sCAL chunk
@@ -1235,13 +1288,12 @@ Premature end of JPEG file
 Premature end of input file
 Profile size field missing from iCCP chunk
 PropertyEditorSystem_001
-PxIc_
 Quantization table 0x%02x was not defined
 Quantizing to %double = %double*%double*%double colors
 Quantizing to %double colors
 QueuedLoaderVersion001
 R16F_EXPAND
-RATB`cATAp
+RATB`tATAp
 RBRAp
 RBRBRBRBRAp
 RBRBRBRBRB\0
@@ -1249,8 +1301,17 @@ RBRBRBRBRB\Hp
 RBRBXARATAp
 RBRB]ARA
 RBSAXAp
+RBTBRAp
 RB\HRAZBp
 RDHIu
+RENDER_BUFFER_APPEND_CONSUME_BUFFER
+RENDER_BUFFER_BYTEADDRESS_BUFFER
+RENDER_BUFFER_STRUCTURED_BUFFER
+RENDER_BUFFER_UAV_COUNTER
+RENDER_BUFFER_USAGE_INDEX_BUFFER
+RENDER_BUFFER_USAGE_SHADER_RESOURCE
+RENDER_BUFFER_USAGE_UNORDERED_ACCESS
+RENDER_BUFFER_USAGE_VERTEX_BUFFER
 RENDER_MULTISAMPLE_16X
 RENDER_MULTISAMPLE_2X
 RENDER_MULTISAMPLE_4X
@@ -1291,6 +1352,7 @@ RENDER_PRIM_6_CONTROL_POINT_PATCHLIST
 RENDER_PRIM_7_CONTROL_POINT_PATCHLIST
 RENDER_PRIM_8_CONTROL_POINT_PATCHLIST
 RENDER_PRIM_9_CONTROL_POINT_PATCHLIST
+RENDER_PRIM_COMPUTE_SHADER
 RENDER_PRIM_HETEROGENOUS
 RENDER_PRIM_INSTANCED_QUADS
 RENDER_PRIM_LINES
@@ -1344,6 +1406,7 @@ RecursiveLoadFromBuffer:  recursion overflow
 RegisterConfigValue: Unknown error constructing config value "%short"!
 Release
 Render Device Empty
+RenderBufferFlags_t
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
@@ -1353,6 +1416,8 @@ RenderPrimitiveType_t
 RenderService_001
 RenderSlotType_t
 RenderSystem
+RenderSystem/AllowSampleableDepthInVr
+RenderSystem/AlwaysPreloadTexturesInGame
 RenderSystemSurface001
 RenderUtils_001
 Requested feature was omitted at compile time
@@ -1365,7 +1430,7 @@ ResourceType_t GetResourceTypeOfWeakHandle(const CSchemaType *)
 Row has too many bytes to allocate in memory
 SARASATAp
 SARBSAXBRB`
-SBRCUBRDTHTCp
+SBRCUBSDTKTCp
 SSE and SSE2 are required.
 Sampling factors too large for interleaved scan
 Saved video settings config to '%short'
@@ -1408,6 +1473,7 @@ Start float&& Frame 0x%02x: width=%u, height=%u, components=%double
 Start float&& Scan: %double components
 Start of Image
 StatsService_001
+SteamAudio001
 Suspension not allowed here
 T &CUtlFixedMemory<UtlLinkedListElem_t<COcclusionQueryMgr::OcclusionQueryObject_t, long long> >::operator[](intp) [T = UtlLinkedListElem_t<COcclusionQueryMgr::OcclusionQueryObject_t, long long>]
 T &CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> >::operator[](intp) [T = UtlLinkedListElem_t<CSwapChainBase *, long long>]
@@ -1416,23 +1482,23 @@ TADIu
 TADIu'A
 TADIu*E
 TASATAp
-TAWATAp
-TBRAp
+TBRAXA`
 TBRB`
-TBRB`AATAp
+TBRB`GATAp
 TBSA`
 TBSAp
 TBSBp
 TBTAp
 TBTBRB`
+TBWATAp
 TB]Ap
+TCRAp
 TCRBTBp
-TCRB`
 TCSAp
-TCTBRAp
 TCTBRBRBSATAp
 TCUATAp
 TCVATARAp
+TCVATAp
 TC[ATBp
 TCp(p
 TDRAp
@@ -1446,6 +1512,7 @@ TLPsu
 TOTAL: %.2f MB
 TSPEC_CUBE_TEXTURE
 TSPEC_FLAGS
+TSPEC_INPUT_ATTACHMENT
 TSPEC_LINEAR_ADDRESSING_360
 TSPEC_LINE_TEXTURE_360
 TSPEC_NO_LOD
@@ -1457,6 +1524,7 @@ TSPEC_SUGGEST_CLAMPT
 TSPEC_SUGGEST_CLAMPU
 TSPEC_TEXTURE_ARRAY
 TSPEC_TEXTURE_GEN_MIP_MAPS
+TSPEC_UAV
 TSPEC_UNFILTERABLE_OK
 TSPEC_USE_TYPED_IMAGEFORMAT
 TSPEC_VERTEX_TEXTURE
@@ -1514,7 +1582,11 @@ Unsupported JPEG data precision %double
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported PSD color mode!
 Unsupported color conversion request
+Unsupported compression type.
+Unsupported format.
 Unsupported marker type 0x%02x
+Unsupported version or scanline.
+Upper limit on texture pool size.
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 VATAp
@@ -1564,6 +1636,7 @@ Virtual array controller messed up
 VisBuilder_001
 VsInputSignatureElement_t
 VsInputSignature_t
+Vulkan
 WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Exclusive fullscreen did not get requested resolution %double long long %double (currently %double long long %double), trying again
 WARNING: Missing data block for file: %short
@@ -1596,6 +1669,7 @@ XBRB`
 XXu*H
 XXujH
 X[A\A]A^A_]
+Xbox 360
 YA]A`
 Yfffff.
 Zero length tRNS chunk
@@ -1605,17 +1679,16 @@ Zffffff.
 [A\A^A_]
 [A^A_]
 [Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
+\$0E1
 \4`L9
 \sPHi
 ^ [A^]
-_8fff.
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
 _CommandLine
 _CreateInterface
 _DevMsg
-_EarlyInit_Tier0
 _GetCPUInformation
 _GetResourceManifestCount
 _GetResourceManifests
@@ -1634,6 +1707,7 @@ _Plat_GetCPUFrequency
 _Plat_GetClockStart
 _Plat_GetMonitorResolution
 _Plat_GetOSType
+_Plat_GetThreadIndex
 _Plat_GlobalMemoryStatus
 _Plat_IsHighDPI
 _Plat_IsInDebugSessionRaw
@@ -1658,7 +1732,7 @@ _V_UTF16ToUTF8
 _V_UTF32ToUTF8
 _V_atof
 _V_atoi
-_V_log2
+_V_logf
 _V_qsort
 _V_qsort_s
 _V_snprintf
@@ -1668,6 +1742,7 @@ _V_strlower_fast
 _V_strtod
 _V_strtoi64
 _V_strtoui64
+_V_swscanf
 _V_vsnprintf
 _V_vsnprintfRet
 _V_vsnprintfSize
@@ -1703,6 +1778,7 @@ __common
 __const
 __cstring
 __data
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __int128 * nBlockSize >= num
@@ -1726,7 +1802,6 @@ _g_VProfCurrentProfile
 _g_pMemAlloc
 _g_pThreadPool
 _getenv
-_logf
 _longjmp
 _malloc
 _memchr
@@ -1746,10 +1821,10 @@ _setjmp
 _sscanf
 _strchr
 _strcmp
+_strdup
 _strlen
 _strnlen
 _strstr
-_strtol
 _tools.txt
 _wcslen
 `A;_8|
@@ -1760,9 +1835,13 @@ _wcslen
 `[A^]
 ````P`
 `unsigned char[A\A^A_]
+aIcO H
 actualMode.HasUsageType()
 alpha
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 bad adaptive filter value
 blocking issue in occlusion queries!!
 bm.GetImageFormat() == IMAGE_FORMAT_RGBA8888
@@ -1784,6 +1863,9 @@ cfg/moddefaults.txt
 cfg/video.txt
 cfg/video_%02d.txt
 cfg/videodefaults.txt
+channels
+char(ffff.
+compression
 const HardwareCaps_t &CRenderDeviceMgrBase::GetHardwareCaps(int) const
 const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
 const ResourceBlockEntry_t *Resource_GetBlockEntry(const ResourceFileHeader_t *, ResourceBlockId_t)
@@ -1793,6 +1875,8 @@ const void *CUtlBuffer::PeekGet(int, int)
 const void *Resource_GetBlock(const ResourceFileHeader_t *, ResourceBlockId_t)
 count >= 0
 dat->m_pPeer == NULL
+dataWindow
+displayWindow
 dxsupport
 dxsupport.cfg
 dyld_stub_binder
@@ -1802,6 +1886,7 @@ false
 ffff.
 fffff.
 ffffff.
+fffffff
 filesystem_stdio
 filetoinclude
 float CKeyValues_Data::Internal_GetFloat()
@@ -1809,14 +1894,15 @@ fmt >= IMAGE_FORMAT_UNKNOWN && fmt < NUM_IMAGE_FORMATS
 func && m_ModeChangeCallbacks.Find( func ) < 0
 g_TSPointerListNodes.IsAllocationWithinPool( pCurrent )
 g_pApplication->GetGameMode( ) == APPLICATION_IS_GAME
+g_pCVar
 g_pResourceHandleUtils
 g_pResourceSystem
 g_pTextureManagerBase == this
+g_pThreadPool
 gamma table being rebuilt
 hResource->m_nRefCount > 0
 header crc mismatch
 hfffff.
-iHcK H
 incorrect data check
 incorrect header check
 incorrect length check
@@ -1866,13 +1952,17 @@ libpng does not support gamma+background+rgb_to_gray
 libpng error: %short
 libpng warning: %short
 librendersystemempty.dylib
+lineOrder
 localize
 long long >= 0 && long long < m_nWidth
 long long[A\A]A^A_]
+long long[A^A_]
 m_Blobs.IsPeeked()
 m_Count == 0
-m_DynamicCBUpdates.IsEmpty()
 m_ElementCount == 0
+m_Elements.IsValidIterator( it )
+m_Elements.IsValidIterator( m_LastAlloc )
+m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_FirstFree == InvalidIndex()
 m_Format
 m_Frames
@@ -1886,8 +1976,10 @@ m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + nMaxSize - 1 )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
 m_Memory.IsValidIterator( it )
 m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
+m_NumElements == 0
 m_OcclusionQueryObjects.IsValidIndex( unsigned char )
 m_Reflectivity
+m_Root == InvalidIndex()
 m_Sequences
 m_Tail == InvalidIndex()
 m_bAlphaCrop
@@ -1961,11 +2053,13 @@ nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nColorModeSize % 3 == 0
 nCount >= 0 && nCount < ARRAYSIZE( m_pViewports )
+nCount >= INT16_MIN && nCount <= INT16_MAX
 nDXLevel != 0
 nDetail == RENDER_TEXTURE_DETAIL_DEFAULT || nDetail == RENDER_TEXTURE_DETAIL_HIGH
 nFlags >= 0 && nFlags <= UINT8_MAX
 nHeight > 0
 nIndex != -1
+nIndex != pDisabledBlob->m_DisabledModeAllocations.InvalidIndex()
 nMatchCode <= UINT16_MAX
 nMaxChars > 0
 nNumMipLevelsLoaded != 0
@@ -2012,6 +2106,7 @@ pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pMemory[int] == 0
 pMovedTexture
 pMovedTexture->m_nInternalHandle.m_nData == lastHandle.m_nData
 pName
@@ -2035,6 +2130,8 @@ pXRESF
 pXp8p
 pXu*H
 pXulH
+p[A\A^A_]
+pixelAspectRatio
 png_do_encode_alpha: unexpected call
 png_do_quantize returned rowbytes=0
 png_do_rgb_to_gray found nongray pixel
@@ -2043,6 +2140,7 @@ potentiallyEvictableTextures.Count() <= m_nTextureCount
 ppppP
 r_fullscreen_gamma
 r_gpu_mem_stats
+r_max_texture_pool_size
 r_texture_pool_size
 r_texture_stream_mip_bias
 r_texturefilteringquality
@@ -2053,6 +2151,7 @@ rcCropUnion.m_fBottom_V >= 0.0f && rcCropUnion.m_fBottom_V <= 1.0f
 rcCropUnion.m_fLeft_U >= 0.0f && rcCropUnion.m_fLeft_U <= 1.0f
 rcCropUnion.m_fRight_U >= 0.0f && rcCropUnion.m_fRight_U <= 1.0f
 rcCropUnion.m_fTop_V >= 0.0f && rcCropUnion.m_fTop_V <= 1.0f
+record.m_hConstantBuffer != CONSTANT_BUFFER_HANDLE_INVALID
 rendersystemempty
 resourceName
 resourcesystem
@@ -2065,6 +2164,8 @@ s_nDLLIdentifier < 0
 s_nDLLIdentifier >= 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
+screenWindowCenter
+screenWindowWidth
 sequence number %double too low in sheet file!!!
 sequential row overflow
 setting.
@@ -2090,6 +2191,8 @@ setting.maxdxlevel
 setting.nowindowborder
 setting.recommendedheight
 setting.recommendedwidth
+setting.refreshrate_denominator
+setting.refreshrate_numerator
 setting.resettodefaults
 setting.shaderquality
 sffffff.
@@ -2099,16 +2202,17 @@ short,fff.
 size < 1024 * 1024
 size >= 0
 size_t CTextureBase::ComputeSize(RenderTextureDetail_t) const
-size_t CTextureManagerBase::MN_BuildRequestedResourcesList(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &)
 stackLevel >= 0 && stackLevel < m_errorIndex
 static CSchemaEnumBindingBase *CSchemaEnumBinding<CubeMapFace_t>::Get() [T = CubeMapFace_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<InputLayoutVariation_t>::Get() [T = InputLayoutVariation_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderBufferFlags_t>::Get() [T = RenderBufferFlags_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderMultisampleType_t>::Get() [T = RenderMultisampleType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderPrimitiveType_t>::Get() [T = RenderPrimitiveType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<RenderSlotType_t>::Get() [T = RenderSlotType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<TextureSpecificationFlags_t>::Get() [T = TextureSpecificationFlags_t]
 static uint32 CBlockCompress::FastCompress(const uint8 *, uint32, uint8 *, uint32)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+static void ConVarRef::InitDeferredConVarRefs()
 static void RenderInputLayoutField_t::Schema_VerifyBindingIsRegistered()
 static void SequenceFloatParam_t::Schema_VerifyBindingIsRegistered()
 static void SheetFrameImage_t::Schema_VerifyBindingIsRegistered()
@@ -2119,6 +2223,13 @@ static void TextureDesc_t::Schema_VerifyBindingIsRegistered()
 static void TextureHeader_t::Schema_VerifyBindingIsRegistered()
 static void VsInputSignatureElement_t::Schema_VerifyBindingIsRegistered()
 static void VsInputSignature_t::Schema_VerifyBindingIsRegistered()
+std::__1::__basic_string_common<true>::__throw_length_error() const
+std::__1::__vector_base_common<true>::__throw_length_error() const
+std::__1::__vector_base_common<true>::__throw_out_of_range() const
+std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const
+std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)
+std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
 std::terminate()
 strnlen
 t$8[A\A^A_]
@@ -2147,10 +2258,9 @@ textureObject.m_spec.m_nNumMipLevels == texSpec.m_nNumMipLevels
 tfff.
 too many length or distance symbols
 transparency
-tw~cM
 typeinfo for IStack_Annotation
 typeinfo for std::bad_alloc
-u	D90
+u	D9 
 u&HcQ
 u(J9\
 u)H;]
@@ -2172,6 +2282,8 @@ uiOffset + rc.m_fLeft_U * uiRange >= 0 && uiOffset + rc.m_fLeft_U * uiRange <= 0
 uiOffset + rc.m_fRight_U * uiRange >= 0 && uiOffset + rc.m_fRight_U * uiRange <= 0xFFFF
 uiOffset + rc.m_fTop_V * uiRange >= 0 && uiOffset + rc.m_fTop_V * uiRange <= 0xFFFF
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
+uint64 CKeyValues_Data::Internal_GetUint64()
+uint64 CTextureManagerBase::MN_BuildRequestedResourcesList(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &)
 uint8 *PadAndCompressImageDataForPanorama(Bitmap_t &, const TextureSpecification_t *, bool *)
 undefined
 unknown
@@ -2179,28 +2291,32 @@ unknown compression method
 unknown critical chunk
 unknown header flags set
 unsigned char[A\A]A^A_]
-unsigned char[A^A_]
 unsigned long long >= 0 && unsigned long long < m_nHeight
-unsigned short fff.
+unsigned short ffffff.
 unsigned short#fff.
-unsigned short%fffff.
 unsigned short%ffffff.
 unsigned short&H9[8tUH
+unsigned short&fffff.
+unsigned short'ffff.
 unsigned short(L;}
 unsigned short*ffffff.
 unsigned short,Lcq
 unsigned short-L9`
+unsigned short/ff.
 unsigned short/ffffff.
 unsigned short:fffff.
+unsigned short<fff.
 unsigned short[fff.
 unsigned short^D9+uCD9s
 uvCropped
 uvUncropped
 v0ff.
+vHct
 video.cfg
 virtual CDeviceFence::~CDeviceFence()
 virtual CTextureManagerBase::~CTextureManagerBase()
 virtual ConstantBufferHandle_t CRenderDeviceBase::CreateConstantBuffer(ConstantBufferType_t, uint32, void *)
+virtual ConstantBufferHandle_t CRenderDeviceBase::CreateConstantBufferInternal(ConstantBufferType_t, uint32, uint32, uint32, uint)
 virtual HRenderTexture CRenderDeviceBase::FindOrCreateTexture(const char *, bool, const CTextureCreationDesc *, const CTextureDesc *, const void *, int, bool)
 virtual bool CBaseIntrospectedTypeManager::Init(IResourceSystemUtils *)
 virtual bool CDefaultIntrospectedTypeManager<2019914870, TextureHeader_t>::Init(IResourceSystemUtils *) [nResourceType = 2019914870, TIntrospectedDiskData = TextureHeader_t]
@@ -2260,7 +2376,6 @@ void Bitmap_t::SetBuffer(int, int, ImageFormat, unsigned char *, bool, int)
 void Bitmap_t::SetColor(int, int, Color)
 void CBaseIntrospectedTypeManager::SetDiskDataBinding(const CSchemaClassBindingBase *)
 void CByteswap::SwapBufferToTargetEndian(T *, T *, int) [T = int]
-void CCommandStream::Cleanup()
 void CKeyValuesErrorStack::Pop()
 void CKeyValuesErrorStack::Reset(int, HKeySymbol)
 void CKeyValuesTokenReader::SeekBackOneToken()
@@ -2272,9 +2387,9 @@ void COcclusionQueryMgr::DestroyOcclusionQueryObject(OcclusionQueryObjectHandle_
 void COcclusionQueryMgr::EndOcclusionQueryDrawing(OcclusionQueryObjectHandle_t, IRenderContext *)
 void COcclusionQueryMgr::OcclusionQuery_IssueNumPixelsRenderedQuery(OcclusionQueryObjectHandle_t)
 void COcclusionQueryMgr::ResetOcclusionQueryObject(OcclusionQueryObjectHandle_t)
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CRenderHardwareConfig::ForceCapsToDXLevel(HardwareCaps_t *, int, const HardwareCaps_t &)
 void CRenderHardwareConfig::SetupHardwareCaps(int, const HardwareCaps_t &)
 void CResourceStream::Align(uint, int)
@@ -2297,12 +2412,13 @@ void CTSQueue<CTextureManagerBase::CacheRequest_t, false>::Purge() [T = CTexture
 void CTSQueue<CWeakHandle<InfoForResourceTypeCTextureBase>, false>::Purge() [T = CWeakHandle<InfoForResourceTypeCTextureBase>, bTestOptimizer = false]
 void CTSQueue<DynamicIndexBufferHandle_t__ *, false>::Purge() [T = DynamicIndexBufferHandle_t__ *, bTestOptimizer = false]
 void CTSQueue<DynamicVertexBufferHandle_t__ *, false>::Purge() [T = DynamicVertexBufferHandle_t__ *, bTestOptimizer = false]
+void CTextureInfoId::SetPinCount(int32)
 void CTextureManagerBase::BuildTextureListAndSendToGPUProfiler() const
 void CTextureManagerBase::DeleteQueuedTextureInfosAndCompactArrays()
 void CTextureManagerBase::HookUpTextureBits(HRenderTexture, void *, int, TextureSpecification_t, int32, TextureOnDiskCompressionType_t)
 void CTextureManagerBase::IO_OnResourceFileLoaded(IAsyncResourceDataRequest *, HRenderTexture, TextureSpecification_t, int32)
 void CTextureManagerBase::MN_CacheRequestedResources(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &)
-void CTextureManagerBase::MN_EvictResources(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &, size_t)
+void CTextureManagerBase::MN_EvictResources(CUtlVector<CTextureManagerBase::ToCacheHandle_t> &, uint64)
 void CTextureManagerBase::MN_OnResourceLoadCompleted(const HRenderTexture &, TextureObjectInfo_t &, int32, const int &)
 void CTextureManagerBase::MN_OnResourceLoadFailed(const HRenderTexture &, int32)
 void CUtlBuffer::AddNullTermination()
@@ -2321,6 +2437,10 @@ void CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemor
 void CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> > >::LinkBefore(I, I) [T = CSwapChainBase *, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> >]
 void CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> > >::RemoveAll() [T = CSwapChainBase *, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> >]
 void CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> > >::Unlink(I) [T = CSwapChainBase *, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> >]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FreeNode(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAt(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlString::SetDirect(const char *, int)
 void CWeakHandle<InfoForResourceTypeCTextureBase>::InitUntyped(ResourceHandle_t) [T = InfoForResourceTypeCTextureBase]
 void CallPostConnect()
@@ -2344,8 +2464,8 @@ void PSDReadCompressedChannelsInternal(CUtlBuffer &, int, int, int, PSDMode_t, P
 void PSDReadUncompressedChannels(CUtlBuffer &, int, int, PSDMode_t, PSDPalette_t &, Bitmap_t &)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = HandleCaller_t]
-void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = TraverseCaller]
+void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t, bool) [CCaller = HandleCaller_t]
+void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t, bool) [CCaller = TraverseCaller]
 void SetTexturePixelsForRect(const SequenceSampleTextureCoords_t::FrameRect_t &, uint16 *, const uint16, const uint16)
 vpcfA
 vstdlib
@@ -2358,7 +2478,7 @@ vtexH
 vtexL
 vtexu
 w2E;k unsigned short,L
-w5Hcy
+wchar_t@Hcq
 xffff.
 xs == 0
 ys == 0
@@ -2366,14 +2486,11 @@ zlib memory error
 zlib stream error
 zlib version error
 {8HcK8H
-|7A;\$ u 
 |gffffff.
 }HA;EP}
 ~$IcF
 ~3IcBxI
 ~Mfffff.
-~Off.
-~Pfff.
 ~Qfffff.
 ~Wffff.
 ~Yfff.

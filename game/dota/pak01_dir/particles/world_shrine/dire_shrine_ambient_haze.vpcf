@@ -19,6 +19,7 @@
 			m_hTexture = resource:"materials/particle/fire_particle_10/fire_particle_10_low.vtex"
 			m_flAnimationRate = 0.350000
 			m_bAdditive = true
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 

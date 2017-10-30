@@ -1,5 +1,7 @@
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
         
                 CDefaultKeyValuesErrorSpew
+  @@@
  %float elapsed wchar_t/unsigned __int128 int/unsigned __int128
  - %u
  0@  
@@ -9,7 +11,6 @@
  [A^]
  ffff.
  need to hook up zip for linux
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CFileTracker::GetFileInfos - overflowed list!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
@@ -27,15 +28,19 @@
 !m_pszTrueFileName
 !multilist || ML
 !pPath || V_IsAbsolutePath( pPath )
+!pRequest->m_bUsedAsContext
+!pRequestBase->m_bUsedAsContext
 !request.pfnAlloc
-!strchr(filename, '\__int128') && !strchr(filename, '\r')
+!strchr( filename, '\__int128' ) && !strchr( filename, '\r' )
 #base
 #base is NULL 
 #ffffff.
 #include
 #include is NULL 
+$ffff.
 %-20s "%short" %short%short
 %-20s %short
+%fff.
 %fs_targH
 %int %int %int %int
 %s_%03d.vpk
@@ -44,7 +49,8 @@
 %short %20s %30s = %8.2fms (call count = %double)
 %short%short:%short
 %short, %short, %short
-%short/%short
+%short: file too large
+%short: request %llu has op %double
 %short: string format requested %double chars
 ( __int128 - 1 ) * nBlockSize < num
 ( nSearchPathIndex >= 0 ) && ( nSearchPathIndex < m_SearchPaths.Count() )
@@ -54,18 +60,22 @@
 (GetChar()) == (0)
 (Unique   ): [%short]\%short
 ([A\A]A^A_]
-([A^A_]
+(fff.
 (ffff.
+(fffff.
+(int)m_Base.m_Operation == ASYNC_OP_DELETING
+(int)m_Operation == ASYNC_OP_DELETING
 (intp)this % 16 == 0
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (uEHcK
 (vpk) 
-)fffff.
+)ffffff.
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
-+C$A9E
++fffff.
 ---------------
 ---FS%short:  %short %short (%.3f)
 ---FS%short:  close %short %p %int (%.3f)
@@ -73,6 +83,7 @@
 ---FS%short:  write %short %int %p
 -disable_auto_vpk_loading
 -fff.
+-fffff.
 -fs_log
 -fs_logbins
 -fs_target
@@ -81,6 +92,7 @@
 -onethreadpool
 .ETv*H
 .Elv*H
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/filesystem/basefilesystem.cpp
@@ -107,6 +119,7 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/vstdlib/jobthread.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/stringpool.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/strtools.cpp
@@ -116,8 +129,6 @@
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/schemabindings.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier2/tier2.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vpklib/packedstore.cpp
-/content/
-/game/
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
@@ -126,8 +137,8 @@
 0:Off, 1:Any, 2:Sync only
 0:Off, 1:Warn main thread, 2:Warn other threads
 0[A\A^A_]
-1ffff.
 29K }
+3ffffff.
 4$w+H
 49K }
 49S |}
@@ -138,11 +149,11 @@
 9S |unsigned int
 :done
 :error
-;A;_@u
 <(9{ |jI
 <Invalid file time %lld>
 <NULL>
-@@   
+<null>
+@@  `
 @CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
 @CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
 @CThread::CThread()
@@ -182,13 +193,13 @@
 @_COM_TimestampedLog
 @_CommandLine
 @_CreateNewThreadPool
-@_EarlyInit_Tier0
 @_KeyValuesSystem
 @_LOG_GENERAL
 @_LengthOfMatchingPaths
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Plat_CreateDirectory
 @_Plat_DebugPrint
 @_Plat_DebugString
 @_Plat_ExitProcess
@@ -196,10 +207,15 @@
 @_Plat_FloatTime
 @_Plat_GetEnv
 @_Plat_GetOSType
+@_Plat_IsFile
 @_Plat_IsHighDPI
 @_Plat_IsInDebugSessionRaw
 @_Plat_LoadModule
 @_Plat_RelativeTicks
+@_Plat_RemoveDirectory
+@_Plat_RemoveFile
+@_Plat_RenameFile
+@_Plat_SetFileReadOnly
 @_Plat_ShouldCollectMiniDumpsForFatalErrors
 @_Plat_TickDiffMicroSec
 @_Plat_TickDiffMicroSecF
@@ -230,7 +246,9 @@
 @_V_SetErrno
 @_V_StripFilename
 @_V_StripTrailingSlash
+@_V_UTF16ToUTF32
 @_V_UTF16ToUTF8
+@_V_UTF8ToUTF32
 @_V_UnqualifiedFileName
 @_V_atof
 @_V_atoi
@@ -238,6 +256,7 @@
 @_V_ferror
 @_V_fflush
 @_V_fopen
+@_V_fopenUTF8
 @_V_fprintf
 @_V_fread
 @_V_fseeki64
@@ -268,7 +287,6 @@
 @__V_FixupPathName
 @__V_GetFirstDir
 @__V_MakeAbsolutePath
-@__V_SetExtension
 @__V_StringAfterPrefix
 @__V_StripExtension
 @__V_StripLastDir
@@ -291,21 +309,24 @@
 @___toupper
 @__float128 short::*
 @_alphasort$INODE64
-@_chmod
-@_closedir
+@_close
+@_fcntl
 @_flock
 @_free
+@_fstat$INODE64
 @_g_Tier1_CRC32Table
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
 @_g_pThreadPool
+@_lseek
+@_lstat$INODE64
 @_memchr
 @_memcpy
 @_memmove
 @_memset
 @_memset_pattern16
-@_mkdir
-@_opendir$INODE64
+@_open
+@_pread
 @_pthread_getspecific
 @_pthread_mutex_destroy
 @_pthread_mutex_init
@@ -315,12 +336,10 @@
 @_pthread_mutexattr_settype
 @_pthread_setspecific
 @_raise
-@_readdir$INODE64
-@_rename
+@_read
 @_rewind
 @_scandir$INODE64
 @_stat$INODE64
-@_strcasecmp
 @_strcat
 @_strchr
 @_strcmp
@@ -348,6 +367,7 @@
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
 A+D$$Hc
+A+O$Hc
 A9T$ }
 A9V |fA
 A9V }	
@@ -358,8 +378,8 @@ A9\$L
 A9^$|
 A;D$ ~
 A;\$@|
-A;] u
 A;]long long|
+A;}Pu
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 AWATING_FINISH
 AWAVATS
@@ -372,43 +392,41 @@ AWAVAUATSPA
 AWAVAUATSPE
 AWAVAUATSPH
 AWAVAUATSPI
-AWAVAUATSPL
 AWAVAUATSPM
 AWAVSH
 AWAVSP
 AWAVSPA
 AWAVSPH
 AWAVSPI
-AZBSAp
+AZBSCRAp
 A[ATAp
 Aborting IO request for %short
 Adding VPK file: %short
 Addreffing existing VPK file: %short
 Alignment
+All async requests should have an outer wrapper
 Allow AsyncBegin/EndRead()
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
+Assertion Failed in function %short():
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
 Async I/O disabled from command line
 Async Request has not finished, unable to release
-Async result Status makes no sense
+Async result Status %double makes no sense
 AsyncOpenedFile_t
 AsyncOpenedFile_t *CAsyncOpenedFiles::Get(FSAsyncFile_t)
 AsyncRequestStatus_t CAsyncRequestBase::ValidateSubmittedRequest(bool)
 Attempted to mount VPK "%short" but the VPK it lives inside ("%short") must be mounted first!
-B\B`4E`aGp8p
-Bad Outer in CAsyncRequestBase::AbortAfterServicing
-Bad Outer in CAsyncRequestBase::DeleteOuter
-Bad Outer in CAsyncRequestBase::GetInterfaceBase
-Bad Outer in CAsyncRequestBase::UpdateAfterServicing
-Bad Outer in CAsyncRequestBase::ValidateSubmittedRequest
+B\B`4E`_Lp
 Bad Release Request
 Bad expression operator: '%char%char', expected C style boolean expression operator.
 Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
 Bad expression token: %char
+Bad inner op %double in %short
 BakedLODBuilderMgr001
 Basefilesystem Async Job submission failed
 BenchmarkService001
@@ -416,13 +434,11 @@ BinaryProperties_GetValue
 Blocked change to read-only path %short!
 Buffer not big enough to hold requested File IO
 C [A^]
-C0;C@u
-C;L=(ubH
 CAsyncFileRequest
 CAsyncFileRequest::GetProfilingInfo called with bad buffer size (%double passed, expecting %llu)
 CAsyncFileSystem
-CAsyncGroupRequest
 CAsyncRequestBase::ProcessCallback callback function:  %8.3f msec (>10): %short
+CAsyncRequestBase::~CAsyncRequestBase()
 CAsyncSearchRequest
 CBaseAppSystem<IAsyncFileSystem>
 CBaseAppSystem<IFileSystem>
@@ -447,7 +463,6 @@ CBaseFileSystem::Size
 CBaseFileSystem::Tell
 CBaseFileSystem::Write
 CCountedStringPool
-CD[A^]
 CDefaultAccessor
 CEmptyConVar
 CFileAsyncAppendFileJob
@@ -466,11 +481,14 @@ CFileInfo *CPathIDFileList::FindFileInfo(const char *)
 CFileSystemReloadFileList
 CFileSystem_Stdio
 CFileSystem_Stdio::~CFileSystem_Stdio()
+CFioReadOnlyFile
+CFioReadOnlyFile::FS_fread
 CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CIODelayAlarmThread
 CJob
 CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CL[A^]
 COLORCORRECTION_VERSION_1
 COMPLETED
 COMPOSING
@@ -485,6 +503,7 @@ CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const
 CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
 CStdFilesystemFile
 CStdioFile
+CT;CP}BH
 CTSQueue corrupt
 CTSQueue corruption
 CTSQueue: Misaligned node
@@ -526,14 +545,16 @@ CUtlFixedMemory overflow!
 CUtlFixedMemory::Iterator_t CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> >::Next(const CUtlFixedMemory::Iterator_t &) const [T = UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long>]
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVProfNode *CVProfNode::GetVParent()
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
-Callback called at wrong time
+Callback called at wrong time (%double)
 Can'unsigned short find completed Async IO request, request description %short
+CanOpen( filename, options )
 Cannot rename file "%short" that exists in signed char VPK or UGC file!
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
 Clear the list of files that have been opened.
@@ -541,8 +562,10 @@ ConCommand
 ConCommandBase
 ConVar
 ConVar(%short) defined with infinite float value (%short)
+ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 CopyAFile: Cannot copy into signed char VPK or UGC file '%short'
 CopyAFile: Failed to copy file %s.
 CopyAFile: dest '%short' must be absolute path.
@@ -556,7 +579,6 @@ D$8Mct$
 D$@ffff.
 D$@ffffff.
 D)0fA
-D9s@|*H
 D9sXu
 DEFAULT_WRITE_PATH
 DataOffset
@@ -568,10 +590,11 @@ DirectoryEntries
 DotaCardGameClient_001
 E ffffff.
 E0F9$8
+E9uH|*H
 E9|$$|
 E;__int128 ~0
-E;uPu$I
-E;~hu
+E;__int128@u
+E;fhu
 EFileCRCStatus CFileTracker::CheckCachedFileCRC(const char *, const char *, CRC32_t *)
 ERROR_ALIGNMENT
 ERROR_ALREADYSERVICED
@@ -596,6 +619,7 @@ ERROR_PATHTOOLONG
 ERROR_READING
 ERROR_UNKNOWNID
 EXECUTABLE_PATH
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
 Encountered invalid filename (contains double-slashes) '%short'
@@ -622,6 +646,7 @@ FS:  Tried to Write NULL file handle!
 FS:  Tried to Write NULL file pointer inside valid file handle!
 FS: Specified invalid embedded path ID (%short).
 FS: Specified two path IDs (%short, %short).
+FSAsyncStatus_t CBaseFileSystem::SyncGetFileSize(const FileAsyncRequest_t &)
 FSAsyncStatus_t CBaseFileSystem::SyncRead(const FileAsyncRequest_t &)
 FSAsyncStatus_t CFileAsyncJob::GetAsyncStatus() const
 Failed
@@ -659,6 +684,7 @@ H	p(]
 H	wchar_t(]
 H!wchar_t(]
 H;C u
+HA;_P|
 HIGHDPI
 HKeySymbol KeyValues::GetNameSymbol() const
 HKeySymbol KeyValues::GetNameSymbolCaseSensitive() const
@@ -671,37 +697,28 @@ HammerMapLoader001
 Hc@XH
 Hc@pH
 Hc@pI
-HcCPI9
+HcCTH
+HcGTH
+HcHTH
+HcK H
+HcK@H
 HelpSystem_001
 HostStateMgr001
 I CUtlLinkedList<CBaseFileSystem::FindData_t, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> > >::AllocInternal(bool) [T = CBaseFileSystem::FindData_t, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> >]
 I CUtlLinkedList<CFileInfo *, int, false, int, CUtlMemory<UtlLinkedListElem_t<CFileInfo *, int>, int> >::AllocInternal(bool) [T = CFileInfo *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<CFileInfo *, int>, int>]
 I CUtlLinkedList<CFileInfo *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CFileInfo *, unsigned short>, unsigned short> >::AllocInternal(bool) [T = CFileInfo *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CFileInfo *, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
+I CUtlRBTree<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<sort_search_paths_t, unsigned short, bool (*)(const sort_search_paths_t &, const sort_search_paths_t &), CUtlMemory<UtlRBTreeNode_t<sort_search_paths_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = sort_search_paths_t, I = unsigned short, L = bool (*)(const sort_search_paths_t &, const sort_search_paths_t &), M = CUtlMemory<UtlRBTreeNode_t<sort_search_paths_t, unsigned short>, unsigned short>]
 IAppSystem
 IAsyncFileRequest
 IAsyncFileSystem
-IAsyncGroupRequest
 IAsyncRequestBase
 IAsyncRequestBase *CAsyncRequestBase::GetInterfaceBase()
 IAsyncSearchRequest
@@ -716,12 +733,19 @@ IOJob
 IQuickTime001
 IRefCounted
 IcF H9
+IcF$H
+IcF$t	H
+IcFTI
 IcFtI;FP|*H
 IcG I9
-Ic_ H
-Ic_0H
-Ic_PH
+IcL$@H
+IcMPH
+IcN@H
+IcNTI
+IcNhH
+IcO@H
 Ic_tH
+Icv L
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -747,13 +771,9 @@ KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::GetNextKey() const
 KeyValues Error: %short in file %short
 KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
-L/0E1
 LINUX
 LOWVIOLENCE
-Lc%Xw
-Lc5+O
 Length
-LightingBuilderMgr001
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
@@ -766,12 +786,12 @@ MODEL_PROCESSING_SERVICES_INTERFACE_001
 MXGJJ98X76
 MapListService_001
 MaterialUtils_001
+Mcn0M
 Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
 Mffffff.
-ModelDocCommandSystem001
-Multiple Requests: %double
+ModelDocUtils001
 Mutex Should have protected use while processing
 N([A^]
 NULL != *((void**)pEventToSetWhenComplete)
@@ -782,10 +802,11 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-O [A\A^A_]
 Open( %llu microsecs, %short )
 Open( %short )
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 OwnedByCurrentThread()
 POSIX
 Packed store %short with refcount > 0.
@@ -805,7 +826,7 @@ PropertyEditorSystem_001
 QueuedLoaderVersion001
 RBRAp
 RBRBRBRAp
-RBRBRBRBRBRBRBRB\0
+RBRBRBRBRBRBRB\0
 RB]ATAp
 ReadFile
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -828,21 +849,23 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
+SATAp
 SERVICING_IO
 STATUS_UNDEFINED
 STEAMAPPLIST_INTERFACE_VERSION001
 STEAMAPPS_INTERFACE_VERSION008
-STEAMHTMLSURFACE_INTERFACE_VERSION_003
+STEAMHTMLSURFACE_INTERFACE_VERSION_004
 STEAMHTTP_INTERFACE_VERSION002
-STEAMINVENTORY_INTERFACE_V001
+STEAMINVENTORY_INTERFACE_V002
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
+STEAMPARENTALSETTINGS_INTERFACE_VERSION001
 STEAMREMOTESTORAGE_INTERFACE_VERSION014
 STEAMSCREENSHOTS_INTERFACE_VERSION003
-STEAMUGC_INTERFACE_VERSION009
+STEAMUGC_INTERFACE_VERSION010
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
-STEAMVIDEO_INTERFACE_V001
+STEAMVIDEO_INTERFACE_V002
 SUBMITTED
 ScaleformUI001
 SceneSystem_002
@@ -856,6 +879,7 @@ Set fs_report_long_reads 1 before loading to use this. Prints signed char list o
 Set the async filesystem mode (0 = async, 1 = synchronous)
 Show the filesystem path.
 Simulate signed char delay of up to signed char set msec per file operation
+Size mismatch determining size of signed data block (%double vs %double)
 Size of per file buffers. 0 for none
 SoundOpSystem001
 SoundOpSystemEdit001
@@ -874,26 +898,29 @@ Source2Host001
 Source2Server001
 Source2ServerSerializers002
 StatsService_001
+SteamAudio001
 SteamClient017
-SteamController004
+SteamController005
 SteamFriends015
 SteamMatchMaking009
 SteamMatchMakingServers002
 SteamNetworking005
 SteamUser019
-SteamUtils008
+SteamUtils009
 T &CUtlBlockMemory<unsigned char, int>::operator[](I) [T = unsigned char, I = int]
 T &CUtlFixedMemory<UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long> >::operator[](intp) [T = UtlLinkedListElem_t<CBaseFileSystem::FindData_t, long long>]
 T CThreadSafeRefCountedObject<CWhitelistSpecs *>::GetInMainThread() [T = CWhitelistSpecs *]
-TBRBRBRBRAWB`
+T$8fB
+TBRAp
+TBRBRBRAp
 TBTATBRATAp
-TBTATBp
 TBTAp
-TB]ARBSATAp
-TB`'A`
-TCRBRBRAp
+TB\BRB\BRBSATAp
+TB`)ATB`
+TCRBRBRAWB`
 TCSARAp
 TCSBp p
+TCTATBp
 TCTAp
 TCXARATAp
 TCXATATAp
@@ -919,11 +946,12 @@ Tried to write %int bytes from unknown file pointer %p
 UNDEFINED
 UNKNOWN
 UNKNOWN VALUE
-Unable to determine async job type
+Unable to determine async job type (%double)
 Unable to remove %short!
 Unable to rename "%short" to "%short"!
 Unknown Request
 Unknown job state
+Unknown read error %double
 Unknown version %double for vpk %short
 Use native FS or STDIO
 UserInfoChangeService_001
@@ -969,6 +997,7 @@ V_CheckDoubleSlashes(pPath) == false
 V_CheckDoubleSlashes(pRelativePath) == false
 V_CheckDoubleSlashes(pWildCard) == false
 V_stristr_fast(char const*, char const*)
+ValidateLiveness()
 ValueIsPowerOfTwo( nAlignment )
 Version
 VisBuilder_001
@@ -1004,7 +1033,6 @@ _COM_TimestampedLog
 _CommandLine
 _CreateInterface
 _CreateNewThreadPool
-_EarlyInit_Tier0
 _GetResourceManifestCount
 _GetResourceManifests
 _InstallSchemaBindings
@@ -1014,6 +1042,7 @@ _LengthOfMatchingPaths
 _LoggingSystem_IsChannelEnabled
 _LoggingSystem_Log
 _LoggingSystem_RegisterLoggingChannel
+_Plat_CreateDirectory
 _Plat_DebugPrint
 _Plat_DebugString
 _Plat_ExitProcess
@@ -1021,10 +1050,15 @@ _Plat_FileSize
 _Plat_FloatTime
 _Plat_GetEnv
 _Plat_GetOSType
+_Plat_IsFile
 _Plat_IsHighDPI
 _Plat_IsInDebugSessionRaw
 _Plat_LoadModule
 _Plat_RelativeTicks
+_Plat_RemoveDirectory
+_Plat_RemoveFile
+_Plat_RenameFile
+_Plat_SetFileReadOnly
 _Plat_ShouldCollectMiniDumpsForFatalErrors
 _Plat_TickDiffMicroSec
 _Plat_TickDiffMicroSecF
@@ -1055,7 +1089,9 @@ _V_RemoveDotSlashes
 _V_SetErrno
 _V_StripFilename
 _V_StripTrailingSlash
+_V_UTF16ToUTF32
 _V_UTF16ToUTF8
+_V_UTF8ToUTF32
 _V_UnqualifiedFileName
 _V_atof
 _V_atoi
@@ -1063,6 +1099,7 @@ _V_fclose
 _V_ferror
 _V_fflush
 _V_fopen
+_V_fopenUTF8
 _V_fprintf
 _V_fread
 _V_fseeki64
@@ -1096,7 +1133,6 @@ __V_FileBase
 __V_FixupPathName
 __V_GetFirstDir
 __V_MakeAbsolutePath
-__V_SetExtension
 __V_StringAfterPrefix
 __V_StripExtension
 __V_StripLastDir
@@ -1122,6 +1158,7 @@ __common
 __const
 __cstring
 __data
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __int128 * nBlockSize >= num
@@ -1133,21 +1170,24 @@ __stubs
 __text
 __unwind_info
 _alphasort$INODE64
-_chmod
-_closedir
+_close
+_fcntl
 _flock
 _free
+_fstat$INODE64
 _g_Tier1_CRC32Table
 _g_VProfCurrentProfile
 _g_pMemAlloc
 _g_pThreadPool
+_lseek
+_lstat$INODE64
 _memchr
 _memcpy
 _memmove
 _memset
 _memset_pattern16
-_mkdir
-_opendir$INODE64
+_open
+_pread
 _pthread_getspecific
 _pthread_mutex_destroy
 _pthread_mutex_init
@@ -1157,12 +1197,10 @@ _pthread_mutexattr_init
 _pthread_mutexattr_settype
 _pthread_setspecific
 _raise
-_readdir$INODE64
-_rename
+_read
 _rewind
 _scandir$INODE64
 _stat$INODE64
-_strcasecmp
 _strcat
 _strchr
 _strcmp
@@ -1184,8 +1222,13 @@ async_suspend
 asyncappend
 asyncwrite
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 auto CThreadFastMutex::AssertOwnedByCurrentThread()::(anonymous class)::operator()() const
+bIsLive
+bIsLive && !pRequestBase->m_bUsedAsContext
 bSuccess
+bool CAsyncRequestBase::ValidateLiveness()
 bool CBaseFileSystem::FullPathToRelativePathInternal(const char *, const char *, bool, char *, int, CUtlVector<int> *)
 bool CBaseFileSystem::ShouldGameReloadFile(const char *)
 bool CFileHandle::EndOfFile()
@@ -1238,6 +1281,7 @@ externalFileAttribs
 extraFieldLength
 fHandle.m_pOwner
 false
+fcntl failed to set F_NOCACHE
 ffff.
 fffff.
 ffffff.
@@ -1259,10 +1303,9 @@ fs_monitor_read_from_pack
 fs_report_long_reads
 fs_report_sync_opens
 fs_warning_mode
-g_FileSystem_Async.ValidateRequestPtr( pRequest->GetBase() )
+g_pCVar
 goto done
 if "%%fs_target%%" == "" goto error
-int CBaseFileSystem::FastFindFile(const CBaseFileSystem::CSearchPath *, const char *)
 int CFileHandle::Read(void *, int)
 int CFileHandle::Read(void *, int, int)
 int CFileHandle::Write(const void *, int)
@@ -1271,8 +1314,10 @@ int CFileTracker::GetUnverifiedCRCFiles(CUnverifiedCRCFile *, int)
 int CPackedStore::ReadData(CPackedStoreFileHandle &, void *, int)
 int CUGCFileHandle::Read(void *, int, int)
 int CUtlString::FormatV(const char *, __va_list_tag *)
+int FioCreateFile(const char *, EFioAccessFlags, EFioShareFlags, EFioCreateMode, uint, OSFILEHANDLE *)
 int _V_strncmp(const char *, const char *, int)
-int64 CFileHandle::Seek(int64, int)
+int64 CBaseFile::Size()
+int64 CBaseFileSystem::FastGetFileSize(const CBaseFileSystem::CSearchPath *, const char *)
 int64 CFileHandle::Size()
 int64 CFileHandle::Tell()
 internalFileAttribs
@@ -1302,8 +1347,6 @@ m_Memory.IsValidIterator( it )
 m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
 m_NeedsVerificationList.Count() == 0
 m_NumElements == 0
-m_RequestList.Count() == 0
-m_RequestList.Find( pRequest ) == -1
 m_Root == InvalidIndex()
 m_Tail == InvalidIndex()
 m_autoLoadedVPKs.Count() == 0
@@ -1312,7 +1355,6 @@ m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
 m_map.IsValidIndex( iEntry )
 m_nIndexMask + 1 == ( U << m_nIndexShift )
-m_nNumRequestsOutstanding == 0
 m_nPosition < m_nLength
 m_nPosition >= 0
 m_nSuppressAsyncFileRequestFlush > 0
@@ -1374,6 +1416,7 @@ pItem == m_pTail
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pMemory[int] == 0
 pName
 pOldPath && pNewPath
 pParent != this
@@ -1382,10 +1425,9 @@ pPathId != NULL && strlen( pPathId ) < sizeof( m_PathID )
 pPool->m_SpaceUsed < 0xFFFF
 pRelativeSearchPath != NULL && strlen( pRelativeSearchPath ) < sizeof( m_SearchPath )
 pRelativeSearchSpec != NULL && strlen( pRelativeSearchSpec ) < sizeof( m_FileSpec )
-pRequest != NULL
 pRequest != NULL && theQueue != NULL
-pRequest->GetBase()->m_pGroup == NULL
-pRequest->GetRequestState() == ASYNC_REQUEST_STATE_COMPOSING
+pRequest->ValidateLiveness()
+pRequestBase->ValidateLiveness()
 pRequestBase->m_pSyncThreadEvent == NULL
 pSchemaSystem != NULL
 pSearchSpec != NULL && V_strlen( pSearchSpec ) < MAX_FILEPATH && pAddCallback != NULL && pDoneCallback != NULL
@@ -1406,6 +1448,7 @@ resource/cursor/
 resource/flash3/images/
 resource/flash3/videos/
 resourceName
+ret == 0
 s_nConnectionCount > 0
 s_nDLLIdentifier < 0
 s_nDLLIdentifier >= 0
@@ -1422,47 +1465,48 @@ signature
 sound/
 stackLevel >= 0 && stackLevel < m_errorIndex
 startOfCentralDirOffset
+static CFioReadOnlyFile *CFioReadOnlyFile::FS_fopen(const char *, const char *, int64 *)
 static CStdioFile *CStdioFile::FS_fopen(const char *, const char *, int64 *)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+static void ConVarRef::InitDeferredConVarRefs()
 std::terminate()
 strnlen
 subject.OU
 sxHcE
+t$0E;t$@u
 t$fff.
 t9L9c
 tHIcD$
 tLMc~
 tMff.
-tVA9_
-tlfff.
 tlffffff.
 total == size
 typeinfo for CThread
 typeinfo for std::bad_alloc
-u&IcF
-u,IcF
+u,IcF$H
+u/IcF
 u1D9t
 uGetResourceManifest
 uncompressedSize
 unknown
 unsigned char[A\A]A^A_]
-unsigned int CBaseFile::Size()
 unsigned short CCountedStringPool::ReferenceStringHandle(const char *)
 unsigned short%ffff.
 unsigned short&H9[8tUH
 unsigned short&fffff.
 unsigned short)L;unsigned long
+unsigned short,E;l$
 unsigned short-L9`
-unsigned short>fffff.
+unsigned short\E9g
 versionMadeBy
 versionNeededToExtract
-virtual CAsyncGroupRequest::~CAsyncGroupRequest()
+virtual AsyncRequestStatus_t CAsyncFileSystem::SubmitAsyncFileRequest(const IAsyncRequestBase *)
+virtual AsyncRequestStatus_t CAsyncFileSystem::SubmitSyncFileRequest(const IAsyncRequestBase *)
+virtual CAsyncFileRequest::~CAsyncFileRequest()
+virtual CAsyncSearchRequest::~CAsyncSearchRequest()
 virtual CDirectoryEntryInfo_t *CAsyncSearchRequest::GetResult(int)
 virtual CFileHandle::~CFileHandle()
 virtual FileHandle_t CBaseFileSystem::OpenEx(const char *, const char *, unsigned int, const char *)
-virtual IAsyncFileRequest *CAsyncGroupRequest::GetAsyncFileRequest(int32)
-virtual IAsyncRequestBase *CAsyncGroupRequest::GetAsyncRequest(int32)
-virtual IAsyncSearchRequest *CAsyncGroupRequest::GetAsyncSearchRequest(int32)
 virtual PlatModule_t CBaseFileSystem::LoadModule(const char *, const char *, bool)
 virtual SearchPathStateHandle_t CBaseFileSystem::SaveSearchPathState(const char *) const
 virtual bool CAsyncFileRequest::GetProfilingInfo(uint64 *, int)
@@ -1490,17 +1534,16 @@ virtual const char *CAsyncSearchRequest::GetMatchedFile(int)
 virtual const char *CBaseFileSystem::FindFirstEx(const char *, const char *, FileFindHandle_t *)
 virtual const char *CBaseFileSystem::GetLocalPath(const char *, char *, int)
 virtual const char *CBaseFileSystem::RelativePathToFullPath(const char *, const char *, char *, int, PathTypeFilter_t, PathTypeQuery_t *)
+virtual int CBaseFileSystem::ReadFileEx(const char *, const char *, void **, bool, bool, int, int, FSAllocFunc_t)
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
 virtual int64 CBaseFileSystem::GetFileTime(const char *, const char *)
+virtual int64 CBaseFileSystem::Size(const char *, const char *)
 virtual size_t CStdioFile::FS_fwrite(const void *, size_t)
-virtual unsigned int CBaseFileSystem::Size(const char *, const char *)
 virtual void *CAsyncFileSystem::AllocateBuffer(size_t, const char *, int)
 virtual void CAsyncFileRequest::DescribeRequest(CUtlString *)
-virtual void CAsyncFileSystem::ReleaseAsyncRequest(const IAsyncRequestBase *)
+virtual void CAsyncFileSystem::ReleaseAsyncRequest(const IAsyncRequestBase *, AsyncReleaseBehavior_t)
 virtual void CAsyncFileSystem::ReleaseBuffer(void *)
 virtual void CAsyncFileSystem::ResumeAllAsyncIO(AsyncRequestPriority_t)
-virtual void CAsyncGroupRequest::AddAsyncRequest(IAsyncRequestBase *)
-virtual void CAsyncGroupRequest::DescribeRequest(CUtlString *)
 virtual void CAsyncSearchRequest::SetSearchFilespec(const char *)
 virtual void CAsyncSearchRequest::SetSearchPathAndFileSpec(const char *, const char *)
 virtual void CAsyncSearchRequest::SetSearchPathAndFileSpec(const char *, const char *, const char *)
@@ -1518,13 +1561,16 @@ virtual void ConVar::InternalSetFloatValue(float)
 virtual void ConVar::InternalSetIntValue(int)
 virtual void ConVar::InternalSetValue(const char *)
 virtual void IAsyncRequestBase::DescribeRequest(CUtlString *)
-void CAsyncFileSystem::AdvanceRequestTo(CAsyncRequestBase *, CAsyncRequestQueue *, AsyncRequestState_t, bool)
+void CAsyncFileSystem::AdvanceRequestTo(CAsyncRequestBase *, CAsyncRequestQueue *, AsyncRequestState_t)
 void CAsyncFileSystem::AsyncIOCallBackHandler(CAsyncRequestBase *, CAsyncResultInfo_t &)
 void CAsyncFileSystem::KickOffFileJobs()
+void CAsyncFileSystem::NotifyMessageQueueOrCallback(CAsyncRequestBase *)
+void CAsyncFileSystem::ResubmitRequest(CAsyncRequestBase *)
 void CAsyncOpenedFiles::AddRef(FSAsyncFile_t)
 void CAsyncOpenedFiles::Release(FSAsyncFile_t)
 void CAsyncRequestBase::AbortAfterServicing(CAsyncResultInfo_t &)
 void CAsyncRequestBase::DeleteOuter()
+void CAsyncRequestBase::LogBadInnerOp(const char *)
 void CAsyncRequestBase::ProcessCallback(bool)
 void CAsyncRequestBase::Release()
 void CAsyncRequestBase::SetCompletionEvent(CThreadEvent *)
@@ -1539,6 +1585,7 @@ void CBaseFileSystem::LogFileAccess(const char *)
 void CBaseFileSystem::RemoveSearchPathInternal(int)
 void CBaseFileSystem::Trace_FClose(FILE *)
 void CFileHandle::Flush()
+void CFileHandle::Seek(int64, int)
 void CFileHandle::SetBufferSize(int)
 void CFileHandle::SetName(const char *)
 void CFileOpenInfo::DetermineFileLoadInfoParameters(CFileLoadInfo &, bool)
@@ -1551,9 +1598,9 @@ void CKeyValuesErrorStack::Reset(int, HKeySymbol)
 void CKeyValuesTokenReader::SeekBackOneToken()
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CPackedStore::BuildHashTables()
 void CPackedStore::SetParent(CPackedStore *)
 void CThreadSafeRefCountedObject<CWhitelistSpecs *>::Init(T) [T = CWhitelistSpecs *]
@@ -1578,23 +1625,16 @@ void CUtlLinkedList<CFileInfo *, unsigned short, false, unsigned short, CUtlMemo
 void CUtlLinkedList<CFileInfo *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CFileInfo *, unsigned short>, unsigned short> >::RemoveAll() [T = CFileInfo *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CFileInfo *, unsigned short>, unsigned short>]
 void CUtlLinkedList<CFileInfo *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CFileInfo *, unsigned short>, unsigned short> >::Unlink(I) [T = CFileInfo *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CFileInfo *, unsigned short>, unsigned short>]
 void CUtlLinkedList<CZip *, unsigned short, false, unsigned short, CUtlMemory<UtlLinkedListElem_t<CZip *, unsigned short>, unsigned short> >::RemoveAll() [T = CZip *, S = unsigned short, ML = false, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<CZip *, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, AsyncOpenedFile_t *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CFileInfo *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPathIDFileList *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CUtlVector<CStoreIDEntry, CUtlMemory<CStoreIDEntry, int> > *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::SetLessFunc(const LessFunc_t &) [T = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CInterlockedIntT<int>, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
+void CUtlRBTree<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::SetLessFunc(const LessFunc_t &) [T = CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, unsigned long long, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-void CUtlRBTree<sort_search_paths_t, unsigned short, bool (*)(const sort_search_paths_t &, const sort_search_paths_t &), CUtlMemory<UtlRBTreeNode_t<sort_search_paths_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = sort_search_paths_t, I = unsigned short, L = bool (*)(const sort_search_paths_t &, const sort_search_paths_t &), M = CUtlMemory<UtlRBTreeNode_t<sort_search_paths_t, unsigned short>, unsigned short>]
 void CUtlRBTree<sort_search_paths_t, unsigned short, bool (*)(const sort_search_paths_t &, const sort_search_paths_t &), CUtlMemory<UtlRBTreeNode_t<sort_search_paths_t, unsigned short>, unsigned short> >::RemoveAll() [T = sort_search_paths_t, I = unsigned short, L = bool (*)(const sort_search_paths_t &, const sort_search_paths_t &), M = CUtlMemory<UtlRBTreeNode_t<sort_search_paths_t, unsigned short>, unsigned short>]
 void CUtlString::SetDirect(const char *, int)
 void CUtlStringList_Base<CUtlVector<char *, CUtlMemory<char *, int> > >::RemoveAndDelete(int) [A = CUtlVector<char *, CUtlMemory<char *, int> >]
@@ -1619,7 +1659,9 @@ vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 xXu*H
 xXulH
+xXurH
 xhA9^
+{0;{@u
 {X[A\A^A_]
 {paHFCt'1
 {paHFCt*H
@@ -1627,16 +1669,19 @@ xhA9^
 {paHFCtAH
 {paHFCt]H
 {uoE1
-|$0E;|$@u#L
+|$8Ic
 }HA;EP}
+}HA;]P|
+}HE;uP|
 ~ E9t$$|
 ~ [A\A^A_]
 ~-H9H@unsigned short'H
 ~0H9H@unsigned short*H
 ~0M9u@unsigned short*H
+~1fff.
 ~7I9_@t1H
 ~>ffffff.
-~Pffff.
+~Sffff.
 ~bA9^$|\Hc
 ~paHFC
 ~paHFCt*H

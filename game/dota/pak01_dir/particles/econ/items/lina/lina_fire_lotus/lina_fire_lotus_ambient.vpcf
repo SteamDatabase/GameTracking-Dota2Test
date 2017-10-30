@@ -83,4 +83,33 @@
 			m_ChildRef = resource:"particles/econ/items/lina/lina_fire_lotus/lina_fire_lotus_ambient_e.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/lina/pw_fire_lotus/lina_belt.vmdl"
+			}
+		},
+	]
 }

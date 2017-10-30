@@ -25,6 +25,11 @@
 	width: 688px;
 }
 
+.FullWidthCell
+{
+	width: 1040px;
+}
+
 .TallCell
 {
 	height: 480px;
@@ -39,13 +44,14 @@
 	transition-duration: 0.25s;
 }
 
-.FrontpageCell:hover .FrontpageCellImage
+.FrontpageCell:hover > .FrontpageCellImage
 {
 	pre-transform-scale2d: 1.04;
 }
 
 .FrontpageCellHeader
 {
+	z-index: 1;
 	color: #528EA5;
 	background-color: black;
 	font-size: 14px;
@@ -61,21 +67,24 @@
 	transition-timing-function: ease-in; 	
 }
 
-.FrontpageCell:hover .FrontpageCellHeader
+.FrontpageCell:hover > .FrontpageCellHeader
 {
 	color: #fff;
 }
 
 .FrontpageCellTint
 {
+	z-index: 1;
 	vertical-align: bottom;
 	width: 100%;
 	height: 50%;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #0000003f  ), color-stop( 0.75, #0000003f  ), to( #000000ff ) );
+	margin-bottom: -1px;
 }
 
 .FrontpageCellFooter
 {
+	z-index: 1;
 	width: 100%;
 	padding-top: 30px;
 	flow-children: down;
@@ -86,9 +95,14 @@
 	transition-duration: 0.25s;
 }
 
-.FrontpageCell:hover .FrontpageCellFooter
+.FrontpageCell:hover > .FrontpageCellFooter
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.35, #000000ff  ), to( #000000ff ) );
+}
+
+.FrontpageCell.DarkMoon:hover .FrontpageCellFooter
+{
+	background-color: none;
 }
 
 .FrontpageCellTitle
@@ -129,6 +143,768 @@
 }
 
 .NoCellText .FrontpageCellText
+{
+	visibility: collapse;
+}
+
+.ScenePanel
+{
+	width: 336px;
+	height: 100%;
+	opacity: 0.001;
+
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in;
+
+}
+
+.ScenePanel.SceneLoaded
+{
+	opacity: 1;
+}
+
+#FrontPage700
+{
+	z-index: -5;
+}
+
+#FrontPage700Cell
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #300000 ), color-stop( 0.15, #000000  ), to( #662200 ) );	
+}
+
+
+
+#700Container
+{
+	width: 336px;
+	height: 232px;
+	background-color: black;
+	z-index: -1;
+	background-color: gradient( radial, 50% 50%, 0% 0%, 300px 300px, from( #369498ff ), color-stop( .5, #082C2Dff ), to( #000000ff ) );
+}
+
+#700Logo
+{
+	width: 340px;
+	height: 73px;
+	pre-transform-scale2d: .97;
+	margin-bottom: 0px;
+	horizontal-align: center;
+	vertical-align: middle;
+	background-image: url("s2r://panorama/images/front_page/706_logo_psd.vtex");
+	background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	wash-color: #9BF3DB;
+	horizontal-align: center;
+	visibility: collapse;
+
+	opacity: 0;	
+	transition-property: opacity, brightness;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;	
+}
+
+#706Patch:hover .ScenePanel
+{
+	brightness: 2;
+}
+
+
+
+#700Block:hover #700SubTitle
+{
+	opacity: 1;
+}
+
+
+#700Block
+{
+	width: 336px;
+	height: 232px;
+	horizontal-align: center;
+	vertical-align: middle;
+}
+
+
+#700Container .ScenePanel
+{
+	width: 100%;
+	height: 100%;	
+	opacity-mask: url("s2r://panorama/images/masks/matrix_706_psd.vtex") 1;	
+	hue-rotation: 170deg;
+	brightness: 1.5;
+	opacity: 1;
+	transition-property: opacity, brightness;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;		
+}
+
+#700SubTitle,
+#700Label
+{
+	text-overflow: shrink;
+	width: 345px;
+	height: 32px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 3px;
+	horizontal-align: center;
+	vertical-align: middle;
+	margin-top: 194px;
+	color: #FFDB6F;
+	text-shadow: 0px 1px 16px 2.0 #CF5B15;
+	
+	transition-property: color, text-shadow, opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;		
+}
+
+#700SubTitle
+{
+	margin-top: 248px;
+	opacity: 0;
+}
+
+
+#700Block:hover #700Label
+{
+	color: white;
+	text-shadow: 0px 1px 26px 4.0 #CF5B15;
+}
+
+
+#DarkMoonBackground
+{
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	background-color: black;
+	z-index: -1;
+}
+
+#DarkMoonScenePanel
+{
+	z-index: -1;
+}
+
+#JuggernautArcanaScenePanel
+{
+}
+#JuggernautArcanaScenePanel2
+{
+}
+
+#SceneBlock
+{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.SceneHalf Label
+{
+	vertical-align: bottom;
+	margin: 16px;
+	margin-bottom: 112px;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-delay: 0.25s;
+	transition-timing-function: linear;	
+	z-index: 3;
+	color: white;
+	text-transform: uppercase;
+}
+
+
+.LeftHovered .SceneHalf Label,
+.RightHovered .SceneHalf Label
+{
+	opacity: 1;
+	transition-duration: 0.05s;
+	transition-delay: 0s;
+}
+
+#LeftHalf Label
+{
+	horizontal-align: left;
+}
+
+#RightHalf Label
+{
+	horizontal-align: right;
+}
+
+.RightHovered #RightHalf
+{
+	clip: rect(0%, 100%, 100% ,0%);	
+}
+.RightHovered #LeftHalf
+{
+	clip: rect(0%, 0%, 100% ,0%);	
+}
+
+.LeftHovered #LeftHalf
+{
+	clip: rect(0%, 100%, 100% ,0%);
+}
+.LeftHovered #RightHalf
+{
+	clip: rect(0%, 100%, 100% ,100%);
+}
+
+.LeftHovered #LeftHalf
+{
+	border-width: 0px;
+}
+
+.SceneHalf
+{
+	width: 100%;
+	height: 100%;
+	overflow: clip;
+	transition-property: border, clip;
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in-out;
+	
+}
+
+#RightHalf
+{
+	clip: rect(0%, 100%, 100% ,50%);	
+}
+
+#LeftHalf
+{
+	clip: rect(0%, 50%, 100% ,0%);
+}
+
+.HitTestBlock
+{
+	border: 0px solid transparent;
+	width: 50%;
+	height: 100%;
+	transition-property: border;
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in-out;	
+}
+
+
+#RightHitTest
+{
+	horizontal-align: right;
+	border-left: 1px solid black;
+}
+
+#LeftHitTest
+{
+	border-right: 1px solid black;	
+}
+
+.RightHovered #LeftHitTest,
+.LeftHovered #LeftHitTest,
+.RightHovered #RightHitTest,
+.LeftHovered #RightHitTest
+{
+	border: 0px solid transparent;
+	transition-delay: 0.15s;
+}
+
+#ArcanaJuggernaut
+{
+	background-color: #000d;
+}
+
+#ArcanaJuggernaut .FrontpageCellImage
+{
+	visibility: collapse;
+}
+
+#ArcanaJuggernaut .Vignette
+{
+	z-index: -1;
+	opacity: .2;
+}
+
+#ArcanaJuggernaut .FrontpageCellTitle
+{
+	color: #62FFFF;
+}
+
+#DarkMoonTitleGlow,
+#DarkMoonTitle
+{
+	color: black;
+	font-size: 34px;
+	letter-spacing: 5px;
+	horizontal-align: center;
+	margin-top: 136px;
+	text-align: center;
+	text-shadow: 0px 0px 22px 2.0 #D26364;	
+	
+	transition-property: text-shadow;
+	transition-duration: 0.25s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;	
+}
+
+.FrontpageCell.DarkMoon:hover .FrontpageCellText
+{
+	opacity: 1.0;
+}
+
+.FrontpageCell:hover #DarkMoonTitle
+{
+	text-shadow: 0px 0px 12px 2.0 #F28384;	
+}
+
+.Language_tchinese #DarkMoonTitleGlow,
+.Language_schinese #DarkMoonTitle
+{
+	font-size: 84px;
+	margin-top: 116px;
+}
+
+
+#DarkMoonTitleGlow
+{
+	text-shadow: 0px 0px 3px 2.0 #F3A998;	
+}
+
+.DarkMoon .FrontpageCellText
+{
+	horizontal-align: center;
+	font-size: 22px;
+	letter-spacing: 6px;
+	color: white;
+	text-overflow: shrink;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 6px 1.0 #F3A99877;	
+	margin-bottom: 250px;
+	font-family: Goudy Trajan Medium,FZKai-Z03,TH Sarabun New,YDYGO 540;
+}
+
+.DoubleCellVertical
+{
+	width: 336px;
+	height: 688px;
+}
+
+#FreeWeekendCup
+{
+	width: 336px;
+}
+
+
+.CampaignTitle
+{
+	font-size: 42px;
+	color: white;
+	color: gradient( linear, 0% 0%, 0% 100%, from( #ACC7CE ), color-stop( .3, #123038 ), color-stop( .3, #123038 ), color-stop( .8, #08536A ), to( #04FFD4 ) );	
+	padding: 16px;
+	padding-right: 4px;
+	padding-bottom: 0px;
+	horizontal-align: center;
+	text-align: center;
+}
+
+#CampaignTitleContainer
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: 48px;
+	transform: translateY(0px);
+	
+	transition-property: transform;
+	transition-duration: .32s;
+	transition-timing-function: ease-in-out;
+}
+
+.FrontpageCell.TopRightCell.TallCell:hover #CampaignTitleContainer
+{
+	transform: translateY(-64px);
+}
+
+.FrontpageCell.TopRightCell.TallCell:hover #DungeonContainer .ComingSoonSticker
+{
+	transform: translateY(0px);
+}
+
+.TitleFx
+{
+	horizontal-align: center;
+	vertical-align: top;
+	margin-bottom: 20px;
+	z-index: -1;
+}
+
+.CampaignTitle.Rim
+{
+	transform: translateX(-1px) translateY(1px);
+	text-shadow: 0px 0px 2px 2.0 #000;
+	color: gradient( linear, 0% 0%, 0% 100%, from( #ACC7CE ), color-stop( .2, #08536A ), to( #04FFD4 ) );	
+}
+
+.CampaignTitle.Glow 
+{
+	color: transparent;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+
+.CampaignBackgroundImage
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("s2r://panorama/images/battlepass/ti7/campaign/frontpage_2stack_psd.vtex");	
+	background-size: contain;
+	z-index: -1;
+}
+
+.CampaignTitle.Glow1 { text-shadow: 0px -2px 6px 2 #0008; }
+.CampaignTitle.Glow2 { text-shadow: 0px -6px 12px 2 #0008; }
+.CampaignTitle.Glow3 { text-shadow: 0px -12px 18px 2 #0006; }
+.CampaignTitle.Glow4 { text-shadow: 0px -18px 26px 2 #0004; }
+
+
+.FrontPageCampaignDetails
+{
+	margin: 16px;
+	vertical-align: bottom;
+	horizontal-align: center;
+	
+}
+
+.FrontPageCampaignDetails Label
+{
+	font-size: 14px;
+	color: white;
+	
+}
+
+#KunkkaPrestigeScene,
+#IoArcanaScene,
+#BattleBundle2017
+{
+	width: 100%;
+	height: 100%;
+}
+
+#KunkkaPrestigeScene,
+#IoArcanaScene,
+#ReefUpsellScenePanel
+{
+	z-index: -1;
+}
+
+#ReefUpsellScenePanel
+{
+	opacity: 1;
+}
+
+#TerrainPanel
+{
+//	background-color: red;
+}
+
+.Bundle.Vignette
+{
+	z-index: -1;
+}
+
+#BattleBundle2017
+{
+	hue-rotation: -160deg;
+	z-index: -1;
+}
+
+
+#IoArcanaPanel
+{
+	width: 100%;
+	height: 100%;
+}
+
+.LowVisualQuality #ReefUpsellScenePanel
+{
+	visibility: collapse;
+	
+}
+
+#ReefBackground
+{
+	width: 100%;
+	height: 100%;
+	background-color: #518B9F;
+	z-index: -1;
+	visibility: visible;
+}
+
+.LowVisualQuality #ReefBackground
+{
+	background-image: url("s2r://panorama/images/front_page/reef_terrain_fallback_psd.vtex");	
+	background-size: contain;
+}
+
+#KunkkaPrestigeBackground,
+#IoArcanaBackground
+{
+	background-image: url("s2r://panorama/images/splash_ads/ti7_wisp_arcana_frontpage_png.vtex");
+	background-size: contain;
+	background-position: 65% 90%;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#KunkkaPrestigeBackground
+{
+	background-image: url("s2r://panorama/images/front_page/ads/ti7_kunkka_prestige_psd.vtex");
+}
+
+#IoArcanaPanel .FrontpageCellFooter
+{
+	padding-top: 0px;
+}
+
+#BattleLevelBundlePanel .FrontpageCellFooter
+{
+	//height: 300px;
+}
+
+#BattleLevelBundlePanel .FrontpageCellText
+{
+	max-height: 100%;
+}
+
+
+
+#IoArcanaPanel .FrontpageCellText
+{
+	max-height: 100px;
+}
+#IoArcanaPanel .FrontpageCellTitle,
+#IoArcanaPanel .FrontpageCellHeader
+{
+	color: rarity_color_arcana;
+}
+
+#TerrainPanel .Vignette
+{
+	background-size: 100% 100%;
+	transform: scaleX(-1);
+	z-index: -1;
+}
+
+#SubtitleContainer
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: 0px;
+}
+
+.CampaignAct
+{
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 2px;
+	//font-weight: bold;
+	horizontal-align: center;
+	text-align: center;
+	color: #9C9A85;
+	color: gradient( linear, 0% 0%, 100% 0%, from( #9C9A8555 ), to( #9C9A85 ) );		
+}
+
+.CampaignAct.Rim
+{
+	transform: translateX(-1px) translateY(1px);
+	text-shadow: 0px 0px 2px 2.0 #000;
+	color: gradient( linear, 0% 0%, 0% 100%, from( #DCD3BA ), color-stop( .2, #08536A ), to( #04FFD4 ) );		
+}
+
+#DungeonContainer .ComingSoonSticker
+{
+	opacity: 1;
+	margin-bottom: 172px; 
+	vertical-align: bottom;
+	horizontal-align: center;
+	//transform: rotateZ(-6deg);
+	border: 1px solid transparent;
+	background-color:transparent;
+	box-shadow:none;
+	transition-property: transform;
+	transition-duration: .32s;
+	transform: translateY( 64px );
+}
+
+#BPLeaderBoard
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #192229 ), to( #000000 ) );	
+}
+
+
+.PercentOffLabel
+{
+	font-size: 32px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	horizontal-align: right;
+	transform: rotateZ(10deg);
+	margin-top: 48px;
+	margin-right: 16px;
+	
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 4px 3.0 #000000;
+	background-color: #31CAFBaa;
+	padding: 0px 12px -6px 16px;
+	box-shadow: #000000 -2px -2px 4px 4px;
+	border-radius: 8px;
+	border: 2px solid #1A424Dde;
+}
+
+#BattleLevelBundlePanel .FrontpageCellImage
+{
+	background-color: gradient( radial, 50% 40%, 0% 0%, 300px 300px, from( #67A3BB ), color-stop( .5, #517A9411 ), to( #000000ff ) );	
+	z-index: -2;
+}
+
+#80Container
+{
+	vertical-align: middle;
+	margin-bottom: -10px;
+}
+
+
+.IncludesContainer
+{
+	width: 100%;
+	vertical-align: bottom;
+	margin-bottom: 16px;
+	margin-left: 16px;
+}
+
+.BattleLevelsLabel,
+.Plus
+{
+	color: #A6DAFF;
+	//font-weight: bold;
+	vertical-align: middle;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+.Plus
+{
+	margin-bottom: 5px;
+}
+
+#BundleTitle
+{
+	font-size: 32px;
+	text-overflow: shrink;
+	height: 50px;
+	letter-spacing: 2px;
+	margin: 0px;
+	text-align: center;
+	horizontal-align: center;
+	margin-right: 16px;
+	margin-left: 0px;
+	margin-bottom: -4px;
+	color: #A6DAFF;
+	text-shadow: 0px 0px 8px 1.0 #2AAAD5ee;
+	margin-bottom: 8px;
+	font-family: Goudy Trajan Medium,FZKai-Z03,TH Sarabun New,YDYGO 540;
+	
+}
+
+#BattleLevelBundlePanel .FrontpageCellTitle	
+{
+	visibility: collapse;
+}
+
+#BattleLevelCircle
+{
+	margin-left: -4px;
+	width: 34px;
+	height: 32px;
+	vertical-align: center;
+	wash-color: #A6DAFF;
+
+	
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-bottom: 6px;
+
+	background-image: url("s2r://panorama/images/compendium/shield_icon_shadowed_psd.vtex");
+	background-size: cover;
+}
+
+.80Levels
+{
+	horizontal-align: center;
+	text-align: center;
+	color: white;
+	padding-top: 1px;
+	letter-spacing: 1px;
+}
+
+
+.BundleText
+{
+	text-transform: uppercase;
+	color: #A6DAFF;	
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+
+
+.BundleIncludes.BundleText
+{
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin-bottom: 6px;
+	color: #69A4BE;
+	text-shadow: 1px 1px 1px 2.0 #000;
+}
+
+	
+#BundlePurchaseButton
+{
+	horizontal-align: center;
+	margin-left: -8px;	
+
+}
+
+#TI7Teams
+{
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+
+
+.InternationalCell .FrontpageCellHeader
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #534737 ), to( #2e2619 ) );
+	color: gradient( linear, 0% 0%, 0% 100%, from( #f3e0bf ), to( #9d8563 ) );
+}
+
+.InternationalCell:hover > .FrontpageCellImage
+{
+	pre-transform-scale2d: 1.04;
+}
+
+#SiltbreakerActOne .FrontpageCellTint,
+#SiltbreakerActOne .FrontpageCellFooter
 {
 	visibility: collapse;
 }

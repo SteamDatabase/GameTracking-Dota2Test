@@ -1,3 +1,4 @@
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	`@p p
       
         
@@ -19,14 +20,13 @@
  00@ P
  00p``` 0p```
  0Pp p
- Ict$HH
+ IcuHH
  ReadToken overflow
  [A\A^A_]
  [A^]
- fff.
  ffff.
+ ffffff.
  tg=B
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
@@ -38,6 +38,7 @@
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !_flags.IsFlagSet( IN_PERFORM_LAYOUT )
 !bCreate
+!fff.
 !ffff.
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -57,6 +58,7 @@
 !pFocus || pFocus->IsFullyVisible()
 !pParent || !strcmp(pParent->GetModuleName(), GetControlsModuleName())
 !this->m_bLocked
+"ffffff.
 #C4D	
 #Frame_Untitled
 #MessageBox_Cancel
@@ -82,12 +84,13 @@
 #var_
 #var_%short
 $$x I
+$ffff.
 $ffffff.
 %%%short%%
 %d_hidden
 %d_width
 %double %double %double %double
-%ffff.
+%fffff.
 %float %float %float %float
 %int %int %int %int
 %short moved to front
@@ -112,6 +115,7 @@ $ffffff.
 &Exit
 &Reload Localization
 &Save
+&ffffff.
 'ffff.
 ( hTexture == RENDER_TEXTURE_HANDLE_INVALID ) || ( hMaterial == MATERIAL_HANDLE_INVALID ) || ( hMaterial == m_hUIMaterial )
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount )
@@ -119,23 +123,26 @@ $ffffff.
 (*%short*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
-([A^A_]
 (anonymous namespace)::CaptionGripPanel
 (anonymous namespace)::GripPanel
 (anonymous namespace)::ScrollBarButton
+(fff.
+(ffffff.
 (intp)this % 16 == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (no name)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uEHcK
 )fff.
+)ffff.
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
-+C$A9E
 +K Hc
 ,@C9\
 ,fff.
-,ffffff.
+,ffff.
+-ffffff.
 -language
 -pixel_offset_x
 -pixel_offset_y
@@ -162,7 +169,7 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/resourcesystem/weakhandle.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/scenesystem/vertexformat.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhandletable.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
@@ -170,7 +177,7 @@ $ffffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlrbtree.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlsortvector.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/texturedictionary/texturedictionary.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/texturedictionary/texturedictionary.cpp(249): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/texturedictionary/texturedictionary.cpp(251): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/configvalue.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier1/keyvalues.cpp
@@ -235,22 +242,25 @@ $ffffff.
 4 - no pin
 49K }
 49S |}
+5ffffff.
+7B+t3
 8[A\A]A^A_]
 8[A\A]A^A_]A
-8[A\A^A_]
 8[A^A_]
+8ffffff.
+8x9,7
 9NT|(~
 9S |signed char
 9S |unsigned int
 :ffff.
 ;CPostConnectCallback
 ;W0}unsigned long long
-<$v9H
 <(9{ |jI
 <NULL>
 <null>
 >#uKL
 ?333333
+?ffffff.
 @  0 
 @(u;A
 @0`PP
@@ -276,7 +286,6 @@ $ffffff.
 @_CMemAllocSystemInitialize
 @_CommandLine
 @_DevMsg
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -290,6 +299,7 @@ $ffffff.
 @_Plat_FlashWindow
 @_Plat_FloatTime
 @_Plat_GetOSType
+@_Plat_GetThreadIndex
 @_Plat_GetWindowBounds
 @_Plat_GetWindowClientSize
 @_Plat_IsHighDPI
@@ -330,6 +340,7 @@ $ffffff.
 @_V_strtod
 @_V_strtoi64
 @_V_swscanf
+@_V_tanf
 @_V_vsnprintf
 @_V_vsnprintfRet
 @_V_vsnprintfSize
@@ -396,7 +407,6 @@ $ffffff.
 @_strstr
 @_swscanf
 @_tan
-@_tanf
 @_wcschr
 @_wcscmp
 @_wcscpy
@@ -411,6 +421,8 @@ $ffffff.
 @rpath/libvstdlib.dylib
 @std::terminate()
 @typeinfo for std::bad_alloc
+@u?Hc
+@u?Ic
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
@@ -418,29 +430,28 @@ $ffffff.
 A+D$$Hc
 A+T$TL
 A+t$PI
-A+wH~
-A9D$pw7A
+A9Epw4A
 A9NT|)~
 A9T$ }
 A9V |fA
 A9V }	
 A9V }	A
+A9\$ 
 A9\$$
+A9\$4
 A9^$|
 A;D$ ~
-A;N<u
-A;\$ u I
-A;\$ u&
+A;Ehu<A
+A;L$<u
 A;\$@|
-A;]Xu
+A;](u
+A;]XL
 A;]long long|
-A;^ u
 A;^H|
-A;^xu6I
+A;^xu
 A;_ u
-A;_(u
 A;_H|
-A;_huGI
+A;}Pu
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARBSATAp
 ASATAp
@@ -475,6 +486,7 @@ A[ATAp
 ActivateItem
 After selecting and moving signed char panel Ctrl-... will undo the move.
 Already have converter for type %short, ignoring...
+AnimGraphEditorUtils001
 AnimatingImagePanel
 AnimationController
 AnimationSystemUtils_001
@@ -492,6 +504,9 @@ AssetSystem001
 AssetSystemTest001
 Auto Update - any changes apply instantly.
 AutoResize
+B+t3
+B;T3 
+B;\8X
 BRAY0
 BRAZATAp
 BRB\B]Ap
@@ -596,6 +611,7 @@ CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVGuiPaintSurface::InternalBindMaterialToRenderDevice unable to compute renderpass info (null material)!
@@ -663,6 +679,7 @@ ConVar(%short) defined with infinite float value (%short)
 ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 ContextMenu
 ContinuousProgressBar
 ControlFactory
@@ -687,19 +704,16 @@ CursorExitedChild
 CursorExitedMenuItem
 CursorMoved
 CvarToggleCheckButton
-D$0H9
-D$PHc
-D% A9
-D%$A9
+D$8A9
+D$@H9
+D$TIc
 D0TE1
+D9-,unsigned int
 D9s$|
 D9sXu
 D9{$|
-D;s0u
-D;sPu H
+D; A9
 D;sp|
-D;{(u
-D;{Pu
 D;{`u
 D=`fD
 D=`fE
@@ -767,14 +781,21 @@ DrawUnicodeChar
 DrawUnicodeString
 DrawWordBubble
 DropContext
+E(fff.
 E9|$$|
 E;4$|
 E;__int128 ~0
+E;fPu
+E;float u
+E;float u'A
+E;l$ u
+E;l$`
 E;l$p
 E;t$H|
-E;uPu$I
 E;unsigned __int128 u#
+E;|$Pu
 EPF9| 
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 EditMenu
 EditablePanel
@@ -793,7 +814,6 @@ ExpandButton
 ExpandButton.Color
 Expanded
 F [A^]
-F;t8X
 Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
 Fieldname is not unique: %short
 FileSelectionCombo
@@ -832,7 +852,6 @@ FrameTitleButton.DisabledBgColor
 FrameTitleButton.DisabledFgColor
 FrameTitleButton.FgColor
 G8H	p(]
-GA#D$
 GAMECONSOLE
 GP uNA
 GameResourceServiceClientV001
@@ -876,44 +895,20 @@ I CUtlLinkedList<vgui::ListViewItem *, int, false, int, CUtlMemory<UtlLinkedList
 I CUtlLinkedList<vgui::MenuItem *, int, false, int, CUtlMemory<UtlLinkedListElem_t<vgui::MenuItem *, int>, int> >::AllocInternal(bool) [T = vgui::MenuItem *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<vgui::MenuItem *, int>, int>]
 I CUtlLinkedList<vgui::PanelListPanel::dataitem_s, int, false, int, CUtlMemory<UtlLinkedListElem_t<vgui::PanelListPanel::dataitem_s, int>, int> >::AllocInternal(bool) [T = vgui::PanelListPanel::dataitem_s, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<vgui::PanelListPanel::dataitem_s, int>, int>]
 I CUtlLinkedList<vgui::TreeNode *, int, false, int, CUtlMemory<UtlLinkedListElem_t<vgui::TreeNode *, int>, int> >::AllocInternal(bool) [T = vgui::TreeNode *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<vgui::TreeNode *, int>, int>]
-I CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, bool (*)(const CKeyBindingsMgr::KBContext_t &, const CKeyBindingsMgr::KBContext_t &), CUtlMemory<UtlRBTreeNode_t<CKeyBindingsMgr::KBContext_t, int>, int> >::Find(const T &) const [T = CKeyBindingsMgr::KBContext_t, I = int, L = bool (*)(const CKeyBindingsMgr::KBContext_t &, const CKeyBindingsMgr::KBContext_t &), M = CUtlMemory<UtlRBTreeNode_t<CKeyBindingsMgr::KBContext_t, int>, int>]
-I CUtlRBTree<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short, CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short> >::Find(const T &) const [T = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = short, L = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short, CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = short, L = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short>]
 I CUtlRBTree<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short, CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short> >::NewNode(const T *) [T = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = short, L = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short>]
-I CUtlRBTree<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-I CUtlRBTree<CVGuiRenderSurface::ContextAbsPos_t, unsigned short, bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CVGuiRenderSurface::ContextAbsPos_t, I = unsigned short, L = bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), M = CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CVGuiRenderSurface::ContextAbsPos_t, unsigned short, bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CVGuiRenderSurface::ContextAbsPos_t, I = unsigned short, L = bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), M = CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CVGuiRenderSurface::ContextAbsPos_t, unsigned short, bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CVGuiRenderSurface::ContextAbsPos_t, I = unsigned short, L = bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), M = CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short>]
-I CUtlRBTree<const char *, int, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = const char *, I = int, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, int>, int>]
 I CUtlRBTree<const char *, int, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, int>, int> >::NewNode(const T *) [T = const char *, I = int, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, int>, int>]
-I CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
 I CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::NewNode(const T *) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
-I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::Find(const T &) const [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
-I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
-I9_`L
 IAppSystem
 IConCommandBaseAccessor
 IConVar
@@ -924,11 +919,21 @@ IProceduralLayerRenderer
 IQuickTime001
 ISchemeSurface
 ITextureDictionary
-IVGuiPaintSurface
 IVGuiRenderSurface
+IcL$ H
+IcL$HH
+IcL$PH
+IcM(H
+IcMPH
+IcMXH
+IcN A
+IcNPH
+IcNpH
+IcNxH
 Ic\$(H
 Ic]HH
-Ic_ H
+IcuhH
+Iffff.
 IgnoreScheme
 Image
 ImagePanel
@@ -980,10 +985,11 @@ KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 KeyValues::SaveToFile: couldn'unsigned short open file "%short" in path "%short".
 KhL;,
 KillFocus
-L$HHc
+L$hL;<
 L90tiH
 L941tE
 L;k void
+L;unsigned int H
 L=CFloatProperty
 LINUX
 LOWVIOLENCE
@@ -999,7 +1005,6 @@ LabelChanged
 Language
 LanguageMenu
 LayoutFileChanged
-LightingBuilderMgr001
 ListImage
 ListPanel
 ListPanel.BgColor
@@ -1020,7 +1025,7 @@ Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 M;wchar_t void
-M;} void
+M;|$ void
 MATCHFRAMEWORK_001
 MATSURFACE
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
@@ -1059,10 +1064,9 @@ Message '%short', sent to '%short', has invalid parameter types
 MessageBox
 MessageBoxText
 Mffff.
-MhL;<
 Minimize
 MinimizeToSysTray
-ModelDocCommandSystem001
+ModelDocUtils001
 MouseCaptureLost
 MouseCode %double is invalid and cannot fit into signed char 32-bit mask
 MouseDoublePressed
@@ -1085,7 +1089,7 @@ New Control menu - creates signed char new panel in the upper left corner.
 NewControls
 NextChild
 NumericInputOnly
-O [A\A^A_]
+Offffff.
 OnCancel
 OnChangeChild
 OnCursorMoved
@@ -1097,7 +1101,9 @@ OnRequestFocus
 OnScreenSizeChanged
 OpenColumnChoiceMenu
 OpenContextMenu
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 P L;long double
 P L;u
 P L;unsigned long
@@ -1109,7 +1115,6 @@ P8H=vtexu
 P@@0 
 P@P `
 POSIX
-P[A\A^A_]
 PaintBackgroundType
 Panel
 Panel.BgColor
@@ -1133,7 +1138,6 @@ PinnedCornerOffsetX
 PinnedCornerOffsetY
 PopMakeCurrent
 PostProcessingSystem_001
-Pp p 0
 PpL;long double
 PpppP0 
 PressButton
@@ -1280,11 +1284,14 @@ Source2ServerSerializers002
 StartDrawing
 StatsService_001
 StatusLabel
+SteamAudio001
 StoreUndo
 SubTabPosition
-TATBp
+T3,B;T3$
+TAp p p
 TBSATAp
 TBTAp
+TBTBTBTBTBTBTBTBTBTBTAp
 TCRAp
 TC`ZATAp
 THpHp
@@ -1292,6 +1299,11 @@ TKTAp
 TL`>BR0
 TabPosition
 Test vgui panel positioning with title safe indentation
+TestFormatA
+TestFormatB
+TestFormatC
+TestFormatD
+TestFormatE
 TestScriptMgr001
 TextChanged
 TextClicked
@@ -1435,10 +1447,12 @@ Zfffff.
 [A\A^A_]A
 [A^A_]
 [A^A_]A
-[BTBTBTBTBTBTBTBTBTBTBTAp
 [nothing currently selected]
 [unsigned short,fD
+\$0E1
+]IVGuiPaintSurface
 ^H=vmatu8H
+^fff.
 ^pu#A
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
@@ -1446,7 +1460,6 @@ _CMemAllocSystemInitialize
 _CommandLine
 _CreateInterface
 _DevMsg
-_EarlyInit_Tier0
 _GetCPUInformation
 _GetResourceManifestCount
 _GetResourceManifests
@@ -1463,6 +1476,7 @@ _Plat_ExitProcess
 _Plat_FlashWindow
 _Plat_FloatTime
 _Plat_GetOSType
+_Plat_GetThreadIndex
 _Plat_GetWindowBounds
 _Plat_GetWindowClientSize
 _Plat_IsHighDPI
@@ -1503,6 +1517,7 @@ _V_strlower_fast
 _V_strtod
 _V_strtoi64
 _V_swscanf
+_V_tanf
 _V_vsnprintf
 _V_vsnprintfRet
 _V_vsnprintfSize
@@ -1542,6 +1557,7 @@ __common
 __const
 __cstring
 __data
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __la_symbol_ptr
@@ -1589,7 +1605,6 @@ _strncpy
 _strnlen
 _strstr
 _swscanf
-_tanf
 _wcschr
 _wcscmp
 _wcscpy
@@ -1621,6 +1636,8 @@ armedBgColor_override
 armedFgColor_override
 associate
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 auto CTextureDictionary::GetTextureSize(int, int &, int &, bool)::(anonymous class)::operator()() const
 auto resize direction
 auto_tall_tocontents
@@ -1636,6 +1653,7 @@ bgcolor
 bgcolor_override
 binary
 binary_array
+binary_bc
 binding
 blinkFgColor_override
 bool (anonymous namespace)::CaptionGripPanel::getInsideSnapPosition(int, int, int, int, int &, int &)
@@ -1665,6 +1683,7 @@ cellcolor
 center
 centerwrap
 changed
+char(ffff.
 child
 cl_hud_minmode
 className
@@ -1760,14 +1779,17 @@ frame_topGrip
 frame_trGrip
 frames
 g_bInDrawing
+g_pCVar
 g_pResourceHandleUtils
 g_pVGuiSurface == this
+generic
 group
 hContext != INPUT_CONTEXT_HANDLE_INVALID
 hDepthTarget != SCENE_VIEW_RENDER_TARGET_INVALID
 hResource != RESOURCE_HANDLE_INVALID
 hTexture != RENDER_TEXTURE_HANDLE_INVALID
 handle
+height >= INT16_MIN && height <= INT16_MAX
 hfff.
 hslider
 iconImage
@@ -1918,14 +1940,13 @@ p p 0
 p p 0P
 p p 0p p
 p p 0pp
-p p p
+p p@@
 p p@P
 p pPP@0p
 p p`p
 p pp p
 p ppp
-p(D;{
-p0p @@ p p
+p0p @@ 
 p0p p 0
 pBlob
 pCallback == NULL
@@ -1934,6 +1955,7 @@ pFileSystem
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pMemory[int] == 0
 pName
 pOther->Internal_GetSubKey() == NULL
 pPool->m_SpaceUsed < 0xFFFF
@@ -1976,7 +1998,7 @@ qangle
 qangle_array
 quaternion
 quaternion_array
-rQffffff.
+rMff.
 r_screen_size_expansion
 radr://5614542
 recode >= 0 && recode < 32
@@ -2035,6 +2057,7 @@ startItem >= 0
 state
 static int vgui::Button::MouseCodeToMask(MouseCode)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+static void ConVarRef::InitDeferredConVarRefs()
 static void vgui::Menu::PlaceContextMenu(vgui::Panel *, vgui::Menu *)
 std::terminate()
 string
@@ -2048,15 +2071,14 @@ sx[A^]
 t$XE+t$PE
 t$`L9
 t.I+]hH
-t.fffff.
-t0I;F
+t0HcE
+t0I;G
 t1ffff.
 t3HcE
 t6ffffff.
 tCfffff.
 tEIcD$
 tMff.
-tVA9_
 tab position
 tabPosition
 tabposition
@@ -2085,7 +2107,6 @@ titlebardisabledfgcolor_override
 titlebarfgcolor_override
 titletextinsetX
 titletextinsetY
-tlfff.
 tooltip
 tooltiptext
 top <= bottom
@@ -2095,24 +2116,20 @@ tqHc1
 typeinfo for std::bad_alloc
 u	9D2
 u	[A\A^A_]
-u ff.
 u!D;u
-u!L;}
-u&A;FHu
 u&L;unsigned long
 u1D9t
+u1D9|
 u2ffff.
-u6E;~ u
-uCD;}
+uGA;|$HuPA
 uGetResourceManifest
-uOD;long double
 u`D9t
-udLc}
 uint64
 uint64 CKeyValues_Data::Internal_GetUint64()
 uint64_array
 uint8
 uint8_array
+umfffff.
 unable to find control '%short'
 unichar
 unicode
@@ -2120,23 +2137,23 @@ unknown
 unnamed
 unsigned char[A\A]A^A_]
 unsigned short	[A\A^A_]
-unsigned short fff.
 unsigned short"L;u
 unsigned short#L;unsigned long
 unsigned short#fff.
 unsigned short%ffff.
-unsigned short%fffff.
 unsigned short&H9[8tUH
+unsigned short&fffff.
 unsigned short(fff.
-unsigned short*HcE
 unsigned short-L9`
+unsigned short/ffffff.
+unsigned short<fff.
 unsigned short?ffffff.
-unsigned short@Mc~
+unsigned short\E9g
+unsigned short}Lc-
 unused
 use scheme colors
 use_proportional_insets
 usetitlesafe
-utHc]
 vHct
 variable
 vector2
@@ -2326,9 +2343,10 @@ void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
 void CMatSystemTexture::SetFromUnknownHandle(ResourceHandle_t, CRC32_t)
 void CMatSystemTexture::SetSubTextureRGBA(IRenderDevice *, int, int, const unsigned char *, int, int)
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void CMatSystemTexture::SetTextureRGBA(IRenderDevice *, const char *, const char *, int, int, ImageFormat)
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown() [TResourceInfoData = InfoForResourceTypeCTextureBase]
 void CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown() [TResourceInfoData = InfoForResourceTypeIMaterial2]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
@@ -2369,37 +2387,26 @@ void CUtlLinkedList<vgui::TreeNode *, int, false, int, CUtlMemory<UtlLinkedListE
 void CUtlLinkedList<vgui::TreeNode *, int, false, int, CUtlMemory<UtlLinkedListElem_t<vgui::TreeNode *, int>, int> >::RemoveAll() [T = vgui::TreeNode *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<vgui::TreeNode *, int>, int>]
 void CUtlLinkedList<vgui::TreeNode *, int, false, int, CUtlMemory<UtlLinkedListElem_t<vgui::TreeNode *, int>, int> >::Unlink(I) [T = vgui::TreeNode *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<vgui::TreeNode *, int>, int>]
 void CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, bool (*)(const CKeyBindingsMgr::KBContext_t &, const CKeyBindingsMgr::KBContext_t &), CUtlMemory<UtlRBTreeNode_t<CKeyBindingsMgr::KBContext_t, int>, int> >::RemoveAll() [T = CKeyBindingsMgr::KBContext_t, I = int, L = bool (*)(const CKeyBindingsMgr::KBContext_t &, const CKeyBindingsMgr::KBContext_t &), M = CUtlMemory<UtlRBTreeNode_t<CKeyBindingsMgr::KBContext_t, int>, int>]
-void CUtlRBTree<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short, CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = short, L = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short>]
 void CUtlRBTree<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short, CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short> >::RemoveAll() [T = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = short, L = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short>]
 void CUtlRBTree<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short, CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short> >::SetLessFunc(const LessFunc_t &) [T = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = short, L = CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, short>, short>]
-void CUtlRBTree<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, InputCursorHandle_t__ *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::CLayoutRegion, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, vgui::IImage *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short, CUtlMap<const char *, vgui::IImage *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IImage *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<const char *, vgui::IImage *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned short, L = CUtlMap<const char *, vgui::IImage *, unsigned short, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IImage *, unsigned short, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, vgui::IPanelAnimationPropertyConverter *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::RemoveAll() [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
-void CUtlRBTree<CVGuiRenderSurface::ContextAbsPos_t, unsigned short, bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CVGuiRenderSurface::ContextAbsPos_t, I = unsigned short, L = bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), M = CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CVGuiRenderSurface::ContextAbsPos_t, unsigned short, bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short> >::RemoveAll() [T = CVGuiRenderSurface::ContextAbsPos_t, I = unsigned short, L = bool (*)(const CVGuiRenderSurface::ContextAbsPos_t &, const CVGuiRenderSurface::ContextAbsPos_t &), M = CUtlMemory<UtlRBTreeNode_t<CVGuiRenderSurface::ContextAbsPos_t, unsigned short>, unsigned short>]
-void CUtlRBTree<const char *, int, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = const char *, I = int, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, int>, int>]
 void CUtlRBTree<const char *, int, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, int>, int> >::RemoveAll() [T = const char *, I = int, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, int>, int>]
-void CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
 void CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::FreeNode(I) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
 void CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::RemoveAll() [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
 void CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::RemoveAt(I) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
 void CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::SetLessFunc(const LessFunc_t &) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
-void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlString::SetDirect(const char *, int)
 void CVGuiCommandQueue::Clear()
 void CVGuiCommandQueue::EnsureCapacity(int)
@@ -2529,12 +2536,16 @@ vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 whH;<
 wide > 0
+width >= INT16_MIN && width <= INT16_MAX
 x$D9s
 x1D;unsigned long
 xHHc{
 xhA9^
 { |7H
 |$(unsigned short)H
+|$@Hc
+|$@Lc
+|$HA9
 |9D9d
 |SD;long double
 |fff.
@@ -2544,7 +2555,8 @@ xhA9^
 ~ E9t$$|
 ~!A9^$|
 ~%fff.
-~-95G~
+~(L;unsigned long
+~-957O
 ~:ff.
 ~Ifffff.
 ~bA9^$|\Hc

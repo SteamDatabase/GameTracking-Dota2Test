@@ -17,9 +17,9 @@
 	m_flCullRadius = 1.000000
 	m_ConstantColor = 
 	[
-		0,
-		156,
-		255,
+		136,
+		185,
+		203,
 		255,
 	]
 	m_Renderers = 
@@ -130,6 +130,7 @@
 				1.000000,
 			]
 			m_nCPInput = 2
+			m_bDisableOperator = true
 		},
 	]
 	m_Emitters = 
@@ -142,18 +143,13 @@
 	m_Children = 
 	[
 		{
+			m_ChildRef = resource:"particles/items2_fx/teleport_end_i.vpcf"
+		},
+		{
 			m_ChildRef = resource:"particles/items2_fx/teleport_end_spiral.vpcf"
 		},
 		{
 			m_ChildRef = resource:"particles/items2_fx/teleport_end_e.vpcf"
-		},
-		{
-			m_flDelay = 1.500000
-			m_ChildRef = resource:"particles/items2_fx/teleport_end_h.vpcf"
-		},
-		{
-			m_flDelay = 1.500000
-			m_ChildRef = resource:"particles/items2_fx/teleport_end_i.vpcf"
 		},
 		{
 			m_bEndCap = true
@@ -179,6 +175,7 @@
 		},
 		{
 			m_ChildRef = resource:"particles/items2_fx/teleport_end_tube.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/items2_fx/teleport_end_counter.vpcf"
@@ -197,8 +194,21 @@
 			m_ChildRef = resource:"particles/items2_fx/teleport_end_thin_beam.vpcf"
 		},
 		{
+			m_flDelay = 1.500000
+			m_ChildRef = resource:"particles/items2_fx/teleport_end_h.vpcf"
+		},
+		{
 			m_bEndCap = true
 			m_ChildRef = resource:"particles/items2_fx/teleport_end_streak.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/items2_fx/teleport_end_image.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
 		},
 	]
 }

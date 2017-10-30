@@ -6,6 +6,8 @@ criterion "IsTideBringerKill" "inflictorclassname" "kunkka_tidebringer" weight 5
 criterion "IsXReturn" "x_return" "1" weight 5 required
 criterion "IsGhostShip" "abilityname" "kunkka_ghostship" weight 5 required
 criterion "IsFailBoat" "boat_victim_heroes" "0" weight 5 required
+criterion "IsKunkkaLoadoutSpawn" "special_spawn" "kunkka_loadout_spawn" weight 5 required
+criterion "IsKunkkaTauntSwordDance" "taunt_type" "sword_dance" weight 5 required
 
 Response kunkka_Spawn
 {
@@ -534,6 +536,28 @@ Rule kunkka_CustomIsGameStart_Rule
 	response kunkka_CustomIsGameStart
 }
 
+Response kunkka_CustomIsKunkkaLoadoutSpawn
+{
+	scene "scenes/kunkka/kunkka_kunk_spawn_01.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_02.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_03.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_04.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_05.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_06.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_07.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_08.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_09.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_spawn_10.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_attack_10.vcd" nodelay noscene 
+	scene "scenes/kunkka/kunkka_kunk_cast_02.vcd" nodelay noscene 
+}
+
+Rule kunkka_CustomIsKunkkaLoadoutSpawn_Rule
+{
+	criteria Custom Iskunkka IsKunkkaLoadoutSpawn
+	response kunkka_CustomIsKunkkaLoadoutSpawn
+}
+
 Response kunkka_CastExecuteIsGhostShip
 {
 	scene "scenes/kunkka/kunkka_kunk_ability_ghostshp_01.vcd" nodelay noscene 
@@ -788,12 +812,26 @@ Rule kunkka_PowerupIsPowerupDoubleDamageChance_25%_Rule
 Response kunkka_PowerupIsPowerupBounty
 {
 	scene "scenes/kunkka/kunkka_kunk_lasthit_03.vcd" nodelay noscene respeakdelay 300
+	scene "scenes/kunkka/kunkka_kunk_bounty_01.vcd" nodelay noscene respeakdelay 300
+	scene "scenes/kunkka/kunkka_kunk_bounty_02.vcd" nodelay noscene respeakdelay 300
 }
 
 Rule kunkka_PowerupIsPowerupBounty_Rule
 {
 	criteria Powerup Iskunkka IsPowerupBounty
 	response kunkka_PowerupIsPowerupBounty
+}
+
+Response kunkka_PowerupIsPowerupArcane
+{
+	scene "scenes/kunkka/kunkka_kunk_purch_02.vcd" nodelay noscene respeakdelay 300
+	scene "scenes/kunkka/kunkka_kunk_arcane_01.vcd" nodelay noscene respeakdelay 300
+}
+
+Rule kunkka_PowerupIsPowerupArcane_Rule
+{
+	criteria Powerup Iskunkka IsPowerupArcane
+	response kunkka_PowerupIsPowerupArcane
 }
 
 Response kunkka_PowerupIsPowerupRegeneration
@@ -1113,5 +1151,16 @@ Rule kunkka_EmoteIsEmoteLaugh_Rule
 {
 	criteria Emote Iskunkka IsEmoteLaugh
 	response kunkka_EmoteIsEmoteLaugh
+}
+
+Response kunkka_TauntIsKunkkaTauntSwordDance
+{
+	scene "scenes/kunkka/kunkka_kunk_spawn_05.vcd" nodelay noscene 
+}
+
+Rule kunkka_TauntIsKunkkaTauntSwordDance_Rule
+{
+	criteria Taunt Iskunkka IsKunkkaTauntSwordDance
+	response kunkka_TauntIsKunkkaTauntSwordDance
 }
 

@@ -7,9 +7,7 @@
 		{
 			_class = "C_OP_RenderSprites"
 			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
-			m_bAdditive = true
 			m_hTexture = resource:"materials/particle/particle_glow_05.vtex"
-			m_flAnimationRate = 0.150000
 			VisibilityInputs = 
 			{
 				m_flCameraBias = -24.000000
@@ -19,6 +17,13 @@
 	m_Operators = 
 	[
 		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.050000
+		},
+		{
 			_class = "C_OP_InterpolateRadius"
 			m_flEndScale = 3.000000
 			m_flBias = 0.250000
@@ -27,9 +32,6 @@
 			_class = "C_OP_FadeOut"
 			m_flFadeOutTimeMin = 0.500000
 			m_flFadeOutTimeMax = 0.700000
-		},
-		{
-			_class = "C_OP_Decay"
 		},
 		{
 			_class = "C_OP_FadeInSimple"
@@ -47,20 +49,29 @@
 			m_flFadeEndTime = 0.750000
 		},
 		{
-			_class = "C_OP_BasicMovement"
-			m_fDrag = 0.050000
-		},
-		{
-			_class = "C_OP_RampScalarLinearSimple"
-			m_Rate = -1.000000
-			m_nField = 10
-		},
-		{
 			_class = "C_OP_LockToBone"
+		},
+		{
+			_class = "C_OP_EndCapTimedDecay"
+			m_flDecayTime = 0.250000
+		},
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_nFieldOutput = 7
+			m_flOutput = 0.000000
+			m_flLerpTime = 0.250000
 		},
 	]
 	m_Initializers = 
 	[
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 1.000000
+			m_fLifetimeMax = 1.500000
+		},
+		{
+			_class = "C_INIT_CreateOnModel"
+		},
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMin = 
@@ -79,11 +90,6 @@
 			]
 		},
 		{
-			_class = "C_INIT_RandomLifeTime"
-			m_fLifetimeMin = 1.000000
-			m_fLifetimeMax = 1.500000
-		},
-		{
 			_class = "C_INIT_RandomRotation"
 		},
 		{
@@ -95,13 +101,6 @@
 			m_flRadiusMin = 50.000000
 			m_flRadiusMax = 100.000000
 		},
-		{
-			_class = "C_INIT_RandomSequence"
-			m_nSequenceMax = 1
-		},
-		{
-			_class = "C_INIT_CreateOnModel"
-		},
 	]
 	m_Emitters = 
 	[
@@ -110,13 +109,5 @@
 			m_flEmitRate = 32.000000
 		},
 	]
-	m_ForceGenerators = 
-	[
-		{
-			_class = "C_OP_AttractToControlPoint"
-			m_nControlPointNumber = 1
-			m_fFalloffPower = 0.000000
-			m_fForceAmount = -50.000000
-		},
-	]
+	m_bShouldSort = false
 }

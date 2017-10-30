@@ -8,7 +8,6 @@
  CThreadSyncObject::~CThreadSyncObject()
  CommandLine
  DevMsg(char const*, ...)
- EarlyInit_Tier0
  KeyValuesSystem
  LOG_GENERAL
  LoggingSystem_IsChannelEnabled
@@ -43,11 +42,13 @@
  V_UTF8ToUTF16
  V_UTF8ToUTF32
  V_UnicodeCaseCompare(char const*, char const*, int, EStringConvertErrorPolicy)
+ V_atof
  V_atoi
  V_iswspace
  V_qsort_s
  V_snprintf
  V_snwprintf
+ V_sscanf
  V_stricmp_fast
  V_stristr_fast(char const*, char const*)
  V_vsnprintfRet
@@ -61,6 +62,9 @@
  __cxa_atexit
  __cxa_begin_catch
  __cxa_call_unexpected
+ __cxa_guard_abort
+ __cxa_guard_acquire
+ __cxa_guard_release
  __cxa_pure_virtual
  __gxx_personality_v0
  __stack_chk_fail
@@ -86,6 +90,7 @@
  typeinfo for std::bad_alloc
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
+ vtable for __cxxabiv1::__vmi_class_type_info
  wcschr
  wcscmp
  wcscpy

@@ -80,11 +80,6 @@
 			m_fLifetimeMin = 0.100000
 		},
 		{
-			_class = "C_INIT_RandomSequence"
-			m_nSequenceMin = 2
-			m_nSequenceMax = 2
-		},
-		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMax = 
 			[
@@ -138,6 +133,36 @@
 		},
 		{
 			m_ChildRef = resource:"particles/econ/items/venomancer/toxicant/veno_toxicant_tail_b1.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_tail_fx"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/venomancer/ferocious_toxicants_embrace_tail/ferocious_toxicants_embrace_tail.vmdl"
+			}
 		},
 	]
 }

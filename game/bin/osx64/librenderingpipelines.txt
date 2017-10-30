@@ -1,7 +1,8 @@
  AssertMsg_ConditionFailed
+ CMemAllocSystemInitialize
  CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
+ CThreadSyncObject::~CThreadSyncObject()
  CommandLine
- EarlyInit_Tier0
  GetCPUInformation
  KeyValuesSystem
  LOG_GENERAL
@@ -13,6 +14,7 @@
  Plat_DebugPrint
  Plat_ExitProcess
  Plat_GetEnv
+ Plat_GetThreadIndex
  Plat_IsInDebugSessionRaw
  Plat_ShouldCollectMiniDumpsForFatalErrors
  RegisterStringToken
@@ -30,17 +32,29 @@
  ThreadInterlockedExchange64
  V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
  V_UTF32ToUTF8
+ V_acosf
+ V_asinf
+ V_atan2f
+ V_atod
  V_atof
  V_atoi
  V_cosf
+ V_expf
+ V_frexpf
+ V_logf
  V_powf
  V_qsort_s
+ V_sin
  V_sinf
  V_snprintf
  V_sscanf
  V_stricmp_fast
  V_stristr_fast(char const*, char const*)
+ V_tanf
+ V_vsnprintf
  V_vsnprintfRet
+ V_vsnprintfSize
+ V_wcstoi64
  Warning
  _Unwind_Resume
  _V_strncpy
@@ -56,9 +70,12 @@
  __stack_chk_fail
  __stack_chk_guard
  dyld_stub_binder
+ floorf
  g_pMemAlloc
  memchr
  memcpy
+ memmove
+ memset
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -66,12 +83,11 @@
  pthread_mutexattr_init
  pthread_mutexattr_settype
  raise
- sprintf
  std::terminate()
  strchr
  strcmp
+ strcpy
  strlen
- tanf
  typeinfo for std::bad_alloc
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__function_type_info

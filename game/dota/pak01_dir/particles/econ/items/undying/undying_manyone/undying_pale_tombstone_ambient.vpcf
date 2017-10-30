@@ -46,4 +46,33 @@
 			m_ChildRef = resource:"particles/econ/items/undying/undying_manyone/undying_pale_tombstone_mouth_steam.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/undying/idol_of_ruination/idol_tower.vmdl"
+			}
+		},
+	]
 }

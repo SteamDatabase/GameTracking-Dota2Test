@@ -5,8 +5,8 @@
   </styles>
 
   <PopupManager hittest="false">
-    <Panel id="DimBackground" class="Hidden" acceptsinput="true"/>
-	<Button id="BlurBackground" onactivate="PopupBlurBackgroundClicked()" />
+    <Panel id="DimBackground" class="Hidden" hittest="false" acceptsinput="true"/>
+	<Button id="BlurBackground" hittest="false" onactivate="PopupBlurBackgroundClicked()" />
     
     <!-- Popups are added here dynamically -->
 

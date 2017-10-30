@@ -6,97 +6,168 @@ DOTAHUDItemBuild
 .BuildHeaderContainer
 {
     width: 100%;
-    flow-children: right;
+    flow-children: down;
+    background-color: #000000ee;
+    visibility: collapse;
+    height: 58px;
 }
 
-.BuildHeader
+.ShopOpen .BuildHeaderContainer
 {
-    text-transform: uppercase;
+    visibility: visible;
+}
+
+.HUDFlipped .BuildHeaderContainer
+{
+    padding-left: 46px;
+    padding-right: 12px;
+}
+
+.BuildHeaderContainer Label
+{
     font-size: 15px;
     color: #8da1b1;
-    margin-top: 8px;
-    font-weight: bold;
-    width: fill-parent-flow( 1.0 );
-    text-align: center;
-    letter-spacing: 2px;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 0.5px;
 }
+
+.BuildHeaderContainer #Browse
+{
+	vertical-align: middle;
+	padding-left: 12px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-right: 36px;
+    font-size: 13px;
+    color: #616f7b;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 8px;
+    transition-property: color, text-decoration;
+    transition-duration: 0.15s;
+    text-decoration: underline;
+    visibility: collapse;
+}
+
+.HUDFlipped .BuildHeaderContainer #Browse
+{
+	margin-right: 0px;
+}
+
+.CanEdit .BuildHeaderContainer #Browse
+{
+    visibility: visible;
+}
+
+.BuildHeaderContainer #Browse:hover
+{
+    color: #8da1b1;
+    text-decoration: underline;
+}
+
+#BuildTitleContainer
+{
+    width: 100%;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    flow-children: down;
+    visibility: collapse;
+}
+
+.ShopOpen #BuildTitleContainer,
+.EditorMode #BuildTitleContainer
+{
+    visibility: visible;
+}
+
 
 #RightColumn .BuildHeader
 {
     visibility: collapse;
 }
 
+#BuildTitleRow
+{
+    flow-children: right;
+    width: 100%;
+}
+
 .BuildTitle
 {
     font-size: 14px;
-    color: #47515a;
-    margin-bottom: 4px;
-    margin-top: -6px;
+    color: #616f7b;
     font-weight: semi-bold;
-    text-align: center;
-    horizontal-align: center;
-    width: 92%;
+    text-align: left;
+    vertical-align: center;
+    horizontal-align: left;
+    width: 88%;
+    height: 20px;
     text-overflow: ellipsis;
 }
 
-#GuidesButton
+DOTAHUDShop .EditMode .BuildTitle
 {
+    visibility: collapse;
+}
+
+#EditBuildTitle
+{
+    font-size: 14px;
+    color: #616f7b;
+    font-weight: semi-bold;
+    text-align: left;
     vertical-align: center;
-    margin-top: 4px;
-    margin-left: 11px;
-    width: 26px;
-    height: 26px;
-    background-image: url("s2r://panorama/images/hud/reborn/guide_icon_psd.vtex");
-    background-size: 72%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    wash-color: #798b99;
-    transition-property: wash-color, brightness;
-    transition-duration: 0.2s;
+    horizontal-align: left;
+    margin-bottom: 5px;
+    width: 165px;
+    height: 30px;
     visibility: collapse;
-    tooltip-position: top;
-    tooltip-body-position: 50% 0%;
 }
 
-DOTAHUDShop #GuidesButton
+DOTAHUDShop .EditMode #EditBuildTitle
 {
-	visibility: visible;
+    visibility: visible;
 }
 
-#GuidesButton:hover
+.BuildSubtitle
 {
-    brightness: 2.0;
-}
-
-#GuidesButton:active
-{
-    wash-color: #999999;
-}
-
-#RightColumn #GuidesButton
-{
+    font-size: 14px;
+    color: #47515a;
+    font-weight: semi-bold;
+    text-align: left;
+    vertical-align: center;
+    horizontal-align: left;
+    width: 92%;
+    height: 20px;
+    text-overflow: ellipsis;
     visibility: collapse;
+    margin-top: -4px;
+}
+
+.SteamGuide .BuildSubtitle
+{
+    visibility: visible;
 }
 
 #EditButton
 {
-    vertical-align: center;
-    margin-top: 4px;
-    margin-right: 11px;
     width: 22px;
     height: 22px;
-    background-image: url("s2r://panorama/images/control_icons/gear_small_png.vtex");
+    horizontal-align: right;
+    vertical-align: center;
+    background-image: url("s2r://panorama/images/control_icons/edit_pencil_psd.vtex");
     background-size: 72%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     wash-color: #798b99;
-    transition-property: wash-color, brightness;
-    transition-duration: 0.2s;
     visibility: collapse;
     tooltip-position: top;
+    margin-right: -4px;
 }
 
-DOTAHUDShop #EditButton
+DOTAHUDShop .CanEdit #EditButton
 {
 	visibility: visible;
 }
@@ -115,7 +186,7 @@ DOTAHUDShop.EditMode #EditButton
 
 #EditButton:active
 {
-    wash-color: #999999;
+    wash-color: #798b99;
 }
 
 DOTAGuideBrowser .BuildTitle
@@ -127,7 +198,7 @@ DOTAGuideBrowser .BuildTitle
 {
 	flow-children: down;
 	width: 100%;
-    padding: 8px 0px 0px 12px;
+    padding: 12px 0px 0px 12px;
     overflow: clip scroll;
 }
 
@@ -136,7 +207,7 @@ DOTAHUDShop #Categories
 	height: fill-parent-flow( 1.0 );
 }
 
-.EditMode DOTAHUDItemBuild
+DOTAHUDShop .EditMode #Categories
 {
 	box-shadow: inset #0B93BE33 6px 6px 12px 12px;
 }
@@ -155,32 +226,172 @@ DOTAHUDShop #Categories
 {
 	width: 100%;
 	flow-children: down;
-	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
+
+.ItemCategoryTitle
+{
+    width: 96%;
+    flow-children: right;
 }
 
 .CategoryName
 {
 	text-transform: uppercase;
+	text-overflow: shrink;
+    width: 100%;
+    height: 18px;
+    margin-bottom: 2px;
 	font-size: 14px;
 	color: white;
-	margin-bottom: 3px;
     letter-spacing: 2px;
+    vertical-align: center;
+}
+
+.EditMode .CategoryName
+{
+    width: fill-parent-flow( 1.0 );
+}
+
+.EditMode .StartingItems .CategoryName
+{
+    width: 100%;
+}
+
+.StandardEditableCategory .CategoryName
+{
+    visibility: collapse;
+}
+
+.EditableCategoryName
+{
+	text-transform: uppercase;
+    width: fill-parent-flow( 1.0 );
+    height: 28px;
+    margin-bottom: 8px;
+	font-size: 12px;
+	color: white;
+    visibility: collapse;
+}
+
+.StandardEditableCategory .EditableCategoryName
+{
+    visibility: visible;
+}
+
+.GoldIcon
+{
+	background-image: url("s2r://panorama/images/hud/reborn/gold_small_psd.vtex");
+	background-size: 100% 100%;
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+    margin-bottom: 2px;
+	vertical-align: center;
+    visibility: collapse;
+}
+
+.EditMode .StartingItems .GoldIcon
+{
+    visibility: visible;
+}
+
+.GoldLabel
+{
+   	font-size: 16px;
+	font-weight: bold;
+	width: 32px;
+	vertical-align: center;
+	text-overflow: shrink;
+    color: #ffcc33;
+    visibility: collapse;
+}
+
+.StartingGoldOverflow .GoldLabel
+{
+    color: #ff2233;
+}
+
+.EditMode .StartingItems .GoldLabel
+{
+    visibility: visible;
 }
 
 #ItemList
 {
-	width: 100%;
 	flow-children: right-wrap;
-	width: 260px;
 }
 
 DOTAShopItem
 {
-	width: 38px;
+	width: 52px;
 	height: width-percentage( 72.7% );
 	margin-bottom: 5px;
-	margin-right: 3px;
+	margin-right: 6px;
 }
+
+.NoItemsContainer
+{
+    visibility: collapse;
+    flow-children: down;
+    width: 100%;
+    height: 36px;
+}
+
+.AddNewCategory
+{
+    visibility: collapse;
+}
+
+.EditMode .AddNewCategory
+{
+    visibility: visible;
+}
+
+.EditMode .NoItems:not(.AddNewCategory) .NoItemsContainer
+{
+    visibility: visible;
+}
+
+#AddCategory
+{
+	background-image: url("s2r://panorama/images/control_icons/plus_thin_png.vtex");
+	background-size: 100% 100%;
+	width: 20px;
+	height: 20px;
+	vertical-align: center;
+    visibility: collapse;
+}
+
+.AddNewCategory #AddCategory
+{
+    visibility: visible;
+}
+
+#RemoveCategory
+{
+	width: 20px;
+	height: 20px;
+	background-image: url("s2r://panorama/images/control_icons/purgatory_png.vtex");
+	vertical-align: center;
+    visibility: collapse;
+}
+
+.StandardEditableCategory #RemoveCategory
+{
+    visibility: visible;
+}
+
+.NoItemsLabel
+{
+    text-transform: uppercase;
+    font-size: 14px;
+    border-top: 1px;
+    text-align: center;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
 
 //--------------------------------
 
@@ -190,11 +401,12 @@ DOTAShopItem
     font-size: 15px;
     color: #5b6872;
     margin-bottom: 3px;
+    margin-right: 12px;
     font-weight: bold;
     width: 100%;
     text-align: center;
     letter-spacing: 2px;
-    padding-top: 12px;
+    padding-top: 6px;
 }
 
 .ItemBuildCategory.FooterCategory
@@ -221,7 +433,7 @@ DOTAShopItem
 
 #EditModeDestination
 {
-	width: 38px;
+	width: 42px;
 	height: width-percentage( 72.7% );
 	margin-left: 0px;
 	margin-top: 0px;

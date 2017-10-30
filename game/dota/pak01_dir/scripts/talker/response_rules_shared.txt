@@ -64,6 +64,7 @@ criterion "HasTarget"	"targetindex" ">0" required
 criterion "IsTeleporting" "teleporting" "1" required 
 
 criterion "AllyNear" "concept" "TLK_DOTA_ALLY_NEARBY" required
+criterion "EnemyNear" "concept" "TLK_DOTA_ENEMY_NEARBY" required
 
 criterion "EarlyGame" "gametime" ">60,<660" required
 criterion "LateGame" "gametime" ">2700,<3600" required
@@ -293,6 +294,12 @@ criterion "IsBarracksAttacked" "announce_event" "barracks_attacked" weight 5 req
 criterion "IsBaseAttacked" "announce_event" "base_attacked" weight 5 required
 criterion "IsFortAttacked" "announce_event" "fort_attacked" weight 5 required
 
+criterion "IsShrineAttacked" "announce_event" "shrine_attacked" weight 5 required
+criterion "IsShrineKilled" "announce_event" "shrine_killed" weight 5 required
+criterion "IsEnemyShrineKilled" "announce_event" "enemy_shrine_killed" weight 5 required
+criterion "IsGoodShrineKilled" "announce_event" "good_shrine_killed" weight 5 required
+criterion "IsBadShrineKilled" "announce_event" "bad_shrine_killed" weight 5 required
+
 criterion "IsTowerKilled" "announce_event" "tower_killed" weight 6 required
 criterion "IsEnemyTowerKilled" "announce_event" "enemy_tower_killed" weight 6 required
 criterion "IsBarracksKilled" "announce_event" "barracks_killed" weight 8 required
@@ -305,6 +312,10 @@ criterion "IsBadBarracksKilled" "announce_event" "bad_barracks_killed" weight 8 
 criterion "IsTopLane" "lane" "top" weight 5 required
 criterion "IsMidLane" "lane" "mid" weight 5 required
 criterion "IsBotLane" "lane" "bot" weight 5 required
+
+criterion "IsTopShrine" "lane" "top" weight 5 required
+criterion "IsBotShrine" "lane" "bot" weight 5 required
+criterion "IsBaseShrine" "lane" "base" weight 5 required
 
 criterion "IsMegaCreeps" "announce_event" "enemy_mega_creeps" weight 9 required
 criterion "IsEnemyMegaCreeps" "announce_event" "mega_creeps" weight 9 required
@@ -372,6 +383,9 @@ criterion "IsNotDeny" "deny" "0" weight 5 required
 criterion "GlyphUsedBad" "announce_event" "glyph_used_bad" weight 7 required
 criterion "GlyphUsedGood" "announce_event" "glyph_used_good" weight 7 required
 
+criterion "ScanUsedBad" "announce_event" "bad_scan" weight 7 required
+criterion "ScanUsedGood" "announce_event" "good_scan" weight 7 required
+
 criterion "CourierLostBad" "announce_event" "courier_lost_bad" weight 6 required
 criterion "CourierLostGood" "announce_event" "courier_lost_good" weight 6 required
 
@@ -429,10 +443,14 @@ criterion "IsDireTeamEscapeGaming" "dire_team_id" "2783913" weight 5 required
 criterion "IsDireTeamEvilGeniuses" "dire_team_id" "39" weight 5 required
 criterion "IsDireTeamExecration" "dire_team_id" "2581813" weight 5 required
 criterion "IsDireTeamFnatic" "dire_team_id" "350190" weight 5 required
+criterion "IsDireTeamHellRaisers" "dire_team_id" "1846548" weight 5 required
 criterion "IsDireTeamHot6ix" "dire_team_id" "2201839" weight 5 required
+criterion "IsDireTeamIGVitality" "dire_team_id" "2640025" weight 5 required
+criterion "IsDireTeamInfamous" "dire_team_id" "2672298" weight 5 required
 criterion "IsDireTeamInvasionMUFC" "dire_team_id" "497529" weight 5 required
 criterion "IsDireTeamInvictusGaming" "dire_team_id" "5" weight 5 required
 criterion "IsDireTeamLGDcn" "dire_team_id" "15" weight 5 required
+criterion "IsDireTeamLGDFY" "dire_team_id" "3331948" weight 5 required
 criterion "IsDireTeamLGDint" "dire_team_id" "77666" weight 5 required
 criterion "IsDireTeamLiquid" "dire_team_id" "2163" weight 5 required
 criterion "IsDireTeamMoscowFive" "dire_team_id" "33" weight 5 required
@@ -478,10 +496,14 @@ criterion "IsRadiantTeamEscapeGaming" "radiant_team_id" "2783913" weight 5 requi
 criterion "IsRadiantTeamEvilGeniuses" "radiant_team_id" "39" weight 5 required
 criterion "IsRadiantTeamExecration" "radiant_team_id" "2581813" weight 5 required
 criterion "IsRadiantTeamFnatic" "radiant_team_id" "350190" weight 5 required
+criterion "IsRadiantTeamHellRaisers" "radiant_team_id" "1846548" weight 5 required
 criterion "IsRadiantTeamHot6ix" "radiant_team_id" "2201839" weight 5 required
+criterion "IsRadiantTeamIGVitality" "radiant_team_id" "2640025" weight 5 required
+criterion "IsRadiantTeamInfamous" "radiant_team_id" "2672298" weight 5 required
 criterion "IsRadiantTeamInvasionMUFC" "radiant_team_id" "497529" weight 5 required
 criterion "IsRadiantTeamInvictusGaming" "radiant_team_id" "5" weight 5 required
 criterion "IsRadiantTeamLGDcn" "radiant_team_id" "15" weight 5 required
+criterion "IsRadiantTeamLGDFY" "radiant_team_id" "3331948" weight 5 required
 criterion "IsRadiantTeamLGDint" "radiant_team_id" "77666" weight 5 required
 criterion "IsRadiantTeamLiquid" "radiant_team_id" "2163" weight 5 required
 criterion "IsRadiantTeamMoscowFive" "radiant_team_id" "33" weight 5 required

@@ -14,7 +14,6 @@
  CreateNewThreadPool
  DestroyThreadPool
  DevMsg
- EarlyInit_Tier0
  GetCPUInformation
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
@@ -25,6 +24,9 @@
  LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
+ MemAlloc_AllocFunc
+ MemAlloc_FreeFunc
+ MemZeroMemory
  MicroProfilerAddTS
  Msg
  Plat_DebugPrint
@@ -33,9 +35,11 @@
  Plat_GetCPUFrequency
  Plat_GetEnv
  Plat_GetPlatformError
+ Plat_GetThreadIndex
  Plat_IsInDebugSessionRaw
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
+ Plat_UUIDToString
  Plat_VirtualAlloc
  Plat_VirtualFree
  RandomFloat
@@ -77,7 +81,7 @@
  V_atoi
  V_cosf
  V_expf
- V_fmodf
+ V_frexpf
  V_logf
  V_powf
  V_pretifymem
@@ -92,6 +96,7 @@
  V_strtod
  V_strtoi64
  V_strtoui64
+ V_tanf
  V_vscprintf
  V_vsnprintf
  V_vsnprintfRet
@@ -111,26 +116,14 @@
  __cxa_guard_release
  __cxa_pure_virtual
  __gxx_personality_v0
- __sincos_stret
- __sincosf_stret
  __stack_chk_fail
  __stack_chk_guard
- acos
- asinf
- atan2
- atan2f
- ceil
- cosf
+ ceilf
  dyld_stub_binder
- expf
  floorf
- free
- frexpf
  g_Tier1_CRC32Table
  g_pMemAlloc
  g_pThreadPool
- logf
- malloc
  memchr
  memcmp
  memcpy
@@ -144,16 +137,13 @@
  pthread_mutexattr_init
  pthread_mutexattr_settype
  raise
- sinf
  std::terminate()
  strcmp
  strcpy
  strlen
- tanf
  typeinfo for IStack_Annotation
  typeinfo for std::bad_alloc
  void std::__1::__sort<std::__1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, std::__1::__less<unsigned int, unsigned int>&)
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info

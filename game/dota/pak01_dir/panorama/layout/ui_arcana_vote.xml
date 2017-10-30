@@ -1,6 +1,8 @@
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/compendiums/compendium_styles.vcss_c" />
+		<include src="s2r://panorama/styles/battle_pass/current_battle_pass.vcss_c" />
 		<include src="s2r://panorama/styles/ui_arcana_vote.vcss_c" />
 	</styles>
 
@@ -13,7 +15,7 @@
 
 			<Panel class="ArcanaVote">
 
-				<Panel class="Body" >
+				<Panel class="Body FinalArcanaVote VotingFinished" >
 
 					<Panel id="Voting" >
 						<Panel class="VotingTitle" >
@@ -22,22 +24,18 @@
 							<Panel class="InfoButton" onactivate="ToggleStyle( Voting, ShowInfo )"/>
 						</Panel>
 						<Panel class="VotingInfo">
-							<Label class="VotingInfoTitle" text="#DOTA_Spring2016_ArcanaVote_IntroTextTitle"/>
-							<Label class="VotingInfoSubHead" text="#DOTA_Spring2016_ArcanaVote_SubHead01"/>
-							<Label class="VotingInfoBody" text="#DOTA_Spring2016_ArcanaVote_IntroText01"/>
-							<Label class="VotingInfoSubHead" text="#DOTA_Spring2016_ArcanaVote_SubHead02"/>
-							<Label class="VotingInfoBody" text="#DOTA_Spring2016_ArcanaVote_IntroText02"/>
-							<Label class="VotingInfoSubHead" text="#DOTA_Spring2016_ArcanaVote_SubHead03"/>
-							<Label class="VotingInfoBody" text="#DOTA_Spring2016_ArcanaVote_IntroText03"/>
+							<Label class="VotingInfoTitle" text="#DOTA_ArcanaVote_IntroTextTitle"/>
+							<Label class="VotingInfoSubHead" text="#DOTA_ArcanaVote_SubHead01"/>
+							<Label class="VotingInfoBody" text="#DOTA_ArcanaVote_IntroText01"/>
+							<Label class="VotingInfoSubHead" text="#DOTA_ArcanaVote_SubHead02"/>
+							<Label class="VotingInfoBody" text="#DOTA_ArcanaVote_IntroText02"/>
+							<Label class="VotingInfoSubHead" text="#DOTA_ArcanaVote_SubHead03"/>
+							<Label class="VotingInfoBody" text="#DOTA_ArcanaVote_IntroText03"/>
 							<Button class="ButtonDark StartVotingButton" onactivate="ToggleStyle( Voting, ShowInfo )">
-								<Label text="#DOTA_Spring2016_ArcanaVote_StartVoting"/>
+								<Label text="#DOTA_ArcanaVote_StartVoting"/>
 							</Button>
 						</Panel>
 						<Panel class="Overview" >
-							<Panel class="PreviousResults" >
-								<Button class="PaginationArrow Left" onactivate="DOTAViewArcanaRoundResults( true )" />
-								<Label class="SmallLabel" text="#DOTAArcanaVote_PreviousResults" />
-							</Panel>
 							<Panel class="OverviewContainer" >
 								<Panel class="LeftRightFlow LabelContainer VotesRemainingContainer">
 									<Label class="BigLabel" text="#DOTAArcanaVote_VotesRemaining" />
@@ -46,19 +44,32 @@
 								</Panel>
 								<Label class="SmallLabel LabelContainer VotesRemainingContainer WeeklyVotes" text="#DOTAArcanaVote_VotesRemainingSubtitle" />
 							</Panel>
-							<Panel class="NextResults" >
+							<Panel class="PreviousResults"  onactivate="DOTAViewArcanaRoundResults( true )">
+								<Button class="PaginationArrow Left" />
+								<Label class="SmallLabel" text="#DOTAArcanaVote_PreviousResults" />
+							</Panel>							
+							<Panel class="NextResults" onactivate="DOTAViewArcanaRoundResults( false )" >
 								<Label class="SmallLabel" text="#DOTAArcanaVote_NextResults" />
-								<Button class="PaginationArrow Right" onactivate="DOTAViewArcanaRoundResults( false )" />
+								<Button class="PaginationArrow Right" />
 							</Panel>
 							<Panel class="OverviewSpacer" />
 						</Panel>
-						<Panel class="VoteColumns">
-							<Panel id="VoteColumn0" class="VoteColumn" >
-								<!-- dynamic stuff -->
+						<Panel id="MidSection">
+							<Panel class="VoteColumns">
+							<Panel id="FinalVote">
+								<DOTAScenePanel id="FinalArcanaScene" map="scenes/battlepass_ti7/arcana_vote_ti7" camera="hero_camera" light="hero_light" renderdeferred="true" particleonly="false" rotateonmousemove="true" yawmin="-5" yawmax="5" pitchmin="0" pitchmax="0"/>
+								<DOTAScenePanel id="FinalArcanaSceneBlur" map="scenes/battlepass_ti7/arcana_vote_ti7" camera="hero_camera" light="hero_light" renderdeferred="true" particleonly="false" rotateonmousemove="true" yawmin="-5" yawmax="5" pitchmin="0" pitchmax="0"/>
+								<Panel class="Vignette"/>
+								<TextButton id="ViewBracket" class="ButtonDark" text="#DOTAArcanaVote_ViewBrackets" onactivate="ToggleStyle( ArcanaVote, ViewBracket )"/>																						
+							</Panel>							
+								<Panel id="VoteColumn0" class="VoteColumn" >
+									<!-- dynamic stuff -->
+								</Panel>
+								<Panel id="VoteColumn1" class="VoteColumn" >
+									<!-- dynamic stuff -->
+								</Panel>
 							</Panel>
-							<Panel id="VoteColumn1" class="VoteColumn" >
-								<!-- dynamic stuff -->
-							</Panel>
+
 						</Panel>
 						<Panel class="ArcanaFooter">
 							<Button id="ArcanaVoteButton" class="ButtonBevel" onactivate="DOTASubmitArcanaVote()" >

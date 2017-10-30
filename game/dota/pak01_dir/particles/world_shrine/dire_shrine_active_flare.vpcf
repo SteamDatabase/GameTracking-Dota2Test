@@ -81,6 +81,7 @@
 			m_hTexture = resource:"materials/particle/yellowflare2.vtex"
 			m_bAdditive = true
 			m_flOverbrightFactor = 2.000000
+			m_bTintByFOW = true
 		},
 	]
 	m_Initializers = 

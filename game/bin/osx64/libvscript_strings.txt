@@ -14,6 +14,7 @@
 	  p@
 	&	J	unsigned char	
 	D$hfffff.
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	[builtin#%double]:
 	fstring
 	local
@@ -29,11 +30,13 @@
        
            
                 
+      >>&> &  ``
   @0 P0
   @`pp`
   P@@ @``@ PP`@p
   PPP
  !"#$%&'()*+,-./0123
+ %short: 
  %short="%double"
  %short="%short"
  ( def. "%short" )
@@ -42,6 +45,7 @@
  - consider decreasing NUGGET_HANDLE_BITS; nugget table is almost empty, but serial number range is more than 33%% exhausted
  - consider increasing NUGGET_HANDLE_BITS; nugget table is more than 33%% full (if it fills it will crash!)
  0 0p
+ 0 P0P0
  ;D$8
  ;D$8D
  ;D$hD
@@ -68,7 +72,6 @@
  u%H9
  u3ffff.
  u<fA
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"Unsupported schema enum size"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
@@ -106,7 +109,6 @@
 "%short" 
 "%short" = "%short"
 "%short":%double
-"HcSHH
 "fff.
 "ffff.
 #base
@@ -118,7 +120,9 @@
 #include is NULL 
 #int#
 $ X wchar_t @"int"
+$$t#H
 $;P8sMH
+$ffff.
 %-120s
 %-120s - %short
 %.14g
@@ -129,6 +133,7 @@ $;P8sMH
 %__float128 %__float128 %__float128 %__float128
 %double %double %double %double
 %double total counted strings.
+%fffff.
 %float %float
 %float %float %float
 %float %float %float %float
@@ -205,6 +210,7 @@ $;P8sMH
 (*vararg)
 (A^A_[]
 (GetChar()) == (0)
+(IcT$HI
 (O fA
 ([A\A]A^A_]
 ([A\A^A_
@@ -221,6 +227,7 @@ $;P8sMH
 (for state)
 (for step)
 (forward - *pForward).Length() + ( left - *pLeft ).Length() + ( up - *pUp ).Length() < e-4f
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (nOffset & (k_LowMemPageSize - 1)) == 0
@@ -245,7 +252,6 @@ $;P8sMH
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
 *?fff>fff>fff>fff>
 +$WR&"3@unsigned long]
-+C$A9E
 +C$Lc
 ,$E;__float128
 ,$[A\A]A^A_
@@ -254,7 +260,9 @@ $;P8sMH
 ,[A^]
 ,fff.
 ,ffff.
+,ffffff.
 -+ #0
+-luajit
 -sse2
 -sse3
 -sse4
@@ -264,6 +272,8 @@ $;P8sMH
 .ETv*H
 .Elv*H
 .ffffff.
+.local
+.steam
 /* GNU ld script
 /A;D$
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -316,9 +326,11 @@ $;P8sMH
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vscript/languages/lua/vlua/vluadbgp.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/vscript/vscript.cpp
 /ffff.
+/fffff.
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
+/var/srcds/shared/dota
 0 00 0  @0@ 
 0 @@0@
 000000
@@ -326,7 +338,7 @@ $;P8sMH
 0123456789ABCDEF
 0123456789ABCDEF21CUtlCStringConversion
 0123456789abcdef
-0@00@@Pp@0
+0@@Pp@0
 0[A\A^A_]
 0[A^]
 0p@P@p
@@ -359,7 +371,6 @@ $;P8sMH
 9S }	
 9ffffff.
 9s |6
-:ffffff.
 ;E wchar_t;
 ;E wchar_t[
 ;K ~+
@@ -375,7 +386,6 @@ $;P8sMH
 ;l$pH
 ;u,|long
 <$fff.
-<$v9H
 <(9{ |jI
 <,H;\$ wchar_t
 </%short>
@@ -437,6 +447,7 @@ $;P8sMH
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @PPP@  0@  @
 @V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+@V_UnicodeLength(char const*)
 @V_stristr_fast(char const*, char const*)
 @[A\A^A_]
 @[A^]
@@ -444,7 +455,6 @@ $;P8sMH
 @_CMemAllocSystemInitialize
 @_CommandLine
 @_DevMsg
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -470,6 +480,7 @@ $;P8sMH
 @_ThreadGetCurrentId
 @_ThreadInterlockedExchange64
 @_ThreadSleep
+@_V_FixDoubleSlashes
 @_V_FixSlashes
 @_V_GetErrno
 @_V_IsAbsolutePath
@@ -482,7 +493,6 @@ $;P8sMH
 @_V_UTF8CharsToUTF16
 @_V_UTF8ToUTF32
 @_V_UnqualifiedFileName
-@_V_acos
 @_V_acosf
 @_V_asinf
 @_V_atan2f
@@ -497,7 +507,6 @@ $;P8sMH
 @_V_powf
 @_V_pretifynum
 @_V_qsort_s
-@_V_rand
 @_V_sinf
 @_V_snprintf
 @_V_snwprintf
@@ -509,7 +518,6 @@ $;P8sMH
 @_V_strtoui64
 @_V_strupper_fast
 @_V_swscanf
-@_V_tan
 @_V_tanf
 @_V_vsnprintf
 @_V_vsnprintfRet
@@ -635,6 +643,7 @@ $;P8sMH
 @_ungetc
 @_wcslen
 @dyld_stub_binder
+@fffff.
 @loader_path
 @r4Ic
 @rpath/libtier0.dylib
@@ -647,6 +656,7 @@ $;P8sMH
 @t$A9
 @typeinfo for IStack_VM_Segment_Marker
 @typeinfo for std::bad_alloc
+@u?Ic
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
@@ -660,7 +670,6 @@ A+F$Hc
 A+F$Lc
 A+M$Hc
 A+N$Hc
-A+t$p~$H
 A9D$ 
 A9G8w
 A9T$ }
@@ -674,18 +683,20 @@ A9t$8w
 A9v8w
 A;D$
 A;D$ ~
-A;D$(}
+A;E I
+A;E(}
 A;G ~
 A;G,|
 A;G8r
 A;L$ ~long long
-A;N<u
+A;L$<u
 A;O ~
 A;O4v
 A;T$ ~
 A;T$8
 A;T$8sPL
 A;T$8srL
+A;U ~
 A;V8H
 A;V8sdff.
 A;W8sIL
@@ -695,15 +706,13 @@ A;X(uUD
 A;X(uYD
 A;\$@|
 A;]long long|
-A;^ u
 A;^@|
-A;_(|
+A;}Pu
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARBVAp(pxp
 ARB]ARBRAp
 ATBRB]Ap
-ATB`5Ap
 AUATASARAQAPWVUH
 AVSPA
 AVSPH
@@ -745,6 +754,7 @@ AWAVSPM
 AZBSASAp
 A[ATAp
 A`/A[AVBTB`
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -769,8 +779,7 @@ C +C$v
 C [A^]
 C type
 C++ exception
-C,[A\A^A_]
-C0;C@u
+C,[A^]
 C8;D$
 C8;D$ wchar_t
 CAtomicManipulator<CUtlString>
@@ -798,7 +807,6 @@ CHffff.
 CHffffff.
 CKeyValuesDumpContextAsDevMsg
 CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
-CL;CPu
 CLuaDbg
 CLuaDbgBreakpoint::CLuaDbgBreakpoint(const char *, uint32)
 CLuaVM
@@ -855,6 +863,7 @@ CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
 CUtlCharConversion
 CUtlCharConversion::CUtlCharConversion(char, const char *, int, const CUtlCharConversion::ConversionArray_t *)
 CUtlHandleTable<CBaseNugget_Private, 16>::HandleType_t::HandleType_t(unsigned int, unsigned int) [T = CBaseNugget_Private, HandleBits = 16]
+CUtlRBTree overflow with %u elements!
 CUtlString
 CUtlString CSchemaFieldIterator::GetFullyQualifiedFieldName() const
 CUtlString FromFileUri(const char *)
@@ -896,6 +905,7 @@ ConVar(%short) defined with infinite float value (%short)
 ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 Constructor called without signed char class constructor - internal error?
 ContainsCRLF()
 ContainsCRLF() == bContainsCRLF
@@ -920,6 +930,7 @@ Couldn'unsigned short find type name field ('%short').
 Count
 CreateInterface
 Cross
+CtHcKp=
 D$ A)
 D$ I+D$
 D$ I9
@@ -955,6 +966,7 @@ D$@H;long long
 D$H9C
 D$HD9p
 D$HE1
+D$LA;D$Pu
 D$PH+P
 D$PH9
 D$XH;L$@|
@@ -964,7 +976,6 @@ D$tH9
 D7	...
 D9sXu
 D;*~	
-D;sT}
 D;u,|
 D;{ ~
 D;{,|
@@ -979,7 +990,6 @@ DevMsg(char const*, ...)
 Dfffff.
 DotaCardGameClient_001
 DynASM 1.3.0
-E#t$T
 E+t$$x
 E,A;E
 E8;D$
@@ -988,19 +998,22 @@ E8;D$X
 E8;D$Xw
 E9t$ 
 E;>uNI
-E;__float128(roH
+E;__float128(rPH
 E;__float128(s0I
 E;__int128 ~0
+E;l$ u
 E;l$ ~
 E;nPI
 E;o8s[L
-E;uPu$I
+E;t$T|}H
+E;t$T}
 E;|$ ~<
 E;~(r61
 E;~0|:
 EDesc
 EHfff.
 EMPTY - ok for slot zero only!
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
 Encrypted scripts not yet supported
@@ -1016,7 +1029,6 @@ EventSystem001
 F A;F$s
 F I+F
 F [A^]
-F([A^]
 F8;D$Xw
 FCVAR_NEVER_AS_STRING
 FDesc
@@ -1101,8 +1113,10 @@ H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
+Hc	D9
 HcGDH
 HcGHH
+HcK@H
 Hcs H
 Hct$0L
 Hct$8L
@@ -1112,8 +1126,6 @@ Hfffff.
 HostStateMgr001
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::Find(const T &) const [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
-I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::NewNode(const T *) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 I9@ unsigned short"I
 I9P unsigned short%I
@@ -1140,11 +1152,15 @@ IStack_VM_Segment_Marker::~IStack_VM_Segment_Marker()
 Ic@$E1
 Ic@$H
 Ic@$I
-IcD$(H
+IcE(H
 IcG I9
 IcG(H
+IcL$ H
+IcL$@H
+IcMPH
+IcN@D9
 IcO E1
-IcV@H
+IcO@H
 IcX$E1
 IcX$M
 Icv(H
@@ -1220,6 +1236,8 @@ L$aH9
 L$cH9
 L$dH9
 L$fH9
+L)5<u
+L..LLLLLLLLL
 L;|$X
 LINUX
 LOADLIB: %short
@@ -1229,13 +1247,13 @@ LUA Memory usage: The VM has signed char usage of %short bytes.
 LUA_CPATH
 LUA_NOENV
 LUA_PATH
+Lc1E9
 Lcy,I
 Lc{ A
 Lc{ H
 Length
 Length2D
 Lfff.
-LightingBuilderMgr001
 LoadAndCompileScriptFile: Failed to compile script file "%short"
 LoadAndCompileScriptFile: No filesystem found
 LoadAndCompileScriptFile: Script file "%short" type does not match VM type
@@ -1267,6 +1285,7 @@ MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MaterialUtils_001
 MbP?+
+Mc4$L
 Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
@@ -1274,7 +1293,7 @@ Message count limit of %double hit. Subsequent duplicate messages will be squelc
 Mffff.
 Missing breakpoint data ( breakpoint with ID %s. )
 Missing breakpoint with given ID %s.
-ModelDocCommandSystem001
+ModelDocUtils001
 Must use luaL_newstate() for 64 bit target
 N I+N
 NYI: cannot call this C function (yet)
@@ -1287,6 +1306,7 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 Nfffff.
+No conversion from %short to float now
 No conversion from %short to int now
 No conversion from %short to string at the moment!
 No conversion from %short to uint now
@@ -1300,13 +1320,13 @@ O I+O
 OHfff.
 OVERRIDE_MMAP
 Only TCP sockets are implemented at the moment.
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 P L;}
-P00P 
 P00`0PP
 PANIC: unprotected error in call to Lua API (
 POSIX
-PPPPPP@P
 P[A\A^A_]
 P[A^]
 P`PP@@`P@@
@@ -1325,6 +1345,7 @@ Print signed char warning
 PropertyEditorSystem_001
 QAngle
 Quaternion
+QuaternionAligned QuaternionAverageExponential(int, const QuaternionAligned *, const float *)
 QuaternionLength( q - q2 ) < 0.0001f
 QueuedLoaderVersion001
 RATBp
@@ -1391,7 +1412,8 @@ SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Script Runtime Error: %short
-Script load error for script %short: %short
+Script load error for script
+Script load error for script:
 Script_Msg
 Script_Warning
 Send can only return zero if zero bytes were given.
@@ -1433,6 +1455,7 @@ Source2Host001
 Source2Server001
 Source2ServerSerializers002
 StatsService_001
+SteamAudio001
 String %double: ref:%double %short
 Success
 T &CUtlStringMap<CUtlDelegate<void (const CLuaDBGpCommand &)>, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CUtlDelegate<void (const CLuaDBGpCommand &)>, SymbolTableType_t = CUtlSymbolTable]
@@ -1447,6 +1470,7 @@ T$,E1
 T$0H9
 T$3Hk
 T$8H)
+T$8fB
 T$8u&
 T$@A;W
 T$@H;L$@t$D
@@ -1462,12 +1486,13 @@ T6DfA
 TA`5Ap
 TAp0p
 TBRATAp
-TBRAp
 TBRB]ARBRAp
 TBTATBRATAp
 TBTAp
 TBVATAp
 TBYA`;A
+TB` B`
+TB`5Ap
 TB`6ATAp
 TB`CAp
 TB`gA`
@@ -1477,8 +1502,7 @@ TCUARAp
 TCUCRBVBSATAp
 TCXATAp
 TCXBRAp
-TDRATBp
-TDpPQ
+TDppQ
 Table is null.
 TestRawStruct_1
 TestScriptMgr001
@@ -1589,6 +1613,7 @@ V_IsAbsolutePath( absolutePath )
 V_IsAbsolutePath( m_fileName.Get() )
 V_IsAbsolutePath( ret )
 V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+V_UnicodeLength(char const*)
 V_fabsf( q.x*q.x + q.y*q.y + q.z*q.z + q.w*q.w - 1 ) < e-5f
 V_fabsf( vec.LengthSqr() - 1.0f ) < e-3
 V_fabsf( vecForward.LengthSqr() - 1.0f ) < e-3
@@ -1666,10 +1691,12 @@ WorldRendererBuilderMgr001
 WorldRendererMgr001
 XBSARBSAXBRB`
 X[A\A]A^A_]
+X[A^A_]
 Xbox VDP is not supported on this platform.
 Yfffff.
 [A\A]A^A_
 [A\A]A^A_]
+[A\A]A^A_]A
 [A\A^A_
 [A\A^A_]
 [A^A_
@@ -1694,6 +1721,7 @@ Yfffff.
 ^$*+?.([%-
 ^8[A^A_
 ^fffff.
+_ AkO 
 _%long long%llx_%short
 _ANON_
 _AssertMsg_ConditionFailed
@@ -1704,7 +1732,6 @@ _CommandLine
 _Complex
 _CreateInterface
 _DevMsg
-_EarlyInit_Tier0
 _GetCPUInformation
 _GetResourceManifestCount
 _GetResourceManifests
@@ -1740,6 +1767,7 @@ _ThreadInterlockedExchange64
 _ThreadSleep
 _VERSION
 _VMEVENTS
+_V_FixDoubleSlashes
 _V_FixSlashes
 _V_GetErrno
 _V_IsAbsolutePath
@@ -1752,7 +1780,6 @@ _V_UTF32ToUTF8
 _V_UTF8CharsToUTF16
 _V_UTF8ToUTF32
 _V_UnqualifiedFileName
-_V_acos
 _V_acosf
 _V_asinf
 _V_atan2f
@@ -1767,7 +1794,6 @@ _V_logf
 _V_powf
 _V_pretifynum
 _V_qsort_s
-_V_rand
 _V_sinf
 _V_snprintf
 _V_snwprintf
@@ -1779,7 +1805,6 @@ _V_strtoi64
 _V_strtoui64
 _V_strupper_fast
 _V_swscanf
-_V_tan
 _V_tanf
 _V_vsnprintf
 _V_vsnprintfRet
@@ -1894,7 +1919,6 @@ __unwind_info
 __userdata_metatable
 __volatile
 __volatile__
-_`A;_p
 _accept
 _atoi
 _bind
@@ -2158,6 +2182,8 @@ auto CNuggetManager::CreateNugget(const CSchemaType *, const char *, HSCRIPT)::(
 auto CNuggetManager::DeallocateNugget(CBaseNugget *)::(anonymous class)::operator()() const
 auto CNuggetManager::Purge(bool)::(anonymous class)::operator()() const
 auto CNuggetManager::TestFunc()::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 auto CUtlStringBuilder::ReplaceInternal(const char *, const char *, const char *(*)(const char *, const char *))::(anonymous class)::operator()() const
 auto ConvertAtomicFromScriptTable(IScriptVM *, void *, const CSchemaType *, const ScriptVariant_t &, const char *)::(anonymous class)::operator()() const
 auto ConvertBooleanValue(bool *, const ScriptVariant_t &, const char *, const char *)::(anonymous class)::operator()() const
@@ -2212,6 +2238,7 @@ bool CUtlBuffer::ParseToken(const char *, const char *, char *, int)
 bool CUtlHandleTable<CBaseNugget_Private, 16>::IsHandleValid(UtlHandle_t) const [T = CBaseNugget_Private, HandleBits = 16]
 bool CUtlInplaceBuffer::InplaceGetLinePtr(char **, int *)
 bool CUtlQueue<int, CUtlMemory<int, int> >::RemoveAtHead(T &) [T = int, M = CUtlMemory<int, int>]
+bool CVariantBase<CVariantDefaultAllocator>::operator bool() const [CValueAllocator = CVariantDefaultAllocator]
 bool ConvertBuiltinFromScriptTable(IScriptVM *, void *, const CSchemaType *, const ScriptVariant_t &, const char *)
 bool ConvertEnumFromScriptTable(IScriptVM *, void *, const CSchemaType *, const ScriptVariant_t &, const char *)
 bool ConvertFieldFromScriptVariant(IScriptVM *, void *, const CSchemaType *, const ScriptVariant_t &, const char *)
@@ -2222,7 +2249,7 @@ bool ConvertIntegerValue(T *, const ScriptVariant_t &, const char *, const char 
 bool ConvertIntegerValue(T *, const ScriptVariant_t &, const char *, const char *) [T = unsigned char]
 bool ConvertIntegerValue(T *, const ScriptVariant_t &, const char *, const char *) [T = unsigned int]
 bool ConvertIntegerValue(T *, const ScriptVariant_t &, const char *, const char *) [T = unsigned short]
-bool Frustum_t::Intersects(Frustum_t &) const
+bool Frustum_t::Intersects(const Frustum_t &) const
 bool GetBreakpointHitCondition(const CLuaDBGpCommand &, CLuaDbgBreakpointData::HitCondition_t &)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, const char *, GetSymbolProc_t, IKeyValuesErrorSpew *)
@@ -2383,10 +2410,9 @@ float CVariantBase<CVariantDefaultAllocator>::operator float() const [CValueAllo
 float MatrixQuaternionFastTest(uint)
 float MatrixQuaternionTest(uint)
 float MatrixQuaternionTest2(uint)
-float QuaternionDotProduct(const Quaternion &, const Quaternion &)
-float QuaternionNormalize(Quaternion &)
 float( %float )
 float64
+float64 CVariantBase<CVariantDefaultAllocator>::operator double() const [CValueAllocator = CVariantDefaultAllocator]
 floor
 flush
 fmodEldexpCmin
@@ -2411,10 +2437,10 @@ function or expression too complex
 function or level expected
 function too long for return fixup
 function: builtin#%double
-g8Ic\$xH
 g_NuggetTest
 g_NuggetTestTable
 g_NuggetTestTable =
+g_pCVar
 gcinfo
 get length of
 getfenv
@@ -2537,6 +2563,7 @@ loop or previous error loading module '%short'
 lower
 lstring
 luaJIT_BC_%short
+lua_assert_on_error
 lua_debug> 
 lua_gettop( m_pCurrentLuaState ) == nStackTopStart
 lua_report_memory
@@ -2595,9 +2622,11 @@ m_pVM->Run( hScript, hScope, true ) == SCRIPT_DONE
 m_stringVal
 m_tail != QUEUE_ITERATOR_INVALID
 m_tail == QUEUE_ITERATOR_INVALID
+m_type == FIELD_BOOLEAN
 m_type == FIELD_COLOR32
 m_type == FIELD_EHANDLE
 m_type == FIELD_FLOAT
+m_type == FIELD_FLOAT64
 m_type == FIELD_HSCRIPT
 m_type == FIELD_HSCRIPT_LIGHTBINDING
 m_type == FIELD_INTEGER
@@ -2680,6 +2709,7 @@ numVectors > 0
 number
 numchars >= 2
 numchildren
+o8Ic]xH
 oR fD
 objlen
 offsetof
@@ -2693,7 +2723,6 @@ option
 output
 outputBuffer
 outsize >= 1
-p.IsValid()
 p00P`0P 
 p8p(`
 p8p8p
@@ -2711,6 +2740,7 @@ pInstance
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pMemory[int] == 0
 pName
 pNewSubKey->m_pPeer == NULL
 pNugget
@@ -2747,7 +2777,6 @@ perform arithmetic on
 place
 pointer
 popen
-pos.IsValid()
 preload
 print
 printstack
@@ -2775,7 +2804,7 @@ r,ff.
 r,ffffff.
 r.ffffff.
 r/fffff.
-r7fff.
+r<fff.
 rIfff.
 rJA#Nl
 rQff.
@@ -2825,8 +2854,8 @@ s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 s_pConfigRegistry->m_nCount >= 0 && s_pConfigRegistry->m_nCount < ARRAYSIZE(s_pConfigRegistry->m_pInfo)
 schemasystem
+scripts/vscripts
 scripts/vscripts/%short
-scripts\vscripts
 searchpath
 seeall
 selectHtonumber
@@ -2876,7 +2905,7 @@ state
 static
 static CSchemaEnumBindingBase *CSchemaEnumBinding<TestStruct_1::Enum_e>::Get() [T = TestStruct_1::Enum_e]
 static HSCRIPT CLuaVM::Lua_RefIndexToHScript(int)
-static KeyValues *KeyValues::FromJSON(CUtlBuffer &)
+static KeyValues *KeyValues::FromJSON(CUtlBuffer &, bool, bool *)
 static bool CNonMemberScriptBinding1<void (*)(const char *), void, const char *>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [FUNC_TYPE = void (*)(const char *), FUNCTION_RETTYPE = void, FUNC_ARG_TYPE_1 = const char *]
 static bool CNonMemberScriptBinding2<float (*)(float, float), float, float, float>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [FUNC_TYPE = float (*)(float, float), FUNCTION_RETTYPE = float, FUNC_ARG_TYPE_1 = float, FUNC_ARG_TYPE_2 = float]
 static bool CNonMemberScriptBinding2<int (*)(int, int), int, int, int>::Call(void *, void *, ScriptVariant_t *, int, ScriptVariant_t *) [FUNC_TYPE = int (*)(int, int), FUNCTION_RETTYPE = int, FUNC_ARG_TYPE_1 = int, FUNC_ARG_TYPE_2 = int]
@@ -2889,6 +2918,7 @@ static void CGlobalConfigValueRegistry::AddToList(const char *, ConfigType_t, Co
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 static void CTestNugget_1::Schema_VerifyBindingIsRegistered()
 static void CTestNugget_2::Schema_VerifyBindingIsRegistered()
+static void ConVarRef::InitDeferredConVarRefs()
 static void FourVectors::RotateManyBy(FourVectors *, unsigned int, const matrix3x4_t &)
 static void FourVectors::RotateManyBy(FourVectors *, unsigned int, const matrix3x4_t &, FourVectors *)
 static void TestRawStruct_1::Schema_VerifyBindingIsRegistered()
@@ -2904,7 +2934,7 @@ std::terminate()
 stderr
 stdin
 stdout
-steamapps\workshop\content
+steamapps/workshop/content
 step_into
 step_out
 step_over
@@ -2929,6 +2959,7 @@ t$ ffff.
 t$$fD
 t$(D9
 t$(E	
+t$0E;t$@u
 t$0I9
 t$2Hk
 t$8I9
@@ -2984,7 +3015,6 @@ u/...-D
 u1fffff.
 u64( %lld = 0x%llX )
 u:fffff.
-u>fffff.
 uAL;d$
 uVL){
 u\Hc{ H
@@ -3029,13 +3059,11 @@ unsigned short ffffff.
 unsigned short#L)0H
 unsigned short%ff.
 unsigned short&H9[8tUH
-unsigned short&L;unsigned char
-unsigned short)A#F
-unsigned short)A#G
-unsigned short,A#D$
+unsigned short)E#uT
 unsigned short,H+l$
 unsigned short-L9`
 unsigned short/HcN
+unsigned short<fff.
 unsigned short?fff.
 unsigned short[;S8sEH
 unsigned short]A;W8sIL
@@ -3059,9 +3087,7 @@ v1 != cross
 v2 != cross
 vEff.
 vFromAxis.LengthSqr() == 1
-vH[A^]
 vNfffff.
-vScale.IsValid()
 vToAxis.LengthSqr() == 1
 va_list
 value
@@ -3133,6 +3159,7 @@ void CLuaDBGpCommand::AddArgument(unsigned char, const char *, const char *)
 void CLuaDBGpCommand::Parse(const char *)
 void CLuaDBGpTransport::ReadPackets()
 void CLuaVM::CreateKeyValuesFromTable_R(HSCRIPT, KeyValues *, CLuaVM::KVConversionContext_t &)
+void CLuaVM::HandleError(const char *, const char *)
 void CLuaVMDbg::CommitEnv(lua_State *) const
 void CLuaVMDbg::DebugHook(lua_State *, lua_Debug *)
 void CLuaVMDbg::GetGlobals(CUtlVector<CLuaValue> &, uint32, uint32) const
@@ -3143,9 +3170,9 @@ void CLuaVMDbg::GetUpvalues(CUtlVector<CLuaValue> &, uint32, uint32, uint32) con
 void CLuaVMDbg::RemoveBreakpoint(uint32)
 void CLuaVMDbg::SetTableValue(lua_State *, const char *) const
 void CNuggetManager::TestFunc()
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CSchemaClassBindingBase::RegBase(ISchemaSystem *, const char *, const char *, CSchemaClassInfo *, const char *) [I = int]
 void CSchemaClassInfo::CompleteInitialization(const CSchemaClassBindingBase *)
 void CSchemaClassInfo::CompleteInitializationInternal(CSchemaType *, const CSchemaClassBindingBase *)
@@ -3165,7 +3192,6 @@ void CUtlHandleTable<CBaseNugget_Private, 16>::RemoveHandle(UtlHandle_t) [T = CB
 void CUtlHandleTable<CBaseNugget_Private, 16>::SetHandle(UtlHandle_t, T *) [T = CBaseNugget_Private, HandleBits = 16]
 void CUtlMemory<unsigned char, int>::Swap(CUtlMemory<T, I> &) [T = unsigned char, I = int]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-void CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 void CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::RemoveAll() [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 void CUtlString::SetDirect(const char *, int)
 void CUtlStringBuilder::Data::SetError(bool)
@@ -3205,17 +3231,10 @@ void LuaDebugHook(lua_State *, lua_Debug *)
 void MathLib_Init()
 void MatrixBuildRotation(VMatrix &, const Vector &, const Vector &)
 void Parabolic_Spline(const Vector &, const Vector &, const Vector &, const Vector &, float, Vector &)
-void QuaternionAdd(const Quaternion &, const Quaternion &, Quaternion &)
 void QuaternionAngles(const Quaternion &, QAngle &)
 void QuaternionAngles(const Quaternion &, RadianEuler &)
 void QuaternionAverageExponential(Quaternion &, int, const Quaternion *, const float *)
-void QuaternionConjugate(const Quaternion &, Quaternion &)
 void QuaternionInvert(const Quaternion &, Quaternion &)
-void QuaternionMatrix(const Quaternion &, const Vector &, const Vector &, matrix3x4_t &)
-void QuaternionMatrix(const Quaternion &, const Vector &, matrix3x4_t &)
-void QuaternionMatrix(const Quaternion &, matrix3x4_t &)
-void QuaternionMatrixOrientationOnly(const Quaternion &, matrix3x4_t &)
-void QuaternionMult(const Quaternion &, const Quaternion &, Quaternion &)
 void QuaternionScale(const Quaternion &, float, Quaternion &)
 void QuaternionSlerpNoAlign(const Quaternion &, const Quaternion &, float, Quaternion &)
 void QuaternionVectorsFLU(const Quaternion &, Vector *, Vector *, Vector *)
@@ -3231,7 +3250,6 @@ void VectorTransform(const float *, const matrix3x4_t &, float *)
 void _V_binarytohex(const byte *, int, char *, int)
 void _V_hextobinary(const char *, int, byte *, int)
 void _VectorNormalizeFast(Vector &)
-void([A^]
 volatile
 vscript
 vtable for __cxxabiv1::__class_type_info
@@ -3240,7 +3258,6 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vzffffff.
 w6fff.
 wchar_t
-wchar_t char::* L
 wchar_t"HcG$H
 where
 while
@@ -3257,8 +3274,10 @@ yperror
 zfffff.
 {$,ulL
 {(D;{,void
+{0;{@u
 {8H;wchar_t
 {8HcS0H
+{`D;{pu[
 {`u$1
 {pD;{trd
 {unsigned short*%H
@@ -3268,9 +3287,10 @@ zfffff.
 |$$A)
 |$(E1
 |$(w8I
-|$0E;|$@u#L
 |$4uCA
 |$8H;}
+|$8Hc
+|$8Ic
 |$Pu*
 |$Pu/H
 |$XI9
@@ -3286,7 +3306,6 @@ zfffff.
 }$D+}
 }HA;EP}
 ~&ffff.
-~8v9H
+~PtAL
 ~Qfffff.
-~off.
 ~unsigned short*%L

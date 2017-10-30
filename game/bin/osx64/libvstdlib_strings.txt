@@ -4,6 +4,7 @@
 	ParseToken
 	Value is actually %short, code is expecting signed char %short value
 	Value is actually type %short, code is expecting signed char %short type value
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	child: "%short"
 	fffff.
 	parent (wins): "%short"
@@ -29,10 +30,10 @@
    "%short"
    %short
    - %short
+  @``0 
  ( def. "%short" )
  (once).
  @0 @@
- @``0 
  ReadToken overflow
  [%.3f server clamped to %.3f]
  [A\A^A_]
@@ -40,7 +41,6 @@
  ffff.
  max. %float
  min. %float
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
@@ -50,6 +50,7 @@
 !IsInitialized()
 !bCreate
 !bDifferent
+!ffff.
 !fffff.
 !m_bExecOnThreadPoolThreadsOnly
 !m_bIsDiscardingEvents
@@ -87,6 +88,7 @@ $$t4M
 %-80s : %-16s : %-32s : %short
 %3i convars/concommands for [%short]
 %3i total convars/concommands
+%fffff.
 %int %int %int %int
 %short %char%short
 %short %double
@@ -96,6 +98,7 @@ $$t4M
 %short: string format requested %double chars
 &YA1H
 &YA1L
+&ffffff.
 'ffff.
 ( (m_alignment-1) & (uintp)m_pBase ) == 0
 ( __int128 - 1 ) * nBlockSize < num
@@ -108,23 +111,24 @@ $$t4M
 (*%short*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
-(fffff.
 (intp)this % 16 == 0
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uEHcK
+)fff.
 )fffff.
+)ffffff.
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
 *** ConVar "%short" was not unregistered! Shutdown crash imminent!
-+C$A9E
 +K Hc
 +K<Hc
-,7L;k void"
 ,>L;int v2
 ,@~cH
 ,ffff.
+,ffffff.
 --------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 -attachtodebugger
@@ -144,6 +148,7 @@ $$t4M
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/convar.h
@@ -205,6 +210,7 @@ $$t4M
 2EP20IUniformRandomStream
 3V_SplitStringPKcS0_R10CUtlVectorI
 3ffff.
+3ffffff.
 49K }
 49S |}
 4AttachToStreamEP20IUniformRandomStream
@@ -213,29 +219,26 @@ $$t4M
 8[A\A]A^A_]
 8[A^A_]
 8ffff.
+8ffffff.
 9RandomIntEii
 9S |signed char
 9S |unsigned int
 ;L9'u
 ;L97u
-;ffff.
 <#L;unsigned long long v2
 <$L9?u
-<$v9H
 <(9{ |jI
 </script>
+<4M;} void"
 <NULL>
-<ffffff.
 <invalid handle>
 <null>
 <unknown>
 <unspecified>
 >L97t-H
-@(I3D$(H
-@(I3F(I
-@CFiber::DetachFromStackContext()
-@CFiber::ReleasePooledFiber()
-@CFiber::ResumeJob()
+@CFiber::IsReadyToResume()
+@CFiber::ReachedZeroReferences()
+@CFiber::ResumeJob(void*)
 @CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
 @CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
 @CThread::GetThreadHandle()
@@ -295,7 +298,6 @@ $$t4M
 @_CommandLine
 @_CreateSimpleThread
 @_DevMsg
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -354,6 +356,7 @@ $$t4M
 @_ThreadTerminateProcessCode
 @_ThreadWaitForProcessExit
 @_ThreadYield
+@_V_FixDoubleSlashes
 @_V_GetErrno
 @_V_SetErrno
 @_V_StripFilename
@@ -364,7 +367,7 @@ $$t4M
 @_V_atoi
 @_V_fclose
 @_V_fflush
-@_V_fopen
+@_V_fopenUTF8
 @_V_fprintf
 @_V_fread
 @_V_freopen
@@ -376,7 +379,6 @@ $$t4M
 @_V_powf
 @_V_qsort
 @_V_qsort_s
-@_V_rand
 @_V_snprintf
 @_V_sscanf
 @_V_stricmp_fast
@@ -393,6 +395,7 @@ $$t4M
 @__Unwind_Resume
 @__V_ComposeFileName
 @__V_ExtractFilePath
+@__V_MakeAbsolutePath
 @__V_strncat
 @__V_strncpy
 @__V_strnicmp_fast
@@ -430,6 +433,7 @@ $$t4M
 @_memmove
 @_memset
 @_memset_pattern16
+@_open
 @_pipe
 @_poll
 @_pthread_getspecific
@@ -447,6 +451,7 @@ $$t4M
 @_strcpy
 @_strerror
 @_strlen
+@_unlink
 @_wcslen
 @_write
 @dyld_stub_binder
@@ -457,16 +462,17 @@ $$t4M
 @std::terminate()
 @typeinfo for CThread
 @typeinfo for std::bad_alloc
+@u?Ic
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
 A channel specifier is either:
 A#D$$
+A(I3G(H
 A+D$$H
 A+D$$Hc
-A+D$`I
+A+M Hc
 A+O Hc
-A+wchar_t ~
 A9T$ }
 A9V |fA
 A9V }	
@@ -476,18 +482,16 @@ A9\$$
 A9^$|
 A;D$ ~
 A;G ~
-A;N<u
+A;L$<u
+A;L$hu
+A;Mx|
 A;O ~
 A;\$@|
-A;\long long|
+A;](vFH
 A;]long long|
-A;^ u
-A;^hu
-A;_(u 
 A;_8|
-A;_Hu 
 A;_X|
-A;_hu 
+A;}Pu
 ACCESSIBLE_FROM_THREADS
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
@@ -497,7 +501,6 @@ ASATAp
 ATARARAp
 ATARBRAp
 ATASATAp
-ATC`6ATAp
 ATTEMPTED TO DECOMMIT OWNED MEMORY STACK SPACE
 AWAVATS
 AWAVATSA
@@ -514,6 +517,7 @@ AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
 AWAVS
+AWAVSA
 AWAVSH
 AWAVSP
 AWAVSPA
@@ -526,9 +530,10 @@ AZBSAp
 A[ATAp
 Affff.
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
-AlignValue( m_nBytesFree, 16 ) == m_nBytesFree
+AlignValue( m_pFirstBlock->m_nBytesFree, 16 ) == m_pFirstBlock->m_nBytesFree
 AlignValue( nBlockSize, 16 ) == nBlockSize
 All functions are case insensitive.
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -550,6 +555,7 @@ Attempted to set read-only configuration value "%short"!
 Attempted to set unknown configuration value %short!
 Attempted to set unknown configuration value!
 Available flags to search for: 
+B(I3D$(I
 BRBRBVBRBUARB`
 Bad expression operator: '%char%char', expected C style boolean expression operator.
 Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
@@ -561,6 +567,7 @@ C [A^]
 C,+C<Hc
 C8+C(D9
 C8;C(uQ
+C;T4 u
 C<D){8H
 CAsyncScheduledFunctionManager
 CBaseAppSystem<IConfigurationSystem>
@@ -588,9 +595,9 @@ CDmSymbolTableLarge
 CEmptyConVar
 CEventQueue::~CEventQueue()
 CEventSystem
-CFiber::DetachFromStackContext()
-CFiber::ReleasePooledFiber()
-CFiber::ResumeJob()
+CFiber::IsReadyToResume()
+CFiber::ReachedZeroReferences()
+CFiber::ResumeJob(void*)
 CFmtStrN<1024, false>
 CFmtStrN<1024, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
 CFmtStrN<256, false>
@@ -614,6 +621,8 @@ CLIENTDLL
 COLORCORRECTION_VERSION_1
 COneTimeEvent
 COneTimeEvent::Allocate()
+CPooledFunctorJob
+CPooledFunctorJob CUtlMemoryPool
 CProcess
 CProcess::CProcess(CProcessUtils *, const ProcessInfo_t &)
 CProcessPipeRead
@@ -732,6 +741,7 @@ CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
 CUtlNoEscConversion
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlStringTokenHash_DatabaseFormat::CUtlStringTokenHash_DatabaseFormat(uint32)
 CUtlStringTokenSystem
@@ -766,6 +776,7 @@ Conditional Error: %short
 ConfigurationSystem_001
 Console
 Console command %short added twice!
+Construction is only allowed from the resolve function
 ContainsCRLF()
 ContainsCRLF() == bContainsCRLF
 Convar %short has conflicting %short flags (child: %short%short, parent: %short%short, parent wins)
@@ -780,14 +791,12 @@ D$(E1
 D$(H9
 D$8A;D$(u`A
 D$XH9
-D+s8F
+D$lIc
+D$pfA
 D+w8D
 D.(H9
 D.0Lc M
 D9sXu
-D;cHu
-D;k(u
-D;{(vFH
 DEFAULT_WRITE_PATH
 DEVELOPMENTONLY
 DONTRECORD
@@ -802,15 +811,20 @@ DevMsg(char const*, ...)
 DevWarning(char const*, ...)
 DotaCardGameClient_001
 Dumps information about all logging channels.
+E(fff.
+E+h8D
 E9|$$|
-E;__float128 tQA
 E;__int128 ~0
-E;l$H|
-E;uPu$I
-E;~ u
-E;~@u
+E;float u
+E;float@u
+E;l$ u
+E;l$H
+E;l$hu
+E;l$x
+E;unsigned __int128 tQA
 ENGLISH
 EXECUTE_PER_TICK
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EXfff.
 EconItemToolModel_001
 Enabling flag '%short' on channel '%short'.
@@ -853,8 +867,6 @@ FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Forced execute test failed!
 G8H	p(]
-G;|4 u!H
-GA#D$
 GAMECONSOLE
 GAMEDLL
 GERMAN
@@ -882,7 +894,7 @@ H__Znwm
 HammerMapLoader001
 HandleToData
 Hc	Hc
-HcX I
+HcNXH
 Help Text
 HelpSystem_001
 HostStateMgr001
@@ -891,25 +903,16 @@ I CUtlLinkedList<CEventId::SubscribedQueue_t, long long, true, long long, CUtlFi
 I CUtlLinkedList<CLoopInfo *, int, false, int, CUtlMemory<UtlLinkedListElem_t<CLoopInfo *, int>, int> >::AllocInternal(bool) [T = CLoopInfo *, S = int, ML = false, I = int, M = CUtlMemory<UtlLinkedListElem_t<CLoopInfo *, int>, int>]
 I CUtlLinkedList<CProcess *, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CProcess *, long long> > >::AllocInternal(bool) [T = CProcess *, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CProcess *, long long> >]
 I CUtlLinkedList<void (*)(long long, const void *, const void *), unsigned short, true, unsigned short, CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short> >::AllocInternal(bool) [T = void (*)(long long, const void *, const void *), S = unsigned short, ML = true, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short, CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = unsigned short, L = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short, CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = unsigned short, L = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short, CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = unsigned short, L = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-I CUtlRBTree<ConVarOrConfigValue, int, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = ConVarOrConfigValue, I = int, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int>]
 I CUtlRBTree<ConVarOrConfigValue, int, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int> >::NewNode(const T *) [T = ConVarOrConfigValue, I = int, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int>]
-I CUtlRBTree<ConVarOrConfigValue, unsigned short, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = ConVarOrConfigValue, I = unsigned short, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short>]
 I CUtlRBTree<ConVarOrConfigValue, unsigned short, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short> >::NewNode(const T *) [T = ConVarOrConfigValue, I = unsigned short, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short>]
-I#D$(H	A(A
+I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+I#D$(H	B(A
 I20CUniformRandomStream
 IAppSystem
 IAsyncScheduledFunctions
@@ -939,8 +942,13 @@ ITestScriptMgr
 IThreadPool
 IUniformRandomStream
 IUtlStringTokenSystem
-Ic_ H
-IcwxH
+IcL$ H
+IcL$hH
+IcMPH
+IcN H
+IcN@H
+Ic_(A;_
+Ict$xH
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -952,6 +960,7 @@ Interface
 Internal_GetSubKey() != NULL
 Internal_GetSubKey() == NULL
 Internal_GetSubKey() == dat
+Invalid group index %double
 InvalidHandle() == dbghand
 IsFlagSet( FCVAR_SS_ADDED )
 IsIdxValid(int)
@@ -985,24 +994,23 @@ KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file 
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 L$ E1
 L$8;Yx|
+L%unsigned short*%K
 L&unsigned short**K
-L'Pt2J
-L.Pt$H
+L/Pt2J
 L40t*K
 L90t*H
 L;>t1L9
 L;int void
-L;k void
 L;unsigned long long void
-L;{ v.
 L;{ void
+L;{ void-
 L?333?
 L?unsigned short*)H
 LINKED_CONCOMMAND
 LINUX
 LOWVIOLENCE
-Lc5cT 
-LightingBuilderMgr001
+Lc539 
+Lcs E1
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
 LockGlobalObjectRegistry
@@ -1012,6 +1020,7 @@ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ..
 M96u/H
 M96u;H
 M;w8u
+M;} void
 MATCHFRAMEWORK_001
 MATERIAL_SYSTEM_THREAD
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
@@ -1023,7 +1032,7 @@ Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
 Mffff.
-ModelDocCommandSystem001
+ModelDocUtils001
 Mutex Should have protected use while processing
 N([A^]
 NEVER_AS_STRING
@@ -1037,11 +1046,11 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 NewThreadPool
-O [A\A^A_]
 OS error message:
-Offffff.
 OrCreateQuantizedFloatEncoder
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 Out of keyvalue string space
 POLISH
 PORTUGUESE
@@ -1152,6 +1161,7 @@ SplitString2PKcPS0_iR10CUtlVectorIPc10CUtlMemoryIS3_iEE
 Start signed char test script running..
 StatsService_001
 StdLib_GetICVarFactory
+SteamAudio001
 StringToken
 StringTokenDataBaseFormatToHash( m_nDatabaseFormat ) == nHash
 T &CUtlFixedMemory<UtlLinkedListElem_t<CConCommandHash::HashEntry_t, long long> >::operator[](intp) [T = UtlLinkedListElem_t<CConCommandHash::HashEntry_t, long long>]
@@ -1165,7 +1175,7 @@ TBRAp
 TBRBRBp
 TBTARBRBRBRAp
 TBTAp
-TB[ATBRAp
+TB[ATBRBRB[ATAp
 TB]ATAp
 TB]A`
 TCHINESE
@@ -1178,6 +1188,7 @@ TCSGp
 TCWARBRAUBSASATB`
 TCZAp
 TC`6ATAp
+TC`9ATAp
 TESTSCRIPT: CheckPoint -> '%short'.
 TESTSCRIPT: waiting for checkpoint '%short'%short
 TM96u/H
@@ -1336,7 +1347,7 @@ Yffffff.
 [ConsoleOnly]
 [DoNotEcho]
 [unsigned short,fD
-\$ E1
+\$0E1
 \<`H9
 ^ [A^]
 _AssertMsg_ConditionFailed
@@ -1348,7 +1359,6 @@ _CreateNewThreadPool
 _CreateSimpleThread
 _DestroyThreadPool
 _DevMsg
-_EarlyInit_Tier0
 _Event_CreateHandle
 _Event_DestroyHandle
 _Event_HandleToData
@@ -1428,6 +1438,7 @@ _TransferMemory
 _UnRegisterGlobalObject
 _UnlockGlobalObjectRegistry
 _VStdLib_GetICVarFactory
+_V_FixDoubleSlashes
 _V_GetErrno
 _V_LogMultiline
 _V_LogMultilineToArray
@@ -1445,7 +1456,7 @@ _V_atof
 _V_atoi
 _V_fclose
 _V_fflush
-_V_fopen
+_V_fopenUTF8
 _V_fprintf
 _V_fread
 _V_freopen
@@ -1457,7 +1468,6 @@ _V_logf
 _V_powf
 _V_qsort
 _V_qsort_s
-_V_rand
 _V_snprintf
 _V_sscanf
 _V_stricmp_fast
@@ -1477,6 +1487,7 @@ __TEXT
 __Unwind_Resume
 __V_ComposeFileName
 __V_ExtractFilePath
+__V_MakeAbsolutePath
 __V_strncat
 __V_strncpy
 __V_strnicmp_fast
@@ -1501,6 +1512,7 @@ __const
 __cstring
 __data
 __exit
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __int128 * nBlockSize >= num
@@ -1532,6 +1544,7 @@ _memcpy
 _memmove
 _memset
 _memset_pattern16
+_open
 _pipe
 _poll
 _pthread_getspecific
@@ -1550,12 +1563,14 @@ _strcpy
 _strerror
 _strlen
 _strnlen
+_unlink
 _wcslen
 _write
 `000 
 `M96u;H
 `[A\A^A_]
 `` @ 
+``Pp0 
 ````````
 `unsigned char[A\A^A_]
 andom
@@ -1563,7 +1578,10 @@ appears in lower database
 application
 archive
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 auto CThreadPool::YieldWait(CJob **, int, bool, uint32)::(anonymous class)::operator()() const
+auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 bContainsCRLF
 bSetFromSchemaFile || !( pValue->m_nFlags & VALUE_FLAGS_GROUP_ASSIGNED ) || (uint32)opt.m_nGroup == pValue->m_nGroup
 bin\stringtokendatabase.txt
@@ -1591,6 +1609,7 @@ buffer
 c8D+char(E9
 callback
 callback && m_GlobalChangeCallbacks.Find( callback ) < 0
+char(ffff.
 cheat
 cl_language
 client
@@ -1635,6 +1654,8 @@ essential
 execute_per_tick
 extra.AddToTail() == nTail
 false
+fcntl failed to set F_NOCACHE
+ff.
 ffff.
 fffff.
 ffffff.
@@ -1647,7 +1668,7 @@ float CQuantizedFloatEncoder::AssignRangeMultiplier(uint32, float)
 float CQuantizedFloatEncoder::GetExactEncodeTestCase(int) const
 float32
 frame_end
-g8Ic\$xH
+g_pCVar
 gister
 hCaseSensitiveSymbol <= INVALID_KEY_SYMBOL
 hElem != m_SharedStrings.Hash.InvalidHandle()
@@ -1656,6 +1677,7 @@ help text
 help:  no cvar or command named %short
 hex color: RRGGBBAA                         // A hexadecimal color value in the order RGBA.
 hfff.
+hpff.
 iElement == Find(cmd->GetName())
 info.m_pReplacementString == 0
 initialCommit <= m_maxSize
@@ -1668,6 +1690,7 @@ int CProcessPipeRead::GetBytesToRead(int)
 int CUtlBuffer::ParseToken(characterset_t *, char *, int, bool)
 int CUtlQueue<int, CUtlMemory<int, int> >::Count() const [T = int, M = CUtlMemory<int, int>]
 int CUtlString::FormatV(const char *, __va_list_tag *)
+int FioCreateFile(const char *, EFioAccessFlags, EFioShareFlags, EFioCreateMode, uint, OSFILEHANDLE *)
 int FioWrite(OSFILEHANDLE, const void *, int32, int32 *)
 int _V_strncmp(const char *, const char *, int)
 int32
@@ -1724,7 +1747,6 @@ m_iDataType == TYPE_NONE
 m_maxSize > 0
 m_nAllocStatsId == INVALID_ALLOC_STATS_ID
 m_nArgv0Size != 0
-m_nBytesFree == 0
 m_nConfigLock[int] >= 0
 m_nCurrNameOffset < ( 1 << ( 32 - CHANGE_CALLBACK_INDEX_BIT_COUNT ) )
 m_nIdleThreads == 0
@@ -1754,9 +1776,10 @@ nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nDataSize < CONFIG_DATA_BLOCK_SIZE
 nFlags >= 0 && nFlags <= UINT8_MAX
+nIndex != pDisabledBlob->m_DisabledModeAllocations.InvalidIndex()
 nIndex != uint16( -1 )
 nIndex < ( unsigned int )m_list.Count()
-nIndex < 32
+nIndex < 128
 nIndex == nKeyIndex
 nMaxBytes >= 0
 nMaxChars > 0
@@ -1779,6 +1802,7 @@ notify
 npffffff.
 numchars >= 2
 numeric
+o8Ic]xH
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
@@ -1796,6 +1820,7 @@ pFileSystem
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
+pMemory[int] == 0
 pName
 pOpcodeTable->m_nDstPointerIndex < nNumDstPointers
 pOpcodeTable->m_nSrcPointerIndex < nNumSrcPointers
@@ -1822,6 +1847,7 @@ render_thread
 replicated
 resourceName
 ret != 0
+ret == 0
 s8D+short(D
 sTemp.Length() == nToRead
 s_nConnectionCount > 0
@@ -1843,10 +1869,12 @@ static int CConfigurationSystem::GetValueIsDefaultFlag(CSplitScreenSlot)
 static void CCvar::Con_LogFunctionHelper(const CCommand &, LogFunctionActionFunc)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
 static void COneTimeEvent::Allocate()::_CAssertFastInternal::AssertionFailed()
+static void ConVarRef::InitDeferredConVarRefs()
 std::terminate()
 string
 stringtokendatabase.txt
 symbol <= INVALID_KEY_SYMBOL
+t$ E1
 t$8A)
 t$fff.
 t3ffff.
@@ -1856,11 +1884,8 @@ tHE;~
 tHIcD$
 tLMc~
 tMff.
-tVA9_
 testscript_debug
 threadsafe
-tlfff.
-tq~fH
 tripAndPreserveHTML
 typeinfo for CThread
 typeinfo for CUniformRandomStream
@@ -1882,15 +1907,21 @@ uint64
 unThreadPoolTests
 unit test
 unknown
-unsigned __int128 char::*(E;unsigned __int128
 unsigned char[A\A]A^A_]
 unsigned short%ffff.
 unsigned short&H9[8tUH
 unsigned short&L9#u
+unsigned short&fffff.
 unsigned short+ff.
+unsigned short,fff.
 unsigned short-L9`
+unsigned short/ff.
+unsigned short;ff.
+unsigned short<fff.
+unsigned short\E9g
 unsigned(hHash)<=m_uiBucketMask
 uwHcE
+vHct
 value
 value.m_nConfigType == CONFIG_LAUNCH || value.m_nConfigType == CONFIG_MACHINE || value.m_nConfigType == CONFIG_APPLICATION
 vconsole_fuzzy
@@ -1899,6 +1930,7 @@ vector2
 vector3
 vector4
 verbosity: off, essential, default,         // Sets how verbose signed char channel is allowed to be.
+vhw'H
 virtual ConCommandBase *CCvar::CCVarIteratorInternal::Get()
 virtual ConVar *CCvar::FindVar(const char *)
 virtual ConfigValueHandle_t CConfigurationSystem::FindConfigValue(CUtlStringToken, ConfigValueType_t) const
@@ -1906,6 +1938,7 @@ virtual HKeySymbol CKeyValuesSystem::GetCaseInsensitiveSymbolFromCaseSensitiveSy
 virtual HKeySymbol CKeyValuesSystem::GetSymbolForString(const char *, bool)
 virtual HKeySymbol CKeyValuesSystem::GetSymbolForStringCaseSensitive(HKeySymbol &, const char *, bool)
 virtual IProcess *CProcessUtils::StartProcessWithEnv(const char *, int, const char *, const char *)
+virtual bool CConfigurationSystem::IsConfigValueGroupLocked(int)
 virtual bool CCvar::HasQueuedMaterialThreadConVarSets() const
 virtual bool CCvar::IsMaterialThreadSetAllowed() const
 virtual bool CGlobalThreadPool::OnFinalRelease()
@@ -1956,7 +1989,6 @@ virtual void ConVar::InternalSetValue(const char *)
 void *CMemoryStack::Alloc(unsigned int, bool)
 void *CUtlBuffer::AccessForDirectRead(int)
 void *CUtlMemoryPoolBase::Alloc()
-void *CUtlScratchMemoryPool::AddNewBlock(int)
 void CConVarSnapshot::AddConVar(const char *, const char *)
 void CConfigurationSystem::AddCompletionCallback(const char *, ConfigType_t, ConfigCompletionCallback_t)
 void CEventQueue::DiscardEvents(CFunctorCallback *)
@@ -1967,10 +1999,10 @@ void CKeyValuesSystem::ReleaseSharedString(const char *, size_t)
 void CKeyValuesTokenReader::SeekBackOneToken()
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
-void CMemoryStack::RegisterAllocation()
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void CMemoryStack::RegisterAllocation(uint32)
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void CSemiAutoRWLockT<CThreadRWLock_FastRead>::Unlock() [RWLOCK_TYPE = CThreadRWLock_FastRead]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, CUtlMemoryPoolBase::CBlob, &CUtlMemoryPoolBase::CBlob::m_pNext>::Push(T *) [T = CUtlMemoryPoolBase::CBlob, POINTER_TYPE = CUtlMemoryPoolBase::CBlob, CONTAINER_TYPE = CUtlMemoryPoolBase::CBlob, LINKED_LIST_PTR = &CUtlMemoryPoolBase::CBlob::m_pNext]
 void CTSFastPushQueue_Base<CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, CUtlMemoryPoolBase::FreeList_t, &CUtlMemoryPoolBase::FreeList_t::pNext>::Push(T *) [T = CUtlMemoryPoolBase::FreeList_t, POINTER_TYPE = CUtlMemoryPoolBase::FreeList_t, CONTAINER_TYPE = CUtlMemoryPoolBase::FreeList_t, LINKED_LIST_PTR = &CUtlMemoryPoolBase::FreeList_t::pNext]
@@ -2017,24 +2049,22 @@ void CUtlLinkedList<CProcess *, long long, true, long long, CUtlFixedMemory<UtlL
 void CUtlLinkedList<void (*)(long long, const void *, const void *), unsigned short, true, unsigned short, CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short> >::LinkBefore(I, I) [T = void (*)(long long, const void *, const void *), S = unsigned short, ML = true, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short>]
 void CUtlLinkedList<void (*)(long long, const void *, const void *), unsigned short, true, unsigned short, CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short> >::RemoveAll() [T = void (*)(long long, const void *, const void *), S = unsigned short, ML = true, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short>]
 void CUtlLinkedList<void (*)(long long, const void *, const void *), unsigned short, true, unsigned short, CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short> >::Unlink(I) [T = void (*)(long long, const void *, const void *), S = unsigned short, ML = true, I = unsigned short, M = CUtlMemory<UtlLinkedListElem_t<void (*)(long long, const void *, const void *), unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short, CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, I = unsigned short, L = CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<ConVar *, CCvar::SplitScreenAddedConVars_t, unsigned short, bool (*)(ConVar *const &, ConVar *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short, CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = unsigned short, L = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short, CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, I = unsigned short, L = CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<HKeySymbol, bool, unsigned short, bool (*)(const HKeySymbol &, const HKeySymbol &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, CThreadEvent *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, int, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 void CUtlRBTree<CVCoverage::Location_t, unsigned short, CVCoverage::CLocationLess, CUtlMemory<UtlRBTreeNode_t<CVCoverage::Location_t, unsigned short>, unsigned short> >::RemoveAll() [T = CVCoverage::Location_t, I = unsigned short, L = CVCoverage::CLocationLess, M = CUtlMemory<UtlRBTreeNode_t<CVCoverage::Location_t, unsigned short>, unsigned short>]
-void CUtlRBTree<ConVarOrConfigValue, int, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = ConVarOrConfigValue, I = int, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int>]
 void CUtlRBTree<ConVarOrConfigValue, int, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int> >::RemoveAll() [T = ConVarOrConfigValue, I = int, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, int>, int>]
-void CUtlRBTree<ConVarOrConfigValue, unsigned short, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = ConVarOrConfigValue, I = unsigned short, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short>]
 void CUtlRBTree<ConVarOrConfigValue, unsigned short, bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short> >::RemoveAll() [T = ConVarOrConfigValue, I = unsigned short, L = bool (*)(const ConVarOrConfigValue &, const ConVarOrConfigValue &), M = CUtlMemory<UtlRBTreeNode_t<ConVarOrConfigValue, unsigned short>, unsigned short>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FreeNode(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAt(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlScratchMemoryPool::FreeAll()
-void CUtlScratchMemoryPool::Init(int, void *)
+void CUtlScratchMemoryPool::Init(int, void *, bool)
 void CUtlString::SetDirect(const char *, int)
 void CUtlStringTokenSystem::RegisterStringToken(uint32, const char *, bool)
 void CUtlStringTokenSystem::WriteDatabaseFileUpdates()
@@ -2079,11 +2109,16 @@ z1H
 {%double %double %double %double}
 {0 0 0 255}
 {}()':
-|'Pffff.
+|$XHc
+|$XLc
+|$`Ic
+|/Pffff.
 }HA;EP}
 ~ E9t$$|
 ~!A9^$|
+~$fffff.
 ~*fffff.
+~0ffffff.
 ~bA9^$|\Hc
 ~pffff.
 ~uffff.

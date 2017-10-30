@@ -51,11 +51,13 @@
 			m_bAdditive = true
 			m_flOverbrightFactor = 2.000000
 			m_hTexture = resource:"materials/particle/spark_glow_02.vtex"
+			m_bTintByFOW = true
 		},
 		{
 			_class = "C_OP_RenderSprites"
 			m_bAdditive = true
 			m_hTexture = resource:"materials/particles/light_flare/light_glow_01.vtex"
+			m_bTintByFOW = true
 		},
 	]
 	m_Initializers = 

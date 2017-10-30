@@ -17,12 +17,11 @@
 	[
 		{
 			_class = "C_OP_BasicMovement"
-			m_fDrag = 0.100000
 			m_Gravity = 
 			[
 				0.000000,
 				0.000000,
-				100.000000,
+				-22.000000,
 			]
 		},
 		{
@@ -155,12 +154,27 @@
 			m_flOutputMax = 0.000000
 			m_bScaleInitialRange = true
 		},
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				-5.000000,
+			]
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				-10.000000,
+			]
+		},
 	]
 	m_Emitters = 
 	[
 		{
 			_class = "C_OP_ContinuousEmitter"
-			m_flEmitRate = 32.000000
+			m_flEmitRate = 20.000000
 		},
 	]
 	m_ForceGenerators = 
@@ -176,6 +190,31 @@
 			m_fForceAmount = 500.000000
 			m_fFalloffPower = 0.000000
 			m_bDisableOperator = true
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
 		},
 	]
 }

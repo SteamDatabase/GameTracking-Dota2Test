@@ -29,4 +29,34 @@
 			m_ChildRef = resource:"particles/econ/items/slardar/sl_slardar_trident/sl_slardar_trident_d.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_trident"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/slardar/sea_devil/slardar_sea_devil_weapon.vmdl"
+			}
+		},
+	]
 }

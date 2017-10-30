@@ -11,12 +11,12 @@
 		</Panel>
 
 		<Panel id="CurrentSetContainer" onactivate="DOTAShowHeroSetPickerContextMenu()">
-			<DOTAHeroSetPickerSet id="CurrentSetPanel" />
+			<DOTAHeroSetPickerSet id="CurrentSetPanel"/>
 			<Panel id="MenuArrowContainer">
 				<Panel id="MenuArrow" />
 			</Panel>
 		</Panel>
 		
-		<TextButton id="SaveSetButton" class="ButtonBevel" text="Save as Custom Set" onactivate="DOTASaveEquippedAsCustomSet()" />
+		<TextButton id="SaveSetButton" class="ButtonBevel" text="#DOTA_SavedSets_SaveAsCustomSet" onactivate="DOTASaveEquippedAsCustomSet()" />
 	</DOTAHeroSetPicker>
 </root>

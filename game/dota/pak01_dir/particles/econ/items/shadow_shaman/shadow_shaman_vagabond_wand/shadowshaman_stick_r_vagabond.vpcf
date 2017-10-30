@@ -97,4 +97,34 @@
 			m_ChildRef = resource:"particles/econ/items/shadow_shaman/shadow_shaman_vagabond_wand/shadowshaman_stick_b_vagabond_eye_r.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_attack1"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/shadowshaman/vagabond_wand/vagabond_wand.vmdl"
+			}
+		},
+	]
 }

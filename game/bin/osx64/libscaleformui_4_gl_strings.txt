@@ -6,6 +6,7 @@
 	Q?& Q?]6Q?
 	Scaleform::GFx::CompactedFont<Scaleform::ArrayPagedLH_POD<unsigned char, 12, 256, 261> >
 	Scaleform::GFx::CompactedFont<Scaleform::ArrayUnsafeLH_POD<unsigned char, 261> >
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	mode_
 	r&#E
 	u?L-u?{Pu?\su?
@@ -249,7 +250,6 @@
 !	@Scaleform::GFx::AS3::Instances::fl_filters::BevelFilter
 !!! ExecuteEvent finished '%short' = %p for %short
 !!! ExecuteEvent started '%short' = %p for %short
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
@@ -314,6 +314,7 @@ $ 4xI
 $$L;long double
 $$M#l$
 $$tLL
+$$wOH
 $'?O`'?
 $;X r
 $>bool(%>8
@@ -325,6 +326,7 @@ $HcL$
 $IMECandidateListFont
 $ff.
 $fff.
+$ffff.
 $fffff.
 $ffffff.
 $sse2
@@ -419,7 +421,6 @@ $y_sse2
 (*%short*), 
 (*MARK) must have an argument
 (*VERB) not recognized or malformed
-(-PI&
 (8HXhx
 (<unsigned short>I
 (=ef5=
@@ -449,6 +450,7 @@ $y_sse2
 (fffff.
 (ffffff.
 (impl_mmx
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (nBytes % 4) == 0
@@ -506,7 +508,6 @@ $y_sse2
 +=G&2=
 +>yA,>
 +?i5,?
-+C$A9E
 +Infinity
 +NT+NLA
 +_?$=_?=O_?Pa_?]s_?long double
@@ -525,6 +526,7 @@ $y_sse2
 ,RJ9D
 ,and_sad_16x16_sse2
 ,fff.
+,ffff.
 ,ssse3
 ,vJ9D
 ,v_wmt
@@ -559,15 +561,20 @@ $y_sse2
 -update_probs
 -v_wmt
 -void?Hov?
-.%ZpV
-.-Ef_
-.-HT_
-.-r;E
-.-~uV
+.%$/_
+.%:>V
+.%kIH
+.%tCV
+.-2/_
+.-8tK
+.-;7_
+.-='_
+.-R	E
+.-^CV
 ...&?0Xz?
 ...;H,~uI
 ...?k {?pH{?
-.5Sf_
+.5I7_
 .;S 2;Bl5;
 .=&T/=
 .>@;0>~
@@ -633,7 +640,7 @@ $y_sse2
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/soundsystem/isoundopsystem.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/soundsystem/soundopshared.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/fibertools.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/bitbuf.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utllinkedlist.h
@@ -643,8 +650,8 @@ $y_sse2
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/movieslot.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp(499): 
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp(517): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp(504): 
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_init.cpp(522): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_integration.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_movie.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/scaleformui/scaleformuiimpl/scaleformui_movieslot.cpp
@@ -858,6 +865,7 @@ $y_sse2
 8ffffff.
 8full_2x_sse2
 8l??Sl?
+8x9,7
 8y?unsigned short>unsigned long long?
 8}?|S}?sm}?
 9 u	H
@@ -914,7 +922,6 @@ $y_sse2
 ;C u2D;K$u,
 ;C(tI
 ;C@t3
-;CPostConnectCallback
 ;G u3;W$u.
 ;G u4;W$u/
 ;G>M.T>7
@@ -1014,6 +1021,7 @@ $y_sse2
 ?unsigned long=)T|=
 ?w2 ?Z
 @	fffff.
+@  P @@@P`
 @ @ P@
 @ HcM
 @00@@0    0
@@ -1032,8 +1040,7 @@ $y_sse2
 @@HcU
 @@p@@p
 @CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
-@CFiber::DetachFromStackContext()
-@CFiber::ReleasePooledFiber()
+@CFiber::ReachedZeroReferences()
 @CFiber::SetThreadFiberMemoryRange(unsigned long)
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @CThreadSyncObject::~CThreadSyncObject()
@@ -1076,7 +1083,6 @@ $y_sse2
 @_CloseComponent
 @_CommandLine
 @_DevMsg
-@_EarlyInit_Tier0
 @_FSEventStreamCreate
 @_FSEventStreamInvalidate
 @_FSEventStreamRelease
@@ -1099,6 +1105,7 @@ $y_sse2
 @_Plat_ExitProcess
 @_Plat_FloatTime
 @_Plat_GetOSType
+@_Plat_GetThreadIndex
 @_Plat_IsHighDPI
 @_Plat_IsInDebugSessionRaw
 @_Plat_MSTime
@@ -1507,6 +1514,7 @@ A;G4r
 A;G8|
 A;I8v$A
 A;L$huJ
+A;M(u'H
 A;T$0
 A;W$v
 A;WtH
@@ -1526,6 +1534,7 @@ A;_8|
 A;doubleimaginary ~
 A;t$Hs9L
 A;t$`short*H
+A;}Pu
 A>unsigned __int128}A>
 A?>MA?
 A?u4B?
@@ -1676,6 +1685,7 @@ AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
 AWAVS
+AWAVSA
 AWAVSD
 AWAVSE
 AWAVSH
@@ -1732,6 +1742,7 @@ Allow scaleform log spew
 An extra frame is found for sprite id = %double, framecnt = %double, actual frames = %double
 An image in TextLayout is NULL
 An image with resource id %double is not found in resource table.
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AntiAliasType
@@ -1827,7 +1838,6 @@ BUTTON_CLICK_MAJOR
 BUTTON_CLICK_MINOR
 BUTTON_MOUSE_OVER
 BYAWA\AWBp
-B\ATARARARARARARARARARARARARARARARARARARARF[ASBRC[Cp
 B\BRBRBRB\BRAVA`
 B]ARBRAp
 B`#A`
@@ -1928,8 +1938,7 @@ CDefaultKeyValuesErrorSpew
 CENTER
 CEmptyConVar
 CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
-CFiber::DetachFromStackContext()
-CFiber::ReleasePooledFiber()
+CFiber::ReachedZeroReferences()
 CFiber::SetThreadFiberMemoryRange(unsigned long)
 CFieldPathHuffmanEncoder::INode
 CFieldPathHuffmanEncoder::InternalNode
@@ -1964,6 +1973,7 @@ CONTEXT_MENU
 CONTROL
 CP+CL
 CP[A\A^A_]
+CPostConnectCallback
 CRATA
 CRATASBp
 CRATB`
@@ -2011,6 +2021,7 @@ CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
+CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CX;CHs
@@ -2020,6 +2031,7 @@ CX[A\A^A_]
 CX[A^]
 CXu$H
 C\;CX
+C\ATARARARARARARARARARARARARARARARARARARARF[ASBRC[Cp
 C`#A`
 C`;C0H
 C`[A\A^A_]
@@ -2071,6 +2083,7 @@ ConVar(%short) defined with infinite float value (%short)
 ConVarRef %short doesn'unsigned short point to an existing ConVar
 Conditional Error: %short
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 ContainsCRLF()
 ContainsCRLF() == bContainsCRLF
 Context
@@ -2196,7 +2209,6 @@ D;k<r
 D;kHr=D
 D;t$P
 D;t$PM
-D;{ u
 D;{Hr5D
 D;|$P
 D;|$PI
@@ -2272,7 +2284,6 @@ DisplayObjectEx
 DisplayStatusWindow
 DistributeEvent
 Domain
-Don'unsigned short know how to export Resource '%short'
 Dook_
 DotaCardGameClient_001
 Down 
@@ -2308,6 +2319,7 @@ E PVWH
 E PVWSf
 E PVWf
 E#gLuG
+E(fff.
 E+float A9
 E8)X(I
 E8D)`(I
@@ -2326,14 +2338,12 @@ E9|$$r
 E9~$r
 E9~@void*I
 E;__int128 ~0
-E;__int128(u6
 E;eHr>E
 E;fHr>E
 E;gx|
 E;l$H
 E;t$Hr;E
 E;uHr@E
-E;uPu$I
 E;unsigned char,r
 E;}Hr6E
 E<G&Iw
@@ -2366,6 +2376,7 @@ ETtmM
 EXACT_FIT
 EXITING
 EXIT_FRAME
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EXT_texture_compression_s3tc
 EX~'L
 Eclear
@@ -2576,7 +2587,6 @@ G<;F<u>
 G=#8K=
 G>uAI>
 G@IcOlH
-GA#D$
 GAMECONSOLE
 GB unsigned short%A
 GB@unsigned short&A
@@ -2813,6 +2823,7 @@ HcI4H
 HcIhH
 HcJ H
 HcJ0H
+HcK H
 HcK(H
 HcP(H
 HcR M
@@ -2842,28 +2853,16 @@ Huffman code size table overflow
 Huffman table 0x%02x was not defined
 Hv<_5x<"...<
 I CUtlLinkedList<CUtlString, unsigned int, false, unsigned int, CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int> >::AllocInternal(bool) [T = CUtlString, S = unsigned int, ML = false, I = unsigned int, M = CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short, CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short, CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short, CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short, CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short, CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Find(const T &) const [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 I CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::NewNode(const T *) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
+I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I#A H9
 I)N(fA
 I+G(I
@@ -3068,15 +3067,18 @@ IcF$A
 IcF$H
 IcF$I
 IcF$M
-IcF0H
 IcG I9
 IcG$I
+IcG0H
 IcGdH
 IcGlH
 IcH$M
 IcH4	
 IcL$0H
+IcM(H
+IcMPH
 IcN8H
+IcO H
 IcO,H
 IcO0H
 IcOdH
@@ -3087,7 +3089,6 @@ IcS4
 IcW0H
 Ic\$(L
 Ic^(M
-Ic_ H
 Icomment
 Ics H
 Ict$XL
@@ -3458,6 +3459,7 @@ L+c0L
 L+short(H
 L+y8H
 L88[A\A^A_]
+L9!tVH
 L93t!H
 L9C0tKH9
 L9F0u
@@ -3490,10 +3492,6 @@ L9zHu
 L9{HH
 L9~@H
 L9~HH
-L;%%-Q
-L;%B-Q
-L;%^-Q
-L;%u-Q
 L;T$@
 L;T$XuIA
 L;__int128`r
@@ -3575,7 +3573,6 @@ LOWVIOLENCE
 LV?$vV?
 L\?qz]?]
 LangBar
-Lc5kj 
 Lc7Hc_LI
 Lc;fB
 LcCHD
@@ -3594,7 +3591,6 @@ Leaked string content: %short
 Lfff.
 Lffff.
 Lgranule_time
-LightingBuilderMgr001
 LineScaleMode
 Linit
 Load signed char scaleform font provider?
@@ -3765,7 +3761,7 @@ Missing PLTE before tRNS
 Missing font "%short" in "%short". Search log:
 MnZ/long double restrict
 ModeSw
-ModelDocCommandSystem001
+ModelDocUtils001
 MorphCharacterDef, first shape:
 MorphCharacterDef, second shape:
 MorphShape
@@ -3909,9 +3905,7 @@ Nr[A^]
 Number
 Nunpack
 Nxportbundle
-O [A\A^A_]
 O#sLf
-O$IcG
 O0A;Ohu_Icw L
 O4+G(+O,
 O=1LQ=
@@ -3951,6 +3945,7 @@ Oinverse
 OnAvatarImageLoaded for %u
 OnPersonaStateChanged for interesting person %u
 Opened temporary file %short
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
 Ordered object'short memory was modified prior to construction
 Out of Memory
@@ -4047,7 +4042,6 @@ P`0P@P`@
 P`@`P P
 P`PP`
 P`P`P`0P
-P``@  P @@@P`
 P```p0
 P`pP0@
 PanoramaTextServices001
@@ -4194,7 +4188,6 @@ RBRB`
 RBRBp
 RBRC`
 RBRCp
-RBRDTAp
 RBRD`
 RBSARBRBRGp
 RBSARBRBSARBRBYAp
@@ -4424,17 +4417,18 @@ STANDARD
 STATUS
 STEAMAPPLIST_INTERFACE_VERSION001
 STEAMAPPS_INTERFACE_VERSION008
-STEAMHTMLSURFACE_INTERFACE_VERSION_003
+STEAMHTMLSURFACE_INTERFACE_VERSION_004
 STEAMHTTP_INTERFACE_VERSION002
-STEAMINVENTORY_INTERFACE_V001
+STEAMINVENTORY_INTERFACE_V002
 STEAMMUSICREMOTE_INTERFACE_VERSION001
 STEAMMUSIC_INTERFACE_VERSION001
+STEAMPARENTALSETTINGS_INTERFACE_VERSION001
 STEAMREMOTESTORAGE_INTERFACE_VERSION014
 STEAMSCREENSHOTS_INTERFACE_VERSION003
-STEAMUGC_INTERFACE_VERSION009
+STEAMUGC_INTERFACE_VERSION010
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 STEAMUSERSTATS_INTERFACE_VERSION011
-STEAMVIDEO_INTERFACE_V001
+STEAMVIDEO_INTERFACE_V002
 STRING_BEGIN
 STRING_BREAK
 STRING_CLEARDISPLAY
@@ -6115,14 +6109,15 @@ StaticText
 StatsService_001
 StatusEvent
 StatusWindow
+SteamAudio001
 SteamClient017
-SteamController004
+SteamController005
 SteamFriends015
 SteamMatchMaking009
 SteamMatchMakingServers002
 SteamNetworking005
 SteamUser019
-SteamUtils008
+SteamUtils009
 StopSound
 String
 StyleSheet
@@ -6149,10 +6144,8 @@ T$@I9
 T$@M9
 T$@~kI
 T$XD)
-T-AGZ
 T2?Zp2?
-T=$}P
-T=^+L
+T=wJP
 T?.GT?
 TABSTOPS
 TAB_CHILDREN_CHANGE
@@ -6162,6 +6155,7 @@ TADIt
 TADIu
 TADIu'A
 TADIu*E
+TARARBRBRBRBSATBUAVATAp
 TARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRAp
 TARBRB`
 TARGET
@@ -6176,9 +6170,8 @@ TAUBp
 TAWATARBRB
 TAWBSBSBSBp
 TAWBp
-TA`5BYATBZATAp
+TA`5BYATAp
 TAp `
-TBRARBRBRBRBSATBUAVATAp
 TBRAp
 TBRBRAYATAp
 TBRBRBRASBp
@@ -6201,6 +6194,7 @@ TCSARBRBSARBRBRBSARBRBSARBRBSARBRBSARBRBSARBRBRBRBRBRJRBRAp
 TCTAp
 TCTBRBZAp
 TCUAp
+TCZATAp
 TDpP`)B`
 TEXTAUTOSZ_FIT
 TEXTAUTOSZ_NONE
@@ -6228,6 +6222,11 @@ TOUCH_TAP
 TUUUUU+
 Tag 'DefineBinaryData' (87) is not supported, potentially 'TLF text' fields are used. Switch to 'Classic Text'.
 Tessellate
+TestFormatA
+TestFormatB
+TestFormatC
+TestFormatD
+TestFormatE
 TestScriptMgr001
 Text style with undefined font; FontId = %double
 TextBoxArrayVisitor
@@ -6555,7 +6554,6 @@ Update font provider settings
 Usage: sf_print_objects_report <slot>
 UserInfoChangeService_001
 Utrunc
-UySIc
 V(uA1
 V<E}X<
 V>[IW>
@@ -6641,11 +6639,8 @@ V}?N]}?
 V~?cX~?
 W A+W
 W%	short;M@
-W%!UN
-W%XON
-W%signed char|#
 W)?h.+?'
-W-mCK
+W-B_'
 W0AkF
 W8;2t
 W8t!H9
@@ -6704,14 +6699,14 @@ Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
 Wrong JPEG library version: library is %double, caller expects %double
-X%ZcM
-X%aL
-X%|XM
-X-R`M
+X%:M
+X%\&M
+X-.M
 X0L9x8u
 X360_DST16
 X360_DST24
 X360_DST24F
+X5;^B
 X>p`_>(
 XASARBRB^BRBSARBRBRBSARBRBTBRBRBRBTBRBRBSARBSARBRBR0
 XAUBp
@@ -6741,12 +6736,9 @@ Xffffff.
 Xiph.Org libVorbis 1.3.4
 Xiph.Org libVorbis I 20140122 (Turpak
 Xmalloc
-Y%'?J
-Y%/WS
-Y%^FJ
-Y-nS
-Y5!}M
-Y5E}M
+Y%RiV
+Y5%KM
+Y=$^P
 Y>|-Z>
 YARBp
 YCreateInterface
@@ -6819,6 +6811,7 @@ Z|?4^|?Mb|?bf|?tj|?
 \ at end of pattern
 \$ f.
 \$ ff.
+\$0E1
 \$@H9
 \$@L9
 \$D[A\A^A_]
@@ -6920,7 +6913,6 @@ _CloseComponent
 _CommandLine
 _CreateInterface
 _DevMsg
-_EarlyInit_Tier0
 _FSEventStreamCreate
 _FSEventStreamInvalidate
 _FSEventStreamRelease
@@ -6947,6 +6939,7 @@ _Plat_DebugString
 _Plat_ExitProcess
 _Plat_FloatTime
 _Plat_GetOSType
+_Plat_GetThreadIndex
 _Plat_IsHighDPI
 _Plat_IsInDebugSessionRaw
 _Plat_MSTime
@@ -7041,6 +7034,7 @@ __const
 __cstring
 __data
 __eh_frame
+__float128 char::* I
 __float128 volatile?;ug?
 __float128;>q/<>
 __float128?!]int?
@@ -7055,6 +7049,7 @@ __gcc_except_tab__TEXT
 __got
 __ilog
 __int128 < m_Vector.Count()
+__int128 noexcept'unsigned short know how to export Resource '%short'
 __int128"HcU
 __int128(A)^ I
 __int128>\	r>
@@ -8080,7 +8075,10 @@ audioTracksCount
 aussian
 authenticate
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CFiber>, COrderedResolve_NoResolve, true>::AddRef(bool)::(anonymous class)::operator()() const [T = GenericThreadLocals::CThreadLocalPtr<CFiber>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 autoFit
 autoOrients
 autoSize
@@ -8108,6 +8106,7 @@ bevel
 bffffff.
 bigEndian
 binary
+binary_bc
 bit_cost
 bitmapData
 blank
@@ -8130,6 +8129,7 @@ boldItalic
 bolditalic
 bool CBaseSlot::Init(const char *, int)
 bool CDirWatcher::SetDirToWatch(const char *, uint, bool)
+bool CScaleformMemoryFile::LoadFromFile(const char *, const char *)
 bool CScaleformUI::SetupRenderingDevice()
 bool CUtlBuffer::Get(void *, int)
 bool CVariantBase<CVariantDefaultAllocator>::operator bool() const [CValueAllocator = CVariantDefaultAllocator]
@@ -8200,6 +8200,7 @@ char += V * vec4(1.596, -0.813, 0.0, 0.0);
 char char::* L
 char signed char::* OS
 char">] #>&
+char(ffff.
 char>I3d> 
 char?+0c?
 charAt
@@ -8715,8 +8716,8 @@ gL?|~L?
 gM?>~M?]
 gPE+gTE+gLH
 gXfffff.
+g_pCVar
 g_pCurrentFiberTL == (CFiber *)nullptr
-g_pCurrentFiberTL == (CFiber *)this
 g_pRenderDeviceMgr && g_pRenderDevice
 g_pSoundOpSystem->GetFieldTypeSize( SOFTYPE_FLOAT ) == sizeof( float )
 g_pVGuiLocalize
@@ -8724,6 +8725,7 @@ gamePadAnalogChange
 gamma table being rebuilt
 gamma value
 generateFilterRect
+generic
 genre
 gesture
 gesturePan
@@ -9397,9 +9399,11 @@ nAlignment >= 0 && nAlignment <= UINT16_MAX
 nBits <= nBytes*8
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
+nContentsFileSize64 < INT_MAX
 nDestSize == 0 || pDest != NULL
 nFlags >= 0 && nFlags <= UINT8_MAX
 nIdx >= 0 && nIdx <= INT8_MAX
+nIndex != pDisabledBlob->m_DisabledModeAllocations.InvalidIndex()
 nLuJI
 nMaxChars > 0
 nOutBufferSize > 0
@@ -9546,7 +9550,6 @@ overlay
 p SAp
 p TBRASB`
 p [A\A]A^A_]
-p `0@
 p!`!q!signed char!r!bool!short!char!unsigned short!double!u!long double!void!float!wchar_t!__float128!long long!unsigned char!unsigned long long!int!...!unsigned int!{!k!|!long!}!unsigned long!~!__int128!
 p(RBSARBRBSAp
 p(ff.
@@ -9691,10 +9694,10 @@ r0fffff.
 r4+J(+r,
 r;ff.
 r=ff.
-r=ffff.
 r>ffffff.
 r?+&r?
 r?char+r?
+r?fffff.
 rEfffff.
 rEv5L
 rGffff.
@@ -10066,6 +10069,7 @@ startDrag
 startTouchDrag
 static protected
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
+static void ConVarRef::InitDeferredConVarRefs()
 status
 std::terminate()
 stopAll
@@ -10177,6 +10181,7 @@ tRNS chunk not allowed with alpha channel
 tSH;Y
 tSL;unsigned long long
 tSMct$
+tSff.
 tSfffff.
 tTfffff.
 tTffffff.
@@ -10296,7 +10301,6 @@ timezoneOffset
 tion;
 tjfff.
 tk9whvfD
-tlfff.
 toDateString
 toExponential
 toFixed
@@ -10477,7 +10481,6 @@ unset_functions
 unshift
 unsigned
 unsigned __int128 KPBf
-unsigned __int128=`*V
 unsigned __int128\$@float
 unsigned __int128\$pf
 unsigned __int128{@HcU
@@ -10533,6 +10536,7 @@ unsigned short&&?TXt?
 unsigned short&H9[8tUH
 unsigned short&L;long double
 unsigned short&fff.
+unsigned short&fffff.
 unsigned short&ffffff.
 unsigned short(L;}
 unsigned short)L9i@t9L
@@ -10551,14 +10555,15 @@ unsigned short-ffff.
 unsigned short/H9D$
 unsigned short/L9A@unsigned short<L
 unsigned short/L9h@
+unsigned short/ff.
 unsigned short/ffffff.
 unsigned short:H9X0u
 unsigned short:fffff.
 unsigned short:ffffff.
-unsigned short;ff.
 unsigned short<H;]
 unsigned short<fff.
 unsigned short=H;E
+unsigned short=ffff.
 unsigned short>L9A@
 unsigned short>ZZv>K
 unsigned short>sEu>(
@@ -10615,6 +10620,7 @@ v1.3.0
 v2t0I
 v9ffff.
 v?":void?\Bv?
+vHct
 vJ>,DK>
 vOtMI
 vXH9<
@@ -10763,18 +10769,17 @@ voiceTrack
 void	[A^]
 void *CUtlMemoryPoolBase::Alloc()
 void CFiber::ConstructThreadFiber(size_t)
-void CFiber::DestructThreadFiber()
 void CKeyValuesErrorStack::Pop()
 void CKeyValuesErrorStack::Reset(int, HKeySymbol)
 void CKeyValuesTokenReader::SeekBackOneToken()
 void CKeyValues_Data::Internal_ClearData()
 void CKeyValues_Data::Internal_CopyData(const CKeyValues_Data &)
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
 void COrderedConstructor_Create<GenericThreadLocals::CThreadLocalPtr<CFiber>, COrderedResolve_NoResolve, true>::AddRef(bool) [T = GenericThreadLocals::CThreadLocalPtr<CFiber>, RESOLVECLASS = COrderedResolve_NoResolve, bCONSTRUCT_ON_FIRST_USE = true]
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
 void COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<CFiber> >::InternalLock(bool) [T = GenericThreadLocals::CThreadLocalPtr<CFiber>]
 void COrderedConstructor_DependencyManagement<GenericThreadLocals::CThreadLocalPtr<CFiber> >::Release() [T = GenericThreadLocals::CThreadLocalPtr<CFiber>]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
 void CScaleformUI::AddAPIFunctionToObject(GFxValue *, GFxMovieView *, CScaleformUIFunctionHandlerObject *, const ScaleformUIFunctionHandlerDefinition *)
 void CScaleformUI::FixupFlashFileName(const char *, char *, int)
 void CScaleformUI::ReleaseGFxValue(GFxValue *)
@@ -10792,7 +10797,6 @@ void CUtlLinkedList<CUtlString, unsigned int, false, unsigned int, CUtlMemory<Ut
 void CUtlLinkedList<CUtlString, unsigned int, false, unsigned int, CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int> >::LinkBefore(I, I) [T = CUtlString, S = unsigned int, ML = false, I = unsigned int, M = CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int>]
 void CUtlLinkedList<CUtlString, unsigned int, false, unsigned int, CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int> >::RemoveAll() [T = CUtlString, S = unsigned int, ML = false, I = unsigned int, M = CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int>]
 void CUtlLinkedList<CUtlString, unsigned int, false, unsigned int, CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int> >::Unlink(I) [T = CUtlString, S = unsigned int, ML = false, I = unsigned int, M = CUtlMemory<UtlLinkedListElem_t<CUtlString, unsigned int>, unsigned int>]
-void CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short, CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, I = unsigned short, L = CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CScaleformUIFunctionHandlerObject *, CUtlVector<CScaleformCallbackHolder *, CUtlMemory<CScaleformCallbackHolder *, int> > *, unsigned short, bool (*)(CScaleformUIFunctionHandlerObject *const &, CScaleformUIFunctionHandlerObject *const &)>::Node_t, unsigned short>, unsigned short>]
@@ -10801,19 +10805,18 @@ void CUtlRBTree<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, boo
 void CUtlRBTree<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short, CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short, CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short, CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short> >::SetLessFunc(const LessFunc_t &) [T = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::GFx::Value *, CUtlString, unsigned short, bool (*)(Scaleform::GFx::Value *const &, Scaleform::GFx::Value *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short, CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short, CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, I = unsigned short, L = CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<Scaleform::String, CScaleformImageCreator::CImageURLDelegate *, unsigned short, bool (*)(const Scaleform::String &, const Scaleform::String &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::FreeNode(I) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAll() [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
 void CUtlRBTree<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int, CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int> >::RemoveAt(I) [T = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, I = int, L = CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, ScaleformEmptyClass *, int, bool (*)(const char *const &, const char *const &)>::Node_t, int>, int>]
-void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::AnimatedImageDefinition *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CScaleformImageCreator::CSteamAvatar *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short, CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, CScaleformImageCreator::CUGCFileWrapper *, unsigned short, bool (*)(const unsigned long long &, const unsigned long long &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FreeNode(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAt(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlString::SetDirect(const char *, int)
 void CallPostConnect()
 void ConVar_Register(int64, IConCommandBaseAccessor *)

@@ -1,5 +1,8 @@
  AssertMsg_ConditionFailed
+ AssertMsg_ConditionFailed_ContextFunc
+ CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
  CDeferredCallStackMarker::Insert()
+ CDeferredCallStackMarker::Remove()
  CFArrayGetCount
  CFArrayGetValueAtIndex
  CFDictionaryGetValue
@@ -13,17 +16,18 @@
  CFStringGetLength
  CFURLCreateWithBytes
  CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
- CFiber::DetachFromStackContext()
- CFiber::ReleasePooledFiber()
+ CFiber::ReachedZeroReferences()
  CFiber::SetThreadFiberMemoryRange(unsigned long)
  CMemAllocSystemInitialize
  COM_TimestampedLog
  CStackTop_Base::CStackTop_Base()
+ CStackTop_Base::GetCurrentTop(bool)
  CStackTop_Base::~CStackTop_Base()
  CThreadEvent::CThreadEvent(bool)
  CThreadEvent::Set()
  CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
  CThreadMultiWaitEvent::Set()
+ CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
  CThreadRWLock::LockForWrite()
  CThreadRWLock::UnlockWrite()
  CThreadRWLock::WaitForRead()
@@ -42,7 +46,6 @@
  CVProfNode::Resume()
  CVProfile::BudgetGroupNameToBudgetGroupID(char const*)
  CVProfile::CalcBudgetGroupL2CacheMisses_Recursive(CVProfNode*, unsigned int*, int, float)
- CVProfile::CalcBudgetGroupLHS_Recursive(CVProfNode*, unsigned int*, int, float)
  CVProfile::CalcBudgetGroupTimes_Recursive(CVProfNode*, unsigned int*, int, float)
  CVProfile::ExecuteDeferredFunctions()
  CVProfile::GetBudgetGroupColor(int, int&, int&, int&, int&)
@@ -63,16 +66,19 @@
  DevMsg
  DevMsg(char const*, ...)
  DevWarning(char const*, ...)
- EarlyInit_Tier0
  GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
  GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
  GetCPUInformation
  HangWatchdogInternal_BeginScope
  HangWatchdogInternal_EndScope
+ IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
+ IStack_Annotation::~IStack_Annotation()
+ IterateCapturedStackAnnotations
  KeyValuesSystem
  LOG_GENERAL
  LoggingSystem_CurrentStateIndex
  LoggingSystem_EnableBackdoorLoggingListeners
+ LoggingSystem_GetChannel
  LoggingSystem_HasTag
  LoggingSystem_IsChannelEnabled
  LoggingSystem_Log
@@ -80,6 +86,7 @@
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
  LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
+ LoggingSystem_LogDirect
  LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, char const*)
  LoggingSystem_PopLoggingState
  LoggingSystem_PushLoggingState
@@ -97,6 +104,8 @@
  Msg
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
+ Plat_AlertUser
+ Plat_AlertUser(PlatWindow_t__*, wchar_t const*, wchar_t const*)
  Plat_ApproximateProcessMemoryUsage
  Plat_AttachDebuggerToProcess
  Plat_BeginWatchdogTimer
@@ -122,6 +131,7 @@
  Plat_GetCPUUsage
  Plat_GetClockStart
  Plat_GetComputerName
+ Plat_GetCurrentFrame
  Plat_GetCurrentRSS
  Plat_GetDPI
  Plat_GetDefaultMonitorIndex
@@ -130,6 +140,7 @@
  Plat_GetEnv
  Plat_GetLocalTime
  Plat_GetMemPageSize
+ Plat_GetMiniDumpErrorString
  Plat_GetModuleFilename
  Plat_GetModuleInterfaceFactory
  Plat_GetModuleProcAddress
@@ -139,6 +150,8 @@
  Plat_GetOSType
  Plat_GetPagedPoolInfo
  Plat_GetPeakRSS
+ Plat_GetThreadIndex
+ Plat_GetTime
  Plat_GetTimeString
  Plat_GetUserName
  Plat_GetWindowBounds
@@ -171,6 +184,7 @@
  Plat_SetActiveWindow
  Plat_SetCurrentFrame
  Plat_SetDefaultMonitorIndex
+ Plat_SetDesktopNotifyIconPath
  Plat_SetFullscreenMinimizeOnFocusLoss
  Plat_SetModuleFilename
  Plat_SetVirtualReserveWarnLimit
@@ -181,6 +195,7 @@
  Plat_ShouldCollectMiniDumpsForFatalErrors
  Plat_ShutdownCOM
  Plat_TickDiffMilliSecF
+ Plat_TicksAfterMilliSecs
  Plat_TranslateSymbolicLinks
  Plat_UnloadModule
  Plat_UnloadSDL
@@ -219,6 +234,7 @@
  SteamGameServer_GetHSteamUser
  SteamGameServer_RunCallbacks
  SteamGameServer_Shutdown
+ SteamInternal_ContextInit
  SteamInternal_CreateInterface
  SteamInternal_GameServer_Init
  T BinaryProperties_GetValue
@@ -234,6 +250,8 @@
  T strnlen
  ThreadGetCurrentId
  ThreadGetCurrentProcessHandle
+ ThreadGetPriority
+ ThreadGetProcessPriority
  ThreadInMainThread
  ThreadInterlockedExchange64
  ThreadSetDebugNameS2
@@ -281,12 +299,13 @@
  V_expf
  V_fclose
  V_fopen
- V_fread
+ V_frexpf
  V_fwrite
  V_iswspace
  V_logf
  V_powf
  V_pretifymem
+ V_pretifynum
  V_qsort
  V_qsort_s
  V_sinf
@@ -301,6 +320,7 @@
  V_strtoui64
  V_strupper_fast
  V_swscanf
+ V_tanf
  V_vscprintf
  V_vsnprintf
  V_vsnprintfRet
@@ -310,6 +330,7 @@
  V_wcstoi64
  Warning
  _DefaultRuneLocale
+ _GetCallStack_Fast
  _Unwind_Resume
  _V_AppendSlash
  _V_ComposeFileName
@@ -347,10 +368,8 @@
  __cxa_throw
  __dynamic_cast
  __error
- __exp10f
  __gxx_personality_v0
  __maskrune
- __sincos_stret
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -384,6 +403,7 @@
  exit
  exp
  fclose
+ fcntl
  fdopen
  ferror
  fflush
@@ -397,7 +417,6 @@
  fputs
  fread
  free
- frexpf
  fstat$INODE64
  futimes
  fwrite
@@ -452,7 +471,6 @@
  putchar
  qsort
  raise
- rand
  read
  recv
  recvfrom
@@ -471,7 +489,6 @@
  snprintf
  socket
  sprintf
- srand
  sscanf
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__get_classname(char const*, bool)
@@ -516,7 +533,6 @@
  std::__1::locale::~locale()
  std::__1::regex_error::regex_error(std::__1::regex_constants::error_type)
  std::__1::regex_error::~regex_error()
- std::__1::to_string(int)
  std::exception::what() const
  std::exception::~exception()
  std::terminate()
@@ -524,6 +540,7 @@
  strchr
  strcmp
  strcpy
+ strdup
  strerror
  strlen
  strncmp
@@ -542,16 +559,17 @@
  swscanf
  system
  tan
- tanf
  tcgetattr
  tcsetattr
- time
+ typeinfo for IStack_Annotation
  typeinfo for std::__1::__shared_weak_count
  typeinfo for std::__1::regex_error
  typeinfo for std::bad_alloc
  typeinfo for std::exception
  ungetc
+ unlink
  void std::__1::__sort<std::__1::__less<float, float>&, float*>(float*, float*, std::__1::__less<float, float>&)
+ void std::__1::__sort<std::__1::__less<short, short>&, short*>(short*, short*, std::__1::__less<short, short>&)
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info

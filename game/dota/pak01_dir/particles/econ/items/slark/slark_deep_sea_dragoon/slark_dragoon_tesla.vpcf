@@ -130,4 +130,34 @@
 	]
 	m_nSnapshotControlPoint = 6
 	m_pszSnapshotName = "particles/models/items/slark/deep_sea_dragoon_head/deep_sea_dragoon_head.psf"
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_head"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/slark/deep_sea_dragoon_head/deep_sea_dragoon_head.vmdl"
+			}
+		},
+	]
 }

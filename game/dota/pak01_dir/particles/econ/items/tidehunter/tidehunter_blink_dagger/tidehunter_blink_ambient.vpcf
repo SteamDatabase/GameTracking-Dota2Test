@@ -142,4 +142,34 @@
 			m_ChildRef = resource:"particles/econ/items/tidehunter/tidehunter_blink_dagger/tidehunter_blink_ambient_e.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_blink"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/tidehunter/blink_dagger_tide/blink_dagger_tide.vmdl"
+			}
+		},
+	]
 }

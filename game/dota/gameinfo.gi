@@ -52,6 +52,8 @@
 			PublicContent		dota_core
 			PublicContent		core
 		}
+
+		AddonsChangeDefaultWritePath 0
 	}
 
 	MaterialSystem2
@@ -68,7 +70,7 @@
 			"tools" "ToolsUtil" // Meant to be used to render tools sceneobjects that are mod-independent, like the origin grid
 		}
 	}
-	 
+
 	Engine2
 	{
 		"HasModAppSystems" "1"
@@ -97,18 +99,18 @@
 		"AllocWarnMB" "100"
 		// There are some known large virtual reservations, such as the SBH, which
 		// bypass this limit so we can be fairly conservative.
-		"ReserveWarnMB" "32"
+		"ReserveWarnMB" "64"
 
 		"RenderingPipeline"
 		{
 			"SkipPostProcessing" "1"
 			"SupportsMSAA" "0"
 		}
-		
+
 		"BugBait"
 		{
 			// Used by 'bug:' in chat to normalize report settings during playtests
-			"Owner" "triage*" 
+			"Owner" "triage*"
 			"Severity" "high"
 			"Priority" "none"
 			"Category" "---"
@@ -132,6 +134,11 @@
 		"DrawParticleChildrenSeparateFromParents" "1"
 	}
 
+	SoundSystem
+	{
+		"DisableSteamAudio" "1"
+	}
+
 	ToolsEnvironment
 	{
 		"Engine"	"Source 2"
@@ -139,7 +146,7 @@
 		"DeveloperHelpURL" "https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools"
 		"ToolsProductName" "Dota2 Workshop Tools"
 	}
-	
+
 	Hammer
 	{
 		"fgd"					"dota.fgd"	// NOTE: This is relative to the 'mod' path.
@@ -166,18 +173,19 @@
 		"DefaultShader"			"global_lit_simple"
 		"ExpressionHelpUrl"		"https://intranet.valvesoftware.com/index.php/Source_2.0/Shader_Format#Shader.2FMaterial_Expression_Syntax"
 	}
-	
+
 	ResourceCompiler
 	{
 		// Overrides of the default builders as specified in code, this controls which map builder steps
 		// will be run when resource compiler is run for a map without specifiying any specific map builder
 		// steps. Additionally this controls which builders are displayed in the hammer build dialog.
 		DefaultMapBuilders
-		{			
+		{
 			"light"		"0"	// Dota does not use baked lighting
 			"envmap"	"0"	// Dota doesn't generate environment maps from the map
 			"gridnav"	"1"	// Dota generates its grid navigation data by default
 		}
+		"DotaTileGrid"	"1"
 	}
 
 	RenderPipelineAliases
@@ -185,5 +193,5 @@
 		"Tools"			"Dota:Forward"
 		"EnvMapBake"	"Dota"
 	}
-	
+
 }

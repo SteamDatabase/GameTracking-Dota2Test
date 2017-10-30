@@ -10,6 +10,16 @@ DOTAHeroInspect
 	border: 1px solid black;
 }
 
+.EventGame DOTAHudPreGame.DarkMoon DOTAHeroInspect
+{
+	background-color: gradient( linear, 0% 100%, 0% 0%, from( #14181E  ), to( #271A25ed ) );
+}
+
+.EventGame DOTAHudPreGame.Season_International2017 DOTAHeroInspect
+{
+	background-color: gradient( linear, 0% 100%, 0% 0%, from( #14181E  ), to( #271A25ed ) );
+}
+
 #HeroInspectHeader
 {
 	flow-children: right;
@@ -227,6 +237,11 @@ DOTAHeroInspect
 {
 	text-overflow: shrink;
 		height: 52px;
+}
+
+.IsCoach #PickDescription
+{
+    visibility: collapse;
 }
 
 #BanDescription

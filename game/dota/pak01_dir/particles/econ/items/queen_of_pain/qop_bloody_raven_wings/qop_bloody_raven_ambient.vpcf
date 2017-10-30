@@ -134,4 +134,33 @@
 			m_ChildRef = resource:"particles/econ/items/queen_of_pain/qop_bloody_raven_wings/qop_bloody_raven_ambient_flek.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_ABSORIGIN_FOLLOW"
+					m_entityName = "parent"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/queenofpain/bloody_raven_wings/bloody_raven_wings.vmdl"
+			}
+		},
+	]
 }

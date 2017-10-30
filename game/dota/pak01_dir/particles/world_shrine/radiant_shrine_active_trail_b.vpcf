@@ -9,7 +9,6 @@
 		{
 			_class = "C_OP_RenderTrails"
 			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
-			m_flAddSelfAmount = 2.000000
 			m_bSaturateColorPreAlphaBlend = false
 			m_bIgnoreDT = true
 			m_flLengthFadeInTime = 0.250000
@@ -26,6 +25,7 @@
 			]
 			m_bAdditive = true
 			m_flOverbrightFactor = 3.000000
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
@@ -57,6 +57,16 @@
 			m_flEndTime = 99999999.000000
 			m_Rate = 50.000000
 			m_nField = 10
+		},
+		{
+			_class = "C_OP_EndCapTimedDecay"
+			m_flDecayTime = 0.125000
+		},
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_nFieldOutput = 7
+			m_flOutput = 0.000000
+			m_flLerpTime = 0.125000
 		},
 	]
 	m_Initializers = 
@@ -98,8 +108,8 @@
 		},
 		{
 			_class = "C_INIT_RandomAlpha"
-			m_nAlphaMin = 64
-			m_nAlphaMax = 128
+			m_nAlphaMin = 30
+			m_nAlphaMax = 50
 		},
 		{
 			_class = "C_INIT_PositionOffset"
@@ -120,8 +130,8 @@
 			_class = "C_INIT_RingWave"
 			m_flParticlesPerOrbit = 10.000000
 			m_flInitialRadius = 18.000000
-			m_flInitialSpeedMin = -250.000000
-			m_flInitialSpeedMax = -250.000000
+			m_flInitialSpeedMin = -100.000000
+			m_flInitialSpeedMax = -100.000000
 		},
 		{
 			_class = "C_INIT_VelocityRandom"
@@ -143,7 +153,7 @@
 	[
 		{
 			_class = "C_OP_ContinuousEmitter"
-			m_flEmitRate = 4.000000
+			m_flEmitRate = 8.000000
 			m_flEmissionDuration = 5.000000
 		},
 	]

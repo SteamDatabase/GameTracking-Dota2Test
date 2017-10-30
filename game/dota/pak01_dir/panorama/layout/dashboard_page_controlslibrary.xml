@@ -15,8 +15,14 @@
 				<Panel class="TopBottomFlow">
 					<Panel class="LeftRightFlow">
 						<Panel class="ZooGroup Wide">
-							<Button class="ButtonBevel">
-								<Label text="ButtonBevel"/>
+							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_dueling_fates_fairy.xml)">
+								<Label text="Fairy Debut"/>
+							</Button>
+							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_dueling_fates_main.xml)">
+								<Label text="dueling fates main Debut"/>
+							</Button>
+							<Button class="PopupButton Blue" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_dueling_fates.xml)">
+								<Label text="Dualing Fates Debut"/>
 							</Button>
 							<Button class="PopupButton" onactivate="DOTAShowCompManila2016PlayerCardsPage()">
 								<Label text="PopupButton"/>
@@ -27,18 +33,33 @@
 							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_underlord.xml)">
 								<Label text="Underlord Debut" />
 							</Button>
+							<Button class="PopupButton Blue" onactivate="DOTAShowReferencePage(file://{resources}/layout/hud/dota_hud_ad_texture_sheet.xml)">
+								<Label text="ABDRTEST" />
+							</Button>							
 							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_monkeyking.xml)">
 								<Label text="Monkey King Debut" />
 							</Button>							
 							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_arcana_mk.xml)">
 								<Label text="Monkey King Arcana" />
-							</Button>														
+							</Button>
+							<Button class="PopupButton Green" onactivate="DOTAShowReferencePage(file://{resources}/layout/leaf_pages/dashboard_page_debut_arcana_juggernaut.xml)">
+								<Label text="Juggernaut Arcana" />
+							</Button>									
 							<Button class="PopupButton">
 								<Label class="Capital" text="Popup Caps" />
 							</Button>
 
-							<Button class="BlueButton">
-								<Label text="BlueButton" />
+							<Button class="PopupButton Blue" onactivate="DOTAShowReferencePage(file://{resources}/layout/hud/dota_hud_abilitydraft.xml)">
+								<Label text="Ability Draft Functional" />
+							</Button>														
+							
+							<Button class="PopupButton Blue" onactivate="DOTAShowReferencePage(file://{resources}/layout/dota_hud_spectate_hero_selection.xml)">
+								<Label text="Dual FOG test" />
+							</Button>									
+
+
+							<Button class="BlueButton" onactivate="UIShowCustomLayoutPopup( CoinFlipPanel, file://{resources}/layout/popups/lobby_coin_flip.xml )" >
+								<Label text="Coin Flip" />
 							</Button>
 
 							<TextButton text="Sound Test" onactivate="PlaySoundEffect( ui_select_arrow ); AsyncEvent( 2.0, PlaySoundEffect( ui_hero_hat_select ) );" />
@@ -57,6 +78,8 @@
 							
 							<TextButton class="ButtonDark" text="Battle Pass Reminder" onactivate="UIShowCustomLayoutPopup( CustomPopupTest, file://{resources}/layout/popups/splash_ads/popup_ti6_ending_reminder.xml )" />
 
+							<TextButton class="PopupButton Blue" text="Debug Challenges" onactivate="DOTAShowChallengesDebugPage()" />
+							
 						</Panel>
 					</Panel>
 
@@ -356,7 +379,10 @@
 				<Panel class="LeftRightFlow">
 					<Panel id="ZooCanvasDemo" class="ZooGroup Thirds">
 						<Label text="Canvas!" />
-						<DOTACanvas id="ZooCanvas" />
+						<UICanvas id="ZooCanvas" />
+					</Panel>
+					<Panel class="ZooGroup Thirds">
+						<Panel id="PreviousBest" class="forceBuild"/>
 					</Panel>
 					<Panel id="ZooEmoticons" class="ZooGroup">
 						<AnimatedImageStrip src="s2r://panorama/images/emoticons/wolf_pup_png.vtex" frametime="50ms" defaultframe="20" />
@@ -388,8 +414,8 @@
 			</Panel>
 
 			<Panel id="ZooModelTest" class="ZooTab">
-				<DOTAScenePanel id="ModelTest1" map="backgrounds/test" camera="test_camera"/>
-				<DOTAScenePanel id="ModelTest2" unit="npc_dota_hero_pudge"/>
+				<DOTAScenePanel id="ModelTest1" map="backgrounds/test" camera="test_camera" particleonly="false" light="hero_light" renderdeferred="true"/>
+				<DOTAScenePanel id="ModelTest2" unit="npc_dota_hero_pudge" particleonly="false"/>
 				<Panel id="BlendPanel" >
 					<Panel id="ScreenPanel" >
 						<Label text="Blend: Screen"/>
@@ -399,14 +425,14 @@
 					</Panel>
 				</Panel>
 				<Panel id="ZooDrop">
-					<DOTAScenePanel id="ModelTest3" map="scenes/singleobject_default" camera="camera_1"/>
+					<DOTAScenePanel id="ModelTest3" map="scenes/singleobject_default" camera="camera_1" particleonly="false"/>
 					<Label id="DropLabelTop" class="DropLabel" text="You have earned"/>
 					<Label id="DropLabelBottom" class="DropLabel" text="a Trophy!"/>
 				</Panel>
 			</Panel>
 
 			<Panel id="ZooEffectsTest" class="ZooTab">
-				<DOTAScenePanel class="TopBottomFlow" id="ModelTestUI" map="scenes/treasure_opened_generic" camera="shot_cam">
+				<DOTAScenePanel class="TopBottomFlow" id="ModelTestUI" map="scenes/treasure_opened_generic" camera="shot_cam" particleonly="true">
 					<Button id="Button0EffectsTest" class="ButtonBevel" onactivate="DOTAGlobalSceneFireEntityInput( ModelTestUI, treasure_opened_generic_part, start, 1)">
 						<Label text="start"/>
 					</Button>
@@ -414,7 +440,7 @@
 						<Label text="reset"/>
 					</Button>
 				</DOTAScenePanel>
-				<DOTAScenePanel id="ModelTestUIAccept" map="backgrounds/accept_popup_test" camera="shot_camera">
+				<DOTAScenePanel id="ModelTestUIAccept" map="backgrounds/accept_popup_test" camera="shot_camera" particleonly="true">
 					<Panel class="PopupPanelEffectsTest">
 
 					</Panel>
@@ -645,6 +671,7 @@
 			</Panel>
 
 			<Panel id="ZooDebug6" class="ZooTab">
+				<DOTATriviaGame id="TriviaGame" />
 				<!--<DOTAVRHeroLoadoutHeroDetails id="VRHeroDetailsTest" heroid="6" />-->
 			</Panel>
 

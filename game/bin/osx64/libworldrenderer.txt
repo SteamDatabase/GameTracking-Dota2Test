@@ -3,12 +3,9 @@
  CDeferredCallStackMarker::Remove()
  CMemAllocSystemInitialize
  CStackTop_Base::GetCurrentTop(bool)
- CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
- CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
  CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
  CThreadMultiWaitEvent::Set()
  CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
- CThreadMutex::TryLock()
  CThreadSpinRWLock::LockForRead()
  CThreadSpinRWLock::SpinLockForWrite(unsigned long long)
  CThreadSpinRWLock::UnlockRead()
@@ -17,7 +14,6 @@
  CommandLine
  DevMsg
  DevMsg(char const*, ...)
- EarlyInit_Tier0
  GetCPUInformation
  IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
  IStack_Annotation::~IStack_Annotation()
@@ -31,16 +27,19 @@
  LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
  LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
  LoggingSystem_RegisterLoggingChannel
+ Msg
  Plat_DebugPrint
  Plat_ExitProcess
  Plat_GetCPUFrequency
  Plat_GetEnv
  Plat_GetOSType
+ Plat_GetThreadIndex
  Plat_IsHighDPI
  Plat_IsInDebugSessionRaw
  Plat_NeedsLowFragmentation
  Plat_RelativeTicks
  Plat_ShouldCollectMiniDumpsForFatalErrors
+ Plat_UUIDToString
  RandomFloat
  RandomInt
  RandomSeed
@@ -65,10 +64,16 @@
  V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
  V_UTF16ToUTF8
  V_UTF32ToUTF8
+ V_acosf
+ V_asinf
  V_atan2f
+ V_atod
  V_atof
  V_atoi
  V_cosf
+ V_expf
+ V_frexpf
+ V_logf
  V_powf
  V_qsort
  V_qsort_s
@@ -116,12 +121,12 @@
  g_pMemAlloc
  g_pThreadPool
  memchr
+ memcmp
  memcpy
  memmove
  memset
  memset_pattern16
  operator new(unsigned long, std::nothrow_t const&)
- pow
  powf
  pthread_mutex_destroy
  pthread_mutex_init
@@ -136,6 +141,7 @@
  std::terminate()
  strchr
  strcmp
+ strcpy
  strdup
  strlen
  strstr

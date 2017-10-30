@@ -22,4 +22,34 @@
 			m_ChildRef = resource:"particles/econ/items/phoenix/phoenix_solar_forge/phoenix_solar_forge_ambient_arc.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_head"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/phoenix/solar_forge/mesh/solar_forge_model.vmdl"
+			}
+		},
+	]
 }

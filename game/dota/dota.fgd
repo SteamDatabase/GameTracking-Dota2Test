@@ -140,6 +140,7 @@
 	fow_color_r_night(float) : "FoW Color R - Night" : "0" : "Night FoW Color R"
 	fow_color_g_night(float) : "FoW Color G - Night" : "0" : "Night FoW Color G"
 	fow_color_b_night(float) : "FoW Color B - Night" : "0" : "Night FoW Color B"
+	farz_override(float) : "FarZ Override" : "0" : "FarZ Override"
 
 	inner_radius(float) : "Inner Radius" : "0" : "Radius inside which the global light is exactly the specified color."
 	outer_radius(float) : "Outer Radius" : "0" : "Radius inside which the global light is partially the specified color."
@@ -159,15 +160,20 @@
 		9: "Northern Lights Weather Only"
 	]
 
-	lightning_spec_pow_scale_min(float) : "Lightning Specular Power Scale Minimum" : "1" : "The minimum amount to scale the specular power for lightning events."
-	lightning_spec_pow_scale_max(float) : "Lightning Specular Power Scale Maximum" : "1" : "The maximum amount to scale the specular power for lightning events."
-	lightning_period_min(float) : "Lightning Period Minimum" : "0" : "The minimum amount between lightning events."
-	lightning_period_max(float) : "Lightning Period Maximum" : "0" : "The maximum amount between lightning events."
-	lightning_duration_min(float) : "Lightning Duration Minimum" : "0" : "The minimum duration of a single lightning event."
-	lightning_duration_max(float) : "Lightning Duration Maximum" : "0" : "The maximum duration of a single lightning event."
-	lightning_fluctuation_min(float) : "Lightning Fluctuation Minimum" : "0" : "The minimum number of fluctuations in a single lightning event."
-	lightning_fluctuation_max(float) : "Lightning Fluctuation Maximum" : "0" : "The maximum number of fluctuations in a single lightning event."
-	lightning_sound(sound) : "Thunder Sound Effect" : "" : "During lightning events, this sound will be played."
+	lightning_spec_pow_scale_min(float) [ group="Lightning" ] : "Lightning Specular Power Scale Minimum" : "1" : "The minimum amount to scale the specular power for lightning events."
+	lightning_spec_pow_scale_max(float) [ group="Lightning" ] : "Lightning Specular Power Scale Maximum" : "1" : "The maximum amount to scale the specular power for lightning events."
+	lightning_period_min(float) [ group="Lightning" ] : "Lightning Period Minimum" : "0" : "The minimum amount between lightning events."
+	lightning_period_max(float) [ group="Lightning" ] : "Lightning Period Maximum" : "0" : "The maximum amount between lightning events."
+	lightning_duration_min(float) [ group="Lightning" ] : "Lightning Duration Minimum" : "0" : "The minimum duration of a single lightning event."
+	lightning_duration_max(float) [ group="Lightning" ] : "Lightning Duration Maximum" : "0" : "The maximum duration of a single lightning event."
+	lightning_fluctuation_min(float) [ group="Lightning" ] : "Lightning Fluctuation Minimum" : "0" : "The minimum number of fluctuations in a single lightning event."
+	lightning_fluctuation_max(float) [ group="Lightning" ] : "Lightning Fluctuation Maximum" : "0" : "The maximum number of fluctuations in a single lightning event."
+	lightning_sound(sound) [ group="Lightning" ] : "Thunder Sound Effect" : "" : "During lightning events, this sound will be played."
+	lightning_color(color255) [ group="Lightning" ] : "Lightning Color" : "255 255 255" : "Lightning Color"
+	lightning_intensity_min(float) [ group="Lightning" ] : "Lightning Color Intensity Minimum" : "0" : "Minimum lightning color intensity"
+	lightning_intensity_max(float) [ group="Lightning" ] : "Lightning Color Intensity Maximum" : "0" : "Maximum lightning color intensity"
+	lightning_elevation(float) [ group="Lightning" ] : "Lightning Elevation (Pitch)" : "60.0" : "Elevation"
+	lightning_specular_intensity(float) [ group="Lightning" ] : "Lightning Specular Intensity" : "1.0" : "Specular Intensity"
 
 	// Wind-related params
 	wind_angle(angle) [ group="Wind Params" ] : "Wind Angle" : "0 45 0" : "Wind Angles"
@@ -224,6 +230,20 @@
 	height_fog_scroll1U_night(float) [ group="Height Fog" ] : "Height Fog Scroll U Layer 1 - Night" : "10"
 	height_fog_scroll1V_night(float) [ group="Height Fog" ] : "Height Fog Scroll V Layer 1 - Night" : "-10"
 	height_fog_exclusion_inner_radius(float) [ group="Height Fog" ] : "Height Fog Inner Exclusion Radius" : "0"
+	height_fog_exclusion_height_bias(float) [ group="Height Fog" ] : "Height Fog Exclusion Height Bias" : "128"
+	height_fog_type(choices) [ group="Height Fog" ] : "Height Fog Type" : 0 = 
+	[
+		0: "Height Fog"
+		1: "Caustics"
+	]
+
+	height_fog_caustic_speed_scale(float) [ group="Height Fog" ] : "Caustics Speed Scale" : "1"
+	height_fog_caustic_amplitude_scale(float) [ group="Height Fog" ] : "Caustics Amplitude Scale" : "0.1"
+
+	weather_effect(particlesystem) : "Weather Effect" : "" : "Weather effect override for this lightinfo"
+
+	color_warp_texture(resource:texture) : "Color Warp"
+	color_warp_blend_to_full(float) : "Color Warp Blend To Full" : "1"
 
 	preview_day_or_night(choices) :"Preview" : 0 =
 	[
@@ -264,6 +284,12 @@
 		0: "Normal"
 		1: "Fast"
 		2: "Slow"
+	]
+
+	AggroType(choices) :"Aggro Type" : 0 =
+	[
+		0: "Never"
+		1: "Always"
 	]
 
 	ForcedSubType(choices) :"Force Spawn Type" : -1 =
@@ -346,8 +372,21 @@
 	NPCFirstWaypoint(target_destination) : "First Waypoint" : "" : "First Waypoint the creeps will head to"
 ]
 
+
 @PointClass base(Targetname) = dota_item_rune_spawner :
-	"A marker for where runes spawn."
+	"A marker for where runes spawn, pre 7.0 behavior."
+[
+
+]
+
+@PointClass base(Targetname) = dota_item_rune_spawner_powerup :
+	"A marker for where powerup runes spawn."
+[
+
+]
+
+@PointClass base(Targetname) = dota_item_rune_spawner_bounty :
+	"A marker for where bounty runes spawn."
 [
 
 ]
@@ -406,10 +445,12 @@
 	rendercolor(color255) : "FX Color (R G B)" : "255 255 255" : "The FX color is used by the selected Render Mode."
 	ambientfx(particlesystem) : "Ambient Effect"
 	particle_tint_color(color255) : "Particle Tint Color" : "255 255 255"
-	body(integer) : "bodygroup" : 1 : "Show tree in Hammer"
+	always_use_showcase_tree(boolean) : "Always use showcase tree" : 0
+	tree_shake_strength_override(float) : "Tree shake strength override" : -1
 		
 	grass_exclusion_radius(float) : "Grass Exclusion Radius" : 0 : "Don't grow grass within this radius."
 	
+
 	input CutDown(void) : "Cut down the tree."
 	input CutDownForever(void) : "Cut down the tree and don't grow back."
 	input GrowBack(void) : "Force the tree to regrow."
@@ -465,7 +506,7 @@
 	]
 ]
 
-@PointClass base(prop_dynamic_base, Targetname, teamnumber) studioprop() = prop_dynamic_client_fadeout:
+@PointClass base(prop_dynamic_base, Targetname, teamnumber) studioprop() vecline_local( fade_origin_offset, 255, 200, 200 ) = prop_dynamic_client_fadeout:
 	"Client-side prop which fades out when it begins to obstruct the view."
 [
 	fade_out_mode(choices) : "Fade out mode" : 0 =
@@ -490,6 +531,8 @@
 	]
 
 	fade_group_id(integer) : "Fade Group" : "-1" : "All props in contiguous tiles with the same ID fade together"
+
+	fade_origin_offset( local_point ) : "Origin Offset" : "0 0 0"
 ]
 
 @PointClass base(prop_dynamic_base, Targetname, teamnumber) studioprop() = prop_player_cosmetic: 
@@ -650,6 +693,7 @@
 		0: "Home"
 		1: "Side"
 		2: "Secret"
+		6: "Custom"
 	]
 ]
 
@@ -694,6 +738,7 @@
 		0: "Home"
 		1: "Side"
 		2: "Secret"
+		6: "Custom"
 	]
 
 	output OnTrigger(void) : "Fired whenever the trigger is activated."
@@ -818,8 +863,10 @@
 		12: "Custom 7"
 		13: "Custom 8"
 	]
+	EnableAutoStyles(boolean) : "EnableAutoStyles" : 0 : "Enable autostyles on this entity."
 
 	input SetStyleOverride(integer) : "Force a particular style on this NPC."
+	input InputSetAutoStyleCriteria(string) : "Sets an autostyle criteria. String is of format <autostyle name> <value>."
 ]
 
 
@@ -830,17 +877,19 @@
 	"An entity that does nothing, however it previews a model in hammer only. Useful for root nodes of portraits. Parent entities in this map to this."
 [
 	model(studio) [report] : "Hammer Preview Model"
-	DefaultAnim(string) : "Default Animation" : "" : "The name of the idle animation that this prop will revert to whenever it finishes a random or forced animation."
+	DefaultAnim(sequence) : "Default Animation" : "" : "The name of the idle animation that this prop will revert to whenever it finishes a random or forced animation."
 ]
 
-@PointClass base(npc_dota_baseclass, EnableDisable) gameUnitModel( MapUnitName ) = portrait_world_unit : 
+@PointClass base(npc_dota_baseclass, Parentname, EnableDisable) gameUnitModel( MapUnitName ) = portrait_world_unit : 
 	"Can only be used in background maps. Creates a portrait unit based on a unit name."
 [
 	ModelScale(float) : "Model Scale" : "1"
 	suppress_intro_effects(boolean) : "Suppress Intro Effects" : "1"
 	spawn_background_models(boolean) : "Spawn Background Models" : "0"
+	rare_loadout_anim_chance(float) : "Rare Loadout Animation Chance" : "-1" : "Use range 0 - 1 to set the likelihood that the rare loadout animation will be played after a loadout animation completes. Negative numbers means use default."
 	suppress_anim_event_sounds(boolean) : "Suppress Anim Event Sounds" : "0"
 	skip_pet_spawn(boolean) : "Skip Pet Spawn" : "0"
+	flying_courier(boolean) : "Flying Courier" : "0" : "Indicates if you want the courier to appear flying. Only used if your unit type is npc_dota_courier."
 	spawn_wearable_item_defs(boolean) : "Spawn wearable items on the unit" : "1"
 	activity(string) : "Activity Name" : "" : "The activity to play after the ACT_DOTA_SPAWN activity."
 	activity_modifier(string) : "Activity Modifier" : "" : "An activity modifier to add to the unit to change its animations"
@@ -913,6 +962,15 @@
 	height_fog_scroll1U(float) [ group="Height Fog" ] : "Height Fog Scroll U Layer 1" : "10"
 	height_fog_scroll1V(float) [ group="Height Fog" ] : "Height Fog Scroll V Layer 1" : "-10"
 	height_fog_exclusion_inner_radius(float) [ group="Height Fog" ] : "Height Fog Inner Exclusion Radius" : "0"
+	height_fog_exclusion_height_bias(float) [ group="Height Fog" ] : "Height Fog Exclusion Height Bias" : "128"
+	height_fog_type(choices) [ group="Height Fog" ] : "Height Fog Type" : 0 = 
+	[
+		0: "Height Fog"
+		1: "Caustics"
+	]
+
+	height_fog_caustic_speed_scale(float) [ group="Height Fog" ] : "Caustics Speed Scale" : "1"
+	height_fog_caustic_amplitude_scale(float) [ group="Height Fog" ] : "Caustics Amplitude Scale" : "0.1"
 ]
 
 
@@ -948,6 +1006,8 @@
 	input TurnOn(void)				: "Turn on the texture"
 	input TurnOff(void)				: "Turn off the texture"
 	input LightColor(color255)		: "Change the light color/brightness"
+	input Intensity(float)			: "Change the light intensity"
+	input Radius(float)				: "Change the light radius"
 ]
 
 @PointClass base(Targetname, Parentname) sphere(radius) externalHelper("ToolObjects/env_deferred_light") = env_deferred_light_client_only : 
@@ -963,6 +1023,14 @@
 	lightcolor(color255)		: "Light Color" : "255 255 255 200" : "Light Color RGB-Intensity"
 	radius(float)				: "Radius" : "128.0" : "Size of the light"	
 	intensity(float)			: "Intensity" : "1.0" : "Intensity of the light"	
+
+	// Inputs
+	input TurnOn(void)				: "Turn on the texture"
+	input TurnOff(void)				: "Turn off the texture"
+	input LightColor(color255)		: "Change the light color/brightness"
+	input Intensity(float)			: "Change the light intensity"
+	input IntensityOverTime(string)	: "Change the light intensity over time, use space to separate arguments '<intensity> <time>'"
+	input Radius(float)				: "Change the light radius"
 ]
 
 
@@ -1000,6 +1068,7 @@
 	input MoveToPositionAggressive(target_destination) : "Attack-move a location."
 	input SpeechBubble( string ) : "Say something in a speech bubble."
 	input DestroyAllSpeechBubbles( void ) : "Remove all current active (and queued) speech bubbles."
+	input SetFOWRevealRadius( float ) : "Adjust the radius at which this NPC reveals fog of war."
 ]
 
 @PointClass base(ent_dota_game_events) = dota_custom_game_events : "Used to change settings on the game mode for custom games."
@@ -1108,4 +1177,25 @@
 @OverrideClass = point_camera
 [
 	override_shadow_farz(float) : "Shadow Far Z Override" : 0
+]
+
+@PointClass base(Targetname) = dota_particle_relay :
+[
+	particle_system_name(target_destination) : "Particle System"
+
+	// Inputs
+	input InputStart(void) : "Start the system"
+	input InputStop(void) : "Stop the system (but play endcap)" 
+	input InputStopImmediate(void) : "Stop the system immediately" 
+]
+
+@PointClass base(npc_dota_base) gameUnitModel( MapUnitName ) vecline_local( trap_target, 255, 200, 200 ) = npc_dota_trap_ward : "Used to place a dota trap ward."
+[
+	skin(choices) [ group="Misc" ] : "Skin" : "0" : "Some models have multiple versions of their textures, called skins. This is programmatically populated from the model. The FGD data is unused!" =
+	[
+		"0" : "Ignored by the modelhelper code"
+	]
+
+	trap_target( local_point ) : "Trap Target" : "0 0 0"
+	DefaultAnim(sequence) : "Default Animation" : "" : "The name of the idle animation that this prop will revert to whenever it finishes a random or forced animation."
 ]

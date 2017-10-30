@@ -41,4 +41,34 @@
 			m_ChildRef = resource:"particles/econ/items/luna/luna_lucent_ti5/luna_shield_ambient_moonfall_g.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_shield"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/luna/moonfall/moonfall.vmdl"
+			}
+		},
+	]
 }

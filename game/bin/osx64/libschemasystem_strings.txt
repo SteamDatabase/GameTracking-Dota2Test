@@ -2,21 +2,19 @@
 	Mismatch - %short
 	Module 1 - %short
 	Module 2 - %short
+	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+        
                 CUtlCStringConversion
      0
     0         0
    pppp
-  0  
-  P0 
  (Abstract)
  - %short
  @ @   0  @P
  @@@@@@
  [A\A^A_]
  [A^]
- fff.
  ffff.
-!!m_LessFunc
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CDynDataTextWriter::WriteElementValue() encountered NULL element value\__int128"
 !"CNewLoadWriter::AssignValue_String - Unrecognized enumerant"
@@ -31,7 +29,8 @@
 !"Unsupported schema enum size"
 !"Unsupported schema type for float deserialization"
 !"Unsupported schema type for integer deserialization"
-!@`XA`&ATAp
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!@`YB`&ATAp
 !GlobalTypes
 !IsSingleFieldRestricted()
 !bCreate
@@ -51,6 +50,7 @@
 #fff.
 $$Ic]HH
 $$L;long double
+$ffff.
 %-10s%-10s %-8s %-8s %-40s %-40s %-40s
 %-10s%-10u %-8u %-8d %-40s %-40s %-40s
 %-10s[ Inline %short ]
@@ -65,6 +65,7 @@ $$L;long double
 %float %float %float
 %float %float %float %float
 %float %float %float %float %float %float %float %float %float %float %float %float %float %float %float %float
+%int %int %int %int
 %s_%double
 %short #%double: '%short'/'%short': %double != %double
 %short #%double: '%short'/'%short': '%short' != '%short'
@@ -91,8 +92,8 @@ $$L;long double
 %short| SizeOf: %double
 %short| Virtual: %short; Abstract: %short; TrivialConstr: %short; TrivialDestr: %short
 &fff.
-&ffff.
-'ffff.
+&ffffff.
+'fff.
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
 ( int64 )nVal16 == nValue
 ( int64 )nVal32 == nValue
@@ -116,8 +117,10 @@ $$L;long double
 ([A^A_]
 (detailed layout)
 (dump)
+(fffff.
 (intp)this % 16 == 0
 (layout)
+(m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (ptr) ->
@@ -125,17 +128,18 @@ $$L;long double
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uintp)m_pAllocChunkNextAlloc <= (uintp)m_pAllocChunkBase + m_nCalculatedRequiredSize
 *** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%short" was not unregistered! Shutdown crash imminent!
 ***!        ENTERING THE DANGER ZONE         !***
 ***! Disregarding mismatched schema bindings !***
 *************************************************
 *NoSchemaClass*
 *fff.
+*fffff.
 *pPointerToStorage == NULL
-+C$A9E
 +H$Hc
 +K$Hc
-+fffff.
-+ffffff.
++ffff.
+,ffff.
 --  Increase the size of the resource stream   --
 --  Need %double bytes, but only have %double bytes
 --- (No Disk Introspection for struct %short)
@@ -154,10 +158,10 @@ $$L;long double
 ... (total %double bytes) ...
 ...(skipping %u of %u elements)...
 ...:CTier2AppSystem<ISchemaSystem, 0> const
+.ETv*H
+.Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceeditinfo_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourceextreflist_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/resourcefile/release/osx64/resourcemanifestfiledata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/schemalib/release/osx64/schemaclassinfo_data_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/schemalib/release/osx64/schemaclassinfo_h_schema.gen_cpp
@@ -166,7 +170,6 @@ $$L;long double
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/schemalib/release/osx64/schemametadata_data_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/schemalib/release/osx64/schemametadata_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/schemasystem/release/osx64/internalregistration_h_schema.gen_cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/schemasystem/release/osx64/resourceintrospection_h_schema.gen_cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/ordered_constructor.h
@@ -180,7 +183,7 @@ $$L;long double
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schema.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/schemasystem/schematypes.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/threadtools.h
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tslist.h
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier0/tsfastpushqueue.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/convar.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/public/tier1/utlhash.h
@@ -227,8 +230,6 @@ $$L;long double
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
-0 `P 
-0 pP 
 00000000-0000-0000-0000-000000000000
 0000`PP
 0@0   `
@@ -240,22 +241,21 @@ $$L;long double
 0x%08X
 29C |.
 29K }
-4 [A\A^A_]
 40A;wchar_t
 49K }
 49S |}
 6[A\A^A_]
 8[A\A]A^A_]
 8[A^A_]
+8ffffff.
 9S |signed char
 9S |unsigned int
-;Y(uTI
-;YHu`I
+;X(u#
 <!-- schema text {%short} generic {%short} -->
 <IL9,
+<null>
 =ffff.
-?ffffff.
-@0L;long double
+@0L;}
 @CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 @CThreadSpinRWLock::LockForRead()
 @CThreadSpinRWLock::SpinLockForWrite(unsigned long long)
@@ -266,10 +266,10 @@ $$L;long double
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 @V_stristr_fast(char const*, char const*)
+@[A\A^A_]
 @_AssertMsg_ConditionFailed
 @_CMemAllocSystemInitialize
 @_CommandLine
-@_EarlyInit_Tier0
 @_GetCPUInformation
 @_KeyValuesSystem
 @_LOG_GENERAL
@@ -299,6 +299,7 @@ $$L;long double
 @_V_qsort
 @_V_qsort_s
 @_V_snprintf
+@_V_sscanf
 @_V_stricmp_fast
 @_V_strtod
 @_V_strtoi64
@@ -337,7 +338,7 @@ $$L;long double
 @dyld_stub_binder
 @hL;long double
 @loader_path
-@pL;unsigned long
+@pL;long double
 @r8Ic
 @rpath/libschemasystem.dylib
 @rpath/libtier0.dylib
@@ -347,9 +348,8 @@ $$L;long double
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
-A LcK 1
 A#D$4
-A(Hc{(1
+A#D$<
 A+D$$H
 A+D$$Hc
 A+F$H
@@ -359,37 +359,25 @@ A+G$Hc
 A+L$$Hc
 A+N$Hc
 A+O$Hc
-A+uX~
-A0LcK01
-A8Hc{81
 A9V |fA
 A9V }	
 A9V }	A
 A9W |[A
+A9^$|
 A;G ~
+A;\$0|
 A;\$@|
-A;](uOI
-A;]PukI
-A;]xu
+A;]long long|
 A;^0|
 A;^@|
-A;^xupI
-A;_`u&
-A;t$Xu0I
-A@ unsigned short%H
-A@LcK@1
-AHcCXH
+A;_0|
+A;|$Xu
+A;}Pu
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
 ARARAp
 ARAp8p8p
 ARBRAp
-ARB]ARAp8p8p
 ARB]ASAp(pxp
-ASARBSAXBRB]ARA
-ASARBSAXBRB`
-ASARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRB`
-ASARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRA
 ASAp(pxp
 ATBRB]ARBRAp
 ATBRB]ARBRBp
@@ -410,6 +398,7 @@ AWAVAUATSPI
 AWAVAUATSPL
 AWAVAUATSPM
 AWAVS
+AWAVSA
 AWAVSH
 AWAVSP
 AWAVSPA
@@ -417,10 +406,13 @@ AWAVSPH
 AWAVSPI
 AWAVSPL
 AWAVSPM
+AZBSBp
+A[ATAp
 AbstractImplicit
 Alignment: %double bytes%short
 Alignment?
 All errors logged to console. First error (of %double):
+AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 AssetBrowserSystem_001
@@ -443,22 +435,7 @@ BinaryProperties_GetValue
 C [A\A^A_]
 C [A^]
 C ffff.
-C0D;short
-CAtomicManipulator<CResourceArray<CResourceDiskEnum> >
-CAtomicManipulator<CResourceArray<CResourceDiskEnumValue> >
-CAtomicManipulator<CResourceArray<CResourceDiskStruct> >
-CAtomicManipulator<CResourceArray<CResourceDiskStructField> >
 CAtomicManipulator<CResourceArray<CResourcePointer<CResourceString> > >
-CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >
-CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >
-CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >
-CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >
-CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >
-CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >
-CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >
-CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >
-CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >
-CAtomicManipulator<CResourceArray<unsigned char> >
 CAtomicManipulator<CResourcePointer<CResourceString> >
 CAtomicManipulator<CResourceString>
 CAtomicManipulator<CSchemaType>
@@ -493,7 +470,6 @@ CBaseAppSystem<ISchemaSystem>
 CBitVec
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
 CConCommandMemberAccessor<CSchemaSystem>
-CCopyableUtlVector
 CDefaultAccessor
 CDestructorTraversal
 CDynContextBase::SetDeferredElementFrees inconsistently called!
@@ -503,6 +479,7 @@ CDynDataLoadWriter
 CDynDataOwner::~CDynDataOwner()
 CDynElement::CDynAttribute *CDynElement::InternalAddAttr(DynSymbol_t, DynTypeHandle_t, bool)
 CDynElement::CDynAttribute::CDynAttribute(CDynElement *, DynSymbol_t, DynTypeHandle_t)
+CEmptyConVar
 CEntityHandle
 CEntityIndex
 CFmtStrN<256, false>
@@ -517,13 +494,9 @@ COLORCORRECTION_VERSION_1
 CPlayerSlot
 CPostConnectCallback
 CResourceArray
-CResourceDiskEnum
-CResourceDiskEnumValue
-CResourceDiskStruct
 CResourceDiskStructField
 CResourceDiskTraversal
 CResourceExtReference
-CResourceIntrospectionManifest
 CResourcePointer
 CResourceStream
 CResourceStreamVM
@@ -542,11 +515,6 @@ CSchemaArrayManipulator<SchemaMetaModifyAdd_t>
 CSchemaArrayManipulator<SchemaMetadataEntryData_t>
 CSchemaArrayManipulator<SchemaString_t>
 CSchemaBaseClassInfo
-CSchemaClassBinding<CResourceDiskEnum>
-CSchemaClassBinding<CResourceDiskEnumValue>
-CSchemaClassBinding<CResourceDiskStruct>
-CSchemaClassBinding<CResourceDiskStructField>
-CSchemaClassBinding<CResourceIntrospectionManifest>
 CSchemaClassBinding<CSchemaBaseClassInfo>
 CSchemaClassBinding<CSchemaClassField>
 CSchemaClassBinding<CSchemaClassInfo>
@@ -559,17 +527,6 @@ CSchemaClassBinding<CSchemaMetadataSet>
 CSchemaClassBinding<CSchemaStaticField>
 CSchemaClassBinding<CSchemaSystemInternalRegistration>
 CSchemaClassBinding<InfoForResourceTypeCResourceManifestInternal>
-CSchemaClassBinding<ResourceAdditionalRelatedFile_t>
-CSchemaClassBinding<ResourceArgumentDependency_t>
-CSchemaClassBinding<ResourceCustomDependency_t>
-CSchemaClassBinding<ResourceEditFloatData_t>
-CSchemaClassBinding<ResourceEditInfoBlock_t>
-CSchemaClassBinding<ResourceEditIntData_t>
-CSchemaClassBinding<ResourceEditStringData_t>
-CSchemaClassBinding<ResourceExtRefList_t>
-CSchemaClassBinding<ResourceInputDependency_t>
-CSchemaClassBinding<ResourceReferenceInfo_t>
-CSchemaClassBinding<ResourceSpecialDependency_t>
 CSchemaClassBinding<SchemaBaseClassInfoData_t>
 CSchemaClassBinding<SchemaClassFieldData_t>
 CSchemaClassBinding<SchemaClassInfoData_t>
@@ -585,8 +542,6 @@ CSchemaClassField
 CSchemaClassInfo
 CSchemaClassVisitor
 CSchemaClassVisitorInfoMap<CDestructorTraversal>
-CSchemaEnumBinding<ResourceDependencyFlags_t>
-CSchemaEnumBinding<ResourceIntrospectionVersion_t>
 CSchemaEnumBinding<ResourceStructFlags_t>
 CSchemaEnumBinding<SchemaClassFlags_t>
 CSchemaEnumBinding<SchemaFieldType_t>
@@ -599,21 +554,7 @@ CSchemaInstallCallback
 CSchemaKeyValuesTarget
 CSchemaLoadContext: Trying to take control of objects
 CSchemaLoadContext: Trying to take control of objects inside of signed char block allocation.
-CSchemaManipulator<CResourceArray<CResourceDiskEnum> >
-CSchemaManipulator<CResourceArray<CResourceDiskEnumValue> >
-CSchemaManipulator<CResourceArray<CResourceDiskStruct> >
-CSchemaManipulator<CResourceArray<CResourceDiskStructField> >
 CSchemaManipulator<CResourceArray<CResourcePointer<CResourceString> > >
-CSchemaManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >
-CSchemaManipulator<CResourceArray<ResourceArgumentDependency_t> >
-CSchemaManipulator<CResourceArray<ResourceCustomDependency_t> >
-CSchemaManipulator<CResourceArray<ResourceEditFloatData_t> >
-CSchemaManipulator<CResourceArray<ResourceEditIntData_t> >
-CSchemaManipulator<CResourceArray<ResourceEditStringData_t> >
-CSchemaManipulator<CResourceArray<ResourceInputDependency_t> >
-CSchemaManipulator<CResourceArray<ResourceReferenceInfo_t> >
-CSchemaManipulator<CResourceArray<ResourceSpecialDependency_t> >
-CSchemaManipulator<CResourceArray<unsigned char> >
 CSchemaManipulator<CResourcePointer<CResourceString> >
 CSchemaManipulator<CResourceString>
 CSchemaManipulator<CSchemaType>
@@ -705,6 +646,7 @@ CUtlIncrementalVector
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
+CUtlRBTree overflow with %u elements!
 CUtlReference
 CUtlString
 CUtlString CSchemaFieldIterator::GetFullyQualifiedFieldName() const
@@ -752,23 +694,27 @@ CmdLinkAH
 Color
 ConCommand
 ConCommandBase
+ConVar
+ConVar(%short) defined with infinite float value (%short)
+ConVarRef %short doesn'unsigned short point to an existing ConVar
 ConfigurationSystem_001
+Construction is only allowed from the resolve function
 Count
 CreateInterface
 D$ Ik
 D$(A9
 D$(H9
+D$@ H
+D$@ unsigned short
+D$@Ic
 D$@IcL$HI
 D$DD	
 D$HIcL$PI
-D;cHu
-D;sPuXH
-D;sXu
+D$|Hc
+D9sXu
+D;kHu
+D;xHu@
 D;{ H
-D;{ u
-D;{(uLH
-D;{8u
-D;{xu
 DISK: %short
 DebugTextureInfo001
 DegreeEuler
@@ -781,13 +727,25 @@ DynElementHandle_t CDynData::GetAsElementHandle()
 DynSymbol_t CDynElement::GetAttrNameByIndex(DynAttrIndex_t)
 DynTypeHandle_t MakeDynType(CDynContextBase *, CTextParseType *)
 E$A+E4H
+E(fff.
 E0E;long double
+E0E;u
+E;__float128 u
 E;__int128 ~0
-E;uPu$I
+E;exu
+E;fxuhA
+E;long double(uYA
+E;long double(uZA
+E;long double@u
+E;n8u
+E;t$Xu
+E;u`u
 E;unsigned __int128 u
 E;unsigned __int128 |
-E;}8|
-E;~@u
+E;|$8u
+E;|$8|
+E;}PuwA
+E;~PL
 E@IcMHI
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CSchemaType
@@ -836,6 +794,7 @@ ERROR: TODO - implement CSchemaType_FixedArray::Copy()
 ERROR: Unknown type category in CSchemaObjectTraversal::Traverse()
 ERROR: Unrecognized resource handle type for %short::%short: %short (%short)
 ERROR: Unsupported atomic type in CSchemaTextWriter::WriteAtomic: '%short' (id:%double)
+EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
 Encountered ConCommand '%short' without signed char callback!
 Encountered an element from the wrong context
@@ -866,9 +825,6 @@ Expected token
 Expected type of next member
 Expected value or ']'
 ExternalReference
-F Hcz 1
-F0Hcz01
-F@Hcz@1
 FATAL ERROR: Failed to find enum introspection for ID 0x%08X, member of struct '%short' (Schema data was probably not registered. Add $SchemaFile to your project)
 FATAL ERROR: Failed to find struct introspection for ID 0x%08X struct '%short' (Schema data was probably not registered. Add $SchemaFile to your project)
 FHIcNPI
@@ -905,17 +861,17 @@ From Class Binding
 From Enum Binding
 G$A+G4H
 G$IcO
-GA#D$
+G8H	p(]
 GHIcOPI
 GLOBAL: %short
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
+H	p(]
 H	wchar_t(]
 H!wchar_t(]
 H+N H
 H9w(unsigned short
-HHc{H1
 H[A\A]A^A_]
 H__ZdaPv
 H__ZdlPv
@@ -924,48 +880,30 @@ H__Znwm
 HammerMapLoader001
 Has Trivial Constructor: %short
 Has Trivial Destructor: %short
+HcBXH
+HcHXH
+HcI(H
+HcIHH
+HcKHH
 HelpSystem_001
 HostStateMgr001
-I CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int, CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int> >::Find(const T &) const [T = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, I = unsigned int, L = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int, CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, I = unsigned int, L = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int>]
 I CUtlRBTree<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int, CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int> >::NewNode(const T *) [T = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, I = unsigned int, L = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int>]
-I CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Find(const T &) const [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-I CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
-I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::Find(const T &) const [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
-I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
 I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::NewNode(const T *) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
+I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I9_(t6I9^(t0H
 I9_(unsigned short'I9^(unsigned short!H
 IAppSystem
@@ -973,6 +911,7 @@ IAtomicManipulator
 ICommandCallback
 ICommandCompletionCallback
 IConCommandBaseAccessor
+IConVar
 ID: %016llX
 IQuickTime001
 ISchemaBinding
@@ -985,7 +924,20 @@ ISchemaSystemTypeScope
 ISchemaSystemUtils
 ITextLoadWriter
 IcEHH
+IcEXI
+IcL$8H
+IcL$PH
+IcL$XH
+IcL$xH
+IcM(H
+IcM@H
 IcMHH
+IcMPH
+IcM`H
+IcMxH
+IcN8H
+IcNxH
+IcO H
 IcU0H
 IcuHA
 Iffff.
@@ -1007,6 +959,7 @@ IsInitialized()
 IsPowerOfTwo( m_nAlignment )
 IsValid()
 IsValidIndex(int) && (int != InvalidIndex())
+Jct;PH
 K9t&Xu
 KHHcCPH
 KeyValueCache001
@@ -1017,12 +970,10 @@ L$8H9
 L$@H9
 L$TE1
 L&`fff.
-L9;unsigned short	H
 L9s(unsigned short(H
 L9{(t0H
 L;#unsigned short*H
 L;k@unsigned short*H
-LightingBuilderMgr001
 Line %double at "%short": %short
 Line %double: %short
 Line %double: Invalid literal value "%short"
@@ -1032,6 +983,7 @@ LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 M$t"A
+M9>unsigned short	H
 MATCHFRAMEWORK_001
 MAlignment
 MDefaultString
@@ -1044,7 +996,6 @@ MNetworkSerializeAs
 MNoScatter
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
-MResourceBlockType
 MResourceTypeForInfoType
 MSerializationNameCallback
 MSerializeAs
@@ -1065,12 +1016,10 @@ Meta Modify Remove Count
 Meta add name
 Meta remove name
 Meta tag name
-ModelDocCommandSystem001
+Mffff.
+ModelDocUtils001
 Modified resource structure detected, attempting conversion:
 Multiple instances of schema system are initialized. %p != %p
-N(Hcz(1
-N8Hcz81
-NHHczH1
 NULL CSchemaType
 NetworkClientService_001
 NetworkMessagesVersion001
@@ -1088,14 +1037,14 @@ No disk struct in manifest for expected class %short
 No objects to save
 No schema matching on disk struct %short
 NoSchema?
-O [A\A^A_]
-O$IcG
-O([A\A^A_]
 O0H;]
+Offffff.
 Offset
 Opaque Indirection
 OpaqueType
+Ordered constructor wrapped type has no default constructor.
 Ordered object did not begin in signed char zeroed state
+Ordered object'short memory was modified prior to construction
 Out of bounds for compound
 OuterOffset
 P8[A\A^A_]
@@ -1107,6 +1056,7 @@ PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr002
+PhH;]
 PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
@@ -1123,19 +1073,14 @@ QueuedLoaderVersion001
 RAp(pxp
 RAphp8p
 RBRBRBRBRAp
-RBRB]ARAp0p
+RBRB]ARA
 RBRBp
 RBSATAp
 RBSAXAp
 RBSAXBRAp
 RBSAXBRFp
 RBSAXBRLp
-RBSAXBSARBSAXBRB`
-RESOURCE_INPUT_DEPENDENCY_EXISTS
-RESOURCE_INPUT_DEPENDENCY_GAME_FILE
-RESOURCE_INPUT_DEPENDENCY_NOFLAG
-RESOURCE_INPUT_DEPENDENCY_OPTIONAL
-RESOURCE_INTROSPECTION_VERSION
+RBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRA
 RadianEuler
 Reference
 RegisterConfigValue: Unknown error constructing config value "%short"!
@@ -1147,29 +1092,14 @@ RenderHardwareConfig002
 RenderService_001
 RenderSystemSurface001
 RenderUtils_001
-ResourceAdditionalRelatedFile_t
-ResourceArgumentDependency_t
 ResourceBinding_t
 ResourceCompilerSystem001
-ResourceCustomDependency_t
-ResourceDependencyFlags_t
-ResourceEditFloatData_t
-ResourceEditInfoBlock_t
-ResourceEditIntData_t
-ResourceEditStringData_t
-ResourceExtRefList_t
 ResourceHandleUtils001
 ResourceId_t
-ResourceInputDependency_t
-ResourceIntrospectionVersion_t
 ResourceManifestRegistry001
-ResourceReferenceInfo_t
-ResourceSpecialDependency_t
 ResourceStructFlags_t
 ResourceSystem013
 SATAp
-SBRGp
-SBRGp8p8p
 SCHEMA_CLASS_HAS_TRIVIAL_CONSTRUCTOR
 SCHEMA_CLASS_HAS_TRIVIAL_DESTRUCTOR
 SCHEMA_CLASS_HAS_VIRTUAL_MEMBERS
@@ -1224,7 +1154,6 @@ SCHEMA_FIELD_TYPE_VECTOR3D
 SCHEMA_FIELD_TYPE_VECTOR4D
 SCHEMA_FIELD_TYPE_VMATRIX
 SCHEMA_FIELD_TYPE_VOID
-SIcEXI
 SOURCE2_NO_BUNDLES
 SOURCE2_USE_BUNDLES
 SSE and SSE2 are required.
@@ -1283,6 +1212,7 @@ Source2Server001
 Source2ServerSerializers002
 Static Metadata Count
 StatsService_001
+SteamAudio001
 Struct
 Structure name collision: '%short' and '%short' (%double)
 T &CUtlStringMap<CSchemaSystemTypeScope *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CSchemaSystemTypeScope *, SymbolTableType_t = CUtlSymbolTable]
@@ -1296,17 +1226,17 @@ TBRB`
 TBSAp
 TBUATAp
 TB[ARA
-TB\ATAp
 TB]AXBRBRBRAp
 TB]Ap
 TCRAYAWATAp
 TCRAp
-TCRBRA
+TCRBRCp
 TCRBSATAp
 TCRBp0]Ap
 TCSATAp
 TCSATB`
 TCTBp
+TC\ATAp
 TC`(ATAp
 TRS_FALSE
 TRS_NONE
@@ -1434,6 +1364,7 @@ WARNING: Unknown schema enum '%short' referenced. You may have forgotten to $Sch
 WARNING: Unknown type '%short' declared '%short' for field '%short'.
 WARNING: Unrecognized object '%short' while loading into dynamic data.
 WARNING: Unrecognized type '%short' while unserializing schema text [Missing schema data?]
+Warning:  %short = '%short' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
@@ -1450,15 +1381,14 @@ X[A\A]A^A_]
 [A^A_]
 [No string specified]
 [unsigned short,fD
+\$0E1
 \$HHc
 ^0fffff.
-_0IcG
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
 _CommandLine
 _CreateInterface
-_EarlyInit_Tier0
 _GetCPUInformation
 _GetResourceManifestCount
 _GetResourceManifests
@@ -1492,6 +1422,7 @@ _V_atoui64
 _V_qsort
 _V_qsort_s
 _V_snprintf
+_V_sscanf
 _V_stricmp_fast
 _V_strtod
 _V_strtoi64
@@ -1523,6 +1454,7 @@ __cstring
 __data
 __empty__
 __error__
+__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __int128 < m_Vector.Count()
@@ -1551,11 +1483,15 @@ _strstr
 `0ffff.
 `P0@`
 `PP 0@
+`[A\A^A_]
 `[A^]
 `unsigned char[A\A^A_]
 animationsystem
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto CNewLoadWriter::AssignValue_Int(TextLoadTargetHandle_t, const char *)::(anonymous class)::operator()() const
+auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 bReference || bValue
 bitfield
 bitfield:%double
@@ -1577,10 +1513,12 @@ bool CSchemaSaveTraversal::RegisterClassInstance(const void *, ClassIntrospectio
 bool CSchemaSystemTypeScope::InsertNewClassBinding(SchemaClassId_t, CSchemaClassBindingBase *, CSchemaClassBindingBase **)
 bool CSchemaSystemTypeScope::InsertNewEnumBinding(SchemaClassId_t, CSchemaEnumBindingBase *, CSchemaEnumBindingBase **)
 bool CSchemaSystemUtils::UnpackIntrospectedBlock(const void *, size_t, const CResourceIntrospectionManifest *, const CSchemaClassBindingBase *, const char *, void **, size_t *, IntrospectionCompatibilityType_t *) const
+bool CSchemaSystemUtils::WriteDefaultToDisk(const SchemaClassInfo_t *, CResourceStream *, void *) const
 bool CSchemaTextWriter::WriteClass(ClassIntrospectionHandle_t, const void *)
 bool CUtlBuffer::Get(void *, int)
 bool EnsureTypeIsClassWithBinding(const CSchemaType *, const char *)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
+char(ffff.
 char[%double] %short = "%short"
 compound.m_Type->GetCategory() == DYNTYPE_TUPLE
 compound.m_nSize == compound.m_Type->GetTupleCount()
@@ -1591,7 +1529,6 @@ const char *KeyValues::GetName() const
 const void *CSchemaFieldIterator::PointerFromClass(const void *) const
 const void *CUtlBuffer::PeekGet(int, int)
 count >= 0
-d$ Hk
 double
 dyld_stub_binder
 dynamic
@@ -1602,10 +1539,10 @@ fffff.
 ffffff.
 filesystem_stdio
 float
-float QuaternionNormalize(Quaternion &)
 float32
 float64
 fltx4
+g_pCVar
 generic
 hfff.
 imemanager
@@ -1633,17 +1570,13 @@ int32 SchemaClassField_t::GetDiskSizeForIndirection(int) const
 int32 SchemaClassField_t::GetMemorySizeForIndirection(int) const
 int64
 int64 GetResourceTypeOfStrongHandleSynth(const CSchemaType *)
-it.GetFieldMemoryOffset() >= nSizeofPtr || ( it.GetTypeAs<CSchemaType_Bitfield>() != NULL )
+it.GetFieldMemoryOffset() >= (uint32)nSizeofPtr || ( it.GetTypeAs<CSchemaType_Bitfield>() != NULL )
 k@LccPI
-l$ Lk
 libschemasystem.dylib
 loadedModules.Count() == moduleNames.Count()
 localize
 long long	IcO
 long long[A\A]A^A_]
-m_AdditionalInputDependencies
-m_AdditionalRelatedFiles
-m_ArgumentDependencies
 m_AtomicDeclarations.IsEmpty()
 m_AuthorityStack.Count() > 0
 m_BaseClasses
@@ -1653,33 +1586,21 @@ m_CTransform
 m_CUtlBinaryBlock
 m_CUtlString
 m_CUtlSymbol
-m_ChildResourceList
 m_ClassFieldStack.Count() > 0
 m_ClassIntrospectionHandle_t
 m_Color
-m_CompilerIdentifier
-m_ContentRelativeFilename
-m_ContentSearchPath
-m_CustomDependencies
 m_DegreeEuler
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
 m_Enum == NULL
 m_EnumIntrospectionHandle_t
-m_EnumValueIntrospection
 m_Enumerators
-m_ExtraFloatData
-m_ExtraIntData
-m_ExtraStringData
-m_FieldIntrospection
 m_FieldMetadataOverrides
 m_FieldName
 m_Fields
 m_Fields.IsStaticData()
 m_FirstFree == InvalidIndex()
-m_Indirection
-m_InputDependencies
 m_Memory.IsIdxValid( Index )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + nMaxSize - 1 )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
@@ -1692,21 +1613,13 @@ m_NestedEnums
 m_NumElements == 0
 m_OwnershipStack.Count() > 0
 m_Param.m_pAsVoid == NULL
-m_ParameterName
-m_ParameterType
 m_QAngle
 m_Quaternion
 m_RadianEuler
-m_ReferencedEnums
-m_ReferencedStructs
-m_RelativeFilename
 m_ResourceTypes
 m_Root == InvalidIndex()
-m_SearchPath
-m_SpecialDependencies
 m_StaticEntries
 m_StaticFields.IsStaticData()
-m_String
 m_TagName
 m_Type == NULL && m_Storage == 0
 m_Vector
@@ -1717,59 +1630,35 @@ m_VectorAligned
 m_bDeferredElementFrees != bDeferAllFrees
 m_bFinalized
 m_bRemoveAll
-m_flFloat
+m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
 m_matrix3x4_t
 m_matrix3x4a_t
 m_nAlignOf
-m_nAlignment
-m_nBaseStructId
 m_nComposeBufferDepth >= 0
-m_nCount
-m_nDiskCrc
-m_nDiskSize
-m_nEnumValue
-m_nFileCRC
-m_nFingerprint
-m_nFingerprintDefault
-m_nFlags
-m_nId
-m_nInt
-m_nIntrospectionVersion
 m_nOffset
-m_nOnDiskOffset
-m_nParentIndex
 m_nSingleInheritanceOffset
 m_nSizeOf
-m_nStructFlags
-m_nType
-m_nTypeData
-m_nUserData
-m_nUserVersion
 m_nValue
 m_pClass
 m_pContext == pFrom->m_pContext
 m_pData == NULL
 m_pDataType
-m_pEnumValueName
-m_pFieldName
 m_pInnerType
 m_pInstance
 m_pKeyValues
-m_pName
 m_pOuterTypeScope != NULL
 m_pOwner && m_CompletionFunc
 m_pOwner && m_Func
+m_pParent == this
 m_pParent->m_fnCompletionCallback
 m_pParentScope != NULL
 m_pParentScope == NULL
-m_pResourceName
 m_pSchemaType != NULL
 m_pTagDataType
 m_pTagValue
 m_pType
 m_pTypeOf != NULL
-m_resourceRefInfoList
 m_stringToken
 materialsystem2
 matrix3x4_t
@@ -1778,13 +1667,17 @@ meshsystem
 mffff.
 nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
+nArrayCount >= INT16_MIN && nArrayCount <= INT16_MAX
 nCat == TEXT_PARSE_CATEGORY_POINTER || nCat == TEXT_PARSE_CATEGORY_TUPLE || nCat == TEXT_PARSE_CATEGORY_ARRAY
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nCompoundIdx < m_EncounteredCompounds.Count()
+nDiskOffset >= INT16_MIN && nDiskOffset <= INT16_MAX
+nDiskSize <= UINT16_MAX
 nEntrySize > 0
 nFieldType >= 0 && nFieldType < SCHEMA_FIELD_TYPE_COUNT
 nFlags >= 0 && nFlags <= UINT8_MAX
+nIndex != pDisabledBlob->m_DisabledModeAllocations.InvalidIndex()
 nIndex < compound.m_pSerializeAsInfo->m_nTupleCount
 nIndex <= IndirectionCount()
 nIndex >= 0 && nIndex < m_BaseClasses.Count()
@@ -1802,13 +1695,12 @@ nTraversalOffset == 0
 nType >= 0 && nType < SCHEMA_BUILTIN_TYPE_COUNT
 name != DYN_SYMBOL_INVALID
 networksystem
-nfffff.
 operator delete(void*)
 operator delete[](void*)
 operator new(unsigned long)
 operator new[](unsigned long)
 p8p8p
-p@P@0
+p@P@0@
 pArrayOf->m_pTypeScope == m_pParentScope
 pAtomicType
 pAtomic_T
@@ -1830,6 +1722,8 @@ pElementHandle != NULL
 pEnum
 pEnum != NULL
 pEnum->GetInfo()->GetSizeOf() == 4
+pEnumerator->GetValue() >= INT_MIN && pEnumerator->GetValue() <= INT_MAX
+pField->m_nDiskOffset >= INT16_MIN && pField->m_nDiskOffset <= INT16_MAX
 pFieldBinding->m_nMemoryOffset >= 0
 pFieldInfo->IndirectionCount() == 0
 pFirstSeparator - pCurPos <= INT_MAX
@@ -1839,11 +1733,13 @@ pFoundEnum != NULL
 pFrom != NULL
 pHandleData
 pInfo != NULL
+pInfo->m_nDiskSize <= INT16_MAX
 pInfo->m_nSizeOf != 0 && pInfo->m_nSizeOf != -1
 pInnerType
 pInt != NULL
 pIntrospection->GetAlignOf() != 0
 pIntrospection->GetSizeOf() != 0
+pMemory[int] == 0
 pName
 pObject != NULL
 pObjectName != NULL && pObjectName[0] != '\0'
@@ -1885,15 +1781,12 @@ pType->m_nAlignOf != 0
 pVecVoid != NULL
 pXRERA
 pXRERAp
-pXRESG
-pXp8p
 p`   P0pP
+p` 0@
 particles
 pppp 
-ppppP
 ptr: %short
 ptr: %short @ %p
-q.IsValid()
 q={%__float128, %__float128, %__float128; wchar_t=%__float128} p={%__float128, %__float128, %__float128}
 radr://5614542
 renderingpipelines
@@ -1922,8 +1815,6 @@ schemasystem'short StripTrailingFixedLength() was handed signed char too-small b
 size < 1024 * 1024
 size >= 0
 soundsystem
-static CSchemaEnumBindingBase *CSchemaEnumBinding<ResourceDependencyFlags_t>::Get() [T = ResourceDependencyFlags_t]
-static CSchemaEnumBindingBase *CSchemaEnumBinding<ResourceIntrospectionVersion_t>::Get() [T = ResourceIntrospectionVersion_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ResourceStructFlags_t>::Get() [T = ResourceStructFlags_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<SchemaClassFlags_t>::Get() [T = SchemaClassFlags_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<SchemaFieldType_t>::Get() [T = SchemaFieldType_t]
@@ -1931,11 +1822,6 @@ static CSchemaEnumBindingBase *CSchemaEnumBinding<ThreeState_t>::Get() [T = Thre
 static const SchemaFieldProperties_t *SchemaFieldProperties_t::GetFieldProperties(SchemaFieldType_t)
 static const SchemaIndirectionProperties_t *SchemaIndirectionProperties_t::GetIndirectionProperties(SchemaIndirectionType_t)
 static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigType_t, ConfigValueType_t, CConfigValueOptions &&, const void **)
-static void CResourceDiskEnum::Schema_VerifyBindingIsRegistered()
-static void CResourceDiskEnumValue::Schema_VerifyBindingIsRegistered()
-static void CResourceDiskStruct::Schema_VerifyBindingIsRegistered()
-static void CResourceDiskStructField::Schema_VerifyBindingIsRegistered()
-static void CResourceIntrospectionManifest::Schema_VerifyBindingIsRegistered()
 static void CSchemaBaseClassInfo::Schema_VerifyBindingIsRegistered()
 static void CSchemaClassField::Schema_VerifyBindingIsRegistered()
 static void CSchemaClassInfo::Schema_VerifyBindingIsRegistered()
@@ -1947,18 +1833,8 @@ static void CSchemaMetadataEntry::Schema_VerifyBindingIsRegistered()
 static void CSchemaMetadataSet::Schema_VerifyBindingIsRegistered()
 static void CSchemaStaticField::Schema_VerifyBindingIsRegistered()
 static void CSchemaSystemInternalRegistration::Schema_VerifyBindingIsRegistered()
+static void ConVarRef::InitDeferredConVarRefs()
 static void InfoForResourceTypeCResourceManifestInternal::Schema_VerifyBindingIsRegistered()
-static void ResourceAdditionalRelatedFile_t::Schema_VerifyBindingIsRegistered()
-static void ResourceArgumentDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceCustomDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditFloatData_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditInfoBlock_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditIntData_t::Schema_VerifyBindingIsRegistered()
-static void ResourceEditStringData_t::Schema_VerifyBindingIsRegistered()
-static void ResourceExtRefList_t::Schema_VerifyBindingIsRegistered()
-static void ResourceInputDependency_t::Schema_VerifyBindingIsRegistered()
-static void ResourceReferenceInfo_t::Schema_VerifyBindingIsRegistered()
-static void ResourceSpecialDependency_t::Schema_VerifyBindingIsRegistered()
 static void SchemaBaseClassInfoData_t::Schema_VerifyBindingIsRegistered()
 static void SchemaClassFieldData_t::Schema_VerifyBindingIsRegistered()
 static void SchemaClassInfoData_t::Schema_VerifyBindingIsRegistered()
@@ -1977,19 +1853,17 @@ strnlen
 symbol
 t$HHc
 t$`L;unsigned long
-t1ffff.
 t8ff.
 tMff.
+tOffffff.
 tUH;]
 target.m_pType->GetTypeCategory() == SCHEMA_TYPE_ATOMIC && target.m_pType->GetAtomicCategory() == SCHEMA_ATOMIC_T
 tier2_bundle
 tier3_bundle
 tkff.
-tlIcG
-tlfff.
+tqIc_
 tqJ94
 typeinfo for std::bad_alloc
-uBD;unsigned __int128
 uGetResourceManifest
 uKHcC
 uiKey != UnusedElementKey()
@@ -2004,12 +1878,18 @@ unsigned char
 unsigned char[A\A]A^A_]
 unsigned int CUtlStringMap<CSchemaSystemTypeScope *, CUtlSymbolTable>::Count() const [T = CSchemaSystemTypeScope *, SymbolTableType_t = CUtlSymbolTable]
 unsigned short	[A^]
+unsigned short&H9[8tUH
+unsigned short&fffff.
 unsigned short'ff.
 unsigned short)Lc3M
 unsigned short+L;}
 unsigned short,L;long double
 unsigned short,fff.
+unsigned short/ff.
 unsigned short;ff.
+unsigned short?ffffff.
+unsigned short@ff.
+vHct
 virtual CSchemaClassBindingBase *CSchemaSystemTypeScope::InstallSchemaClassBinding(CSchemaClassBindingBase *, CSchemaClassInfo *, const char *)
 virtual CSchemaEnumBindingBase *CSchemaSystemTypeScope::InstallSchemaEnumBinding(CSchemaEnumBindingBase *, const char *)
 virtual CSchemaType *CSchemaSystemTypeScope::FindSchemaTypeByName(const char *)
@@ -2040,36 +1920,8 @@ virtual int CConCommandMemberAccessor<CSchemaSystem>::CommandCompletionCallback(
 virtual int CDynDataLoadWriter::BeginCompound(TextLoadTargetHandle_t)
 virtual int CNewLoadWriter::BeginCompound(TextLoadTargetHandle_t)
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskEnum> >::Allocate() [T = CResourceArray<CResourceDiskEnum>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskEnum> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceDiskEnum>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskEnumValue> >::Allocate() [T = CResourceArray<CResourceDiskEnumValue>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskEnumValue> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceDiskEnumValue>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskStruct> >::Allocate() [T = CResourceArray<CResourceDiskStruct>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskStruct> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceDiskStruct>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskStructField> >::Allocate() [T = CResourceArray<CResourceDiskStructField>]
-virtual void *CAtomicManipulator<CResourceArray<CResourceDiskStructField> >::AllocateAndCopy(const void *) [T = CResourceArray<CResourceDiskStructField>]
 virtual void *CAtomicManipulator<CResourceArray<CResourcePointer<CResourceString> > >::Allocate() [T = CResourceArray<CResourcePointer<CResourceString> >]
 virtual void *CAtomicManipulator<CResourceArray<CResourcePointer<CResourceString> > >::AllocateAndCopy(const void *) [T = CResourceArray<CResourcePointer<CResourceString> >]
-virtual void *CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::Allocate() [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::Allocate() [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::Allocate() [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::Allocate() [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::Allocate() [T = CResourceArray<ResourceEditIntData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceEditIntData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::Allocate() [T = CResourceArray<ResourceEditStringData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceEditStringData_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Allocate() [T = CResourceArray<ResourceInputDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceInputDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Allocate() [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Allocate() [T = CResourceArray<ResourceSpecialDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::AllocateAndCopy(const void *) [T = CResourceArray<ResourceSpecialDependency_t>]
-virtual void *CAtomicManipulator<CResourceArray<unsigned char> >::Allocate() [T = CResourceArray<unsigned char>]
-virtual void *CAtomicManipulator<CResourceArray<unsigned char> >::AllocateAndCopy(const void *) [T = CResourceArray<unsigned char>]
 virtual void *CAtomicManipulator<CSchemaType>::Allocate()
 virtual void *CAtomicManipulator<CSchemaType>::AllocateAndCopy(const void *)
 virtual void *CAtomicManipulator<KeyValues>::Allocate()
@@ -2092,36 +1944,8 @@ virtual void *CSchemaType_FixedArray::Allocate() const
 virtual void *CSchemaType_FixedArray::AllocateAndCopy(const void *) const
 virtual void *CSchemaType_NoschemaType::Allocate() const
 virtual void *CSchemaType_NoschemaType::AllocateAndCopy(const void *) const
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskEnum> >::Copy(void *, const void *) [T = CResourceArray<CResourceDiskEnum>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskEnum> >::Deallocate(void *) [T = CResourceArray<CResourceDiskEnum>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskEnumValue> >::Copy(void *, const void *) [T = CResourceArray<CResourceDiskEnumValue>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskEnumValue> >::Deallocate(void *) [T = CResourceArray<CResourceDiskEnumValue>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskStruct> >::Copy(void *, const void *) [T = CResourceArray<CResourceDiskStruct>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskStruct> >::Deallocate(void *) [T = CResourceArray<CResourceDiskStruct>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskStructField> >::Copy(void *, const void *) [T = CResourceArray<CResourceDiskStructField>]
-virtual void CAtomicManipulator<CResourceArray<CResourceDiskStructField> >::Deallocate(void *) [T = CResourceArray<CResourceDiskStructField>]
 virtual void CAtomicManipulator<CResourceArray<CResourcePointer<CResourceString> > >::Copy(void *, const void *) [T = CResourceArray<CResourcePointer<CResourceString> >]
 virtual void CAtomicManipulator<CResourceArray<CResourcePointer<CResourceString> > >::Deallocate(void *) [T = CResourceArray<CResourcePointer<CResourceString> >]
-virtual void CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceAdditionalRelatedFile_t> >::Deallocate(void *) [T = CResourceArray<ResourceAdditionalRelatedFile_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceArgumentDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceArgumentDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceCustomDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceCustomDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditFloatData_t> >::Deallocate(void *) [T = CResourceArray<ResourceEditFloatData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceEditIntData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditIntData_t> >::Deallocate(void *) [T = CResourceArray<ResourceEditIntData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceEditStringData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceEditStringData_t> >::Deallocate(void *) [T = CResourceArray<ResourceEditStringData_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceInputDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceInputDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceInputDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceReferenceInfo_t> >::Deallocate(void *) [T = CResourceArray<ResourceReferenceInfo_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Copy(void *, const void *) [T = CResourceArray<ResourceSpecialDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<ResourceSpecialDependency_t> >::Deallocate(void *) [T = CResourceArray<ResourceSpecialDependency_t>]
-virtual void CAtomicManipulator<CResourceArray<unsigned char> >::Copy(void *, const void *) [T = CResourceArray<unsigned char>]
-virtual void CAtomicManipulator<CResourceArray<unsigned char> >::Deallocate(void *) [T = CResourceArray<unsigned char>]
 virtual void CAtomicManipulator<CSchemaType>::Copy(void *, const void *)
 virtual void CAtomicManipulator<CSchemaType>::Deallocate(void *)
 virtual void CAtomicManipulator<KeyValues>::Copy(void *, const void *)
@@ -2187,6 +2011,11 @@ virtual void CSchemaType_NoschemaType::Copy(void *, const void *) const
 virtual void CSchemaType_NoschemaType::Deallocate(void *) const
 virtual void ConCommand::Dispatch(const CCommandContext &, const CCommand &)
 virtual void ConCommandBase::Create(const char *, const char *, int64)
+virtual void ConVar::ChangeStringValue(const char *, float)
+virtual void ConVar::Create(const char *, const char *, int64, const char *, bool, float, bool, float, FnChangeCallback_t)
+virtual void ConVar::InternalSetFloatValue(float)
+virtual void ConVar::InternalSetIntValue(int)
+virtual void ConVar::InternalSetValue(const char *)
 visitedClassList.Tail() == pSynthClass
 void *CResourceScatterer::DoScatter(const void *, const CSchemaClassBindingBase *, const char *, size_t *)
 void *CResourceScatterer::ScatterAlloc(int, int)
@@ -2219,9 +2048,11 @@ void CDynElement::CopyAttributesFromShallow(CDynElement *)
 void CDynType::AllocateData()
 void CDynType::FreeData()
 void CKeyValues_Data::Internal_ClearData()
-void COrderedConstructor_Create<void, CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, false>::AddRef(bool) [T = void, RESOLVECLASS = CResolveOrderedFunc<void, &ResolveOrderedSystem_EarlyInit_Common>, bCONSTRUCT_ON_FIRST_USE = false]
-void COrderedConstructor_DependencyManagement<void>::InternalLock(bool) [T = void]
-void COrderedConstructor_DependencyManagement<void>::Release() [T = void]
+void COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalLock(bool) [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::Release() [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
+void CResourceDiskStruct::SetStructInfo(CResourceStream *, const char *, const char *, int32, uint32, uint32, uint8)
+void CResourceDiskStructField::SetFieldInfo(CResourceStream *, const char *, int, int)
 void CResourceScatterer::ScatterField(const void *, void *, OldFieldIntrospectionHandle_t, int)
 void CResourceScatterer::ScatterRootField(const void *, void *, OldFieldIntrospectionHandle_t)
 void CResourceScatterer::ScatterStruct(const void *, void *, const CSchemaClassBindingBase *)
@@ -2243,6 +2074,7 @@ void CSchemaKeyValuesTarget::DecrementComposeBufferDepth()
 void CSchemaObjectTraversal::PopClassField()
 void CSchemaObjectTraversal::PopOwnership()
 void CSchemaObjectTraversal::Traverse(const void *, const CSchemaType *)
+void CSchemaSystem::CalculateDiskInfo(SchemaClassInfo_t *) const
 void CSchemaSystem::InitializeFieldInfo(SchemaClassField_t *, int16) const
 void CSchemaSystemTypeScope::ConCmdListBindings(const char *)
 void CSchemaSystemTypeScope::FinalizeTypeScope()
@@ -2264,43 +2096,32 @@ void CUtlBuffer::AddNullTermination()
 void CUtlBuffer::GetString(char *, int)
 void CUtlBuffer::Put(const void *, int)
 void CUtlBuffer::VaPrintf(const char *, __va_list_tag *)
-void CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_I_t, CSchemaType_Atomic_I *, unsigned short, bool (*)(const AtomicTypeInfo_I_t &, const AtomicTypeInfo_I_t &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_TT_t, CSchemaType_Atomic_TT *, unsigned short, bool (*)(const AtomicTypeInfo_TT_t &, const AtomicTypeInfo_TT_t &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short, CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, I = unsigned short, L = CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<AtomicTypeInfo_T_t, CSchemaType_Atomic_T *, unsigned short, bool (*)(const AtomicTypeInfo_T_t &, const AtomicTypeInfo_T_t &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short, CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, I = unsigned short, L = CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<CSchemaType *, CSchemaType_Ptr *, unsigned short, bool (*)(CSchemaType *const &, CSchemaType *const &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short, CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, I = unsigned short, L = CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<TypeAndCountInfo_t, CSchemaType_FixedArray *, unsigned short, bool (*)(const TypeAndCountInfo_t &, const TypeAndCountInfo_t &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int, CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, I = unsigned int, L = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int>]
 void CUtlRBTree<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int, CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int> >::RemoveAll() [T = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, I = unsigned int, L = CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const void *, void *, unsigned int, bool (*)(const void *const &, const void *const &)>::Node_t, unsigned int>, unsigned int>]
-void CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Atomic *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CSchemaType_Bitfield *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short, CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, I = unsigned short, L = CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, const SchemaAtomicTypeInfo_t *, unsigned short, bool (*)(const int &, const int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredClass *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::FreeNode(I) [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAt(I) [T = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, CSchemaType_DeclaredEnum *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
@@ -2309,8 +2130,11 @@ void CUtlRBTree<CUtlMap<unsigned int, const CResourceDiskEnum *, unsigned short,
 void CUtlRBTree<CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::SetLessFunc(const LessFunc_t &) [T = CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, const CResourceDiskStruct *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 void CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::RemoveAll() [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-void CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::FindInsertionPosition(const T &, bool, I &, bool &, bool &) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
 void CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::RemoveAll() [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::FreeNode(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAll() [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::RemoveAt(I) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+void CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::SetLessFunc(const LessFunc_t &) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 void CUtlString::SetDirect(const char *, int)
 void CallPostConnect()
 void ConVar_Register(int64, IConCommandBaseAccessor *)
@@ -2325,24 +2149,24 @@ void KeyValues::AddSubKey(KeyValues *)
 void MathLib_Init()
 void OperateOnArray(TOperation &, void *, DynTypeHandle_t) [TOperation = GetElementOp_t]
 void OperateOnArray(TOperation &, void *, DynTypeHandle_t) [TOperation = SetCountOp_t]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = AtomicTypeInfo_I_t, TSchemaTypeSubclass = CSchemaType_Atomic_I, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1660:104)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = AtomicTypeInfo_TT_t, TSchemaTypeSubclass = CSchemaType_Atomic_TT, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1659:106)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = AtomicTypeInfo_T_t, TSchemaTypeSubclass = CSchemaType_Atomic_T, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1658:104)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = CSchemaType *, TSchemaTypeSubclass = CSchemaType_Ptr, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1656:95)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = TypeAndCountInfo_t, TSchemaTypeSubclass = CSchemaType_FixedArray, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1675:108)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = int, TSchemaTypeSubclass = CSchemaType_Atomic, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1657:100)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = int, TSchemaTypeSubclass = CSchemaType_Bitfield, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1676:104)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = unsigned int, TSchemaTypeSubclass = CSchemaType_DeclaredClass, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1662:113)]
-void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = unsigned int, TSchemaTypeSubclass = CSchemaType_DeclaredEnum, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1668:111)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = AtomicTypeInfo_I_t, TSchemaTypeSubclass = CSchemaType_Atomic_I, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1665:104)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = AtomicTypeInfo_TT_t, TSchemaTypeSubclass = CSchemaType_Atomic_TT, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1664:106)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = AtomicTypeInfo_T_t, TSchemaTypeSubclass = CSchemaType_Atomic_T, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1663:104)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = CSchemaType *, TSchemaTypeSubclass = CSchemaType_Ptr, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1661:95)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = TypeAndCountInfo_t, TSchemaTypeSubclass = CSchemaType_FixedArray, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1680:108)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = int, TSchemaTypeSubclass = CSchemaType_Atomic, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1662:100)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = int, TSchemaTypeSubclass = CSchemaType_Bitfield, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1681:104)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = unsigned int, TSchemaTypeSubclass = CSchemaType_DeclaredClass, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1667:113)]
+void PromoteUnresolvedAndGlobalTypes(CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, CSchemaPtrMap<TTypeMapKey, TSchemaTypeSubclass *> &, ISchemaSystemTypeScope *, const TExtraWork) [TTypeMapKey = unsigned int, TSchemaTypeSubclass = CSchemaType_DeclaredEnum, TExtraWork = (lambda at /Users/buildbot/buildslave/dota_staging_osx64/build/src/schemasystem/schemasystem.cpp:1673:111)]
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void SchemaArrayBase_t<16, 8>::TruncateStaticCount(int) [TElementSize = 16, TElementAlignment = 8]
 void SchemaArrayBase_t<64, 8>::TruncateStaticCount(int) [TElementSize = 64, TElementAlignment = 8]
-void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t) [CCaller = TraverseCaller]
+void SchemaRecurseData(CCaller &, void *, const CSchemaType *, FieldIntrospectionHandle_t, bool) [CCaller = TraverseCaller]
 void SerializeIntrospectionEnum(CResourceStream *, CResourceIntrospectionManifest *, int, ResourceStructureId_t)
 void SerializeIntrospectionStruct(CResourceStream *, CResourceIntrospectionManifest *, int, ResourceStructureId_t)
 void SynthTypeFromIntrospection(CSchemaClassFieldSynth *, const CSchemaType *, SchemaDataTypeInfo_t *, SchemaIndirectionChain_t **)
-void UtlTokenizer_UnescapeString(const char *, const char *, CUtlString *)
+void UtlTokenizer_UnqescapeOrUnquoteString(const char *, const char *, bool, CUtlString *)
 void ValidateAtomicType(const char *, CSchemaType_Atomic *)
 vrman
 vtable for __cxxabiv1::__class_type_info
@@ -2371,9 +2195,16 @@ worldrenderer
 {Void Value}
 {long long: %__float128, unsigned long long: %__float128, ...: %__float128, wchar_t: %__float128}
 {}[]()=&, 	
+|$(Lc
 |$0D9p
 |$0D9x
+|$0Hc
 |$@Hc
+|$HLc
+|$PHc
+|$PIcL$XA
+|fff.
+}HA;EP}
 ~ IcE
 ~ [A\A^A_]
 ~=ffffff.

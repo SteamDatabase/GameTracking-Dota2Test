@@ -86,4 +86,34 @@
 			m_ChildRef = resource:"particles/econ/items/slardar/slardar_crystal_halberd/slardar_crystal_halberd_glow.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "particle_attach"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/slardar/crystal_halberd/slardar_crystal_halberd.vmdl"
+			}
+		},
+	]
 }

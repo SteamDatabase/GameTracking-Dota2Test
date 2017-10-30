@@ -20,6 +20,13 @@ DOTAInternationalHallOfFame.Visible
 	height: 100%;
 	z-index: 1;
 	box-shadow: #000000d8 -4px -4px 8px 8px;	
+	horizontal-align: right;
+}
+
+
+.HUDFlipped #StatueBackground
+{
+	horizontal-align: left;
 }
 
 #TopBar
@@ -184,7 +191,7 @@ DOTAInternationalHallOfFame.Visible
 
 #CurrentChampionFlag
 {
-	background-image: url("s2r://panorama/images/hud/winner_flag_cn_psd.vtex");
+	background-image: url("s2r://panorama/images/hud/winner_flag_europe_psd.vtex");
 	background-size: cover;
 	width: 28px;
 	height: 18px;
@@ -274,17 +281,23 @@ DOTAInternationalHallOfFame.Visible
 {
 	width: 332px;
 	height: 340px;
-	margin-left: 332px;
+	margin-left: 0px;
 	background-color: #162024f8;
 	//box-shadow: #000000d8 -4px -4px 8px 8px;	
-	transform: translateX(-62px);
+	transform: translateX(62px);
+	horizontal-align: left;
 	opacity: 0;
 	
 	transition-property: opacity, transform;
 	transition-duration: .18s;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
-	
+}
+
+.HUDFlipped #TooltipBackground
+{
+	margin-left: 332px;
+	transform: translateX(-62px);
 }
 
 #TooltipBackground.ShowTooltip
@@ -338,6 +351,7 @@ DOTAInternationalHallOfFame.Visible
 	
 }
 
+.TI7 #TI7Winners,
 .TI6 #TI6Winners,
 .TI5 #TI5Winners,
 .TI4 #TI4Winners,
@@ -362,6 +376,7 @@ DOTAInternationalHallOfFame.Visible
 	transition-duration: .18s;
 }
 
+.TI7 #TeamLogo { background-image: url("s2r://panorama/images/hud/ti_team_liquid_psd.vtex"); }
 .TI6 #TeamLogo { background-image: url("s2r://panorama/images/hud/ti_team_wings_psd.vtex"); }
 .TI5 #TeamLogo { background-image: url("s2r://panorama/images/hud/ti_team_eg_psd.vtex"); }
 .TI4 #TeamLogo { background-image: url("s2r://panorama/images/hud/ti_team_newbee_psd.vtex"); }
@@ -386,6 +401,7 @@ DOTAInternationalHallOfFame.Visible
 }
 
 
+.TI7 #TooltipFlag { background-image: url("s2r://panorama/images/hud/winner_flag_europe_psd.vtex"); }
 .TI6 #TooltipFlag { background-image: url("s2r://panorama/images/hud/winner_flag_cn_psd.vtex"); }
 .TI5 #TooltipFlag { background-image: url("s2r://panorama/images/hud/winner_flag_usa_psd.vtex"); }
 .TI4 #TooltipFlag { background-image: url("s2r://panorama/images/hud/winner_flag_cn_psd.vtex"); }
@@ -404,6 +420,7 @@ DOTAInternationalHallOfFame.Visible
 	color: #667F85;
 }
 
+.TI7 #TI7Country,
 .TI6 #TI6Country,
 .TI5 #TI5Country,
 .TI4 #TI4Country,

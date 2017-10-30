@@ -30,7 +30,7 @@
 #WatchLiveGameListContainer
 {
 	width: 100%;
-	height: 100%;
+	height: 760px;
 
 	flow-children: down;
 }
@@ -79,12 +79,16 @@
 	width: 100%;
 
 	background-color: black;
+
+	vertical-align: bottom;
+
+	flow-children: right;
 }
 
 #FriendsOnlyContainer DOTASettingsCheckbox
 {
-	horizontal-align: center;
 	margin-top: 2px;
+	padding-right: 15px;
 }
 
 .StateMatchListPending #WatchLiveGameList
@@ -222,6 +226,25 @@
 
 	opacity: 1.0;
 }
+
+#NoMatches
+{
+	visibility: collapse;
+}
+
+.StateMatchListEmpty #NoMatches
+{
+	visibility: visible;
+	vertical-align: center;
+	horizontal-align: center;
+	font-size: 20px;
+	color: #808080;
+	text-transform: uppercase;
+	letter-spacing: 2.0px;
+	padding: 30px 0px;
+
+}
+
 
 .LeagueMatch #HeaderLeague,
 .NonLeagueMatch #HeaderPub
@@ -451,12 +474,37 @@
 {
 	width: fill-parent-flow(1.0);
 	min-width: 300px;
-	height: 586px;
+	height: 500px;
 	flow-children: down;
 
 	padding-left: 24px;
 	padding-right: 24px;
 }
+
+#HeaderPanel
+{
+	width: 100%;
+	height: 100px;
+}
+
+#DraftLabel
+{
+	font-size: 40px;
+	horizontal-align: center;
+}
+
+#DraftInformation
+{
+	visibility: collapse;
+	width: 100%;
+	vertical-align: center;
+}
+
+.IsDraftPhase #DraftInformation
+{
+	visibility: visible;
+}
+
 
 #GameDetailsRadiant,
 #GameDetailsDire
@@ -501,7 +549,7 @@
 
 	vertical-align: bottom;
 
-	max-width: 210px;
+	max-width: 250px;
 	max-height: 24px;
 
 	margin-top:100px;
@@ -560,16 +608,24 @@
 	horizontal-align: center;
 }
 
+.IsBot .PlayerName,
+.PlayerName.Bot
+{
+	visibility: collapse;
+}
+
+.IsBot .PlayerName.Bot
+{
+	visibility: visible;
+}
+
 .PlayerName
 {
 	vertical-align: top;
 
 	max-width: 220px;
 	max-height: 24px;
-}
 
-Label.PlayerName
-{
 	font-size: 17px;
 }
 
@@ -723,7 +779,7 @@ Label.PlayerName
 
 	margin-top:100px;
 
-	min-width: 100px;
+	min-width: 60px;
 
 	width: fill-parent-flow( 1.0 );
 }
@@ -851,7 +907,7 @@ Label.PlayerName
 	margin-right: 24px;
 }
 
-#WatchButtons .DetailsTitle {
+#WatchButtons .GameDetailsTitle {
 	margin-right: -8px;
 }
 
@@ -1195,20 +1251,6 @@ Label.PlayerName
 	height: 100%;
 }
 
-#DetailsLeague
-{
-	vertical-align: top;
-	horizontal-align: left;
-
-	margin-left:10px;
-	margin-top:10px;
-
-	flow-children: down;
-
-	width: 100%;
-	height: 100%;
-}
-
 .LeagueMatch #DetailsLogo
 {
 	width: height-percentage( 255% );
@@ -1264,35 +1306,6 @@ Label#DetailsBigTitle
 	border-width: 1px;
 }
 
-#DetailsBigSubtitle
-{
-	color: #A0A0A0FF;
-	font-size: 18px;
-	margin-top: -4px;
-	max-width: 65%;
-	max-height: 44px;
-}
-
-
-
-
-#DetailsBigSubtitleDetails
-{
-	visibility: visible;
-	margin-top: 8px;
-	width: 65%;
-	max-height: 70%;
-}
-
-Label#DetailsBigSubtitleDetails 
-{
-	font-size: 16px;
-}
-
-.ShowMMR #DetailsBigSubtitleDetails
-{
-	visibility: collapse;
-}
 
 #DetailsBottom
 {
@@ -1467,7 +1480,7 @@ Label
 	font-size: 20px;
 }
 
-#GameModeLabel, .DetailsTitle 
+#GameModeLabel, .GameDetailsTitle 
 {
 	font-size: 14px;
 	color: #758d8c;
@@ -1475,7 +1488,7 @@ Label
 	letter-spacing: 2px;
 }
 
-.DetailsTitle 
+.GameDetailsTitle 
 {
 	vertical-align: middle;
 }

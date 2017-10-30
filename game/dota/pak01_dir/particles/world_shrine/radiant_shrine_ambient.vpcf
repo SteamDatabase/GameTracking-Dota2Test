@@ -14,6 +14,7 @@
 			m_nMaxTesselation = 3
 			m_flAddSelfAmount = 1.000000
 			m_flOverbrightFactor = 4.000000
+			m_bTintByFOW = true
 		},
 	]
 	m_Operators = 
@@ -170,10 +171,6 @@
 		},
 		{
 			m_ChildRef = resource:"particles/world_shrine/radiant_shrine_ambient_ray.vpcf"
-		},
-		{
-			m_ChildRef = resource:"particles/world_shrine/radiant_shrine_active.vpcf"
-			m_bEndCap = true
 		},
 	]
 	m_flConstantRadius = 8.000000

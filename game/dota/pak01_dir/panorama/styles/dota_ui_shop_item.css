@@ -12,12 +12,12 @@ DOTAShopItem.Hidden
 {
 	width: 100%;
 	height: 100%;
-	
+    transition-property: brightness;
+    transition-duration: 0.2s;
 }
 
 #QuickBuyRows #ItemImage
 {
-	border-radius: 3px;
 	box-shadow: fill#000000ff 0px 0px 2px 2px;
 }
 
@@ -31,7 +31,7 @@ DOTAShopItem.CanPurchase:active #ItemImage
 	brightness: 0.8;
 }
 
-DOTAHUDShop.EditMode DOTAHUDItemBuild DOTAShopItem.DraggedShopItem
+DOTAHUDShop.EditMode DOTAHUDItemBuild DOTAShopItem.CollapsedShopItem
 {
 	visibility: collapse;
 }
@@ -47,29 +47,100 @@ DOTAShopItem.DraggedShopItem #CanPurchaseOverlay
 	width: 100%;
 	height: 100%;
 	visibility: collapse;
+    transition-property: background-color;
+    transition-duration: 0.2s;
 }
+
+#PopularOverlay
+{
+	width: 90%;
+	height: 110%;
+	visibility: collapse;
+	margin-left: -8px;
+	margin-top: -6px;
+}
+
+#PopularIcon
+{
+	width: 50%;
+	height: 50%;
+	background-image: url("s2r://panorama/images/icon_star_shadow_psd.vtex");
+	background-size: 100%;
+}
+
+#PlayerSuggestedOverlay
+{
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 0px 5px 0px #ea67db60;
+ 	visibility: collapse;
+}
+
 
 #StartingItemsInventory #ItemImage
 {
     background-image: url("s2r://panorama/images/hud/reborn/inventory_item_well_psd.vtex");
 }
+
+.ShowingQueryUnit .CanPurchase #CanPurchaseOverlay,
+.ShowingQueryUnit .CanPurchaseAtSecretShop #CanPurchaseOverlay
+{
+	visibility: collapse;
+}
+
 .CanPurchase #CanPurchaseOverlay
 {
 	border: 1px solid #CD9607;
-  	border-radius: 3px;
   	visibility: visible;
 }
 
 .CanPurchaseAtSecretShop #CanPurchaseOverlay
 {
 	border: 1px solid #C80506;
-  	border-radius: 3px;
   	visibility: visible;
 }
 
+.HasHilightedItem .ShowHilight #ItemImage, .ShowPopular.ShowHilight .Popular.Hilighted #ItemImage
+{
+	brightness: 1;
+}
+
+.HasHilightedItem .ShowHilight .Hilighted #ItemImage, .ShowPopular.ShowHilight .Popular.Hilighted #ItemImage
+{
+	brightness: 4;
+}
+
+.HasHilightedItem .ShowHilight #CanPurchaseOverlay, .HasHilightedItem .ShowPopular.ShowHilight .Popular #CanPurchaseOverlay
+{
+	visibility: visible;
+}
+
+.HasHilightedItem .ShowHilight .Hilighted #CanPurchaseOverlay, .HasHilightedItem .ShowPopular.ShowHilight .Popular.Hilighted #CanPurchaseOverlay
+{
+	visibility: visible;
+	background-color: #ffffff08;
+}
+
+
 #StartingItems .CanPurchase #CanPurchaseOverlay
 {
-		border: 1px solid #aa7d09;
+	border: 1px solid #aa7d09;
+}
+
+.ShowPopular .Popular #PopularOverlay
+{
+  	visibility: visible;
+}
+
+.ShowPopular .Popular #CanPurchaseOverlay
+{
+	border: 2px solid #a7bde5;
+  	visibility: visible;
+}
+
+.PlayerSuggested #PlayerSuggestedOverlay
+{
+  	visibility: visible;
 }
 
 #OwnedTick
@@ -116,12 +187,17 @@ DOTAShopItem.DraggedShopItem #CanPurchaseOverlay
 	font-size: 15px;
 	margin-bottom: -3px;
 	margin-right: 2px;
-	text-shadow: 1px 1px 3px 4 #000000FF;
+	text-shadow: 1px 1px 0px 4 #000000FF;
 }
 
 .ShowStockAmount #StockAmount
 {
 	visibility: visible;
+}
+
+DOTAQuickBuy .ShowStockAmount #StockAmount
+{
+	visibility: collapse;
 }
 
 #OutOfStockOverlay

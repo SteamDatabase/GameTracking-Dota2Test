@@ -18,7 +18,6 @@
  ConMsg(char const*, ...)
  DevMsg
  DevMsg(char const*, ...)
- EarlyInit_Tier0
  GetCPUInformation
  IStack_VM_Segment_Marker::IStack_VM_Segment_Marker(CCallStackMarkerBase const&)
  IStack_VM_Segment_Marker::~IStack_VM_Segment_Marker()
@@ -194,6 +193,7 @@
  ThreadGetCurrentId
  ThreadInterlockedExchange64
  ThreadSleep
+ V_FixDoubleSlashes
  V_FixSlashes
  V_GetErrno
  V_IsAbsolutePath
@@ -206,8 +206,8 @@
  V_UTF8CharsToUTF16
  V_UTF8ToUTF32
  V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+ V_UnicodeLength(char const*)
  V_UnqualifiedFileName
- V_acos
  V_acosf
  V_asinf
  V_atan2f
@@ -222,7 +222,6 @@
  V_powf
  V_pretifynum
  V_qsort_s
- V_rand
  V_sinf
  V_snprintf
  V_snwprintf
@@ -235,7 +234,6 @@
  V_strtoui64
  V_strupper_fast
  V_swscanf
- V_tan
  V_tanf
  V_vsnprintf
  V_vsnprintfRet

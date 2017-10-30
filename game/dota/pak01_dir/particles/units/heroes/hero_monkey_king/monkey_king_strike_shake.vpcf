@@ -37,13 +37,6 @@
 	[
 		{
 			_class = "C_OP_Decay"
-			m_flOpStartFadeInTime = 1.000000
-			m_flOpEndFadeInTime = 1.000000
-		},
-		{
-			_class = "C_OP_BasicMovement"
-			m_fDrag = 0.050000
-			m_nOpEndCapState = 0
 		},
 		{
 			_class = "C_OP_InterpolateRadius"
@@ -58,25 +51,11 @@
 	[
 		{
 			_class = "C_INIT_CreateWithinSphere"
-			m_vecDistanceBiasAbs = 
-			[
-				0.000000,
-				0.000000,
-				1.000000,
-			]
-			m_vecDistanceBias = 
-			[
-				0.000000,
-				0.000000,
-				1.000000,
-			]
-			m_fRadiusMax = 10.000000
-			m_fRadiusMin = 10.000000
 		},
 		{
 			_class = "C_INIT_RandomRadius"
-			m_flRadiusMin = 15.000000
-			m_flRadiusMax = 15.000000
+			m_flRadiusMin = 150.000000
+			m_flRadiusMax = 150.000000
 		},
 		{
 			_class = "C_INIT_RandomLifeTime"
@@ -84,30 +63,25 @@
 			m_fLifetimeMin = 0.200000
 		},
 		{
-			_class = "C_INIT_RemapCPtoScalar"
-			m_nCPInput = 1
-			m_flInputMin = 1.000000
-			m_flInputMax = 36.000000
-			m_flOutputMin = 1.000000
-			m_flOutputMax = 2.000000
-			m_bScaleInitialRange = true
-			m_bDisableOperator = true
-		},
-		{
-			_class = "C_INIT_RemapCPtoScalar"
-			m_flOutputMax = 3.000000
-			m_flOutputMin = 1.000000
-			m_nFieldOutput = 18
-			m_flInputMax = 36.000000
-			m_flInputMin = 1.000000
-			m_nCPInput = 1
-			m_bDisableOperator = true
-		},
-		{
 			_class = "C_INIT_RandomScalar"
 			m_flMin = 5.000000
 			m_flMax = 5.000000
 			m_nFieldOutput = 18
+		},
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				100.000000,
+			]
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				100.000000,
+			]
 		},
 	]
 	m_Emitters = 

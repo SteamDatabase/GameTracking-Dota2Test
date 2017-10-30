@@ -135,4 +135,34 @@
 			m_ChildRef = resource:"particles/econ/items/lone_druid/lone_druid_cauldron/lone_druid_cauldron_e.vpcf"
 		},
 	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "self_with_wearables"
+					m_attachmentName = "attach_cauldron"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/items/lone_druid/druid_cauldron/druid_caldron.vmdl"
+			}
+		},
+	]
 }

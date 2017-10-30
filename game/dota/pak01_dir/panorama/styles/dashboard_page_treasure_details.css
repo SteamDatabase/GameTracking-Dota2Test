@@ -67,7 +67,7 @@ DOTATreasureDetailsPage
 #TreasureDetails
 {
 	flow-children: down;
-	margin-right: 160px;
+	margin-right: 100px;
 	margin-top: 20px;
 	horizontal-align: right;
 	visibility: collapse;
@@ -78,7 +78,7 @@ DOTATreasureDetailsPage
 	visibility: visible;
 }
 
-.AspectRatio4x3 #TreasureDetails, .AspectRatio5x4 #TreasureDetails
+.AspectRatio4x3 #TreasureDetails
 {
 	margin-right: 14px;
 }
@@ -98,11 +98,54 @@ DOTATreasureDetailsPage
 	tooltip-position: left;
 }
 
+#TreasureImageContainer
+{
+	flow-children: down;
+}
+
 #TreasureImage
 {
 	width: 86px;
 	height: width-percentage( 65% );
 	tooltip-position: left;
+}
+
+#TreasureGrantButton
+{
+	width: 86px;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2d4f86 ), to( #1b355e ) );
+	border-top: 1px solid #ffffff22;
+	border-left: 1px solid #ffffff11;
+	border-right: 1px solid #00000044;
+	border-bottom: 1px solid #00000088;
+
+	visibility: collapse;
+}
+
+.MainBranch #TreasureGrantButton
+{
+	visibility: visible;
+}
+
+#TreasureGrantButton:hover
+{
+	brightness: 2.0;
+}
+
+#TreasureGrantButton:active
+{
+	brightness: 1.5;
+}
+
+#TreasureGrantButton > Label
+{
+	color: white;
+	horizontal-align: center;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 3px;
 }
 
 #TreasureIdentity
@@ -430,7 +473,7 @@ DropDown
 
 .EventPurchaseLevelsIcon
 {
-    background-image: url("s2r://panorama/images/compendium/totalpoints_psd.vtex");
+    background-image: url("s2r://panorama/images/compendium/international2017/totalpoints_psd.vtex");
     background-size: cover;
     width: 26px;
     height: 26px;
@@ -462,6 +505,76 @@ DropDown
 {
     visibility: collapse;
 }
+
+#EventRecycling
+{
+	flow-children: right;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #55262F ), to( #2A131B ) );
+	padding: 6px 12px;
+	width: 100%;
+
+	visibility: collapse;
+}
+
+.CanRecycleForEventPoints #EventRecycling
+{
+	visibility: visible;
+}
+
+#EventRecyclingHeader
+{
+	flow-children: down;
+}
+
+#EventRecyclingTitle
+{
+	color: black;
+	text-shadow: 0px 0px 3px 2.0 #F3A998;
+	font-size: 28px;
+}
+
+#EventRecyclingSubtitle
+{
+	color: #999;
+}
+
+#EventRecyclingButton
+{
+	vertical-align: middle;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2b102a ), to( #1c0d32 ) );
+	border-radius: 6px;
+
+	padding: 9px 18px 6px 18px;
+	box-shadow: fill 0px 0px 4px black;
+
+	transition-duration: 0.2s;
+	transition-property: brightness;
+}
+
+#EventRecyclingButton > Label
+{
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 1px;
+}
+
+#EventRecyclingButton:hover
+{
+	brightness: 2.0;
+}
+
+#EventRecyclingButton:active
+{
+	brightness: 1.5;
+}
+
+#EventRecyclingButton:active > Label
+{
+	transform: translate3d( 1px, 1px, 0px );
+}
+
+
+
 
 #CharmPurchaseButton
 {
@@ -1066,65 +1179,35 @@ DropDown
 	visibility: visible;
 }
 
-/* View Controls */
-#ViewControls
+#FullPreviewButton
 {
-	flow-children: right;
-	horizontal-align: right;
+	horizontal-align: center;
+	margin-top: 4px;
 	visibility: collapse;
 }
 
-#ViewControls RadioButton
+#FullPreviewButton > Label
 {
-	margin-left: 12px;
-	//margin-top: 7px;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #808892;
+	text-decoration: underline;
+	font-weight: thin;
 }
 
-#ViewControls RadioButton .RadioBox
+#FullPreviewButton:hover > Label
 {
-	border-radius: 0px;
-	border: 1px solid #51686f;
-	width: 71px;
-	height: 30px;
-	box-shadow: none;
-	//wash-color: #777777;
-	//pre-transform-scale2d: 0.8;
-
-	background-color: none;
-	background-size: contain;
-	background-repeat: no-repeat;
-		
-	transition-property: wash-color, brightness;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	color: #a5afbc;
 }
 
-#ViewControls RadioButton:selected .RadioBox
+#FullPreviewButton:active > Label
 {
-	//wash-color: none;
-	pre-transform-scale2d: 1;
-	background-color: #51686f;
+	color: #949da9;
 }
 
-#ViewControls RadioButton:hover .RadioBox
-{
-	brightness: 1.8;
-}
-
-#FullPreviewButton .RadioBox
-{
-	background-image: url("s2r://panorama/images/control_icons/camera_row_rev01_psd.vtex");
-}
-
-#DetailsViewButton .RadioBox
-{
-	background-image: url("s2r://panorama/images/control_icons/camera_single_rev01_psd.vtex");
-}
-
-
-
-.AllowFullPreview.OpeningNone #ViewControls,
-.AllowFullPreview.OpeningFinished #ViewControls
+.AllowFullPreview.OpeningNone #FullPreviewButton
 {
 	visibility: visible;
 }
@@ -1959,7 +2042,7 @@ DOTATreasureDetailsPage.FullPreviewMode #TreasureContents .TreasureItem,
 }
 
 
-.AspectRatio4x3 #TreasureOpening, .AspectRatio5x4 #TreasureOpening
+.AspectRatio4x3 #TreasureOpening
 {
 	margin-right: 60px;
 }
@@ -2256,10 +2339,10 @@ DOTATreasureDetailsPage.FullPreviewMode #TreasureContents .TreasureItem,
 #TreasureExtraInfo
 {
 	margin-top: 20px;
-	margin-left: 160px;
+	margin-left: 100px;
 }
 
-.AspectRatio4x3 #TreasureExtraInfo, .AspectRatio5x4 #TreasureExtraInfo
+.AspectRatio4x3 #TreasureExtraInfo
 {
 	margin-left: 14px;
 }

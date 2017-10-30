@@ -3,7 +3,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_src1_3d"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/attack_01.vsnd",
 			"sounds/weapons/hero/jakiro/attack_02.vsnd",
@@ -23,7 +23,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_src1_3d"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/impact_01.vsnd",
 		]
@@ -41,7 +41,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/dual_breath.vsnd",
 		]
@@ -59,7 +59,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/huskar/burning_spear.vsnd",
 		]
@@ -84,7 +84,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/ice_path_cast.vsnd",
 		]
@@ -102,7 +102,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/ice_path.vsnd",
 		]
@@ -114,6 +114,8 @@
 		mixgroup = "Weapons"
 		spread_radius = "300.000000"
 		use_entity_position = "0.000000"
+		volume_use_FOW = "1.000000"
+		volume_FOW_radius = "300"
 	}}
 
 "Hero_Jakiro.LiquidFire"
@@ -121,7 +123,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/liquid_fire.vsnd",
 		]
@@ -139,7 +141,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/macropyre_cast.vsnd",
 		]
@@ -157,7 +159,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/macropyre.vsnd",
 		]
@@ -176,7 +178,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/weapons/hero/jakiro/macropyre_aghs.vsnd",
 		]
@@ -195,7 +197,7 @@
 	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 	{
 		type = "dota_update_default"
-		vsnd_files =
+		vsnd_files = 
 		[
 			"sounds/physics/movement/hero/dragon_knight/flap1.vsnd",
 			"sounds/physics/movement/hero/dragon_knight/flap2.vsnd",
@@ -215,5 +217,43 @@
 		volume_move_filter_vel = "1.000000"
 		volume_falloff_min = "10.000000"
 		volume_falloff_max = "1000.000000"
+	}}
+
+"Hero_Jakiro.Taunt"
+{
+	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+	{
+		type = "dota_src1_3d"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/jakiro/taunt.vsnd",
+		]
+		volume = "1.000000"
+		pitch = "1.000000"
+		soundlevel = "81.000000"
+		distance_max = "2500.000000"
+		event_type = "1.000000"
+		volume_fade_out = "0.500000"
+	}}
+
+"Hero_Jakiro.IcePath.ti7"
+{
+	<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/jakiro/ice_path_ti7.vsnd",
+		]
+		volume = "1.000000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		pitch = "1.000000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		spread_radius = "600.000000"
+		use_entity_position = "0.000000"
+		volume_use_FOW = "1.000000"
+		volume_FOW_radius = "300"
 	}}
 
