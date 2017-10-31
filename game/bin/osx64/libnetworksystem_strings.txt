@@ -554,6 +554,7 @@ $ffff.
 'u0Ic
 ( nLastDelta - 1 ) <= 7
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (%double) is > avg (%.2f) with stddev*scale (%.2f * %.2f) and threshold (%.2f)
 (%short)%short
@@ -572,7 +573,6 @@ $ffff.
 ([A^A_]
 (const void *)&other != (const void *)this
 (fff.
-(fffff.
 (ffffff.
 (intp)this % 16 == 0
 (intptr_t)pNode % TSLIST_NODE_ALIGNMENT == 0
@@ -734,7 +734,6 @@ $ffff.
 .foo = value".
 .placeholder.proto
 .xd<Dr
-/#GameUI_Disconnect_RemoteProblem_CertNotTrusted
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/interfaces/interfaces.cpp
@@ -833,7 +832,6 @@ $ffff.
 0fffff.
 0ffffff.
 0pPP@@
-0t)E;
 0u09\
 0u1D9t
 0x%p assigned %double to '%short'
@@ -1846,17 +1844,17 @@ Creating signed char netchan for %short, but cannot find signed char connection 
 D $;C
 D$ H9
 D$ L9
-D$ fA
 D$$IcD$ 
 D$(Ic
+D$(fA
 D$,IcD$(
 D$0H9
 D$4IcD$0
 D$@H9
 D$@L+`0I
-D$RIc
 D$XA9
 D$XIc
+D$^Ic
 D$lIcD$h
 D$pD9h0t\I
 D($A;F
@@ -2417,8 +2415,7 @@ L$`I;L$hH
 L(,A;N
 L9+uPD
 L90t*H
-L953)
-L95XN
+L95Qn$
 L9v@u
 L;>unsigned short-L9
 L?333?
@@ -2900,7 +2897,6 @@ Summary of connection to %short:
 Symbol name "
 System
 T &CUtlStringMap<CFlattenedSerializer *, CUtlSymbolTableMT>::operator[](UtlSymId_t) [T = CFlattenedSerializer *, SymbolTableType_t = CUtlSymbolTableMT]
-T &CUtlStringMap<CNetworkMessages::ChangeCallbackInfo_t, CUtlSymbolTableMT>::operator[](UtlSymId_t) [T = CNetworkMessages::ChangeCallbackInfo_t, SymbolTableType_t = CUtlSymbolTableMT]
 T &CUtlStringMap<CNetworkMessages::NetworkContextData_t, CUtlSymbolTableMT>::operator[](UtlSymId_t) [T = CNetworkMessages::NetworkContextData_t, SymbolTableType_t = CUtlSymbolTableMT]
 T &CUtlStringMap<NetworkArrayFieldSerializerGroup_t, CUtlSymbolTableMT>::operator[](UtlSymId_t) [T = NetworkArrayFieldSerializerGroup_t, SymbolTableType_t = CUtlSymbolTableMT]
 T &CUtlStringMap<NetworkFieldSerializerGroup_t, CUtlSymbolTableMT>::operator[](UtlSymId_t) [T = NetworkFieldSerializerGroup_t, SymbolTableType_t = CUtlSymbolTableMT]
@@ -3285,7 +3281,7 @@ _strtoll
 _strtoul
 _strtoull
 _vsnprintf
-`%ATAp
+`$ATAp
 `(Hcx
 `0A9](
 `@pp 
@@ -3369,6 +3365,7 @@ bool CNetChan::ParseMessages(bf_read &, NetChannelBufType_t)
 bool CNetChan::ProcessPacket(NetPacket_t *)
 bool CNetChan::RequireAcksForSplitPacket(int, const char *, int, int, float)
 bool CNetChan::SendReliableData(bf_write &)
+bool CNetworkMessages::FindUserFieldChangeCallback(const char *, NetworkFieldChangedDelegateType_t *, CUtlAbstractDelegate *, NetworkFieldChangeCallbackPerformType_t *, int *, CUtlSymbolLarge *)
 bool CNetworkSerializer::InitField(NetworkFieldSerializerInfo_t *, int, NetworkValidationMode_t, const char *, const FieldMetaInfo_t &, CDataparserBuilder &, bool, INetworkSerializerBindingBuildFilter *, int)
 bool CNetworkSystem::GetLoopPacket(NetPacket_t *)
 bool CNetworkSystem::GetSplitPacket(const int, NetPacket_t *, ISteamNetworkingMessage *, const ns_address &, int *)
@@ -4311,6 +4308,7 @@ uncompressed_size
 uninterpreted_option
 unknown
 unknown peer
+unsigned char != m_networkFieldChangeCallbacks.InvalidHandle()
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char[A\A]A^A_]
 unsigned char[A^A_]
@@ -4484,7 +4482,7 @@ void CNetChan::FlowIncomingAck(int, int, int64)
 void CNetChan::ProcessConnectionIDHeader(NetPacket_t *, int)
 void CNetChan::SendSplitPacketMissingChunkRange(int, CUtlVector<short> &)
 void CNetChan::Setup(int, const ns_address &, const char *, NetChannelCategory_t, NetChannelCategory_t)
-void CNetworkFieldChangedEventQueue::QueueChange(int, const CFieldPath &, UtlSymId_t, void *, void *, void *&, int, NetworkFieldChangedDelegateType_t, CUtlAbstractDelegate, int, int)
+void CNetworkFieldChangedEventQueue::QueueChange(int, const CFieldPath &, const char *, void *, void *, void *&, int, NetworkFieldChangedDelegateType_t, CUtlAbstractDelegate, int, int)
 void CNetworkMessageSignalQueue<CEventIDManager_NetChan, BogusType_t>::DeallocateSignal(NetMessageHandle_t, const EffectiveType_t *) [EVENT_ID_MANAGER = CEventIDManager_NetChan, EFFECTIVE_TYPE_DESCRIPTOR = BogusType_t]
 void CNetworkMessages::ConfirmAllMessageHandlersInstalled(const char *, int, CUtlVector<NetMessageHandle_t> *)
 void CNetworkSerializer::AssignSharedChangeCallbackIndex(CUtlVector<CNetworkSerializer::ChangeCallbackInfo_t> &, int, NetworkFieldSerializerInfo_t &)

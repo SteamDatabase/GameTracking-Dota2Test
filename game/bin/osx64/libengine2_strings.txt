@@ -1039,6 +1039,7 @@ $ffffff.
 ( pOldEntity->m_pPackedData != NULL ) == ( pNewEntity->m_pPackedData != NULL )
 ( unsigned long long >= 0 ) && ( unsigned long long < NumRows() )
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (%u): %short
 (*%short*), 
@@ -1105,7 +1106,6 @@ $ffffff.
 )#GameUI_Disconnect_RemoteProblem_BadCrypt
 )#GameUI_Disconnect_SteamDeny_BadAntiCheat
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)D;5I
 )NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS
 )NETWORK_DISCONNECT_PURESERVER_CLIENTEXTRA
 )NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE
@@ -1406,7 +1406,6 @@ $ffffff.
 .vcfg
 .vsnd
 .xd<C
-/#GameUI_Disconnect_RemoteProblem_CertNotTrusted
 /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -1710,7 +1709,6 @@ $ffffff.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00@@p
 0123456789abcdef
-04:04:47
 08:0@6666@:J6
 0: Force ... prepass off. 1: Force on. -1: __int128 noexcept'unsigned short force
 0: Use normals reconstructed from depth. 1: Output correct normals in ... prepass.
@@ -1750,6 +1748,7 @@ $ffffff.
 1.0.2, 30-Dec-2001
 127.0.0.1
 127.0.0.H
+17:29:18
 180.0
 1sAL"
 2 - bottom-left
@@ -1834,7 +1833,7 @@ $ffffff.
 :ffff.
 :fffff.
 :ffffff.
-;=float&__float128
+;5 .X
 ;A }(
 ;AXv)I
 ;AX|eH
@@ -5183,12 +5182,12 @@ CustomGameServerAppID
 CvarToggleCheckButton
 D$ E1
 D$ Ic
-D$ fA
 D$$A9
 D$$Ic
 D$$IcD$ 
 D$(;E
 D$(Ic
+D$(fA
 D$(unsigned short)9
 D$,IcD$(
 D$,[A\A^A_]
@@ -5223,9 +5222,8 @@ D9s$|
 D9sXu
 D9{$|
 D; A9
-D;%'uV
-D;%?zV
-D;%GwV
+D;%7zV
+D;%wuV
 D;0u8H
 D;H(|
 D;I(|9L9
@@ -6851,11 +6849,11 @@ L$ Hc
 L$ Hc<
 L$ Hi
 L$ Hk
-L$ I9
 L$ L+
 L$ Lc,
 L$$Hi
 L$(Hi
+L$(I9
 L$(IcV,L
 L$,Hi
 L$8A;D$<
@@ -6873,6 +6871,7 @@ L9v@u
 L;>unsigned short-L9
 L;k void
 L;unsigned int H
+L<0t(K
 L=CFloatProperty
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -7006,8 +7005,7 @@ M+...@E9
 M8A;E<
 M8A;E<}_
 M96u/H
-M9?u/H
-M9?uSI
+M96uGH
 M;l$Ht
 M;w8u
 M;wchar_t void
@@ -14059,8 +14057,7 @@ unsigned
 unsigned __int128 == __int128
 unsigned __int128 char::* I
 unsigned __int128 char::*@G
-unsigned __int128%char,:
-unsigned __int128%unsigned __int128,:
+unsigned __int128%short,:
 unsigned __int128imaginary  this fast when starting to hold FF button.
 unsigned char *CLZSS::CompressNoAlloc(unsigned char *, int, unsigned char *, unsigned int *, bool)
 unsigned char[A\A]A^A_]
@@ -14121,7 +14118,7 @@ unsigned short+Ic~TH
 unsigned short+ff.
 unsigned short,A;_
 unsigned short,L;unsigned long
-unsigned short-D;%
+unsigned short-D;%2
 unsigned short-IcG,L
 unsigned short-L9`
 unsigned short-Mc~0J
@@ -14130,6 +14127,7 @@ unsigned short/ff.
 unsigned short/fffff.
 unsigned short/ffffff.
 unsigned short;ff.
+unsigned short<0f.
 unsigned short<A;O
 unsigned short<IcW,L
 unsigned short<fff.

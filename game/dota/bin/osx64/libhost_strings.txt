@@ -317,6 +317,7 @@ $gender
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
 ( pDerivedClassName != nullptr ) == ( SCHEMA_TYPE_TRAITS_is_polymorphic( TClass ) )
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (*%short*), 
 (GetChar()) == (0)
@@ -405,7 +406,6 @@ $gender
 .foo = value".
 .placeholder.proto
 .xd<Dr
-/#GameUI_Disconnect_RemoteProblem_CertNotTrusted
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/host_dota/release/osx64/engineevents_h_schema.gen_cpp

@@ -515,6 +515,7 @@ $ffffff.
 ( unsigned long long >= 0 ) && ( unsigned long long < NumRows() )
 ( viewToProj.m[3][0] == 0.0f ) && ( viewToProj.m[3][1] == 0.0f ) && ( viewToProj.m[3][2] == 0.0f ) && ( viewToProj[3][3] == 1.0f )
 (#GameUI_Disconnect_LoopLevelLoadActivate
+(#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (%.3f - %.3f)
 (*%short*), 
@@ -640,7 +641,6 @@ $ffffff.
 -tools
 -unsigned long long south
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-.-/<#
 ...(;unsigned long long(H
 .CMsgQAngle
 .CMsgVector
@@ -670,7 +670,6 @@ $ffffff.
 .foo = value".
 .placeholder.proto
 .xd<Dr
-/#GameUI_Disconnect_RemoteProblem_CertNotTrusted
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/_generated_code/modellib/release/osx64/boneconstraints_h_schema.gen_cpp
@@ -3070,7 +3069,9 @@ L5PfB
 L5RfB
 L9"tnH
 L90t*H
-L95=]
+L95-]
+L95r|
+L95x<-
 L9<8t
 L9v@u
 L;T1Lu;
@@ -3992,12 +3993,13 @@ WorldRenderer/BakedLightIndexCountMax
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
+X%s0"
 X2:jH
 X2:jL
 X360_DST16
 X360_DST24
 X360_DST24F
-X5J""
+X5:""
 X;|1XuE
 XBRAp
 XBRB`
@@ -4011,6 +4013,7 @@ Xffffff.
 Yfff.
 Yfffff.
 ZBRARATAp
+[6(.>G
 [ARB[ARB[ARB[ARB[ARB[ARB[ASATAp
 [A\A]A^A_]
 [A\A^A_]
