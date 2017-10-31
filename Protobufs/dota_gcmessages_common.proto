@@ -991,6 +991,9 @@ message CMsgDOTAMatch {
 		optional bool active_prime_subscription = 51;
 		optional uint32 net_worth = 52;
 		optional uint32 bot_difficulty = 58;
+		optional uint32 hero_pick_order = 63;
+		optional bool hero_was_randomed = 64;
+		optional bool hero_was_bonus = 65;
 	}
 
 	message BroadcasterInfo {

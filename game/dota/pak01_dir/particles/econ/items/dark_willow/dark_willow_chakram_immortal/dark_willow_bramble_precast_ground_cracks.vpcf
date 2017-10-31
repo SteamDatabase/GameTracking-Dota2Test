@@ -57,7 +57,7 @@
 		},
 		{
 			_class = "C_OP_Orient2DRelToCP"
-			m_flRotOffset = 180.000000
+			m_flRotOffset = 20.000000
 		},
 		{
 			_class = "C_OP_ColorInterpolate"
@@ -74,6 +74,7 @@
 			m_Rate = 1.000000
 			m_nField = 4
 			m_flOpEndFadeOutTime = 2.000000
+			m_bDisableOperator = true
 		},
 		{
 			_class = "C_OP_ColorInterpolate"
@@ -104,8 +105,10 @@
 			m_bRandomlyFlipDirection = false
 		},
 		{
-			_class = "C_INIT_RandomYaw"
-			m_bDisableOperator = true
+			_class = "C_INIT_RingWave"
+			m_flParticlesPerOrbit = 6.000000
+			m_flInitialRadius = 4.000000
+			m_bEvenDistribution = true
 		},
 		{
 			_class = "C_INIT_PositionOffset"
@@ -131,34 +134,6 @@
 			_class = "C_INIT_RandomColor"
 			m_ColorMin = 
 			[
-				255,
-				20,
-				20,
-				255,
-			]
-			m_ColorMax = 
-			[
-				203,
-				19,
-				19,
-				255,
-			]
-			m_bDisableOperator = true
-		},
-		{
-			_class = "C_INIT_RingWave"
-			m_flParticlesPerOrbit = 6.000000
-			m_flInitialRadius = 4.000000
-			m_bEvenDistribution = true
-		},
-		{
-			_class = "C_INIT_RemapCPOrientationToRotations"
-			m_bDisableOperator = true
-		},
-		{
-			_class = "C_INIT_RandomColor"
-			m_ColorMin = 
-			[
 				107,
 				82,
 				221,
@@ -175,11 +150,6 @@
 	]
 	m_Emitters = 
 	[
-		{
-			_class = "C_OP_InstantaneousEmitter"
-			m_nParticlesToEmit = 10
-			m_bDisableOperator = true
-		},
 		{
 			_class = "C_OP_ContinuousEmitter"
 			m_flEmissionDuration = 0.500000
@@ -211,4 +181,5 @@
 			]
 		},
 	]
+	m_bShouldSort = false
 }

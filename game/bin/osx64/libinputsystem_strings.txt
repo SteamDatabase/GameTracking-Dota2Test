@@ -7,7 +7,7 @@
  ffff.
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
-!@`fA`
+!@`eB`
 !bCreate
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
@@ -110,7 +110,6 @@
 @_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetDefaultMonitorIndex
-@_Plat_GetDesktopBounds
 @_Plat_GetDesktopResolution
 @_Plat_GetEnv
 @_Plat_GetOSType
@@ -584,11 +583,11 @@ LINUX
 LOWVIOLENCE
 L_SHOULDER
 L_TRIGGER
-Lc#E1
+Lc+E1
 LoadFromBuffer: expected '{', found '%short'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-M9exum
+M9gxum
 MACRON
 MASCULINE_ORDINAL_INDICATOR
 MATCHFRAMEWORK_001
@@ -934,7 +933,6 @@ _Plat_CheckSDL
 _Plat_DebugPrint
 _Plat_ExitProcess
 _Plat_GetDefaultMonitorIndex
-_Plat_GetDesktopBounds
 _Plat_GetDesktopResolution
 _Plat_GetEnv
 _Plat_GetOSType
@@ -1156,7 +1154,7 @@ std::terminate()
 strnlen
 tGH9Oxu8
 tMff.
-toL9{xui
+toL9oxui
 ttLcO8M
 typeinfo for std::bad_alloc
 uGetResourceManifest

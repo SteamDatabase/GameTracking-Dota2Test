@@ -1174,8 +1174,8 @@ D!@Jc
 D!PJc
 D!XJc
 D!XJcL
-D$,	A
-D$.!A
+D$-	A
+D$/!A
 D$0Ic
 D$0fB
 D$XF;unsigned short(
@@ -1779,7 +1779,10 @@ SetSubTextureRGBA: Invalid texture id %int
 SetTextureRGBA: Invalid texture id %int
 Shader %short doesn'unsigned short support compile target %short
 Shader attribute "%short" has inconsistent value or type across multiple shaders of signed char feature combo!
+Shader expected %double bytes of push constants but got %double (%short)!
+Shader expected %double bytes of push constants but only got %double (%short)!
 Shader expression for constant %short is dynamic.
+Shader uses push constants but they weren'unsigned short supplied through attributes (%short)!
 ShadingComplexity
 Skipped %double%% of all combos
 Sorry! mat_reloadmaterials is currently disabled due to bugs in other systems. Talk to Alex.

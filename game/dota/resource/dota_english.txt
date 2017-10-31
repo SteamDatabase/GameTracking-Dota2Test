@@ -2474,6 +2474,9 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Tooltip_ability_mirana_invis_duration"									"DURATION:"
 		"DOTA_Tooltip_ability_mirana_leap"												"Leap"
 		"DOTA_Tooltip_ability_mirana_leap_Description"									"Mirana leaps forward into battle, empowering allied units with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts %leap_bonus_duration% seconds."
+		"DOTA_Tooltip_modifier_mirana_leap_charge_counter"								"Leap Charges"
+		"DOTA_Tooltip_modifier_mirana_leap_charge_counter_Description"					"Number of charges left on Leap."
+
 		"DOTA_Tooltip_ability_mirana_leap_Lore"											"Both friend and foe alike recognize Mirana's iconic white beast in the heat of battle."
 		"DOTA_Tooltip_ability_mirana_leap_leap_distance"								"DISTANCE:"
 		"DOTA_Tooltip_ability_mirana_leap_leap_speedbonus"								"%MOVEMENT BONUS:"
@@ -3039,6 +3042,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_Description"					"Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target."
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_Lore"						"Ostarion calls on his damned lineage, laying waste to his opponents."
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_Note0"						"Deals 80 / 160 / 230 / 300 total damage."
+		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_Note1"						"If Wraith King has summoned skeletons, casting Wraithfire Blast on a target will order all of the skeletons to attack that target."
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_blast_stun_duration"			"STUN DURATION:"
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_tooltip_slow_duration"		"SLOW DURATION:"
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_blast_slow"					"%MOVEMENT SLOW:"
@@ -3052,6 +3056,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike"								"Mortal Strike"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Description"					"Wraith King passively gains a chance to deal bonus damage on an attack. Kill non-player units when it triggers and convert them into a skeleton army."
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Lore"							"One blow to crush a foe."
+		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Note0"							"Summoned skeletons will automatically attack any unit targeted by Wraithfire Blast."
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_crit_chance"					"%CHANCE:"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_crit_mult"					"%CRITICAL DAMAGE:"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_max_skeleton_charges"				"MAX CHARGES:"
@@ -3135,7 +3140,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Tooltip_ability_morphling_morph_agi_Note0"								"Can't convert stats from items."
 		"DOTA_Tooltip_ability_morphling_morph_agi_morph_rate_tooltip"					"SHIFT RATE:"
 		"DOTA_Tooltip_ability_morphling_morph_agi_bonus_attributes"						"BONUS AGILITY:"
-		"DOTA_Tooltip_ability_morphling_morph_str"										"Atribute Shift (Strength Gain)"
+		"DOTA_Tooltip_ability_morphling_morph_str"										"Attribute Shift (Strength Gain)"
 		"DOTA_Tooltip_ability_morphling_morph_str_Description"							"Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Strength."
 		"DOTA_Tooltip_ability_morphling_morph_str_Lore"									"Shifting water makes it difficult to discern the nature of Morphling."
 		"DOTA_Tooltip_ability_morphling_morph_str_Note0"								"Morph works while Morphling is disabled, but not when silenced."
@@ -3522,6 +3527,8 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Tooltip_ability_tiny_toss_radius"											"RADIUS:"
 		"DOTA_Tooltip_ability_tiny_toss_tooltip_range"									"RANGE:"
 		"DOTA_Tooltip_ability_tiny_toss_toss_damage"									"DAMAGE:"
+		"DOTA_Tooltip_modifier_tiny_toss_charge_counter"								"Toss Charges"
+		"DOTA_Tooltip_modifier_tiny_toss_charge_counter_Description"					"Number of charges left on Toss."
 		"DOTA_Tooltip_ability_tiny_craggy_exterior"										"Tree Grab"
 		"DOTA_Tooltip_ability_tiny_craggy_exterior_lore"								"Sticks and stones break all the bones, with structures sure to follow."
 		"DOTA_Tooltip_ability_tiny_craggy_exterior_Description"							"Grabs a tree to whack enemies on the head for a limited number of times. Grants bonus attack range. Attacks deal more damage (increased vs. buildings) and fully splash on units along the way. The tree can be thrown, expending all the charges, to deal your attack to a unit at a distance."
@@ -3533,7 +3540,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Tooltip_ability_tiny_craggy_exterior_Note0"								"The cooldown begins when the charges are expended."
 		"DOTA_Tooltip_ability_tiny_toss_tree"											"Tree Throw"
 		"DOTA_Tooltip_ability_tiny_toss_tree_Description"								"Consume the remaining Tree Grab charges and throws the tree at the target unit, proccing your attack on it and splashing damage around the target."
-		"DOTA_Tooltip_ability_tiny_toss_tree_Lore"										""
+		"DOTA_Tooltip_ability_tiny_toss_tree_Lore"										"Even enemies can share in Tiny's arbor ardor."
 		"DOTA_Tooltip_ability_tiny_toss_tree_range"										"CAST RANGE:"
 		"DOTA_Tooltip_ability_tiny_toss_tree_splash_radius"								"SPLASH RADIUS:"	
 		"DOTA_Tooltip_ability_tiny_toss_tree_splash_pct"								"%SPLASH DAMAGE:"
@@ -4347,7 +4354,9 @@ Once a great general among his people, and a valiant defender of the god-king Da
 		
 		//CLINKZ
 		"DOTA_Tooltip_ability_clinkz_strafe"											"Strafe"
-		"DOTA_Tooltip_ability_clinkz_strafe_Description"								"Clinkz attacks with a barrage of arrows.  Dramatically increases attack speed for a short time."
+		"DOTA_Tooltip_ability_clinkz_strafe_Description"								"Clinkz nimbly attacks with a barrage of arrows. Dramatically increases attack speed for a short time and grants Clinkz the ability to automatically dodge up to 3 projectiles."
+		"DOTA_Tooltip_ability_clinkz_strafe_Note0"								"Can dodge ranged attacks or spells."
+		"DOTA_Tooltip_ability_clinkz_strafe_Note1"								"Strafe ends if Clinkz loses the 3 dodge."
 		"DOTA_Tooltip_ability_clinkz_strafe_Lore"										"It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver."
 		"DOTA_Tooltip_ability_clinkz_strafe_attack_speed_bonus_pct"						"BONUS ATTACK SPEED:"
 		"DOTA_Tooltip_ability_clinkz_strafe_duration"									"DURATION:"
@@ -4517,7 +4526,7 @@ It is said that on the dawn of the First Day, all the night creatures perished. 
 		"DOTA_Tooltip_ability_broodmother_spawn_spiderlings_damage"						"DAMAGE:"
 		"DOTA_Tooltip_ability_broodmother_spawn_spiderlings_count"						"COUNT:"
 		"DOTA_Tooltip_ability_broodmother_spin_web"										"Spin Web"
-		"DOTA_Tooltip_ability_broodmother_spin_web_Description"							"Spins a large web that renders Broodmother grants a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every %charge_restore_time% seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears."
+		"DOTA_Tooltip_ability_broodmother_spin_web_Description"							"Spins a large web that grants Broodmother a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every %charge_restore_time% seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears."
 		"DOTA_Tooltip_ability_broodmother_spin_web_Lore"								"Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of forboding."
 		"DOTA_Tooltip_ability_broodmother_spin_web_Note0"								"Has a fade time of 2 seconds."
 		"DOTA_Tooltip_ability_broodmother_spin_web_Note1"								"Also affects Spiderling and Spiderites."
@@ -7088,10 +7097,10 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 
 		"DOTA_Tooltip_ability_pangolier_gyroshell_stop"						"Stop Rolling"
 		"DOTA_Tooltip_ability_pangolier_gyroshell_stop_Description"			"Halt!"
-		"DOTA_Tooltip_ability_pangolier_gyroshell_stop_lore"			"Donte Panlin stops when he pleases."
+		"DOTA_Tooltip_ability_pangolier_gyroshell_stop_lore"			"Donté Panlin stops when he pleases."
 
 		"npc_dota_hero_pangolier_hype"									"Eager to dash into danger at a moment's notice, the Pangolier thrives on disrupting enemy movements and placing himself in the midst of chaos. Artfully guiding his blade between cracks in armor and shrugging off attacks with his protective scales, this graceful swordsman is always ready to roll into battle."
-		"npc_dota_hero_pangolier_bio"									"The men and women that make up the Nivan Gallants live a life of swordplay, chandelier swinging, and tawdry romance. And while all adhere to their creed that “A life of adventure is the only life worth living,” the exploits of Donte Panlin still manage to raise the eyebrows of even the most hedonistic of swordsmen.<br><br>There is no monster he won’t slay. No creature he won’t woo. No tyrant he won’t stand against. And no noble immune to his silver tongue."
+		"npc_dota_hero_pangolier_bio"									"The men and women that make up the Nivan Gallants live a life of swordplay, chandelier swinging, and tawdry romance. And while all adhere to their creed that “A life of adventure is the only life worth living,” the exploits of Donté Panlin still manage to raise the eyebrows of even the most hedonistic of swordsmen.<br><br>There is no monster he won’t slay. No creature he won’t woo. No tyrant he won’t stand against. And no noble immune to his silver tongue."
 
 
 		"DOTA_Tooltip_modifier_pangolier_gyroshell"							"Rolling Thunder"
@@ -8010,7 +8019,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_Ability_item_hurricane_pike"			"Hurricane Pike"
 		"DOTA_Tooltip_Ability_item_whip"			"Whip"
 		"DOTA_Tooltip_Ability_item_oblivion_staff"			"Oblivion Staff"
-		"DOTA_Tooltip_Ability_item_ogre_axe"				"Ogre Club"
+		"DOTA_Tooltip_Ability_item_ogre_axe"				"Ogre Axe"
 		"DOTA_Tooltip_Ability_item_orchid"				"Orchid Malevolence"
 		"DOTA_Tooltip_Ability_item_bloodthorn"				"Bloodthorn"
 		"DOTA_Tooltip_Ability_item_pers"				"Perseverance"
@@ -9507,8 +9516,10 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_morphling_morph_agi_Description"	"Gaining agility at the cost of strength"
 		"DOTA_Tooltip_modifier_morphling_morph"					"Attribute Shift"
 		"DOTA_Tooltip_modifier_morphling_morph_Description"		"STR: %-dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%\nAGI: %-dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%"
-		"DOTA_Tooltip_modifier_morphling_replicate_timer"								"Morph Clone Timer"
-		"DOTA_Tooltip_modifier_morphling_replicate_timer_Description"					"Timer for clones created by Morphling's abilities"
+		"DOTA_Tooltip_modifier_morphling_replicate_timer"						"Morph Clone Timer"
+		"DOTA_Tooltip_modifier_morphling_replicate_timer_Description"			"Timer for clones created by Morphling's abilities"
+		"DOTA_Tooltip_modifier_morphling_replicate"					"Morph Timer"
+		"DOTA_Tooltip_modifier_morphling_replicate_Description"		"Indicates when Morphling will transform back into his native form."
 		
 		"DOTA_Tooltip_modifier_kunkka_tidebringer"				"Tidebringer"
 		"DOTA_Tooltip_modifier_kunkka_tidebringer_Description"	"Physical damage increased by %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% with a cleaving attack."
@@ -10094,6 +10105,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_undying_tombstone_zombie_deathlust_Description"				"Gaining %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% faster movement and attack speed."
 
 		"DOTA_Tooltip_modifier_special_bonus_reincarnation"				"Reincarnation"
+		"DOTA_Tooltip_modifier_special_bonus_spell_block"				"Spell Block"
 
 		"DOTA_Tooltip_modifier_rubick_telekinesis"						"Telekinesis"
 		"DOTA_Tooltip_modifier_rubick_telekinesis_Description"			"Held in the air."
@@ -13210,7 +13222,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		//"DOTA_Tooltip_ability_item_desolator_corruption_armor"					"ARMOR REDUCTION:"
 		"DOTA_Tooltip_ability_item_desolator_bonus_damage"						"+$damage"		
 		
-		"DOTA_Tooltip_ability_item_diffusal_blade_Description"				"<h1>Active: Purge</h1> Targets an enemy, slowing it for %purge_slow_duration% seconds.<br><br>Range: %cast_range_tooltip%\n<h1>Passive: Manabreak</h1>Each attack burns %feedback_mana_burn% mana from the target, and deals %damage_per_burn% physical damage per burned mana. <br><br>Burns %feedback_mana_burn_illusion_melee% mana per attack from melee illusions and %feedback_mana_burn_illusion_ranged% mana per attack from ranged illusions. <br><br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+		"DOTA_Tooltip_ability_item_diffusal_blade_Description"				"<h1>Active: Purge</h1> Targets an enemy, slowing it for %purge_slow_duration% seconds.<br><br>Range: %cast_range_tooltip%\n<h1>Passive: Manabreak</h1>Each attack burns %feedback_mana_burn% mana from the target, and deals %damage_per_burn% physical damage per burned mana. <br><br>Burns %feedback_mana_burn_illusion_melee% mana per attack from melee illusions and %feedback_mana_burn_illusion_ranged% mana per attack from ranged illusions."
 		"DOTA_Tooltip_ability_item_diffusal_blade_Note0"					"Does not stack with other manabreak abilities."
 		"DOTA_Tooltip_ability_item_diffusal_blade_Lore"							"An enchanted blade that allows the user to cut straight into the enemy's soul."
 		"DOTA_Tooltip_ability_item_diffusal_blade_bonus_agility"				"+$agi"
@@ -13734,6 +13746,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_item_combo_breaker_bonus_mana"					"+$mana"
 
 		"DOTA_Tooltip_ability_item_trident_lore"					"The staff of a renowned sorceress, lost for countless millennia."
+		"DOTA_Tooltip_ability_item_trident_note0"					"Multiple instances of this item do not stack."
 		"DOTA_Tooltip_ability_item_trident_bonus_intellect"					"+$int"
 		"DOTA_Tooltip_ability_item_trident_spell_amp"					"%+Spell Amplification"
 		"DOTA_Tooltip_ability_item_trident_manacost_reduction"			"%+Manacost and Manaloss Reduction"
@@ -21370,7 +21383,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"CompendiumRedeemError_PointsHeld"			"Currently some coins are being reserved by a match. These coins can be used once the match finishes or after a period of time."
 		
 		"DOTA_AbilityDraft_Round" 			"Round %s1"
-		"DOTA_AbilityDraft_Start_Timer" 	"Ability Draft Round %d Starts In:"
+		"DOTA_AbilityDraft_Start_Timer" 	"Ability Draft Round {d:round_number} Starts In:"
 		"DOTA_AbilityDraftYourTurnIn"		"You will draft in:"
 		"DOTA_AbilityDraftTimeLeft"			"Next Round Starts In:"
 		"DOTA_AbilityDraft_CurrentDrafter" 	"Currently Drafting:"

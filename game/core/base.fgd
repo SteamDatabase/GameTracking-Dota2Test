@@ -7038,6 +7038,15 @@
 	
 ]
 
+@PointClass base(Targetname, DamageFilter) size(-8 -8 -8, 8 8 8) = logic_gameevent_listener:
+	"An entity that listens to game events and fires off an output when the named event it fired"
+[
+	gameeventname(string) : "Game Event Name"
+	gameeventitem(string) :	"Item Name"
+	output OnEventFired(void) : "Fire an output when the named event fires"	
+]
+
+
 
 @PointClass base(Targetname, Parentname) editormodel("models/editor/spot.vmdl") frustum(lightfov, nearz, farz, lightcolor, -1) = env_projectedtexture :
 	"Projected texture entity, used for things like flashlights."

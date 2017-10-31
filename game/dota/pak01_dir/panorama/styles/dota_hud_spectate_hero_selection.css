@@ -205,7 +205,7 @@ DOTASpectateHeroSelection.Hidden
 {
 	box-shadow: #0006 -32px -32px 64px 64px;
 	width: 104px;
-	height: 346px;
+	height: 362px;
 	vertical-align: middle;
 	horizontal-align: center;
 	opacity: 0;
@@ -329,19 +329,19 @@ DOTASpectateHeroSelection.Hidden
 .DireTurn.BanPhase #BansBackground
 {
 	opacity: 1;
-	transform: translateX(-830px) translateY(-255px);
+	transform: translateX(-830px) translateY(-245px);
 	border-color: #522;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #200e ), color-stop( .5, #822e ), to( #200e ) );
 }
 
 .DireTurn.BanPhase #BansBackground
 {
-	transform: translateX(-830px) translateY(248px);
+	transform: translateX(-830px) translateY(245px);
 }
 
 .AspectRatio16x10 .DireTurn.BanPhase #BansBackground
 {
-	transform: translateX(-736px) translateY(248px);
+	transform: translateX(-736px) translateY(245px);
 }
 .AspectRatio16x10 .RadiantTurn.BanPhase #BansBackground
 {
@@ -349,7 +349,7 @@ DOTASpectateHeroSelection.Hidden
 }
 .AspectRatio4x3 .DireTurn.BanPhase #BansBackground
 {
-	transform: translateX(-590px) translateY(248px);
+	transform: translateX(-590px) translateY(245px);
 }
 .AspectRatio4x3 .RadiantTurn.BanPhase #BansBackground
 {
@@ -519,7 +519,7 @@ DOTASpectateHeroSelection.Hidden
 .DOTA_GAMEMODE_AP #BansContainer0,
 .DOTA_GAMEMODE_TURBO #BansContainer0
 {
-	margin-bottom: 504px;
+	margin-bottom: 524px;
 }
 
 
@@ -599,7 +599,7 @@ DOTASpectateHeroSelection.Hidden
 	width: 130px;
 	margin-left: 64px;
 	vertical-align: middle;
-	margin-top: 504px;
+	margin-top: 538px;
 	z-index: 2;
 }
 
@@ -1008,6 +1008,11 @@ DOTASpectateHeroSelection.Hidden
 {
 	box-shadow: #CA261Dd0 -3px -3px 6px 6px;
 	border-color: red;
+}
+
+.BannedHero.InvalidBan
+{
+	visibility: collapse;
 }
 
 #BannedHeroImage

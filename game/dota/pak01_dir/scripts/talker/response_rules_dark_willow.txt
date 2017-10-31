@@ -13,17 +13,12 @@ Response dark_willow_Spawn
 {
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_spawn_03.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_spawn_04.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_06.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_07.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_08.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_09.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_10.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_spawn_11.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_12.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_spawn_13.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_spawn_14.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_15.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_16.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_17.vcd" nodelay noscene 
@@ -38,17 +33,62 @@ Rule dark_willow_Spawn_Rule
 	response dark_willow_Spawn
 }
 
+Response dark_willow_SpawnChance_30%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_spawn_03.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_spawn_04.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_spawn_13.vcd" nodelay noscene 
+}
+
+Rule dark_willow_SpawnChance_30%_Rule
+{
+	criteria Spawn Isdark_willow Chance_30%
+	response dark_willow_SpawnChance_30%
+}
+
+Response dark_willow_SpawnChance_40%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_spawn_11.vcd" nodelay noscene 
+}
+
+Rule dark_willow_SpawnChance_40%_Rule
+{
+	criteria Spawn Isdark_willow Chance_40%
+	response dark_willow_SpawnChance_40%
+}
+
+Response dark_willow_SpawnChance_50%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_spawn_14.vcd" nodelay noscene 
+}
+
+Rule dark_willow_SpawnChance_50%_Rule
+{
+	criteria Spawn Isdark_willow Chance_50%
+	response dark_willow_SpawnChance_50%
+}
+
 Response dark_willow_CustomIsGameStart
 {
 	scene "scenes/dark_willow/dark_willow_sylph_battlebegins_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_battlebegins_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_battlebegins_03.vcd" nodelay noscene 
 }
 
 Rule dark_willow_CustomIsGameStart_Rule
 {
 	criteria Custom Isdark_willow IsGameStart
 	response dark_willow_CustomIsGameStart
+}
+
+Response dark_willow_CustomIsGameStartChance_40%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_battlebegins_03.vcd" nodelay noscene 
+}
+
+Rule dark_willow_CustomIsGameStartChance_40%_Rule
+{
+	criteria Custom Isdark_willow IsGameStart Chance_40%
+	response dark_willow_CustomIsGameStartChance_40%
 }
 
 Response dark_willow_CustomIsSylphSpecialSpawn
@@ -68,7 +108,6 @@ Response dark_willow_CustomIsSylphLoadoutSpawn
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_02.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_03.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_04.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_spawn_05.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_06.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_spawn_19.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_firstblood_05.vcd" nodelay noscene 
@@ -107,6 +146,28 @@ Rule dark_willow_KillIsFirstBlood_Rule
 	response dark_willow_KillIsFirstBlood
 }
 
+Response dark_willow_KillIsSylphStrikeChance_60%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_attack_emote_03.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_KillIsSylphStrikeChance_60%_Rule
+{
+	criteria Kill Isdark_willow IsSylphStrike Chance_60%
+	response dark_willow_KillIsSylphStrikeChance_60%
+}
+
+Response dark_willow_KillIsSylphStrike
+{
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_07.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_KillIsSylphStrike_Rule
+{
+	criteria Kill Isdark_willow IsSylphStrike
+	response dark_willow_KillIsSylphStrike
+}
+
 Response dark_willow_Kill
 {
 	scene "scenes/dark_willow/dark_willow_sylph_kill_01.vcd" nodelay noscene 
@@ -139,6 +200,17 @@ Rule dark_willow_Kill_Rule
 {
 	criteria Kill Isdark_willow 
 	response dark_willow_Kill
+}
+
+Response dark_willow_KillChance_30%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_lasthit_08.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_KillChance_30%_Rule
+{
+	criteria Kill Isdark_willow Chance_30%
+	response dark_willow_KillChance_30%
 }
 
 Response dark_willow_KillIsEnemyPangolinChance_25%
@@ -1513,27 +1585,23 @@ Response dark_willow_Move
 	scene "scenes/dark_willow/dark_willow_sylph_move_04.vcd" nodelay noscene respeakdelay 240
 	scene "scenes/dark_willow/dark_willow_sylph_move_05.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_06.vcd" nodelay noscene respeakdelay 240
-	scene "scenes/dark_willow/dark_willow_sylph_move_08.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_move_09.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_move_08.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_move_09.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_10.vcd" nodelay noscene respeakdelay 240
 	scene "scenes/dark_willow/dark_willow_sylph_move_11.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_move_12.vcd" nodelay noscene speakonce
+	scene "scenes/dark_willow/dark_willow_sylph_move_12.vcd" nodelay noscene respeakdelay 240
 	scene "scenes/dark_willow/dark_willow_sylph_move_13.vcd" nodelay noscene respeakdelay 120
 	scene "scenes/dark_willow/dark_willow_sylph_move_14.vcd" nodelay noscene respeakdelay 240
-	scene "scenes/dark_willow/dark_willow_sylph_move_15.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_move_16.vcd" nodelay noscene respeakdelay 240
-	scene "scenes/dark_willow/dark_willow_sylph_move_17.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_move_18.vcd" nodelay noscene respeakdelay 240
-	scene "scenes/dark_willow/dark_willow_sylph_move_19.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_move_20.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_move_15.vcd" nodelay noscene speakonce
+	scene "scenes/dark_willow/dark_willow_sylph_move_16.vcd" nodelay noscene speakonce
+	scene "scenes/dark_willow/dark_willow_sylph_move_17.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_21.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_22.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_24.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_move_25.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_move_25.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_26.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_27.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_28.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_move_29.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_move_30.vcd" nodelay noscene 
 }
 
@@ -1541,6 +1609,40 @@ Rule dark_willow_Move_Rule
 {
 	criteria Move Isdark_willow 
 	response dark_willow_Move
+}
+
+Response dark_willow_MoveChance_30%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_move_18.vcd" nodelay noscene respeakdelay 240
+	scene "scenes/dark_willow/dark_willow_sylph_move_20.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_MoveChance_30%_Rule
+{
+	criteria Move Isdark_willow Chance_30%
+	response dark_willow_MoveChance_30%
+}
+
+Response dark_willow_MoveChance_40%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_move_19.vcd" nodelay noscene respeakdelay 120
+}
+
+Rule dark_willow_MoveChance_40%_Rule
+{
+	criteria Move Isdark_willow Chance_40%
+	response dark_willow_MoveChance_40%
+}
+
+Response dark_willow_MoveChance_35%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_move_29.vcd" nodelay noscene respeakdelay 120
+}
+
+Rule dark_willow_MoveChance_35%_Rule
+{
+	criteria Move Isdark_willow Chance_35%
+	response dark_willow_MoveChance_35%
 }
 
 Response dark_willow_MoveIsSpeechPain
@@ -1642,6 +1744,120 @@ Rule dark_willow_MoveIsSpeechPainChance_30%_Rule
 	response dark_willow_MoveIsSpeechPainChance_30%
 }
 
+Response dark_willow_CastExecuteIsSylphShadow
+{
+	scene "scenes/dark_willow/dark_willow_sylph_move_07.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_move_23.vcd" nodelay noscene respeakdelay 240
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_01.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_02.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_03.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_04.vcd" nodelay noscene respeakdelay 240
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_06.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_07.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_09.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_10.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_11.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_12.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_13.vcd" nodelay noscene 
+}
+
+Rule dark_willow_CastExecuteIsSylphShadow_Rule
+{
+	criteria CastExecute Isdark_willow IsSylphShadow
+	response dark_willow_CastExecuteIsSylphShadow
+}
+
+Response dark_willow_CastExecuteIsSylphLeyConduit
+{
+	scene "scenes/dark_willow/dark_willow_sylph_attack_09.vcd" nodelay noscene speakonce
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_05.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_01.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_02.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_03.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_04.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_05.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_06.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_08.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_09.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_10.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_11.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_12.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability3_13.vcd" nodelay noscene 
+}
+
+Rule dark_willow_CastExecuteIsSylphLeyConduit_Rule
+{
+	criteria CastExecute Isdark_willow IsSylphLeyConduit
+	response dark_willow_CastExecuteIsSylphLeyConduit
+}
+
+Response dark_willow_CastExecuteIsSylphBramble
+{
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_01.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_02.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_03.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_04.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_05.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_06.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_07.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_08.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_09.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_10.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_11.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_12.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability1_13.vcd" nodelay noscene 
+}
+
+Rule dark_willow_CastExecuteIsSylphBramble_Rule
+{
+	criteria CastExecute Isdark_willow IsSylphBramble
+	response dark_willow_CastExecuteIsSylphBramble
+}
+
+Response dark_willow_CastExecuteIsSylphShadowChance_35%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_ability2_08.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_CastExecuteIsSylphShadowChance_35%_Rule
+{
+	criteria CastExecute Isdark_willow IsSylphShadow Chance_35%
+	response dark_willow_CastExecuteIsSylphShadowChance_35%
+}
+
+Response dark_willow_CastExecuteIsSylphStrike
+{
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_01.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_03.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_05.vcd" nodelay noscene speakonce
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_07.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_08.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_10.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_12.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_13.vcd" nodelay noscene 
+}
+
+Rule dark_willow_CastExecuteIsSylphStrike_Rule
+{
+	criteria CastExecute Isdark_willow IsSylphStrike
+	response dark_willow_CastExecuteIsSylphStrike
+}
+
+Response dark_willow_CastExecuteIsSylphFear
+{
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_02.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_04.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_06.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_09.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_ability4_11.vcd" nodelay noscene 
+}
+
+Rule dark_willow_CastExecuteIsSylphFear_Rule
+{
+	criteria CastExecute Isdark_willow IsSylphFear
+	response dark_willow_CastExecuteIsSylphFear
+}
+
 Response dark_willow_Attack
 {
 	scene "scenes/dark_willow/dark_willow_sylph_attack_01.vcd" nodelay noscene 
@@ -1659,7 +1875,6 @@ Response dark_willow_Attack
 	scene "scenes/dark_willow/dark_willow_sylph_attack_14.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_attack_emote_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_attack_emote_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_attack_emote_03.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_attack_emote_04.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_attack_short_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_attack_short_02.vcd" nodelay noscene 
@@ -1697,95 +1912,12 @@ Rule dark_willow_CastOrder_Rule
 	response dark_willow_CastOrder
 }
 
-Response dark_willow_CastExecuteIsSylphBramble
-{
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_01.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_03.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_04.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_05.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_06.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_07.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_08.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_09.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_10.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_11.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_12.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability1_13.vcd" nodelay noscene 
-}
-
-Rule dark_willow_CastExecuteIsSylphBramble_Rule
-{
-	criteria CastExecute Isdark_willow IsSylphBramble
-	response dark_willow_CastExecuteIsSylphBramble
-}
-
-Response dark_willow_CastExecuteIsSylphShadow
-{
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_01.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_03.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_04.vcd" nodelay noscene respeakdelay 240
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_06.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_07.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_08.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_09.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability2_10.vcd" nodelay noscene 
-}
-
-Rule dark_willow_CastExecuteIsSylphShadow_Rule
-{
-	criteria CastExecute Isdark_willow IsSylphShadow
-	response dark_willow_CastExecuteIsSylphShadow
-}
-
-Response dark_willow_CastExecuteIsSylphLeyConduit
-{
-	scene "scenes/dark_willow/dark_willow_sylph_ability3_01.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability3_02.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability3_03.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability3_04.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability3_05.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_ability3_06.vcd" nodelay noscene respeakdelay 120
-}
-
-Rule dark_willow_CastExecuteIsSylphLeyConduit_Rule
-{
-	criteria CastExecute Isdark_willow IsSylphLeyConduit
-	response dark_willow_CastExecuteIsSylphLeyConduit
-}
-
-Response dark_willow_CastExecuteIsSylphStrike
-{
-	scene "scenes/dark_willow/dark_willow_sylph_ability4_01.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability4_03.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability4_05.vcd" nodelay noscene speakonce
-}
-
-Rule dark_willow_CastExecuteIsSylphStrike_Rule
-{
-	criteria CastExecute Isdark_willow IsSylphStrike
-	response dark_willow_CastExecuteIsSylphStrike
-}
-
-Response dark_willow_CastExecuteIsSylphFear
-{
-	scene "scenes/dark_willow/dark_willow_sylph_ability4_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability4_04.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_ability4_06.vcd" nodelay noscene 
-}
-
-Rule dark_willow_CastExecuteIsSylphFear_Rule
-{
-	criteria CastExecute Isdark_willow IsSylphFear
-	response dark_willow_CastExecuteIsSylphFear
-}
-
 Response dark_willow_LevelUp
 {
 	scene "scenes/dark_willow/dark_willow_sylph_levelup_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_levelup_02.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_levelup_03.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_levelup_04.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_levelup_05.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_levelup_06.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_levelup_07.vcd" nodelay noscene 
@@ -1800,9 +1932,53 @@ Rule dark_willow_LevelUp_Rule
 	response dark_willow_LevelUp
 }
 
+Response dark_willow_Respawn
+{
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_01.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_02.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_03.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_04.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_05.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_06.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_07.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_08.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_09.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_10.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_12.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_13.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_14.vcd" nodelay noscene 
+}
+
+Rule dark_willow_Respawn_Rule
+{
+	criteria Respawn Isdark_willow 
+	response dark_willow_Respawn
+}
+
+Response dark_willow_RespawnChance_50%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_respawn_11.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_RespawnChance_50%_Rule
+{
+	criteria Respawn Isdark_willow Chance_50%
+	response dark_willow_RespawnChance_50%
+}
+
+Response dark_willow_DeathIsReincarnating
+{
+	scene "scenes/dark_willow/dark_willow_sylph_fastres_01.vcd" nodelay noscene 
+}
+
+Rule dark_willow_DeathIsReincarnating_Rule
+{
+	criteria Death Isdark_willow IsReincarnating
+	response dark_willow_DeathIsReincarnating
+}
+
 Response dark_willow_Death
 {
-	scene "scenes/dark_willow/dark_willow_sylph_levelup_04.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_death_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_death_02.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_death_03.vcd" nodelay noscene 
@@ -1825,51 +2001,15 @@ Rule dark_willow_Death_Rule
 	response dark_willow_Death
 }
 
-Response dark_willow_DeathIsReincarnating
-{
-	scene "scenes/dark_willow/dark_willow_sylph_fastres_01.vcd" nodelay noscene 
-}
-
-Rule dark_willow_DeathIsReincarnating_Rule
-{
-	criteria Death Isdark_willow IsReincarnating
-	response dark_willow_DeathIsReincarnating
-}
-
-Response dark_willow_Respawn
-{
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_01.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_03.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_04.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_05.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_06.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_07.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_08.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_09.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_10.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_11.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_12.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_13.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_respawn_14.vcd" nodelay noscene 
-}
-
-Rule dark_willow_Respawn_Rule
-{
-	criteria Respawn Isdark_willow 
-	response dark_willow_Respawn
-}
-
 Response dark_willow_LastHit
 {
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_02.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_03.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_lasthit_04.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_lasthit_04.vcd" nodelay noscene speakonce
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_05.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_lasthit_06.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_lasthit_06.vcd" nodelay noscene speakonce
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_07.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_lasthit_08.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_09.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_10.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_11.vcd" nodelay noscene respeakdelay 120
@@ -1877,16 +2017,26 @@ Response dark_willow_LastHit
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_13.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_15.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_16.vcd" nodelay noscene respeakdelay 120
-	scene "scenes/dark_willow/dark_willow_sylph_lasthit_17.vcd" nodelay noscene speakonce
-	scene "scenes/dark_willow/dark_willow_sylph_lasthit_18.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_lasthit_17.vcd" nodelay noscene respeakdelay 120
+	scene "scenes/dark_willow/dark_willow_sylph_lasthit_18.vcd" nodelay noscene speakonce
 	scene "scenes/dark_willow/dark_willow_sylph_lasthit_19.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_lasthit_20.vcd" nodelay noscene speakonce
 }
 
 Rule dark_willow_LastHit_Rule
 {
 	criteria LastHit Isdark_willow 
 	response dark_willow_LastHit
+}
+
+Response dark_willow_LastHitChance_40%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_lasthit_20.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_LastHitChance_40%_Rule
+{
+	criteria LastHit Isdark_willow Chance_40%
+	response dark_willow_LastHitChance_40%
 }
 
 Response dark_willow_Deny
@@ -1903,7 +2053,6 @@ Response dark_willow_Deny
 	scene "scenes/dark_willow/dark_willow_sylph_deny_10.vcd" nodelay noscene respeakdelay 240
 	scene "scenes/dark_willow/dark_willow_sylph_deny_11.vcd" nodelay noscene respeakdelay 120
 	scene "scenes/dark_willow/dark_willow_sylph_deny_12.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_deny_13.vcd" nodelay noscene speakonce
 	scene "scenes/dark_willow/dark_willow_sylph_deny_14.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_deny_15.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_deny_16.vcd" nodelay noscene 
@@ -1915,6 +2064,17 @@ Rule dark_willow_Deny_Rule
 {
 	criteria Deny Isdark_willow 
 	response dark_willow_Deny
+}
+
+Response dark_willow_DenyChance_30%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_deny_13.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_DenyChance_30%_Rule
+{
+	criteria Deny Isdark_willow Chance_30%
+	response dark_willow_DenyChance_30%
 }
 
 Response dark_willow_Select
@@ -2503,13 +2663,23 @@ Response dark_willow_PowerupIsPowerupDoubleDamage
 {
 	scene "scenes/dark_willow/dark_willow_sylph_doubledam_01.vcd" nodelay noscene 
 	scene "scenes/dark_willow/dark_willow_sylph_doubledam_02.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_doubledam_03.vcd" nodelay noscene 
 }
 
 Rule dark_willow_PowerupIsPowerupDoubleDamage_Rule
 {
 	criteria Powerup Isdark_willow IsPowerupDoubleDamage
 	response dark_willow_PowerupIsPowerupDoubleDamage
+}
+
+Response dark_willow_PowerupIsPowerupDoubleDamageChance_5%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_doubledam_03.vcd" nodelay noscene speakonce
+}
+
+Rule dark_willow_PowerupIsPowerupDoubleDamageChance_5%_Rule
+{
+	criteria Powerup Isdark_willow IsPowerupDoubleDamage Chance_5%
+	response dark_willow_PowerupIsPowerupDoubleDamageChance_5%
 }
 
 Response dark_willow_PowerupIsPowerupRegeneration
@@ -2558,48 +2728,49 @@ Rule dark_willow_PowerupIsPowerupIllusionChance_25%_Rule
 	response dark_willow_PowerupIsPowerupIllusionChance_25%
 }
 
-Response dark_willow_PowerupIsPowerupBountyChance_50%
+Response dark_willow_PowerupIsPowerupBountyChance_75%
 {
 	scene "scenes/dark_willow/dark_willow_sylph_bounty_01.vcd" nodelay noscene 
 }
 
-Rule dark_willow_PowerupIsPowerupBountyChance_50%_Rule
+Rule dark_willow_PowerupIsPowerupBountyChance_75%_Rule
 {
-	criteria Powerup Isdark_willow IsPowerupBounty Chance_50%
-	response dark_willow_PowerupIsPowerupBountyChance_50%
+	criteria Powerup Isdark_willow IsPowerupBounty Chance_75%
+	response dark_willow_PowerupIsPowerupBountyChance_75%
 }
 
-Response dark_willow_PowerupIsPowerupBountyChance_40%
+Response dark_willow_PowerupIsPowerupBountyChance_20%
 {
-	scene "scenes/dark_willow/dark_willow_sylph_bounty_02.vcd" nodelay noscene 
+	scene "scenes/dark_willow/dark_willow_sylph_bounty_02.vcd" nodelay noscene speakonce
 }
 
-Rule dark_willow_PowerupIsPowerupBountyChance_40%_Rule
+Rule dark_willow_PowerupIsPowerupBountyChance_20%_Rule
 {
-	criteria Powerup Isdark_willow IsPowerupBounty Chance_40%
-	response dark_willow_PowerupIsPowerupBountyChance_40%
+	criteria Powerup Isdark_willow IsPowerupBounty Chance_20%
+	response dark_willow_PowerupIsPowerupBountyChance_20%
 }
 
-Response dark_willow_PowerupIsPowerupBountyChance_15%
+Response dark_willow_PowerupIsPowerupBountyChance_35%
 {
 	scene "scenes/dark_willow/dark_willow_sylph_bounty_03.vcd" nodelay noscene 
 }
 
-Rule dark_willow_PowerupIsPowerupBountyChance_15%_Rule
+Rule dark_willow_PowerupIsPowerupBountyChance_35%_Rule
 {
-	criteria Powerup Isdark_willow IsPowerupBounty Chance_15%
-	response dark_willow_PowerupIsPowerupBountyChance_15%
+	criteria Powerup Isdark_willow IsPowerupBounty Chance_35%
+	response dark_willow_PowerupIsPowerupBountyChance_35%
 }
 
-Response dark_willow_PowerupIsPowerupInvisibilityChance_20%
+Response dark_willow_PowerupIsPowerupInvisibility
 {
 	scene "scenes/dark_willow/dark_willow_sylph_invis_01.vcd" nodelay noscene speakonce
+	scene "scenes/dark_willow/dark_willow_sylph_invis_03.vcd" nodelay noscene 
 }
 
-Rule dark_willow_PowerupIsPowerupInvisibilityChance_20%_Rule
+Rule dark_willow_PowerupIsPowerupInvisibility_Rule
 {
-	criteria Powerup Isdark_willow IsPowerupInvisibility Chance_20%
-	response dark_willow_PowerupIsPowerupInvisibilityChance_20%
+	criteria Powerup Isdark_willow IsPowerupInvisibility
+	response dark_willow_PowerupIsPowerupInvisibility
 }
 
 Response dark_willow_PowerupIsPowerupInvisibilityChance_40%
@@ -2611,17 +2782,6 @@ Rule dark_willow_PowerupIsPowerupInvisibilityChance_40%_Rule
 {
 	criteria Powerup Isdark_willow IsPowerupInvisibility Chance_40%
 	response dark_willow_PowerupIsPowerupInvisibilityChance_40%
-}
-
-Response dark_willow_PowerupIsPowerupInvisibility
-{
-	scene "scenes/dark_willow/dark_willow_sylph_invis_03.vcd" nodelay noscene 
-}
-
-Rule dark_willow_PowerupIsPowerupInvisibility_Rule
-{
-	criteria Powerup Isdark_willow IsPowerupInvisibility
-	response dark_willow_PowerupIsPowerupInvisibility
 }
 
 Response dark_willow_PowerupIsPowerupArcaneChance_50%
@@ -2710,13 +2870,23 @@ Rule dark_willow_Pain_Rule
 Response dark_willow_InTheBag
 {
 	scene "scenes/dark_willow/dark_willow_sylph_inthebag_01.vcd" nodelay noscene 
-	scene "scenes/dark_willow/dark_willow_sylph_inthebag_02.vcd" nodelay noscene 
 }
 
 Rule dark_willow_InTheBag_Rule
 {
 	criteria InTheBag Isdark_willow 
 	response dark_willow_InTheBag
+}
+
+Response dark_willow_InTheBagChance_35%
+{
+	scene "scenes/dark_willow/dark_willow_sylph_inthebag_02.vcd" nodelay noscene 
+}
+
+Rule dark_willow_InTheBagChance_35%_Rule
+{
+	criteria InTheBag Isdark_willow Chance_35%
+	response dark_willow_InTheBagChance_35%
 }
 
 Response dark_willow_Defeat
