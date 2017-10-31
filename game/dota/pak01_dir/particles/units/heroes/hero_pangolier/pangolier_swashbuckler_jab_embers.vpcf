@@ -52,15 +52,21 @@
 		},
 		{
 			_class = "C_OP_InterpolateRadius"
-			m_flBias = 0.250000
+			m_flBias = 0.200000
 			m_flEndScale = 0.000000
+		},
+		{
+			_class = "C_OP_MovementPlaceOnGround"
+			m_flOffset = 50.000000
+			m_CollisionGroupName = "DEBRIS"
+			m_bIncludeWater = true
 		},
 	]
 	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_RandomLifeTime"
-			m_fLifetimeMax = 1.100000
+			m_fLifetimeMax = 0.500000
 			m_fLifetimeMin = 0.300000
 		},
 		{
@@ -72,16 +78,16 @@
 			_class = "C_INIT_RandomColor"
 			m_ColorMin = 
 			[
-				183,
-				96,
-				49,
+				242,
+				224,
+				214,
 				255,
 			]
 			m_ColorMax = 
 			[
-				255,
-				224,
-				24,
+				240,
+				233,
+				203,
 				255,
 			]
 		},
@@ -90,13 +96,13 @@
 			m_flNoiseScale = 2.000000
 			m_vecOutputMax = 
 			[
-				700.000000,
+				1200.000000,
 				132.000000,
 				0.000000,
 			]
 			m_vecOutputMin = 
 			[
-				400.000000,
+				1000.000000,
 				-132.000000,
 				0.000000,
 			]
@@ -121,15 +127,15 @@
 			_class = "C_INIT_PositionOffset"
 			m_OffsetMax = 
 			[
+				200.000000,
 				50.000000,
-				30.000000,
 				50.000000,
 			]
 			m_OffsetMin = 
 			[
-				50.000000,
-				-30.000000,
-				20.000000,
+				200.000000,
+				-50.000000,
+				100.000000,
 			]
 			m_nControlPointNumber = 3
 			m_bLocalCoords = true
@@ -137,10 +143,11 @@
 		{
 			_class = "C_INIT_RandomTrailLength"
 			m_flMaxLength = 0.500000
+			m_flMinLength = 0.400000
 		},
 		{
 			_class = "C_INIT_RandomAlpha"
-			m_nAlphaMin = 50
+			m_nAlphaMin = 200
 		},
 	]
 	m_Emitters = 

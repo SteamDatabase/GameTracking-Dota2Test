@@ -34,6 +34,12 @@
 			_class = "C_OP_FadeInSimple"
 			m_flFadeInTime = 1.000000
 		},
+		{
+			_class = "C_OP_MovementPlaceOnGround"
+			m_flOffset = 20.000000
+			m_CollisionGroupName = "DEBRIS"
+			m_bIncludeWater = true
+		},
 	]
 	m_Initializers = 
 	[

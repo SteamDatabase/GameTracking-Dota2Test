@@ -933,6 +933,48 @@ CHelpData CHelpData_0
 			string m_FriendlyName = "Match Target Orientation"
 			string m_TooltipOverride = ""
 			string m_HelpText = "When true, the end effector bone in the IK chain will be rotated to match the orientation of the target Attachment"
+		},
+		CHelpEntry
+		{
+			string m_Id = "Attribute.CBoneMaskAnimNode.m_timingBehavior"
+			string m_FriendlyName = "Timing Control"
+			string m_TooltipOverride = ""
+			string m_HelpText = "Choose how the node handles interprets and manages the playback of its children, and how its presents it own timing to its parent.    \n\n<UL>\n<LI> <B>Use Child1:</B> Use the cycle and duration of Child1 as the cycle and duration of this node.  The child nodes are not synchronized.   \n<LI> <B>Use Child2:</B> Use the cycle and duration of Child2 as the cycle and duration of this node.  The child nodes are not synchronized.   \n<LI> <B>Synchronize Children:</B> The cycle of the child nodes are kept in sync, and the cycle and duration of this node is a blend of the values from both children \n</UL>"
+		},
+		CHelpEntry
+		{
+			string m_Id = "Attribute.CBoneMaskAnimNode.m_flTimingBlend"
+			string m_FriendlyName = "Timing Blend"
+			string m_TooltipOverride = ""
+			string m_HelpText = "When <b>Timing Control</b> is set to Synchronize Children, this value controls how the duration of the blended result.  A value of 0 means the duration of Child1 is used, 1 means the duration of Child2 is used.  "
+		},
+		CHelpEntry
+		{
+			string m_Id = "Attribute.CSubtractAnimNode.m_timingBehavior"
+			string m_FriendlyName = "Timing Control"
+			string m_TooltipOverride = ""
+			string m_HelpText = "Choose how the node handles interprets and manages the playback of its children, and how its presents it own timing to its parent.    \n\n<UL>\n<LI> <B>Use Child1:</B> Use the cycle and duration of Child1 as the cycle and duration of this node.  The child nodes are not synchronized.   \n<LI> <B>Use Child2:</B> Use the cycle and duration of Child2 as the cycle and duration of this node.  The child nodes are not synchronized.   \n<LI> <B>Synchronize Children:</B> The cycle of the child nodes are kept in sync, and the cycle and duration of this node is a blend of the values from both children \n</UL>"
+		},
+		CHelpEntry
+		{
+			string m_Id = "Attribute.CAddAnimNode.m_timingBehavior"
+			string m_FriendlyName = "Timing Control"
+			string m_TooltipOverride = ""
+			string m_HelpText = "Choose how the node handles interprets and manages the playback of its children, and how its presents it own timing to its parent.    \n\n<UL>\n<LI> <B>Use Child1:</B> Use the cycle and duration of Child1 as the cycle and duration of this node.  The child nodes are not synchronized.   \n<LI> <B>Use Child2:</B> Use the cycle and duration of Child2 as the cycle and duration of this node.  The child nodes are not synchronized.   \n<LI> <B>Synchronize Children:</B> The cycle of the child nodes are kept in sync, and the cycle and duration of this node is a blend of the values from both children \n</UL>"
+		},
+		CHelpEntry
+		{
+			string m_Id = "Attribute.CSubtractAnimNode.m_flTimingBlend"
+			string m_FriendlyName = "Timing Blend"
+			string m_TooltipOverride = ""
+			string m_HelpText = "When <b>Timing Control</b> is set to Synchronize Children, this value controls how the duration of the blended result.  A value of 0 means the duration of Child1 is used, 1 means the duration of Child2 is used.  "
+		},
+		CHelpEntry
+		{
+			string m_Id = "Attribute.CAddAnimNode.m_flTimingBlend"
+			string m_FriendlyName = "Timing Blend"
+			string m_TooltipOverride = ""
+			string m_HelpText = "When <b>Timing Control</b> is set to Synchronize Children, this value controls how the duration of the blended result.  A value of 0 means the duration of Child1 is used, 1 means the duration of Child2 is used.  "
 		}
 	]
 }

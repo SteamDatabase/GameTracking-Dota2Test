@@ -20,17 +20,6 @@
 			m_flRadiusScale = 30.000000
 			m_hTexture = resource:"materials/particle/particle_glow_04.vtex"
 		},
-		{
-			_class = "C_OP_RenderModels"
-			m_ModelList = 
-			[
-				{
-					m_model = resource:"maps/journey_assets/characters/journey_crane/crane.vmdl"
-				},
-			]
-			m_bOrientZ = true
-			m_bDisableOperator = true
-		},
 	]
 	m_Operators = 
 	[
@@ -60,6 +49,12 @@
 		{
 			_class = "C_OP_FadeOutSimple"
 			m_flFadeOutTime = 0.800000
+		},
+		{
+			_class = "C_OP_MovementPlaceOnGround"
+			m_flOffset = 20.000000
+			m_CollisionGroupName = "DEBRIS"
+			m_bIncludeWater = true
 		},
 	]
 	m_Initializers = 

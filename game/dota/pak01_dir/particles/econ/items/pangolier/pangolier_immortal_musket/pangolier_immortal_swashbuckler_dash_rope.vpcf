@@ -1,7 +1,7 @@
 {
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
-	m_nMaxParticles = 64
+	m_nMaxParticles = 20
 	m_nInitialParticles = 1
 	m_ConstantColor = 
 	[
@@ -191,7 +191,7 @@
 	m_Children = 
 	[
 		{
-			m_ChildRef = resource:"particles/units/heroes/hero_phantom_lancer/phantom_lancer_dying_goldsparkle.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/hero_pangolier/pangolier_swashbuckler_dash_ground_embers.vpcf"
 		},
 	]
 	m_controlPointConfigurations = 

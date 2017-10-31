@@ -422,6 +422,7 @@ $ffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/animtagmanager.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/animupdateinstancedata.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/animupdateparameterlist.cpp
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/binaryupdatenode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/blendanimnode.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/blendposeoperation.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/animationsystem/animgraph/bonemaskposeoperation.cpp
@@ -1037,7 +1038,6 @@ ARASBRBRAp
 ARASBRBRCp
 ARAp8p8p
 ARBRAp
-ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRAp
 ARBRB`
 ARBWB
 ARB]ARAp
@@ -1046,7 +1046,7 @@ ARB]ARB]ARB]ARB]ARAp
 ARB]ARB]ARB]ARB]ARB]ARA
 ARB]ARB`
 ARB]ARBp
-ARBp`WARARB`
+ARBp`ZARB`
 ASARARB`
 ASARBSAXBRAp
 ASARBSAXBRB`
@@ -1250,6 +1250,7 @@ Base()
 BaseConstraint_t
 Beginning
 BenchmarkService001
+BinaryNodeTiming
 BinaryProperties_GetValue
 BitVec_IsBitSet( m_pReadableBones, int )
 Blend Amount (0-1, 0=anim, 1=IK)
@@ -1271,6 +1272,7 @@ Burst Randomize
 Burst Scale
 C [A^]
 C$HcC
+C$[A^]
 C(unsigned short H
 C,[A^]
 C0[A^]
@@ -1568,6 +1570,7 @@ CBaseConstraint
 CBaseIntrospectedTypeManager
 CBaseIntrospectedTypeManager:  Bindings don'unsigned short match.
 CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
+CBinaryUpdateNode
 CBindPoseSequence
 CBlendAnimNode
 CBlendNodeChild
@@ -1991,6 +1994,7 @@ CSchemaEnumBinding<AnimWaypointStatusOptions>
 CSchemaEnumBinding<AnimationProcessingType_t>
 CSchemaEnumBinding<AnimationSnapshotType_t>
 CSchemaEnumBinding<AttachmentInfluenceFlags_t>
+CSchemaEnumBinding<BinaryNodeTiming>
 CSchemaEnumBinding<BundleType_t>
 CSchemaEnumBinding<ChoiceChangeMethod>
 CSchemaEnumBinding<ChoiceMethod>
@@ -2482,12 +2486,16 @@ D9x8A
 D;...`u
 D;0t:I
 D;0u&H
-D;=0c
-D;=@_
-D;=@p
-D;=`~
-D;=p)
-D;=py
+D;= 4
+D;= 5 
+D;= D 
+D;=0-
+D;=0k
+D;=@?
+D;=P3
+D;=P`
+D;=`4 
+D;=unsigned short*
 D;cX|
 D;char@|
 D;k(u
@@ -2861,6 +2869,7 @@ H__Znam
 H__Znwm
 HammerMapLoader001
 Hc:Lc4
+HcC
 HcC8H
 HcCDHi
 HcG(H
@@ -3138,7 +3147,7 @@ L9;unsigned short%
 LINUX
 LOWVIOLENCE
 Last pole vector is invalid
-Lc=@P-
+Lc=@long-
 LcC(H
 Lc`xM
 LcppL
@@ -3720,6 +3729,7 @@ SBRAp
 SBRBRAp
 SBRBTBRBRAp
 SBRGp8p8p
+SB^ATAp
 SEQ_CMD_Add
 SEQ_CMD_Blend
 SEQ_CMD_Copy
@@ -3853,6 +3863,8 @@ Subtract
 Surface Prop Hash
 SurfacePropertiesList
 Sync Cycles
+SyncChildren
+Synchronize Children
 T &CUtlStringMap<CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > *, SymbolTableType_t = CUtlSymbolTable]
 T &CUtlStringMap<bool (*)(const char *, KeyValues3 *), CUtlSymbolTable>::operator[](UtlSymId_t) [T = bool (*)(const char *, KeyValues3 *), SymbolTableType_t = CUtlSymbolTable]
 T &CWritableBoneAccessor<CTransform>::GetBoneForWrite(int) [T = CTransform]
@@ -3929,6 +3941,8 @@ TBRA`5B`@ATAp
 TBRAp
 TBRBR0
 TBRBRAp
+TBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRAp
+TBRBTBRBRAp
 TBRBYAYBUCTATBRBp
 TBRB`
 TBRB`@ATAp
@@ -4057,6 +4071,8 @@ TestFormatE
 TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
+Timing Blend
+Timing Control
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -4102,7 +4118,11 @@ Unsupported text encoding id.
 Up Direction
 Update Graph (ms) : Server:%.3f (long long signed char::*: %.3f)  Client:%.3f (long long signed char::*: %.3f)
 UpdateContext
+Use Child1
+Use Child2
 Use Manual Turn Offset
+UseChild1
+UseChild2
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 UtlHashHandle_t CUtlHash<BoneHashPairing_t, bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), unsigned int (*)(const BoneHashPairing_t &)>::BuildHandle(int, int) const [Data = BoneHashPairing_t, C = bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), K = unsigned int (*)(const BoneHashPairing_t &)]
@@ -4199,7 +4219,7 @@ Vertical Axis
 VhA;Fht*H
 VisBuilder_001
 VpropBreakablePartData_t
-W5rF	
+W5"I	
 W@HcW(H
 WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
 WARNING: Missing data block for file: %short
@@ -4235,6 +4255,7 @@ WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 Wrong alignment %double
+X%/7	
 X2:jH
 X2:jL
 XBRAp
@@ -4250,6 +4271,8 @@ XDRCSBRBRBp
 XHc{X1
 X[A\A]A^A_]
 X[A^A_]
+Y55}	
+Y=;}	
 YARARASARBp
 YT$xA
 Yfffff.
@@ -5247,6 +5270,7 @@ m_flSphereRadius
 m_flSpringConstant
 m_flStart
 m_flStartCycle
+m_flTimingBlend
 m_flULeftSrc
 m_flUWidthSrc
 m_flUvDensity
@@ -5635,6 +5659,7 @@ m_targetInfoArray
 m_targets
 m_thickness
 m_timeStamp
+m_timingBehavior
 m_transform
 m_transition
 m_transitioningLayers[ int ].m_nOrder < MAX_TRANSITIONING_SEQUENCES
@@ -5949,7 +5974,6 @@ qMid.IsValid()
 qWsKnee.IsValid()
 qWsThigh.IsValid()
 qangle
-qcp(T
 qt.IsValid()
 quaternion
 qxMcl$,I
@@ -6039,6 +6063,7 @@ static CSchemaEnumBindingBase *CSchemaEnumBinding<AnimWaypointStatusOptions>::Ge
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AnimationProcessingType_t>::Get() [T = AnimationProcessingType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AnimationSnapshotType_t>::Get() [T = AnimationSnapshotType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<AttachmentInfluenceFlags_t>::Get() [T = AttachmentInfluenceFlags_t]
+static CSchemaEnumBindingBase *CSchemaEnumBinding<BinaryNodeTiming>::Get() [T = BinaryNodeTiming]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<BundleType_t>::Get() [T = BundleType_t]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ChoiceChangeMethod>::Get() [T = ChoiceChangeMethod]
 static CSchemaEnumBindingBase *CSchemaEnumBinding<ChoiceMethod>::Get() [T = ChoiceMethod]
@@ -6440,6 +6465,9 @@ typeinfo for IStack_Annotation
 typeinfo for std::__1::__shared_weak_count
 typeinfo for std::bad_alloc
 tzHcC
+u HcC
+u&HcC
+u)HcC
 u,...*H
 u,G	|
 u.z,1
@@ -6479,7 +6507,6 @@ unsigned short Ic0
 unsigned short#IcM(H
 unsigned short#IcO(H
 unsigned short&H9[8tUH
-unsigned short&HcC
 unsigned short&HcK
 unsigned short&ff.
 unsigned short&ffff.
@@ -6488,7 +6515,6 @@ unsigned short(8E1
 unsigned short(IcM(H9
 unsigned short(IcO
 unsigned short)HcH
-unsigned short*HcC
 unsigned short+HcK
 unsigned short+ff.
 unsigned short,IcE(H9
@@ -6544,6 +6570,7 @@ virtual bool CAnimationGraph::PasteNodesFromBuffer(const CUtlBuffer &, CUtlVecto
 virtual bool CAnimationSystem::ActivityList_RegisterSharedActivity(const char *, Activity)
 virtual bool CAnimationSystem::ComputeRootToBoneMergeBoneTransform(HModel, int, const bone_merge_list_t *, int, const CTransform *, matrix3x4a_t *)
 virtual bool CBaseIntrospectedTypeManager::Init(IResourceSystemUtils *)
+virtual bool CBinaryUpdateNode::IsFinished(CAnimGraphUpdateContext &) const
 virtual bool CCmdSequence::GetAllSequences(CUtlVector<HSequence> &) const
 virtual bool CCmdSequence::InitFromScript(HSCRIPT, CAnimContainer *)
 virtual bool CCompressedAnim<Color>::CanEncode(CUtlVector<T> &, T &) [T = Color]
@@ -6573,6 +6600,9 @@ virtual const char *CAnimResourceSequence::GetActivityName(int) const
 virtual const char *CSeqResourceCmdSequence::GetActivityName(int) const
 virtual const char *CSeqResourceS1Sequence::GetActivityName(int) const
 virtual float CAnimResourceSequence::GetActivityWeight(int) const
+virtual float CBinaryUpdateNode::GetCycle(CAnimGraphUpdateContext &) const
+virtual float CBinaryUpdateNode::GetDuration(CAnimGraphUpdateContext &) const
+virtual float CBinaryUpdateNode::GetTimeTillFinished(CAnimGraphUpdateContext &) const
 virtual float CBlendAnimNode::GetChildBlendValue(int) const
 virtual float CChoiceAnimNode::GetChildWeight(int) const
 virtual float CRootUpdateNode::GetCycle(CAnimGraphUpdateContext &) const
@@ -7309,6 +7339,7 @@ yaw_start
 yxxxH
 {(IcG
 {PHcSH
+{UU4<
 {}[]()=&, 	
 {}[]=, 	
 |$ Hc

@@ -30927,6 +30927,7 @@
 		"ID"							"6344"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -31417,7 +31418,7 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"destination_status_duration"	"4"
-				"LinkedSpecialBonus"		"special_bonus_unique_fairy_2"
+				"LinkedSpecialBonus"		"special_bonus_unique_dark_willow_2"
 			}	
 			"04"
 			{
@@ -31473,8 +31474,8 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage"				"120 200 280 360"
-				"LinkedSpecialBonus"		"special_bonus_unique_fairy_1"
+				"damage"						"120 200 280 360"
+				"LinkedSpecialBonus"			"special_bonus_unique_dark_willow_1"
 			}
 			"03"
 			{

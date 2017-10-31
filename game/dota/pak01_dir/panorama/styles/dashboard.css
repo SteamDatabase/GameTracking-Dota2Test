@@ -77,8 +77,6 @@ DOTADashboard, #DashboardCore, #DashboardOverlay, #DashboardForeground
 	flow-children: down;
 	width: 100%;
 	wash-color: white;
-	
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000ff ), color-stop( .23, #000000ff), color-stop( .23, #00000000), to( #00000000 ) );
 
 	transition-property: transform, wash-color, opacity;
 	transition-duration: PreConnectedTransitionDuration; 
@@ -118,8 +116,7 @@ DOTADashboard.InitialDisplay #TopBarSecondaryContent
 {
 	width: 100%;
 	padding: 5px;
-	background-color: #1b1b8e;
-	background-color: gradient( radial, 50% 50%, 0% 0%, 65% 35%, from( #6a9dcc99 ), to( #6a9dcc11 ) );
+	background-color: black, gradient( radial, 50% 50%, 0% 0%, 65% 35%, from( #6a9dcc99 ), to( #6a9dcc11 ) );
 	max-height: 0px;
 	box-shadow: inset #000000ff 3px 3px 6px 6px;
 

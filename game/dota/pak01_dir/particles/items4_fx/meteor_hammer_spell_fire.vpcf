@@ -21,8 +21,9 @@
 			m_flOverbrightFactor = 5.000000
 			m_flAddSelfAmount = 2.500000
 			m_bSaturateColorPreAlphaBlend = false
-			m_hTexture = resource:"materials/particle/fire_particle_10/fire_particle_10_low.vtex"
+			m_hTexture = resource:"materials/particle/lanaya/plasma_flame.vtex"
 			m_flAnimationRate = 2.000000
+			m_bAdditive = true
 		},
 	]
 	m_Operators = 
@@ -126,7 +127,6 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_nFieldOutput = 22
 			m_ColorMax = 
 			[
 				54,

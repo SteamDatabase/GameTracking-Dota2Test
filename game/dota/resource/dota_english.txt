@@ -4842,7 +4842,7 @@ Six times his name was tolled from the great bell of Vashundol. Six and sixty ti
 		"DOTA_Tooltip_ability_ancient_apparition_ice_vortex_spell_resist_pct"			"%INCREASED MAGIC DAMAGE:"
 		"DOTA_Tooltip_ability_ancient_apparition_ice_vortex_radius"						"RADIUS:"
 		"DOTA_Tooltip_ability_ancient_apparition_chilling_touch"						"Chilling Touch"
-		"DOTA_Tooltip_ability_ancient_apparition_chilling_touch_Description"			"A frigid gust enchants allied heroes, granting them bonus magical damage for a given number of physical attacks. Each attack slows the enemy movement sleep.  Ancient Apparition always receives the buff. Lasts 30 seconds."
+		"DOTA_Tooltip_ability_ancient_apparition_chilling_touch_Description"			"A frigid gust enchants allied heroes, granting them bonus magical damage for a given number of physical attacks. Each attack slows the enemy movement speed.  Ancient Apparition always receives the buff. Lasts 30 seconds."
 		"DOTA_Tooltip_ability_ancient_apparition_chilling_touch_Lore"					"The Ancient Apparition's eternal knowledge brings a frigid enchantment to his allies."
 		"DOTA_Tooltip_ability_ancient_apparition_chilling_touch_Note0"					"Extra damage is its own instance of damage."
 		"DOTA_Tooltip_ability_ancient_apparition_chilling_touch_Note1"					"Only works against heroes and creeps."
@@ -7031,6 +7031,8 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_dark_willow_bramble_maze_Description"		"Rooted, cannot move or attack."
 		"DOTA_Tooltip_modifier_dark_willow_shadow_realm_buff"				"Shadow Realm"
 		"DOTA_Tooltip_modifier_dark_willow_shadow_realm_buff_Description"	"Untargetable and gaining bonus magic damage."
+		"DOTA_Tooltip_modifier_dark_willow_cursed_crown"					"Cursed Crown"
+		"DOTA_Tooltip_modifier_dark_willow_cursed_crown_Description"		"About to be stunned by Cursed Crown."
 		"DOTA_Tooltip_modifier_dark_willow_debuff_fear"						"Terrorize"
 		"DOTA_Tooltip_modifier_dark_willow_debuff_fear_Description"			"Running to home base away from Dark Willow."	
 		"DOTA_Tooltip_modifier_dark_willow_bedlam"							"Bedlam"
@@ -7094,7 +7096,8 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_pangolier_shield_crash_buff_Description"		"Blocking %fMODIFIER_PROPERTY_TOOLTIP%%% of incoming damage."
 		"DOTA_Tooltip_modifier_pangolier_shield_crash_jump"					"Shield Crash"
 		"DOTA_Tooltip_modifier_pangolier_shield_crash_jump_Description"		"Are you watching?"
-		
+		"DOTA_Tooltip_modifier_pangolier_gyroshell_stunned"					"Rolling Thunder Stun"
+		"DOTA_Tooltip_modifier_pangolier_gyroshell_stunned_Description"		"Stunned by Rolling Thunder"
 
 		
 		"DOTA_Tooltip_ability_special_bonus_undefined"			"Undefined"
@@ -10445,6 +10448,9 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_item_mask_of_madness_berserk"				"Berserk"
 		"DOTA_Tooltip_modifier_item_mask_of_madness_berserk_Description"	"Attack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% and movement speed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% but reduces armor by 5 and silences you."
 		
+		"DOTA_Tooltip_modifier_item_meteor_hammer_burn"						"Meteor Hammer Burn"
+		"DOTA_Tooltip_modifier_item_meteor_hammer_burn_Description"			"Taking damage over time."
+
 		"DOTA_Tooltip_modifier_item_mekansm_aura"				"Mekansm Aura"
 		"DOTA_Tooltip_modifier_item_mekansm_aura_Description"	"Regenerating %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% HP per second."
 		"DOTA_Tooltip_modifier_item_mekansm_spell"				"Mekansm Restore"
@@ -10459,6 +10465,11 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		
 		"DOTA_Tooltip_modifier_necronomicon_archer_aura"				"Archer Aura"
 		"DOTA_Tooltip_modifier_necronomicon_archer_aura_Description"	"Movement speed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%.\nAttack Speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+
+		"DOTA_Tooltip_modifier_item_nullifier_mute" 						"Nullifier Mute"
+		"DOTA_Tooltip_modifier_item_nullifier_mute_Description" 			"Muted.  Anytime the muted target is attacked, it will be slowed."
+		"DOTA_Tooltip_modifier_item_nullifier_slow"							"Nullifier Slow"
+		"DOTA_Tooltip_modifier_item_nullifier_slow_Description"				"Slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
 		
 		"DOTA_Tooltip_modifier_item_orb_of_venom_slow"			"Orb of Venom"
 		"DOTA_Tooltip_modifier_item_orb_of_venom_slow_Description"	"Taking 5 poison damage per second and moving %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% more slowly."
@@ -10487,6 +10498,12 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_modifier_sange_buff"						"Lesser Maim"
 		"DOTA_Tooltip_modifier_sange_buff_Description"			"Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 		
+		"DOTA_Tooltip_modifier_item_spirit_vessel_heal"							"Spirit Vessel Heal"
+		"DOTA_Tooltip_modifier_item_spirit_vessel_heal_Description"				"All heals boosted by %dMODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE%%%, and healing %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% HP plus a percentage of current health."
+		"DOTA_Tooltip_modifier_item_spirit_vessel_damage"							"Spirit Vessel Damage"
+		"DOTA_Tooltip_modifier_item_spirit_vessel_damage_Description"				"All heals reduced by %dMODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE%%%, and losing %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% HP plus a percentage of current health."
+
+
 		"DOTA_Tooltip_modifier_heavens_halberd_buff"						"Lesser Maim"
 		"DOTA_Tooltip_modifier_heavens_halberd_buff_Description"			"Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%"
 		
@@ -12668,6 +12685,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"dota_hud_error_cant_cast_on_illusions"			"Ability Can't Target Illusions"
 		"dota_hud_error_cant_cast_scepter_buff"			"Already Has Aghanim's Buff"
 		"dota_hud_error_cant_cast_on_non_tree_ward"		"Ability Can Only Target Trees and Enemy Wards"
+		"dota_hud_error_cant_cast_on_non_tree"			"Ability Can Only Target Trees"
 		"dota_hud_error_cant_cast_on_illusion"			"Ability Can't Target Illusions"
 		"dota_hud_error_cant_target_shop"				"Can't Target Shop"
 		"dota_hud_error_cant_target_rune"				"Can't Target Rune"
@@ -13008,6 +13026,8 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"DOTA_Tooltip_ability_item_cheese_Note0"								"Cheese is shareable."
 		//"DOTA_Tooltip_ability_item_cheese_health_restore"						"HEALTH RESTORED:"
 		//"DOTA_Tooltip_ability_item_cheese_mana_restore"							"MANA RESTORED:"
+
+		"DOTA_Tooltip_Ability_item_refresher_shard_Description"				"<h1>Use: Reset Cooldowns</h1>Resets the cooldowns of all your items and abilities."
 
 		"DOTA_Tooltip_ability_item_circlet_Lore"								"An elegant circlet designed for human princesses."
 		"DOTA_Tooltip_ability_item_circlet_bonus_all_stats"						"+$all"
@@ -14437,7 +14457,7 @@ Flung to the farthest reaches by the prison's explosion, Zet was transformed by 
 		"GameUI_Disconnect_RemoteProblem_TimeoutConnecting"	"After several attempts to connect, the server did not respond."
 		"GameUI_Disconnect_RemoteProblem_Other"				"Problem communicating with the remote host."
 		"GameUI_Disconnect_RemoteProblem_BadCrypt"			"Remote host presented a bad cert, crypto key, or signature."
-		"GameUI_Disconnect_RemoteProblem_CertNotTrusted"	"Remote host cert was not from a CA in our trusted list."
+		"GameUI_Disconnect_RemoteProblem_BadCert"			"Remote host's cert isn't sufficient for authentication."
 		"GameUI_Disconnect_Unusual"							"Disconnected.  Something unusual happened.  The console might have more details."
 		"GameUI_Disconnect_InternalError"					"Disconnected due to an internal error.  The console might have more details."
 
