@@ -1,9 +1,9 @@
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
         
-                IResponseSystem
+                15IResponseSystem
     H
-  %20s = '%short'
-  %20s = '%short' (weight %float)
+  %20s = '%s'
+  %20s = '%s' (weight %f)
   criterion '%25s':'%15s' 
  [A\A^A_]
  [A^]
@@ -23,15 +23,15 @@
 #fff.
 #include
 $ffff.
-%int %int %int %int
-%short allocation count overflow
-%short allocation count overflow( %llu > %llu )
-%short allocation count overflow( %llu >= %llu )
-%short%20s : %40s %5.3f
-%short(token %int) : %short
-%short,%short
-%short/%short:  discarded rule because of invalid criterion %int:  %short
-%short: %short
+%i %i %i %i
+%s allocation count overflow
+%s allocation count overflow( %llu > %llu )
+%s allocation count overflow( %llu >= %llu )
+%s%20s : %40s %5.3f
+%s(token %i) : %s
+%s,%s
+%s/%s:  discarded rule because of invalid criterion %i:  %s
+%s: %s
 '%20s' vs. '%20s' = 
 'fff.
 'fffff.
@@ -45,7 +45,7 @@ $ffff.
 (s_pThisModuleBindingPointer != NULL)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 )ffff.
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 +fffff.
 , score %4.2f
 ,ffff.
@@ -89,7 +89,43 @@ $ffff.
 /usr/lib/libiconv.2.dylib
 0P@00P
 0[A\A^A_]
+10IAppSystem
+11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+12CEmptyConVar
+14CBaseAppSystemI10IAppSystemE
+14CBaseAppSystemI15ISceneFileCacheE
+14CBaseAppSystemI23IResponseRulesFileCacheE
+14ConCommandBase
+14ISchemaBinding
+15CResponseSystem
+15CSceneFileCache
+15CTier0AppSystemI23IResponseRulesFileCacheE
+15CTier1AppSystemI23IResponseRulesFileCacheLi0EE
+15ISceneFileCache
+16CDefaultAccessor
+18CSchemaEnumBindingIN12CRR_Response14ResponseEnum_tEE
+19CGameResponseSystem
+19CSchemaClassBindingI12CRR_ResponseE
+19CSchemaClassBindingI14ResponseParamsE
+19CSchemaClassBindingI16ResponseFollowupE
+19CSchemaRegistration
+20CRefCountServiceBaseILb1E6CRefMTE
+22CSchemaEnumBindingBase
+22IAddonListChangeNotify
+23CResponseRulesFileCache
+23CSchemaClassBindingBase
+23IConCommandBaseAccessor
+23IResponseEngineEmulator
+23IResponseRulesFileCache
+31CResponseRulesToEngineInterface
+34CSchemaRegistration_scenefilecache
+35CSchemaNonConstructibleClassBindingI20CResponseCriteriaSetE
+39CSchemaNonConstructibleClassBindingBase
+4vHct
+6ConVar
 6[A\A^A_]
+7IConVar
+8CFmtStrNILi1024ELb0EE
 8VSIFu
 8[A\A]A^A_]
 8[A^A_]
@@ -115,6 +151,7 @@ $ffff.
 @_KeyValuesSystem
 @_LOG_GENERAL
 @_LoggingSystem_IsChannelEnabled
+@_Msg
 @_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FloatTime
@@ -153,7 +190,6 @@ $ffff.
 @___gxx_personality_v0
 @___stack_chk_fail
 @___stack_chk_guard
-@__float128 short::*
 @_g_Tier1_CRC32Table
 @_g_pMemAlloc
 @_memchr
@@ -176,14 +212,14 @@ $ffff.
 @vtable for __cxxabiv1::__class_type_info
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
-A rule dictionary has %double elements; this exceeds the %double that can be packed into an index.
+A rule dictionary has %d elements; this exceeds the %d that can be packed into an index.
 A9^$|
 A;\$@|
-A;]long long|
+A;]x|
 A;}Pu
 AI Concept has invalid string symbol.
-AI_ResponseSystem:  Unxpected TokenWaiting() with NULL buffer in %short
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+AI_ResponseSystem:  Unxpected TokenWaiting() with NULL buffer in %s
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARBRB`
 ARB]ARBRAp0p0p
 AWAVATS
@@ -208,7 +244,7 @@ A[ATAp
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
 AlignValue( m_pFirstBlock->m_nBytesFree, 16 ) == m_pFirstBlock->m_nBytesFree
 AlignValue( nBlockSize, 16 ) == nBlockSize
-An RR_Concept couldn'unsigned short find its string in the symbol table!
+An RR_Concept couldn't find its string in the symbol table!
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -222,47 +258,22 @@ BenchmarkService001
 BinaryProperties_GetValue
 C L;u
 C [A^]
-CBaseAppSystem<IAppSystem>
-CBaseAppSystem<IResponseRulesFileCache>
-CBaseAppSystem<ISceneFileCache>
-CDefaultAccessor
-CEmptyConVar
-CFmtStrN<1024, false>
 CFmtStrN<1024, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
-CGameResponseSystem
 CGameResponseSystem::CGameResponseSystem(const char *, IResponseRulesFileCache *, bool)
 COLORCORRECTION_VERSION_1
 CRR_Response
 CRR_Response::MAX_RESPONSE_NAME
 CRR_Response::MAX_RULE_NAME
 CRR_Response::ResponseEnum_t
-CRefCountServiceBase<true, CRefMT>
-CRefCounted<CRefCountServiceBase<true, CRefMT> >
 CResponseCriteriaSet
-CResponseFileParser::LoadFromBuffer:  Unknown entry type '%short', expecting 'response', 'criterion', 'enumeration' or 'rules' in file %short(offset:%int)
-CResponseRulesFileCache
-CResponseRulesToEngineInterface
-CResponseSystem
-CResponseSystem:  %short (%int rules, %int criteria, and %int responses)
-CResponseSystem:  failed to load %short
-CResponseSystem::LoadFromFile took %float msec
-CSceneFileCache
-CSceneFileCache: Bad scene image file %short
-CSchemaClassBinding<CRR_Response>
-CSchemaClassBinding<ResponseFollowup>
-CSchemaClassBinding<ResponseParams>
-CSchemaClassBindingBase
-CSchemaEnumBinding<CRR_Response::ResponseEnum_t>
-CSchemaEnumBindingBase
-CSchemaNonConstructibleClassBinding<CResponseCriteriaSet>
-CSchemaNonConstructibleClassBindingBase
-CSchemaRegistration
-CSchemaRegistration_scenefilecache
-CSoundEmitterSystem:  Unknown sound level %short
+CResponseFileParser::LoadFromBuffer:  Unknown entry type '%s', expecting 'response', 'criterion', 'enumeration' or 'rules' in file %s(offset:%i)
+CResponseSystem:  %s (%i rules, %i criteria, and %i responses)
+CResponseSystem:  failed to load %s
+CResponseSystem::LoadFromFile took %f msec
+CSceneFileCache: Bad scene image file %s
+CSoundEmitterSystem:  Unknown sound level %s
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IResponseRulesFileCache>
-CTier1AppSystem<IResponseRulesFileCache, 0>
 CUniformRandomStream::CUniformRandomStream()
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
@@ -276,10 +287,8 @@ Cannot construct abstract class
 Cannot copy abstract class
 Cannot deallocate abstract class
 Cannot destruct abstract class
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
 Concept
 ConfigurationSystem_001
 Construction is only allowed from the resolve function
@@ -290,7 +299,7 @@ DO NOT new or delete CRR_Response s.
 DebugTextureInfo001
 DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
-Discarded rule %short
+Discarded rule %s
 DotaCardGameClient_001
 E(fff.
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -299,16 +308,16 @@ EngineServiceMgr001
 EnvironmentMapBuilder_001
 EventSystem001
 Exfffff.
-Expecting '{' in enumeration '%short', got '%short'
-Expecting '{' in rule '%short', got '%short'
-Expecting more tokens in enumeration '%short'
-Expecting more tokens in rule '%short'
+Expecting '{' in enumeration '%s', got '%s'
+Expecting '{' in rule '%s', got '%s'
+Expecting more tokens in enumeration '%s'
+Expecting more tokens in rule '%s'
 FIRE token in response needs exactly three parameters.
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
-Found %int matching rules, selecting slot %int
+Found %i matching rules, selecting slot %i
 From Class Binding
 From Enum Binding
 G8H	p(]
@@ -316,7 +325,7 @@ GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 H	p(]
-H!wchar_t(]
+H!w(]
 HSCRIPT CScriptAutoRef::Set(HSCRIPT)
 H[A\A]A^A_]
 H__ZdaPv
@@ -343,16 +352,8 @@ I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable:
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<const char *, unsigned short, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short> >::NewNode(const T *) [T = const char *, I = unsigned short, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, unsigned short>, unsigned short>]
 I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::NewNode(const T *) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
-IAddonListChangeNotify
-IAppSystem
-IConCommandBaseAccessor
-IConVar
 IQuickTime001
-IResponseEngineEmulator
 IResponseEngineEmulator::s_pSingleton
-IResponseRulesFileCache
-ISceneFileCache
-ISchemaBinding
 IcG I9
 IcG(I9
 IcGPI9
@@ -365,15 +366,14 @@ InputSystemVersion001
 Intentionally vague touch behavior for %p
 IsPowerOfTwo( m_nAlignment )
 IsValid()
+IsValid(i)
 IsValid(idx)
-IsValid(int)
-IsValidIndex(int) && (int != InvalidIndex())
+IsValidIndex(i) && (i != InvalidIndex())
 KeyValueCache001
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues::FindKey called on NULL pointer!
-L volatile;long double
 L4pH%
-LET COUPLAND KNOW: RR matcher unexpected disagreement: Criteria '%short', Value: '%short', Matcher: '%short' [dota:%double, l4d:%double, new:%double]
+LET COUPLAND KNOW: RR matcher unexpected disagreement: Criteria '%s', Value: '%s', Matcher: '%s' [dota:%d, l4d:%d, new:%d]
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 MATCHFRAMEWORK_001
@@ -381,13 +381,15 @@ MClassHasDataDesc
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
-Matched rule '%short', 
+Matched rule '%s', 
 MaterialUtils_001
 Mc.E9
+Mcg E
+Mcg I
 MeshSystem001
 MeshUtils001
 ModelDocUtils001
-Multiple definitions for criteria '%short' [%double]
+Multiple definitions for criteria '%s' [%d]
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -395,12 +397,12 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-No such enumeration '%short'
-No such response '%short' for rule '%short'
+No such enumeration '%s'
+No such response '%s' for rule '%s'
 O fffff.
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 P P@@
 PanoramaTextServices001
 PanoramaUIClient001
@@ -423,8 +425,8 @@ RESPONSE_SCENE
 RESPONSE_SCRIPT
 RESPONSE_SENTENCE
 RESPONSE_SPEAK
-Reading: %short
-RegisterConfigValue: Unknown error constructing config value "%short"!
+Reading: %s
+RegisterConfigValue: Unknown error constructing config value "%s"!
 Release
 RenderDevice003
 RenderDeviceMgr001
@@ -437,7 +439,7 @@ ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
 Response rules fail: no IResponseEngineEmulator
-Response too big to fit in m_szResponseName: %short
+Response too big to fit in m_szResponseName: %s
 ResponseFollowup
 ResponseParams
 ResponseRulePartition::tIndex ResponseRulePartition::IndexFromDictElem(tRuleDict *, int)
@@ -484,11 +486,11 @@ SceneUtils_001
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
-Scoring rule '%short' (%int)
+Scoring rule '%s' (%i)
 Search criteria:
 ServerUploadGameStats001
 ServerUsesSceneImageFile
-SoundLevel string appears to be signed char Volume level %float
+SoundLevel string appears to be a Volume level %f
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -505,7 +507,7 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2ServerSerializers002
-Speaker contexts: '%short', 
+Speaker contexts: '%s', 
 StatsService_001
 SteamAudio001
 T *CUtlLeanVectorImpl<CUtlLeanVectorBase<ParserResponse, short>, ParserResponse, short>::AddToTailGetPtr() [B = CUtlLeanVectorBase<ParserResponse, short>, T = ParserResponse, I = short]
@@ -513,7 +515,7 @@ T *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned short, 6, short>,
 TBYAp
 TCUAp
 TCWAp
-THEN token in response had signed char target '%short', but lacked any further info.
+THEN token in response had a target '%s', but lacked any further info.
 THEN token in response lacked any further info.
 THEN token in response lacked contexts.
 TNRAp
@@ -529,8 +531,9 @@ ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
 UATAp
-Unable to load #included script %short
+Unable to load #included script %s
 UserInfoChangeService_001
+V1L;e
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -566,21 +569,21 @@ VStringTokenSystem001
 V_stristr_fast(char const*, char const*)
 V_strlen(responseName) < sizeof( m_szResponseName )
 VisBuilder_001
-WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
-WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
-Warning:  %short = '%short' is infinite, clamping value.
+WARNING: Trying to access schema binding '%s' before bindings were registered in this module!
+WARNING: Trying to access schema enum binding before bindings were registered in this module! - %s()
+Warning:  %s = '%s' is infinite, clamping value.
 WorkshopSetup001
-World contexts: '%short', 
+World contexts: '%s', 
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 XATARBRBRBRBRAp
 X[A\A]A^A_]
-[%short%03i]
-[%short::%short]
+[%s%03i]
+[%s::%s]
 [A\A]A^A_]
 [A\A^A_]
 [A^A_]
-[unsigned short,fD
+[t,fD
 \$0E1
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
@@ -639,8 +642,6 @@ __common
 __const
 __cstring
 __data
-__float128 char::* E
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __la_symbol_ptr
@@ -664,7 +665,7 @@ _strcpy
 _strlen
 _strnlen
 `[A\A^A_]
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 applycontext
 applycontexttoworld
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
@@ -676,8 +677,8 @@ bool CResponseFileParser::TokenWaiting()
 bool CResponseSystem::Compare(const char *, Criteria *, bool)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
 bufsize > 0
+c(ffff.
 calledforhelp
-char(ffff.
 classname
 concept
 const Criteria *Rule::RecursiveGetPointerForRuleCriterionByName(CResponseSystem *, const Criteria *, const CUtlSymbol &)
@@ -712,14 +713,12 @@ followup_entityiotarget
 followup_target
 g_pCVar
 hotdog
-int == check
+i == check
 int CKeyValues_Data::Internal_GetInt()
 int CResponseFileParser::ParseOneCriterion(const char *)
 int CResponseSystem::SelectWeightedResponseFromResponseGroup(ResponseGroup *, IResponseFilter *)
 lfff.
 libscenefilecache.dylib
-long long&HcH
-long long[A\A]A^A_]
 m_ElementCount == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
@@ -753,7 +752,7 @@ m_szMatchingRule
 m_szResponseName
 m_szSpeakerContext
 m_szWorldContext
-matched, weight %4.2f (short %4.2f long long char %4.2f)
+matched, weight %4.2f (s %4.2f x c %4.2f)
 matchonce
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nBlockSize <= 128 * 1024
@@ -775,7 +774,7 @@ pCrit
 pDict
 pDict >= m_RuleParts && pDict < m_RuleParts + N_RESPONSE_PARTITIONS
 pFilename
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pNewCriterion->subcriteria.Count() == 0
 pPool->m_SpaceUsed < 0xFFFF
@@ -789,24 +788,24 @@ radr://5614542
 required
 respeakdelay
 response
-response %short = '%short'
-response entry '%short' with unknown command '%short'
-response entry '%short' with unknown response type '%short'
+response %s = '%s'
+response entry '%s' with unknown command '%s'
+response entry '%s' with unknown response type '%s'
 retval
 rr_debugclassname
 rr_debugresponseconcept
 rr_debugresponses
 rr_debugrule
 rr_dumpresponses
+s ffffff.
 s_nConnectionCount > 0
 s_nDLLIdentifier < 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 scenefilecache
 scenes/scenes.image
-scripts/%short
+scripts/%s
 sequential
 setValue
-short ffffff.
 size < 1024 * 1024
 size >= 0
 slot != m_Systems.InvalidIndex()
@@ -825,23 +824,22 @@ static void ResponseParams::Schema_VerifyBindingIsRegistered()
 std::terminate()
 stop_on_nonidle
 strnlen
+t%ffff.
+t&H9[8tUH
+t&fffff.
+t/ffffff.
 t2ff.
 t3ff.
 t4ffff.
 t6ffffff.
 t7fff.
+t;ff.
 targetclassname
 typeinfo for std::bad_alloc
 umfffff.
 unsigned int CLZMA::Uncompress(const unsigned char *, unsigned char *, LZMAReadProgressCallbackFunc_t)
-unsigned short%ffff.
-unsigned short&H9[8tUH
-unsigned short&fffff.
-unsigned short/ffffff.
-unsigned short;ff.
 upzn1
 uufffff.
-vHct
 virtual CGameResponseSystem *CResponseRulesFileCache::LoadResponseSystem(const char *, bool)
 virtual bool CSceneFileCache::GetSceneData(const char *, byte *, int)
 virtual short CSceneFileCache::GetSceneCachedSound(int, int)
@@ -912,6 +910,8 @@ weapondelay
 weight
 world_auto_NoSpotting
 worldhowitzerwasfired
+x&HcH
+x[A\A]A^A_]
 {}()':
 |fff.
 }@HcQ

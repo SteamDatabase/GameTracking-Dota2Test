@@ -1,0 +1,682 @@
+  %0.3f 
+  (SKIP)
+  (ZERO)
+ fff.
+&fff.
+(L$pf
+([A\A]A^A_]
+)D$ Hc
+)D$0Hc
+)D$`Hc
+)L$pf
+)TW0H
+)ffffff.
++fffff.
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -W -Wall -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -mmacosx-version-min=10.5 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -mmacosx-version-min=10.5' --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --arch=x86_64 --enable-parser=h264 --enable-decoder='aac,h264,vp8,vp9,gif,vorbis,mp3,flac,alac,pcm*' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav' --enable-hwaccels --enable-vda --disable-decoder=mpeg1video --disable-decoder=mpeg2video --disable-decoder=vc1 --disable-decoder=h263 --enable-libvpx
+./libavutil/common.h
+./libavutil/lfg.h
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+/System/Library/Frameworks/VideoDecodeAcceleration.framework/Versions/A/VideoDecodeAcceleration
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/audio_convert.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/audio_data.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/audio_mix.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/audio_mix_matrix.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/dither.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/options.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/resample.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/utils.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/x86/
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/x86/audio_convert_init.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/x86/audio_mix_init.o
+/Users/buildbot/buildslave/libav_osx/build/dev/libavresample/x86/dither_init.o
+/usr/lib/libSystem.B.dylib
+/usr/lib/libbz2.1.0.dylib
+/usr/lib/libgcc_s.1.dylib
+/usr/lib/libz.1.dylib
+16-bit 8.8 Fixed-Point
+16-bit signed integer
+16-bit signed integer planar
+32-bit 17.15 Fixed-Point
+32-bit float
+32-bit float planar
+32-bit signed integer
+32-bit signed integer planar
+64-bit double
+64-bit double planar
+8-bit unsigned integer
+8-bit unsigned integer planar
+8ffffff.
+9ffffff.
+;\$4L
+@loader_path/libavresample.2.dylib
+@loader_path/libavutil.54.dylib
+A;G,~"H
+A;GpI
+A;Gtt
+A;] |
+A;o@|
+AVAudioResampleContext
+AVSHc
+AVSPI
+AWAVATSH
+AWAVAUATSI
+AWAVS
+AWAVSH
+AWAVSI
+Aaudio_convert: found function: %-4s to %-4s (%s)
+AudioData
+Blackman Nuttall Windowed Sinc
+C A;Ft
+Center Mix Level
+Cubic
+Cutoff Frequency Ratio
+D#G8E
+D$ E1
+D$ Hc
+D$(E1
+D$(Ic
+D$0E1
+D$8A9
+D$8E1
+D$@E1
+D$@Hc
+D$`Hc
+D9S\t	E
+D9t$$
+Dither Method
+Dolby
+Dolby Pro Logic II
+E#G81
+E;O(~7D
+E;u |
+Error reallocating resampling buffer
+F[A\A]A^A_]
+Filter Type
+Floating-Point
+Force Resampling
+G McW,
+H9D$(I
+H9D$x
+H;L$ v
+Hcs$HcS
+IcNXH
+IcO A
+Icv$IcV
+IcvXH
+Input Channel Layout
+Input Sample Format
+Input Sample Rate
+Internal Sample Format
+Invalid channel counts
+Invalid channel layouts
+Invalid channel map
+Invalid input channel layout
+Invalid input channel layout: %llu
+Invalid mix coeff type
+Invalid output channel layout: %llu
+Kaiser Window Beta
+Kaiser Windowed Sinc
+L$ E1
+L$ Hc
+L$(D)
+L$(E1
+L$0H9
+L$@Lc{$Lck
+L$HE1
+L;d$ u
+LFE Mix Level
+Matrixed Stereo Encoding
+McgpH
+Mixing Coefficient Type
+N[A\A]A^A_]
+No Dithering
+Normalize Mix Level
+Output Channel Layout
+Output Sample Format
+Output Sample Rate
+QhT$  
+QhT$0 
+QhT$@ 
+QhT$` 
+Qh\$ 0
+Qh\$00
+Qh\$@0
+Qh\$P0
+Rectangular Dither
+Resampling Filter Size
+Resampling Phase Shift
+Rfff.
+S(;S 
+SSE2SLOW
+SSSE3
+Surround Mix Level
+T$(E1
+T$(Hcl$0
+T$8H)
+The resampling context is already open.
+Triangular Dither
+Triangular Dither With High Pass
+Triangular Dither With Noise Shaping
+UAVSA
+UAVSH
+UAWAVATSA
+UAWAVATSH
+UAWAVAUATSH
+UAWAVAUATSI
+UAWAVAUATSPA
+UAWAVAUATSPE
+UAWAVAUATSPI
+UAWAVS
+UAWAVSI
+UAWAVSPA
+UAWAVSPH
+UAWAVSPI
+Unsupported internal format for mixing: %s
+Unsupported internal format for resampling: %s
+Use Linear Interpolation
+Using %s as internal sample format
+V ffff.
+X[A\A]A^A_]
+YhT$  
+YhT$0 
+YhT$@ 
+YhT$P 
+Yh\$ 0
+Yh\$00
+Yh\$@0
+Yh\$`0
+[%d to %d] 
+[%d to any] 
+[A\A]A^A_
+[A\A]A^A_]
+[A\A^A_
+[A\A^A_]
+[A^A_
+[A^A_]
+[any to %d] 
+[any to any] 
+\$HIc
+__DATA
+__LINKEDIT
+__TEXT
+___snprintf_chk
+___stack_chk_fail
+___stack_chk_guard
+__const
+__cstring
+__dyld
+__dyld_func_lookup
+__eh_frame
+__got
+__la_symbol_ptr
+__stub_helper
+__stubs
+__text
+__unwind_info
+_audio_data_class
+_av_audio_fifo_alloc
+_av_audio_fifo_drain
+_av_audio_fifo_free
+_av_audio_fifo_read
+_av_audio_fifo_size
+_av_audio_fifo_write
+_av_default_item_name
+_av_frame_get_buffer
+_av_free
+_av_freep
+_av_get_bytes_per_sample
+_av_get_channel_layout_nb_channels
+_av_get_channel_layout_string
+_av_get_cpu_flags
+_av_get_packed_sample_fmt
+_av_get_planar_sample_fmt
+_av_get_sample_fmt_name
+_av_lfg_init
+_av_log
+_av_malloc_tracked
+_av_mallocz_tracked
+_av_opt_free
+_av_opt_set_defaults
+_av_reduce
+_av_resample_context_class
+_av_rescale_rnd
+_av_sample_fmt_is_planar
+_av_samples_alloc
+_av_samples_fill_arrays
+_av_samples_get_buffer_size
+_av_samples_set_silence
+_avresample_alloc_context
+_avresample_available
+_avresample_build_matrix
+_avresample_close
+_avresample_config
+_avresample_configuration
+_avresample_convert
+_avresample_convert_frame
+_avresample_free
+_avresample_get_class
+_avresample_get_delay
+_avresample_get_matrix
+_avresample_get_out_samples
+_avresample_is_open
+_avresample_license
+_avresample_open
+_avresample_options
+_avresample_read
+_avresample_set_channel_mapping
+_avresample_set_compensation
+_avresample_set_matrix
+_avresample_version
+_ceil
+_coeff_type_names
+_conv_AV_SAMPLE_FMT_DBLP_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_DBLP_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_DBLP_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_DBLP_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_DBLP_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_DBLP
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_FLTP
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_S16P
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_S32P
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_DBL_to_AV_SAMPLE_FMT_U8P
+_conv_AV_SAMPLE_FMT_FLTP_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_FLTP_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_FLTP_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_FLTP_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_FLTP_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_DBLP
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_FLTP
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_S16P
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_S32P
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_FLT_to_AV_SAMPLE_FMT_U8P
+_conv_AV_SAMPLE_FMT_S16P_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_S16P_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_S16P_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_S16P_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_S16P_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_DBLP
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_FLTP
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_S16P
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_S32P
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_S16_to_AV_SAMPLE_FMT_U8P
+_conv_AV_SAMPLE_FMT_S32P_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_S32P_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_S32P_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_S32P_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_S32P_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_DBLP
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_FLTP
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_S16P
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_S32P
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_S32_to_AV_SAMPLE_FMT_U8P
+_conv_AV_SAMPLE_FMT_U8P_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_U8P_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_U8P_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_U8P_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_U8P_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_DBL
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_DBLP
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_FLT
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_FLTP
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_S16
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_S16P
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_S32
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_S32P
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_U8
+_conv_AV_SAMPLE_FMT_U8_to_AV_SAMPLE_FMT_U8P
+_dither_int_to_float_rectangular_c
+_dither_int_to_float_triangular_c
+_ff_audio_convert
+_ff_audio_convert_alloc
+_ff_audio_convert_free
+_ff_audio_convert_init_x86
+_ff_audio_convert_set_func
+_ff_audio_data_add_to_fifo
+_ff_audio_data_alloc
+_ff_audio_data_combine
+_ff_audio_data_copy
+_ff_audio_data_drain
+_ff_audio_data_free
+_ff_audio_data_init
+_ff_audio_data_read_from_fifo
+_ff_audio_data_realloc
+_ff_audio_data_set_channels
+_ff_audio_mix
+_ff_audio_mix_alloc
+_ff_audio_mix_free
+_ff_audio_mix_get_matrix
+_ff_audio_mix_init_x86
+_ff_audio_mix_set_func
+_ff_audio_mix_set_matrix
+_ff_audio_resample
+_ff_audio_resample_free
+_ff_audio_resample_init
+_ff_conv_flt_to_fltp_2ch_avx
+_ff_conv_flt_to_fltp_2ch_sse
+_ff_conv_flt_to_fltp_6ch_avx
+_ff_conv_flt_to_fltp_6ch_sse2
+_ff_conv_flt_to_s16_sse2
+_ff_conv_flt_to_s16p_2ch_avx
+_ff_conv_flt_to_s16p_2ch_sse2
+_ff_conv_flt_to_s16p_6ch_avx
+_ff_conv_flt_to_s16p_6ch_sse2
+_ff_conv_flt_to_s16p_6ch_ssse3
+_ff_conv_flt_to_s32_avx
+_ff_conv_flt_to_s32_sse2
+_ff_conv_fltp_to_flt_2ch_avx
+_ff_conv_fltp_to_flt_2ch_sse
+_ff_conv_fltp_to_flt_6ch_avx
+_ff_conv_fltp_to_flt_6ch_mmx
+_ff_conv_fltp_to_flt_6ch_sse4
+_ff_conv_fltp_to_s16_2ch_sse2
+_ff_conv_fltp_to_s16_2ch_ssse3
+_ff_conv_fltp_to_s16_6ch_avx
+_ff_conv_fltp_to_s16_6ch_sse
+_ff_conv_fltp_to_s16_6ch_sse2
+_ff_conv_s16_to_flt_sse2
+_ff_conv_s16_to_flt_sse4
+_ff_conv_s16_to_fltp_2ch_avx
+_ff_conv_s16_to_fltp_2ch_sse2
+_ff_conv_s16_to_fltp_6ch_avx
+_ff_conv_s16_to_fltp_6ch_sse2
+_ff_conv_s16_to_fltp_6ch_sse4
+_ff_conv_s16_to_fltp_6ch_ssse3
+_ff_conv_s16_to_s16p_2ch_avx
+_ff_conv_s16_to_s16p_2ch_sse2
+_ff_conv_s16_to_s16p_2ch_ssse3
+_ff_conv_s16_to_s16p_6ch_avx
+_ff_conv_s16_to_s16p_6ch_sse2
+_ff_conv_s16_to_s16p_6ch_ssse3
+_ff_conv_s16_to_s32_sse2
+_ff_conv_s16p_to_flt_2ch_avx
+_ff_conv_s16p_to_flt_2ch_sse2
+_ff_conv_s16p_to_flt_6ch_avx
+_ff_conv_s16p_to_flt_6ch_sse2
+_ff_conv_s16p_to_flt_6ch_ssse3
+_ff_conv_s16p_to_s16_2ch_avx
+_ff_conv_s16p_to_s16_2ch_sse2
+_ff_conv_s16p_to_s16_6ch_avx
+_ff_conv_s16p_to_s16_6ch_sse2
+_ff_conv_s16p_to_s16_6ch_sse2slow
+_ff_conv_s32_to_flt_avx
+_ff_conv_s32_to_flt_sse2
+_ff_conv_s32_to_s16_mmx
+_ff_conv_s32_to_s16_sse2
+_ff_convert_dither
+_ff_dither_alloc
+_ff_dither_free
+_ff_dither_init_x86
+_ff_dither_int_to_float_rectangular_avx
+_ff_dither_int_to_float_rectangular_sse2
+_ff_dither_int_to_float_triangular_avx
+_ff_dither_int_to_float_triangular_sse2
+_ff_mix_1_to_2_fltp_flt_avx
+_ff_mix_1_to_2_fltp_flt_sse
+_ff_mix_1_to_2_s16p_flt_avx
+_ff_mix_1_to_2_s16p_flt_sse2
+_ff_mix_1_to_2_s16p_flt_sse4
+_ff_mix_2_to_1_fltp_flt_avx
+_ff_mix_2_to_1_fltp_flt_sse
+_ff_mix_2_to_1_s16p_flt_sse2
+_ff_mix_2_to_1_s16p_flt_sse4
+_ff_mix_2_to_1_s16p_q8_sse2
+_ff_mix_3_to_1_fltp_flt_avx
+_ff_mix_3_to_1_fltp_flt_fma4
+_ff_mix_3_to_1_fltp_flt_sse
+_ff_mix_3_to_1_s16p_flt_avx
+_ff_mix_3_to_1_s16p_flt_fma4
+_ff_mix_3_to_1_s16p_flt_sse2
+_ff_mix_3_to_1_s16p_flt_sse4
+_ff_mix_3_to_2_fltp_flt_avx
+_ff_mix_3_to_2_fltp_flt_fma4
+_ff_mix_3_to_2_fltp_flt_sse
+_ff_mix_3_to_2_s16p_flt_avx
+_ff_mix_3_to_2_s16p_flt_fma4
+_ff_mix_3_to_2_s16p_flt_sse2
+_ff_mix_3_to_2_s16p_flt_sse4
+_ff_mix_4_to_1_fltp_flt_avx
+_ff_mix_4_to_1_fltp_flt_fma4
+_ff_mix_4_to_1_fltp_flt_sse
+_ff_mix_4_to_1_s16p_flt_avx
+_ff_mix_4_to_1_s16p_flt_fma4
+_ff_mix_4_to_1_s16p_flt_sse2
+_ff_mix_4_to_1_s16p_flt_sse4
+_ff_mix_4_to_2_fltp_flt_avx
+_ff_mix_4_to_2_fltp_flt_fma4
+_ff_mix_4_to_2_fltp_flt_sse
+_ff_mix_4_to_2_s16p_flt_avx
+_ff_mix_4_to_2_s16p_flt_fma4
+_ff_mix_4_to_2_s16p_flt_sse2
+_ff_mix_4_to_2_s16p_flt_sse4
+_ff_mix_5_to_1_fltp_flt_avx
+_ff_mix_5_to_1_fltp_flt_fma4
+_ff_mix_5_to_1_fltp_flt_sse
+_ff_mix_5_to_1_s16p_flt_avx
+_ff_mix_5_to_1_s16p_flt_fma4
+_ff_mix_5_to_1_s16p_flt_sse2
+_ff_mix_5_to_1_s16p_flt_sse4
+_ff_mix_5_to_2_fltp_flt_avx
+_ff_mix_5_to_2_fltp_flt_fma4
+_ff_mix_5_to_2_fltp_flt_sse
+_ff_mix_5_to_2_s16p_flt_avx
+_ff_mix_5_to_2_s16p_flt_fma4
+_ff_mix_5_to_2_s16p_flt_sse2
+_ff_mix_5_to_2_s16p_flt_sse4
+_ff_mix_6_to_1_fltp_flt_avx
+_ff_mix_6_to_1_fltp_flt_fma4
+_ff_mix_6_to_1_fltp_flt_sse
+_ff_mix_6_to_1_s16p_flt_avx
+_ff_mix_6_to_1_s16p_flt_fma4
+_ff_mix_6_to_1_s16p_flt_sse2
+_ff_mix_6_to_1_s16p_flt_sse4
+_ff_mix_6_to_2_fltp_flt_avx
+_ff_mix_6_to_2_fltp_flt_fma4
+_ff_mix_6_to_2_fltp_flt_sse
+_ff_mix_6_to_2_s16p_flt_avx
+_ff_mix_6_to_2_s16p_flt_fma4
+_ff_mix_6_to_2_s16p_flt_sse2
+_ff_mix_6_to_2_s16p_flt_sse4
+_ff_mix_7_to_1_fltp_flt_avx
+_ff_mix_7_to_1_fltp_flt_fma4
+_ff_mix_7_to_1_fltp_flt_sse
+_ff_mix_7_to_1_s16p_flt_avx
+_ff_mix_7_to_1_s16p_flt_fma4
+_ff_mix_7_to_1_s16p_flt_sse2
+_ff_mix_7_to_1_s16p_flt_sse4
+_ff_mix_7_to_2_fltp_flt_avx
+_ff_mix_7_to_2_fltp_flt_fma4
+_ff_mix_7_to_2_fltp_flt_sse
+_ff_mix_7_to_2_s16p_flt_avx
+_ff_mix_7_to_2_s16p_flt_fma4
+_ff_mix_7_to_2_s16p_flt_sse2
+_ff_mix_7_to_2_s16p_flt_sse4
+_ff_mix_8_to_1_fltp_flt_avx
+_ff_mix_8_to_1_fltp_flt_fma4
+_ff_mix_8_to_1_fltp_flt_sse
+_ff_mix_8_to_1_s16p_flt_avx
+_ff_mix_8_to_1_s16p_flt_fma4
+_ff_mix_8_to_1_s16p_flt_sse2
+_ff_mix_8_to_1_s16p_flt_sse4
+_ff_mix_8_to_2_fltp_flt_avx
+_ff_mix_8_to_2_fltp_flt_fma4
+_ff_mix_8_to_2_fltp_flt_sse
+_ff_mix_8_to_2_s16p_flt_avx
+_ff_mix_8_to_2_s16p_flt_fma4
+_ff_mix_8_to_2_s16p_flt_sse2
+_ff_mix_8_to_2_s16p_flt_sse4
+_ff_quantize_sse2
+_ff_sample_fmt_is_planar
+_generate_dither_noise
+_llrint
+_llrintf
+_lrint
+_lrintf
+_memcpy
+_memmove
+_memset
+_mix_1_to_2_fltp_flt_c
+_mix_2_to_1_fltp_flt_c
+_mix_2_to_1_s16p_flt_c
+_mix_2_to_1_s16p_q8_c
+_mix_2_to_6_fltp_flt_c
+_mix_6_to_2_fltp_flt_c
+_mix_any_FLTP_FLT_c
+_mix_any_S16P_FLT_c
+_mix_any_S16P_Q15_c
+_mix_any_S16P_Q8_c
+_ns_44_coef_a
+_ns_44_coef_b
+_ns_48_coef_a
+_ns_48_coef_b
+_quantize_c
+_resample_linear_dbl
+_resample_linear_flt
+_resample_linear_s16
+_resample_linear_s32
+_resample_nearest_dbl
+_resample_nearest_flt
+_resample_nearest_s16
+_resample_nearest_s32
+_resample_one_dbl
+_resample_one_flt
+_resample_one_s16
+_resample_one_s32
+_sane_layout
+_set_filter_dbl
+_set_filter_flt
+_set_filter_s16
+_set_filter_s32
+audio_convert.c
+audio_convert_init.c
+audio_data.c
+audio_mix.c
+audio_mix: %s to %s
+audio_mix: NO FUNCTION FOUND: [fmt=%s] [c=%s] [%d to %d]
+audio_mix: found function: [fmt=%s] [c=%s] %s(%s)
+audio_mix_init.c
+audio_mix_matrix.c
+blackman_nuttall
+cannot remap packed format during conversion
+cannot remap packed format during copy
+center_mix_level
+cubic
+cutoff
+d$ D9{
+d$(M9
+d$HHc
+dither flt buffer
+dither s16 buffer
+dither.c
+dither_init.c
+dither_method
+dithering %s to %s is not supported
+dolby
+dplii
+dst is read-only
+dyld_stub_binding_helper
+error during resampling
+error reallocating dst
+error reallocating output
+error setting mix matrix
+ffff.
+fffff.
+ffffff.
+filter_size
+filter_type
+force_resampling
+in_buffer
+in_channel_layout
+in_sample_fmt
+in_sample_rate
+input
+internal_sample_fmt
+invalid NULL pointer for src[%d]
+invalid channel count: %d
+invalid sample format
+kaiser
+kaiser_beta
+l$,ffffff.
+l$@tp
+lfe_mix_level
+libavresample license: LGPL version 2.1 or later
+libavresample/audio_convert.c
+libavresample/audio_data.c
+libavresample/audio_mix.c
+libavresample/audio_mix_matrix.c
+libavresample/dither.c
+libavresample/options.c
+libavresample/resample.c
+libavresample/resample_template.c
+libavresample/utils.c
+libavresample/x86/audio_convert_init.c
+libavresample/x86/audio_mix_init.c
+libavresample/x86/dither_init.c
+linear_interp
+matrix is not set
+matrix size: %d x %d
+matrix_encoding
+mhL$ 
+mhL$@
+mhL$`
+mix_coeff_type
+normalize_mix_level
+oTV f
+o\V0f
+offset out-of-bounds: src=%d dst=%d
+options.c
+out_buffer
+out_channel_layout
+out_sample_fmt
+out_sample_rate
+output
+phase_shift
+r0ffff.
+r0fffff.
+r3ff.
+r7ff.
+rBffffff.
+rIff.
+rIffffff.
+rJff.
+rMffffff.
+r]ffffff.
+rectangular
+resample buffer
+resample.c
+resample: %s from %d Hz to %d Hz
+resample_cutoff
+resample_out_buffer
+sample format mismatch
+sample rate must be 48000 or 44100 Hz for triangular_ns dither. using triangular_hp instead.
+surround_mix_level
+t$ tc
+t$$A9t$\}=
+t$(Ic
+triangular
+triangular_hp
+triangular_ns
+utils.c
+{no name}
+~`ff.

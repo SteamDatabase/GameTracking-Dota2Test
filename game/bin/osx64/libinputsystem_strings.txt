@@ -1,6 +1,6 @@
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
         
-                CDefaultKeyValuesErrorSpew
+                26CDefaultKeyValuesErrorSpew
  ReadToken overflow
  [A\A^A_]
  fff.
@@ -20,19 +20,19 @@
 #ffffff.
 #include
 #include is NULL 
-%int %int %int %int
-%short: string format requested %double chars
+%i %i %i %i
+%s: string format requested %d chars
 'is NOT active'
 'is active'
-(*%short*), 
+(*%s*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
 (m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
 (uEHcK
-*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConCommand "%s" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 -cursor_scale_percent
 -disable_cursor_clip
 -forcetouch
@@ -79,14 +79,38 @@
 /w.Hc
 0000`PP
 0[A\A^A_]
+10ConCommand
+10IAppSystem
+12CEmptyConVar
+12CInputSystem
+12IInputSystem
+14CBaseAppSystemI12IInputSystemE
+14CBaseAppSystemI17IInputStackSystemE
+14ConCommandBase
+15CTier0AppSystemI12IInputSystemE
+15CTier0AppSystemI17IInputStackSystemE
+15CTier1AppSystemI12IInputSystemLi0EE
+15CTier1AppSystemI17IInputStackSystemLi0EE
+15CTier2AppSystemI12IInputSystemLi0EE
+15CTier2AppSystemI17IInputStackSystemLi0EE
+16CDefaultAccessor
+17CInputStackSystem
+17IInputStackSystem
+19IKeyValuesErrorSpew
+20CPostConnectCallback
+22CSchemaInstallCallback
+23IConCommandBaseAccessor
 29K }
 49K }
 49S |}
+6ConVar
 6x?E1
+7IConVar
+8CFmtStrNILi256ELb0EE
 8[A\A]A^A_]
 8[A^A_]
-9S |signed char
-9S |unsigned int
+9S |a
+9S |j
 <(9{ |jI
 <NULL>
 <null>
@@ -106,6 +130,7 @@
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Msg
 @_Plat_CheckSDL
 @_Plat_DebugPrint
 @_Plat_ExitProcess
@@ -173,7 +198,6 @@
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
-@__float128 short::*
 @_g_VProfCurrentProfile
 @_g_pMemAlloc
 @_memchr
@@ -204,7 +228,7 @@ A9V }
 A9V }	A
 A;D$ ~
 A;\$@|
-A;]long long|
+A;]x|
 A;^@|
 A;_Hu
 A;}Pu
@@ -220,7 +244,7 @@ AC_STOP
 AGAIN
 ALTERASE
 AMPERSAND
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARB`YATAp
 ASTERISK
 AUDIOMUTE
@@ -253,11 +277,11 @@ A_WITH_DIAERESIS
 A_WITH_GRAVE
 A_WITH_RING_ABOVE
 A_WITH_TILDE
-Analog axis range before signed char button press is registered.
+Analog axis range before a button press is registered.
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
-App activation changed: %short
+App activation changed: %s
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
@@ -268,9 +292,9 @@ BRIGHTNESSDOWN
 BRIGHTNESSUP
 BROKEN_BAR
 B_BUTTON
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
 BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
@@ -281,43 +305,28 @@ CANCEL
 CAPSLOCK
 CAPSLOCKTOGGLE
 CARET
-CBaseAppSystem<IInputStackSystem>
-CBaseAppSystem<IInputSystem>
-CDefaultAccessor
 CEDILLA
 CENT_SIGN
-CEmptyConVar
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CInputStackSystem
-CInputStackSystem:  %short IME %short
-CInputStackSystem:  %short capture set to 0x%p
-CInputStackSystem:  %short cursor %short
-CInputStackSystem:  %short cursor clip set to 0x%p
-CInputStackSystem:  %short is %short for state %long long
-CInputStackSystem:  %short relative mouse mode %short
+CInputStackSystem:  %s IME %s
+CInputStackSystem:  %s capture set to 0x%p
+CInputStackSystem:  %s cursor %s
+CInputStackSystem:  %s cursor clip set to 0x%p
+CInputStackSystem:  %s is %s for state %x
+CInputStackSystem:  %s relative mouse mode %s
 CInputStackSystem:  empty
 CInputStackSystem:  nothing enabled
-CInputSystem
 CInputSystem::AttachToWindow: Tried to attach to the same window twice!
 CInputSystem::SleepUntilInput
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CLEAR
 CLEARAGAIN
 COLON
 COLORCORRECTION_VERSION_1
 COMPUTER
 COPYRIGHT_SIGN
-CPostConnectCallback
 CRSEL
-CSchemaInstallCallback
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IInputStackSystem>
-CTier0AppSystem<IInputSystem>
-CTier1AppSystem<IInputStackSystem, 0>
-CTier1AppSystem<IInputSystem, 0>
-CTier2AppSystem<IInputStackSystem, 0>
-CTier2AppSystem<IInputSystem, 0>
 CURRENCYSUBUNIT
 CURRENCYUNIT
 CURRENCY_SIGN
@@ -332,18 +341,15 @@ CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 C_WITH_CEDILLA
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
-ConCommand
-ConCommandBase
 ConMsg(char const*, ...)
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
-Conditional Error: %short
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
+Conditional Error: %s
 ConfigurationSystem_001
 Construction is only allowed from the resolve function
 Count
 CreateInterface
-Current coordinate bias %short: %__float128,%__float128 scale %__float128,%__float128
+Current coordinate bias %s: %g,%g scale %g,%g
 Cursor size scaling factor.
 D	0Mc
 D!(Mc
@@ -361,7 +367,7 @@ DebugTextureInfo001
 DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
 DotaCardGameClient_001
-E;__int128 ~0
+E;n ~0
 E;nPu
 E;u u
 EJECT
@@ -377,17 +383,17 @@ E_WITH_CIRCUMFLEX
 E_WITH_DIAERESIS
 E_WITH_GRAVE
 EconItemToolModel_001
-Encountered ConCommand '%short' without signed char callback!
+Encountered ConCommand '%s' without a callback!
 EngineServiceMgr001
 EnvironmentMapBuilder_001
 Error State on string being set.
 EventSystem001
 FEMININE_ORDINAL_INDICATOR
-Failed to load cursor from '%short'
-Failed to load image for cursor from %short: %short
-Failed to scale image for cursor to %double,%double (hot %double,%double; scaling %__float128): %short
+Failed to load cursor from '%s'
+Failed to load image for cursor from %s: %s
+Failed to scale image for cursor to %d,%d (hot %d,%d; scaling %g): %s
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 G8H	p(]
@@ -397,8 +403,8 @@ GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 H	p(]
-H	wchar_t(]
-H!wchar_t(]
+H	w(]
+H!w(]
 HIGHDPI
 HKeySymbol KeyValues::GetNameSymbol() const
 HKeySymbol KeyValues::GetNameSymbolCaseSensitive() const
@@ -416,9 +422,6 @@ HostStateMgr001
 I CUtlRBTree<CUtlMap<unsigned int, ButtonCode_t, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, ButtonCode_t, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, ButtonCode_t, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, ButtonCode_t, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, ButtonCode_t, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, ButtonCode_t, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-IAppSystem
-IConCommandBaseAccessor
-IConVar
 IE_ActivateApp
 IE_ActivateWindow
 IE_AnalogValueChanged
@@ -446,27 +449,24 @@ IE_KeyTyped
 IE_Quit
 IE_WindowMove
 IE_WindowSizeChanged
-IInputStackSystem
-IInputSystem
-IKeyValuesErrorSpew
 IMEManager001
 INACTIVE
 INVERTED_EXCLAMATION_MARK
 INVERTED_QUESTION_MARK
 IQuickTime001
-ISS: Cursor clip %short from '%short'
+ISS: Cursor clip %s from '%s'
 ISS: Cursor clip disabled from default
-ISS: Cursor icon from '%short'
-ISS: Cursor invisible from '%short'
+ISS: Cursor icon from '%s'
+ISS: Cursor invisible from '%s'
 ISS: Cursor invisible from default
-ISS: IME %short from '%short'
+ISS: IME %s from '%s'
 ISS: IME allowed from default
-ISS: Mouse capture disabled from '%short'
+ISS: Mouse capture disabled from '%s'
 ISS: Mouse capture disabled from default
-ISS: Mouse capture enabled from '%short'
-ISS: Relative mouse %short from '%short'
+ISS: Mouse capture enabled from '%s'
+ISS: Relative mouse %s from '%s'
 ISS: Relative mouse disabled from default
-ISS: Standard cursors from '%short'
+ISS: Standard cursors from '%s'
 ISS: Standard cursors from default
 I_WITH_ACUTE
 I_WITH_CIRCUMFLEX
@@ -511,8 +511,8 @@ JOY32
 KBDILLUMDOWN
 KBDILLUMTOGGLE
 KBDILLUMUP
-KEYDOWN (%short): sdlkeycode=%double sdlscancode=%double SDL_GetKeyName='%short' buttoncode=%double buttonname='%short' ButtonCode_GetLocalKeyNameUTF8='%short'
-KEYUP (%short) sdlkeycode=%double sdlscancode=%double buttoncode=%double buttonname='%short'
+KEYDOWN (%s): sdlkeycode=%d sdlscancode=%d SDL_GetKeyName='%s' buttoncode=%d buttonname='%s' ButtonCode_GetLocalKeyNameUTF8='%s'
+KEYUP (%s) sdlkeycode=%d sdlscancode=%d buttoncode=%d buttonname='%s'
 KEY_CYRILLIC_BE
 KEY_CYRILLIC_E
 KEY_CYRILLIC_HA
@@ -571,9 +571,9 @@ KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues *KeyValues::GetNextKey() const
 KeyValues *LoadCursorResource(const char *, const char *)
-KeyValues Error: %short in file %short
+KeyValues Error: %s in file %s
 KeyValues::FindKey called on NULL pointer!
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 L9sxu<
 LEFTARROW
 LEFTPAREN
@@ -584,7 +584,7 @@ LOWVIOLENCE
 L_SHOULDER
 L_TRIGGER
 Lc+E1
-LoadFromBuffer: expected '{', found '%short'
+LoadFromBuffer: expected '{', found '%s'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 M9gxum
@@ -601,7 +601,7 @@ MOUSE2
 MOUSE3
 MOUSE4
 MOUSE5
-MOUSEWHEEL delta %double (raw %double)
+MOUSEWHEEL delta %d (raw %d)
 MOUSE_WHEEL
 MOUSE_X
 MOUSE_Y
@@ -610,6 +610,7 @@ MWHEELDOWN
 MWHEELUP
 MapListService_001
 MaterialUtils_001
+Mcn@M
 Mco8M
 Member function called on NULL KeyValues
 MeshSystem001
@@ -626,7 +627,7 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-No cursor image files for '%short'
+No cursor image files for '%s'
 O_WITH_ACUTE
 O_WITH_CIRCUMFLEX
 O_WITH_DIAERESIS
@@ -634,8 +635,8 @@ O_WITH_GRAVE
 O_WITH_STROKE
 O_WITH_TILDE
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 PASTE
 PAUSE
 PERCENT
@@ -658,7 +659,7 @@ PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
 PostProcessingSystem_001
-PrimaryUserId is %double
+PrimaryUserId is %d
 PropertyEditorSystem_001
 QUESTION
 QUOTEDBL
@@ -685,7 +686,7 @@ RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 Release
 RenderDevice003
 RenderDeviceMgr001
@@ -707,26 +708,26 @@ S2_RIGHT
 S2_UP
 SCROLLLOCK
 SCROLLLOCKTOGGLE
-SDL is %short relative mouse
-SDL says cursor is %short and is set to 0x%p
-SDL:  got %short
-SDL: Mouse entered window %double
-SDL: Mouse left window %double
-SDL: Window %double closed
-SDL: Window %double exposed
-SDL: Window %double gained keyboard focus
-SDL: Window %double got unknown event %double
-SDL: Window %double hidden
-SDL: Window %double hit test
-SDL: Window %double lost keyboard focus
-SDL: Window %double maximized
-SDL: Window %double minimized
-SDL: Window %double moved to %double,%double
-SDL: Window %double offered focus
-SDL: Window %double resized to %dx%double
-SDL: Window %double restored
-SDL: Window %double shown
-SDL: Window %double size changed [%double,%double]
+SDL is %s relative mouse
+SDL says cursor is %s and is set to 0x%p
+SDL:  got %s
+SDL: Mouse entered window %d
+SDL: Mouse left window %d
+SDL: Window %d closed
+SDL: Window %d exposed
+SDL: Window %d gained keyboard focus
+SDL: Window %d got unknown event %d
+SDL: Window %d hidden
+SDL: Window %d hit test
+SDL: Window %d lost keyboard focus
+SDL: Window %d maximized
+SDL: Window %d minimized
+SDL: Window %d moved to %d,%d
+SDL: Window %d offered focus
+SDL: Window %d resized to %dx%d
+SDL: Window %d restored
+SDL: Window %d shown
+SDL: Window %d size changed [%d,%d]
 SDL_APP_DIDENTERBACKGROUND
 SDL_APP_DIDENTERFOREGROUND
 SDL_APP_LOWMEMORY
@@ -792,8 +793,8 @@ SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 ServerUploadGameStats001
-SetCursorClip:  %short SDL_SetWindowGrab on 0x%p (%short) %short
-SetCursorClip:  disabling SDL_SetWindowGrab on 0x%p (%short)
+SetCursorClip:  %s SDL_SetWindowGrab on 0x%p (%s) %s
+SetCursorClip:  disabling SDL_SetWindowGrab on 0x%p (%s)
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -817,7 +818,7 @@ T &CUtlStringMap<CInputSystem::UserCursor_t, CUtlSymbolTable>::operator[](UtlSym
 TBRBRBRAp
 TBTAp
 TCRARAp
-TEXTINPUT '%short'
+TEXTINPUT '%s'
 THORN
 THOUSANDSSEPARATOR
 TILDE
@@ -840,10 +841,10 @@ U_WITH_ACUTE
 U_WITH_CIRCUMFLEX
 U_WITH_DIAERESIS
 U_WITH_GRAVE
-UpdateCursorClipOnFocusChange:  %short SDL_SetWindowGrab on 0x%p (%short) %short
+UpdateCursorClipOnFocusChange:  %s SDL_SetWindowGrab on 0x%p (%s) %s
 Updates game keyboard layout to current windows keyboard setting.
 UserInfoChangeService_001
-UtlStringMap is inconsistent: vector has %double entries but symbol table has %double
+UtlStringMap is inconsistent: vector has %d entries but symbol table has %d
 VApplication001
 VAvi001
 VBAllocTracker001
@@ -889,8 +890,8 @@ VisBuilder_001
 WIN32
 WINDOWS
 WINXP
-Warning:  %short = '%short' is infinite, clamping value.
-Window activation changed: %short
+Warning:  %s = '%s' is infinite, clamping value.
+Window activation changed: %s
 Wingman warrior centering hack.
 Wingman warrior hack related to turn axes.
 WorkshopSetup001
@@ -915,7 +916,7 @@ Z_AXIS_POS
 [A\A]A^A_]
 [A\A^A_]
 [A^A_]
-[unsigned short,fD
+[t,fD
 _AssertMsg_ConditionFailed
 _BinaryProperties_GetValue
 _CMemAllocSystemInitialize
@@ -1007,8 +1008,6 @@ __cstring
 __data
 __gcc_except_tab__TEXT
 __got
-__int128 < m_Vector.Count()
-__int128 char::*@M
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1033,7 +1032,7 @@ _vsz%u.bmp
 _wcslen
 `XujH
 `[A\A^A_]
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 allowed
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
@@ -1069,9 +1068,11 @@ fffff.
 ffffff.
 filetoinclude
 g_pCVar
+h == nHeight
 hCursor != INPUT_CURSOR_HANDLE_PASS_THROUGH
+h[A\A]A^A_]
 hidden
-initializing SDL joystick %double %short
+initializing SDL joystick %d %s
 inputsystem
 int CKeyValues_Data::Internal_GetInt()
 int CUtlString::FormatV(const char *, __va_list_tag *)
@@ -1083,7 +1084,6 @@ joystick not found -- driver not present
 key_updatelayout
 len > 0 || HasError()
 libinputsystem.dylib
-long long[A\A]A^A_]
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
@@ -1104,8 +1104,9 @@ m_pParent
 m_pParent == this
 m_pParent->m_fnCompletionCallback
 mffff.
-mouse %double %short (%double) at %double %double on window %double
-mouse motion %double %double at %double %double with buttons "%short" on window %double
+mouse %d %s (%d) at %d %d on window %d
+mouse motion %d %d at %d %d with buttons "%s" on window %d
+n < m_Vector.Count()
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == V_strlen(m_pString)
 nFlagMask == (T)nFlagMask
@@ -1126,7 +1127,7 @@ pFileSystem
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pPool->m_SpaceUsed < 0xFFFF
 pSchemaSystem != NULL
@@ -1152,6 +1153,10 @@ static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigTy
 static void ConVarRef::InitDeferredConVarRefs()
 std::terminate()
 strnlen
+t	[A^]
+t&H9[8tUH
+t-L9`
+t?L9sxu9
 tGH9Oxu8
 tMff.
 toL9oxui
@@ -1161,14 +1166,9 @@ uGetResourceManifest
 unknown
 unknown event
 unset
-unsigned char == nHeight
-unsigned char[A\A]A^A_]
 unsigned int CUtlStringMap<CInputSystem::UserCursor_t, CUtlSymbolTable>::Count() const [T = CInputSystem::UserCursor_t, SymbolTableType_t = CUtlSymbolTable]
-unsigned short	[A^]
-unsigned short&H9[8tUH
-unsigned short-L9`
-unsigned short?L9sxu9
 using
+v@w'H
 vb[A^]
 virtual int ConCommand::AutoCompleteSuggest(const char *, CUtlVector<CUtlString> &)
 virtual void CInputSystem::SetCursorIcon(InputCursorHandle_t, bool)
@@ -1218,12 +1218,12 @@ void KeyValues::RecursiveLoadFromBuffer(CKeyValuesErrorStack *, const char *, CK
 void KeyValues::RecursiveMergeKeyValues(KeyValues *)
 void ReconnectInterface(CreateInterfaceFn, const char *, void **)
 void RegisterInterface(CreateInterfaceFn, const char *, void **)
-void@wchar_t'H
 vstdlib
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
-wchar_t == nWidth
+w == nWidth
+x[A\A]A^A_]
 |$@E1
 }HA;EP}
 ~)fff.

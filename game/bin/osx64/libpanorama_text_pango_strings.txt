@@ -15,7 +15,7 @@
 	name_part
 	type_name
         
-                CPostConnectCallback
+                20CPostConnectCallback
     Actual    : 
     Expected  : 
     Field type: 
@@ -25,17 +25,18 @@
   Problem     : 
   Problem     : Enum value did not match field type:
   Problem     : Field is not the right type for this message:
- '%short'
+ '%s'
  .!p*
  = { <proto text format> }". To set fields within it, use syntax like "
  Outdent() without matching Indent().
- Tokenizer::ParseFloat() passed text that could not have been tokenized as signed char float: 
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as signed char string: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [$0]
  [A\A^A_]
  [A^]
  [default = $0
+ a protocol 
  args were given.  Full format string was: "
  contains invalid 
  ffff.
@@ -44,7 +45,6 @@
  of the Protocol Buffer runtime library, but the installed version is 
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
  of type 
- signed char protocol 
  t.Ic~DH
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
@@ -63,26 +63,26 @@
 " has not been loaded.
 " imports "
 " in type "
-" is already defined (as something other than signed char package) in file "
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
 " is already defined in "
 " is already defined in file "
 " is already defined.
-" is an atomic type, not signed char message.
+" is an atomic type, not a message.
+" is not a field or extension of message "
+" is not a message type.
+" is not a type.
+" is not a valid identifier.
 " is not an enum type.
 " is not defined or is not an extension of "
 " is not defined.
-" is not signed char field or extension of message "
-" is not signed char message type.
-" is not signed char type.
-" is not signed char valid identifier.
 " is resolved to "
 " is resolved to "(
-" is signed char message. To set the entire message, use syntax like "
-" is signed char repeated message. Repeated message options must be initialized using an aggregate value.
 " is specified along with field "
 " is specified multiple times.
 " must be unique within 
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn'unsigned short be possible.
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " seems to be defined in "
 " unknown.
 " uses the same enum value as "
@@ -98,16 +98,16 @@
 ", another member of oneof "
 ", but only 
 ", found "
-", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., ".
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
-". This appears to be signed char value from signed char sibling type.
+". This appears to be a value from a sibling type.
 ". Value: "
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
 "MutableRawRepeatedField"
-"long double" must be followed by exponent.
+"e" must be followed by exponent.
 #		$%	
 #fff.
 $0  extend .$1 {
@@ -125,17 +125,17 @@ $SUATAUAVAW
 $SUATAUAVAWH
 $cL3D
 %IcT$HI
-%d.%d.%double
+%d.%d.%d
 %ffff.
 %fffff.
-%int %int %int %int
-%short,%short
-%short:%double
-&N''iN''int
+%i %i %i %i
+%s,%s
+%s:%d
+&N''iN''i
 &YA1H
 &YA1L
-&long long	nY
-'&&unsigned char#
+&x	nY
+'&&h#
 'bQvE
 'u0Ic
 (IcD$0A
@@ -150,9 +150,9 @@ $cL3D
 (merge 
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (t$@fD
-)", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., "(.
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)6(long long-
+)6(x-
 )D$ fE
 )D$0fE
 )D$@fE
@@ -160,7 +160,7 @@ $cL3D
 )D$`fE
 )D$pfE
 )L$`H
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 *?#1*?#1
 *ffff.
 *p[[[[[[[[[[[[[[[[
@@ -171,8 +171,6 @@ $cL3D
 ,ffff.
 ,ffffff.
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-...(;unsigned long long(H
-...==...imaginary ==G
 .ETv*H
 .Elv*H
 .PLACEHOLDER_VALUE
@@ -229,18 +227,31 @@ $cL3D
 0A;uHu
 0A;u`u
 0A;uxu
+0A;v(u
 0A;v0u
 0A;vHu
-0A;void(u
-0A;void`u
+0A;v`u
 0A;vxu
 0D;{ |
 0[A\A^A_]
 0[A^]
 1024_
+10IAppSystem
+12CEmptyConVar
+13CUIFontFilePB
+14CBaseAppSystemIN8panorama15IUITextServicesEE
+14ConCommandBase
+15CTier0AppSystemIN8panorama15IUITextServicesEE
+15CTier1AppSystemIN8panorama15IUITextServicesELi0EE
+15CTier2AppSystemIN8panorama15IUITextServicesELi0EE
+15CTier3AppSystemIN8panorama15IUITextServicesELi0EE
+16CDefaultAccessor
 1_enc
 1ffffff.
 2,.CUIFontFilePackagePB.CUIEncryptedFontFilePB
+20CUIFontFilePackagePB
+22CSchemaInstallCallback
+23IConCommandBaseAccessor
 2fffff.
 3,$D!
 3A;v8u
@@ -259,6 +270,7 @@ $cL3D
 3T$,!
 3T$,D
 3T$,G
+3T$0!
 3T$0D
 3T$0G
 3T$4A
@@ -282,8 +294,10 @@ $cL3D
 3l$,D!
 3l$,D1
 3l$,F
+3l$0!
 3l$0D
 3l$0F
+3l$4!
 3l$4F
 3l$81
 3l$8D
@@ -291,21 +305,27 @@ $cL3D
 3l$8F
 3l$<D
 3l$<D1
+43CUIFontFilePackagePB_CUIEncryptedFontFilePB
 4A;t$8u
-4B;unsigned short;
+4B;t;
+4dHcL
+4vHct
 512_block_data_order
 5A;t$0u
 5A;t$pu
 6-9'6-9'
+6ConVar
+7IConVar
+8CFmtStrNILi256ELb0EE
 8[A\A]A^A_]
 8[A^A_]
 8ffffff.
 9W(}!H
-: Protocol message serialized to signed char size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
-: Tried to copy from signed char message with signed char different type. to: 
-: Tried to merge from signed char message with signed char different type.  to: 
+: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
 :88888888
-:char|wchar_t{
+:c|w{
 ;A }(
 ;C(u	I
 ;J(u%H
@@ -313,13 +333,13 @@ $cL3D
 ;K(u,I
 ;K(u-I
 ;K(uNI
-;L$ float
+;L$ f
 ;L$$H
 ;L$$f
 ;L$(H
-;L$(float
+;L$(f
 ;L$,H
-;L$,float
+;L$,f
 ;L$0H
 ;L$4H
 ;L$8H
@@ -352,7 +372,7 @@ $cL3D
 @L+H0L
 @L;D$
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-@M;__float128 
+@M;g 
 @PI;@XtAI
 @[A\A^A_]
 @[A\A^A_]A
@@ -600,13 +620,13 @@ A;G8}
 A;H(t.M
 A;M(L
 A;M(u
+A;N(t
 A;N(u2A
-A;N(unsigned short
 A;\$H|
 A;],|
 A;]H|
 A;]X|
-A;]long long|
+A;]x|
 A;^ |
 A;^(|
 A;^,|
@@ -614,21 +634,21 @@ A;^8|
 A;^@|
 A;^H|
 A;^X|
-A;^long long|
+A;^h|
 A;^p|
-A;^unsigned char|
+A;^x|
 A;_ |
 A;_(|
 A;_8|
 A;_X|
-A;void(u
+A;v(u
 A@tkf
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 AES for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 APtdf
 ARATAp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
@@ -670,7 +690,7 @@ AddMessage
 AddString
 AddUInt32
 AddUInt64
-Already saw decimal point or exponent; can'unsigned short have another one.
+Already saw decimal point or exponent; can't have another one.
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -699,22 +719,22 @@ Azoy`
 A~oU0
 A~oUHI
 A~oUx
+A~o[ 
+A~o](I
+A~o]p
 A~ou8gI
 A~ouP
 A~ouhI
-A~unsigned __int128[ 
-A~unsigned __int128](I
-A~unsigned __int128]p
 B;L0(
 B@H+P0H
 BRBVBRBRATAp
-BackUp() can only be called after signed char successful Next().
+BackUp() can only be called after a successful Next().
 BakedLODBuilderMgr001
 BenchmarkService001
 Bffff.
 BinaryProperties_GetValue
 Boolean default must be true or false.
-Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
 B}YU 
 B}YW@
 B}Y_ 
@@ -726,10 +746,6 @@ C0+K,9
 C0[A\A^A_]
 C@H+X0H
 C@L+X0L
-CBaseAppSystem<panorama::IUITextServices>
-CDefaultAccessor
-CEmptyConVar
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CHECK failed: !checkpoints_.empty(): 
 CHECK failed: !coded_out.HadError(): 
@@ -855,21 +871,15 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
-CSchemaInstallCallback
 CT;CP}BH
 CTextTextureCache::GetTextureRegion - allocate new space
 CTextTextureCache::GetTextureRegion - search free space
 CTextTextureCache::GetTextureRegion - split free space
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
-CTier0AppSystem<panorama::IUITextServices>
-CTier1AppSystem<panorama::IUITextServices, 0>
-CTier2AppSystem<panorama::IUITextServices, 0>
-CTier3AppSystem<panorama::IUITextServices, 0>
 CType
 CUIEncryptedFontFilePB
 CUIFontFilePB
 CUIFontFilePackagePB
-CUIFontFilePackagePB_CUIEncryptedFontFilePB
 CUIFontPackage::CUIFontPackage(const char *)
 CUITextLayoutPango::Draw
 CUITextLayoutPango::DrawRun
@@ -890,16 +900,14 @@ CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 Camellia for x86_64 by <appro@openssl.org>
-Can'unsigned short 
-Can'unsigned short get here.
-Can'unsigned short get here: failed to get default value as string
+Can't 
+Can't get here.
+Can't get here: failed to get default value as string
 Cannot allocate buffer larger than kint32max for 
 ClearField
 Cn77Yn77Y
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
 ConfigurationSystem_001
 Construction is only allowed from the resolve function
 ContainsCRLF()
@@ -907,7 +915,7 @@ ContainsCRLF() == bContainsCRLF
 Could not create an instance of 
 Could not find field named "
 Could not find field type.
-Couldn'unsigned short parse default value "
+Couldn't parse default value "
 Count
 D""fD""fT**~T**~;
 D$$fA
@@ -998,7 +1006,7 @@ E8|$p
 E9l$(
 E9t$ 
 E9w0M
-E;float A
+E;f A
 E;p,|
 E;t$T
 E;t$T}
@@ -1025,7 +1033,7 @@ Error reporting not implemented.
 Error while parsing option value for "
 EtIcEp
 EventSystem001
-Expect signed char decimal number.
+Expect a decimal number.
 Expected "
 Expected double.
 Expected eight hex digits up to 10ffff for \U escape sequence
@@ -1037,7 +1045,7 @@ Expected integer.
 Expected string.
 Extension "
 Extension conflicts with extension already in database: extend 
-Extension factory'short GetPrototype() returned NULL for extension: 
+Extension factory's GetPrototype() returned NULL for extension: 
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Extension number $0 has already been used in "$1" by extension "$2".
 Extension numbers cannot be greater than $0.
@@ -1047,11 +1055,11 @@ Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range end number must be greater than start number.
 ExtensionRange
 Extensions of MessageSets must be optional messages.
-Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend signed char non-lite type to contain signed char lite type, but the reverse is allowed.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 F$IcF 
 F(@t3H
-F(L;long double
-F(L;unsigned long
+F(L;e
+F(L;m
 F(rif
 F,IcF(
 F0D9k(
@@ -1064,12 +1072,12 @@ FONTCONFIG_PATH
 FT_New_Face
 F\IcFX
 Failed creating texture for panorama text
-Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
+Failed to allocate CUtlMemoryPoolBase blob of size %d ('%s' blob count = %d)
 False
 Field "
 Field does not match message type.
-Field is repeated; the method requires signed char singular field.
-Field is singular; the method requires signed char repeated field.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
 Field number $0 has already been used in "$1" by field "$2".
 Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
 Field numbers cannot be greater than $0.
@@ -1085,7 +1093,7 @@ FieldOptions
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File already exists in database: 
-File appears to be in generated pool but wasn'unsigned short registered: 
+File appears to be in generated pool but wasn't registered: 
 File is already registered: 
 File recursively imports itself: 
 FileDescriptorProto
@@ -1097,17 +1105,17 @@ First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 FlIcFh
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 FtIcFp
 G Ic4
 G(HcH
-G(L;unsigned long
+G(L;m
 G8H	p(]
 G@H+x0H
 G@L+x0I
-GF(2^unsigned long) Multiplication for x86_64, CRYPTOGAMS by <appro@openssl.org>
+GF(2^m) Multiplication for x86_64, CRYPTOGAMS by <appro@openssl.org>
 GF2m_mul_2x2
 GHASH for x86_64, CRYPTOGAMS by <appro@openssl.org>
 GameResourceServiceClientV001
@@ -1140,7 +1148,7 @@ GetUInt32
 GetUInt64
 H	p(]
 H H;9u)H
-H!wchar_t(]
+H!w(]
 H$$lH$$l
 H+A0H
 H+A0I
@@ -1165,20 +1173,20 @@ H+V0H
 H+X0H
 H+X@H
 H+Y@H
-H+long long@H
 H+p@H
 H+q0H
 H+q@H
-H+wchar_t@H
+H+w@H
+H+x@H
 H+{@H
 H9A@u
 H9GXt
-H9J short
+H9J s
 H9VXt%H
 H9_@u
-H9{@unsigned short
-H;C`unsigned short
-H;H short
+H9{@t
+H;C`t
+H;H s
 H;t$P
 HA;_P|
 HXuEH
@@ -1209,10 +1217,7 @@ I CUtlRBTree<CUtlMap<panorama::UITextLayoutProperties_t *, panorama::UITextOpaci
 I CUtlRBTree<panorama::CTextTextureCache::FreeTextMaskRegionRect_t, int, CDefLess<panorama::CTextTextureCache::FreeTextMaskRegionRect_t>, CUtlMemory<UtlRBTreeNode_t<panorama::CTextTextureCache::FreeTextMaskRegionRect_t, int>, int> >::NewNode(const T *) [T = panorama::CTextTextureCache::FreeTextMaskRegionRect_t, I = int, L = CDefLess<panorama::CTextTextureCache::FreeTextMaskRegionRect_t>, M = CUtlMemory<UtlRBTreeNode_t<panorama::CTextTextureCache::FreeTextMaskRegionRect_t, int>, int>]
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I9FXt H
-I9}@unsigned short
-IAppSystem
-IConCommandBaseAccessor
-IConVar
+I9}@t
 INVALID_CPPTYPE
 IQuickTime001
 IcD$(A
@@ -1267,7 +1272,7 @@ Integer out of range.
 Intentionally vague touch behavior for %p
 Interpreting non ascii codepoint %d.
 Invalid UTF8 string in CUITextLayoutPango
-Invalid UTF8 string in CUITextLayoutPango: '%short' [%02x, %02x, %02x, %02x]
+Invalid UTF8 string in CUITextLayoutPango: '%s' [%02x, %02x, %02x, %02x]
 Invalid control characters encountered in text.
 Invalid escape sequence in string literal.
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
@@ -1288,13 +1293,13 @@ IsPowerOfTwo( m_nAlignment )
 IsValid()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
-IsValidIndex(int) && (int != InvalidIndex())
-J%%oJ%%unsigned __int128\..r\..r8
+IsValidIndex(i) && (i != InvalidIndex())
+J%%oJ%%o\..r\..r8
 K(Ict$,L
 K8;C<
-K8;C<}int
-K8;C<}short
-K8;C<}unsigned short
+K8;C<}i
+K8;C<}s
+K8;C<}t
 K8;C<}}
 KHIcT$,L
 KH[A^]
@@ -1328,7 +1333,7 @@ L+\$X
 L+d$`
 L+l$h
 L+t$p
-L+|long long
+L+|$x
 L8(+L8 A9
 L8,+L8$D9
 L95+\
@@ -1359,6 +1364,7 @@ MarkColorRange
 MaterialUtils_001
 Mc<$J
 McG,M
+Mcg I
 MeshSystem001
 MeshUtils001
 Message extensions cannot have required fields.
@@ -1366,8 +1372,8 @@ Message missing required fields:
 Message type "
 MessageOptions
 MessageSets cannot have fields, only extensions.
-Messages can'unsigned short have default values!
-Messages can'unsigned short have default values.
+Messages can't have default values!
+Messages can't have default values.
 MethodDescriptorProto
 MethodOptions
 Missing field: FileDescriptorProto.name.
@@ -1378,6 +1384,14 @@ Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@o
 MutableRawRepeatedField
 MutableRepeatedMessage
 M|1}0
+N8panorama13IUITextLayoutE
+N8panorama15IUITextServicesE
+N8panorama17CTextTextureCacheE
+N8panorama18CUITextLayoutPangoE
+N8panorama19IUITextTextureCacheE
+N8panorama20CTextLayoutDrawCacheE
+N8panorama20CUITextServicesPangoE
+N8panorama22IUITextLayoutDrawCacheE
 N@H+q0H
 N@L+q0I
 NamePart
@@ -1392,7 +1406,7 @@ NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 No default value
 No field named "uninterpreted_option" in the Options proto.
-Non-primitive types can'unsigned short be packed.
+Non-primitive types can't be packed.
 Non-repeated field "
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Noto Sans CJK JP,Arial
@@ -1412,12 +1426,12 @@ OneofDescriptorProto
 OptimizeMode
 Option "
 Option field "
-Option must have signed char name.
+Option must have a name.
 Option must not use reserved name "uninterpreted_option".
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
-P((xP((long long
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
+P((xP((x
 P(;Q(}_H
 P(;Q(}pI
 PANGO_LIBDIR
@@ -1447,10 +1461,10 @@ QZ^&A!
 QueuedLoaderVersion001
 R)){R)){
 RBRBRBRBRBRB^Kp
-RF##eF##long double
+RF##eF##e
 Reached an unintended state: CPPTYPE_MESSAGE
 Reading dangerously large protocol message.  If the message turns out to be larger than 
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 Release
 ReleaseLast
 ReleaseMessage
@@ -1461,7 +1475,7 @@ RenderHardwareConfig002
 RenderService_001
 RenderSystemSurface001
 RenderUtils_001
-Repeated fields can'unsigned short have default values.
+Repeated fields can't have default values.
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
@@ -1551,7 +1565,6 @@ T$ fA
 T$(3D$@3\$D3L$H3T$LM
 T$(3E
 T$,fA
-T$0!
 T$0M1
 T$<fD
 T$@H1
@@ -1594,10 +1607,10 @@ TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
 The total number of bytes read was 
-This ZeroCopyOutputStream doesn'unsigned short support aliasing. Reaching here usually means signed char ZeroCopyOutputStream implementation bug.
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This program requires version 
 This program was compiled against version 
-This shouldn'unsigned short be called if all the sizes are equal.
+This shouldn't be called if all the sizes are equal.
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -1605,8 +1618,8 @@ ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
 Tried to merge messages of different types 
-Tried to register signed char non-generated type with the generated type registry.
-Type appears to be in generated pool but wasn'unsigned short 
+Tried to register a non-generated type with the generated type registry.
+Type appears to be in generated pool but wasn't 
 Type is already registered: 
 T~FbT~Fb
 U,E3M
@@ -1682,9 +1695,9 @@ Vector Permutation AES for x86_64/SSSE3, Mike Hamburg (Stanford University)
 VisBuilder_001
 WARNING
 WAXBXBRBRBRE`
-WBR	unsigned int
+WBR	j
 Warning parsing text-format 
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 Warning: Unused import: "
 WorkshopSetup001
 WorldRendererBuilderMgr001
@@ -1694,9 +1707,9 @@ X,,tX,,t4
 XPj4@@
 X[A\A]A^A_]
 X[A^A_]
-Y		double[	
+Y		d[	
 Y[eA	
-Z--wZ--wchar_t
+Z--wZ--w
 Z2[tY
 ZwKiZwKi
 [A\A]A^A_]
@@ -1718,8 +1731,8 @@ ZwKiZwKi
 \%03o
 \8,+\8$A9
 \U%08x
-\long long%02x
 \uRMc
+\x%02x
 ]8d$@
 ]:\|^
 ^(HcC
@@ -1819,7 +1832,6 @@ __common
 __const
 __cstring
 __data
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __la_symbol_ptr
@@ -2037,12 +2049,12 @@ _vsnprintf
 `(Hcx
 `0A9](
 `PA9^X
-`PD9{unsigned char
+`PD9{h
 `Pp0 
 `[A\A^A_]
 `[A^]
 ``A9^p
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 aesni_
 aggregate_value
 allow_alias
@@ -2070,14 +2082,14 @@ buffer. Use the 'bytes' type if you intend to send raw
 by_one
 bytes
 bytes. 
+c(E9~(
+c(ffff.
 catter4
 catter5_avx2
 cb_encrypt
 cbc_encrypt
 cc_generic_services
 ccccccccccccccccBit-sliced AES for x86_64/SSSE3, Emilia K
-char(E9~(
-char(ffff.
 cleanse
 clmul
 cm64_
@@ -2117,7 +2129,6 @@ d$hI1
 d$pI1
 d$pfA
 d$xI1
-dHcL
 decrypt
 decrypt_blocks
 decrypt_key
@@ -2144,9 +2155,11 @@ experimental_map_key
 extend .$0 {
 extendee
 extension_range
-ezd<float
+ezd<f
+f == NULL || dynamic_cast<To>(f) != NULL
 f0D9{(
 f33Uf33U
+f@LcV(H
 fPD9sh
 false
 ffff.
@@ -2157,8 +2170,6 @@ filesystem
 fixed32
 fixed64
 float
-float == NULL || dynamic_cast<To>(float) != NULL
-float@LcV(H
 font_file_name
 freetype
 from_mont
@@ -2171,8 +2182,12 @@ gfffffffH
 gfffffffL
 go_package
 group
+h[A\A]A^A_]
+h[A^A_]
 hash_
 hex_digit_to_int
+i < m_cElements
+i >= 0
 iIndex >= 0 && iIndex < m_pFontPackagePB->encrypted_font_files_size()
 ia32_
 identifier_value
@@ -2180,13 +2195,11 @@ ifff.
 infinity
 init_
 input_type
-int < m_cElements
-int >= 0
 int _V_strncmp(const char *, const char *, int)
 int32
 int64
 is_extension
-isxdigit(char)
+isxdigit(c)
 j55_j55_
 java_generate_equals_and_hash
 java_generic_services
@@ -2197,17 +2210,16 @@ java_string_check_utf8
 k_nSymmetricKeyLen256 == cubKey || k_nSymmetricKeyLen128 == cubKey
 keygen
 kffffff.
-kjj,unsigned char
+kjj,h
 l$ H1
 l$(fA
-l$0!
 l$0fE
-l$4!
 l$8H3D$0H3l$@
 l$8M1
 l$<fA
 l$PfD
 l$XM1
+l'@L;
 lZrNlZrN
 label
 lbm$o
@@ -2216,14 +2228,6 @@ length_delimited
 lffffff.
 libpanorama_text_pango.dylib
 location
-long long A9^
-long long"A9^
-long long'A9^
-long long,@H>
-long long<<Dx<<D%
-long long[A\A]A^A_]
-long long[A^A_]
-long'@L;
 m8T$ 
 m_Blobs.IsPeeked()
 m_ElementCount == 0
@@ -2250,10 +2254,10 @@ m_pTextServices == NULL
 m_pTextureProvider != NULL
 m_pTextureProvider == NULL
 m_pTextureStorage == NULL
-map key must name signed char scalar or string field.
-map type is only allowed for fields with signed char message type.
+map key must name a scalar or string field.
+map type is only allowed for fields with a message type.
 map type is only allowed for repeated fields.
-map_key must not name signed char repeated field.
+map_key must not name a repeated field.
 md5_block_asm_data_order
 message
 message_set_wire_format
@@ -2302,11 +2306,21 @@ no_standard_descriptor_accessor
 norm2red_avx2
 number
 o$$fA
+o<$fA
+o<$fD
+o<$fE
+o@ fA
+o@0fE
+o@@fA
+o@@fE
+o@PfE
+o@`fA
+o@`fE
 oBpfA
 oC@fA
 oD$@fA
+oD$`f
 oD$`fE
-oD$`float
 oG@fD
 oGpfA
 oH fE
@@ -2357,8 +2371,24 @@ oZ fA
 oZ fE
 oZ0fD
 oZ0fE
+o[0fA
+o[@fE
+o\$0f
+o\$0fA
+o\$@I
+o\$@fA
+o\$pf
+o]0fD
+o^ fB
+o^ fD
+o^0fD
 o_0fA
 o_pfA
+o` fE
+o`0fE
+o`@fE
+o`PfE
+o`pfE
 ob fD
 ob@fD
 ob@fE
@@ -2404,8 +2434,8 @@ os@fE
 ot$ fA
 ot$0fA
 ot$0fD
+ot$@f
 ot$@fA
-ot$@float
 ot$PfA
 ot$`fA
 ot$pM
@@ -2420,13 +2450,20 @@ ov`fD
 ow@fA
 ow@fD
 ozPfE
+o{ fD
+o{@fE
+o{PfE
+o|$@fD
+o|$PH
+o} fA
+o~ fA
 p $A!
 p88Hp88H
 pBlob
 pCallback == NULL
 pHhXpHhX
-pHl\tHl\unsigned short
-pMemory[int] == 0
+pHl\tHl\t
+pMemory[i] == 0
 pName
 pSchemaSystem != NULL
 pTextLayout
@@ -2435,14 +2472,6 @@ package
 package_version
 packed
 panorama/fonts/fonts.conf
-panorama::CTextLayoutDrawCache
-panorama::CTextTextureCache
-panorama::CUITextLayoutPango
-panorama::CUITextServicesPango
-panorama::IUITextLayout
-panorama::IUITextLayoutDrawCache
-panorama::IUITextServices
-panorama::IUITextTextureCache
 parse
 parsing
 pcubPlaintextData
@@ -2464,7 +2493,7 @@ q(;r(}$I
 q(;r(}6I
 q(;r(};H
 q(;r(}XH
-q(;wchar_t(H
+q(;w(H
 qr_avx2
 qr_mont
 r99Kr99K
@@ -2478,6 +2507,7 @@ repeated
 required
 resizeNumBits >= 0
 rsaz_
+s(IcT$
 s8[A\A^A_]
 sEH+t$
 sPw&H
@@ -2486,6 +2516,7 @@ s_nDLLIdentifier < 0
 s_nDLLIdentifier >= 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
+s`E9up
 saes_
 sb11Sb11S*
 scatter4
@@ -2499,8 +2530,6 @@ set_optimize_for
 set_type
 sfixed32
 sfixed64
-short(IcT$
-short`E9up
 sint32
 sint64
 source_code_info
@@ -2543,6 +2572,9 @@ string_value
 strings::Substitute format string invalid: asked for "$
 style != k_EFontStyleUnset
 subtype mismatch
+t	[A^]
+t Hcu
+t"IcF
 t$ H9
 t$ fA
 t$(H9
@@ -2551,6 +2583,12 @@ t$@H9
 t$`fD
 t$pfA
 t$xfH
+t&H9[8tUH
+t&fffff.
+t'IcO,I
+t+Hc{
+t,Mcu
+t-IcG,L
 t.Ic~ H
 t.Ic~$H
 t.Ic~(H
@@ -2558,6 +2596,7 @@ t.Ic~0H
 t.Ic~8H
 t.Ic~<H
 t.fffff.
+t/ff.
 t0IcD$,H
 t0IcU,H
 t1IcD$,H
@@ -2568,10 +2607,12 @@ t5IcV,L
 t5IcW,L
 t7IcT$,L
 t8IcV,L
+t<IcW,L
 tDHcu
 tFIcG,L
 tLMc~
 tWH+\$
+t\E9g
 text format contains deprecated field "
 tfI9D$Xt_H
 the global scope
@@ -2594,7 +2635,7 @@ u1D9t
 u8I9]
 u?M9D$
 u?M9G
-uB!!cB!!char 
+uB!!cB!!c 
 uGI9~
 uKMcg8M
 uLM9w
@@ -2606,54 +2647,7 @@ uint32 panorama::CUITextLayoutPango::CharIndexToLayoutByteIndex(uint32)
 uint32 panorama::CUITextLayoutPango::LayoutByteIndexToCharIndex(uint32)
 uint64
 uninterpreted_option
-unsigned __int128<$fA
-unsigned __int128<$fD
-unsigned __int128<$fE
-unsigned __int128@ fA
-unsigned __int128@0fE
-unsigned __int128@@fA
-unsigned __int128@@fE
-unsigned __int128@PfE
-unsigned __int128@`fA
-unsigned __int128@`fE
-unsigned __int128[0fA
-unsigned __int128[@fE
-unsigned __int128\$0f
-unsigned __int128\$0fA
-unsigned __int128\$@I
-unsigned __int128\$@fA
-unsigned __int128\$pf
-unsigned __int128]0fD
-unsigned __int128^ fB
-unsigned __int128^ fD
-unsigned __int128^0fD
-unsigned __int128` fE
-unsigned __int128`0fE
-unsigned __int128`@fE
-unsigned __int128`PfE
-unsigned __int128`pfE
-unsigned __int128{ fD
-unsigned __int128{@fE
-unsigned __int128{PfE
-unsigned __int128|$@fD
-unsigned __int128|$PH
-unsigned __int128} fA
-unsigned __int128~ fA
-unsigned char[A\A]A^A_]
-unsigned char[A^A_]
-unsigned short	[A^]
-unsigned short Hcu
-unsigned short"IcF
-unsigned short&H9[8tUH
-unsigned short&fffff.
-unsigned short'IcO,I
-unsigned short+Hc{
-unsigned short,Mcu
-unsigned short-IcG,L
-unsigned short/ff.
-unsigned short<IcW,L
-unsigned short\E9g
-vHct
+v;;Mv;;M
 vXIc}(L
 value
 varint
@@ -2708,21 +2702,27 @@ void RegisterInterface(CreateInterfaceFn, const char *, void **)
 void panorama::CTextLayoutDrawCache::SetTextServices(panorama::IUITextServices *)
 void panorama::CTextLayoutDrawCache::SetTextureStorage(panorama::IUITextTextureStorage *)
 void panorama::CTextTextureCache::SetTextureProvider(panorama::IUITextTextureProvider *)
-void;;Mv;;M
 vpaes_
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vx2_select_w7
-wchar_t(L;unsigned long
+w(L;m
 weak_dependency
 weight != k_EFontWeightUnset
 wipe_cpu
 wrong submessage type
+x A9^
+x"A9^
 x$D9s
+x'A9^
+x,@H>
 x8A;D$0}1Ic
+x<<Dx<<D%
 xXu*H
 xXulH
+x[A\A]A^A_]
+x[A^A_]
 xhA9^
 xqaBCFHTTFFFN
 yn@<M
@@ -2740,6 +2740,8 @@ ynl$8
 ynl$<M
 yxxxxxxxH
 yxxxxxxxI
+z(;y(H
+z==Gz==G
 zoL$@
 zoS H
 zoS L
@@ -2776,8 +2778,8 @@ zot$0
 }HE;uP|
 ~!A9^$|
 ~4ffffff.
-~L8(float
-~T8 float
+~L8(f
+~T8 f
 ~_`fD
 ~bA9^$|\Hc
 ~fIcM(D

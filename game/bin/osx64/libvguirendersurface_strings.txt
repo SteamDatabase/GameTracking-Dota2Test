@@ -4,7 +4,7 @@
         
           
                    
-                CDefaultKeyValuesErrorSpew
+                26CDefaultKeyValuesErrorSpew
       P
      `
     @@   
@@ -82,35 +82,35 @@
 #include
 #include is NULL 
 #var_
-#var_%short
+#var_%s
 $$x I
 $ffff.
 $ffffff.
-%%%short%%
+%%%s%%
+%d %d %d %d
 %d_hidden
 %d_width
-%double %double %double %double
+%f %f %f %f
 %fffff.
-%float %float %float %float
-%int %int %int %int
-%short moved to front
-%short string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
-%short, bool showScrollBar, bool allowMouseWheel, bool overrideChildPanelWidth
-%short, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
-%short, int SubTabPosition
-%short, string URLText
-%short, string command, int default
-%short, string image
-%short, string image, string border, string fillcolor, bool scaleImage
-%short, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
-%short, string labelText, string associate, alignment textAlignment, int wrap, int dulltext, int brighttext, string font
-%short, string progress, string variable
-%short, string text, bool scrollbar
-%short, string title
-%short: '%short'
-%short: string format requested %double chars
-%short:hscroll
-%short:vscroll
+%i %i %i %i
+%s moved to front
+%s string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
+%s, bool showScrollBar, bool allowMouseWheel, bool overrideChildPanelWidth
+%s, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars
+%s, int SubTabPosition
+%s, string URLText
+%s, string command, int default
+%s, string image
+%s, string image, string border, string fillcolor, bool scaleImage
+%s, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
+%s, string labelText, string associate, alignment textAlignment, int wrap, int dulltext, int brighttext, string font
+%s, string progress, string variable
+%s, string text, bool scrollbar
+%s, string title
+%s: '%s'
+%s: string format requested %d chars
+%s:hscroll
+%s:vscroll
 &Apply
 &Exit
 &Reload Localization
@@ -120,12 +120,9 @@ $ffffff.
 ( hTexture == RENDER_TEXTURE_HANDLE_INVALID ) || ( hMaterial == MATERIAL_HANDLE_INVALID ) || ( hMaterial == m_hUIMaterial )
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount )
 ( m_nIndexIncrement == 0 ) || ( m_nIndexCount < m_nMaxIndexCount - 1 )
-(*%short*), 
+(*%s*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
-(anonymous namespace)::CaptionGripPanel
-(anonymous namespace)::GripPanel
-(anonymous namespace)::ScrollBarButton
 (fff.
 (ffffff.
 (intp)this % 16 == 0
@@ -137,7 +134,7 @@ $ffffff.
 (uEHcK
 )fff.
 )ffff.
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 +K Hc
 ,@C9\
 ,fff.
@@ -156,7 +153,7 @@ $ffffff.
 .ffff.
 .fffff.
 .layout
-.unsigned short	@ 
+.t	@ 
 .vmat
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
@@ -233,28 +230,73 @@ $ffffff.
 0x%016llX
 1 - resize right
 1 - top-right
+10CheckImage
+10IAppSystem
+12CEmptyConVar
+12CIntProperty
+12ColumnButton
+13CBoolProperty
+14CBaseAppSystemI18IVGuiRenderSurfaceE
+14CColorProperty
+14CHFontProperty
+14ConCommandBase
+14ISchemeSurface
+15CSmallTextEntry
+15CStringProperty
+15CTier0AppSystemI18IVGuiRenderSurfaceE
+15CTier1AppSystemI18IVGuiRenderSurfaceLi0EE
+15CTier2AppSystemI18IVGuiRenderSurfaceLi0EE
+15CTier3AppSystemI18IVGuiRenderSurfaceLi0EE
+16CDefaultAccessor
+16CRSEmbeddedPanel
+18CBuildModeNavCombo
+18CTextureDictionary
+18CTextureIdProperty
+18CVGuiRenderSurface
+18ILocalizeTextQuery
+18ITextureDictionary
+18IVGuiRenderSurface
+18MenuItemCheckImage
+19IKeyValuesErrorSpew
+1B+t3
 2 - bottom-left
 2 - resize down
+20CDragDropHelperPanel
+22CSchemaInstallCallback
+23IConCommandBaseAccessor
+24CProportionalIntProperty
+24IProceduralLayerRenderer
 255 255 255 255
+25CProportionalXPosProperty
+25CProportionalYPosProperty
+26CProportionalFloatProperty
+27CVGuiPaintSurfaceMainThread
+28CVguiProceduralLayerRenderer
 29K }
 3 - bottom-right
 3 - down & right
 4 - no pin
 49K }
 49S |}
+4vHct
 5ffffff.
+6ConVar
 7B+t3
+7Dragger
+7IConVar
+8CFmtStrNILi1024ELb0EE
+8CFmtStrNILi256ELb0EE
 8[A\A]A^A_]
 8[A\A]A^A_]A
 8[A^A_]
 8ffffff.
 8x9,7
 9NT|(~
-9S |signed char
-9S |unsigned int
+9S |a
+9S |j
 :ffff.
-;CPostConnectCallback
-;W0}unsigned long long
+;20CPostConnectCallback
+;W0}y
 <(9{ |jI
 <NULL>
 <null>
@@ -292,6 +334,7 @@ $ffffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Msg
 @_Plat_CreateWindow
 @_Plat_DebugPrint
 @_Plat_DestroyWindow
@@ -372,7 +415,6 @@ $ffffff.
 @___stack_chk_guard
 @___tolower
 @___toupper
-@__float128 short::*
 @_atof
 @_atoi
 @_ceil
@@ -446,13 +488,13 @@ A;L$<u
 A;\$@|
 A;](u
 A;]XL
-A;]long long|
+A;]x|
 A;^H|
 A;^xu
 A;_ u
 A;_H|
 A;}Pu
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARBSATAp
 ASATAp
 ATASATAp
@@ -484,8 +526,8 @@ AWAVSPM
 AZBSAp
 A[ATAp
 ActivateItem
-After selecting and moving signed char panel Ctrl-... will undo the move.
-Already have converter for type %short, ignoring...
+After selecting and moving a panel Ctrl-z will undo the move.
+Already have converter for type %s, ignoring...
 AnimGraphEditorUtils001
 AnimatingImagePanel
 AnimationController
@@ -504,7 +546,6 @@ AssetSystem001
 AssetSystemTest001
 Auto Update - any changes apply instantly.
 AutoResize
-B+t3
 B;T3 
 B;\8X
 BRAY0
@@ -513,17 +554,17 @@ BRB\B]Ap
 BRB]ATAp
 BRB`?ATBR0
 BSATAp
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
 BakedLODBuilderMgr001
 Baseclass unpack
 BenchmarkService001
 BgColor
 BinaryProperties_GetValue
-BindTextureToFile: Invalid texture id %double
-BindTextureToFile: Invalid texture id for file %short
-BindTextureToTextureHandle: Invalid texture id %double
+BindTextureToFile: Invalid texture id %d
+BindTextureToFile: Invalid texture id for file %s
+BindTextureToTextureHandle: Invalid texture id %d
 BitmapImagePanel
 BorderDark
 Build Mode Help
@@ -549,46 +590,28 @@ ButtonToggled
 C [A^]
 C&opy
 C([A^]
-CBaseAppSystem<IVGuiRenderSurface>
 CBitmapImagePanel
-CBoolProperty
-CBuildFactoryHelper:  Factory for '%short' already exists!!!!
+CBuildFactoryHelper:  Factory for '%s' already exists!!!!
 CBuildModeNavCombo
-CColorProperty
-CDefaultAccessor
 CDragDropHelperPanel
-CEmptyConVar
-CFmtStrN<1024, false>
 CFmtStrN<1024, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CHFontProperty
 CIndexDataBase<unsigned short>::~CIndexDataBase() [T = unsigned short]
-CIntProperty
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CMatSystemTexture::SetMaterial
 COLORCORRECTION_VERSION_1
 CP u]A
-CProportionalFloatProperty
-CProportionalIntProperty
-CProportionalXPosProperty
-CProportionalYPosProperty
-CRSEmbeddedPanel
-CSchemaInstallCallback
 CSmallTextEntry
-CStringProperty
-CTextureDictionary
 CTextureDictionary::BindTextureToFile
 CTextureDictionary::GetTextureSize()
 CTextureDictionary::GetTextureSize() blocking load
-CTextureDictionary::GetTextureSize() failed to finish streaming "%short" for size information. %short %short %short
-CTextureDictionary::GetTextureSize() texture "%short" has no handles to load. And therefore no size
+CTextureDictionary::GetTextureSize() failed to finish streaming "%s" for size information. %s %s %s
+CTextureDictionary::GetTextureSize() texture "%s" has no handles to load. And therefore no size
 CTextureDictionary::LoadDeferredIdNOW()
-CTextureDictionary::LoadDeferredIdNOW() blocking load of "%short"
-CTextureDictionary::LoadDeferredIdNOW() needs signed char pass to make it work outside the main thread.
+CTextureDictionary::LoadDeferredIdNOW() blocking load of "%s"
+CTextureDictionary::LoadDeferredIdNOW() needs a pass to make it work outside the main thread.
 CTextureDictionary::ProcessDeferredResourceLoading()
 CTextureDictionary::ProcessDeferredResourceLoading() must be run from the main thread
-CTextureIdProperty
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Set()
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
@@ -599,10 +622,6 @@ CThreadSpinRWLock::CThreadSpinRWLock()
 CThreadSpinRWLock::SpinLockForWrite(unsigned long long)
 CThreadSpinRWLock::UnlockWrite()
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IVGuiRenderSurface>
-CTier1AppSystem<IVGuiRenderSurface, 0>
-CTier2AppSystem<IVGuiRenderSurface, 0>
-CTier3AppSystem<IVGuiRenderSurface, 0>
 CTreeViewListControl
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlHandleTable<vgui::BuildGroup, 20>::HandleType_t::HandleType_t(unsigned int, unsigned int) [T = vgui::BuildGroup, HandleBits = 20]
@@ -615,7 +634,6 @@ CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVGuiPaintSurface::InternalBindMaterialToRenderDevice unable to compute renderpass info (null material)!
-CVGuiPaintSurfaceMainThread
 CVGuiPaintSurfaceQueued::DrawFilledRectArray
 CVGuiPaintSurfaceQueued::DrawFilledRectFade
 CVGuiPaintSurfaceQueued::DrawOutlinedCircle
@@ -625,16 +643,14 @@ CVGuiPaintSurfaceQueued::DrawTexturedLineInternal
 CVGuiPaintSurfaceQueued::DrawTexturedPolygon
 CVGuiPaintSurfaceQueued::DrawTexturedQuadArray
 CVGuiPaintSurfaceQueued::DrawTexturedRectEx
-CVGuiRenderSurface
 CVGuiRenderSurface::DrawGradientQuad
 CVGuiRenderSurface::Init
 CVGuiRenderSurface::StartDrawing
 CVertexDataBase - No storage!
-CVertexDataBase - Tried to advance past the last vertex (%double)
+CVertexDataBase - Tried to advance past the last vertex (%d)
 CVertexDataBase<VGuiVertex_t>::~CVertexDataBase() [T = VGuiVertex_t]
-CVguiProceduralLayerRenderer
 CallQueued
-Can'unsigned short add Keybindings Context for unnamed panels
+Can't add Keybindings Context for unnamed panels
 CanBeDefaultButton
 CanButtonBeDefault(vpanel)
 Candidate
@@ -652,7 +668,6 @@ CheckButton.HighlightFgColor
 CheckButton.SelectedTextColor
 CheckButton.TextColor
 CheckButtonChecked
-CheckImage
 CircularProgressBar
 CircularProgressBar.BgColor
 CircularProgressBar.FgColor
@@ -663,7 +678,6 @@ Close
 CloseFrameButtonPressed
 CloseModal
 Color
-ColumnButton
 ColumnResized
 ComboBox
 ComboBoxBorder
@@ -673,11 +687,9 @@ ComboBoxButton.ArrowColor
 ComboBoxButton.BgColor
 ComboBoxButton.DisabledBgColor
 Command
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
-Conditional Error: %short
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
+Conditional Error: %s
 ConfigurationSystem_001
 Construction is only allowed from the resolve function
 ContextMenu
@@ -688,12 +700,12 @@ ControlName
 ControlText
 ConversionMode
 ConversionModeMenu
-Couldn'unsigned short find bitmap font file '%short'
+Couldn't find bitmap font file '%s'
 Count
 CreateInterface
 CreateNewControl
-Ctrl-char copies the settings of the last selected panel.
-Ctrl-void creates signed char new panel with the copied settings at the location of the mouse pointer.
+Ctrl-c copies the settings of the last selected panel.
+Ctrl-v creates a new panel with the copied settings at the location of the mouse pointer.
 CurrentDefaultButtonSet
 CursorEntered
 CursorEnteredChild
@@ -708,7 +720,7 @@ D$8A9
 D$@H9
 D$TIc
 D0TE1
-D9-,unsigned int
+D9-,j
 D9s$|
 D9sXu
 D9{$|
@@ -749,7 +761,6 @@ DragDrop
 DragDrop.DragFrame
 DragDrop.DropFrame
 DragDropHelper
-Dragger
 DrawColoredText
 DrawColoredTextRect
 DrawFilledRect
@@ -784,15 +795,15 @@ DropContext
 E(fff.
 E9|$$|
 E;4$|
-E;__int128 ~0
+E;f u
+E;f u'A
 E;fPu
-E;float u
-E;float u'A
 E;l$ u
 E;l$`
 E;l$p
+E;n ~0
+E;o u#
 E;t$H|
-E;unsigned __int128 u#
 E;|$Pu
 EPF9| 
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -801,7 +812,7 @@ EditMenu
 EditablePanel
 Empty
 EnableSaveButton
-Encountered too many releases for resource "%short"
+Encountered too many releases for resource "%s"
 Encountered unknown vgui queued render op!
 Engine2
 EngineServiceMgr001
@@ -814,14 +825,14 @@ ExpandButton
 ExpandButton.Color
 Expanded
 F [A^]
-Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
-Fieldname is not unique: %short
+Failed to allocate CUtlMemoryPoolBase blob of size %d ('%s' blob count = %d)
+Fieldname is not unique: %s
 FileSelectionCombo
 FindDefaultButton
 FinishDrawing
 FlashWindow
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Frame
@@ -865,9 +876,9 @@ GetVParent()
 GraphPanel
 GraphPanel.BgColor
 GraphPanel.FgColor
-GukL;long double
+GukL;e
 H	p(]
-H!wchar_t(]
+H!w(]
 H=vtex
 HFont
 HIGHDPI
@@ -881,10 +892,10 @@ H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
-HcW unsigned short
+HcW t
 HelpSystem_001
 HideNewControlMenu
-Holding right mouse button down opens signed char dropdown panel creation menu.
+Holding right mouse button down opens a dropdown panel creation menu.
 HorizScrollBar
 HostStateMgr001
 Hotkey
@@ -909,17 +920,8 @@ I CUtlRBTree<CVGuiRenderSurface::ContextAbsPos_t, unsigned short, bool (*)(const
 I CUtlRBTree<const char *, int, bool (*)(const char *const &, const char *const &), CUtlMemory<UtlRBTreeNode_t<const char *, int>, int> >::NewNode(const T *) [T = const char *, I = int, L = bool (*)(const char *const &, const char *const &), M = CUtlMemory<UtlRBTreeNode_t<const char *, int>, int>]
 I CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int> >::NewNode(const T *) [T = vgui::ListPanel::IndexItem_t, I = int, L = bool (*)(const vgui::ListPanel::IndexItem_t &, const vgui::ListPanel::IndexItem_t &), M = CUtlMemory<UtlRBTreeNode_t<vgui::ListPanel::IndexItem_t, int>, int>]
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
-IAppSystem
-IConCommandBaseAccessor
-IConVar
-IKeyValuesErrorSpew
-ILocalizeTextQuery
 IMECandidatesMenu
-IProceduralLayerRenderer
 IQuickTime001
-ISchemeSurface
-ITextureDictionary
-IVGuiRenderSurface
 IcL$ H
 IcL$HH
 IcL$PH
@@ -948,7 +950,7 @@ Intentionally vague touch behavior for %p
 Internal_GetSubKey() != NULL
 Internal_GetSubKey() == NULL
 Internal_GetSubKey() == dat
-Invalid parent region %short specified for region %short in panel %short
+Invalid parent region %s specified for region %s in panel %s
 Invalidate
 IsInList(before)
 IsLabelEditingAllowed()
@@ -957,7 +959,7 @@ IsTriplePressAllowed()
 IsValid()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
-IsValidIndex(int) && (int != InvalidIndex())
+IsValidIndex(i) && (i != InvalidIndex())
 IsValidKeyBindingsContext()
 ItemDeselected
 ItemSelected
@@ -977,20 +979,20 @@ KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstValue()
 KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextValue()
-KeyValues Error: %short in file %short
+KeyValues Error: %s in file %s
 KeyValues::FindKey called on NULL pointer!
 KeyValues::KeyValues(const KeyValues *, bool)
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
-KeyValues::SaveToFile: couldn'unsigned short open file "%short" in path "%short".
+KeyValues::SaveToFile: couldn't open file "%s" in path "%s".
 KhL;,
 KillFocus
 L$hL;<
 L90tiH
 L941tE
-L;k void
-L;unsigned int H
-L=CFloatProperty
+L;j H
+L;k v
+L=14CFloatProperty
 LINUX
 LOWVIOLENCE
 Label
@@ -1019,13 +1021,13 @@ ListPanel.TextColor
 ListViewItem
 ListViewItemSelected
 ListViewPanel
-LoadFromBuffer: expected '{', found '%short'
+LoadFromBuffer: expected '{', found '%s'
 Localization
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-M;wchar_t void
-M;|$ void
+M;w v
+M;|$ v
 MATCHFRAMEWORK_001
 MATSURFACE
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
@@ -1037,6 +1039,7 @@ MarlettSmall
 MaterialUtils_001
 Maximize
 Mc<$J
+Mcg I
 McghM
 Member function called on NULL KeyValues
 Menu.ArmedBgColor
@@ -1051,16 +1054,15 @@ MenuBorder
 MenuButton
 MenuClose
 MenuItem
-MenuItemCheckImage
 MenuItemHighlight
 MenuItemSelected
 MenuScrollBar
 MenuSeparator
 MeshSystem001
 MeshUtils001
-Message '%short' not handled by panel '%short'
-Message '%short', sent to '%short', has an invalid parameter type
-Message '%short', sent to '%short', has invalid parameter types
+Message '%s' not handled by panel '%s'
+Message '%s', sent to '%s', has an invalid parameter type
+Message '%s', sent to '%s', has invalid parameter types
 MessageBox
 MessageBoxText
 Mffff.
@@ -1068,7 +1070,7 @@ Minimize
 MinimizeToSysTray
 ModelDocUtils001
 MouseCaptureLost
-MouseCode %double is invalid and cannot fit into signed char 32-bit mask
+MouseCode %d is invalid and cannot fit into a 32-bit mask
 MouseDoublePressed
 MouseFocusTicked
 MousePressed
@@ -1077,6 +1079,68 @@ MouseTriplePressed
 MouseWheeled
 MoveScrollBar
 MoveScrollBarDirect
+N12_GLOBAL__N_115ScrollBarButtonE
+N12_GLOBAL__N_116CaptionGripPanelE
+N12_GLOBAL__N_19GripPanelE
+N4vgui10BuildGroupE
+N4vgui10ClickPanelE
+N4vgui10GraphPanelE
+N4vgui10ImagePanelE
+N4vgui10MenuButtonE
+N4vgui10MessageBoxE
+N4vgui11BaseTooltipE
+N4vgui11CheckButtonE
+N4vgui11FrameButtonE
+N4vgui11ProgressBarE
+N4vgui11RadioButtonE
+N4vgui11TextTooltipE
+N4vgui12ExpandButtonE
+N4vgui12IClientPanelE
+N4vgui12ListViewItemE
+N4vgui12ToggleButtonE
+N4vgui12TreeNodeTextE
+N4vgui13EditablePanelE
+N4vgui13FocusNavGroupE
+N4vgui13ListViewPanelE
+N4vgui13MenuSeparatorE
+N4vgui13TreeNodeImageE
+N4vgui14ComboBoxButtonE
+N4vgui14PanelListPanelE
+N4vgui15BuildModeDialogE
+N4vgui15ScrollBarSliderE
+N4vgui16RichTextInteriorE
+N4vgui16TreeViewSubPanelE
+N4vgui17CBitmapImagePanelE
+N4vgui17FrameSystemButtonE
+N4vgui17TreeNodeDropPanelE
+N4vgui18ScalableImagePanelE
+N4vgui19AnimatingImagePanelE
+N4vgui19AnimationControllerE
+N4vgui19CircularProgressBarE
+N4vgui20CTreeViewListControlE
+N4vgui21ContinuousProgressBarE
+N4vgui21CvarToggleCheckButtonI9ConVarRefEE
+N4vgui32IPanelAnimationPropertyConverterE
+N4vgui4MenuE
+N4vgui5FrameE
+N4vgui5ImageE
+N4vgui5LabelE
+N4vgui5PanelE
+N4vgui6ButtonE
+N4vgui6IImageE
+N4vgui7DividerE
+N4vgui7MenuBarE
+N4vgui8ComboBoxE
+N4vgui8ISurfaceE
+N4vgui8MenuItemE
+N4vgui8RichTextE
+N4vgui8TreeNodeE
+N4vgui8TreeViewE
+N4vgui8URLLabelE
+N4vgui9ListPanelE
+N4vgui9ScrollBarE
+N4vgui9TextEntryE
+N4vgui9TextImageE
 N948t*H
 NetworkClientService_001
 NetworkMessagesVersion001
@@ -1085,7 +1149,7 @@ NetworkServerService_001
 NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-New Control menu - creates signed char new panel in the upper left corner.
+New Control menu - creates a new panel in the upper left corner.
 NewControls
 NextChild
 NumericInputOnly
@@ -1102,11 +1166,11 @@ OnScreenSizeChanged
 OpenColumnChoiceMenu
 OpenContextMenu
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
-P L;long double
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
+P L;e
+P L;m
 P L;u
-P L;unsigned long
 P L;}
 P0@000
 P0L;}
@@ -1138,7 +1202,7 @@ PinnedCornerOffsetX
 PinnedCornerOffsetY
 PopMakeCurrent
 PostProcessingSystem_001
-PpL;long double
+PpL;e
 PpppP0 
 PressButton
 PrevChild
@@ -1149,9 +1213,9 @@ PropertyEditorSystem_001
 PushMakeCurrent
 PxL;u
 Q[A\A^A_]
-QpL;unsigned long
-Queued fxn call: %short
-Queued fxn call: %short '%short'
+QpL;m
+Queued fxn call: %s
+Queued fxn call: %s '%s'
 QueuedLoaderVersion001
 RBRAp
 RBRBRAp
@@ -1165,7 +1229,7 @@ RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 Release
 ReloadLocalization
 Rename it and try again.
@@ -1180,7 +1244,7 @@ RenderUtils_001
 Repaint
 RequestFocus
 ResizeColumnToContents
-ResolveVagueResourceFileName:: changed %short to %short
+ResolveVagueResourceFileName:: changed %s to %s
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
@@ -1195,7 +1259,7 @@ RichText.InsetY
 RichText.SelectedBgColor
 RichText.SelectedTextColor
 RichText.TextColor
-RichText: textfile parameter '%short' not found.
+RichText: textfile parameter '%s' not found.
 RichTextInterior
 Rotted code never implemented this
 RoundedCorners
@@ -1256,12 +1320,12 @@ SetProgress
 SetSortColumn
 SetState
 SetStencilReference
-SetSubTextureRGBA: Invalid texture id %int
+SetSubTextureRGBA: Invalid texture id %i
 SetText
-SetTextureRGBA: Invalid texture id %int
+SetTextureRGBA: Invalid texture id %i
 SetTitle
 SetZPos
-Shift clicking panels allows multiple panels to be selected into signed char group.
+Shift clicking panels allows multiple panels to be selected into a group.
 ShowHelp
 ShowNewControlMenu
 ShutdownRequest
@@ -1321,7 +1385,7 @@ TextKillFocus
 TextLayout_001
 TextMessageMgr_001
 TextNewLine
-Texture dictionary loading texture "%short" directly
+Texture dictionary loading texture "%s" directly
 Texture1
 Texture2
 Texture3
@@ -1356,7 +1420,7 @@ TreeViewItemDoublePressed
 TreeViewItemSelected
 TreeViewItemSelectionCleared
 TreeViewStartRangeSelection
-Trying to cast '%short' to signed char different resource type!
+Trying to cast '%s' to a different resource type!
 Typing Enter in any text field applies changes.
 URLLabel
 URLText
@@ -1387,7 +1451,7 @@ VGUI_ivgui008
 VGuiCommandBase_t *CVGuiCommandQueue::DequeueCmd()
 VGuiPaintSurfaceLayout
 VGuiRenderSurface
-VGuiRenderSurface Drawing needs signed char depth stencil target
+VGuiRenderSurface Drawing needs a depth stencil target
 VGuiRenderSurface requires the file system to run!
 VGuiRenderSurface requires the material system to run!
 VGuiRenderSurface requires the vgui::IInput system to run!
@@ -1422,14 +1486,14 @@ VguiCallQueue
 VguiPaint3D
 VguiRenderSurfaceInit
 VisBuilder_001
-WARNING: Trying to create signed char CRenderContextPtr without signed char valid context.
+WARNING: Trying to create a CRenderContextPtr without a valid context.
 WIN32
 WIN32HIDEF
 WIN32LODEF
 WIN32WIDE
 WINDOWS
 WINXP
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 WindowDisabledBgColor
 WorkshopSetup001
 WorldRendererBuilderMgr001
@@ -1440,7 +1504,7 @@ Yfff.
 Yfffff.
 Zfffff.
 [ no resource file associated with dialog ]
-[%short] applying key '%short', has changed from '%short' to '%short'
+[%s] applying key '%s', has changed from '%s' to '%s'
 [A\A]A^A_]
 [A\A]A^A_]A
 [A\A^A_]
@@ -1448,9 +1512,9 @@ Zfffff.
 [A^A_]
 [A^A_]A
 [nothing currently selected]
-[unsigned short,fD
+[t,fD
 \$0E1
-]IVGuiPaintSurface
+]17IVGuiPaintSurface
 ^H=vmatu8H
 ^fff.
 ^pu#A
@@ -1557,7 +1621,6 @@ __common
 __const
 __cstring
 __data
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __la_symbol_ptr
@@ -1617,15 +1680,15 @@ _wcsncpy
 ` fffff.
 ` ffffff.
 `(fff.
+`3AR0
 `>BR0
-`AR0
 `P@  
 `[A\A^A_]
 ``p p
+`h[A\A^A_]
 `pff.
-`unsigned char[A\A^A_]
-abs(long long) < 32768 && abs(unsigned long long) < 32768
 abs(wide) < 32768 && abs(tall) < 32768
+abs(x) < 32768 && abs(y) < 32768
 alignment
 allcaps
 allowMouseWheel
@@ -1679,11 +1742,11 @@ bufLenInBytes >= sizeof(wbuf[0])
 buffer
 build mode flags
 button
+c(ffff.
 cellcolor
 center
 centerwrap
 changed
-char(ffff.
 child
 cl_hud_minmode
 className
@@ -1788,10 +1851,13 @@ hContext != INPUT_CONTEXT_HANDLE_INVALID
 hDepthTarget != SCENE_VIEW_RENDER_TARGET_INVALID
 hResource != RESOURCE_HANDLE_INVALID
 hTexture != RENDER_TEXTURE_HANDLE_INVALID
+h[A\A]A^A_]
 handle
 height >= INT16_MIN && height <= INT16_MAX
 hfff.
 hslider
+i != m_ColumnsHistory.Count()
+i < ( 1 << HandleBits )
 iconImage
 id >= 0
 image
@@ -1802,8 +1868,6 @@ index
 infocus_bgcolor_override
 inputData
 inputsystem
-int != m_ColumnsHistory.Count()
-int < ( 1 << HandleBits )
 int CKeyValues_Data::Internal_GetInt()
 int CUtlQueue<int, CUtlMemory<int, int> >::Count() const [T = int, M = CUtlMemory<int, int>]
 int CUtlSortVector<vgui::LayoutPanel_t, vgui::SortFuncPanelPtr, CUtlVector<vgui::LayoutPanel_t, CUtlMemory<vgui::LayoutPanel_t, int> > >::Find(const TKey &) const [T = vgui::LayoutPanel_t, LessFunc = vgui::SortFuncPanelPtr, BaseVector = CUtlVector<vgui::LayoutPanel_t, CUtlMemory<vgui::LayoutPanel_t, int> >, TKey = vgui::LayoutPanel_t]
@@ -1827,13 +1891,6 @@ lastBarWidth
 left <= right
 libvguirendersurface.dylib
 localize
-long long	[A\A^A_]
-long long >= 0
-long long E9|$
-long long"A9^
-long long'A9^
-long long'E9t$
-long long[A\A]A^A_]
 m_Blobs.IsPeeked()
 m_CurrentColumns.IsValidIndex(col)
 m_ElementCount == 0
@@ -1955,7 +2012,7 @@ pFileSystem
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pOther->Internal_GetSubKey() == NULL
 pPool->m_SpaceUsed < 0xFFFF
@@ -1978,8 +2035,8 @@ paramName
 parent
 parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
 pin corner
-pin delta long long
-pin delta unsigned long long
+pin delta x
+pin delta y
 pin_corner_to_sibling
 pin_to_sibling
 pin_to_sibling_corner
@@ -2006,8 +2063,8 @@ relative
 renderTargetInOut != SCENE_VIEW_RENDER_TARGET_INVALID
 replace
 replaceSelection
-resize delta long long
-resize delta unsigned long long
+resize delta x
+resize delta y
 resource/layout/%s.layout
 resource/layout/%s_%s.layout
 resourceName
@@ -2015,6 +2072,7 @@ resourcesystem
 result
 right
 row != -1
+s < ( 1 << ( 31 - HandleBits ) )
 s_DragDropHelper.Get()
 s_nConnectionCount > 0
 s_nDLLIdentifier < 0
@@ -2035,7 +2093,6 @@ selectionTextColor_override
 selfDroppable
 setChildPanelWidth
 settitlebarvisible
-short < ( 1 << ( 31 - HandleBits ) )
 should PostActionSignals
 showScrollBar
 size < 1024 * 1024
@@ -2068,17 +2125,30 @@ style
 subFocus
 subtabposition
 sx[A^]
+t	[A\A^A_]
+t"L;u
+t#L;m
+t#fff.
 t$XE+t$PE
 t$`L9
+t%ffff.
+t&H9[8tUH
+t&fffff.
+t(fff.
+t-L9`
 t.I+]hH
+t/ffffff.
 t0HcE
 t0I;G
 t1ffff.
 t3HcE
 t6ffffff.
+t<fff.
+t?ffffff.
 tCfffff.
 tEIcD$
 tMff.
+t\E9g
 tab position
 tabPosition
 tabposition
@@ -2114,10 +2184,11 @@ top >= 0
 totalDesiredWidth > buttonMaxXPos
 tqHc1
 typeinfo for std::bad_alloc
+t}Lc-
 u	9D2
 u	[A\A^A_]
 u!D;u
-u&L;unsigned long
+u&L;m
 u1D9t
 u1D9|
 u2ffff.
@@ -2130,31 +2201,15 @@ uint64_array
 uint8
 uint8_array
 umfffff.
-unable to find control '%short'
+unable to find control '%s'
 unichar
 unicode
 unknown
 unnamed
-unsigned char[A\A]A^A_]
-unsigned short	[A\A^A_]
-unsigned short"L;u
-unsigned short#L;unsigned long
-unsigned short#fff.
-unsigned short%ffff.
-unsigned short&H9[8tUH
-unsigned short&fffff.
-unsigned short(fff.
-unsigned short-L9`
-unsigned short/ffffff.
-unsigned short<fff.
-unsigned short?ffffff.
-unsigned short\E9g
-unsigned short}Lc-
 unused
 use scheme colors
 use_proportional_insets
 usetitlesafe
-vHct
 variable
 vector2
 vector2_array
@@ -2165,76 +2220,18 @@ vector4_array
 vgui/
 vgui2
 vgui::
-vgui::AnimatingImagePanel
-vgui::AnimationController
-vgui::BaseTooltip
-vgui::BuildGroup
-vgui::BuildModeDialog
 vgui::Button
-vgui::CBitmapImagePanel
 vgui::CBuildFactoryHelper::CBuildFactoryHelper(const char *, PANELCREATEFUNC)
-vgui::CTreeViewListControl
-vgui::CheckButton
-vgui::CircularProgressBar
-vgui::ClickPanel
-vgui::ComboBox
-vgui::ComboBoxButton
-vgui::ContinuousProgressBar
-vgui::CvarToggleCheckButton<ConVarRef>
-vgui::Divider
-vgui::EditablePanel
-vgui::ExpandButton
-vgui::FocusNavGroup
-vgui::Frame
-vgui::FrameButton
-vgui::FrameSystemButton
-vgui::GraphPanel
 vgui::HFont
-vgui::IClientPanel
-vgui::IImage
-vgui::IPanelAnimationPropertyConverter
-vgui::ISurface
-vgui::Image
-vgui::ImagePanel
 vgui::KeyBindingMap_t *vgui::Panel::LookupBindingByKeyCode(KeyCode, int)
-vgui::Label
-vgui::ListPanel
-vgui::ListViewItem
-vgui::ListViewPanel
-vgui::Menu
 vgui::Menu *vgui::MenuButton::GetMenu()
-vgui::MenuBar
-vgui::MenuButton
-vgui::MenuItem
 vgui::MenuItem::MenuItem(vgui::Menu *, const char *, const char *, vgui::Menu *, bool)
 vgui::MenuItem::MenuItem(vgui::Menu *, const char *, const wchar_t *, vgui::Menu *, bool)
-vgui::MenuSeparator
-vgui::MessageBox
-vgui::Panel
 vgui::Panel *vgui::BuildGroup::NewControl(KeyValues *, int, int)
 vgui::Panel *vgui::BuildGroup::NewControl(const char *, int, int)
-vgui::PanelListPanel
-vgui::ProgressBar
-vgui::RadioButton
-vgui::RichText
-vgui::RichTextInterior
-vgui::ScalableImagePanel
-vgui::ScrollBar
-vgui::ScrollBarSlider
-vgui::TextEntry
-vgui::TextImage
-vgui::TextTooltip
-vgui::ToggleButton
-vgui::TreeNode
 vgui::TreeNode *vgui::TreeView::GetItem(int)
-vgui::TreeNodeDropPanel
-vgui::TreeNodeImage
-vgui::TreeNodeText
-vgui::TreeView
-vgui::TreeViewSubPanel
-vgui::URLLabel
 vguiRender
-vgui_controls is missing signed char required interface!
+vgui_controls is missing a required interface!
 vgui_draw_regions
 vguioffscreenrendertarget
 vguioffscreenrendertargetdepth
@@ -2537,17 +2534,24 @@ vtable for __cxxabiv1::__vmi_class_type_info
 whH;<
 wide > 0
 width >= INT16_MIN && width <= INT16_MAX
+x	[A\A^A_]
+x >= 0
+x E9|$
+x"A9^
 x$D9s
-x1D;unsigned long
+x'A9^
+x'E9t$
+x1D;m
 xHHc{
+x[A\A]A^A_]
 xhA9^
 { |7H
-|$(unsigned short)H
+|$(t)H
 |$@Hc
 |$@Lc
 |$HA9
 |9D9d
-|SD;long double
+|SD;e
 |fff.
 }	[A\A^A_]
 }HA;EP}
@@ -2555,7 +2559,7 @@ xhA9^
 ~ E9t$$|
 ~!A9^$|
 ~%fff.
-~(L;unsigned long
+~(L;m
 ~-957O
 ~:ff.
 ~Ifffff.

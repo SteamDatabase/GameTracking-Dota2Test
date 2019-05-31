@@ -5,15 +5,15 @@
         
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
-    Component %double: %dhx%dv q=%double
-    Component %double: dc=%double ac=%double
-    with %double long long %double thumbnail image
+    Component %d: %dhx%dv q=%d
+    Component %d: dc=%d ac=%d
+    with %d x %d thumbnail image
   0 0
   P0 
   P@ 
-  std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double, Se=%double, Ah=%double, Al=%double
+  Ss=%d, Se=%d, Ah=%d, Al=%d
  0@P`p
- Can'unsigned short specify initial state of dynamic constant buffers at creation time!
+ Can't specify initial state of dynamic constant buffers at creation time!
  ReadToken overflow
  [A\A^A_]
  `0P0
@@ -52,28 +52,29 @@
 #include is NULL 
 #u!ffff.
 #u"ffffff.
+$4DTdt
 $fffff.
 %5EUeu
 %ffff.
 %fffff.
-%int %int %int %int
-%ld%char
-%short : %short
-%short: string format requested %double chars
+%i %i %i %i
+%ld%c
+%s : %s
+%s: string format requested %d chars
 &6FVfv
 '7GWgw
 'ffff.
 ( ( m_nFlags & (TSPEC_VOLUME_TEXTURE|TSPEC_TEXTURE_ARRAY) ) != 0 ) || ( m_nDepth == 1 )
 ( ( m_nFlags & TSPEC_VOLUME_TEXTURE ) == 0 ) || ( ( m_nFlags & TSPEC_TEXTURE_ARRAY ) == 0 )
-( __int128 - 1 ) * nBlockSize < num
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
+( n - 1 ) * nBlockSize < num
 ( nAdapter >= 0 ) && ( nAdapter < GetAdapterCount() )
 ( nFlags & CONSTANT_BUFFER_FLAG_PER_FRAME_LIFETIME_POOLED ) != 0
 ( nMatchDist - 1 ) < ( 1 << BLOCK_COMPRESS_DIST_BITS )
 ( nMatchLen - BLOCK_COMPRESS_MIN_MATCH_LEN ) < ( 1 << BLOCK_COMPRESS_MATCH_BITS )
-(%short): ADD %short = %short
-(%short): Setting %short to %short
-(*%short*), 
+(%s): ADD %s = %s
+(%s): Setting %s to %s
+(*%s*), 
 (8HXhx
 (GetChar()) == (0)
 ([A\A]A^A_]
@@ -91,20 +92,20 @@ $fffff.
 (void *)m_pObject != NULL
 )9IYiy
 )ffff.
-*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConCommand "%s" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 *:JZjz
 +;K[k{
 +C$Lc
 +K Hc
 +K$Hc
 ,$D)kP
-,9O;long
-,<L\long|
+,9O;l
+,<L\l|
 ,fff.
 ,ffff.
 ,ffffff.
--=M]unsigned long}
+-=M]m}
 -autoconfig
 -autoconfig_level
 -disallowhwmorph
@@ -121,7 +122,7 @@ $fffff.
 -sse3
 -sse4
 -steam
-.>N^__int128~
+.>N^n~
 .ETv*H
 .Elv*H
 .fffff.
@@ -180,15 +181,15 @@ $fffff.
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/sheetcache.cpp(396): 
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(1299):Error loading texture: %short
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2135):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2146):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2157):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2168):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2189):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2200):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2211):ResourceHandleToData( %short ) failed! Falling back to error texture!
-/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2222):ResourceHandleToData( %short ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(1299):Error loading texture: %s
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2135):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2146):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2157):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2168):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2189):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2200):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2211):ResourceHandleToData( %s ) failed! Falling back to error texture!
+/Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.cpp(2222):ResourceHandleToData( %s ) failed! Falling back to error texture!
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/texturebase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/rendersystem/vertexbufferbase.h
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/resourcefile/externalreferences.cpp
@@ -227,40 +228,163 @@ $fffff.
 1.2.7
 1.5.13
 1.5.2
+10ConCommand
+10IAppSystem
+11CFunctorJob
+11IRefCounted
 123456789
+12CDeviceFence
+12CEmptyConVar
+12CRefCounted1I11IRefCounted20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE
+12CRenderUtils
+12IRenderUtils
+13IRenderDevice
+14CBaseAppSystemI12IRenderUtilsE
+14CBaseAppSystemI16IRenderDeviceMgrE
+14CSwapChainBase
+14ConCommandBase
+14IRenderContext
+14ISchemaBinding
+15CMemberFunctor4IP19CTextureManagerBaseMS0_FvP25IAsyncResourceDataRequest11CWeakHandleI31InfoForResourceTypeCTextureBaseE22TextureSpecification_tiES3_S6_S7_i12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
+15CMemberFunctor6IP19CTextureManagerBaseMS0_Fv11CWeakHandleI31InfoForResourceTypeCTextureBaseEPvi22TextureSpecification_ti30TextureOnDiskCompressionType_tES4_S5_iS6_iS7_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
+15CResourceStream
+15CSwapChainEmpty
+15CTier0AppSystemI12IRenderUtilsE
+15CTier0AppSystemI16IRenderDeviceMgrE
+15CTier1AppSystemI12IRenderUtilsLi0EE
+15CTier1AppSystemI16IRenderDeviceMgrLi0EE
+15CTier2AppSystemI12IRenderUtilsLi0EE
+15CTier2AppSystemI16IRenderDeviceMgrLi0EE
+16CDefaultAccessor
+16CDeviceFenceBase
+16CExtrefTraversal
+16CStackAnnotationIPK17CSchemaClassFieldvvvvvvvvE
+16ICommandCallback
+16IRenderDeviceMgr
+17CRenderDeviceBase
+18CAtomicManipulatorI10CUtlVectorI25VsInputSignatureElement_t10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI14CResourceArrayI15SheetSequence_tEE
+18CAtomicManipulatorI14CResourceArrayI17SheetFrameImage_tEE
+18CAtomicManipulatorI14CResourceArrayI20SequenceFloatParam_tEE
+18CAtomicManipulatorI14CResourceArrayI20SheetSequenceFrame_tEE
+18CAtomicManipulatorI15CResourceStringE
+18CAtomicManipulatorI16CResourcePointerI7Sheet_tEE
+18CAtomicManipulatorI8Vector2DE
+18CAtomicManipulatorI8Vector4DE
+18CBlendStateCreator
+18CEmptyShaderBuffer
+18CRenderDeviceEmpty
+18CSchemaEnumBindingI13CubeMapFace_tE
+18CSchemaEnumBindingI16RenderSlotType_tE
+18CSchemaEnumBindingI19RenderBufferFlags_tE
+18CSchemaEnumBindingI21RenderPrimitiveType_tE
+18CSchemaEnumBindingI22InputLayoutVariation_tE
+18CSchemaEnumBindingI23RenderMultisampleType_tE
+18CSchemaEnumBindingI27TextureSpecificationFlags_tE
+18CSchemaManipulatorI10CUtlVectorI25VsInputSignatureElement_t10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI14CResourceArrayI15SheetSequence_tEE
+18CSchemaManipulatorI14CResourceArrayI17SheetFrameImage_tEE
+18CSchemaManipulatorI14CResourceArrayI20SequenceFloatParam_tEE
+18CSchemaManipulatorI14CResourceArrayI20SheetSequenceFrame_tEE
+18CSchemaManipulatorI15CResourceStringE
+18CSchemaManipulatorI16CResourcePointerI7Sheet_tEE
+18CSchemaManipulatorI8Vector2DE
+18CSchemaManipulatorI8Vector4DE
+18CSchemaVisitorBase
+18IAtomicManipulator
+18ISchemaManipulator
+18ITSHashConstructorI24CTextureSequenceRecord_tE
+18ITSHashConstructorIPvE
+19CRenderContextEmpty
+19CSchemaClassBindingI13TextureDesc_tE
+19CSchemaClassBindingI15SheetSequence_tE
+19CSchemaClassBindingI15TextureHeader_tE
+19CSchemaClassBindingI17SheetFrameImage_tE
+19CSchemaClassBindingI18VsInputSignature_tE
+19CSchemaClassBindingI20SequenceFloatParam_tE
+19CSchemaClassBindingI20SheetSequenceFrame_tE
+19CSchemaClassBindingI24RenderInputLayoutField_tE
+19CSchemaClassBindingI25VsInputSignatureElement_tE
+19CSchemaClassBindingI7Sheet_tE
+19CSchemaFieldVisitor
+19CSchemaRegistration
+19CTextureManagerBase
+19IKeyValuesErrorSpew
+19IRenderShaderBuffer
 1HcDu
 1ffff.
 1fffff.
+20CPostConnectCallback
+20CRefCountServiceBaseILb1E6CRefMTE
+20CRenderDeviceMgrBase
+20CResourceStreamFixed
+20CTextureManagerEmpty
+20IResourceTypeManager
+21CRenderDeviceMgrEmpty
+21CRenderHardwareConfig
+21CSheetHashConstructor
+21CTextureInfoChunkBase
+21IRenderHardwareConfig
+21IVConCommDataReceived
+22CSchemaEnumBindingBase
+22CSchemaInstallCallback
+22IToolsResourceListener
+23CRasterizerStateCreator
+23CResourceAllocatorUtils
+23CSchemaClassBindingBase
+23IConCommandBaseAccessor
+23IResourceAllocatorUtils
+25CConCommandMemberAccessorI17CRenderDeviceBaseE
+25CConCommandMemberAccessorI19CTextureManagerBaseE
+25CDepthStencilStateCreator
+25CSchemaVisitorInfoMapBase
+26CDefaultKeyValuesErrorSpew
+26CReferenceCleanupTraversal
+26CSchemaFieldVisitorInfoMapI16CExtrefTraversalE
+26ICommandCompletionCallback
+27CSchemaUtlVectorManipulatorI10CUtlVectorI25VsInputSignatureElement_t10CUtlMemoryIS1_iEES1_E
+28CBaseIntrospectedTypeManager
+28ISchemaCollectionManipulator
 29C |.
 29K }
+31CDefaultIntrospectedTypeManagerILy2019914870E15TextureHeader_tE
+32CResourceReferenceFixupTraversal
 3333333
-40A;wchar_t
+37CSchemaRegistration_rendersystemempty
+40A;w
 49K }
 49S |}
+4CJob
 4fffff.
+4vHct
+6ConVar
+7IConVar
 8BPSu
 8BPSug
+8CFmtStrNILi256ELb0EE
+8CFunctor
 8[A\A]A^A_]
 8[A^A_]
 8d  15-Jan-2012
 8ffffff.
-9S |signed char
-9S |unsigned int
+9S |a
+9S |j
 9fffff.
 9q||5H
 ;X(u#
 ;fff.
 ;~L}k
 <(9{ |jI
+<1E;}
 <AD;}
-<E;}
 <NULL>
 <fff.
 <need "-dev">
 <null>
 <unknown multisample type
 =8BIMt*1
->ISchemaSearchTester<CSchemaClassInfo const*>
+>19ISchemaSearchTesterIPK16CSchemaClassInfoE
 >L97t-H
 @ 0     
 @@ @@ 
@@ -453,13 +577,13 @@ A;F4s
 A;G8|
 A;I8v$A
 A;]<|
-A;]long long|
+A;]x|
 A;^8|
 A;_8|
 A;_Xu
 ABGR8888
 ALIGN_TYPE is wrong, please fix
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARARAp
 ARARB
 ARAp8p8p
@@ -508,7 +632,7 @@ AWAVSPM
 AYA`"CU0xYASATAp
 AZBSAp
 A[ATAp
-Adobe APP14 marker: version %double, flags 0x%04x 0x%04x, transform %double
+Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -520,7 +644,7 @@ AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
-At marker 0x%02x, recovery action %double
+At marker 0x%02x, recovery action %d
 BGR565
 BGR888
 BGR888_BLUESCREEN
@@ -537,135 +661,48 @@ BGRsuAL
 BKbhTb~XBK!;
 BSATAp
 Backing store not supported
-Bad VTEX data for '%short'
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
+Bad VTEX data for '%s'
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
 BakedLODBuilderMgr001
 BenchmarkService001
 Biases the mip level the texture streaming system choses to stream for each texture.
 BinaryProperties_GetValue
-Bogus DAC index %double
-Bogus DAC value 0x%long long
-Bogus DHT index %double
-Bogus DQT index %double
+Bogus DAC index %d
+Bogus DAC value 0x%x
+Bogus DHT index %d
+Bogus DQT index %d
 Bogus Huffman table definition
 Bogus JPEG colorspace
 Bogus buffer control mode
 Bogus input colorspace
 Bogus marker length
-Bogus message code %double
+Bogus message code %d
 Bogus sampling factors
 Bogus virtual array access
 Buffer error in compressed datastream
 Buffer passed to JPEG library is too small
 C [A^]
-CAtomicManipulator<CResourceArray<SequenceFloatParam_t> >
-CAtomicManipulator<CResourceArray<SheetFrameImage_t> >
-CAtomicManipulator<CResourceArray<SheetSequenceFrame_t> >
-CAtomicManipulator<CResourceArray<SheetSequence_t> >
-CAtomicManipulator<CResourcePointer<Sheet_t> >
-CAtomicManipulator<CResourceString>
-CAtomicManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> > >
-CAtomicManipulator<Vector2D>
-CAtomicManipulator<Vector4D>
 CB: %u buffers, %.2f MB
-CBaseAppSystem<IRenderDeviceMgr>
-CBaseAppSystem<IRenderUtils>
-CBaseIntrospectedTypeManager
-CBaseIntrospectedTypeManager:  Bindings don'unsigned short match.
+CBaseIntrospectedTypeManager:  Bindings don't match.
 CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
-CBlendStateCreator
 CCIR601 sampling not implemented yet
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
 CCommandBufferChunk CUtlMemoryPoolMT
-CConCommandMemberAccessor<CRenderDeviceBase>
-CConCommandMemberAccessor<CTextureManagerBase>
-CDefaultAccessor
-CDefaultIntrospectedTypeManager<2019914870ull, TextureHeader_t>
-CDefaultKeyValuesErrorSpew
-CDepthStencilStateCreator
-CDeviceFence
-CDeviceFenceBase
-CEmptyConVar
-CEmptyShaderBuffer
-CExtrefTraversal
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CFunctor
-CFunctorJob
-CJob
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CLargeCommandBufferChunk CUtlMemoryPoolMT
 CMediumCommandBufferChunk CUtlMemoryPoolMT
-CMemberFunctor4<CTextureManagerBase*, void (CTextureManagerBase::*)(IAsyncResourceDataRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int), IAsyncResourceDataRequest*, CWeakHandle<InfoForResourceTypeCTextureBase>, TextureSpecification_t, int, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMemberFunctor6<CTextureManagerBase*, void (CTextureManagerBase::*)(CWeakHandle<InfoForResourceTypeCTextureBase>, void*, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t), CWeakHandle<InfoForResourceTypeCTextureBase>, void*, int, TextureSpecification_t, int, TextureOnDiskCompressionType_t, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
 COLORCORRECTION_VERSION_1
-CPostConnectCallback
 CRC error
 CRPGu
-CRasterizerStateCreator
-CRefCountServiceBase<true, CRefMT>
-CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
-CRefCounted1<IRefCounted, CRefCountServiceBase<true, CRefMT> >
-CReferenceCleanupTraversal
-CRenderContextEmpty
-CRenderDeviceBase
 CRenderDeviceBase::CRenderDeviceBase()
-CRenderDeviceBase::FindOrCreateTexture: Trying to load multiple mipmaps into 3d or array texture: %short
-CRenderDeviceEmpty
-CRenderDeviceMgrBase
-CRenderDeviceMgrEmpty
-CRenderHardwareConfig
-CRenderUtils
-CResourceAllocatorUtils
+CRenderDeviceBase::FindOrCreateTexture: Trying to load multiple mipmaps into 3d or array texture: %s
 CResourceArray
 CResourcePointer
-CResourceReferenceFixupTraversal
-CResourceStream
-CResourceStreamFixed
 CResourceStreamFixed: trying to write past the end of allocated memory (new commit %u, allocated %u)
 CResourceString
-CSchemaClassBinding<RenderInputLayoutField_t>
-CSchemaClassBinding<SequenceFloatParam_t>
-CSchemaClassBinding<SheetFrameImage_t>
-CSchemaClassBinding<SheetSequenceFrame_t>
-CSchemaClassBinding<SheetSequence_t>
-CSchemaClassBinding<Sheet_t>
-CSchemaClassBinding<TextureDesc_t>
-CSchemaClassBinding<TextureHeader_t>
-CSchemaClassBinding<VsInputSignatureElement_t>
-CSchemaClassBinding<VsInputSignature_t>
-CSchemaClassBindingBase
-CSchemaEnumBinding<CubeMapFace_t>
-CSchemaEnumBinding<InputLayoutVariation_t>
-CSchemaEnumBinding<RenderBufferFlags_t>
-CSchemaEnumBinding<RenderMultisampleType_t>
-CSchemaEnumBinding<RenderPrimitiveType_t>
-CSchemaEnumBinding<RenderSlotType_t>
-CSchemaEnumBinding<TextureSpecificationFlags_t>
-CSchemaEnumBindingBase
-CSchemaFieldVisitor
-CSchemaFieldVisitorInfoMap<CExtrefTraversal>
-CSchemaInstallCallback
-CSchemaManipulator<CResourceArray<SequenceFloatParam_t> >
-CSchemaManipulator<CResourceArray<SheetFrameImage_t> >
-CSchemaManipulator<CResourceArray<SheetSequenceFrame_t> >
-CSchemaManipulator<CResourceArray<SheetSequence_t> >
-CSchemaManipulator<CResourcePointer<Sheet_t> >
-CSchemaManipulator<CResourceString>
-CSchemaManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> > >
-CSchemaManipulator<Vector2D>
-CSchemaManipulator<Vector4D>
-CSchemaRegistration
-CSchemaRegistration_rendersystemempty
-CSchemaUtlVectorManipulator<CUtlVector<VsInputSignatureElement_t, CUtlMemory<VsInputSignatureElement_t, int> >, VsInputSignatureElement_t>
-CSchemaVisitorBase
-CSchemaVisitorInfoMapBase
-CSheetHashConstructor
-CStackAnnotation<CSchemaClassField const*, void, void, void, void, void, void, void, void>
-CSwapChainBase
-CSwapChainEmpty
 CTSListBase: Misaligned list
 CTSListBase::CTSListBase()
 CTSQueue corrupt
@@ -686,10 +723,7 @@ CTSQueue<DynamicIndexBufferHandle_t__ *, false>::CTSQueue() [T = DynamicIndexBuf
 CTSQueue<DynamicIndexBufferHandle_t__ *, false>::~CTSQueue() [T = DynamicIndexBufferHandle_t__ *, bTestOptimizer = false]
 CTSQueue<DynamicVertexBufferHandle_t__ *, false>::CTSQueue() [T = DynamicVertexBufferHandle_t__ *, bTestOptimizer = false]
 CTSQueue<DynamicVertexBufferHandle_t__ *, false>::~CTSQueue() [T = DynamicVertexBufferHandle_t__ *, bTestOptimizer = false]
-CTextureInfoChunkBase
-CTextureManagerBase
 CTextureManagerBase::CTextureManagerBase()
-CTextureManagerEmpty
 CTextureManagerEmpty::CTextureManagerEmpty()
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Set()
@@ -706,12 +740,6 @@ CThreadSpinRWLock::UnlockRead()
 CThreadSpinRWLock::UnlockWrite()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IRenderDeviceMgr>
-CTier0AppSystem<IRenderUtils>
-CTier1AppSystem<IRenderDeviceMgr, 0>
-CTier1AppSystem<IRenderUtils, 0>
-CTier2AppSystem<IRenderDeviceMgr, 0>
-CTier2AppSystem<IRenderUtils, 0>
 CUBEMAP_FACE_NEGATIVE_X
 CUBEMAP_FACE_NEGATIVE_Y
 CUBEMAP_FACE_NEGATIVE_Z
@@ -737,25 +765,22 @@ CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 Call to NULL read function
-Can'unsigned short detect memory size on this platform!
-Can'unsigned short set both read_data_fn and write_data_fn in the same structure
-Cannot determine resource type for handle '%short' - schema data not loaded for the referred-to type?
-Cannot quantize more than %double color components
-Cannot quantize to fewer than %double colors
-Cannot quantize to more than %double colors
-Cannot transcode due to multiple use of quantization table %double
+Can't detect memory size on this platform!
+Can't set both read_data_fn and write_data_fn in the same structure
+Cannot determine resource type for handle '%s' - schema data not loaded for the referred-to type?
+Cannot quantize more than %d color components
+Cannot quantize to fewer than %d colors
+Cannot quantize to more than %d colors
+Cannot transcode due to multiple use of quantization table %d
 Caution: quantization tables are too coarse for baseline JPEG
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
-Closed temporary file %short
+Closed temporary file %s
 Color Bitmap_t::GetColor(int, int) const
-Component index %double: mismatching sampling ratio %double:%double, %double:%double, %char
+Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
 Compressed texture decoded in %.2f ms
-ConCommand
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
-Conditional Error: %short
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
+Conditional Error: %s
 ConfigurationSystem_001
 ConstantBufferHandle_t CRenderDeviceBase::AcquirePooledDynamicConstantBuffer(uint32, uint32, uint32, int, uint)
 ConstantBufferHandle_t CSheetDataTextureCache::GetSequenceTextureDataConstantBuffer(HRenderTexture)
@@ -766,7 +791,7 @@ Copyright (C) 2012, Thomas G. Lane, Guido Vollbeding
 Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
 Corrupt JPEG data: bad Huffman code
 Corrupt JPEG data: bad arithmetic code
-Corrupt JPEG data: found marker 0x%02x instead of RST%double
+Corrupt JPEG data: found marker 0x%02x instead of RST%d
 Corrupt JPEG data: premature end of data segment
 Count
 CreateInterface
@@ -774,7 +799,7 @@ CubeMapFace_t
 D$"D9
 D$0L9
 D$@H9
-D)char L
+D)c L
 D15S1
 D16_SHADOW
 D24FS8
@@ -787,12 +812,11 @@ D;#t.
 D;xHu@
 DATAL
 DCT coefficient out of range
-DCT scaled block size %dx%double not supported
+DCT scaled block size %dx%d not supported
 DDDDUUUU
 DM96u/H
 DNEIt
 DNEIu
-DTdt
 DXT1_ONEBITALPHA
 DXT5_NM
 Data error in compressed datastream
@@ -801,13 +825,13 @@ Decompression Error
 Decompression error
 Define Arithmetic Table 0x%02x: 0x%02x
 Define Huffman Table 0x%02x
-Define Quantization Table %double  precision %double
+Define Quantization Table %d  precision %d
 Define Restart Interval %u
 DependencyClass::m_pDependencyLL == NULL
 DevMsg(char const*, ...)
 DevWarning(char const*, ...)
 DeviceID
-Didn'unsigned short expect more than one scan
+Didn't expect more than one scan
 Discarding abandoned streaming texture load
 Display GPU memory usage.
 DotaCardGameClient_001
@@ -827,12 +851,12 @@ Duplicate tIME chunk
 Duplicate tRNS chunk
 E$;C`u;
 E(fff.
-E+float A9
+E+f A9
 E9t$0t
 E9wdr
-E;__int128 ~0
 E;fhu
 E;gXu
+E;n ~0
 E;wHu
 E;|$8|
 E;} u
@@ -842,8 +866,8 @@ ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::AllocateAndCopy() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
-ERROR: Problem allocating permanent data for resource in file '%short'. See above for reason(short)
-ERROR: Resource name "%short" has the incorrect extension "%short" for the specified resource type (expected "%short")!
+ERROR: Problem allocating permanent data for resource in file '%s'. See above for reason(s)
+ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!
 ETLPu
 EXECUTABLE_PATH
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -852,12 +876,12 @@ Empty
 Empty Driver
 Empty JPEG image (DNL not supported)
 Empty input file
-Encountered ConCommand '%short' without signed char callback!
-Encountered too many releases for resource "%short"
-End float&& Image
+Encountered ConCommand '%s' without a callback!
+Encountered too many releases for resource "%s"
+End Of Image
 EngineServiceMgr001
 EnvironmentMapBuilder_001
-Error loading resource "%short" (Invalid resource version: %double != %double)
+Error loading resource "%s" (Invalid resource version: %d != %d)
 EventSystem001
 Evict all resident texture.
 Exceeded size limit while expanding chunk
@@ -866,22 +890,22 @@ Extra compressed data
 Extra compression data
 F(L95
 F@[A^]
-Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
+Failed to allocate CUtlMemoryPoolBase blob of size %d ('%s' blob count = %d)
 Failed to call CBaseIntrospectedTypeManager::Init
 Failed to call CBaseIntrospectedTypeManager::SetDiskDataBinding
-Failed to create temporary file %short
-Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in extref block.'
-Failed to save video settings config to '%short'
+Failed to create temporary file %s
+Failed to fix resource reference '%s' (%s)- ID = %016llX, Expected in extref block.'
+Failed to save video settings config to '%s'
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
 FileKeys
 FindOrCreateTexture: Cannot create static textures with no data!
-FindOrCreateTexture: Cannot load multiple mipmaps into cubemap texture: %short
+FindOrCreateTexture: Cannot load multiple mipmaps into cubemap texture: %s
 FindOrCreateTexture: Only dynamic textures can have non-global scope!
 FindOrCreateTexture: Texture scope is unspecified!
 FindOrCreateTexture: Texture usage is unspecified!
-FixupResourceName: Illegal full path passed in ("%short")!
+FixupResourceName: Illegal full path passed in ("%s")!
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Fractional sampling not implemented yet
@@ -895,7 +919,7 @@ G0Ic}
 G4Ic}
 G8H	p(]
 GAMECONSOLE
-GPU Pipeline statistics: VCONCOMM'short outgoing message queue is too large (%u ) - dropping frame.
+GPU Pipeline statistics: VCONCOMM's outgoing message queue is too large (%u ) - dropping frame.
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
@@ -903,8 +927,8 @@ GetBufferType() != RENDER_BUFFER_TYPE_DYNAMIC
 GhIcL$8H
 Graphics Device changed, resetting video config
 H	p(]
-H	wchar_t(]
-H!wchar_t(]
+H	w(]
+H!w(]
 H9JHt/H9JPt7H
 H9[0u0H9[8t*H
 H9[8u
@@ -936,14 +960,7 @@ I CUtlLinkedList<COcclusionQueryMgr::OcclusionQueryObject_t, long long, true, lo
 I CUtlLinkedList<CSwapChainBase *, long long, true, long long, CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> > >::AllocInternal(bool) [T = CSwapChainBase *, S = long long, ML = true, I = long long, M = CUtlFixedMemory<UtlLinkedListElem_t<CSwapChainBase *, long long> >]
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I#A H9
-IAppSystem
-IAtomicManipulator
-IB: %double buffers, %.2f MB
-ICommandCallback
-ICommandCompletionCallback
-IConCommandBaseAccessor
-IConVar
-IKeyValuesErrorSpew
+IB: %d buffers, %.2f MB
 INPUT_LAYOUT_VARIATION_DEFAULT
 INPUT_LAYOUT_VARIATION_MAX
 INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID
@@ -951,26 +968,10 @@ INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_LIGHTMAP_PARAMS
 INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID
 INPUT_LAYOUT_VARIATION_STREAM1_MAT3X4
 IQuickTime001
-IRefCounted
-IRenderContext
-IRenderDevice
-IRenderDeviceMgr
-IRenderHardwareConfig
-IRenderShaderBuffer
-IRenderUtils
-IResourceAllocatorUtils
-IResourceTypeManager
-ISchemaBinding
-ISchemaCollectionManipulator
-ISchemaManipulator
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
 IT;H0s
-IT;H@short
-ITSHashConstructor<CTextureSequenceRecord_t>
-ITSHashConstructor<void*>
-IToolsResourceListener
-IVConCommDataReceived
+IT;H@s
 IcD$(H
 IcG L
 IcGHHi
@@ -989,7 +990,7 @@ Ignoring cHRM chunk with negative chromaticities
 Ignoring gAMA chunk with out of range gamma
 Ignoring iCCP chunk with declared size = @1 and actual length = @2
 Ignoring incorrect cHRM value when sRGB is also present
-Ignoring incorrect cHRM white(@1,@2) r(@3,@4)__float128(@5,@6)bool(@7,@8) when sRGB is also present
+Ignoring incorrect cHRM white(@1,@2) r(@3,@4)g(@5,@6)b(@7,@8) when sRGB is also present
 Ignoring incorrect gAMA value @1 when sRGB is also present
 Ignoring invalid time value
 Ignoring nonzero compression type in iCCP chunk
@@ -1000,9 +1001,9 @@ Image width exceeds user limit in IHDR
 Image width is zero in IHDR
 ImageFormat VTEX_FormatToRuntime(VTEX_Format_t)
 Implement me!
-Improper call to JPEG library in state %double
+Improper call to JPEG library in state %d
 Incomplete compressed datastream
-Inconsistent progression sequence for component %double coefficient %double
+Inconsistent progression sequence for component %d coefficient %d
 Incorrect IEND chunk length
 Incorrect bKGD chunk index value
 Incorrect bKGD chunk length
@@ -1021,7 +1022,7 @@ InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
 InstallSchemaBindings
-Insufficient memory (case %double)
+Insufficient memory (case %d)
 Insufficient memory for hIST chunk data
 Insufficient memory for pCAL parameter
 Insufficient memory for pCAL params
@@ -1058,7 +1059,7 @@ Invalid channels format.
 Invalid color quantization mode change
 Invalid color type in IHDR
 Invalid color type/bit depth combination in IHDR
-Invalid component ID %double in SOS
+Invalid component ID %d in SOS
 Invalid crop request
 Invalid filter method in IHDR
 Invalid format for pCAL parameter
@@ -1067,7 +1068,7 @@ Invalid hIST after IDAT
 Invalid iCCP after IDAT
 Invalid image height in IHDR
 Invalid image width in IHDR
-Invalid memory pool code %double
+Invalid memory pool code %d
 Invalid oFFs after IDAT
 Invalid pCAL after IDAT
 Invalid pCAL data
@@ -1077,9 +1078,9 @@ Invalid pHYs after IDAT
 Invalid palette chunk
 Invalid palette length
 Invalid palette size, hIST allocation skipped
-Invalid progressive parameters at scan script entry %double
-Invalid progressive parameters std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double Se=%double Ah=%double Al=%double
-Invalid rendersystem %double
+Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
+Invalid progressive parameters at scan script entry %d
+Invalid rendersystem %d
 Invalid sBIT after IDAT
 Invalid sCAL after IDAT
 Invalid sCAL chunk ignored: bad height format
@@ -1092,9 +1093,9 @@ Invalid sCAL unit
 Invalid sCAL width
 Invalid sPLT after IDAT
 Invalid sRGB after IDAT
-Invalid scan script at entry %double
+Invalid scan script at entry %d
 Invalid tRNS after IDAT
-IsIdxValid(int)
+IsIdxValid(i)
 IsInList(before)
 IsPowerOfTwo( m_nAlignment )
 IsRelevantFieldType( pFieldType )
@@ -1102,10 +1103,10 @@ IsResourceWeakHandle( pHandleType )
 IsValid()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
-IsValidIndex(int) && (int != InvalidIndex())
+IsValidIndex(i) && (i != InvalidIndex())
 IsValidIterator( it )
 J9\)8u
-JFIF APP0 marker: version %d.%02d, density %dx%double  %double
+JFIF APP0 marker: version %d.%02d, density %dx%d  %d
 JFIF extension marker: JPEG-compressed thumbnail image, length %u
 JFIF extension marker: RGB thumbnail image, length %u
 JFIF extension marker: palette thumbnail image, length %u
@@ -1119,15 +1120,15 @@ KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetNextKey() const
-KeyValues Error: %short in file %short
+KeyValues Error: %s in file %s
 KeyValues::FindKey called on NULL pointer!
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 L$	@A
 L$(E1
 L$@Hi
 L90t*H
-L;>unsigned short!L9
+L;>t!L9
 LACsukL
 LACsuwL
 LE_BGRA8888
@@ -1150,8 +1151,8 @@ Lc;fB
 Lcq(L
 Lcs(I
 Lcx<L
-LoadFromBuffer: expected '{', found '%short'
-Loaded video settings config from '%short'
+LoadFromBuffer: expected '{', found '%s'
+Loaded video settings config from '%s'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
@@ -1161,8 +1162,7 @@ M;w8u
 MATCHFRAMEWORK_001
 MAX_ALLOC_CHUNK is wrong, please fix
 MDiskDataForResourceType
-MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle_t
-MNG features are not allowed in signed char PNG datastream
+MNG features are not allowed in a PNG datastream
 MNoScatter
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
@@ -1177,6 +1177,7 @@ MaxDeviceID
 Maximum supported image dimension is %u pixels
 Mc'fC
 Mc<$J
+Mcg I
 Mcl$LE
 Member function called on NULL KeyValues
 Memory allocation failed while processing sCAL
@@ -1210,6 +1211,7 @@ Missing PLTE before hIST
 Missing PLTE before tRNS
 ModelDocUtils001
 N([A^]
+N24MDiskDataForResourceType45CValueSearchTester_ClassIntrospectionHandle_tE
 NTROL
 NULL row buffer
 NV_DST16
@@ -1235,22 +1237,22 @@ No space in chunk cache for sPLT
 No space in chunk cache for tEXt
 No space in chunk cache for unknown chunk
 No space in chunk cache for zTXt
+Not a JPEG file: starts with 0x%02x 0x%02x
+Not a PNG file
 Not enough image data
 Not enough memory to decompress chunk
 Not enough memory to process iTXt chunk
 Not enough memory to process text chunk
 Not enough memory to process zTXt chunk
 Not implemented yet
-Not signed char JPEG file: starts with 0x%02x 0x%02x
-Not signed char PNG file
-OSX: Requested mode %double long long %double, efs %double
+OSX: Requested mode %d x %d, efs %d
 Obtained EMS handle %u
 Obtained XMS handle %u
 OpenGL
-Opened temporary file %short
+Opened temporary file %s
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 Out of Memory
 Out of memory processing zTXt chunk
 Out of memory while processing sCAL chunk
@@ -1266,12 +1268,12 @@ Out of place tIME chunk
 Out of range gamma value ignored
 Output file write error --- out of disk space?
 Overflow of the sheet cache texture. Releasing and starting over. This is ok in asset browser, not so ok if the game is triggering this!
-Overflow of the sheet cache texture: Try increasing SHEETCACHE_TEXTURE_HEIGHT (current value %double)!
+Overflow of the sheet cache texture: Try increasing SHEETCACHE_TEXTURE_HEIGHT (current value %d)!
 P8H=vtexu
 P@IcL$
 PERF WARNING: Texture pool size set to more than 80%% of total GPU memory.
 PNG file corrupted by ASCII conversion
-PNG load error %short
+PNG load error %s
 PNG unsigned integer out of range
 POSIX
 P[A^]
@@ -1289,8 +1291,8 @@ Premature end of input file
 Profile size field missing from iCCP chunk
 PropertyEditorSystem_001
 Quantization table 0x%02x was not defined
-Quantizing to %double = %double*%double*%double colors
-Quantizing to %double colors
+Quantizing to %d = %d*%d*%d colors
+Quantizing to %d colors
 QueuedLoaderVersion001
 R16F_EXPAND
 RATB`tATAp
@@ -1391,7 +1393,7 @@ RGBA8888
 RGBA8888_LINEAR
 RGBX555
 RGBX8888
-RST%double
+RST%d
 Read Error
 Read failed on temporary file
 Read from EMS failed
@@ -1403,7 +1405,7 @@ RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 Release
 Render Device Empty
 RenderBufferFlags_t
@@ -1421,7 +1423,7 @@ RenderSystem/AlwaysPreloadTexturesInGame
 RenderSystemSurface001
 RenderUtils_001
 Requested feature was omitted at compile time
-Resource %short
+Resource %s
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
@@ -1433,7 +1435,7 @@ SARBSAXBRB`
 SBRCUBSDTKTCp
 SSE and SSE2 are required.
 Sampling factors too large for interleaved scan
-Saved video settings config to '%short'
+Saved video settings config to '%s'
 ScaleformUI001
 Scan script does not transmit all data
 SceneSystem_002
@@ -1444,7 +1446,7 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Screen Gamma (only in fullscreen modes)
 Seek failed on temporary file
-Selected %double colors for quantization
+Selected %d colors for quantization
 SequenceFloatParam_t
 ServerUploadGameStats001
 Sffff.
@@ -1469,8 +1471,8 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2ServerSerializers002
-Start float&& Frame 0x%02x: width=%u, height=%u, components=%double
-Start float&& Scan: %double components
+Start Of Frame 0x%02x: width=%u, height=%u, components=%d
+Start Of Scan: %d components
 Start of Image
 StatsService_001
 SteamAudio001
@@ -1503,9 +1505,9 @@ TC[ATBp
 TCp(p
 TDRAp
 TEX: %u textures, %.2f MB
-TEXMAN: %short MarkTextureBitsLoaded (%short)
-TEXMAN: Deleting %double textures
-TEXMAN: Outstanding stream count %double -> %double (%short)
+TEXMAN: %s MarkTextureBitsLoaded (%s)
+TEXMAN: Deleting %d textures
+TEXMAN: Outstanding stream count %d -> %d (%s)
 TIBstc
 TIBstl
 TLPsu
@@ -1538,7 +1540,7 @@ TextureHeader_t
 TextureSpecificationFlags_t
 ThreadInMainThread()
 Too many IDATs found
-Too many color components: %double, max %double
+Too many color components: %d, max %d
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -1551,23 +1553,23 @@ Truncated iTXt chunk
 Truncated zTXt chunk
 Truncating incorrect info tRNS chunk length
 Truncating incorrect tRNS chunk length
-Trying to cast '%short' to signed char different resource type!
-Trying to set dxlevel (%double) which is higher than the card can support (%double)!
-Trying to set dxlevel (%double) which is lower than the card can support (%double)!
+Trying to cast '%s' to a different resource type!
+Trying to set dxlevel (%d) which is higher than the card can support (%d)!
+Trying to set dxlevel (%d) which is lower than the card can support (%d)!
 TypeManager
 UNKNOWN
 UUUUA9
 UUUUUUUUUUUUUUUU0123456789ABCDEF
 UVLX8888
 UVWQ8888
-Unable to stream in resource file "%short" (Error: %short)
+Unable to stream in resource file "%s" (Error: %s)
 Unexpected marker 0x%02x
-Unexpected resource version '%double' for '%short'
-Unhandled field type for field '%short': '%short' (Why did it pass SchemaRecurseType?)
+Unexpected resource version '%d' for '%s'
+Unhandled field type for field '%s': '%s' (Why did it pass SchemaRecurseType?)
 Uninitialized row
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
-Unknown Adobe color transform code %double
+Unknown Adobe color transform code %d
 Unknown compression method in IHDR
 Unknown compression type @1
 Unknown compression type in zTXt chunk
@@ -1576,9 +1578,9 @@ Unknown iTXt compression type or method
 Unknown interlace method in IHDR
 Unknown sRGB intent
 Unknown zlib error
-Unrecognized component IDs %double %double %double, assuming YCbCr
+Unrecognized component IDs %d %d %d, assuming YCbCr
 Unrecognized equation type for pCAL chunk
-Unsupported JPEG data precision %double
+Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported PSD color mode!
 Unsupported color conversion request
@@ -1592,7 +1594,7 @@ UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigne
 VATAp
 VApplication001
 VAvi001
-VB: %double buffers, %.2f MB
+VB: %d buffers, %.2f MB
 VBAllocTracker001
 VBaseFileSystem011
 VBik001
@@ -1623,33 +1625,33 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-VTEX_ExtraDataTypeToRuntime - Unsupported ImageFormat: %double
-VTEX_FormatToRuntime - Invalid VTEX_Format_t: %double
+VTEX_ExtraDataTypeToRuntime - Unsupported ImageFormat: %d
+VTEX_FormatToRuntime - Invalid VTEX_Format_t: %d
 VUUUH
 VUUUL
 V_stristr_fast(char const*, char const*)
 Vector2D
 Vector4D
 VendorID
-Video Card %short (%04x : %04x)
+Video Card %s (%04x : %04x)
 Virtual array controller messed up
 VisBuilder_001
 VsInputSignatureElement_t
 VsInputSignature_t
 Vulkan
-WARNING: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
-WARNING: Exclusive fullscreen did not get requested resolution %double long long %double (currently %double long long %double), trying again
-WARNING: Missing data block for file: %short
-WARNING: Missing introspection manifest for file: %short
-WARNING: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
-WARNING: Problems encounted with external references in resource '%short'. See above for reason(short)
-WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
-WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
-WARNING: Trying to create signed char CRenderContextPtr without signed char valid context.
+WARNING: Could not find schema data for helper class for resource type %lld '%s'. (Missing MDiskDataForResourceType metadata or schema data isn't loaded?)
+WARNING: Exclusive fullscreen did not get requested resolution %d x %d (currently %d x %d), trying again
+WARNING: Missing data block for file: %s
+WARNING: Missing introspection manifest for file: %s
+WARNING: Multiple classes registered as disk data for resource type %lld '%s'. (Should only have one class MDiskDataForResourceType - %d listed above.)
+WARNING: Problems encounted with external references in resource '%s'. See above for reason(s)
+WARNING: Trying to access schema binding '%s' before bindings were registered in this module!
+WARNING: Trying to access schema enum binding before bindings were registered in this module! - %s()
+WARNING: Trying to create a CRenderContextPtr without a valid context.
 WIN32
 WINDOWS
 WINXP
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 Warning: thumbnail image size does not match data length %u
 Warning: unknown JFIF revision number %d.%02d
 Wffff.
@@ -1660,8 +1662,8 @@ WorldRendererMgr001
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
-Wrong JPEG library version: library is %double, caller expects %double
-Wrong alignment %double
+Wrong JPEG library version: library is %d, caller expects %d
+Wrong alignment %d
 X360_DST16
 X360_DST24
 X360_DST24F
@@ -1678,7 +1680,7 @@ Zffffff.
 [A\A]A^A_]A
 [A\A^A_]
 [A^A_]
-[Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
+[Disk class %d/%d] Name = '%s'; Project = '%s'; Binary = '%s'
 \$0E1
 \4`L9
 \sPHi
@@ -1778,10 +1780,8 @@ __common
 __const
 __cstring
 __data
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
-__int128 * nBlockSize >= num
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1834,7 +1834,7 @@ _wcslen
 `[A\A^A_]
 `[A^]
 ````P`
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 aIcO H
 actualMode.HasUsageType()
 alpha
@@ -1859,12 +1859,12 @@ bool PSDReadFileRGBA8888(CUtlBuffer &, Bitmap_t &, bool)
 bool VTEX_InitCreationDescFromHeader(CTextureCreationDesc *, const VTEX_Header_t *)
 buf.IsValid()
 buffer
+c(ffff.
 cfg/moddefaults.txt
 cfg/video.txt
 cfg/video_%02d.txt
 cfg/videodefaults.txt
 channels
-char(ffff.
 compression
 const HardwareCaps_t &CRenderDeviceMgrBase::GetHardwareCaps(int) const
 const ImageFormatInfo_t &ImageLoader::ImageFormatInfo(ImageFormat)
@@ -1901,6 +1901,7 @@ g_pTextureManagerBase == this
 g_pThreadPool
 gamma table being rebuilt
 hResource->m_nRefCount > 0
+h[A\A]A^A_]
 header crc mismatch
 hfffff.
 incorrect data check
@@ -1949,14 +1950,11 @@ invalid window size
 item.m_hTexture == pTexture->m_nInternalHandle.GetResourceHandle()
 l$	ffffff.
 libpng does not support gamma+background+rgb_to_gray
-libpng error: %short
-libpng warning: %short
+libpng error: %s
+libpng warning: %s
 librendersystemempty.dylib
 lineOrder
 localize
-long long >= 0 && long long < m_nWidth
-long long[A\A]A^A_]
-long long[A^A_]
 m_Blobs.IsPeeked()
 m_Count == 0
 m_ElementCount == 0
@@ -1977,7 +1975,7 @@ m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
 m_Memory.IsValidIterator( it )
 m_Memory.IsValidIterator( m_LastAlloc ) || m_ElementCount == 0
 m_NumElements == 0
-m_OcclusionQueryObjects.IsValidIndex( unsigned char )
+m_OcclusionQueryObjects.IsValidIndex( h )
 m_Reflectivity
 m_Root == InvalidIndex()
 m_Sequences
@@ -2043,6 +2041,7 @@ mffff.
 min megabytes
 min megatexels
 min_processor_count
+n * nBlockSize >= num
 n4;fA
 nAdapter == 0
 nAddCapacity < 0x40000000
@@ -2106,7 +2105,7 @@ pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
-pMemory[int] == 0
+pMemory[i] == 0
 pMovedTexture
 pMovedTexture->m_nInternalHandle.m_nData == lastHandle.m_nData
 pName
@@ -2155,6 +2154,8 @@ record.m_hConstantBuffer != CONSTANT_BUFFER_HANDLE_INVALID
 rendersystemempty
 resourceName
 resourcesystem
+s([A^]
+s,fff.
 sAmTb
 sCAL chunk too short
 sPLT chunk has bad length
@@ -2166,7 +2167,7 @@ s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 screenWindowCenter
 screenWindowWidth
-sequence number %double too low in sheet file!!!
+sequence number %d too low in sheet file!!!
 sequential row overflow
 setting.
 setting.CentroidHack
@@ -2197,8 +2198,6 @@ setting.resettodefaults
 setting.shaderquality
 sffffff.
 sheetcachetexture_.vtex
-short([A^]
-short,fff.
 size < 1024 * 1024
 size >= 0
 size_t CTextureBase::ComputeSize(RenderTextureDetail_t) const
@@ -2232,11 +2231,25 @@ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
 std::terminate()
 strnlen
+t ffffff.
+t#fff.
 t$8[A\A^A_]
+t%ffffff.
+t&H9[8tUH
+t&fffff.
+t'ffff.
+t(L;}
+t*ffffff.
+t,Lcq
+t-L9`
 t.fff.
+t/ff.
+t/ffffff.
 t0fffff.
 t7fff.
 t9fffff.
+t:fffff.
+t<fff.
 tCL9}
 tFpLi
 tLMc~
@@ -2246,6 +2259,8 @@ tRNS chunk not allowed with alpha channel
 tSMct$
 tXEtuPL
 tXEtu\L
+t[fff.
+t^D9+uCD9s
 texId.GetPendingStreamingRequestId() == nStreamingRequestId
 texId.HasAnyFlags( TEXTURE_PENDING_ASYNC_REQUEST )
 texSpec.m_nDisplayRectHeight == uncompressedTempBitmap.Height()
@@ -2270,7 +2285,7 @@ u9H9[8t8H
 u=D;{
 u=H9[8t<H
 u?M9d$8t=H
-uFD"long double
+uFD"e
 uFfffff.
 uGetResourceManifest
 uPfAi
@@ -2290,28 +2305,9 @@ unknown
 unknown compression method
 unknown critical chunk
 unknown header flags set
-unsigned char[A\A]A^A_]
-unsigned long long >= 0 && unsigned long long < m_nHeight
-unsigned short ffffff.
-unsigned short#fff.
-unsigned short%ffffff.
-unsigned short&H9[8tUH
-unsigned short&fffff.
-unsigned short'ffff.
-unsigned short(L;}
-unsigned short*ffffff.
-unsigned short,Lcq
-unsigned short-L9`
-unsigned short/ff.
-unsigned short/ffffff.
-unsigned short:fffff.
-unsigned short<fff.
-unsigned short[fff.
-unsigned short^D9+uCD9s
 uvCropped
 uvUncropped
 v0ff.
-vHct
 video.cfg
 virtual CDeviceFence::~CDeviceFence()
 virtual CTextureManagerBase::~CTextureManagerBase()
@@ -2477,10 +2473,14 @@ vtexE1
 vtexH
 vtexL
 vtexu
-w2E;k unsigned short,L
-wchar_t@Hcq
+w2E;k t,L
+w@Hcq
+x >= 0 && x < m_nWidth
+x[A\A]A^A_]
+x[A^A_]
 xffff.
 xs == 0
+y >= 0 && y < m_nHeight
 ys == 0
 zlib memory error
 zlib stream error

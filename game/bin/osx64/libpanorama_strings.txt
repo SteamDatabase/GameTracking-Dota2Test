@@ -19,20 +19,20 @@
 	vrpad_secondary_up
         
          
-                CDefaultKeyValuesErrorSpew
+                26CDefaultKeyValuesErrorSpew
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
-    %4u: %short
+    %4u: %s
     0@
     Actual    : 
-    Component %double: %dhx%dv q=%double
-    Component %double: dc=%double ac=%double
+    Component %d: %dhx%dv q=%d
+    Component %d: dc=%d ac=%d
     Expected  : 
     Field type: 
     P
     P  
-    with %double long long %double thumbnail image
-   %short: %double
+    with %d x %d thumbnail image
+   %s: %d
    0 
   0    
   00      
@@ -43,29 +43,30 @@
   Problem     : 
   Problem     : Enum value did not match field type:
   Problem     : Field is not the right type for this message:
-  std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double, Se=%double, Ah=%double, Al=%double
+  Ss=%d, Se=%d, Ah=%d, Al=%d
  !"#$%
  !"#$%&'()*+,-./0123
- %short %short
- '%short'
- '%short' 
+ %s %s
+ '%s'
+ '%s' 
  ,)(;
  .!p*
  0@@P`
  0@P`p
- ;{}:repeat-long long
+ ;{}:repeat-x
  = { <proto text format> }". To set fields within it, use syntax like "
- Average %short commands per frame: %u, %u bytes
- F;long  |
+ Average %s commands per frame: %u, %u bytes
+ F;l  |
  Outdent() without matching Indent().
  ReadToken overflow
- Tokenizer::ParseFloat() passed text that could not have been tokenized as signed char float: 
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as signed char string: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [$0]
  [A\A^A_]
  [A^]
  [default = $0
+ a protocol 
  args were given.  Full format string was: "
  but running with 
  contains invalid 
@@ -82,21 +83,20 @@
  of type 
  parent-relative
  pp@pp
- signed char protocol 
  t.Ic~DH
 ! Description
 ! Event
 ! Panel Event
-!! (%short, line:%double, col:%double) - %short
-!! (undefined:0) - %short
-!! Exception trying to get body JSON in ajax response for %short
-!! Exception trying to get body in ajax response for %short
-!! Exception trying to parse JSON in ajax response for %short
-!! WARNING: Panorama couldn'unsigned short fetch all remote css included by %short, panel %short won'unsigned short have correct layout loaded
-!! WARNING: Panorama couldn'unsigned short fetch or got 0 byte result for layout %short, panel %short won'unsigned short have correct layout loaded
-!! WARNING: Panorama couldn'unsigned short read or parse %short, panel %short won'unsigned short have correct layout loaded
-!! Warning: Invalid 'timeout' param (not signed char number) to AsyncWebRequest, using default timeout
-!! Warning: Invalid 'type' param %short to AsyncWebRequest, defaulting to GET
+!! (%s, line:%d, col:%d) - %s
+!! (undefined:0) - %s
+!! Exception trying to get body JSON in ajax response for %s
+!! Exception trying to get body in ajax response for %s
+!! Exception trying to parse JSON in ajax response for %s
+!! WARNING: Panorama couldn't fetch all remote css included by %s, panel %s won't have correct layout loaded
+!! WARNING: Panorama couldn't fetch or got 0 byte result for layout %s, panel %s won't have correct layout loaded
+!! WARNING: Panorama couldn't read or parse %s, panel %s won't have correct layout loaded
+!! Warning: Invalid 'timeout' param (not a number) to AsyncWebRequest, using default timeout
+!! Warning: Invalid 'type' param %s to AsyncWebRequest, defaulting to GET
 !! Warning: Invalid 'type' param undefined to AsyncWebRequest, defaulting to GET
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
@@ -106,12 +106,12 @@
 !"Invalid source2 mouse code"
 !"Not supported"
 !"Unsupported file resource type"
-!"You can'unsigned short interpolate signed char font"
-!"You can'unsigned short interpolate signed char letter-spacing"
-!"You can'unsigned short interpolate signed char line height"
-!"You can'unsigned short interpolate signed char text-align"
-!"You can'unsigned short interpolate signed char text-decorations"
-!"You can'unsigned short interpolate signed char text-transform"
+!"You can't interpolate a font"
+!"You can't interpolate a letter-spacing"
+!"You can't interpolate a line height"
+!"You can't interpolate a text-align"
+!"You can't interpolate a text-decorations"
+!"You can't interpolate a text-transform"
 !"curve parameters are not defined"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
@@ -175,26 +175,26 @@
 " has not been loaded.
 " imports "
 " in type "
-" is already defined (as something other than signed char package) in file "
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
 " is already defined in "
 " is already defined in file "
 " is already defined.
-" is an atomic type, not signed char message.
+" is an atomic type, not a message.
+" is not a field or extension of message "
+" is not a message type.
+" is not a type.
+" is not a valid identifier.
 " is not an enum type.
 " is not defined or is not an extension of "
 " is not defined.
-" is not signed char field or extension of message "
-" is not signed char message type.
-" is not signed char type.
-" is not signed char valid identifier.
 " is resolved to "
 " is resolved to "(
-" is signed char message. To set the entire message, use syntax like "
-" is signed char repeated message. Repeated message options must be initialized using an aggregate value.
 " is specified along with field "
 " is specified multiple times.
 " must be unique within 
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn'unsigned short be possible.
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " seems to be defined in "
 " unknown.
 " uses the same enum value as "
@@ -211,19 +211,19 @@
 ", another member of oneof "
 ", but only 
 ", found "
-", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., ".
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
-". This appears to be signed char value from signed char sibling type.
+". This appears to be a value from a sibling type.
 ". Value: "
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
 "2BRbr
 "MutableRawRepeatedField"
+"e" must be followed by exponent.
 "ffff.
 "fffff.
-"long double" must be followed by exponent.
 #%02X%02X%02X%02X
 #3CScs
 #CLD	
@@ -286,12 +286,13 @@ $0$1 = $2
 $0$1$2 $3 = $4
 $0enum $1 {
 $0option $1;
+$4DTdt
 $6.:$6.:
 $;AHr2
 $;AHr5
 $;AHs
 $;JHA
-$D)unsigned char H
+$D)h H
 $E3L$
 $HcA H
 $IcUHI
@@ -302,69 +303,69 @@ $ffff.
 $fffff.
 $ffffff.
 %.18g
-%02d%short
+%02d%s
 %02d:%02d
 %1.1f
 %5EUeu
 %IcT$HI
-%d.%d.%double
-%double %short
-%double JS File(short)
-%double Layout(short)
-%double Style(short)
-%double:%02d:%02d
+%d %s
+%d JS File(s)
+%d Layout(s)
+%d Style(s)
+%d.%d.%d
+%d:%02d:%02d
 %ffff.
 %fffff.
-%int %int %int %int
-%ld%char
-%llu Composition layer clears (%.f pf): %llu for content, %llu for blurs, %llu for callbacks, %llu for frame begin/end
-%llu Render target binds (%.f pf): %llu for content, %llu for drawing, %llu for blurs, %llu for callbacks, %llu for frame begin/end
+%i %i %i %i
+%ld%c
+%llu Composition layer clears (%.1f pf): %llu for content, %llu for blurs, %llu for callbacks, %llu for frame begin/end
+%llu Render target binds (%.1f pf): %llu for content, %llu for drawing, %llu for blurs, %llu for callbacks, %llu for frame begin/end
 %llu content composition layers used (%.2f pf), %llu reused from cache, %llu internal composition layers used (%llu for blurs)
 %llu layers from free list, %llu allocated
-%llu render callbacks (%.f pf)
+%llu render callbacks (%.1f pf)
+%s %s
+%s %s 
+%s GetMode == NULL? Can't Render
+%s allocation count overflow
+%s allocation count overflow( %llu > %llu )
+%s allocation count overflow( %llu >= %llu )
+%s called on fill brush type %d
+%s is not a valid panel event
+%s is trying to import %s, but that file has already been included either from the layout file directly, or from a different @import.
+%s property listed in a keyframe but marked as cannot transition
+%s repaint %s for '%s' (%s)
+%s shaders not ready. Can't Render
+%s was not pre-cached during layout file load, which shouldn't happen
+%s#%s - %s
+%s#%s - script run in context
+%s/%s
+%s/%s_%s.txt
+%s/panorama_%s.txt
+%s: string format requested %d chars
+%s://%s%s
+%s://%s.valvesoftware.com%s
+%s://127.0.0.1%s
+%s://localhost%s
+%s=0;expires=Thu, 01-Jan-1970 00:00:01 GMT;
 %sToday
 %sTomorrow
 %sYesterday
+%s[%i]
+%s[%s]
 %sdeg
-%short %short
-%short %short 
-%short GetMode == NULL? Can'unsigned short Render
-%short allocation count overflow
-%short allocation count overflow( %llu > %llu )
-%short allocation count overflow( %llu >= %llu )
-%short called on fill brush type %double
-%short is not signed char valid panel event
-%short is trying to import %short, but that file has already been included either from the layout file directly, or from signed char different @import.
-%short property listed in signed char keyframe but marked as cannot transition
-%short repaint %short for '%short' (%short)
-%short shaders not ready. Can'unsigned short Render
-%short was not pre-cached during layout file load, which shouldn'unsigned short happen
-%short#%short - %short
-%short#%short - script run in context
-%short/%s_%s.txt
-%short/%short
-%short/panorama_%s.txt
-%short: string format requested %double chars
-%short://%s.valvesoftware.com%short
-%short://%short%short
-%short://127.0.0.1%short
-%short://localhost%short
-%short=0;expires=Thu, 01-Jan-1970 00:00:01 GMT;
-%short[%int]
-%short[%short]
 %spublic/shared/
-%sweb%short%short
-%sweb/shared/public/%short
+%sweb%s%s
+%sweb/shared/public/%s
 &6FVfv
 &IcMHI
-&N''iN''int
+&N''iN''i
 &bufData == &m_bufData
 &ffff.
 &ffffff.
-&long long	nY
-&lt;Needs signed char description&gt;
+&lt;Needs a description&gt;
 &qt != &q
-'&&unsigned char#
+&x	nY
+'&&h#
 '7GWgw
 'bQvE
 'u0Ic
@@ -374,7 +375,7 @@ $ffffff.
 ( eLang + 1 ) >= 0
 ( texture.hRenderTextureY.IsValid() && texture.hRenderTextureY.IsLoaded() ) && ( texture.hRenderTextureU.IsValid() && texture.hRenderTextureU.IsLoaded() ) && ( texture.hRenderTextureV.IsValid() && texture.hRenderTextureV.IsLoaded() )
 ((CUIPanel*)pParent)->m_bLoadedLayoutFile
-(*%short*), 
+(*%s*), 
 (8HXhx
 (GetChar()) == (0)
 (IcD$0A
@@ -401,11 +402,11 @@ $ffffff.
 (uEHcK
 (undefined)
 (unset)
-(unset) wchar_t/parent: %short
+(unset) w/parent: %s
 (void *)m_pObject != NULL
-)", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., "(.
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-)6(long long-
+)6(x-
 )9IYiy
 )D$ fE
 )D$0fE
@@ -420,23 +421,23 @@ $ffffff.
 )ffff.
 )fffff.
 )|,?*+
-*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
-**** DesiredLayoutSizeTraverse for panel %short failed to handle both height and width percentage.
-**** Failed to parse panel event in file=%short, event=%short: %short
-**** Failed to parse panel event in file=%short, snippet=%short, event=%short: %short
-**** Failed to parse panel event when creating children from string, event=%short: %short
-**** Failed to parse panel property %short: %short
-**** Invalid overscroll-long long value in layout file
-**** Invalid overscroll-unsigned long long value in layout file
+*** ConCommand "%s" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
+**** DesiredLayoutSizeTraverse for panel %s failed to handle both height and width percentage.
+**** Failed to parse panel event in file=%s, event=%s: %s
+**** Failed to parse panel event in file=%s, snippet=%s, event=%s: %s
+**** Failed to parse panel event when creating children from string, event=%s: %s
+**** Failed to parse panel property %s: %s
+**** Invalid overscroll-x value in layout file
+**** Invalid overscroll-y value in layout file
 **** Invalid selectionpos value in layout file
 **** Invalid tabindex value in layout file
-**** Panel %short has both height-percentage and width-percentage
-**** Panel %short has fill-parent-flow for height, but isn'unsigned short in signed char flowing down or up layout
-**** Panel %short has fill-parent-flow for width, but isn'unsigned short in signed char flowing right layout
-**** Unable to localize '#%short' on panel '%short'
-**** Unable to localize '#%short' on panel descendant of '%short'
-***** Parsing error on %short(%u): 
+**** Panel %s has both height-percentage and width-percentage
+**** Panel %s has fill-parent-flow for height, but isn't in a flowing down or up layout
+**** Panel %s has fill-parent-flow for width, but isn't in a flowing right layout
+**** Unable to localize '#%s' on panel '%s'
+**** Unable to localize '#%s' on panel descendant of '%s'
+***** Parsing error on %s(%u): 
 *:JZjz
 *?#1*?#1
 *ffff.
@@ -448,16 +449,16 @@ $ffffff.
 +fffff.
 +ffffff.
 +|1(A
+, %s )
 , %sdeg
 , %sdeg )
-, %short )
-, '%short' 
+, '%s' 
 , L+*
 , from:
 , not just within "
 ,$D)kP
-,9O;long
-,<L\long|
+,9O;l
+,<L\l|
 ,@  `@  `
 ,C(A9
 ,H=vcssu$M
@@ -465,10 +466,10 @@ $ffffff.
 ,ffff.
 ,ffffff.
 ,u	Ic
-- %short (%double refs)
+- %s (%d refs)
 -----------------------------------------------------------------------
 --stack-size=384
--=M]unsigned long}
+-=M]m}
 -all_languages
 -ffff.
 -noime
@@ -486,22 +487,19 @@ $ffffff.
 -sse4
 -use_panel_id_in_rt_name
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-...(;unsigned long long(H
-...-index
-...==...imaginary ==G
 ../include/libparsifal/optcfg.h
-.>N^__int128~
+.>N^n~
 .ETv*H
 .Elv*H
-.F u'...%
+.F u'z%
 .F uJzH
-.F u]...[
+.F u]z[
 .F(u3z1
 .F(uFzD
 .F(utzr
 .F0u[zY
 .F0u|zzH
-.F4u)...'
+.F4u)z'
 .F4u[zYH
 .F8u:z8H
 .FDupzn
@@ -510,7 +508,7 @@ $ffffff.
 .G(uVzT
 .G,uGzE
 .G0u8z6
-.GHu`...^
+.GHu`z^
 .GLuQzO
 .GPuBz@
 .GTu3z1
@@ -660,10 +658,10 @@ $ffffff.
 0A;uHu
 0A;u`u
 0A;uxu
+0A;v(u
 0A;v0u
 0A;vHu
-0A;void(u
-0A;void`u
+0A;v`u
 0A;vxu
 0D;{ |
 0P00@
@@ -674,19 +672,63 @@ $ffffff.
 1.5.13
 1.5.2
 1024_
+10ConCommand
+10IAppSystem
+10IIMEUIView
+11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+11IRefCounted
 120.0f
 123456789
+12CEmptyConVar
+12CRefCounted1I12IVideoPlayer20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1IN8panorama10IUITextureE20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1IN8panorama24IUIDoubleBufferedTextureE20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1IN8panorama30IUIDoubleBufferedYUV420TextureE20CRefCountServiceBaseILb1E6CRefMTEE
+12IIMEUIObject
+12IVideoPlayer
+13CCallbackBase
+14CBaseAppSystemI17IPanoramaUIEngineE
+14ConCommandBase
+15CMemberFunctor4IPN8panorama20CSource2UIFileSystemEMS1_FvP17IAsyncFileRequestPKcP10CUtlBuffer12CUtlDelegateIFvS6_RS7_bEEES4_S6_S8_SC_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
+15CNoOpFileSystem
+15CTier0AppSystemI17IPanoramaUIEngineE
+15CTier1AppSystemI17IPanoramaUIEngineLi0EE
+15CTier2AppSystemI17IPanoramaUIEngineLi0EE
+15CTier3AppSystemI17IPanoramaUIEngineLi0EE
+16CDefaultAccessor
+17CPanoramaUIEngine
+17EVideoPlayerEvent
+17IPanoramaUIEngine
+19CDragStartCallbacks
+19IKeyValuesErrorSpew
 1HcDu
 1_enc
 1fffff.
 1ffffff.
+20CMultipleCallResultsIN8panorama16CLoadFileURLTaskE22HTTPRequestCompleted_tE
+20CMultipleCallResultsIN8panorama16CReloadStyleFileE22HTTPRequestCompleted_tE
+20CMultipleCallResultsIN8panorama18CJSAsyncWebRequestE22HTTPRequestCompleted_tE
+20CMultipleCallResultsIN8panorama20CLoadLayoutFileAsyncE22HTTPRequestCompleted_tE
+20CMultipleCallResultsIN8panorama9CUIEngineE22HTTPRequestCompleted_tE
+20CPanoramaTypeManager
+20CPostConnectCallback
+20CRefCountServiceBaseILb1E6CRefMTE
+20IResourceTypeManager
+22CSchemaInstallCallback
+22IToolsResourceListener
+23IConCommandBaseAccessor
 256_enc
+25IVideoPlayerAudioCallback
+25IVideoPlayerEventCallback
+25IVideoPlayerVideoCallback
+26IRenderDeviceEventListener
 29C |.
 29K }
 2fffff.
 3,$D!
 333333
-33s?33s?33s?33s?double
+33s?33s?33s?33s?d
 3A$3A
 3A(3A<3A4
 3A;v8u
@@ -719,6 +761,7 @@ $ffffff.
 3T$,!
 3T$,D
 3T$,G
+3T$0!
 3T$0D
 3T$0G
 3T$4A
@@ -756,8 +799,10 @@ $ffffff.
 3l$,D!
 3l$,D1
 3l$,F
+3l$0!
 3l$0D
 3l$0F
+3l$4!
 3l$4F
 3l$81
 3l$8D
@@ -770,21 +815,31 @@ $ffffff.
 49S |}
 4@fffff.
 4A;t$8u
-4B;unsigned short;
+4B;t;
 4Hr>1
-4dE;wchar_t
+4dE;w
 4fffff.
+4vHct
 512_block_data_order
 5A;t$0u
 5A;t$pu
+5CSHA1
 5basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
 5ffffff.
 6-9'6-9'
 60.0f
+6ConVar
 6[A\A^A_]
 6[A^]
+6fffff.
+7IConVar
 7bad_function_callE
 7ffff.
+8CFmtStrNILi1024ELb0EE
+8CFmtStrNILi256ELb0EE
+8CFmtStrNILi4096ELb0EE
+8CFmtStrNILi512ELb0EE
+8CFunctor
 8F9,!
 8H9\1
 8Hct2
@@ -804,27 +859,27 @@ $ffffff.
 97t"H
 99t'H
 99tDH
-9;unsigned short"H
-9;unsigned short#H
-9;unsigned short)H
-9;unsigned short/H
-9>unsigned short"H
-9>unsigned short)H
-9>unsigned short/H
+9;t"H
+9;t#H
+9;t)H
+9;t/H
+9>t"H
+9>t)H
+9>t/H
 9CLu$9KHu
-9S |signed char
-9S |unsigned int
+9S |a
+9S |j
 9W(}!H
 9basic_ostringstreamIwNS_11char_traitsIwEENS_9allocatorIwEEEE
 9fffff.
 9ffffff.
 9q||5H
-: Protocol message serialized to signed char size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
-: Tried to copy from signed char message with signed char different type. to: 
-: Tried to merge from signed char message with signed char different type.  to: 
+: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
 :88888888
 :H=vpdit
-:char|wchar_t{
+:c|w{
 ;A }(
 ;AHr 
 ;AHr!
@@ -842,13 +897,13 @@ $ffffff.
 ;K(u,I
 ;K(u-I
 ;K(uNI
-;L$ float
+;L$ f
 ;L$$H
 ;L$$f
 ;L$(H
-;L$(float
+;L$(f
 ;L$,H
-;L$,float
+;L$,f
 ;L$0H
 ;L$4H
 ;L$8H
@@ -869,7 +924,7 @@ $ffffff.
 </Panel></root>
 </pre>
 </script>
-<E;}
+<1E;}
 <NULL>
 <fff.
 <ffff.
@@ -880,21 +935,21 @@ $ffffff.
 <string conversion failed>
 <unknown>
 <unnamed>
-=== %short ===
-=> %short
+=== %s ===
+=> %s
 >8$4,8$4,
 >L97t-H
+>N8panorama14IUIWindowInputE
 >^//q^//q
 >fffff.
 >ffffff.
->panorama::IUIWindowInput
 >t$Hcz
 >uefI
 >ukfI
 ?333333
 ?456789:;<=
+?N8panorama14IUISoundSystemE
 ?ffffff.
-?panorama::IUISoundSystem
 @ A;@
 @ pppppp
 @(!!!P
@@ -902,7 +957,8 @@ $ffffff.
 @(IcL$,H
 @0    
 @0!!!P
-@8D)unsigned char
+@25ITextureResidencyListener
+@8D)h
 @@       0
 @@@@pp
 @@B;\
@@ -941,7 +997,6 @@ $ffffff.
 @DevMsg(char const*, ...)
 @GenericThreadLocals::CThreadLocalBase::CThreadLocalBase()
 @GenericThreadLocals::CThreadLocalBase::~CThreadLocalBase()
-@ITextureResidencyListener
 @L+H0
 @L+H0I
 @L+H0L
@@ -949,7 +1004,7 @@ $ffffff.
 @LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 @M96u/H
-@M;__float128 
+@M;g 
 @P@P`
 @PI;@XtAI
 @V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
@@ -999,6 +1054,7 @@ $ffffff.
 @_LoggingSystem_RegisterLoggingChannel
 @_MemAlloc_AllocFunc
 @_MemAlloc_FreeFunc
+@_Msg
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
 @_Plat_DebugPrint
@@ -1154,7 +1210,6 @@ $ffffff.
 @___tolower
 @___toupper
 @___vsnprintf_chk
-@__float128 short::*
 @_abort
 @_ceilf
 @_closedir
@@ -1255,7 +1310,7 @@ $ffffff.
 @define
 @define missing colon
 @define missing semicolon
-@define name is invalid (use A-Z,signed char-...,_-): %short
+@define name is invalid (use A-Z,a-z,_-): %s
 @dyld_stub_binder
 @executable_path/libv8.dylib
 @ffff.
@@ -1506,10 +1561,10 @@ $ffffff.
 @vtable for __cxxabiv1::__si_class_type_info
 @vtable for __cxxabiv1::__vmi_class_type_info
 A file with this name is already in the pool.
-A float representing signed char scale factor for transitions. 1.0 is normal, .0 would be twice as fast as normal, 0.5 half as fast
-A panel must be created within signed char window.
+A float representing a scale factor for transitions. 1.0 is normal, 2.0 would be twice as fast as normal, 0.5 half as fast
+A panel must be created within a window.
 A protocol message was rejected because it was too big (more than 
-A style file cannot import itself: %short trying to import '%short'
+A style file cannot import itself: %s trying to import '%s'
 A!;I2
 A(3A<3A
 A+D$$Hc
@@ -1553,8 +1608,8 @@ A;H(t.M
 A;L$`
 A;M(L
 A;M(u
+A;N(t
 A;N(u2A
-A;N(unsigned short
 A;NLu
 A;Npu
 A;X(uTD
@@ -1576,7 +1631,7 @@ A;]T|iL
 A;]T|pL
 A;]T}
 A;]X|
-A;]long long|
+A;]x|
 A;^ |
 A;^(u
 A;^(|
@@ -1586,9 +1641,9 @@ A;^8|
 A;^@|
 A;^H|
 A;^X|
-A;^long long|
+A;^h|
 A;^p|
-A;^unsigned char|
+A;^x|
 A;_ |
 A;_(|
 A;_0|
@@ -1603,7 +1658,7 @@ AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 ALIGN_TYPE is wrong, please fix
 ALLOW_DUPES || iMap == m_Layers.InvalidIndex()
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 APtdf
 ARAUAp
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBWAp
@@ -1664,8 +1719,8 @@ Accepted
 ActivateMainWindow
 Activated
 ActiveControllerTypeChanged
-Add signed char CSS class to all children of this panel.
-Add signed char CSS class to signed char panel.
+Add a CSS class to a panel.
+Add a CSS class to all children of this panel.
 AddBool
 AddDouble
 AddEnum
@@ -1678,20 +1733,20 @@ AddStyle
 AddStyleToEachChild
 AddUInt32
 AddUInt64
-Adobe APP14 marker: version %double, flags 0x%04x 0x%04x, transform %double
+Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 AkFpd
 AkFtd
 AlignValue( ( intp )pExternalMem, 16 ) == ( intp )pExternalMem
 AlignValue( m_pFirstBlock->m_nBytesFree, 16 ) == m_pFirstBlock->m_nBytesFree
 AlignValue( nBlockSize, 16 ) == nBlockSize
-All included files need to be lower cased: %short
-All variables removed from string %short, not supported
+All included files need to be lower cased: %s
+All variables removed from string %s, not supported
 AllowOversized
-Already loaded (or loading) signed char layout file for this panel
-Already loaded signed char layout file for this panel
-Already saw decimal point or exponent; can'unsigned short have another one.
+Already loaded (or loading) a layout file for this panel
+Already loaded a layout file for this panel
+Already saw decimal point or exponent; can't have another one.
 An error occurred while replacing defines @define value
-An error occurred while replacing defines in property value (property=%short)(value=%short)
+An error occurred while replacing defines in property value (property=%s)(value=%s)
 AnimGraphEditorUtils001
 Animate FPS:
 Animate FPS:	%1.2f
@@ -1703,8 +1758,8 @@ AppendChildrenFromLayoutFileAsync
 Application built with libpng-
 Application transferred too few scanlines
 Application transferred too many scanlines
-Applies an image as an opacity mask that stretches to the panel bounds and fades out it'short content based on the alpha channel. The second float value is an optional opacity value for the mask itself, the image won'unsigned short interpolate/cross-fade, but you can animate the opacity to fade the mask in/out. The -scroll-up, -scroll-down, and -scroll-up-down varients override the mask and apply only when the various vertical scroll scenarios affect the panel based on the overflow property.<br><br><bool>Examples:</bool><pre>opacity-mask: url( "file://{images}/upper_row_mask.tga" );
-Argument %int to %short for event %short could not be converted to signed char string for parsing
+Applies an image as an opacity mask that stretches to the panel bounds and fades out it's content based on the alpha channel. The second float value is an optional opacity value for the mask itself, the image won't interpolate/cross-fade, but you can animate the opacity to fade the mask in/out. The -scroll-up, -scroll-down, and -scroll-up-down varients override the mask and apply only when the various vertical scroll scenarios affect the panel based on the overflow property.<br><br><b>Examples:</b><pre>opacity-mask: url( "file://{images}/upper_row_mask.tga" );
+Argument %i to %s for event %s could not be converted to a string for parsing
 Arial
 Arithmetic table 0x%02x was not defined
 AssetBrowserSystem_001
@@ -1716,11 +1771,11 @@ AsyncPanoramaQuitWithError
 AsyncPanoramaSurfaceLost
 AsyncPanoramaSurfaceReturned
 AsyncWebRequest
-AsyncWebRequest attempted across domain (layout:%short url:%short) blocked.
+AsyncWebRequest attempted across domain (layout:%s url:%s) blocked.
 AsyncWebRequest requires 2 params, url and settings key->value object
 AsyncWebRequest requires steam to be running
-At marker 0x%02x, recovery action %double
-Attempt to remove unknown custom Dialog Variable Handler! '%short'
+At marker 0x%02x, recovery action %d
+Attempt to remove unknown custom Dialog Variable Handler! '%s'
 AutoReloadFailedLayoutReloads
 Ayn M
 AynT$
@@ -1743,12 +1798,12 @@ Azoy`
 A~oU0
 A~oUHI
 A~oUx
+A~o[ 
+A~o](I
+A~o]p
 A~ou8gI
 A~ouP
 A~ouhI
-A~unsigned __int128[ 
-A~unsigned __int128](I
-A~unsigned __int128]p
 B0D;H
 B9|3(u*
 B;L0(
@@ -1761,32 +1816,32 @@ BRBVBRBTA`
 BRBYARB
 BResizeImageRGBA
 BStylesDirty()
-BUG: long double restrict unsigned __int128::* commands after receiving k_EEndFrame.
+BUG: More commands after receiving k_EEndFrame.
 BZBRBZBRBZBRBZBRBZBRAp
-BackUp() can only be called after signed char successful Next().
+BackUp() can only be called after a successful Next().
 Backing store not supported
 Bad Gateway
 Bad Request
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
-Badly formed dialog var, format is {__float128:type:name} '%short'
-Badly formed dialog var, format is {type:name} '%short'
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
+Badly formed dialog var, format is {g:type:name} '%s'
+Badly formed dialog var, format is {type:name} '%s'
 BakedLODBuilderMgr001
 BeginDebuggerInspect
 BenchmarkService001
 Bffff.
 BinaryProperties_GetValue
-Bogus DAC index %double
-Bogus DAC value 0x%long long
-Bogus DHT index %double
-Bogus DQT index %double
+Bogus DAC index %d
+Bogus DAC value 0x%x
+Bogus DHT index %d
+Bogus DQT index %d
 Bogus Huffman table definition
 Bogus JPEG colorspace
 Bogus buffer control mode
 Bogus input colorspace
 Bogus marker length
-Bogus message code %double
+Bogus message code %d
 Bogus sampling factors
 Bogus virtual array access
 Boolean default must be true or false.
@@ -1795,7 +1850,7 @@ BrowserGoToURL
 Buffer error in compressed datastream
 Buffer passed to JPEG library is too small
 Bulgarian
-Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
 B}YU 
 B}YW@
 B}Y_ 
@@ -1809,39 +1864,26 @@ C,A;F,u[
 C0+K,9
 C0[A\A^A_]
 C4A;F4uFA
-C8L;long double
+C8L;e
 C8[A^]
 C;\40u
-C;|%,uBK;unsigned short% unsigned short?I
+C;|%,uBK;t% t?I
 C@H+X0H
 C@L+X0L
 CAnimationParticleSystem::RunSystem
 CAnimationParticleSystem::SerializeParticles
-CBaseAppSystem<IPanoramaUIEngine>
 CCIR601 sampling not implemented yet
-CCallbackBase
 CCurrencyAmount &panorama::CPanelKeyValue::Amount()
-CDefaultAccessor
-CDragStartCallbacks
-CEmptyConVar
 CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
 CFiber::ReachedZeroReferences()
 CFiber::SetThreadFiberMemoryRange(unsigned long)
-CFieldPathHuffmanEncoder::INode
-CFieldPathHuffmanEncoder::InternalNode
-CFieldPathHuffmanEncoder::LeafNode
-CFmtStrN<1024, false>
 CFmtStrN<1024, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CFmtStrN<4096, false>
 CFmtStrN<4096, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 4096, QUIET_TRUNCATION = false]
-CFmtStrN<512, false>
 CFmtStrN<512, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 512, QUIET_TRUNCATION = false]
-CFunctor
 CGamepadController::ProcessRemoteInput
 CGamepadController::RunFrame
-CHD;long long
+CHD;x
 CHECK failed: !checkpoints_.empty(): 
 CHECK failed: !coded_out.HadError(): 
 CHECK failed: !extension->is_repeated: 
@@ -1973,7 +2015,7 @@ CImageResourceManager::LoadImageInternal
 CImageResourceManager::LoadLocalFileSynchronous
 CImageResourceManager::LoadLocalFileSynchronous()
 CJobJSAsyncWebRequest - parse JSON to V8 object
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CLayoutFile::BLoadFromBuffer
 CLayoutFileXMLParser::BAddPanel
 CLocalization::CheckPanelNeedsLocUpdate
@@ -1983,13 +2025,6 @@ CLocalization::ResolveDialogVariable
 CLocalization::SetLongestStringForToken
 CLocalizationStringDialogVariablesDerived::Recalculate
 CLocalizationStringSimple::Recalculate
-CMemberFunctor4<panorama::CSource2UIFileSystem*, void (panorama::CSource2UIFileSystem::*)(IAsyncFileRequest*, char const*, CUtlBuffer*, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>), IAsyncFileRequest*, char const*, CUtlBuffer*, CUtlDelegate<void (char const*, CUtlBuffer&, bool)>, CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >, CFuncMemPolicyNone>
-CMultipleCallResults<panorama::CJSAsyncWebRequest, HTTPRequestCompleted_t>
-CMultipleCallResults<panorama::CLoadFileURLTask, HTTPRequestCompleted_t>
-CMultipleCallResults<panorama::CLoadLayoutFileAsync, HTTPRequestCompleted_t>
-CMultipleCallResults<panorama::CReloadStyleFile, HTTPRequestCompleted_t>
-CMultipleCallResults<panorama::CUIEngine, HTTPRequestCompleted_t>
-CNoOpFileSystem
 COLORCORRECTION_VERSION_1
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
@@ -2003,37 +2038,25 @@ CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPanel2D tried to create child and failed
 CPanel2D::RemoveClasses - apply old dirty styles
-CPanel2DFactory::CreatePanelInternal called on panel wchar_t/unsigned __int128 signed char creation function
+CPanel2DFactory::CreatePanelInternal called on panel w/o a creation function
 CPanelStyle::GetInterpolatedMaxWidth
 CPanelStyle::GetInterpolatedPosition
 CPanelStyle::SetPanelLayoutFlagsForTransitionAnimation()
-CPanoramaTypeManager
-CPanoramaUIEngine
-CPostConnectCallback
 CRC error
 CRDUCSBRARA
-CRefCountServiceBase<true, CRefMT>
-CRefCounted1<CFunctor, CRefCountServiceBase<true, CRefMT> >
-CRefCounted1<IVideoPlayer, CRefCountServiceBase<true, CRefMT> >
-CRefCounted1<panorama::IUIDoubleBufferedTexture, CRefCountServiceBase<true, CRefMT> >
-CRefCounted1<panorama::IUIDoubleBufferedYUV420Texture, CRefCountServiceBase<true, CRefMT> >
-CRefCounted1<panorama::IUITexture, CRefCountServiceBase<true, CRefMT> >
-CRefCounted<CRefCountServiceBase<true, CRefMT> >
 CReloadStyleFile only expects to be called for http paths
-CSHA1
-CSchemaInstallCallback
 CSource2Surface::BCreateDeviceResources()
-CSource2Surface::DrawFancyQuad() GetMode == NULL? Can'unsigned short Render
-CSource2Surface::DrawFancyQuad() Mode passes != 1? Can'unsigned short Render
+CSource2Surface::DrawFancyQuad() GetMode == NULL? Can't Render
+CSource2Surface::DrawFancyQuad() Mode passes != 1? Can't Render
 CSource2Surface::PopCompositingLayer hit with no layers, mismatched push/pop?
-CSource2UITexture(): Image format %double not supported.
+CSource2UITexture(): Image format %d not supported.
 CSteamGameController::GotWindowFocus
 CSteamGameController::RunFrame
 CStyleFile::BLoadFromBuffer
 CStyleFileSet::BContainsStyleFile
-CStylePropertyFactory:  Factory for '%short' already exists!!!!
-CStylePropertyFactory::CreateStylePropertyInternal called on panel wchar_t/unsigned __int128 signed char creation function
-CStylePropertyFactory::FreeStylePropertyInternal called on panel wchar_t/unsigned __int128 signed char free function
+CStylePropertyFactory:  Factory for '%s' already exists!!!!
+CStylePropertyFactory::CreateStylePropertyInternal called on panel w/o a creation function
+CStylePropertyFactory::FreeStylePropertyInternal called on panel w/o a free function
 CStyleSymbol must become larger, cannot fit all style properties in uint8 anymore
 CTA`EBUATAp
 CTSListBase: Misaligned list
@@ -2079,10 +2102,6 @@ CThreadSemaphore::Release(int, int*)
 CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IPanoramaUIEngine>
-CTier1AppSystem<IPanoramaUIEngine, 0>
-CTier2AppSystem<IPanoramaUIEngine, 0>
-CTier3AppSystem<IPanoramaUIEngine, 0>
 CTopLevelWindow - ApplyStyles
 CTopLevelWindow - PaintEmptyFrame
 CTopLevelWindow::PaintIfNeeded 
@@ -2155,32 +2174,32 @@ CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 CVertexDataBase<Source2FancyQuadVertex_t>::~CVertexDataBase() [T = Source2FancyQuadVertex_t]
 CVertexDataBase<Source2VertexTextured_t>::~CVertexDataBase() [T = Source2VertexTextured_t]
-CXH;C`short*H
+CXH;C`s*H
 Cache-Control
-Call signed char function on each given item
+Call a function on each given item
 Call to NULL read function
 Called CCompositionLayer::PopClipLayer with no clip layers pushed
 Called CCompositionLayer::PopTransformMatrix with no matrix pushed
 Called GetInterpolatedProperty but there is no transition or base property value...
 Camellia for x86_64 by <appro@openssl.org>
-Can'unsigned short 
-Can'unsigned short compare two CStylePropertyTransform3D that have been interpolated
-Can'unsigned short decrease number of stops!
-Can'unsigned short delete signed char panel not contained within signed char window.
-Can'unsigned short get here.
-Can'unsigned short get here: failed to get default value as string
-Can'unsigned short load signed char snippet if no layout file is loaded.
-Can'unsigned short set both read_data_fn and write_data_fn in the same structure
+Can't 
+Can't compare two CStylePropertyTransform3D that have been interpolated
+Can't decrease number of stops!
+Can't delete a panel not contained within a window.
+Can't get here.
+Can't get here: failed to get default value as string
+Can't load a snippet if no layout file is loaded.
+Can't set both read_data_fn and write_data_fn in the same structure
 CancelScheduled
 CancelScheduled() must be called with 1 argument
 Cancelled
-Cancelse signed char scheduled function
+Cancelse a scheduled function
 Cannot allocate buffer larger than kint32max for 
-Cannot quantize more than %double color components
-Cannot quantize to fewer than %double colors
-Cannot quantize to more than %double colors
-Cannot set signed char property alias to undefined, only signed char base property, we don'unsigned short support unset of alias alone
-Cannot transcode due to multiple use of quantization table %double
+Cannot quantize more than %d color components
+Cannot quantize to fewer than %d colors
+Cannot quantize to more than %d colors
+Cannot set a property alias to undefined, only a base property, we don't support unset of alias alone
+Cannot transcode due to multiple use of quantization table %d
 Capture interface already registered for this panel
 Capture interface not registered for this panel
 Caution: quantization tables are too coarse for baseline JPEG
@@ -2195,33 +2214,30 @@ ClearPanelEvents
 ClientHTTP() is NULL when using client interfaces.
 CloseDebuggerWindow
 CloseModalDialog
-Closed temporary file %short
-Closing joystick %int
+Closed temporary file %s
+Closing joystick %i
 Cn77Yn77Y
 Color panorama::CFillBrush::GetFillColor() const
-Comma separated list of images or movies to draw in the background. Can specify "none" to not draw signed char background layer. Combined with background-position, background-size and background-repeat values.<br><br><bool>Example:</bool><pre>background-image: url("file://{images}/default.tga"), url( "file://{movies}/Background1080p.webm" );</pre>
-Component index %double: mismatching sampling ratio %double:%double, %double:%double, %char
-ConCommand
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
-Conditional Error: %short
+Comma separated list of images or movies to draw in the background. Can specify "none" to not draw a background layer. Combined with background-position, background-size and background-repeat values.<br><br><b>Example:</b><pre>background-image: url("file://{images}/default.tga"), url( "file://{movies}/Background1080p.webm" );</pre>
+Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
+Conditional Error: %s
 ConfigurationSystem_001
 Conflict
 Construction is only allowed from the resolve function
 ContainsCRLF()
 ContainsCRLF() == bContainsCRLF
-Context panel for JavaScript event handler for %short is invalid. Forgot to unregister?
+Context panel for JavaScript event handler for %s is invalid. Forgot to unregister?
 ContextMenu
 Continue
-Controls blending mode for the panel.  See CSS mix-blend-mode docs on web, except normal for us is with alpha blending.<br><br><bool>Examples:</bool><pre>-s2-mix-blend-mode: normal;
-Controls if the background should be repeated in the horizontal and vertical directions.<br><br>Possible values per direction:<br>"repeat" - (default) Repeated in the specified direction until it fills the panel<br>"space" - Repeated as many times as required to fill the panel wchar_t/unsigned __int128 being clipped. Space is added between images to to align first and last image with panel edges.<br>"round" - Repeated as many times as required to fill the panel wchar_t/unsigned __int128 being clipped. The image is resized to align first and last image with panel edges.<br>"no-repeat" - Not repeated<br><br>Possible single values:<br>"repeat-long long" - equals "repeat no-repeat"<br>"repeat-unsigned long long" - equals "no-repeat repeat"<br><br><bool>Examples:</bool><pre>background-repeat: repeat; // equals "repeat repeat" (default)
+Controls blending mode for the panel.  See CSS mix-blend-mode docs on web, except normal for us is with alpha blending.<br><br><b>Examples:</b><pre>-s2-mix-blend-mode: normal;
+Controls if the background should be repeated in the horizontal and vertical directions.<br><br>Possible values per direction:<br>"repeat" - (default) Repeated in the specified direction until it fills the panel<br>"space" - Repeated as many times as required to fill the panel w/o being clipped. Space is added between images to to align first and last image with panel edges.<br>"round" - Repeated as many times as required to fill the panel w/o being clipped. The image is resized to align first and last image with panel edges.<br>"no-repeat" - Not repeated<br><br>Possible single values:<br>"repeat-x" - equals "repeat no-repeat"<br>"repeat-y" - equals "no-repeat repeat"<br><br><b>Examples:</b><pre>background-repeat: repeat; // equals "repeat repeat" (default)
 Controls if the panel is visible and is included in panel layout. Possible values:<br>"visible" - panel is visible and included in layout (default)<br>"collapse" - panel is invisible and not included in layout
-Controls texture sampling mode for the panel. Set to alpha-only to use the textures alpha data across all 3 color channels.<br><br><bool>Examples:</bool><pre>texture-sampling: normal;
-Controls the horizontal and vertical placement of the background image, with the format: &lt;left|center|right&gt; &lt;horizontal length&gt; &lt;top|center|bottom&gt; &lt;vertical length&gt;<br><br>If length is signed char percent, the specified location within the image is positioned over that same specified position in the background. If the length is pixels, the top left corner is placed relative to the provided alignment keywords (left, bottom, etc.). See examples for more details.<br><br>If 1 value is specified, the other value is assumed to be center. If 2 values are specified, the first value must be for horizontal placement and the second for vertical.<br><br><bool>Examples:</bool><pre>// aligns the top left corner of the image with the top left corner of the panel (default)
-Controls truncation of text that doesn'unsigned short fit in signed char panel.  "clip" means to simply truncate (on char boundaries), "ellipsis" means to end with '...', and "shrink" means to signed char 
-Controls white-space wrapping on rendered text.  "normal" means wrap on whitespace, "nowrap" means do no wrapping at all.<br><br><bool>Examples:</bool><pre>white-space: normal;
+Controls texture sampling mode for the panel. Set to alpha-only to use the textures alpha data across all 3 color channels.<br><br><b>Examples:</b><pre>texture-sampling: normal;
+Controls the horizontal and vertical placement of the background image, with the format: &lt;left|center|right&gt; &lt;horizontal length&gt; &lt;top|center|bottom&gt; &lt;vertical length&gt;<br><br>If length is a percent, the specified location within the image is positioned over that same specified position in the background. If the length is pixels, the top left corner is placed relative to the provided alignment keywords (left, bottom, etc.). See examples for more details.<br><br>If 1 value is specified, the other value is assumed to be center. If 2 values are specified, the first value must be for horizontal placement and the second for vertical.<br><br><b>Examples:</b><pre>// aligns the top left corner of the image with the top left corner of the panel (default)
+Controls truncation of text that doesn't fit in a panel.  "clip" means to simply truncate (on char boundaries), "ellipsis" means to end with '...', and "shrink" means to a 
+Controls white-space wrapping on rendered text.  "normal" means wrap on whitespace, "nowrap" means do no wrapping at all.<br><br><b>Examples:</b><pre>white-space: normal;
 ConvertJpegToRGB
 ConvertRGBToRGBAImage
 CopyStringToClipboard
@@ -2229,35 +2245,35 @@ Copyright (C) 2012, Thomas G. Lane, Guido Vollbeding
 Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
 Corrupt JPEG data: bad Huffman code
 Corrupt JPEG data: bad arithmetic code
-Corrupt JPEG data: found marker 0x%02x instead of RST%double
+Corrupt JPEG data: found marker 0x%02x instead of RST%d
 Corrupt JPEG data: premature end of data segment
 Could not create an instance of 
 Could not find field named "
 Could not find field type.
 Could not load file
-Couldn'unsigned short apply layout file %short
-Couldn'unsigned short apply layout file from string
-Couldn'unsigned short find end of style
-Couldn'unsigned short find layout file
-Couldn'unsigned short get layout file %short
-Couldn'unsigned short get layout file for string
-Couldn'unsigned short load layout file from passed string
-Couldn'unsigned short parse default value "
-Couldn'unsigned short read %short: %double
+Couldn't apply layout file %s
+Couldn't apply layout file from string
+Couldn't find end of style
+Couldn't find layout file
+Couldn't get layout file %s
+Couldn't get layout file for string
+Couldn't load layout file from passed string
+Couldn't parse default value "
+Couldn't read %s: %d
 Count
 Cpff.
-Create signed char new panel
+Create a new panel
 CreateDebuggerWindow
 CreatePanel
-CreatePanel - failed to create panel type %short
-CreatePanel first param must be valid panel type with factory, %short is not valid or not registered to allow factory construction
+CreatePanel - failed to create panel type %s
+CreatePanel first param must be valid panel type with factory, %s is not valid or not registered to allow factory construction
 CreatePanel requires 3 params (type,parent,id)
-CreatePanel second param (parent) must be signed char panel object
+CreatePanel second param (parent) must be a panel object
 CreatePanel third param (id) must be string or undefined
-CreatePanel third param (parent) was not signed char valid panel object
+CreatePanel third param (parent) was not a valid panel object
 Created
-Custom Dialog Variable Handler already installed! '%short'
-CxL;unsigned long
+Custom Dialog Variable Handler already installed! '%s'
+CxL;m
 Czech
 D""fD""fT**~T**~;
 D$ HcE
@@ -2343,7 +2359,6 @@ D9s$|
 D9sXu
 D9{$|
 D;#t.
-D;...(u
 D;H(|
 D;I(|9L9
 D;`,|
@@ -2355,18 +2370,18 @@ D;sL|
 D;sXI
 D;vH|
 D;xH|
+D;z(u
 D;~,|
 D=!I)
 DATAH
 DCT coefficient out of range
-DCT scaled block size %dx%double not supported
+DCT scaled block size %dx%d not supported
 DDDDUUUU
 DELETE
 DH=vjs
 DM96u/H
 DNEIt
 DNEIu
-DTdt
 Danish
 Data error in compressed datastream
 DebugTextureInfo001
@@ -2376,7 +2391,7 @@ DecryptBlock
 Default value for an enum field must be an identifier.
 Define Arithmetic Table 0x%02x: 0x%02x
 Define Huffman Table 0x%02x
-Define Quantization Table %double  precision %double
+Define Quantization Table %d  precision %d
 Define Restart Interval %u
 DeletePanel
 DependencyClass::m_pDependencyLL == NULL
@@ -2384,15 +2399,15 @@ DescriptorProto
 DescriptorProtosH
 DevMsg(char const*, ...)
 Dfffff.
-Didn'unsigned short expect more than one scan
+Didn't expect more than one scan
 Disable descendant selector filtering
 Dispatch an event
 Dispatch an event to occur later
-DispatchAsyncEvent backlog, failed to dispatch all this frame. Remaining queue depth: %double (was %double)
+DispatchAsyncEvent backlog, failed to dispatch all this frame. Remaining queue depth: %d (was %d)
 DispatchEvent
 DispatchEventAsync
 DispatchPanelEvent
-DispatchQueuedEvent: %double events queued for %double distinct events
+DispatchQueuedEvent: %d events queued for %d distinct events
 DispatchVideoPlayerEvent
 DotaCardGameClient_001
 DragCallbacks
@@ -2411,7 +2426,7 @@ DropdownMenuFocusChanged
 DummyWizardOpen
 DumpMemory
 Duplicate PLTE chunk
-Duplicate attribute '%short'
+Duplicate attribute '%s'
 Duplicate bKGD chunk
 Duplicate cHRM chunk
 Duplicate gAMA chunk
@@ -2433,7 +2448,7 @@ E,IcE(
 E8H;F
 E8|$p
 E97~GE
-E9>~I
+E9>~1I
 E9f8w*1
 E9f8w91
 E9l$(
@@ -2445,14 +2460,14 @@ E9|$$r
 E9|$$|
 E9|$LtFMct$XI
 E9~$r
-E;__float128@|
-E;__int128 ~0
+E;e(u
 E;eT|
 E;eT|[A
 E;eT|\A
 E;eT}
 E;fX|
 E;g8u
+E;g@|
 E;gHu
 E;l$(u
 E;l$0|
@@ -2460,9 +2475,10 @@ E;l$8|
 E;l$P|
 E;l$X|
 E;l$hu
-E;long double(u
+E;n ~0
 E;n0|
 E;n8u
+E;o tQA
 E;opu
 E;p,|
 E;t$(u A
@@ -2471,7 +2487,6 @@ E;t$T|
 E;t$T||H
 E;t$T}
 E;t$hu
-E;unsigned __int128 tQA
 E;|$T|[A
 E;}@|
 E;~@|
@@ -2496,21 +2511,20 @@ ETLPu
 ETextAlign
 ETextDecoration
 ETextTransform
-EVideoPlayerEvent
 EXPORTSYSTEM_INTERFACE_VERSION_001
 E\IcEX
 E`H9B
-Each requires 2 parameters, an object or array and signed char function to call on each element
+Each requires 2 parameters, an object or array and a function to call on each element
 EconItemToolModel_001
 Efffff.
 Empty JPEG image (DNL not supported)
 Empty input file
 Encoding error
 EncodingDecl
-Encountered ConCommand '%short' without signed char callback!
-Encountered too many releases for resource "%short"
-End float&& Image
-End tag '%short' was not expected here
+Encountered ConCommand '%s' without a callback!
+Encountered too many releases for resource "%s"
+End Of Image
+End tag '%s' was not expected here
 End-of-file inside block comment.
 EndFrame - opacity lru
 EngineServiceMgr001
@@ -2524,32 +2538,32 @@ Enums must contain at least one value.
 EnvironmentMapBuilder_001
 EpD9<0
 Error State on string being set.
-Error loading %short: Addons can only add layouts in the %short subdirectory.
+Error loading %s: Addons can only add layouts in the %s subdirectory.
 Error parsing @define
 Error parsing @define value
-Error parsing @import url '%short'
+Error parsing @import url '%s'
 Error parsing @import value
 Error parsing @keyframe name
-Error parsing @keyframe selector: %short
+Error parsing @keyframe selector: %s
 Error parsing layout and style files
 Error parsing style
-Error parsing style selector: %short
+Error parsing style selector: %s
 Error parsing text-format 
 Error reporting not implemented.
 Error while parsing option value for "
 EtIcEp
-Event arguments could not be parsed for %short of %short
+Event arguments could not be parsed for %s of %s
 Event handler was in one map but not the other.
 EventSystem001
 Exceeded size limit while expanding chunk
 ExecuteSteamURL
 Exffff.
 ExitSteam
-Expect signed char decimal number.
+Expect a decimal number.
 Expectation Failed
 Expected "
-Expected '%short'
-Expected '%short', found '%short'
+Expected '%s'
+Expected '%s', found '%s'
 Expected double.
 Expected eight hex digits up to 10ffff for \U escape sequence
 Expected four hex digits for \u escape sequence.
@@ -2560,7 +2574,7 @@ Expected integer.
 Expected string.
 Extension "
 Extension conflicts with extension already in database: extend 
-Extension factory'short GetPrototype() returned NULL for extension: 
+Extension factory's GetPrototype() returned NULL for extension: 
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Extension number $0 has already been used in "$1" by extension "$2".
 Extension numbers cannot be greater than $0.
@@ -2570,54 +2584,54 @@ Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range end number must be greater than start number.
 ExtensionRange
 Extensions of MessageSets must be optional messages.
-Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend signed char non-lite type to contain signed char lite type, but the reverse is allowed.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra compressed data
 Extra compression data
 F$IcF 
 F$fff.
 F$fffff.
 F(@t3H
-F(L;long double
-F(L;unsigned long
+F(L;e
+F(L;m
 F(rif
 F,IcF(
 F0D9k(
 F4IcF0
 F9t#(u+A
 F;<0tJH
-F;unsigned short+,uBJ;|+ unsigned short?I
+F;t+,uBJ;|+ t?I
 F@L+p0I
 FATAL
 FCVAR_NEVER_AS_STRING
 FDIcF@
-FHD;long long
+FHD;x
 FHt7f
 F\IcFX
-Failed to KV parse file "%short"
-Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
-Failed to create temporary file %short
-Failed to decode compiled data properly for '%short' (Resource Version:%double, Header Version:%double)
-Failed to load KV file "%short"
-Failed to load base english localization file as backup to %short!
-Failed to load image data from %short
-Failed to load localization file %short!
-Failed to load localization file for language %short, ignoring
-Failed to normalize @import url '%short'
-Failed to parse properties for keyframe: %short
+Failed to KV parse file "%s"
+Failed to allocate CUtlMemoryPoolBase blob of size %d ('%s' blob count = %d)
+Failed to create temporary file %s
+Failed to decode compiled data properly for '%s' (Resource Version:%d, Header Version:%d)
+Failed to load KV file "%s"
+Failed to load base english localization file as backup to %s!
+Failed to load image data from %s
+Failed to load localization file %s!
+Failed to load localization file for language %s, ignoring
+Failed to normalize @import url '%s'
+Failed to parse properties for keyframe: %s
 Failed to parse property value
 Failed to parse selector
-Failed to parse style value for %short
+Failed to parse style value for %s
 Failed to save the following file:
-Failed to set property value (property=%short)(value=%short)
+Failed to set property value (property=%s)(value=%s)
 False
 FancyBrush.m_nGradientStops < FANCYQUAD_MAXSTOPS
-Fatal V8 Error: %short - %short
-Fatal error (code: %double)
+Fatal V8 Error: %s - %s
+Fatal error (code: %d)
 Fffff.
 Field "
 Field does not match message type.
-Field is repeated; the method requires signed char singular field.
-Field is singular; the method requires signed char repeated field.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
 Field number $0 has already been used in "$1" by field "$2".
 Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
 Field numbers cannot be greater than $0.
@@ -2633,11 +2647,11 @@ FieldOptions
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File already exists in database: 
-File appears to be in generated pool but wasn'unsigned short registered: 
+File appears to be in generated pool but wasn't registered: 
 File changed in memory and on disk
 File is already registered: 
 File recursively imports itself: 
-File type for %short is not supported in CLoadLayoutFileAsync
+File type for %s is not supported in CLoadLayoutFileAsync
 File:
 FileDescriptorProto
 FileDescriptorSet
@@ -2648,24 +2662,24 @@ Find an element
 FindChildInContext
 FindChildInContext()/$() require an id selector (start with #) for now
 Finnish
-Fire another event after signed char delay (in seconds).
-Fire another event if currently hovering over signed char panel with the given ID.
-Fire another event if not currently hovering over signed char panel with the given ID.
-Fire another event if this panel does not have signed char given class.
-Fire another event if this panel has signed char given class.
+Fire another event after a delay (in seconds).
+Fire another event if currently hovering over a panel with the given ID.
+Fire another event if not currently hovering over a panel with the given ID.
+Fire another event if this panel does not have a given class.
+Fire another event if this panel has a given class.
 First argument to CancelScheduled() must be the handle returned frome Schedule()
-First argument to RegisterEventHandler is not signed char valid event type
-First argument to RegisterEventHandler must be signed char string (event type)
-First argument to RegisterForUnhandledEvent is not signed char valid event type
-First argument to RegisterForUnhandledEvent must be signed char string (event type)
-First argument to RegisterKeyBind must be signed char panel object or string (input namespace, may be empty string)
-First argument to Schedule() must be signed char number as signed char delay in seconds
+First argument to RegisterEventHandler is not a valid event type
+First argument to RegisterEventHandler must be a string (event type)
+First argument to RegisterForUnhandledEvent is not a valid event type
+First argument to RegisterForUnhandledEvent must be a string (event type)
+First argument to RegisterKeyBind must be a panel object or string (input namespace, may be empty string)
+First argument to Schedule() must be a number as a delay in seconds
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 First param to AsyncWebRequest must be URL
 FlIcFh
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Forbidden
@@ -2673,14 +2687,14 @@ Force style invalidation of the entire panel subtree when adding / removing clas
 Force style invalidation of the entire panel subtree when adding / removing style flags.
 Found
 Found duplicate panel description
-Found include outside of signed char styles/scripts element
-Found multiple root panels under snippet '%short'
-Found no context within our layout file - shouldn'unsigned short be possible!
-Found no context within our layout file - shouldn'unsigned short be possible! %short %short
-Found no selectors: %short
-Found snippet outside of signed char snippets element
-Found unknown panel type: (name=%short) (type=%short) on line: %double, col: %double
-Found unsupported CSS at-rule: %short
+Found include outside of a styles/scripts element
+Found multiple root panels under snippet '%s'
+Found no context within our layout file - shouldn't be possible!
+Found no context within our layout file - shouldn't be possible! %s %s
+Found no selectors: %s
+Found snippet outside of a snippets element
+Found unknown panel type: (name=%s) (type=%s) on line: %d, col: %d
+Found unsupported CSS at-rule: %s
 Fractional sampling not implemented yet
 Freed EMS handle %u
 Freed XMS handle %u
@@ -2702,7 +2716,7 @@ G(;F(
 G(;F(u$
 G(H)p
 G(HcH
-G(L;unsigned long
+G(L;m
 G,;F,
 G,;F,u'
 G,;F,u:
@@ -2718,7 +2732,7 @@ G@H+x0H
 G@L+x0I
 GA#D$
 GAMECONSOLE
-GF(2^unsigned long) Multiplication for x86_64, CRYPTOGAMS by <appro@openssl.org>
+GF(2^m) Multiplication for x86_64, CRYPTOGAMS by <appro@openssl.org>
 GF2m_mul_2x2
 GHASH for x86_64, CRYPTOGAMS by <appro@openssl.org>
 G`ff.
@@ -2743,7 +2757,7 @@ GetEmptyStringAlreadyInited
 GetEntityDecl
 GetEnum
 GetFloat
-GetFlowDirectionPos couldn'unsigned short find child
+GetFlowDirectionPos couldn't find child
 GetHeight
 GetInt32
 GetInt64
@@ -2769,7 +2783,7 @@ GetUInt32
 GetUInt64
 GetWidth
 GetWindowBounds does nothing in source2
-GetWrapFlowXY couldn'unsigned short find child
+GetWrapFlowXY couldn't find child
 Gffffff.
 GhIcL$8H
 GoOffline
@@ -2778,12 +2792,13 @@ GpI;D$p
 Greek
 GuideButton
 GuideButtonUp
+Gx;Fx
 GxA;D$xt:1
 G|;F|
 H	p(]
-H	wchar_t(]
+H	w(]
 H H;9u)H
-H!wchar_t(]
+H!w(]
 H$$lH$$l
 H+A0H
 H+A0I
@@ -2808,11 +2823,11 @@ H+V0H
 H+X0H
 H+X@H
 H+Y@H
-H+long long@H
 H+p@H
 H+q0H
 H+q@H
-H+wchar_t@H
+H+w@H
+H+x@H
 H+{@H
 H90t$L
 H90t%1
@@ -2823,15 +2838,15 @@ H9A@u
 H9AHt.H
 H9GXt
 H9HXt-H
-H9J short
+H9J s
 H9VXt%H
 H9ZHt`I
 H9_@u
-H9{@unsigned short
+H9{@t
 H;A`~vH
 H;A`~yH
-H;C`unsigned short
-H;H short
+H;C`t
+H;H s
 H;t$P
 H=updi
 H=uxml
@@ -2849,9 +2864,9 @@ HPanoramaLayout
 HPanoramaScript
 HPanoramaStyle
 HRenderTexture panorama::CSource2Surface::UpdateFancyQuadGradientTexture(const panorama::FancyQuadBrush_t *)
-HTTP Response failed %short
-HTTP Response for %short: %double, %double
-HTTP Response time out %short
+HTTP Response failed %s
+HTTP Response for %s: %d, %d
+HTTP Response time out %s
 HTTP Version not supported
 H[A\A]A^A_]
 H[A^A_]
@@ -2979,33 +2994,17 @@ I/O error
 I9FXt H
 I9GPu
 I9]0t<
-I9^ void
-I9}@unsigned short
+I9^ v
+I9}@t
 I;6u1K
 I;8u/J
-IAppSystem
-IConCommandBaseAccessor
-IConVar
 IGNORE
-IIMEUIObject
-IIMEUIView
 IImageSource
-IKeyValuesErrorSpew
 INCLUDE
 INSt3__11
 INVALID_CPPTYPE
-IPanoramaUIEngine
 IQuickTime001
-IRefCounted
-IRenderDeviceEventListener
-IResourceTypeManager
 ISO-8859-1
-IToolsResourceListener
-IVideoPlayer
-IVideoPlayer*
-IVideoPlayerAudioCallback
-IVideoPlayerEventCallback
-IVideoPlayerVideoCallback
 Ic@$E1
 Ic@$H
 Ic@$I
@@ -3097,12 +3096,12 @@ Ignoring cHRM chunk with negative chromaticities
 Ignoring gAMA chunk with out of range gamma
 Ignoring iCCP chunk with declared size = @1 and actual length = @2
 Ignoring incorrect cHRM value when sRGB is also present
-Ignoring incorrect cHRM white(@1,@2) r(@3,@4)__float128(@5,@6)bool(@7,@8) when sRGB is also present
+Ignoring incorrect cHRM white(@1,@2) r(@3,@4)g(@5,@6)b(@7,@8) when sRGB is also present
 Ignoring incorrect gAMA value @1 when sRGB is also present
 Ignoring invalid time value
 Ignoring nonzero compression type in iCCP chunk
 Illegal character
-Image '%short' too large, %double long long %double
+Image '%s' too large, %d x %d
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
 Image too wide for this implementation
@@ -3113,11 +3112,11 @@ ImageFormat
 ImageLoaded
 ImageUnreferenced
 Import "
-Improper call to JPEG library in state %double
+Improper call to JPEG library in state %d
 InMemoryFileUpdate
 InMemoryFilesSaved
 Incomplete compressed datastream
-Inconsistent progression sequence for component %double coefficient %double
+Inconsistent progression sequence for component %d coefficient %d
 Incorrect IEND chunk length
 Incorrect bKGD chunk index value
 Incorrect bKGD chunk length
@@ -3132,8 +3131,8 @@ Incorrect tIME chunk length
 Incorrect tRNS chunk length
 Index must be -1 for non-repeated fields
 Index out-of-bounds (field is empty).
-Inline scripts can'unsigned short be included in partial layout files
-Inline scripts can'unsigned short be included in snippets
+Inline scripts can't be included in partial layout files
+Inline scripts can't be included in snippets
 Input file read error
 InputFocusLost
 InputFocusSet
@@ -3142,7 +3141,7 @@ InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
 InstallSchemaBindings
-Insufficient memory (case %double)
+Insufficient memory (case %d)
 Insufficient memory for hIST chunk data
 Insufficient memory for pCAL parameter
 Insufficient memory for pCAL params
@@ -3165,7 +3164,7 @@ Internal_GetSubKey() == NULL
 Internal_GetSubKey() == dat
 Interpreting non ascii codepoint %d.
 Invalid
-Invalid %short declaration
+Invalid %s declaration
 Invalid @keyframe name (missing quotes or empty)
 Invalid IHDR chunk
 Invalid IHDR data
@@ -3189,18 +3188,18 @@ Invalid cHRM white point
 Invalid color quantization mode change
 Invalid color type in IHDR
 Invalid color type/bit depth combination in IHDR
-Invalid component ID %double in SOS
+Invalid component ID %d in SOS
 Invalid content height calculated
 Invalid content width calculated
 Invalid control characters encountered in text.
 Invalid crop request
-Invalid data found at end of file: %short
-Invalid dialog variable name for '%short'
-Invalid dialog variable type for %short (%char)
+Invalid data found at end of file: %s
+Invalid dialog variable name for '%s'
+Invalid dialog variable type for %s (%c)
 Invalid escape sequence in string literal.
-Invalid event %short passed to BRegisterKeyBind()
-Invalid event name to %short
-Invalid event name to DispatchEvent ('%short')
+Invalid event %s passed to BRegisterKeyBind()
+Invalid event name to %s
+Invalid event name to DispatchEvent ('%s')
 Invalid fancy quad material
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid filter method in IHDR
@@ -3210,14 +3209,14 @@ Invalid gAMA after IDAT
 Invalid hIST after IDAT
 Invalid height pushed
 Invalid iCCP after IDAT
-Invalid image URL (unknown type) to LoadImageFromURL: %short
+Invalid image URL (unknown type) to LoadImageFromURL: %s
 Invalid image height in IHDR
 Invalid image width in IHDR
 Invalid index to CancelScheduledDelegate
-Invalid key %short in binds file %short
-Invalid memory pool code %double
+Invalid key %s in binds file %s
+Invalid memory pool code %d
 Invalid name
-Invalid number of arguments for event in %short for %short
+Invalid number of arguments for event in %s for %s
 Invalid oFFs after IDAT
 Invalid pCAL after IDAT
 Invalid pCAL data
@@ -3227,10 +3226,10 @@ Invalid pHYs after IDAT
 Invalid palette chunk
 Invalid palette length
 Invalid palette size, hIST allocation skipped
-Invalid panel target to %short of %short
-Invalid progressive parameters at scan script entry %double
-Invalid progressive parameters std::basic_string<char, std::char_traits<char>, std::allocator<char> >=%double Se=%double Ah=%double Al=%double
-Invalid property name: %short
+Invalid panel target to %s of %s
+Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
+Invalid progressive parameters at scan script entry %d
+Invalid property name: %s
 Invalid proto descriptor for file "
 Invalid public dependency index.
 Invalid sBIT after IDAT
@@ -3245,16 +3244,16 @@ Invalid sCAL unit
 Invalid sCAL width
 Invalid sPLT after IDAT
 Invalid sRGB after IDAT
-Invalid scan script at entry %double
+Invalid scan script at entry %d
 Invalid strings::Substitute() format string: "
 Invalid symbol name: 
 Invalid tRNS after IDAT
 Invalid token
-Invalid transition time set for %short
-Invalid type %double on fillbrush
+Invalid transition time set for %s
+Invalid type %d on fillbrush
 Invalid type for first param to Each() must be an array or object
-Invalid type for second param to Each() must be signed char function
-Invalid value for attribute '%short'
+Invalid type for second param to Each() must be a function
+Invalid value for attribute '%s'
 Invalid value for boolean field "
 Invalid weak dependency index.
 Invalid width pushed
@@ -3263,7 +3262,7 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE: 
 Invalid wire type for CPPTYPE_UINT32: 
 Invalid wire type for CPPTYPE_UINT64: 
-Invalidating fully because style %short changed on panel %short
+Invalidating fully because style %s changed on panel %s
 IsEnabled()
 IsFinite( *pflContentHeight )
 IsFinite( *pflContentWidth )
@@ -3285,18 +3284,18 @@ IsFinite( pValue->m_Height.GetValue() )
 IsFinite( pValue->m_Length.GetValue() )
 IsFinite( tall )
 IsFinite( wide )
-IsIdxValid(int)
+IsIdxValid(i)
 IsInList(before)
 IsPowerOfTwo( m_nAlignment )
 IsValid
 IsValid()
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
-IsValidIndex(int) && (int != InvalidIndex())
-It'short unexpected and inefficient to add to signed char render data list that has already had items added to it.
+IsValidIndex(i) && (i != InvalidIndex())
+It's unexpected and inefficient to add to a render data list that has already had items added to it.
 Italian
-J%%oJ%%unsigned __int128\..r\..r8
-JFIF APP0 marker: version %d.%02d, density %dx%double  %double
+J%%oJ%%o\..r\..r8
+JFIF APP0 marker: version %d.%02d, density %dx%d  %d
 JFIF extension marker: JPEG-compressed thumbnail image, length %u
 JFIF extension marker: RGB thumbnail image, length %u
 JFIF extension marker: palette thumbnail image, length %u
@@ -3317,9 +3316,9 @@ K 3K43K
 K(3K<3K
 K(Ict$,L
 K8;C<
-K8;C<}int
-K8;C<}short
-K8;C<}unsigned short
+K8;C<}i
+K8;C<}s
+K8;C<}t
 K8;C<}}
 K8B9L H|F
 K<B9L L|:
@@ -3335,10 +3334,9 @@ KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstValue()
 KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextValue()
-KeyValues Error: %short in file %short
-KeyValues*
+KeyValues Error: %s in file %s
 KeyValues::FindKey called on NULL pointer!
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 Korean
 L H9K8|
 L L9K<|
@@ -3379,19 +3377,19 @@ L+\$X
 L+d$`
 L+l$h
 L+t$p
-L+|long long
+L+|$x
 L90t*H
 L90u"A
 L95N?8
 L95m(
 L98tC
 L9v@u
-L;>unsigned short!L9
-L;>unsigned short)L9
+L;>t!L9
+L;>t)L9
 L;d$PA
 L;l$PA
 L;x8t
-L=CValidatableThread
+L=18CValidatableThread
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
@@ -3417,23 +3415,23 @@ Lcr8A
 Lcx<L
 Length Required
 LoadAsyncComplete
-LoadFromBuffer: expected '{', found '%short'
+LoadFromBuffer: expected '{', found '%s'
 LoadLayoutFileAsync
 LoadLayoutFromBase64XMLStringAsync
 LoadLayoutFromXMLStringAsync
 LoadTGA: Only type 2 and 10 targa RGB images supported
-Localization entry for '%short' not recalculated, pointing to garbage
-Localization string too long: %double chars in '%.20s...'
+Localization entry for '%s' not recalculated, pointing to garbage
+Localization string too long: %d chars in '%.20s...'
 LocalizationChanged
 Localize
-Localize signed char string
+Localize a string
 Localize() got invalid optional panel value as second argument
-Localize() has an optional second panel argument as context for localize, but if set must be signed char panel object
+Localize() has an optional second panel argument as context for localize, but if set must be a panel object
+Localize() requires a string as it's first argument
 Localize() requires at least one argument
-Localize() requires signed char string as it'short first argument
 Localize_001
 Location
-Log signed char message
+Log a message
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LwH'LwH'LwH'LwH'LwH'LwH'LwH'LwH'
@@ -3442,15 +3440,15 @@ M8A;E<}_
 M8t$`
 M96u/H
 M9l$P
-M9~unsigned short*>
+M9~Pt>
 MATCHFRAMEWORK_001
 MAX_ALLOC_CHUNK is wrong, please fix
-MNG features are not allowed in signed char PNG datastream
+MNG features are not allowed in a PNG datastream
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MXGJJ98X76
 Macintosh;tenfoot
-Make signed char web request
+Make a web request
 Malformed iCCP chunk
 Malformed iTXt chunk
 MapListService_001
@@ -3460,6 +3458,9 @@ Mc'fC
 Mc<$J
 McG,M
 McU 1
+Mcf I
+Mcf@M
+Mcg I
 Mcl$LE
 Mcl$xI
 McnXM
@@ -3482,22 +3483,22 @@ Message missing required fields:
 Message type "
 MessageOptions
 MessageSets cannot have fields, only extensions.
-Messages can'unsigned short have default values!
-Messages can'unsigned short have default values.
+Messages can't have default values!
+Messages can't have default values.
 Method Not Allowed
 MethodDescriptorProto
 MethodOptions
 Mffffff.
 MhLcq
 MinimizeApp
-Minimum mouse movement in pixels before signed char move is treated as signed char drag scroll
-Minimum mouse movement in pixels before signed char move is treated as signed char drag scroll in VR
-Minimum time that the mouse button must be down before signed char move is treated as signed char drag scroll
-Minimum time that the mouse button must be down before signed char move is treated as signed char drag scroll in VR
+Minimum mouse movement in pixels before a move is treated as a drag scroll
+Minimum mouse movement in pixels before a move is treated as a drag scroll in VR
+Minimum time that the mouse button must be down before a move is treated as a drag scroll
+Minimum time that the mouse button must be down before a move is treated as a drag scroll in VR
 Miscellaneous marker 0x%02x, length %u
 Mismatched PopAnimationAndTransformContext, empty stack
 Mismatched PopAnimationAndTransformContext, non-matching context ids
-Mismatched types to %short::MergeTo
+Mismatched types to %s::MergeTo
 Mismatched types to CStylePropertyBackgroundImage::Interpolate
 Mismatched types to CStylePropertyBackgroundImage::OnStartingTransition
 Mismatched types to CStylePropertyBlur::Interpolate
@@ -3541,12 +3542,12 @@ Missing PLTE before IDAT
 Missing PLTE before bKGD
 Missing PLTE before hIST
 Missing PLTE before tRNS
-Missing String for %short (%double)
+Missing String for %s (%d)
 Missing colon
 Missing field: FileDescriptorProto.name.
 Missing name.
 Missing opening brace for @keyframe
-Missing panorama to source engine mapping for cursor %double
+Missing panorama to source engine mapping for cursor %d
 Missing semicolon
 ModelDocUtils001
 Montgomery Multiplication for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -3569,9 +3570,203 @@ Multiplier for flick velocity off of actual measured velocity
 MutableRawRepeatedField
 MutableRepeatedMessage
 M|1}0
+N24CFieldPathHuffmanEncoder12InternalNodeE
+N24CFieldPathHuffmanEncoder5INodeE
+N24CFieldPathHuffmanEncoder8LeafNodeE
+N2v811ArrayBuffer9AllocatorE
+N8panorama10CImageDataE
+N8panorama10CStyleFileE
+N8panorama10ESoundTypeE
+N8panorama10IUITextureE
+N8panorama11CLayoutFileE
+N8panorama11CPanelStyleE
+N8panorama11GamePadCodeE
+N8panorama11IUIJSObjectE
+N8panorama12CStyleSymbolE
+N8panorama12CTransform3DE
+N8panorama12CUIEventBaseE
+N8panorama12IImageSourceE
+N8panorama12IUI3DSurfaceE
+N8panorama13CLocalizationE
+N8panorama13IUIFileSystemE
+N8panorama13IUILayoutFileE
+N8panorama13IUIPanelStyleE
+N8panorama14CLayoutManagerE
+N8panorama14CUIInputEngineE
+N8panorama14CUIPanelEvent0E
+N8panorama14CUIPanelEvent1INS_12CStyleSymbolEEE
+N8panorama14CUIPanelEvent1INS_15CPanoramaSymbolEEE
+N8panorama14CUIPanelEvent1INS_19EPanelEventSource_tEEE
+N8panorama14CUIPanelEvent1INS_9CPanelPtrINS_8IUIPanelEEEEE
+N8panorama14CUIPanelEvent1IPKcEE
+N8panorama14CUIPanelEvent1IPNS_12IImageSourceEEE
+N8panorama14CUIPanelEvent1IPNS_19IDragStartCallbacksEEE
+N8panorama14CUIPanelEvent1IbEE
+N8panorama14CUIPanelEvent1IiEE
+N8panorama14CUIPanelEvent2INS_16ScrollBehavior_tEbEE
+N8panorama14CUIPanelEvent2IP9KeyValuesPvEE
+N8panorama14CUIPanelEvent2IPKNS_19ILocalizationStringEiEE
+N8panorama14CUIPanelEvent2IPKcPNS_8IUIEventEEE
+N8panorama14CUIPanelEvent2IPKcS2_EE
+N8panorama14CUIPanelEvent2IPKcbEE
+N8panorama14CUIPanelEvent2IbPKcEE
+N8panorama14CUIPanelEvent3IbNS_23ELoadLayoutAsyncDetailsEbEE
+N8panorama14CUIPanelEvent4IiiffEE
+N8panorama14CUIPanelEvent4IiiiiEE
+N8panorama14CUISoundSystemE
+N8panorama14CUIWindowInputE
+N8panorama14IUIPanelClientE
+N8panorama15CPanoramaSymbolE
+N8panorama15CSource2SurfaceE
+N8panorama15CTopLevelWindowE
+N8panorama15CUIRenderEngine15CUIRenderThreadE
+N8panorama15CUIRenderEngine18CUIAnimationThreadE
+N8panorama15CUIRenderEngineE
+N8panorama15IUIImageManagerE
+N8panorama15IUILocalizationE
+N8panorama15IUIRenderDeviceE
+N8panorama15IUIRenderEngineE
+N8panorama15IUIStyleFactoryE
+N8panorama16CImageLoaderTaskE
+N8panorama16CLoadFileURLTaskE
+N8panorama16CUIEngineSource2E
+N8panorama16IUILayoutManagerE
+N8panorama17CImageProxySourceE
+N8panorama17CLoadFromVTexTaskE
+N8panorama17CSource2UITextureE
+N8panorama17CTransformScale3DE
+N8panorama18CImageDecodeThreadE
+N8panorama18CJSAsyncWebRequestE
+N8panorama18CLoadFileLocalTaskE
+N8panorama18CRenderCommandListE
+N8panorama18CStylePropertyBlurE
+N8panorama18CStylePropertyClipE
+N8panorama18CStylePropertyFontE
+N8panorama18CTransformRotate3DE
+N8panorama19CMouseCursorTextureE
+N8panorama19CStylePropertyAlignE
+N8panorama19CStylePropertySoundE
+N8panorama19CStylePropertyWidthE
+N8panorama19IDragStartCallbacksE
+N8panorama20CPanoramaVideoPlayerE
+N8panorama20CSource2UIFileSystemE
+N8panorama20CStyleFactoryWrapperE
+N8panorama20CStylePropertyBorderE
+N8panorama20CStylePropertyHeightE
+N8panorama20CStylePropertyMarginE
+N8panorama20CStylePropertyZIndexE
+N8panorama21CImageResourceManagerE
+N8panorama21CStylePropertyOpacityE
+N8panorama21CStylePropertyPaddingE
+N8panorama21CStylePropertyUIScaleE
+N8panorama21CStylePropertyVisibleE
+N8panorama21CTransformTranslate3DE
+N8panorama21CUISoundSystemSource2E
+N8panorama21EActiveControllerTypeE
+N8panorama21IUITextTextureStorageE
+N8panorama22CLoadInMemoryImageTaskE
+N8panorama22CStylePropertyContrastE
+N8panorama22CStylePropertyHueShiftE
+N8panorama22CStylePropertyMaxWidthE
+N8panorama22CStylePropertyMinWidthE
+N8panorama22CStylePropertyOverflowE
+N8panorama22CStylePropertyPositionE
+N8panorama22CTopLevelWindowSource2E
+N8panorama22CUIRenderDeviceSource2E
+N8panorama22IUITextTextureProviderE
+N8panorama22V8ArrayBufferAllocatorE
+N8panorama23CStylePropertyBoxShadowE
+N8panorama23CStylePropertyExitSoundE
+N8panorama23CStylePropertyFillColorE
+N8panorama23CStylePropertyMaxHeightE
+N8panorama23CStylePropertyMinHeightE
+N8panorama23CStylePropertyTextAlignE
+N8panorama23CStylePropertyWashColorE
+N8panorama23ELoadLayoutAsyncDetailsE
+N8panorama24CStylePropertyBrightnessE
+N8panorama24CStylePropertyLineHeightE
+N8panorama24CStylePropertySaturationE
+N8panorama24CStylePropertyTextShadowE
+N8panorama24CStylePropertyWhiteSpaceE
+N8panorama24IUIDoubleBufferedTextureE
+N8panorama25CLocalizationStringSimpleE
+N8panorama25CStylePropertyOpacityMaskE
+N8panorama25CStylePropertyPerspectiveE
+N8panorama25CStylePropertyTransform3DE
+N8panorama25CVideoPlayerAudioRendererE
+N8panorama25CVideoPlayerVideoRendererE
+N8panorama26CStylePropertyBorderRadiusE
+N8panorama26CStylePropertyFlowChildrenE
+N8panorama26CStylePropertyMixBlendModeE
+N8panorama26CStylePropertyTextOverflowE
+N8panorama27CStylePropertyEntranceSoundE
+N8panorama27CStylePropertyTextTransformE
+N8panorama27CVideoPlayerEventDispatcherE
+N8panorama28CStylePropertyDimensionsBaseINS_20CStylePropertyMarginEEE
+N8panorama28CStylePropertyDimensionsBaseINS_21CStylePropertyPaddingEEE
+N8panorama28CStylePropertyTextDecorationE
+N8panorama29CSource2DoubleBufferedTextureE
+N8panorama29CStylePropertyBackgroundColorE
+N8panorama29CStylePropertyBackgroundImageE
+N8panorama29CStylePropertyForegroundColorE
+N8panorama29CStylePropertyScale2DCenteredE
+N8panorama29CStylePropertyTooltipPositionE
+N8panorama29CStylePropertyTransformOriginE
+N8panorama30CStylePropertyRotate2DCenteredE
+N8panorama30IUIDoubleBufferedYUV420TextureE
+N8panorama31CStylePropertyContextUIPositionE
+N8panorama31CStylePropertyPerspectiveOriginE
+N8panorama31CStylePropertyTextLetterSpacingE
+N8panorama31CStylePropertyTextureSampleModeE
+N8panorama33CStylePropertyAnimationPropertiesE
+N8panorama33CStylePropertyContextMenuPositionE
+N8panorama33CStylePropertyTooltipBodyPositionE
+N8panorama34CLocalizationStringDialogVariablesE
+N8panorama34CStylePropertyTooltipArrowPositionE
+N8panorama34CStylePropertyTransitionPropertiesE
+N8panorama35CSource2DoubleBufferedYUV420TextureE
+N8panorama35CStylePropertyContextUIBodyPositionE
+N8panorama36CStylePropertyContextUIArrowPositionE
+N8panorama37CStylePropertyContextMenuBodyPositionE
+N8panorama38CStylePropertyContextMenuArrowPositionE
+N8panorama40CStylePropertyContextUIComponentPositionE
+N8panorama41CLocalizationStringDialogVariablesDerivedE
+N8panorama7CJSFileE
+N8panorama8CUIPanelE
+N8panorama8IUIEventE
+N8panorama8IUIInputE
+N8panorama8IUIPanelE
+N8panorama9CPanelPtrINS_8IUIPanelEEE
+N8panorama9CUIEngineE
+N8panorama9CUIEvent0E
+N8panorama9CUIEvent1INS_11GamePadCodeEEE
+N8panorama9CUIEvent1INS_15CPanoramaSymbolEEE
+N8panorama9CUIEvent1INS_21EActiveControllerTypeEEE
+N8panorama9CUIEvent1INS_9CPanelPtrINS_8IUIPanelEEEEE
+N8panorama9CUIEvent1IP12IVideoPlayerEE
+N8panorama9CUIEvent1IPKcEE
+N8panorama9CUIEvent1IPNS_16CReloadStyleFileEEE
+N8panorama9CUIEvent1IPNS_17CImageProxySourceEEE
+N8panorama9CUIEvent1IPNS_25CVideoPlayerAudioRendererEEE
+N8panorama9CUIEvent1IPNS_9IUIWindowEEE
+N8panorama9CUIEvent1IPvEE
+N8panorama9CUIEvent1IbEE
+N8panorama9CUIEvent1IiEE
+N8panorama9CUIEvent2INS_10ESoundTypeEfEE
+N8panorama9CUIEvent2INS_9CPanelPtrINS_8IUIPanelEEEPKcEE
+N8panorama9CUIEvent2IPNS_27CVideoPlayerEventDispatcherE17EVideoPlayerEventEE
+N8panorama9CUIEvent2IfPNS_8IUIEventEEE
+N8panorama9CUIEvent3IPNS_25CVideoPlayerAudioRendererEiiEE
+N8panorama9CUIEvent4INS_15CPanoramaSymbolEjjjEE
+N8panorama9CUIEvent4INS_9CPanelPtrINS_8IUIPanelEEEPN2v810PersistentINS4_8FunctionENS4_27NonCopyablePersistentTraitsIS6_EEEEijEE
+N8panorama9IUIEngineE
+N8panorama9IUIWindowE
 N@H+q0H
 N@L+q0I
 NDATA
+NSt3__115basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
+NSt3__117bad_function_callE
+NSt3__119basic_ostringstreamIwNS_11char_traitsIwEENS_9allocatorIwEEEE
 NULL row buffer
 NameIc
 NamePart
@@ -3580,7 +3775,7 @@ Nct+ J
 Need space between identifier and decimal point.
 Need space between number and identifier.
 Need to add bitflag space for new properties
-Need to increase size of static g_StylePropertyRegistrations (MAX_PANORAMA_STYLE_SYMBOLS) before registering more styles, failed on %short
+Need to increase size of static g_StylePropertyRegistrations (MAX_PANORAMA_STYLE_SYMBOLS) before registering more styles, failed on %s
 Need to still be drawing for the cursor
 NetworkClientService_001
 NetworkMessagesVersion001
@@ -3607,23 +3802,23 @@ No space in chunk cache for unknown chunk
 No space in chunk cache for zTXt
 NoName
 Non-Authoritative Information
-Non-localized localization entry '%short' (%double) not recalculated, pointing to garbage
-Non-primitive types can'unsigned short be packed.
+Non-localized localization entry '%s' (%d) not recalculated, pointing to garbage
+Non-primitive types can't be packed.
 Non-repeated field "
 Norwegian
 Not Acceptable
 Not Found
 Not Implemented
 Not Modified
-Not enough arguments to %short
+Not a JPEG file: starts with 0x%02x 0x%02x
+Not a PNG file
+Not enough arguments to %s
 Not enough image data
 Not enough memory to decompress chunk
 Not enough memory to process iTXt chunk
 Not enough memory to process text chunk
 Not enough memory to process zTXt chunk
 Not implemented yet
-Not signed char JPEG file: starts with 0x%02x 0x%02x
-Not signed char PNG file
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NpJcL
 Numbers starting with leading zero must be in octal.
@@ -3639,8 +3834,8 @@ O<B9L L|5
 ODB9L T|O
 OPENSSL_
 OPENSSL_ia32cap
-Object type %short is not registered
-Object type %short is not registered in CreateV8ObjectInstance
+Object type %s is not registered
+Object type %s is not registered in CreateV8ObjectInstance
 Obtained EMS handle %u
 Obtained XMS handle %u
 Oct 31 2017
@@ -3650,18 +3845,18 @@ Oneof must have at least one field.
 OneofDescriptorProto
 Only 16 @import files per CSS can be displayed properly in the debugger.
 Only 8 levels deep of @import file nesting can be displayed properly in the debugger.
-Only local paths should come into GetLayoutFile(), did you call syncronous BLoadLayout() with signed char http:// path?  You must use LoadLayoutAsync then.
+Only local paths should come into GetLayoutFile(), did you call syncronous BLoadLayout() with a http:// path?  You must use LoadLayoutAsync then.
 Only one top level element is allowed
-Opened temporary file %short
-Opening joystick %int : %short
+Opened temporary file %s
+Opening joystick %i : %s
 OptimizeMode
 Option "
 Option field "
-Option must have signed char name.
+Option must have a name.
 Option must not use reserved name "uninterpreted_option".
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 Out of Memory
 Out of memory
 Out of memory processing zTXt chunk
@@ -3679,23 +3874,35 @@ Out of range gamma value ignored
 Output file write error --- out of disk space?
 OverlayGamepadInputMsg
 P  @0
-P((xP((long long
+P((xP((x
 P(;Q(}_H
 P(;Q(}pI
+P12IVideoPlayer
 P8H=vcssu
 P8H=vjs
 P8H=vxmlu
+P9KeyValues
 P@00  
 P@IcL$
 P@PPPP
-PERF WARNING: Large slow blur gaussian( %__float128, %__float128, %__float128 ) over %u pixels on %short panel '%short'
+PERF WARNING: Large slow blur gaussian( %g, %g, %g ) over %u pixels on %s panel '%s'
+PKN8panorama19ILocalizationStringE
 PLACEHOLDER_VALUE
+PN2v810PersistentINS_8FunctionENS_27NonCopyablePersistentTraitsIS1_EEEE
+PN8panorama12IImageSourceE
+PN8panorama14InputMessage_tE
+PN8panorama16CReloadStyleFileE
+PN8panorama17CImageProxySourceE
+PN8panorama19IDragStartCallbacksE
+PN8panorama25CVideoPlayerAudioRendererE
+PN8panorama27CVideoPlayerEventDispatcherE
+PN8panorama9IUIWindowE
 PNG file corrupted by ASCII conversion
-PNG load error %short
+PNG load error %s
 PNG unsigned integer out of range
 POSIX
 PP@@ @
-PPL;unsigned long
+PPL;m
 PPP@@@@
 PREADER->pos<PREADER->bytesavail
 PUBLIC or SYSTEM
@@ -3716,18 +3923,18 @@ PaintTraverse invisible
 PaintTraverse paint rect changed
 PaintTraverse transparent
 PaintTraverse zero size
-Panel "%short" of type "%short", is requesting signed char desired layout of <%double, %double> which is larger than the maximum texture resolution of <%double, %double>
-Panel %short has no valid layout file, thus it can have no styles and is broken.
-Panel %short is reloading layout %short
+Panel "%s" of type "%s", is requesting a desired layout of <%d, %d> which is larger than the maximum texture resolution of <%d, %d>
+Panel %s has no valid layout file, thus it can have no styles and is broken.
+Panel %s is reloading layout %s
 PanelCreated called twice for the same panel pointer
-PanelDestroyed called for signed char panel which does not exist
+PanelDestroyed called for a panel which does not exist
 PanelLoaded
 PanelStyleChanged
 Panorama
 Panorama Cache Summary:
 Panorama Image Decode
 Panorama Required Manifest
-Panorama texture %short not already loaded/invalid.  Resource should have already loaded before this call.
+Panorama texture %s not already loaded/invalid.  Resource should have already loaded before this call.
 PanoramaBasicQuad
 PanoramaFancyQuad
 PanoramaScript
@@ -3737,7 +3944,7 @@ PanoramaUI
 PanoramaUIClient001
 PanoramaUIEngine001
 PanoramaUIEngineInternal
-Parent panel is "%short" of type "%short"
+Parent panel is "%s" of type "%s"
 ParseAttributes
 ParseChildren
 ParseCp
@@ -3756,7 +3963,7 @@ Payment Required
 PhL;u
 Physics2 Interface Old v0.5
 PhysicsBuilderMgr001
-PlaySound attempted to play signed char sound that doesn'unsigned short exist: %short
+PlaySound attempted to play a sound that doesn't exist: %s
 PlaySoundEffect
 Polish
 PollingForSteamClientUpdate
@@ -3774,8 +3981,8 @@ ProfileOff
 ProfileOn
 Property getter for CPanelStyle called on invalid object
 Property setter for CPanelStyle called on invalid object
-Property setter for CPanelStyle called with empty string as value for %short
-Property setter for CPanelStyle called with invalid css property name (%short)
+Property setter for CPanelStyle called with empty string as value for %s
+Property setter for CPanelStyle called with invalid css property name (%s)
 PropertyEditorSystem_001
 PropertyTransitionEnd
 Protocol Buffer reflection usage error:
@@ -3789,8 +3996,8 @@ Q(3Q<3Q
 Q3`bS
 QZ^&A!
 Quantization table 0x%02x was not defined
-Quantizing to %double = %double*%double*%double colors
-Quantizing to %double colors
+Quantizing to %d = %d*%d*%d colors
+Quantizing to %d colors
 QueuedLoaderVersion001
 QuitApp
 R		PS	
@@ -3811,8 +4018,8 @@ RESOURCE_TYPE_PANORAMA_DYNAMIC_IMAGES
 RESOURCE_TYPE_PANORAMA_LAYOUT
 RESOURCE_TYPE_PANORAMA_SCRIPT
 RESOURCE_TYPE_PANORAMA_STYLE
-RF##eF##long double
-RST%double
+RF##eF##e
+RST%d
 Reached an unintended state: CPPTYPE_MESSAGE
 Read Error
 Read failed on temporary file
@@ -3823,36 +4030,36 @@ ReadCh
 ReadCh_Opt
 Reading dangerously large protocol message.  If the message turns out to be larger than 
 ReadyForDisplay
-Recursive reference in entity '%short'
+Recursive reference in entity '%s'
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
-Reference to undefined entity '%short'
+Reference to undefined entity '%s'
 Refresh
+Register a handler for an event that is not otherwise handled
+Register a key binding
 Register an event handler
-Register signed char handler for an event that is not otherwise handled
-Register signed char key binding
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 RegisterEventHandler
-RegisterEventHandler called outside panel context, can'unsigned short register on signed char panel except in signed char containing panel/xml layout context
-RegisterEventHandler could not find panel (%short) to register on within context (%short -> %short)
+RegisterEventHandler called outside panel context, can't register on a panel except in a containing panel/xml layout context
+RegisterEventHandler could not find panel (%s) to register on within context (%s -> %s)
 RegisterForUnhandledEvent
-RegisterForUnhandledEvent called outside panel context, can'unsigned short register on signed char panel except in signed char containing panel/xml layout context
+RegisterForUnhandledEvent called outside panel context, can't register on a panel except in a containing panel/xml layout context
 RegisterKeyBind
-RegisterKeyBind failed, key %short to bind was probably invalid
+RegisterKeyBind failed, key %s to bind was probably invalid
 RegisterKeyBind requires at least 3 params, panel or input context to bind on (optionally empty string for global bindings), key to bind (can be , delimited list), and binding event name or JS callback function
 Release
 ReleaseLast
 ReleaseMessage
 ReloadChangedUIFiles
 ReloadStyleFile
+Remove a CSS class from a panel.
+Remove a CSS class from all children of this panel.
 Remove an unhandled event handler
-Remove signed char CSS class from all children of this panel.
-Remove signed char CSS class from signed char panel.
-Remove then immediately add back signed char CSS class from signed char panel. Useful to long double restrict-trigger events like animations or sound effects.
+Remove then immediately add back a CSS class from a panel. Useful to re-trigger events like animations or sound effects.
 RemoveLast
 RemoveStyle
 RemoveStyleFromEachChild
@@ -3867,7 +4074,7 @@ RenderHardwareConfig002
 RenderService_001
 RenderSystemSurface001
 RenderUtils_001
-Repeated fields can'unsigned short have default values.
+Repeated fields can't have default values.
 Request Entity Too Large
 Request Timeout
 Request-URI Too Large
@@ -3878,16 +4085,16 @@ ResetToDefaultValue
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceStatusChange:	CRC matches, Ignoring '%short'
-ResourceStatusChange:	ReloadChangedFile '%short'
-ResourceStatusChange: (CRC: Expected: 0x%8.8x, Got: 0x%8.8x), '%short'
+ResourceStatusChange:	CRC matches, Ignoring '%s'
+ResourceStatusChange:	ReloadChangedFile '%s'
+ResourceStatusChange: (CRC: Expected: 0x%8.8x, Got: 0x%8.8x), '%s'
 ResourceSystem013
 RestartMachine
 RetryStyleReload
 Romanian
 Row has too many bytes to allocate in memory
 RunScriptInPanelContext
-RunScriptInPanelContext must be called from signed char context with signed char domain that matches this panel
+RunScriptInPanelContext must be called from a context with a domain that matches this panel
 RunScriptInPanelContext takes 1 arguments [script]
 RunScriptInPanelContext was unable to compile provided script
 Russian
@@ -3939,12 +4146,12 @@ Scan script does not transmit all data
 SceneSystem_002
 SceneUtils_001
 Schedule
-Schedule signed char function to be called later
+Schedule a function to be called later
 Schedule() must be called with at least 2 arguments
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
-Scripts can'unsigned short be included in partial layout files
+Scripts can't be included in partial layout files
 Scripts must be declared first before any child panels
 Scripts must be declared in root
 Scripts section (if present) must be before any child panels at the top of the file
@@ -3971,18 +4178,18 @@ ScrollToTop
 ScrollUp
 ScrolledIntoView
 ScrolledOutOfView
-Second argument to RegisterEventHandler is not signed char valid panel id
-Second argument to RegisterEventHandler must be signed char string (panel id) or panel object (was an object, but not signed char valid panel object)
-Second argument to RegisterEventHandler must be signed char string (panel id) or valid panel object
-Second argument to RegisterKeyBind is not signed char valid string (should be key name to bind)
-Second argument to Schedule() must be signed char function
+Second argument to RegisterEventHandler is not a valid panel id
+Second argument to RegisterEventHandler must be a string (panel id) or panel object (was an object, but not a valid panel object)
+Second argument to RegisterEventHandler must be a string (panel id) or valid panel object
+Second argument to RegisterKeyBind is not a valid string (should be key name to bind)
+Second argument to Schedule() must be a function
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
 Second param to AsyncWebRequest must be object of named key=>value settings
 See Other
 Seek failed on temporary file
-Selected %double colors for quantization
-Selector exceeds temp buffer size: %short
+Selected %d colors for quantization
+Selector exceeds temp buffer size: %s
 ServerUploadGameStats001
 Service Unavailable
 ServiceDescriptorProto
@@ -4000,12 +4207,12 @@ SetFloat
 SetInputFocus
 SetInt32
 SetInt64
-SetMaterialModeState for texType %double failed, invalid material used?
+SetMaterialModeState for texType %d failed, invalid material used?
 SetPanelEnabled
 SetPanelEvent
 SetPanelEvent takes 2 arguments [panel event name, function/script]
-SetPanelEvent'short first argument must be signed char panel event type
-SetPanelEvent'short second argument must be signed char function or JS script
+SetPanelEvent's first argument must be a panel event type
+SetPanelEvent's second argument must be a function or JS script
 SetPanelSelected
 SetRepaint
 SetRepaint up parent chain
@@ -4022,26 +4229,26 @@ SetString
 SetUInt32
 SetUInt64
 SetWindowPosition does nothing in source2
-Sets 2 dimensional X/Y scale factors that apply to the quad for this panel prior to 3 dimensional transforms. This scaling applies without perspective and leaves the panel centered at the same spot as it started. Default of 1.0 means no scaling, 0.5 would be half size.<br><br><bool>Examples:</bool><pre>pre-transform-scale2d: 0.8
-Sets 2 dimensional rotation degrees that apply to the quad for this panel prior to 3 dimensional transforms. This rotation applies without perspective and leaves the panel centered at the same spot as it started.<br><br><bool>Example:</bool><pre>pre-transform-rotate2d: 45deg;</pre>
-Sets letter-spacing for text in signed char string. Possible values:<br>normal - no manual spacing<br>&lt;pixels&gt; - Any fixed pixel value (ex: "1px")
-Sets the ...-index for signed char panel, panels will be sorted and painted in order within signed char parent panel.  The sorting first sorts by the ...-pos computed from position and transforms, then if panels have matching zpos zindex is used. ...-index is different than ...-pos in that it doesn'unsigned short affect rendering perspective, just paint/hit-test ordering. The default ...-index value is 0, and any floating point value is accepted.<br><br><bool>Example:</bool><pre>...-index: 1;</pre>
-Sets the amount of blur to apply to the panel and all it'short children during composition.  Default is no blur, for now Gaussian is the only blur type and takes signed char horizontal standard deviation, vertical standard deviation, and number of passes.  Good std deviation values are around 0-10, if 10 is still not intense enough consider more passes, but more than one pass is bad for perf.  As shorthand you can specify with just one value, which will be used for the standard deviation in both directions and 1 pass will be set.<br><br><bool>Examples:</bool><pre>blur: gaussian( .5 );
-Sets the amount of saturation to apply to the panel and all it'short children during composition.  Default of 1.0 means no adjustment, 0.0 means fully desaturated to gray scale, greater than 1.0 means over-saturation.<br><br><bool>Example:</bool><pre>saturation: 0.4;</pre>
-Sets the background fill color/gradient/combination for signed char panel.<br><br><bool>Examples:</bool><pre>background-color: #FFFFFFFF;
-Sets the brightness that applies to the panel and all it'short children during composition. The value is signed char multiplier on the HSB brightness value.<br><br><bool>Example:</bool><pre>brightness: 1.5;</pre>
-Sets the contrast that applies to the panel and all it'short children during composition.<br><br><bool>Example:</bool><pre>contrast: 1.5;</pre>
-Sets the foreground fill color/gradient/combination for signed char panel.  This color is the color used to render text within the panel.<br><br><bool>Examples:</bool><pre>color: #FFFFFFFF;
-Sets the height for this panel. Possible values:<br>"fit-children" - Panel size is set to the required size of all children (default)<br>&lt;pixels&gt; - Any fixed pixel value (ex: "100px")<br>&lt;percentage&gt; - Percentage of parent height (ex: "100%")<br>"fill-parent-flow( &lt;weight&gt; )" - Fills to remaining parent width. If multiple children are set to this value, weight is used to determine final height. For example, if three children are set to fill-parent-flow of 1.0 and the parent is 300px tall, each child will be 100px tall. (ex: "fill-parent-flow( 1.0 )" )<br>"width-percentage( &lt;percentage&gt; )" - Percentage of the panel'short width, which allows you to enforce signed char particular aspect ratio.  The width cannot also be height-percentage.
-Sets the horizontal and vertical dimensions used to draw the background image. Can be set in pixels, percent, "contains" to size down to panel dimensions or "auto" preserves the image aspect ratio. By default, set to "auto" which preveres the image'short original size.<br><br>Multiple background layers can be specified in signed char comma separated list, which are then combined with background-image, background-position, and background-repeat values.<br><br><bool>Examples:</bool><pre>background-size: auto; // same as "auto auto" (default) 
-Sets the hue rotation to apply to the panel and all it'short children during composition. Default of 0.0 means no adjustment, domain is in degrees.<br><br><bool>Example:</bool><pre>hue-rotation: 180deg;</pre>
-Sets the long long, unsigned long long, ... position for signed char panel. Must not be in signed char flowing layout.<br><br><bool>Example:</bool><pre>position: 3% 20px 0px;</pre>
-Sets the opacity or amount of transparency applied to the panel and all it'short children during composition. Default of 1.0 means fully opaque, 0.0 means fully transparent.<br><br><bool>Example:</bool><pre>opacity: 0.8;</pre>
-Sets the perspective depth space available for children of the panel.  Default of 1000 would mean that children at 1000px zpos are right at the viewers eye, -1000px are just out of view distance faded to nothing.<br><br><bool>Example:</bool><pre>perspective: 1000;</pre>
-Sets the perspective origin which will be used when transforming children of this panel.  This can be thought of as the camera long long/unsigned long long position relative to the panel.<br><br><bool>Example:</bool><pre>perspective-origin: 50% 50%;</pre>
-Sets the transform origin about which transforms will be applied.  Default is 50% 50% on the panel so signed char rotation/scale is centered.<br><br><bool>Example:</bool><pre>transform-origin: 50% 50%</pre>
-Sets the transforms to apply to the panel in 2d or 3d space.  You can combine various transforms (comma separated) and they will be applied in order to create signed char 4x4 3d transform matrix.  The possible operations are: translate3d( long long, unsigned long long, ... ), translatex( long long ), translatey( unsigned long long ), translatez( ... ), scale3d( long long, unsigned long long, ...), rotate3d( long long, unsigned long long, ... ), rotatex( long long ), rotatey( unsigned long long ), rotatez( ... ).<br><br><bool>Examples:</bool><pre>transform: translate3d( -100px, -100px, 0px );
-Sets the width for this panel. Possible values:<br>"fit-children" - Panel size is set to the required size of all children (default)<br>&lt;pixels&gt; - Any fixed pixel value (ex: "100px")<br>&lt;percentage&gt; - Percentage of parent width (ex: "100%")<br>"fill-parent-flow( &lt;weight&gt; )" - Fills to remaining parent width. If multiple children are set to this value, weight is used to determine final width. For example, if three children are set to fill-parent-flow of 1.0 and the parent is 300px wide, each child will be 100px wide. (ex: "fill-parent-flow( 1.0 )" )<br>"height-percentage( &lt;percentage&gt; )" - Percentage of the panel'short height, which allows you to enforce signed char particular aspect ratio.  The height cannot also be width-percentage.
+Sets 2 dimensional X/Y scale factors that apply to the quad for this panel prior to 3 dimensional transforms. This scaling applies without perspective and leaves the panel centered at the same spot as it started. Default of 1.0 means no scaling, 0.5 would be half size.<br><br><b>Examples:</b><pre>pre-transform-scale2d: 0.8
+Sets 2 dimensional rotation degrees that apply to the quad for this panel prior to 3 dimensional transforms. This rotation applies without perspective and leaves the panel centered at the same spot as it started.<br><br><b>Example:</b><pre>pre-transform-rotate2d: 45deg;</pre>
+Sets letter-spacing for text in a string. Possible values:<br>normal - no manual spacing<br>&lt;pixels&gt; - Any fixed pixel value (ex: "1px")
+Sets the amount of blur to apply to the panel and all it's children during composition.  Default is no blur, for now Gaussian is the only blur type and takes a horizontal standard deviation, vertical standard deviation, and number of passes.  Good std deviation values are around 0-10, if 10 is still not intense enough consider more passes, but more than one pass is bad for perf.  As shorthand you can specify with just one value, which will be used for the standard deviation in both directions and 1 pass will be set.<br><br><b>Examples:</b><pre>blur: gaussian( 2.5 );
+Sets the amount of saturation to apply to the panel and all it's children during composition.  Default of 1.0 means no adjustment, 0.0 means fully desaturated to gray scale, greater than 1.0 means over-saturation.<br><br><b>Example:</b><pre>saturation: 0.4;</pre>
+Sets the background fill color/gradient/combination for a panel.<br><br><b>Examples:</b><pre>background-color: #FFFFFFFF;
+Sets the brightness that applies to the panel and all it's children during composition. The value is a multiplier on the HSB brightness value.<br><br><b>Example:</b><pre>brightness: 1.5;</pre>
+Sets the contrast that applies to the panel and all it's children during composition.<br><br><b>Example:</b><pre>contrast: 1.5;</pre>
+Sets the foreground fill color/gradient/combination for a panel.  This color is the color used to render text within the panel.<br><br><b>Examples:</b><pre>color: #FFFFFFFF;
+Sets the height for this panel. Possible values:<br>"fit-children" - Panel size is set to the required size of all children (default)<br>&lt;pixels&gt; - Any fixed pixel value (ex: "100px")<br>&lt;percentage&gt; - Percentage of parent height (ex: "100%")<br>"fill-parent-flow( &lt;weight&gt; )" - Fills to remaining parent width. If multiple children are set to this value, weight is used to determine final height. For example, if three children are set to fill-parent-flow of 1.0 and the parent is 300px tall, each child will be 100px tall. (ex: "fill-parent-flow( 1.0 )" )<br>"width-percentage( &lt;percentage&gt; )" - Percentage of the panel's width, which allows you to enforce a particular aspect ratio.  The width cannot also be height-percentage.
+Sets the horizontal and vertical dimensions used to draw the background image. Can be set in pixels, percent, "contains" to size down to panel dimensions or "auto" preserves the image aspect ratio. By default, set to "auto" which preveres the image's original size.<br><br>Multiple background layers can be specified in a comma separated list, which are then combined with background-image, background-position, and background-repeat values.<br><br><b>Examples:</b><pre>background-size: auto; // same as "auto auto" (default) 
+Sets the hue rotation to apply to the panel and all it's children during composition. Default of 0.0 means no adjustment, domain is in degrees.<br><br><b>Example:</b><pre>hue-rotation: 180deg;</pre>
+Sets the opacity or amount of transparency applied to the panel and all it's children during composition. Default of 1.0 means fully opaque, 0.0 means fully transparent.<br><br><b>Example:</b><pre>opacity: 0.8;</pre>
+Sets the perspective depth space available for children of the panel.  Default of 1000 would mean that children at 1000px zpos are right at the viewers eye, -1000px are just out of view distance faded to nothing.<br><br><b>Example:</b><pre>perspective: 1000;</pre>
+Sets the perspective origin which will be used when transforming children of this panel.  This can be thought of as the camera x/y position relative to the panel.<br><br><b>Example:</b><pre>perspective-origin: 50% 50%;</pre>
+Sets the transform origin about which transforms will be applied.  Default is 50% 50% on the panel so a rotation/scale is centered.<br><br><b>Example:</b><pre>transform-origin: 50% 50%</pre>
+Sets the transforms to apply to the panel in 2d or 3d space.  You can combine various transforms (comma separated) and they will be applied in order to create a 4x4 3d transform matrix.  The possible operations are: translate3d( x, y, z ), translatex( x ), translatey( y ), translatez( z ), scale3d( x, y, z), rotate3d( x, y, z ), rotatex( x ), rotatey( y ), rotatez( z ).<br><br><b>Examples:</b><pre>transform: translate3d( -100px, -100px, 0px );
+Sets the width for this panel. Possible values:<br>"fit-children" - Panel size is set to the required size of all children (default)<br>&lt;pixels&gt; - Any fixed pixel value (ex: "100px")<br>&lt;percentage&gt; - Percentage of parent width (ex: "100%")<br>"fill-parent-flow( &lt;weight&gt; )" - Fills to remaining parent width. If multiple children are set to this value, weight is used to determine final width. For example, if three children are set to fill-parent-flow of 1.0 and the parent is 300px wide, each child will be 100px wide. (ex: "fill-parent-flow( 1.0 )" )<br>"height-percentage( &lt;percentage&gt; )" - Percentage of the panel's height, which allows you to enforce a particular aspect ratio.  The height cannot also be width-percentage.
+Sets the x, y, z position for a panel. Must not be in a flowing layout.<br><br><b>Example:</b><pre>position: 3% 20px 0px;</pre>
+Sets the z-index for a panel, panels will be sorted and painted in order within a parent panel.  The sorting first sorts by the z-pos computed from position and transforms, then if panels have matching zpos zindex is used. z-index is different than z-pos in that it doesn't affect rendering perspective, just paint/hit-test ordering. The default z-index value is 0, and any floating point value is accepted.<br><br><b>Example:</b><pre>z-index: 1;</pre>
 Sets whether the given panel is enabled
 Setting invalid height
 Setting invalid max-height
@@ -4049,14 +4256,14 @@ Setting invalid min-height
 Setting invalid min-width
 Setting invalid width
 SettingsPanelShown
-Shorthand for setting panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><bool>Examples:</bool><pre>border: px solid #111111FF;</pre>
-Shorthand for setting the bottom panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><bool>Examples:</bool><pre>border-bottom: px solid #111111FF;</pre>
-Shorthand for setting the left panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><bool>Examples:</bool><pre>border-left: px solid #111111FF;</pre>
-Shorthand for setting the right panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><bool>Examples:</bool><pre>border-right: px solid #111111FF;</pre>
-Shorthand for setting the top panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><bool>Examples:</bool><pre>border-top: px solid #111111FF;</pre>
-Shorthand to set border radius for all corners at once.  Border radius rounds off corners of the panel, adjusting the border to smoothly round and also clipping background image/color and contents to the specified elliptical or circular values.  In this shorthand version you may specify signed char single value for all raddi, or horizontal / vertical separated by the '/' character.  For both horizontal and vertical you may specify 1 to 4 values in pixels or %, they will be taken in order as top-left, top-right, bottom-right, bottom-left radii values.<br><br><bool>Examples:</bool><pre>// 2 px circular corners on all sides
+Shorthand for setting panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><b>Examples:</b><pre>border: 2px solid #111111FF;</pre>
+Shorthand for setting the bottom panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><b>Examples:</b><pre>border-bottom: 2px solid #111111FF;</pre>
+Shorthand for setting the left panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><b>Examples:</b><pre>border-left: 2px solid #111111FF;</pre>
+Shorthand for setting the right panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><b>Examples:</b><pre>border-right: 2px solid #111111FF;</pre>
+Shorthand for setting the top panel border. Specify width, style, and color.  Supported styles are: solid, none.<br><br><b>Examples:</b><pre>border-top: 2px solid #111111FF;</pre>
+Shorthand to set border radius for all corners at once.  Border radius rounds off corners of the panel, adjusting the border to smoothly round and also clipping background image/color and contents to the specified elliptical or circular values.  In this shorthand version you may specify a single value for all raddi, or horizontal / vertical separated by the '/' character.  For both horizontal and vertical you may specify 1 to 4 values in pixels or %, they will be taken in order as top-left, top-right, bottom-right, bottom-left radii values.<br><br><b>Examples:</b><pre>// 2 px circular corners on all sides
 Should have image in resource map if resource URL is valid!
-Should never apply styles while loading layout... data isn'unsigned short yet fully parsed for initial apply and we may transition things wrong.
+Should never apply styles while loading layout... data isn't yet fully parsed for initial apply and we may transition things wrong.
 Should not add panels in layout traverse
 Should not add panels in paint traverse
 Should not add/remove panels in layout traverse
@@ -4065,19 +4272,19 @@ Should not pass empty string for FindChildInContext()/$()
 Should not remove panels in layout traverse
 Should not remove panels in paint traverse
 Should not see an include within an include
-Shouldn'unsigned short need this in Source 2
-Shouldn'unsigned short set repaint to none, we'll do that automatically when ready internally
+Shouldn't need this in Source 2
+Shouldn't set repaint to none, we'll do that automatically when ready internally
 ShowPanelZoo
 ShowQuitDialog
 ShowTooltip
 ShutdownMachine
 Simplified_Chinese
-Slow image load - %short (dimensions %dx%double, took %double msec)
+Slow image load - %s (dimensions %dx%d, took %d msec)
 Smoothing not supported with nonstandard sampling ratios
-Snippet '%short' is defined more than once.
-Snippet '%short' is missing its contents. line %double, col %double
+Snippet '%s' is defined more than once.
+Snippet '%s' is missing its contents. line %d, col %d
 Snippet is missing the name attribute
-Snippets can'unsigned short be included in partial layout files
+Snippets can't be included in partial layout files
 Snippets must be declared first before any child panels
 Snippets must be declared in root
 Snippets section (if present) must be before any child panels at the top of the file
@@ -4103,54 +4310,54 @@ Source2Server001
 Source2ServerSerializers002
 SourceCodeInfo
 Spanish
-Specifies border color for panel.  If signed char single color value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><bool>Examples:</bool><pre>border-color: #111111FF;
-Specifies border color for the bottom edge of the panel. <br><br><bool>Examples:</bool><pre>border-bottom-color: #111111FF;</pre>
-Specifies border color for the left edge of the panel. <br><br><bool>Examples:</bool><pre>border-left-color: #111111FF;</pre>
-Specifies border color for the right edge of the panel. <br><br><bool>Examples:</bool><pre>border-right-color: #111111FF;</pre>
-Specifies border color for the top edge of the panel. <br><br><bool>Examples:</bool><pre>border-top-color: #111111FF;</pre>
-Specifies border style for panel.  If signed char single style value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><bool>Examples:</bool><pre>border-style: solid;
-Specifies border style for the bottom edge of the panel. <br><br><bool>Examples:</bool><pre>border-bottom-style: solid;</pre>
-Specifies border style for the left edge of the panel. <br><br><bool>Examples:</bool><pre>border-left-style: solid;</pre>
-Specifies border style for the right edge of the panel. <br><br><bool>Examples:</bool><pre>border-right-style: solid;</pre>
-Specifies border style for the top edge of the panel. <br><br><bool>Examples:</bool><pre>border-top-style: solid;</pre>
-Specifies border width for panel.  If signed char single width value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><bool>Examples:</bool><pre>border-width: 1px;'
-Specifies border width for the bottom edge of the panel. <br><br><bool>Examples:</bool><pre>border-bottom-width: px;</pre>
-Specifies border width for the left edge of the panel. <br><br><bool>Examples:</bool><pre>border-left-width: px;</pre>
-Specifies border width for the right edge of the panel. <br><br><bool>Examples:</bool><pre>border-right-width: px;</pre>
-Specifies border width for the top edge of the panel. <br><br><bool>Examples:</bool><pre>border-top-width: px;</pre>
-Specifies border-radius for bottom-left corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><bool>Examples:</bool><pre>border-bottom-left-radius: px px;
-Specifies border-radius for bottom-right corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><bool>Examples:</bool><pre>border-bottom-right-radius: px px;
-Specifies border-radius for top-left corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><bool>Examples:</bool><pre>border-top-left-radius: px px;
-Specifies border-radius for top-right corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><bool>Examples:</bool><pre>border-top-right-radius: px px;
-Specifies outer shadows for boxes, or inset shadows/glows.  The shadow shape will match the border box for the panel,so use border-radius to affect rounding.  Syntax takes optional 'inset', optional 'fill' then color, and then horizontal offset pixels, vertical offset pixels, blur radius pixels, and spread distance in pixels. Inset means the shadow is an inner shadow/glow, fill is validonly on outer shadows and means draw the shadow behind the entire box, not clipping it to outside the border area only.<br><br><bool>Examples:</bool><pre>box-shadow: #ffffff80 4px 4px 8px 0px; // outer
-Specifies signed char 'wash' color, which means signed char color that will be blended over the panel and all it'short children at composition time, tinting them.  The alpha value of the color determines the intensity of the tinting.<br><br><bool>Example:</bool><pre>wash-color: #39b0d325;</pre>
-Specifies signed char clip region within the panel, where contents will be clipped at render time. This clipping has no impact on layout, and is fast and supported for transitions/animations. Radial clip mode takes signed char center point, start angle and angular width of the revealed sector.<br><br><bool>Example:</bool><pre>clip: rect( 10%, 90%, 90%, 10% );clip: radial( 50% %50, 0deg, 90deg );</pre>
-Specifies signed char scale to apply to this panel'short layout and all descendants. This scale happens at the layout level ratherthan the bitmap level, so things like text will increase their font size rather than just bitmap scaling. <br><br><bool>Examples:</bool><pre>ui-scale: 150%; // 150% scaling for X, Y, and Z.
-Specifies signed char sound name to play when this selector is applied.<br><br><bool>Example:</bool><pre>sound: "whoosh_in";</pre>
-Specifies signed char sound name to play when this selector is removed.<br><br><bool>Example:</bool><pre>sound-out: "whoosh_out";</pre>
-Specifies text shadows.  The shadow shape will match the text the panel can generate,and this is only meaningful for labels.  Syntax takes horizontal offset pixels, vertical offset pixels, blur radius pixels, strength, and then shadow color.<br><br><bool>Example:</bool><pre>text-shadow: px px 8px 3.0 #333333b0;</pre>
-Specifies the decoration for text within this panel, defaults to none. Possible values: none, underline, line-through.<br><br><bool>Example:</bool><pre>text-decoration: underline;</pre>
-Specifies the delay in seconds to use for transition properties on this panel, if more than one comma delimited value is specified then the values are applied to each property specified in 'transition-property' in order.  If only one value is specified then it applies to all the properties specified in transition-property.<br><br><bool>Examples:</bool><pre>transition-delay: 0.0s;
-Specifies the durating in seconds to use for transition properties on this panel, if more than one comma delimited value is specified then the values are applied to each property specified in 'transition-property' in order.  If only one value is specified then it applies to all the properties specified in transition-property.<br><br><bool>Examples:</bool><pre>transition-duration: 2.0s;
-Specifies the font face to use.<br><br><bool>Examples:</bool><pre>font-family: Arial;
-Specifies the font style to use. Supported values are normal, and italic<br><br><bool>Example:</bool><pre>font-style: normal;</pre>
-Specifies the font weight to use. Supported values are light, thin, normal, medium, bold, and black.<br><br><bool>Examples:</bool><pre>font-weight: normal;
-Specifies the line height (distance between top edge of line above and line below) to use for text.  By default this is unset and signed char value that matches the font-size reasonably will be used automatically.<br><br><bool>Example:</bool><pre>line-height: 20px;</pre>
-Specifies the target font face height in pixels.<br><br><bool>Example:</bool><pre>font-size: 12;</pre>
-Specifies the text alignment for text within this panel, defaults to left.<br><br><bool>Examples:</bool><pre>text-align: left;
-Specifies the timing function to use for transition properties on this panel, if more than one comma delimited value is specified then the values are applied to each property specified in 'transition-property' in order.  If only one value is specified then it applies to all the properties specified in transition-property. Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><bool>Examples:</bool><pre>transition-timing-function: ease-in-out;
-Specifies the transform for text within this panel, defaults to none. Possible values: none, uppercase, lowercase.<br><br><bool>Example:</bool><pre>text-transform: uppercase;</pre>
-Specifies what to do with contents that overflow the available space for the panel. Possible values:<br>"squish" - Children are squished to fit within the panel'short bounds if needed (default)<br>"clip" - Children maintain their desired size but their contents are clipped<br>"scroll" - Children maintain their desired size and signed char scrollbar is added to this panel<br><br><bool>Examples:</bool><pre>overflow: squish squish; // squishes contents in horizontal and vertical directions
-Specifies where to point the arrow of signed char context menu at on this panel. The first value controls how the arrow is positioned horizontally when the context menu is to the top or bottom of the panel, and the second value controls how the arrow is positioned vertically when the context menu is to the left or right of the panel. Default is '50% 50%'.<br><br><bool>Example:</bool><pre>context-menu-arrow-position: 25% 50%;</pre>
-Specifies where to point the arrow of signed char tooltip at on this panel. The first value controls how the arrow is positioned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the arrow is positioned vertically when the tooltip is to the left or right of the panel. Default is '50% 50%'.<br><br><bool>Example:</bool><pre>tooltip-arrow-position: 25% 50%;</pre>
-Specifies where to position signed char context menu relative to this panel. Valid options include 'left', 'top', 'right', and 'bottom'. List up to 4 positions to determine the order that positions are tried if the context menu doesn'unsigned short fully fit on screen. Default is 'right left bottom top'. If less than 4 positions are specified, the context menu first tries the opposite of the specified position along the same axis before switching to the other axis.<br><br><bool>Examples:</bool><pre>context-menu-position: bottom;
-Specifies where to position signed char tooltip relative to this panel. Valid options include 'left', 'top', 'right', and 'bottom'. List up to 4 positions to determine the order that positions are tried if the tooltip doesn'unsigned short fully fit on screen. Default is 'right left bottom top'. If less than 4 positions are specified, the tooltip first tries the opposite of the specified position along the same axis before switching to the other axis.<br><br><bool>Examples:</bool><pre>tooltip-position: bottom;
-Specifies where to position the body of signed char context menu relative to this panel. The first value controls how the body is aligned horizontally when the context menu is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the context menu is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '0% 0%'.<br><br><bool>Example:</bool><pre>context-menu-body-position: 50% 100%;</pre>
-Specifies where to position the body of signed char tooltip relative to this panel. The first value controls how the body is aligned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the tooltip is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '0% 0%'.<br><br><bool>Example:</bool><pre>tooltip-body-position: 50% 100%;</pre>
-Specifies which properties should transition smoothly to new values if signed char class/pseudo class changes the styles.  Also specifies duration, timing function, and delay.  Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><bool>Example:</bool><pre>transition: position 2.0s ease-in-out 0.0s, perspective-origin 1.2s ease-in-out 0.8s;</pre>
-Specifies which properties should transition smoothly to new values if signed char class/pseudo class changes the styles.<br><br><bool>Examples:</bool><pre>transition: position, transform, background-color;</pre>
-Start float&& Frame 0x%02x: width=%u, height=%u, components=%double
-Start float&& Scan: %double components
+Specifies a 'wash' color, which means a color that will be blended over the panel and all it's children at composition time, tinting them.  The alpha value of the color determines the intensity of the tinting.<br><br><b>Example:</b><pre>wash-color: #39b0d325;</pre>
+Specifies a clip region within the panel, where contents will be clipped at render time. This clipping has no impact on layout, and is fast and supported for transitions/animations. Radial clip mode takes a center point, start angle and angular width of the revealed sector.<br><br><b>Example:</b><pre>clip: rect( 10%, 90%, 90%, 10% );clip: radial( 50% %50, 0deg, 90deg );</pre>
+Specifies a scale to apply to this panel's layout and all descendants. This scale happens at the layout level ratherthan the bitmap level, so things like text will increase their font size rather than just bitmap scaling. <br><br><b>Examples:</b><pre>ui-scale: 150%; // 150% scaling for X, Y, and Z.
+Specifies a sound name to play when this selector is applied.<br><br><b>Example:</b><pre>sound: "whoosh_in";</pre>
+Specifies a sound name to play when this selector is removed.<br><br><b>Example:</b><pre>sound-out: "whoosh_out";</pre>
+Specifies border color for panel.  If a single color value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><b>Examples:</b><pre>border-color: #111111FF;
+Specifies border color for the bottom edge of the panel. <br><br><b>Examples:</b><pre>border-bottom-color: #111111FF;</pre>
+Specifies border color for the left edge of the panel. <br><br><b>Examples:</b><pre>border-left-color: #111111FF;</pre>
+Specifies border color for the right edge of the panel. <br><br><b>Examples:</b><pre>border-right-color: #111111FF;</pre>
+Specifies border color for the top edge of the panel. <br><br><b>Examples:</b><pre>border-top-color: #111111FF;</pre>
+Specifies border style for panel.  If a single style value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><b>Examples:</b><pre>border-style: solid;
+Specifies border style for the bottom edge of the panel. <br><br><b>Examples:</b><pre>border-bottom-style: solid;</pre>
+Specifies border style for the left edge of the panel. <br><br><b>Examples:</b><pre>border-left-style: solid;</pre>
+Specifies border style for the right edge of the panel. <br><br><b>Examples:</b><pre>border-right-style: solid;</pre>
+Specifies border style for the top edge of the panel. <br><br><b>Examples:</b><pre>border-top-style: solid;</pre>
+Specifies border width for panel.  If a single width value is set it applies to all sides, if 2 are set the first is top/bottom and the second is left/right, if all four are set then they are top, right, bottom, left in order.<br><br><b>Examples:</b><pre>border-width: 1px;'
+Specifies border width for the bottom edge of the panel. <br><br><b>Examples:</b><pre>border-bottom-width: 2px;</pre>
+Specifies border width for the left edge of the panel. <br><br><b>Examples:</b><pre>border-left-width: 2px;</pre>
+Specifies border width for the right edge of the panel. <br><br><b>Examples:</b><pre>border-right-width: 2px;</pre>
+Specifies border width for the top edge of the panel. <br><br><b>Examples:</b><pre>border-top-width: 2px;</pre>
+Specifies border-radius for bottom-left corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><b>Examples:</b><pre>border-bottom-left-radius: 2px 2px;
+Specifies border-radius for bottom-right corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><b>Examples:</b><pre>border-bottom-right-radius: 2px 2px;
+Specifies border-radius for top-left corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><b>Examples:</b><pre>border-top-left-radius: 2px 2px;
+Specifies border-radius for top-right corner which rounds off border and clips background/foreground content to rounded edge.  Takes 1 or 2 values in px or %, first value is horizontal radii for elliptical corner, second is vertical radii, if only one is specified then horizontal/vertical will both be set and corner will be circular.<br><br><b>Examples:</b><pre>border-top-right-radius: 2px 2px;
+Specifies outer shadows for boxes, or inset shadows/glows.  The shadow shape will match the border box for the panel,so use border-radius to affect rounding.  Syntax takes optional 'inset', optional 'fill' then color, and then horizontal offset pixels, vertical offset pixels, blur radius pixels, and spread distance in pixels. Inset means the shadow is an inner shadow/glow, fill is validonly on outer shadows and means draw the shadow behind the entire box, not clipping it to outside the border area only.<br><br><b>Examples:</b><pre>box-shadow: #ffffff80 4px 4px 8px 0px; // outer
+Specifies text shadows.  The shadow shape will match the text the panel can generate,and this is only meaningful for labels.  Syntax takes horizontal offset pixels, vertical offset pixels, blur radius pixels, strength, and then shadow color.<br><br><b>Example:</b><pre>text-shadow: 2px 2px 8px 3.0 #333333b0;</pre>
+Specifies the decoration for text within this panel, defaults to none. Possible values: none, underline, line-through.<br><br><b>Example:</b><pre>text-decoration: underline;</pre>
+Specifies the delay in seconds to use for transition properties on this panel, if more than one comma delimited value is specified then the values are applied to each property specified in 'transition-property' in order.  If only one value is specified then it applies to all the properties specified in transition-property.<br><br><b>Examples:</b><pre>transition-delay: 0.0s;
+Specifies the durating in seconds to use for transition properties on this panel, if more than one comma delimited value is specified then the values are applied to each property specified in 'transition-property' in order.  If only one value is specified then it applies to all the properties specified in transition-property.<br><br><b>Examples:</b><pre>transition-duration: 2.0s;
+Specifies the font face to use.<br><br><b>Examples:</b><pre>font-family: Arial;
+Specifies the font style to use. Supported values are normal, and italic<br><br><b>Example:</b><pre>font-style: normal;</pre>
+Specifies the font weight to use. Supported values are light, thin, normal, medium, bold, and black.<br><br><b>Examples:</b><pre>font-weight: normal;
+Specifies the line height (distance between top edge of line above and line below) to use for text.  By default this is unset and a value that matches the font-size reasonably will be used automatically.<br><br><b>Example:</b><pre>line-height: 20px;</pre>
+Specifies the target font face height in pixels.<br><br><b>Example:</b><pre>font-size: 12;</pre>
+Specifies the text alignment for text within this panel, defaults to left.<br><br><b>Examples:</b><pre>text-align: left;
+Specifies the timing function to use for transition properties on this panel, if more than one comma delimited value is specified then the values are applied to each property specified in 'transition-property' in order.  If only one value is specified then it applies to all the properties specified in transition-property. Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><b>Examples:</b><pre>transition-timing-function: ease-in-out;
+Specifies the transform for text within this panel, defaults to none. Possible values: none, uppercase, lowercase.<br><br><b>Example:</b><pre>text-transform: uppercase;</pre>
+Specifies what to do with contents that overflow the available space for the panel. Possible values:<br>"squish" - Children are squished to fit within the panel's bounds if needed (default)<br>"clip" - Children maintain their desired size but their contents are clipped<br>"scroll" - Children maintain their desired size and a scrollbar is added to this panel<br><br><b>Examples:</b><pre>overflow: squish squish; // squishes contents in horizontal and vertical directions
+Specifies where to point the arrow of a context menu at on this panel. The first value controls how the arrow is positioned horizontally when the context menu is to the top or bottom of the panel, and the second value controls how the arrow is positioned vertically when the context menu is to the left or right of the panel. Default is '50% 50%'.<br><br><b>Example:</b><pre>context-menu-arrow-position: 25% 50%;</pre>
+Specifies where to point the arrow of a tooltip at on this panel. The first value controls how the arrow is positioned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the arrow is positioned vertically when the tooltip is to the left or right of the panel. Default is '50% 50%'.<br><br><b>Example:</b><pre>tooltip-arrow-position: 25% 50%;</pre>
+Specifies where to position a context menu relative to this panel. Valid options include 'left', 'top', 'right', and 'bottom'. List up to 4 positions to determine the order that positions are tried if the context menu doesn't fully fit on screen. Default is 'right left bottom top'. If less than 4 positions are specified, the context menu first tries the opposite of the specified position along the same axis before switching to the other axis.<br><br><b>Examples:</b><pre>context-menu-position: bottom;
+Specifies where to position a tooltip relative to this panel. Valid options include 'left', 'top', 'right', and 'bottom'. List up to 4 positions to determine the order that positions are tried if the tooltip doesn't fully fit on screen. Default is 'right left bottom top'. If less than 4 positions are specified, the tooltip first tries the opposite of the specified position along the same axis before switching to the other axis.<br><br><b>Examples:</b><pre>tooltip-position: bottom;
+Specifies where to position the body of a context menu relative to this panel. The first value controls how the body is aligned horizontally when the context menu is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the context menu is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '0% 0%'.<br><br><b>Example:</b><pre>context-menu-body-position: 50% 100%;</pre>
+Specifies where to position the body of a tooltip relative to this panel. The first value controls how the body is aligned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the tooltip is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '0% 0%'.<br><br><b>Example:</b><pre>tooltip-body-position: 50% 100%;</pre>
+Specifies which properties should transition smoothly to new values if a class/pseudo class changes the styles.  Also specifies duration, timing function, and delay.  Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><b>Example:</b><pre>transition: position 2.0s ease-in-out 0.0s, perspective-origin 1.2s ease-in-out 0.8s;</pre>
+Specifies which properties should transition smoothly to new values if a class/pseudo class changes the styles.<br><br><b>Examples:</b><pre>transition: position, transform, background-color;</pre>
+Start Of Frame 0x%02x: width=%u, height=%u, components=%d
+Start Of Scan: %d components
 Start of Image
 StartButton
 StartButtonUp
@@ -4175,22 +4382,22 @@ Streaming Gamepad
 String
 String field
 String literals cannot cross line boundaries.
-StringNoTransform shouldn'unsigned short be needed/used on CLocalizationStringDialogVariablesDerived
+StringNoTransform shouldn't be needed/used on CLocalizationStringDialogVariablesDerived
 StringOutputStream.
 StyleClassesChanged
 StyleFileIndex_t ConstructStyleFileIndex(StyleFileIndex_t, uint, uint)
 StyleFilePtr_t panorama::CLayoutManager::GetStyleFile(const char *, const panorama::CStyleFileSet &, uint &, bool)
 StyleFlagsChanged
-Styles can'unsigned short be included in partial layout files
+Styles can't be included in partial layout files
 Styles must be declared first before any child panels
 Styles must be declared in root
 Styles section (if present) must be before any child panels at the top of the file
-Surface %p %short stats: %llu frames rendered in %.3f seconds, %.fms per frame
+Surface %p %s stats: %llu frames rendered in %.3f seconds, %.3fms per frame
 SuspendMachine
 Suspension not allowed here
 Swedish
-Switch from encoding '%short' to '%short' is not supported
-Switch which class the panel has for signed char given attribute slot. Allows easily changing between multiple states.
+Switch from encoding '%s' to '%s' is not supported
+Switch which class the panel has for a given attribute slot. Allows easily changing between multiple states.
 SwitchStyle
 Switching Protocols
 Symbol name "
@@ -4234,7 +4441,6 @@ T$$A9
 T$(3D$@3\$D3L$H3T$LM
 T$(3E
 T$,fA
-T$0!
 T$0M1
 T$<fD
 T$@H1
@@ -4321,7 +4527,7 @@ TYPE_UINT64
 T`00P`00P
 TabBackward
 TabForward
-Tag '%short' was not closed
+Tag '%s' was not closed
 Temporary Redirect
 TestFormatA
 TestFormatB
@@ -4329,9 +4535,9 @@ TestFormatC
 TestFormatD
 TestFormatE
 TestScriptMgr001
-TextEntryFocusChange(): Cleared for %short
-TextEntryFocusChange(): Set for %short
-TextEntryInvalid(): Cleared for %short
+TextEntryFocusChange(): Cleared for %s
+TextEntryFocusChange(): Set for %s
+TextEntryInvalid(): Cleared for %s
 TextInputFinished
 TextInputHandlerStateChange
 TextLayout_001
@@ -4343,19 +4549,19 @@ The total number of bytes read was
 There cannot be more than one scripts section in the xml, place all script includes together in one
 There cannot be more than one snippets section in the xml, place all snippets together in one
 There cannot be more than one styles section in the xml, place all styles includes together in one
-There should be only signed char single scripts section in the XML, this section is duplicate
-There should be only signed char single snippets section in the XML, this section is duplicate
-There should be only signed char single styles section in the XML, this section is duplicate
-Third argument to RegisterEventHandler is not signed char valid callback function
-Third argument to RegisterKeyBind is not signed char valid callback function or event name
-This ZeroCopyOutputStream doesn'unsigned short support aliasing. Reaching here usually means signed char ZeroCopyOutputStream implementation bug.
+There should be only a single scripts section in the XML, this section is duplicate
+There should be only a single snippets section in the XML, this section is duplicate
+There should be only a single styles section in the XML, this section is duplicate
+Third argument to RegisterEventHandler is not a valid callback function
+Third argument to RegisterKeyBind is not a valid callback function or event name
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This program requires version 
 This program was compiled against version 
-This shouldn'unsigned short be called if all the sizes are equal.
+This shouldn't be called if all the sizes are equal.
 ThreadInMainThread()
 Time is going backwards or not moving, this is very bad.
 TimeoutFastScrollSound
-Toggle whether signed char panel has the given CSS class.
+Toggle whether a panel has the given CSS class.
 Toggle whether this panel is :selected.
 ToggleConsole
 ToggleDebugger
@@ -4365,7 +4571,7 @@ ToggleStyle
 Tokens
 Too Many Requests
 Too many IDATs found
-Too many color components: %double, max %double
+Too many color components: %d, max %d
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -4377,20 +4583,20 @@ TopLevelWindowClose
 TopLevelWindowVisibilityChanged
 Traditional_Chinese
 Tried to merge messages of different types 
-Tried to register signed char non-generated type with the generated type registry.
+Tried to register a non-generated type with the generated type registry.
 TriggerStyle
 TrpLi
 Truncated iTXt chunk
 Truncated zTXt chunk
 Truncating incorrect info tRNS chunk length
 Truncating incorrect tRNS chunk length
-Trying to apply missing animation: %short
-Trying to cast '%short' to signed char different resource type!
+Trying to apply missing animation: %s
+Trying to cast '%s' to a different resource type!
 Trying to rearrange panels which are not both direct children
-Trying to retrieve signed char panel handle for an invalid panel
+Trying to retrieve a panel handle for an invalid panel
 Turkish
 TurnOffActiveController
-Type appears to be in generated pool but wasn'unsigned short 
+Type appears to be in generated pool but wasn't 
 Type is already registered: 
 T~FbT~Fb
 U,E3M
@@ -4417,37 +4623,37 @@ UTF-8 data when
 UUUUUUUUUUUUUUUU0123456789ABCDEF
 UUUUUUUUUUUUUUUU3333333333333333
 Ukrainian
-Unable to @import style file '%short'
-Unable to find child '%short' in layout file '%short'
-Unable to find child '%short' in panel '%short'
-Unable to find panel '%short' in layout file '%short'
-Unable to load css file: %short
-Unable to load js file: %short
-Unable to load layout file '%short'.  This may indicate signed char problem with your local install files and validating your install through the Steam client may resolve the issue.
+Unable to @import style file '%s'
+Unable to find child '%s' in layout file '%s'
+Unable to find child '%s' in panel '%s'
+Unable to find panel '%s' in layout file '%s'
+Unable to load css file: %s
+Unable to load js file: %s
+Unable to load layout file '%s'.  This may indicate a problem with your local install files and validating your install through the Steam client may resolve the issue.
 Unable to load layout from string
-Unable to load local style file %short
-Unable to load snippet %short
-Unable to load snippet '%short' from layout file '%short'
+Unable to load local style file %s
+Unable to load snippet %s
+Unable to load snippet '%s' from layout file '%s'
 Unable to save file
 Unable to save the following file, because it has changed on disk.
-Unable to traverse to child '%short' in panel '%short'
+Unable to traverse to child '%s' in panel '%s'
 Unauthorized
-Undefined namespace prefix '%short'
+Undefined namespace prefix '%s'
 Underlying object is deleted!
-Unexpected basic quad fill brush type %double
+Unexpected basic quad fill brush type %d
 Unexpected end of string.
 Unexpected failure while serializing option submessage 
 Unexpected marker 0x%02x
-Unexpected parsing error - popping panel off empty stack: line %double, col %double
-Unexpected parsing error: line %double, col %double
-Unhandled command type %double
+Unexpected parsing error - popping panel off empty stack: line %d, col %d
+Unexpected parsing error: line %d, col %d
+Unhandled command type %d
 Unimplemented type: 
 Uninitialized row
 UninterpretedOption
 Unknown
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
-Unknown Adobe color transform code %double
+Unknown Adobe color transform code %d
 Unknown EUpdateStyleType
 Unknown HTTP 4xx
 Unknown HTTP 5xx
@@ -4463,43 +4669,43 @@ Unknown filter method in IHDR
 Unknown iTXt compression type or method
 Unknown input type to ActionInput_t( InputMessage_t )
 Unknown interlace method in IHDR
-Unknown overflow value: %double
-Unknown panel type in style selector: %short
+Unknown overflow value: %d
+Unknown panel type in style selector: %s
 Unknown sRGB intent
 Unknown texture sampling type
 Unknown transform type
 Unknown zlib error
-Unknown(%double)
+Unknown(%d)
 UnreadyForDisplay
-Unrecognized component IDs %double %double %double, assuming YCbCr
+Unrecognized component IDs %d %d %d, assuming YCbCr
 Unrecognized equation type for pCAL chunk
 UnregisterForUnhandledEvent
-UnregisterJSGenericCallback - Unrecognized generic callback handle: %double
+UnregisterJSGenericCallback - Unrecognized generic callback handle: %d
 Unregistering an unhandled event handler that was not previously registered
-Unsupported JPEG data precision %double
+Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported Media Type
 Unsupported color conversion request
-Unsupported combinator in selector: %char
-Unsupported encoding '%short'
+Unsupported combinator in selector: %c
+Unsupported encoding '%s'
 Unsupported marker type 0x%02x
-Unsupported resource type %short
+Unsupported resource type %s
 Unsupported stroke type
 Use Proxy
 UserInfoChangeService_001
 UserInputActive
-Using signed char non-local image default %short, don'unsigned short do that!
-V L;long double
-V$L;long double
-V(L;long double
+Using a non-local image default %s, don't do that!
+V L;e
+V$L;e
+V(L;e
 V++}V++}
 V8 - Hint GC Full
 V8 - Hint GC Periodic
 V8 WorkerThread
 V8ParamToPanoramaType expected IUIPanel object to convert, but got some other invalid object
 V8ParamToPanoramaType expected IUIPanelStyle object to convert, but got some other invalid object
-V8ParamToPanoramaType expected Number type to convert, but got something else (%short)
-V8ParamToPanoramaType expected bool type to convert, but got something else (%short)
+V8ParamToPanoramaType expected Number type to convert, but got something else (%s)
+V8ParamToPanoramaType expected bool type to convert, but got something else (%s)
 V8ParamToPanoramaType expected object type to convert, but got something else
 VApplication001
 VAvi001
@@ -4558,11 +4764,11 @@ Value must be quoted string for string option "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
-Variables added to new string %short, not supported, restart app to see change
+Variables added to new string %s, not supported, restart app to see change
 Vector Permutation AES for x86_64/SSSE3, Mike Hamburg (Stanford University)
 Vfff.
 Video player already has specified delegate
-Video player didn'unsigned short have specified delegate
+Video player didn't have specified delegate
 VideoPlayerChangedRepresentation
 VideoPlayerEnded
 VideoPlayerFreeAudio
@@ -4573,18 +4779,18 @@ VideoPlayerRepeated
 Virtual array controller messed up
 VisBuilder_001
 WARNING
-WARNING: Image '%short' size too large (%double long long %double with limit %double long long %double), image load failing
+WARNING: Image '%s' size too large (%d x %d with limit %d x %d), image load failing
 WAXBXBRBRBRE`
-WBR	unsigned int
+WBR	j
 WIN32
 WINDOWS
 WINXP
 Warning parsing text-format 
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 Warning: Unused import: "
 Warning: thumbnail image size does not match data length %u
 Warning: unknown JFIF revision number %d.%02d
-We default to ellipsis, which is contrary to the normal CSS spec.<br><br><bool>Examples:</bool><pre>text-overflow: ellipsis;
+We default to ellipsis, which is contrary to the normal CSS spec.<br><br><b>Examples:</b><pre>text-overflow: ellipsis;
 Whitespace not allowed here
 Whitespace required
 Width is too large for libpng to process pixels
@@ -4602,7 +4808,7 @@ WorldRendererMgr001
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
-Wrong JPEG library version: library is %double, caller expects %double
+Wrong JPEG library version: library is %d, caller expects %d
 Wrong number of arguments to RegisterEventHandler
 Wrong number of arguments to RegisterForUnhandledEvent
 W}9D*
@@ -4614,7 +4820,7 @@ X-Template-File
 X-ValveUserAgent
 X@@fA
 XInput Controller
-XML parsing error: %short
+XML parsing error: %s
 XPlhppppv4@@
 XU@fA
 XXu*H
@@ -4624,14 +4830,14 @@ X[A^A_]
 Y 3Y43Y
 Y$3Y83Y
 Y(3Y<3Y
-YL$`float
+YL$`f
 Y[eA	
 Yfffff.
-You are creating signed char panel in the middle of signed char layout pass.  Find comments next to this assert for more info.
+You are creating a panel in the middle of a layout pass.  Find comments next to this assert for more info.
 You can set but not get style alias names, you must get on the base style property name
 You must turn on @panorama_track_render_commands to track command usage.
 YpHcyhI
-Z--wZ--wchar_t
+Z--wZ--w
 Z2[tY
 ZBRAp
 ZBRBZBRAp
@@ -4651,7 +4857,7 @@ Z}	8%]
 [ffff.
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
-[unsigned short,fD
+[t,fD
 \$	E1
 \$ D)
 \$ E1
@@ -4669,10 +4875,10 @@ Z}	8%]
 \D$Xf
 \D;{(uCG
 \U%08x
-\long long%02x
 \sPHi
 \t4D9
 \uRMc
+\x%02x
 ]8d$@
 ]:\|^
 ^(HcC
@@ -4906,7 +5112,6 @@ __const
 __cstring
 __data
 __eh_frame
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
 __la_symbol_ptr
@@ -5104,12 +5309,13 @@ _wcslen
 `E;~8
 `P  0
 `PA9^X
-`PD9{unsigned char
+`PD9{h
 `YAUATAp
 `[A\A^A_]
 `[A^]
 ``A9^p
-`unsigned char[A\A^A_]
+`h[A\A^A_]
+a@fff.
 aHfff.
 aPfff.
 aXfff.
@@ -5180,7 +5386,7 @@ background-repeat: repeat space; // repeats horizontally, spaces vertically
 background-size
 background-size: 100% 100%; // image fills the panel
 background-size: 300px 200px; // image is drawn 300px wide, 200px tall</pre>
-background-size: 50% 75%; // image fills 50% of the panel'short width, and 75% of the panel'short height
+background-size: 50% 75%; // image fills 50% of the panel's width, and 75% of the panel's height
 bad adaptive filter value
 base-position
 base-position-variance
@@ -5282,10 +5488,10 @@ border-left-color
 border-left-style
 border-left-width
 border-radius
+border-radius: 2px / 4px;
+border-radius: 2px 3px 4px 2px / 2px 3px 3px 2px;</pre>
+border-radius: 2px;
 border-radius: 50% / 50%;
-border-radius: px / 4px;
-border-radius: px 3px 4px px / px 3px 3px px;</pre>
-border-radius: px;
 border-right
 border-right-color
 border-right-style
@@ -5319,6 +5525,10 @@ burlywood
 by_one
 bytes
 bytes. 
+c HcC A9
+c Ic<$H
+c(E9~(
+c(ffff.
 cValues == 4
 cadetblue
 callbackArray->Length() >= 3
@@ -5336,10 +5546,6 @@ ccccccccccccccccBit-sliced AES for x86_64/SSSE3, Emilia K
 center
 char *CUtlStringBuilder::InternalPrepareBuffer(size_t, bool, size_t)
 char *CUtlStringBuilder::PrepareBuffer(size_t, bool, size_t)
-char HcC A9
-char Ic<$H
-char(E9~(
-char(ffff.
 chartreuse
 childfocusonhover
 chocolate
@@ -5353,10 +5559,10 @@ code://
 collapse
 color
 color-stop
-color-stop( %short, 
+color-stop( %s, 
 color: gradient( linear, 0% 0%, 0% 100%, from( #cbcbcbff ), to( #a0a0a0a0 ) );</pre>
 complete
-complete value for AsyncWebRequest settings must be signed char function if set
+complete value for AsyncWebRequest settings must be a function if set
 composition
 console_history_size
 const CCurrencyAmount &panorama::CPanelKeyValue::Amount() const
@@ -5464,7 +5670,7 @@ deepskyblue
 default
 default_value
 defaultfocus
-defaultfocus=%short not found within layout file for %short
+defaultfocus=%s not found within layout file for %s
 delay, eventToFire
 dependency
 deprecated
@@ -5506,7 +5712,7 @@ ease-in
 ease-in-out
 ease-out
 ecp_nistz256_
-edit %short
+edit %s
 el_GR
 elect_w
 ellipsis
@@ -5520,7 +5726,7 @@ english
 error
 error displaying message box
 error in user chunk
-error value for AsyncWebRequest settings must be signed char function if set
+error value for AsyncWebRequest settings must be a function if set
 es_ES
 et_bits5
 event
@@ -5530,9 +5736,13 @@ extendee
 extension_range
 external
 extreme cHRM chunk cannot be converted to tristimulus values
-ezd<float
+ezd<f
+f == NULL || dynamic_cast<To>(f) != NULL
+f#C0L
+f#H0H
 f0D9{(
 f33Uf33U
+f@LcV(H
 fA#G0I
 fPD9sh
 fade_out
@@ -5546,11 +5756,11 @@ file://
 file://{resources}/default_keybinds.cfg
 file://{resources}/keybinds.cfg
 file://{resources}/window_keybinds.cfg
-file://{sounds}/%short%short
+file://{sounds}/%s%s
 filetoinclude
 fill 
 fill-parent-flow
-fill-parent-flow( %short )
+fill-parent-flow( %s )
 finnish
 firebrick
 fit-children
@@ -5562,20 +5772,14 @@ flDesiredLayoutHeight != k_flFloatAuto
 flDesiredLayoutWidth != k_flFloatAuto
 flFinalHeight != k_flFloatAuto
 flFinalWidth != k_flFloatAuto
-flLeft == long long
+flLeft == x
 flMaxHeight != k_flFloatAuto
 flMaxWidth != k_flFloatAuto
 flTargetFrameTime > m_flCurrentFrameTime
-flTop == unsigned long long
+flTop == y
 float
-float == NULL || dynamic_cast<To>(float) != NULL
 float GetFlowDirectionPos(const panorama::IUIPanel *, panorama::EFlowDirection)
-float char::* I
-float char::*@M
 float panorama::CUILength::GetValueAsLength(float) const
-float#C0L
-float#H0H
-float@LcV(H
 floralwhite
 flow-children
 focus
@@ -5597,7 +5801,7 @@ french
 from_mont
 from_montgomery
 fuchsia
-function %short()
+function %s()
 gH=vcssu5
 g_IUIEngine == NULL
 g_IUIEngine == this
@@ -5634,12 +5838,14 @@ hA;\$
 hH9T0
 hManifest == m_hManifest
 hNcD	
+h[A\A]A^A_]
+h[A^A_]
 hash_
 header value for AsyncWebRequest settings must be an object with named key->value headers if set
 headers
 height
 height-percentage
-height-percentage( %short )
+height-percentage( %s )
 hex_digit_to_int
 hfffff.
 hittest
@@ -5652,7 +5858,7 @@ hotpink
 hover
 http:
 http://
-http://%short%short
+http://%s%s
 http://www.w3.org/2000/xmlns/
 http://www.w3.org/XML/1998/namespace
 http_cache_size
@@ -5662,6 +5868,9 @@ https://
 hu_HU
 hue-rotation
 hungarian
+i < m_cElements
+i >= 0
+i@333333
 iBitsRight > 0
 iColorStop < FANCYQUAD_MAXSTOPS
 iContextPanelCallbackList != m_mapPanelToJSGenericCallbacks.InvalidIndex()
@@ -5691,8 +5900,6 @@ inputsystem
 inset
 inset 
 inspect
-int < m_cElements
-int >= 0
 int CUtlBlockMemory<char, int>::EnsureContiguousCapacity(int, int) [T = char, I = int]
 int CUtlBuffer::GetUpTo(void *, int)
 int CUtlSortVector<CUtlString, CUtlSortVectorDefaultLess<CUtlString>, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> > >::FindLessOrEqual(const TKey &, bool *) const [T = CUtlString, LessFunc = CUtlSortVectorDefaultLess<CUtlString>, BaseVector = CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >, TKey = const char *]
@@ -5711,7 +5918,6 @@ int panorama::CTopLevelWindow::SetPanelVisible(int, bool)
 int32
 int64
 int8 CFieldPathHuffmanEncoder::BuildFixedTree_R(const CFieldPathHuffmanEncoder::INode *)
-int@333333
 internal
 internal error handling cHRM coefficients
 internal error handling cHRM->XYZ
@@ -5727,7 +5933,7 @@ invalid chunklength
 invalid user transform pixel depth
 invert
 is_extension
-isxdigit(char)
+isxdigit(c)
 it_IT
 italian
 italic
@@ -5741,7 +5947,7 @@ java_multiple_files
 java_outer_classname
 java_package
 java_string_check_utf8
-k0L+short
+k0L+s
 k_EBeginFrame
 k_EBeginPaintBackground
 k_EBeginPaintLast
@@ -5885,20 +6091,19 @@ keyboard
 keygen
 kffffff.
 khaki
-kjj,unsigned char
+kjj,h
 ko_KR
 koreana
 l$	ffffff.
 l$ H1
 l$(fA
-l$0!
 l$0fE
-l$4!
 l$8H3D$0H3l$@
 l$8M1
 l$<fA
 l$PfD
 l$XM1
+l'@L;
 lZrNlZrN
 label
 lastactivate
@@ -5916,8 +6121,8 @@ length_delimited
 letter-spacing
 libpanorama.dylib
 libpng does not support gamma+background+rgb_to_gray
-libpng error: %short
-libpng warning: %short
+libpng error: %s
+libpng warning: %s
 light
 lightblue
 lightcoral
@@ -5941,29 +6146,10 @@ linear
 linen
 localization/
 location
-long long		0y	
-long long E9|$
-long long tdE)
-long long"A9^
-long long'A9^
-long long'E9t$
-long long)E9w
-long long,@H>
-long long-E9w
-long long<<Dx<<D%
-long long<E9uP~6Ic
-long long=E9uP~7Ic
-long long@I;}
-long long[A\A]A^A_]
-long long[A^A_]
-long longimaginary ;Fx
-long long{A9^P~uHc
-long long|fff.
-long long~A9^P~xHc
-long'@L;
 lowercase
+m		 p	
 m8T$ 
-m_AnimationAndTransformStack empty during DrawTextRegion - should never happen, require signed char PushAnimationAndTransformContext before any drawing
+m_AnimationAndTransformStack empty during DrawTextRegion - should never happen, require a PushAnimationAndTransformContext before any drawing
 m_Blobs.IsPeeked()
 m_Count == 0
 m_ElementCount == 0
@@ -6017,7 +6203,7 @@ m_nAllocSize == 0 || m_nAllocSize == nDataSize
 m_nAllocStatsId == INVALID_ALLOC_STATS_ID
 m_nCurRegisterJSScope == -1
 m_nCurRegisterJSScope >= 0
-m_nIndexMask + 1 == ( U << m_nIndexShift )
+m_nIndexMask + 1 == ( 1U << m_nIndexShift )
 m_nType == IE_CursorPositionChanged
 m_pAudioStream
 m_pBase
@@ -6032,7 +6218,7 @@ m_pLastNode == nullptr
 m_pLastNode->pNext == nullptr
 m_pLayoutFile.Get()
 m_pMemory
-m_pMemory[ int ]
+m_pMemory[ i ]
 m_pParent
 m_pParent == this
 m_pParent->m_fnCompletionCallback
@@ -6057,18 +6243,18 @@ m_v8ObjTemplateSetupCur.IsEmpty()
 m_vecCallbacks.HasElement( del )
 m_vecCurrentPanelStack.Count() == 0
 m_vecEventFilters.HasElement( pFunc )
-m_vecLayers.Count() >= int
+m_vecLayers.Count() >= i
 m_vecLayersPushedThisFrame.Count() == 0
 m_vecPaintCommandListStack.IsEmpty()
-m_vecQueuedPanelFocusEvents isn'unsigned short empty, is SetInputFocus being called in signed char long double restrict-entrant manner?  It shouldn'unsigned short/can'unsigned short be!!
+m_vecQueuedPanelFocusEvents isn't empty, is SetInputFocus being called in a re-entrant manner?  It shouldn't/can't be!!
 m_vecQueuedPanelFocusEvents.Count() == 0
 m_vecRenderOperations.Count() == 0
 magenta
 malformed sPLT chunk
-map key must name signed char scalar or string field.
-map type is only allowed for fields with signed char message type.
+map key must name a scalar or string field.
+map type is only allowed for fields with a message type.
 map type is only allowed for repeated fields.
-map_key must not name signed char repeated field.
+map_key must not name a repeated field.
 margin
 margin-bottom
 margin-left
@@ -6194,11 +6380,22 @@ number
 numbits >= 0 && numbits <= 32
 numchars >= 2
 o$$fA
+o<$fA
+o<$fD
+o<$fE
+o@ fA
+o@0fE
+o@@fA
+o@@fE
+o@N8panorama19ILocalizationStringE
+o@PfE
+o@`fA
+o@`fE
 oBpfA
 oC@fA
 oD$@fA
+oD$`f
 oD$`fE
-oD$`float
 oG@fD
 oGpfA
 oH fE
@@ -6249,8 +6446,24 @@ oZ fA
 oZ fE
 oZ0fD
 oZ0fE
+o[0fA
+o[@fE
+o\$0f
+o\$0fA
+o\$@I
+o\$@fA
+o\$pf
+o]0fD
+o^ fB
+o^ fD
+o^0fD
 o_0fA
 o_pfA
+o` fE
+o`0fE
+o`@fE
+o`PfE
+o`pfE
 ob fD
 ob@fD
 ob@fE
@@ -6337,8 +6550,8 @@ os@fE
 ot$ fA
 ot$0fA
 ot$0fD
+ot$@f
 ot$@fA
-ot$@float
 ot$PfA
 ot$`fA
 ot$pM
@@ -6353,11 +6566,18 @@ output_type
 ov`fD
 overflow
 overflow: squish scroll; // scrolls contents in the Y direction</pre>
-overscroll-long long
-overscroll-unsigned long long
+overscroll-x
+overscroll-y
 ow@fA
 ow@fD
 ozPfE
+o{ fD
+o{@fE
+o{PfE
+o|$@fD
+o|$PH
+o} fA
+o~ fA
 p $A!
 p == pLayer
 p [A\A]A^A_]
@@ -6391,7 +6611,7 @@ pFile should always be valid... logic error in styles file caching?
 pFileSystem
 pHeader->m_nHeaderVersion == RESOURCE_FILE_HEADER_VERSION
 pHhXpHhX
-pHl\tHl\unsigned short
+pHl\tHl\t
 pIPreviousLayoutFile != nullptr
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
@@ -6402,7 +6622,7 @@ pLayer->GetClipLayerCount() == 0
 pList->FindAndFastRemove( pCallback ) failed
 pLocStringDialogVars
 pLocalizationString
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pNextRenderCommand == nullptr
 pOutVecUIEvents && pOutVecUIEvents->IsEmpty()
@@ -6479,228 +6699,32 @@ panel
 paneleventsource
 paneltype
 panorama
-panorama %short %short
+panorama %s %s
 panorama RenderCommand_t memory stack
 panorama/layout/custom_game/
 panorama/panorama.vrman
 panorama::ActionInput_t::ActionInput_t(panorama::InputMessage_t &, const char *)
 panorama::CBackgroundImageLayer *panorama::CStylePropertyBackgroundImage::GetOrAddLayer(int)
-panorama::CImageData
-panorama::CImageDecodeThread
-panorama::CImageLoaderTask
-panorama::CImageProxySource
 panorama::CImageProxySource *panorama::CImageResourceManager::GetDefaultImage(panorama::CFileResource &, panorama::EImageFormat, bool)
-panorama::CImageProxySource*
-panorama::CImageResourceManager
 panorama::CImageResourceManager::~CImageResourceManager()
-panorama::CJSAsyncWebRequest
-panorama::CJSFile
-panorama::CLayoutFile
 panorama::CLayoutFileXMLParser::~CLayoutFileXMLParser()
-panorama::CLayoutManager
-panorama::CLoadFileLocalTask
-panorama::CLoadFileURLTask
-panorama::CLoadFromVTexTask
-panorama::CLoadInMemoryImageTask
-panorama::CLocalization
-panorama::CLocalizationStringDialogVariables
-panorama::CLocalizationStringDialogVariablesDerived
-panorama::CLocalizationStringSimple
-panorama::CMouseCursorTexture
-panorama::CPanelPtr<panorama::IUIPanel>
-panorama::CPanelStyle
-panorama::CPanoramaSymbol
-panorama::CPanoramaVideoPlayer
 panorama::CParticleSystem *panorama::CFillBrush::AccessParticleSystem()
-panorama::CReloadStyleFile*
-panorama::CRenderCommandList
 panorama::CRenderDataListBaseBuilder::CRenderDataListBaseBuilder(panorama::CRenderDataListBase &, panorama::CRenderCommandList *)
 panorama::CSource2CompositionLayer::CSource2CompositionLayer(panorama::CSource2Surface *, float, float, uint, const char *)
-panorama::CSource2DoubleBufferedTexture
-panorama::CSource2DoubleBufferedYUV420Texture
-panorama::CSource2Surface
-panorama::CSource2UIFileSystem
-panorama::CSource2UITexture
-panorama::CStyleFactoryWrapper
-panorama::CStyleFile
 panorama::CStyleProperty *panorama::CPanelStyle::FindProperty(panorama::CStyleSymbol, int *)
 panorama::CStyleProperty *panorama::CPanelStyle::GetInterpolatedProperty(panorama::CStyleSymbol, bool)
 panorama::CStyleProperty *panorama::CStylePropertyFactory::CreateStylePropertyInternal()
-panorama::CStylePropertyAlign
-panorama::CStylePropertyAnimationProperties
-panorama::CStylePropertyBackgroundColor
-panorama::CStylePropertyBackgroundImage
-panorama::CStylePropertyBlur
-panorama::CStylePropertyBorder
-panorama::CStylePropertyBorderRadius
-panorama::CStylePropertyBoxShadow
-panorama::CStylePropertyBrightness
-panorama::CStylePropertyClip
-panorama::CStylePropertyContextMenuArrowPosition
-panorama::CStylePropertyContextMenuBodyPosition
-panorama::CStylePropertyContextMenuPosition
-panorama::CStylePropertyContextUIArrowPosition
-panorama::CStylePropertyContextUIBodyPosition
-panorama::CStylePropertyContextUIComponentPosition
-panorama::CStylePropertyContextUIPosition
-panorama::CStylePropertyContrast
-panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>
-panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>
-panorama::CStylePropertyEntranceSound
-panorama::CStylePropertyExitSound
 panorama::CStylePropertyFactory::CStylePropertyFactory(const char *, STYLEPROPERTYCREATEFUNC, STYLEPROPERTYFREEFUNC, STYLEPROPERTYVALIDATEFUNC, bool)
 panorama::CStylePropertyFactory::CStylePropertyFactory(panorama::CStyleSymbol, STYLEPROPERTYCREATEFUNC, STYLEPROPERTYFREEFUNC, STYLEPROPERTYVALIDATEFUNC, const char *)
-panorama::CStylePropertyFillColor
-panorama::CStylePropertyFlowChildren
-panorama::CStylePropertyFont
-panorama::CStylePropertyForegroundColor
-panorama::CStylePropertyHeight
-panorama::CStylePropertyHueShift
-panorama::CStylePropertyLineHeight
-panorama::CStylePropertyMargin
-panorama::CStylePropertyMaxHeight
-panorama::CStylePropertyMaxWidth
-panorama::CStylePropertyMinHeight
-panorama::CStylePropertyMinWidth
-panorama::CStylePropertyMixBlendMode
-panorama::CStylePropertyOpacity
-panorama::CStylePropertyOpacityMask
-panorama::CStylePropertyOverflow
-panorama::CStylePropertyPadding
-panorama::CStylePropertyPerspective
-panorama::CStylePropertyPerspectiveOrigin
-panorama::CStylePropertyPosition
-panorama::CStylePropertyRotate2DCentered
-panorama::CStylePropertySaturation
-panorama::CStylePropertyScale2DCentered
-panorama::CStylePropertySound
-panorama::CStylePropertyTextAlign
-panorama::CStylePropertyTextDecoration
-panorama::CStylePropertyTextLetterSpacing
-panorama::CStylePropertyTextOverflow
-panorama::CStylePropertyTextShadow
-panorama::CStylePropertyTextTransform
-panorama::CStylePropertyTextureSampleMode
-panorama::CStylePropertyTooltipArrowPosition
-panorama::CStylePropertyTooltipBodyPosition
-panorama::CStylePropertyTooltipPosition
-panorama::CStylePropertyTransform3D
-panorama::CStylePropertyTransformOrigin
-panorama::CStylePropertyTransitionProperties
-panorama::CStylePropertyUIScale
-panorama::CStylePropertyVisible
-panorama::CStylePropertyWashColor
-panorama::CStylePropertyWhiteSpace
-panorama::CStylePropertyWidth
-panorama::CStylePropertyZIndex
-panorama::CStyleSymbol
 panorama::CStyleSymbol::CStyleSymbol(const char *, bool)
-panorama::CTopLevelWindow
-panorama::CTopLevelWindowSource2
-panorama::CTransform3D
-panorama::CTransformRotate3D
-panorama::CTransformScale3D
-panorama::CTransformTranslate3D
-panorama::CUIEngine
 panorama::CUIEngine::CUIEngine()
-panorama::CUIEngineSource2
-panorama::CUIEvent0
-panorama::CUIEvent1<IVideoPlayer*>
-panorama::CUIEvent1<bool>
-panorama::CUIEvent1<char const*>
-panorama::CUIEvent1<int>
-panorama::CUIEvent1<panorama::CImageProxySource*>
-panorama::CUIEvent1<panorama::CPanelPtr<panorama::IUIPanel> >
-panorama::CUIEvent1<panorama::CPanoramaSymbol>
-panorama::CUIEvent1<panorama::CReloadStyleFile*>
-panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
-panorama::CUIEvent1<panorama::EActiveControllerType>
-panorama::CUIEvent1<panorama::GamePadCode>
-panorama::CUIEvent1<panorama::IUIWindow*>
-panorama::CUIEvent1<void*>
-panorama::CUIEvent2<float, panorama::IUIEvent*>
-panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, char const*>
-panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>
-panorama::CUIEvent2<panorama::ESoundType, float>
-panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
-panorama::CUIEvent4<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int, unsigned int>
-panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
-panorama::CUIEventBase
-panorama::CUIInputEngine
 panorama::CUILength panorama::LerpUILength(float, panorama::CUILength, panorama::CUILength, float)
-panorama::CUIPanel
-panorama::CUIPanelEvent0
-panorama::CUIPanelEvent1<bool>
-panorama::CUIPanelEvent1<char const*>
-panorama::CUIPanelEvent1<int>
-panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >
-panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>
-panorama::CUIPanelEvent1<panorama::CStyleSymbol>
-panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>
-panorama::CUIPanelEvent1<panorama::IDragStartCallbacks*>
-panorama::CUIPanelEvent1<panorama::IImageSource*>
-panorama::CUIPanelEvent2<KeyValues*, void*>
-panorama::CUIPanelEvent2<bool, char const*>
-panorama::CUIPanelEvent2<char const*, bool>
-panorama::CUIPanelEvent2<char const*, char const*>
-panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
-panorama::CUIPanelEvent2<panorama::ILocalizationString const*, int>
-panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>
-panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>
-panorama::CUIPanelEvent4<int, int, float, float>
-panorama::CUIPanelEvent4<int, int, int, int>
-panorama::CUIRenderDeviceSource2
-panorama::CUIRenderEngine
-panorama::CUIRenderEngine::CUIAnimationThread
-panorama::CUIRenderEngine::CUIRenderThread
-panorama::CUISoundSystem
-panorama::CUISoundSystemSource2
-panorama::CUIWindowInput
-panorama::CVideoPlayerAudioRenderer
-panorama::CVideoPlayerAudioRenderer*
-panorama::CVideoPlayerEventDispatcher
-panorama::CVideoPlayerEventDispatcher*
-panorama::CVideoPlayerVideoRenderer
-panorama::EActiveControllerType
-panorama::ELoadLayoutAsyncDetails
-panorama::ESoundType
-panorama::GamePadCode
 panorama::GamePadCode EXKeyEquivalent(panorama::GamePadCode)
 panorama::GamePadCode Source2GamePadToPanoramaGamePad(uint)
-panorama::IDragStartCallbacks
-panorama::IDragStartCallbacks*
-panorama::IImageSource
 panorama::IImageSource *panorama::CMouseCursorTexture::GetTexture(panorama::EMouseCursors, Vector2D *)
-panorama::IImageSource*
 panorama::ILocalizationString *panorama::CLocalization::CreateLocalizationString(const panorama::IUIPanel *, const char *, const uint32, panorama::EStringTruncationStyle, panorama::EStringTransformStyle, bool, bool)
-panorama::ILocalizationString const*
-panorama::IUI3DSurface
-panorama::IUIDoubleBufferedTexture
-panorama::IUIDoubleBufferedYUV420Texture
-panorama::IUIEngine
-panorama::IUIEvent
-panorama::IUIFileSystem
-panorama::IUIImageManager
-panorama::IUIInput
-panorama::IUIJSObject
-panorama::IUILayoutFile
-panorama::IUILayoutManager
-panorama::IUILocalization
-panorama::IUIPanel
-panorama::IUIPanelClient
 panorama::IUIPanelClient *panorama::CPanel2DFactory::CreatePanelInternal(const char *, panorama::IUIPanel *)
-panorama::IUIPanelStyle
-panorama::IUIRenderDevice
-panorama::IUIRenderEngine
-panorama::IUIStyleFactory
-panorama::IUITextTextureProvider
-panorama::IUITextTextureStorage
-panorama::IUITexture
-panorama::IUIWindow
-panorama::IUIWindow*
-panorama::InputMessage_t*
 panorama::MouseCode Source2MouseToPanoramaMouse(uint)
-panorama::V8ArrayBufferAllocator
 panorama_fancyquad_gradienttexture.vtex
 panorama_fancyquad_vertexlayout
 panorama_rt_%s.vtex
@@ -6784,14 +6808,14 @@ ptr_ != NULL
 public_dependency
 purple
 py_generic_services
-q		@short	
+q		@s	
 q(;r(
 q(;r(}
 q(;r(}$I
 q(;r(}6I
 q(;r(};H
 q(;r(}XH
-q(;wchar_t(H
+q(;w(H
 qfffff.
 qr_avx2
 qr_mont
@@ -6801,7 +6825,7 @@ r3fffff.
 r99Kr99K
 r?fffff.
 rEt#L
-rJu float
+rJu f
 rRHct
 rSHct
 r]ffff.
@@ -6820,7 +6844,7 @@ registerforreadyevents
 rememberchildfocus
 removePositionBeforeDrop
 repeat
-repeat-unsigned long long
+repeat-y
 repeatCount
 repeated
 repeats
@@ -6832,7 +6856,7 @@ responseText
 result == k_ELoadLayoutFileOK
 reverse
 rffffff.
-rgbaEffectiveBorderColor == m_rgbaBorderColors[int]
+rgbaEffectiveBorderColor == m_rgbaBorderColors[i]
 riff.
 right
 right-wrap
@@ -6850,9 +6874,16 @@ royalblue
 rsaz_
 ru_RU
 russian
+s!fff.
+s"ff.
+s%fffff.
+s%ffffff.
+s&ffffff.
+s(IcT$
+s,fff.
 s0HcU
 s2r://
-s2r://%short
+s2r://%s
 s8[A\A^A_]
 sAmTb
 sCAL chunk too short
@@ -6864,6 +6895,7 @@ s_nDLLIdentifier < 0
 s_nDLLIdentifier >= 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
+s`E9up
 saddlebrown
 saes_
 salmon
@@ -6905,17 +6937,8 @@ sfixed64
 shadowColor != 0x00000000
 shadow_inset
 shadow_outset
-short!fff.
-short"ff.
-short%fffff.
-short%ffffff.
-short&ffffff.
-short(IcT$
-short,fff.
-short`E9up
 shrink
 sienna
-signed char@fff.
 silver
 sint32
 sint64
@@ -6984,11 +7007,9 @@ statusText
 std::__1::__basic_string_common<true>::__throw_length_error() const
 std::__1::__next_prime(unsigned long)
 std::__1::__vector_base_common<true>::__throw_length_error() const
-std::__1::bad_function_call
 std::__1::basic_ios<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ios()
 std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::operator<<(double)
 std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
-std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
 std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::basic_streambuf()
 std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::imbue(std::__1::locale const&)
 std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::setbuf(wchar_t*, long)
@@ -7025,7 +7046,6 @@ std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::alloca
 std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
 std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
 std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_string()
-std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
 std::__1::ios_base::getloc() const
 std::__1::ios_base::imbue(std::__1::locale const&)
 std::__1::ios_base::init(void*)
@@ -7088,9 +7108,17 @@ sv_SE
 swedish
 symType.IsValid()
 symbol.IsValid()
+t	9K@
+t	[A^]
+t HA9w8|8
+t LA9w<|+
+t TA9wD|E
+t!fff.
+t"IcF
+t#fff.
 t$ H9
 t$ fA
-t$ void	L
+t$ v	L
 t$(H9
 t$0H9
 t$@H9
@@ -7102,6 +7130,18 @@ t$dtf
 t$fff.
 t$pfA
 t$xfH
+t%ffff.
+t%ffffff.
+t&H9[8tUH
+t&fffff.
+t'IcO,I
+t(L;}
+t(fff.
+t*ffffff.
+t+Hc{
+t,Lcq
+t-IcG,L
+t-L9`
 t.Ic~ H
 t.Ic~$H
 t.Ic~(H
@@ -7110,6 +7150,8 @@ t.Ic~8H
 t.Ic~<H
 t.fff.
 t.fffff.
+t/ff.
+t/ffffff.
 t0IcD$,H
 t0IcU,H
 t1IcD$,H
@@ -7129,6 +7171,10 @@ t8IcV,L
 t9IcG
 t9ffff.
 t9fffff.
+t:fffff.
+t<IcW,L
+t=fffff.
+t>ffff.
 tAfffff.
 tCL9}
 tEIcD$
@@ -7152,6 +7198,8 @@ tWH+\$
 tXEtuPL
 tXEtu\L
 tZLc{
+t[fff.
+t\E9g
 tabindex
 tchinese
 tdHcK
@@ -7229,6 +7277,7 @@ typeinfo for void*
 typeinfo name for std::__1::bad_function_call
 typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
 typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
+t~Lcm
 u	L9G
 u!H9{
 u!ffff.
@@ -7237,34 +7286,35 @@ u%H9y
 u&HcQ
 u&z$f
 u&z$f.
-u)...'A
-u,...*H
+u)z'A
+u,z*H
 u-ffff.
 u.z,L
-u/...-A
-u/...-D
-u/...-H
 u/ffffff.
+u/z-A
+u/z-D
+u/z-H
 u0A;]8r
 u0w'H
 u1D9t
 u1D9|
+u1z/A
 u4D;\
 u5z3L
 u7z5H
 u8I9]
 u8z6E
 u;z9A
-u<...:1
+u<z:1
 u>H;]
 u?M9D$
 u?M9G
-u@...>E
-u@...>H
-uB!!cB!!char 
+u@z>E
+u@z>H
+uB!!cB!!c 
 uCzAH
 uDzBA
-uFD"long double
+uFD"e
 uFzDL
 uGI9~
 uHzFD
@@ -7285,9 +7335,9 @@ ubz`Ic
 udzb1
 uhzfHc
 ui-scale
-ui-scale-...
-ui-scale-long long
-ui-scale-unsigned long long
+ui-scale-x
+ui-scale-y
+ui-scale-z
 ui-scale: 50% 100% 150%; // 50% scaling for X, 100% for Y. 150% for Z.</pre>
 uint32
 uint32 panorama::CUIEngine::InitiateAsyncJSONWebAPIRequestInternal(EHTTPMethod, CUtlString, panorama::IUIPanel *, JSONWebAPIDelegate_t, void *, panorama::CJSONWebAPIParams *, HTTPCookieContainerHandle)
@@ -7305,86 +7355,20 @@ unfocused
 uninterpreted_option
 unknown
 unknown critical chunk
-unknown sound type %double
+unknown sound type %d
 unset
-unsigned __int128<$fA
-unsigned __int128<$fD
-unsigned __int128<$fE
-unsigned __int128@ fA
-unsigned __int128@0fE
-unsigned __int128@@fA
-unsigned __int128@@fE
-unsigned __int128@PfE
-unsigned __int128@`fA
-unsigned __int128@`fE
-unsigned __int128@panorama::ILocalizationString
-unsigned __int128[0fA
-unsigned __int128[@fE
-unsigned __int128\$0f
-unsigned __int128\$0fA
-unsigned __int128\$@I
-unsigned __int128\$@fA
-unsigned __int128\$pf
-unsigned __int128]0fD
-unsigned __int128^ fB
-unsigned __int128^ fD
-unsigned __int128^0fD
-unsigned __int128` fE
-unsigned __int128`0fE
-unsigned __int128`@fE
-unsigned __int128`PfE
-unsigned __int128`pfE
-unsigned __int128{ fD
-unsigned __int128{@fE
-unsigned __int128{PfE
-unsigned __int128|$@fD
-unsigned __int128|$PH
-unsigned __int128} fA
-unsigned __int128~ fA
-unsigned char[A\A]A^A_]
-unsigned char[A^A_]
-unsigned long		 p	
-unsigned short	9K@
-unsigned short	[A^]
-unsigned short HA9w8|8
-unsigned short LA9w<|+
-unsigned short TA9wD|E
-unsigned short!fff.
-unsigned short"IcF
-unsigned short#fff.
-unsigned short%ffff.
-unsigned short%ffffff.
-unsigned short&H9[8tUH
-unsigned short&fffff.
-unsigned short'IcO,I
-unsigned short(L;}
-unsigned short(fff.
-unsigned short*ffffff.
-unsigned short+Hc{
-unsigned short,Lcq
-unsigned short-IcG,L
-unsigned short-L9`
-unsigned short/ff.
-unsigned short/ffffff.
-unsigned short:fffff.
-unsigned short<IcW,L
-unsigned short=fffff.
-unsigned short>ffff.
-unsigned short[fff.
-unsigned short\E9g
-unsigned short~Lcm
 uoffffff.
 up-wrap
 uppercase
-url( %short )
+url( %s )
 uufffff.
 u|fff.
 u~fffff.
+v w'H
 v0HcS$H
 v0ff.
 v8::Array::Length() const
 v8::Array::New(v8::Isolate*, int)
-v8::ArrayBuffer::Allocator
 v8::Boolean::Value() const
 v8::Context::Enter()
 v8::Context::Exit()
@@ -7436,7 +7420,6 @@ v8::ObjectTemplate::SetAccessor(v8::Handle<v8::String>, void (*)(v8::Local<v8::S
 v8::ObjectTemplate::SetCallAsFunctionHandler(void (*)(v8::FunctionCallbackInfo<v8::Value> const&), v8::Handle<v8::Value>)
 v8::ObjectTemplate::SetInternalFieldCount(int)
 v8::ObjectTemplate::SetNamedPropertyHandler(void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Integer> const&), void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Boolean> const&), void (*)(v8::PropertyCallbackInfo<v8::Array> const&), v8::Handle<v8::Value>)
-v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*
 v8::ResourceConstraints::ConfigureDefaults(unsigned long long, unsigned long long, unsigned int)
 v8::ResourceConstraints::ResourceConstraints()
 v8::Script::Compile(v8::Handle<v8::String>, v8::ScriptOrigin*)
@@ -7473,11 +7456,11 @@ v8::Value::ToObject() const
 v8::Value::ToString() const
 v8::Value::ToUint32() const
 v8::Value::Uint32Value() const
+v;;Mv;;M
 vDfffff.
-vHct
 vXIc}(L
 value
-values for keys in data value for AsyncWebRequest settings must be an object, array, or convertaile to signed char string
+values for keys in data value for AsyncWebRequest settings must be an object, array, or convertaile to a string
 values for keys in header value for AsyncWebRequest settings must be convertible to strings
 varint
 vcss1
@@ -7486,7 +7469,7 @@ vcssI
 vcss_c
 vcssu+H
 vec.Count() == vec2.Count()
-vecTransforms[int] != NULL
+vecTransforms[i] != NULL
 vertical
 vertical-align
 vfff.
@@ -8098,8 +8081,6 @@ void panorama::SetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = void (CDra
 void panorama::SetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = void (CDragStartCallbacks::*)(int)]
 void panorama::SetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = void (CDragStartCallbacks::*)(panorama::IUIPanel *)]
 void panorama::SetPtrToCallbackArray(T, v8::Handle<v8::Array> &) [T = void (panorama::CUIPanel::*)(bool)]
-void wchar_t'H
-void;;Mv;;M
 volume_atten
 vpaes_
 vpdiE1
@@ -8131,12 +8112,12 @@ vxmlI
 vxml_c
 vxmlt
 vxmlt9I
+w [A\A^A_]
+w"HcG$H
 w$fffff.
+w%fffff.
+w(L;m
 wash-color
-wchar_t [A\A^A_]
-wchar_t"HcG$H
-wchar_t%fffff.
-wchar_t(L;unsigned long
 weak_dependency
 wheat
 white
@@ -8145,19 +8126,34 @@ white-space: nowrap;</pre>
 whitesmoke
 width
 width-percentage
-width-percentage( %short )
+width-percentage( %s )
 window resized
 wipe_cpu
 wrong submessage type
+x		0y	
+x E9|$
+x tdE)
+x"A9^
 x$D9s
+x'A9^
+x'E9t$
+x)E9w
+x,@H>
+x-E9w
 x.IsPercent() || x.IsLength()
 x8A;D$0}1Ic
+x<<Dx<<D%
+x<E9uP~6Ic
+x=E9uP~7Ic
+x@I;}
 xXu*H
 xXujH
 xXulH
 xXumH
 xXurH
 xYA9^
+x[A\A]A^A_]
+x[A^A_]
 xffff.
 xhA9^
 xiA9^
@@ -8166,6 +8162,9 @@ xnA9^P~hHc
 xqaBCFHTTFFFN
 xyA9^
 xyA9_
+x{A9^P~uHc
+x|fff.
+x~A9^P~xHc
 y.IsPercent() || y.IsLength()
 yRfff.
 yellow
@@ -8185,7 +8184,9 @@ ynl$8
 ynl$<M
 yxxxxxxxH
 yxxxxxxxI
-z/A
+z(;y(H
+z-index
+z==Gz==G
 zD33s?
 zh_CN
 zh_TW
@@ -8210,12 +8211,12 @@ zot$ A
 zot$0
 {8HcK8H
 {localization}
-{long long[A\A^A_]
 {u-E1
+{x[A\A^A_]
 {| class="wikitable"
 {}()'
 {}()':
-| <code>%short(%short)</code>
+| <code>%s(%s)</code>
 |!(fB
 |$ H9
 |$ Hc
@@ -8263,6 +8264,7 @@ zot$0
 ~3IcBxI
 ~3fffff.
 ~4ffff.
+~7ffffff.
 ~8Hc3
 ~Kffffff.
 ~Lfff.
@@ -8273,7 +8275,6 @@ zot$0
 ~bA9^$|\Hc
 ~fIcM(D
 ~fffff.
-~ffffff.
 ~hIcV`H
 ~iLc_8D
 ~os@L9

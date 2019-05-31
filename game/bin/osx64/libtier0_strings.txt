@@ -1,16 +1,16 @@
 	6RtcZO"
-	Evcomplex 
+	C2Ev
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	wchar_t+ffff.
+	w+ffff.
        Sum (ms)            Avg Time/Frame (ms)     Avg Time/Call (ms)
     00 00
    00
-  !!! debug info could not be found for %short
+  !!! debug info could not be found for %s
   %10.3f %9.2f      %10.3f %6.2f      %10.3f %6.2f   %8d %6.2f
   %10.3f %9.2f      %8d
   %52.52s%12d%12.3f%12.3f%7.2f%12.3f%7.2f%12.3f%12.3f%12.3f%12.3f
-  %short debug info does not match %short, ignoring
-  %short does not have debug info, ignoring
+  %s debug info does not match %s, ignoring
+  %s does not have debug info, ignoring
   ---------- ---------      --------
   ---------- ---------      ---------- ------      ---------- ------   -------- ------
   ---------------------------------------------------- ----------- ----------- ----------- ------ ----------- ------ ----------- ----------- ----------- -----------
@@ -18,21 +18,21 @@
   @   
   PP p
   Scope                                                      Calls Calls/Frame  Time+Child    Pct        Time    Pct   Avg/Frame    Avg/Call Avg-NoChild        Peak
-  found matching debug info in %short
+  found matching debug info in %s
  30HandleFirstWriteLockTransitionER14CEventListNode
  5WaitForReadLockTransitionER14CEventListNodej
  Avg Time/Frame (ms)
  [A\A^A_]
  [A^]
  bytes
- failed to dlopen "%short" error=%short
- failed to dlopen %short error=%short
+ failed to dlopen "%s" error=%s
+ failed to dlopen %s error=%s
  fffff.
  ffffff.
 !"Plat_SetWindowTitleW SDL_iconv_string failed."
 !((IAssertionFailureListener_Tier0Manipulator *)pListener)->GetRegisteredVar()
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!CVirtualMachineCallStackTranslationEncoder
+!42CVirtualMachineCallStackTranslationEncoder
 !Write_LockForReadER14CEventListNode
 !bAllAccess
 !bInherit
@@ -51,48 +51,48 @@
 #fffff.
 $HangImageRGBA
 $dicateActivity
-%%.%if%short
+%%.%if%s
 %.0f pct of time accounted for
 %02X%02X/
-%8.4f / %9.2f:  %short
-%8.4f / %9.2f:  Writing profile data to '%short'
+%8.4f / %9.2f:  %s
+%8.4f / %9.2f:  Writing profile data to '%s'
 %8.8x-%4.4x-%4.4x-%2.2x%2.2x-%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x
 %8x-%4x-%4x-%2x%2x-%2x%2x%2x%2x%2x%2x
 %EndScope
 %PlatUserNotificationCenterDelegate
 %Qt_GetCustomAllocators
-%double frames sampled for %.2f seconds
+%d frames sampled for %.2f seconds
 %engthOfMatchingPaths
-%llu,%u,%u,%short
+%llu,%u,%u,%s
 %p is outside range %p-%p
-%s.dSYM/Contents/Resources/DWARF/%short
+%s %i %s
+%s '%s'
+%s (%d) : %s
+%s (%i) : %s
+%s is not a valid CThreadFullMutex name
+%s not implemented
+%s test: multithread interleaved push/pop, %s
+%s test: multithread push, multithread pop, %s
+%s test: multithread push, sequential pop, %s
+%s test: multithread push, single thread pop, %s
+%s test: sequential push, multithread pop, %s
+%s test: single thread push, multithread pop, %s
+%s test: single thread push/pop, in order... 
+%s test: single thread push/pop, interleaved... 
+%s():
+%s.dSYM/Contents/Resources/DWARF/%s
 %s.dbg
 %s.txt
 %s.vstackstats
-%short %int %short
-%short '%short'
-%short (%double) : %short
-%short (%int) : %short
-%short is not signed char valid CThreadFullMutex name
-%short not implemented
-%short test: multithread interleaved push/pop, %short
-%short test: multithread push, multithread pop, %short
-%short test: multithread push, sequential pop, %short
-%short test: multithread push, single thread pop, %short
-%short test: sequential push, multithread pop, %short
-%short test: single thread push, multithread pop, %short
-%short test: single thread push/pop, in order... 
-%short test: single thread push/pop, interleaved... 
-%short():
-%short/%short
-%short: %short
-%short: Unable to get executable filename (%double byte buffer).
-%short: different number of names and flags
-%short: different number of names and pointers
-%short: invalid flag byte count
-%short: invalid pointer byte count
-%short: unable to find %short in '%short'
-%short: unable to load '%short', error %double
+%s/%s
+%s: %s
+%s: Unable to get executable filename (%d byte buffer).
+%s: different number of names and flags
+%s: different number of names and pointers
+%s: invalid flag byte count
+%s: invalid pointer byte count
+%s: unable to find %s in '%s'
+%s: unable to load '%s', error %d
 %uxE9
 &#039;
 &AElig;
@@ -200,14 +200,14 @@ $dicateActivity
 &yacute;
 &yen;
 &yuml;
-'%short' %short
+'%s' %s
 '5V_Unicode
 'BackdoorLoggingListener
 'Listener
 'ffff.
 'ffffff.
 'nvalidTag
-(%double) + %double bytes
+(%d) + %d bytes
 ((IAssertionFailureListener_Tier0Manipulator *)pListener)->GetRegisteredVar()
 ((pReplacementTop->m_pParentStackTrace + pReplacementTop->m_nParentStackTraceLength) <= pReturnAddressesOut) || ((pReturnAddressesOut + nArrayCount) <= pReplacementTop->m_pParentStackTrace)
 (++pFiber->m_nRefCount) == (1)
@@ -236,10 +236,10 @@ $dicateActivity
 (pInsert->m_pParent == nullptr) && (registry.pListHead != pInsert)
 (size_t)ftell( m_pFile ) == m_nWrittenBytes
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
+)17LoggingMetaData_t
 )5ColorPKcz
 )BackdoorLoggingState
 )EnableBackdoorLoggingListeners
-)LoggingMetaData_t
 ***** OUT OF MEMORY! /+/ attempted allocation size: %llu ****
 ******** BEGIN VPROF REPORT ********
 ******** END VPROF REPORT ********
@@ -257,13 +257,13 @@ $dicateActivity
 +fffff.
 +rstTag
 +tPOu
-+wchar_t A+u
++w A+u
 ,%03d
 ,/$`,
 ,Color
 ,Flags
-,LoggingMetaData_t const*
 ,NextTag
+,PK17LoggingMetaData_t
 ,fff.
 -&B'-
 -- Hierarchical Call Graph --
@@ -302,18 +302,17 @@ $dicateActivity
 -retail
 -testmode
 -vulkan
-...`%1Is}
 .1V_UnicodeBufferLengthPK
 .dylib
 .gnu_debuglink
-.gnu_debuglink doesn'unsigned short have signed char filename
-.gnu_debuglink doesn'unsigned short have string terminator
+.gnu_debuglink doesn't have a filename
+.gnu_debuglink doesn't have string terminator
 .gnu_debuglink filename string too long
 .u Ic
 /17LoggingMetaData_tPKc
 /5ColorPK
-/LeafCodeInfo_t const&
 /PK17LoggingMetaData_tPKc
+/RK14LeafCodeInfo_t
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
@@ -351,11 +350,11 @@ $dicateActivity
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/vprof.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/tier0/vprof_database.cpp
 /Users/buildbot/buildslave/dota_staging_osx64/build/src/unitlib/unitlib.cpp
-/long double%short%short
+/e%s%s
 /mnt/symbols
+/t	L9
 /tmp/source_engine_%u.lock
 /uUI9
-/unsigned short	L9
 /usr/bin/sw_vers
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
@@ -382,10 +381,34 @@ $dicateActivity
 0WaitForJobCompletionER14CEventListNode
 0[A\A^A_]
 0[A^]
+10CTestSuite
 10CVProfNodeiR20CVProfSummingContext
+10ITestSuite
 11SetMaxSpinsEi
+12CCommandLine
+12CStdMemAllocI24MemoryAllocationHeader_tI9MemConfigILb0ELb0E27DefaultAdditionalPropertiesEEE
+12CStdMemAllocI24MemoryAllocationHeader_tI9MemConfigILb0ELb0E27RuntimeAdditionalPropertiesEEE
+12CStdMemAllocI24MemoryAllocationHeader_tI9MemConfigILb0ELb1E27RuntimeAdditionalPropertiesEEE
+12CThreadEvent
+12ICommandLine
+13CFiberJobPool
+13CWorkerThread
+13IFiberJobPool
+14CVProfReporter
+15IPerfTraceDepot
+16CThreadFullMutex
+16CThreadSemaphore
+16ILoggingListener
+17CStdMemAlloc_DataI24MemoryAllocationHeader_tI9MemConfigILb0ELb0E27DefaultAdditionalPropertiesEEE
+17CStdMemAlloc_DataI24MemoryAllocationHeader_tI9MemConfigILb0ELb0E27RuntimeAdditionalPropertiesEEE
+17CStdMemAlloc_DataI24MemoryAllocationHeader_tI9MemConfigILb0ELb1E27RuntimeAdditionalPropertiesEEE
+17CThreadSyncObject
 17DuplicateReadLockER14CEventListNode
 17DuplicateReadLockEv
+17IStack_Annotation
+18CThreadManualEvent
+19CAnnotationPackager
+19IAnnotationPackager
 1AllocFunc
 1CThreadMultiWaitEvent
 1ConColorMsgRK5ColorPKcz
@@ -406,10 +429,25 @@ $dicateActivity
 1ZeroMemory
 1ffff.
 21WaitForCreateCompleteEP12CThreadEvent
+22CPerfTraceDepotDefault
+22CSimpleLoggingListener
+22CStdMemAlloc_Data_Base
 22GetCounterNameAndValueEiRi
+22ILoggingResponsePolicy
 22s_iCurrentUniqueNodeIDE
 2333333
+23CStackTranslationHelper
 23Unlock
+24BasicStatStructFieldDesc
+24IStack_VM_Segment_Marker
+25CColorizedLoggingListener
+28CStdMemAlloc_Data_StackStatsI24MemoryAllocationHeader_tI9MemConfigILb0ELb0E27DefaultAdditionalPropertiesEELb0EE
+28CStdMemAlloc_Data_StackStatsI24MemoryAllocationHeader_tI9MemConfigILb0ELb0E27RuntimeAdditionalPropertiesEELb0EE
+28CStdMemAlloc_Data_StackStatsI24MemoryAllocationHeader_tI9MemConfigILb0ELb1E27RuntimeAdditionalPropertiesEELb1EE
+28CallStackStatStructDescFuncs
+29CDefaultLoggingResponsePolicy
+29CStackTranslationHelper_Dwarf
+29CStackTranslationHelper_Local
 2CThreadEvent
 2ChangeMarkerERK20CCallStackMarkerBase
 2CloseSemaphoreInternalEibPKc
@@ -430,8 +468,10 @@ $dicateActivity
 30HandleFirstWriteLockTransitionEv
 30LoggingSystem_IsChannelEnabledi18LoggingVerbosity_t
 30OnFrameBoundaryExecuteCallbackEPv
+31CScopeCreatedOrDestroyedHandler
 32Table
 3333333
+35CStackTranslationHelper_Dwarf_Local
 3AssertUseableEv
 3CEventRWLock_DebuggableILb1EE
 3CWorkerThread
@@ -450,6 +490,7 @@ $dicateActivity
 4Append
 4CVProfReporter
 4CallEjjbPFjjPP12CThreadEventijE
+4Dump
 4ExecuteDeferredFunctionsEv
 4GetMappingSizeEv
 4STUB_LockEntryEj
@@ -459,7 +500,7 @@ $dicateActivity
 5ClearEv
 5ColorPK
 5ColorPKcz
-5E9u0}/float
+5E9u0}/f
 5GetAdditionalFileAttachmentCallback
 5GetCounter
 5Handler
@@ -473,8 +514,10 @@ $dicateActivity
 5TryLockForWriteEv
 5WaitForMultipleEiP
 5WaitForReadLockTransitionEj
+5vtune
 64-bit DWARF format is not supported
 64Table
+6CFiber
 6CFiber17EstimateBytesUsedEm
 6CThread
 6CThreadSemaphore
@@ -484,6 +527,7 @@ $dicateActivity
 6V_UnicodeAdvanceP
 6stallProgressReportHandler
 6terateCapturedStackAnnotations
+7CThread
 7ExceptionHandler
 7FilenamePrefix
 7GetCurrentCThreadEv
@@ -505,9 +549,13 @@ $dicateActivity
 8[A^A_]
 8fff.
 8ffffff.
+9CTestCase
+9CVProfile
 9DumpNodesEP10CVProfNodeibR20CVProfSummingContext
 9ForVoidPtrFn
 9GatherDataAndReportEv
+9IMemAlloc
+9ITestCase
 9InternalSetFiberJobEPFvPvES0_mb
 9OSDetailString
 9ResumeJobEPv
@@ -528,13 +576,13 @@ $dicateActivity
 </pre>
 </ul>
 <;r$<
+<a href=I
 <br>A
 <eckSDL
 <fff.
 <img src="
 <pre>
 <puTimeIsReliable
-<signed char href=I
 =ModuleLoaded
 >::operator ()
 >L97t-H
@@ -542,7 +590,7 @@ $dicateActivity
 >lipboardText
 >unningWithDebugModules
 >upFPUControlWord
-?0,/a,
+?0,/1a,
 ?Frequency
 ?M96u/H
 ?easeMouseCapture
@@ -895,11 +943,11 @@ AssertMsg_ConditionFailed_Internal_Result_t AssertMsg_ConditionFailed_Internal(L
 AssertValid
 Assertion
 Assertion Failed
-Assertion Failed in function %short():
-Assertion Failure: %short (%double)
+Assertion Failed in function %s():
+Assertion Failure: %s (%d)
 AssertionCallback
 AssertionFailureListener
-Attempt %double to find debug info for %short:
+Attempt %d to find debug info for %s:
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame
 BCodeToHTML
@@ -921,7 +969,7 @@ BudgetGroupNameEPKc
 BudgetGroupNameToBudgetGroupIDEPKc
 Build ID filename too long
 Build ID too large
-Build ID too large, %double bytes
+Build ID too large, %d bytes
 BuildVersion:	
 BuiltDebug
 C2EPKcP10ITestSuite
@@ -929,7 +977,6 @@ C2EPKci
 C2ERK20CCallStackMarkerBase
 C@H+C8H
 C@H;CHtC1
-CAnnotationPackager
 CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
 CCallStackCapture::Capture(int (*)(void**, int, int), unsigned int, unsigned int)
 CCallStackMarker::CCallStackMarker(bool)
@@ -952,14 +999,11 @@ CCallStackStatsGatherer_Base::STUB_PopFromLinkedGatherers() const
 CCallStackStatsGatherer_Base::STUB_RemoveSharedInstanceData(CallStackStatsGatherer_SharedInstanceData_t const&)
 CCallStackStatsGatherer_Base::STUB_UnlockEntry(unsigned int)
 CCallStackStatsGatherer_ManagementLayer<MemStdInfo_t, 32, &_GetCallStack_Fast, CCallStackStatsGatherer_StatMutexPool<8192>, CMemStdNoRecurseAllocator, CBareVector, CStackStatsMap_Tier0>::CCallStackStatsGatherer_ManagementLayer(const char *const *, const char *const *, bool) [STATSTRUCT = MemStdInfo_t, CAPTUREDCALLSTACKDEPTH = 32, STACKACQUISITIONFUNCTION = &_GetCallStack_Fast, STATMUTEXHANDLER = CCallStackStatsGatherer_StatMutexPool<8192>, TEMPLATIZEDMEMORYALLOCATOR = CMemStdNoRecurseAllocator, VECTORTYPE = CBareVector, MAPTYPE = CStackStatsMap_Tier0]
-CColorizedLoggingListener
-CCommandLine
-CDefaultLoggingResponsePolicy
 CDeferredCallStackMarker::Insert()
 CDeferredCallStackMarker::Remove()
-CDynamicFunction: Closing library '%short' (%p)
-CDynamicFunction: Loading library '%short' (%p)
-CDynamicFunction: Lookup of '%short' in '%short': %p
+CDynamicFunction: Closing library '%s' (%p)
+CDynamicFunction: Loading library '%s' (%p)
+CDynamicFunction: Lookup of '%s' in '%s': %p
 CEventRWLock::DuplicateReadLock()
 CEventRWLock::HandleFirstWriteLockTransition(CEventListNode&)
 CEventRWLock::UnlockRead_LockForWrite(CEventListNode&)
@@ -968,7 +1012,6 @@ CEventRWLock::WaitForReadLockTransition(CEventListNode&, unsigned int)
 CEventRWLock_Debuggable<true>::AllocOrFreeReadLockMem(CEventRWLock_Debuggable<true>::TrackedReadLock_t*)
 CEventRWLock_Debuggable<true>::DoesHaveAnyReadLocks(CEventListNode&)
 CEventRWLock_Debuggable<true>::DuplicateReadLock(CEventListNode&)
-CFiber
 CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, unsigned long)
 CFiber::CFiber()
 CFiber::ClearUnusedSpaceToFFEEFFEE(void*)
@@ -985,16 +1028,12 @@ CFiber::RunInThreadMemory(long long (*)(void*), void*)
 CFiber::SetThreadFiberMemoryRange(unsigned long)
 CFiber::WaitForJobCompletion(CEventListNode&)
 CFiber::~CFiber()
-CFiberJobPool
 CLocalTime
 CLoggingSystem::AllocTag overflowed!
 CLoggingSystem::CLoggingSystem()
 CLoggingSystem::LoggingState_t *CLoggingSystem::GetCurrentState()
 CPUMonitoringInterval
-CPerfTraceDepotDefault
 CRecursionCallStackMarker::CRecursionCallStackMarker(bool)
-CScopeCreatedOrDestroyedHandler
-CSimpleLoggingListener
 CStackTop_Base::CStackTop_Base()
 CStackTop_Base::ChangeMarker(CCallStackMarkerBase const&)
 CStackTop_Base::GetCurrentTop(bool)
@@ -1012,20 +1051,6 @@ CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const
 CStackTop_ReferenceParentStack::ChangeReferencedStack(void const* const*, int)
 CStackTop_ReferenceParentStack::ReleaseParentStackReferences()
 CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
-CStackTranslationHelper
-CStackTranslationHelper_Dwarf
-CStackTranslationHelper_Dwarf_Local
-CStackTranslationHelper_Local
-CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> > >
-CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> > >
-CStdMemAlloc<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> > >
-CStdMemAlloc_Data<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> > >
-CStdMemAlloc_Data<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> > >
-CStdMemAlloc_Data<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> > >
-CStdMemAlloc_Data_Base
-CStdMemAlloc_Data_StackStats<MemoryAllocationHeader_t<MemConfig<false, false, DefaultAdditionalProperties> >, false>
-CStdMemAlloc_Data_StackStats<MemoryAllocationHeader_t<MemConfig<false, false, RuntimeAdditionalProperties> >, false>
-CStdMemAlloc_Data_StackStats<MemoryAllocationHeader_t<MemConfig<false, true, RuntimeAdditionalProperties> >, true>
 CTMEH
 CTSList
 CTSListBase: Misaligned list
@@ -1039,18 +1064,15 @@ CTSQueue::Node_t *CTSQueue<int, true>::Pop() [T = int, bTestOptimizer = true]
 CTSQueue::Node_t *CTSQueue<int, true>::Push(CTSQueue::Node_t *) [T = int, bTestOptimizer = true]
 CTSQueue<int, true>::CTSQueue() [T = int, bTestOptimizer = true]
 CTSQueue<int, true>::~CTSQueue() [T = int, bTestOptimizer = true]
-CTestCase
 CTestCase::CTestCase(char const*, ITestSuite*)
 CTestCase::CTestCase(const char *, ITestSuite *)
 CTestCase::GetName()
 CTestCase::~CTestCase()
-CTestSuite
 CTestSuite::AddTest(ITestCase*)
 CTestSuite::CTestSuite(char const*, ITestSuite*)
 CTestSuite::GetName()
 CTestSuite::RunTest()
 CTestSuite::~CTestSuite()
-CThread
 CThread::CThread()
 CThread::GetCurrentCThread()
 CThread::GetName()
@@ -1073,7 +1095,6 @@ CThread::Terminate(int)
 CThread::ThreadProc(void*)
 CThread::WaitForCreateComplete(CThreadEvent*)
 CThread::~CThread()
-CThreadEvent
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::CThreadEvent(char const*, bool, bool)
 CThreadEvent::CThreadEvent(const char *, bool, bool)
@@ -1083,7 +1104,6 @@ CThreadEvent::Set()
 CThreadEvent::WaitForMultiple(int, CThreadEvent**, bool, unsigned int)
 CThreadEvent::WaitForMultiple(int, CThreadEvent*, bool, unsigned int)
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
-CThreadFullMutex
 CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 CThreadFullMutex::CThreadFullMutex(bool, const char *, bool, bool)
 CThreadFullMutex::IsCreator() const
@@ -1097,7 +1117,6 @@ CThreadLocalScope::GetScopeListMutex()
 CThreadLocalScope::IsLocalThreadScope() const
 CThreadLocalScope::SetThreadName(char const*)
 CThreadLocalScope::~CThreadLocalScope()
-CThreadManualEvent
 CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
 CThreadMultiWaitEvent::Reset()
 CThreadMultiWaitEvent::Set()
@@ -1120,7 +1139,6 @@ CThreadRWLock_FastRead::UnlockReadAccounting(unsigned int)
 CThreadRWLock_FastRead::UnlockRead_LockForWrite()
 CThreadRWLock_FastRead::UnlockWrite_LockForRead()
 CThreadRWLock_FastRead::WaitForReadLockTransition(unsigned int)
-CThreadSemaphore
 CThreadSemaphore::CThreadSemaphore(int, int, char const*, bool)
 CThreadSemaphore::CThreadSemaphore(int32, int32, const char *, bool)
 CThreadSemaphore::Release(int, int*)
@@ -1167,15 +1185,13 @@ CVProfNode::Resume()
 CVProfNode::SetCurFrameTime(unsigned long)
 CVProfNode::s_iCurrentUniqueNodeID
 CVProfNode::~CVProfNode()
-CVProfReporter
 CVProfReporter::CVProfReporter(char const*, int)
 CVProfReporter::Clear()
 CVProfReporter::GatherDataAndReport()
 CVProfReporter::OnFrameBoundaryExecuteCallback(void*)
 CVProfReporter::ScheduleVProfQuery(CVProfReporter*)
 CVProfReporter::~CVProfReporter()
-CVProfile
-CVProfile'short deferred function count is overfull; cannot add function at %p this frame.
+CVProfile's deferred function count is overfull; cannot add function at %p this frame.
 CVProfile::AddBudgetGroupName(char const*, int)
 CVProfile::AddDeferredFunction(void (*)(void*), void*)
 CVProfile::BudgetGroupNameToBudgetGroupID(char const*)
@@ -1221,7 +1237,6 @@ CVirtualMachineCallStackTranslationEncoder::GetMappingSize()
 CVirtualMachineCallStackTranslationEncoder::GetName()
 CVirtualMachineCallStackTranslationEncoder::GetVMID()
 CVirtualMachineCallStackTranslationEncoder::~CVirtualMachineCallStackTranslationEncoder()
-CWorkerThread
 CWorkerThread::BoostPriority()
 CWorkerThread::CWorkerThread()
 CWorkerThread::Call(unsigned int, unsigned int, bool, unsigned int (*)(unsigned int, CThreadEvent**, int, unsigned int))
@@ -1240,13 +1255,12 @@ CalcBudgetGroupTimes_RecursiveEP10CVProfNodePjif
 Call Stack:
 CallStackCapture
 CallStackMarkerC
-CallStackStatStructDescFuncs
 Callback
-Called Resume() on signed char thread that is not suspended!
+Called Resume() on a thread that is not suspended!
 CallocFunc
-Can'unsigned short verify that we'long double restrict not in signed char recursive loop of tree dumping
+Can't verify that we're not in a recursive loop of tree dumping
 Cannot call CThread::Suspend from outside thread
-Cannot perform call if there'short an existing call pending
+Cannot perform call if there's an existing call pending
 CapturedCallStackDepthEv
 CaseSensitive
 Channel
@@ -1275,7 +1289,7 @@ ContainsDomain
 ContainsPath
 ControlCHandler
 Corefile
-Couldn'unsigned short window icon! %short
+Couldn't window icon! %s
 Count
 CounterGroup_t CVProfile::GetCounterGroup(int) const
 CounterNameEi
@@ -1289,14 +1303,14 @@ CurrentProfile
 CxH;E
 D"A/oyu
 D$ I)
-D$ I;D$(unsigned short
+D$ I;D$(t
 D$ L9
 D$0I;L$8v
 D9c4~%H
 D9{4~%H
 D;r`uXC
 D;vpuXC
-D;wchar_t@wchar_t
+D;w@w
 DEBUG_EXITPROCESS
 DUrlHandler
 DUserName
@@ -1326,8 +1340,7 @@ DoAssertDialog: invalid Assert response returned from dialog/vxconsole - breakin
 DomainNameCharacter
 DoubleSlashes
 Driver
-Dump
-Duplicate abbrev code 0x%long long at 0x%long long
+Duplicate abbrev code 0x%x at 0x%x
 E9|$4~%H
 E;u0}
 EKeyValuesSystem
@@ -1366,7 +1379,7 @@ Exists
 ExitCode
 ExitScopeEv
 Exiting due to logging LR_ABORT request.
-Expr: %short
+Expr: %s
 Extension
 ExtraMasks
 ExtractDomainFromURL
@@ -1376,12 +1389,12 @@ FAIL: !Validate()
 FAIL: Not all items popped
 FDirectory
 FPrint
-Failed to create thread (error 0x%long long)
+Failed to create thread (error 0x%x)
 FakePath
-Fiber touched the edge of it'short stack memory. And possibly beyond
+Fiber touched the edge of it's stack memory. And possibly beyond
 FiberJobPool
 FieldDescriptions
-File: %short
+File: %s
 FileExtension
 FileNamesEqual
 FileSystem
@@ -1430,17 +1443,17 @@ GxtMH
 H)H(H
 H91t8H
 H91tRH
-H9A short
-H9B short
+H9A s
+H9B s
 H9CHt*H
-H9X void
-H9Y short
-H9y wchar_t
-H9z short
-H;C short
-H;C unsigned short
-H;C unsigned short*H
-H;K(void
+H9X v
+H9Y s
+H9y w
+H9z s
+H;C s
+H;C t
+H;C t*H
+H;K(v
 H>*SL>
 HEADH
 HEAP WARNING: memory block at %p appears to be corrupt
@@ -1469,24 +1482,15 @@ I9_PuvI
 I;D$ 
 I;D$ H
 I;D$0s
-IAnnotationPackager
-ICommandLine
-IFiberJobPool
 IInterface
 IInterfaceFactory
-ILoggingListener
-ILoggingResponsePolicy
-IMemAlloc
-IPerfTraceDepot
 IStack_Annotation
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
 IStack_VM_Segment_Marker
 IStack_VM_Segment_Marker::IStack_VM_Segment_Marker(CCallStackMarkerBase const&)
 IStack_VM_Segment_Marker::~IStack_VM_Segment_Marker()
-ITestCase
 ITestCase *GetUnitTest(int)
-ITestSuite
 IcD$HH
 IcT$X
 IdActive
@@ -1495,8 +1499,8 @@ Ignore
 Ignore All Asserts
 Ignore For 24 Hours
 Ignore This File
-Illegal char string format specifier '%char' (%double) in '%short'
-Illegal wchar_t string format specifier '%char' (%double) in '%short'
+Illegal char string format specifier '%c' (%d) in '%s'
+Illegal wchar_t string format specifier '%c' (%d) in '%s'
 Implicit debug link filename too long
 Information
 InitEv
@@ -1509,11 +1513,11 @@ Internal_DumpStatsToFile
 Interpolation
 Invalid ELF Phdr
 Invalid ELF Shdr
-Invalid ELF program header %double
+Invalid ELF program header %d
 Invalid Mach-O header
-Invalid Mach-O program header %double
-Invalid Mach-O segment %double
-Invalid abbrev children setting %double
+Invalid Mach-O program header %d
+Invalid Mach-O segment %d
+Invalid abbrev children setting %d
 Invalid arange debug info offset
 Invalid arange header address size
 Invalid arange header segment size
@@ -1523,7 +1527,7 @@ Invalid attribute value 0x%llx
 Invalid compilation unit abbrev offset
 Invalid compilation unit header address size
 Invalid extended instruction size
-Invalid file index %double
+Invalid file index %d
 Invalid form value 0x%llx
 Invalid high PC value
 Invalid include directory index
@@ -1560,9 +1564,9 @@ KeyValuesSystem
 Klloc
 L)` L
 L90t*H
-L9k short
-L9k void
-L9y void
+L9k s
+L9k v
+L9y v
 L9{0v
 L9{8v
 LBeginWatchdogTimer
@@ -1576,17 +1580,16 @@ Lcc(A
 LckpE9
 LdWatchdogTimer
 LeadingWhitespace
-LeafCodeInfo_t const&
 Length
 LengthPK
 Lffffff.
-Line: %int
+Line: %i
 Lines
 Linux
-Linux .10
-Linux .2
-Linux .4
-Linux .6
+Linux 2.2
+Linux 2.4
+Linux 2.6
+Linux 3.10
 Linux 3.2
 Linux 3.5
 Linux 3.6
@@ -1620,11 +1623,13 @@ Low PC attr without addr value
 M)4$I
 M9&u{I
 M96u/H
-M;<unsigned short
+M;<$t
 M;l$ tBH
 MSFLH
 MVisible
-MacOS %d.%d.%double
+Mac OS
+Mac OS X 
+MacOS %d.%d.%d
 MacOS 10.10
 MacOS 10.11
 MacOS 10.4
@@ -1632,7 +1637,7 @@ MacOS 10.5
 MacOS 10.5.8
 MacOS 10.6
 MacOS 10.6.3
-MacOS 10.6.4 with Apple'short Snow Leopard Graphics Update
+MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
 MacOS 10.6.7
 MacOS 10.7
 MacOS 10.8
@@ -1657,7 +1662,7 @@ MiniDumpExceptionHandler() is undefined for this platform
 MiniDumpStandardData_t::HandlerQueueHeartBeat() const
 MiniProfilerFromList
 Module
-Module %short is signed char debug build
+Module %s is a debug build
 MoregroundWindow
 Msg_ConditionFailed
 MultiWaitObject
@@ -1667,6 +1672,9 @@ Multiple name attrs
 Multiple sibling attrs
 Multiple specification attrs
 Multiple statement lists
+N11TSListTests8CListOpsE
+N11TSListTests8CTestOpsE
+N11TSListTests9CQueueOpsE
 N64BitOS
 NFile
 NIsReadOnly
@@ -1685,9 +1693,9 @@ Networking
 Nmove
 No samples
 NodeSpike
-Non-default or mismatched color specified in logging channel long double restrict-registration!
-Non-default or mismatched verbosity specified in logging channel long double restrict-registration!
-Non-zero or mismatched flags specified in logging channel long double restrict-registration!
+Non-default or mismatched color specified in logging channel re-registration!
+Non-default or mismatched verbosity specified in logging channel re-registration!
+Non-zero or mismatched flags specified in logging channel re-registration!
 Not enough data for arange set header
 Not enough data for compilation unit header
 Not enough data for compilation unit size
@@ -1704,11 +1712,11 @@ OWindowTo
 OagedPoolInfo
 Offffff.
 OnExitEv
-Only thread can stop self: Use signed char higher-level protocol
+Only thread can stop self: Use a higher-level protocol
 OrCreateCounterEPKc14CounterGroup_t
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 OsSpecificHandle
 OsSpecificWindowHandle_t Plat_WindowToOsSpecificHandle(PlatWindow_t)
 Other VScript
@@ -1721,6 +1729,7 @@ Out of thread local storage!
 OwnedByCurrentThread()
 P [A^]
 P@ @pP
+PFjjPP12CThreadEventijE
 PFocused
 PHasDefaultMonitorIndexChanged
 PKcbb
@@ -1731,7 +1740,7 @@ PP`P`P
 PS_bj
 PScreenCoords
 P[A^]
-Parameter file '%short' not found, skipping...
+Parameter file '%s' not found, skipping...
 Particle Simulation
 Particle/Effect_Rendering
 Path component too long
@@ -1746,7 +1755,7 @@ PlatSDLFunctions_t *Plat_RequireSDL()
 PlatWindow_t Plat_CreateWindow(void *, const char *, int, int, int, int, int, uint)
 Plat_AlertUser(PlatWindow_t__*, wchar_t const*, wchar_t const*)
 Plat_AlertUserP14PlatWindow_t__PKwS2_
-Plat_CreateWindow:  Could not create SDL window: %short
+Plat_CreateWindow:  Could not create SDL window: %s
 Plat_VirtualAlloc( pNewChunk, sizeof( AllocationChunkLL_t ), PLAT_VIRTUAL_COMMIT, PLAT_VIRTUAL_ACCESS_READ | PLAT_VIRTUAL_ACCESS_WRITE )
 Plat_VirtualFree( pIter, sizeof( AllocationChunkLL_t ), PLAT_VIRTUAL_DECOMMIT )
 Player
@@ -1783,6 +1792,7 @@ RBRBp
 RBorder
 RD?4KF?=GH?9FJ?8HL?
 RD`3ARBRBp
+RK14LeafCodeInfo_t
 ROsSpecificHandleToPlatWindow
 RResolution
 RWLockTranstionResult_t CSemiAutoRWLockT<CThreadRWLock_FastRead>::LockForWrite() [RWLOCK_TYPE = CThreadRWLock_FastRead]
@@ -1905,7 +1915,7 @@ SDL_RWFromFile
 SDL_RaiseWindow
 SDL_RestoreWindow
 SDL_SetClipboardText
-SDL_SetClipboardText failed: %short
+SDL_SetClipboardText failed: %s
 SDL_SetCursor
 SDL_SetHint
 SDL_SetRelativeMouseMode
@@ -1945,7 +1955,7 @@ SYMMH
 SaveState
 ScaleformAllocations_t
 Semaphore
-Semaphore name (%short) is longer than POSIX can handle, truncating.
+Semaphore name (%s) is longer than POSIX can handle, truncating.
 SeriousWarning(int, Color, char const*, ...)
 SeriousWarning(int, char const*, ...)
 SeriousWarningi
@@ -1958,7 +1968,7 @@ SetHeader
 SetOutputStreamEPFvPKczE
 SetSymbolSearchPath
 ShouldRun
-Shouldn'unsigned short add signed char deferred function to vprof; it'short not currently enabled.
+Shouldn't add a deferred function to vprof; it's not currently enabled.
 Sibling attr without ref4 value
 SignalSpike
 SignalThreadSyncObjectInternalEv
@@ -1968,14 +1978,14 @@ SizeEv
 Slash
 Slashes
 SlashesCorrect
-Somehow OnFrameBoundaryExecuteCallback got registered without signed char CVProfReporter pointer
+Somehow OnFrameBoundaryExecuteCallback got registered without a CVProfReporter pointer
 Sound
 Source line address out of range
 SpaceToUnderscore
-Specification 0x%long long not found
+Specification 0x%x not found
 Specification attr without ref4 value
 SsktopNotifyIconPath
-Stack capture writing to stack top'short replacement capture. Results will be inconsistent
+Stack capture writing to stack top's replacement capture. Results will be inconsistent
 StackTop_Base
 Statement list without data4/sec_offset value
 Steam
@@ -2008,17 +2018,14 @@ TCUATAp
 TD`3ARBRBp
 TODO: Virtual machine address space migration.
 TRawCallStack
-TSList cannot hold more that %double nodes
-TSListTests::CListOps
-TSListTests::CQueueOps
-TSListTests::CTestOps
+TSList cannot hold more that %d nodes
 TV_stristr_fastPKcS0_
 Target buffer for V_URLEncode needs to be 3 times larger than source to guarantee enough space
 TerminateEi
-Test bucket %double has an invalid value %double
+Test bucket %d has an invalid value %d
 TestCase
 TestSuite
-Testing %double threads:
+Testing %d threads:
 Tests done, purging test memory...
 Texture_Cache
 Thread
@@ -2042,19 +2049,19 @@ Tools
 TquireSDL
 Trailing
 TreesAlreadyDumped.m_nCount < TreesAlreadyDumped.m_nMaxCount
-Tried to create signed char thread that has already been created!
+Tried to create a thread that has already been created!
 TypeFlags
 U8CCallStackStatsGatherer_Base
 UCS-2
 UPrompt
 URLCharacter
 UTF-8
-Unable to create event, error %double
-Unable to create semaphore, error %double
+Unable to create event, error %d
+Unable to create semaphore, error %d
 Unable to determine CPU Frequency
 Unable to determine ELF default base address
 Unable to determine Mach-O default base address
-Unable to initialize event mutex, error %double
+Unable to initialize event mutex, error %d
 Unable to load SDL2
 Unable to read .gnu_debuglink
 Unable to read ELF note
@@ -2064,7 +2071,7 @@ Unable to read ELF section headers
 Unable to read ELF32 header
 Unable to read ELF64 header
 Unable to read Mach-O load commands
-Unable to read debug section %double
+Unable to read debug section %d
 Unable to read module header
 Unable to read module magic
 Unable to seek to .gnu_debuglink
@@ -2073,32 +2080,32 @@ Unable to seek to ELF phoff
 Unable to seek to ELF section header strings
 Unable to seek to ELF shoff
 Unable to seek to Mach-O load commands
-Unable to seek to debug section %double
-Unable to set event flags, error %double
-Unable to set semaphore flags, error %double
+Unable to seek to debug section %d
+Unable to set event flags, error %d
+Unable to set semaphore flags, error %d
 Unaccounted
 Unexpected Mach-O UUID length
 Unexpected data at the end of .gnu_debuglink
-Unhandled DWARF attribute form 0x%long long
+Unhandled DWARF attribute form 0x%x
 UnitTest
 Unknown
 Unknown arange header version
 Unknown compilation unit abbrev code
 Unknown compilation unit header version
-Unknown extended instruction 0x%long long
+Unknown extended instruction 0x%x
 Unknown line header version
 Unknown priority class!
-Unknown standard instruction 0x%long long
+Unknown standard instruction 0x%x
 UnlockLines
 UnlockWriteEv
 Unrecognized ELF class
 Unrecognized ELF data layout or version
 Unrecognized Mach-O header magic
 Unrecognized module magic
-Unsupported ELF machine type %double
-Unsupported Mach-O machine type %double
+Unsupported ELF machine type %d
+Unsupported Mach-O machine type %d
 Unsupported define_file instruction
-Unsupported maximum number of instruction operations %double
+Unsupported maximum number of instruction operations %d
 Usage
 UserStreamInfo
 UtlVectorAllocationInfo_t
@@ -2111,12 +2118,12 @@ VMIDEv
 VMSMH
 VPROJECT
 VProf
-VProf spike "%short" from %float to %float ms
+VProf spike "%s" from %f to %f ms
 VProfNode
 VProfile
 VUUUH
 V_AppendSlash: ran out of space on %s.
-V_URLDecode needs signed char dest buffer at least as large as the source
+V_URLDecode needs a dest buffer at least as large as the source
 V_UnicodeAdvance(char*, int)
 V_UnicodeAdvance(unsigned short*, int)
 V_UnicodeAdvance(wchar_t*, int)
@@ -2149,7 +2156,7 @@ Vector
 Verbosity
 Vffff.
 Virtual Machine
-Virtual Machine "%short"
+Virtual Machine "%s"
 VirtualMachineEncoders
 Vv16@0:8
 WARNING: Large alloc of %llu bytes of memory (limit %llu)
@@ -2170,13 +2177,13 @@ Wfff.
 Whitespace
 Win32ConsoleColor
 Windows
-Windows .11
 Windows 10
 Windows 2000
 Windows 2003
 Windows 2008
 Windows 2012
 Windows 2012 R2
+Windows 3.11
 Windows 7
 Windows 8
 Windows 8.1
@@ -2208,8 +2215,8 @@ ZNameEv
 [/img]
 [/list]
 [/url]
-[1;31m%short
-[1;32m:%int:
+[1;31m%s
+[1;32m:%i:
 [1;33mASSERT: 
 [35GetLineOffsetPostShiftedSignBitMaskEv
 [4EnumerateEncodingIndicesEPFbPS_jPKcS2_jPvES3_
@@ -3189,6 +3196,7 @@ _write
 `oppedERKS_
 `p0`P
 a6STUB_UnlockEntryEj
+a?y#c?sIe?
 aGetCallStack
 ackSmokingCompiler
 aco-nz
@@ -3309,12 +3317,10 @@ ccessFlags
 channelID >= 0 && channelID < m_nChannelCount
 char *V_AbbreviatePathInPlace(char *, const int, const char *)
 char *_V_strncat(char *, const char *, int, int)
-char signed char::* OS
-char signed char::* OS X 
 clareCurrentThreadIsMainThread
 class
 close
-cmd: %short
+cmd: %s
 cmp_fast
 cntrl
 conformsToProtocol:
@@ -3342,9 +3348,9 @@ debug_info
 debug_line
 debug_pubnames
 debug_str
-defaultFlags == 0 || defaultFlags == m_RegisteredChannels[int].m_DefaultFlags
+defaultFlags == 0 || defaultFlags == m_RegisteredChannels[i].m_DefaultFlags
 defaultUserNotificationCenter
-defaultVerbosity == LV_DEFAULT || defaultVerbosity == m_RegisteredChannels[int].m_DefaultVerbosity
+defaultVerbosity == LV_DEFAULT || defaultVerbosity == m_RegisteredChannels[i].m_DefaultVerbosity
 deliverNotification:
 description
 destSize >= 1
@@ -3368,8 +3374,9 @@ etErrno
 etExtension
 etNameEPKc
 etSymbolTranslationDefault
-exitprocess_%double
+exitprocess_%d
 extension
+f [A\A^A_]
 f9GenericThreadLocals16CThreadLocalBase
 fCallStackMarker_ThisLineC
 fStackTop_CopyParentStack
@@ -3380,7 +3387,6 @@ fffff.
 ffffff.
 fffffff
 float
-float [A\A^A_]
 flush
 fo_tL
 forced dump
@@ -3397,12 +3403,15 @@ h1EPK
 h3GetCurrentTopEb
 hThread
 hThreadMultiWaitSemaphore
+h[A\A]A^A_]
 hutdown
 hw.logicalcpu
 hw.logicalcpu_max
 hw.physicalcpu
 hw.physicalcpu_max
 hypot
+i < allGatherers.Count()
+i < s_TestCount
 i17CCallStackCaptureRK20CCallStackMarkerBase
 iUniqueAddresses > 0
 icmp_fast
@@ -3446,8 +3455,6 @@ int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int,
 int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towlower32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
 int (anonymous namespace)::UnicodeConvertT(const SrcType *, int, DstType *, int, EStringConvertErrorPolicy, TDecodeSrc &, TEncodeDstLen &, TEncodeDst &) [bStopAtNull = true, SrcType = wchar_t, DstType = wchar_t, TDecodeSrc = (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, &V_towupper32>, TEncodeDstLen = (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, TEncodeDst = (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>]
 int *CVProfile::FindOrCreateCounter(const tchar *, CounterGroup_t)
-int < allGatherers.Count()
-int < s_TestCount
 int CVProfile::GetCounterValue(int) const
 int CWorkerThread::Call(unsigned int, unsigned int, bool, WaitFunc_t)
 int CWorkerThread::WaitForReply(unsigned int, WaitFunc_t)
@@ -3499,12 +3506,10 @@ lliSecs
 lobalMemoryStatus
 lobalMiniProfilers
 long long
-long long	D95
-long long=fffff.
-long long[A\A]A^A_]
 longjmp_fn
 lower
 lower_fast
+m?H5p?
 m_Count == 0
 m_GroupIDStackDepth < MAX_GROUP_STACK_DEPTH
 m_GroupIDStackDepth > 0
@@ -3602,6 +3607,7 @@ nqualifiedFileName
 ns.tH
 nvertPK
 nvertToLocalTime
+o@ fI
 oA fI
 oAddressTranslationData
 oCRT_
@@ -3625,7 +3631,7 @@ p SCSC\GRCRAp
 p00@@@
 pBuffer
 pCreateNewFunc
-pExtra[int].pObject->m_bSet
+pExtra[i].pObject->m_bSet
 pFiber->m_StackMemoryRange.pHigh == nullptr
 pFiber->m_StackMemoryRange.pLow == nullptr
 pFiber->m_pCurrentJobContext == nullptr
@@ -3638,7 +3644,7 @@ pFiber->m_pStackFramePatch == nullptr
 pGatherer != &StatsGatherer
 pGatherer == indexMapIter->second.pGatherer
 pMemoryStatus
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pPreviousCount == NULL
 pSDLFuncs->pSDL_WasInit( SDL_INIT_VIDEO ) != 0
@@ -3660,7 +3666,7 @@ ppendMiniProfilerToList
 ppline
 print
 printf
-pthread_attr_setstacksize( %double ) failed with return code %double
+pthread_attr_setstacksize( %d ) failed with return code %d
 pthread_setname_np
 punct
 py_bytes
@@ -3685,12 +3691,14 @@ rintf
 riousWarning
 rmpnam
 rseLine
+s,fff.
 s1 != nullptr && s2 != nullptr
 sChannelEnabled
 sGameDVREnabled
 sMatch
 sVwES
 sXfffff.
+s\fff.
 s_CRTTempFiber.GetRefCount() == 2
 s_ThreadScopeMutex.IsConstructed() && s_ThreadScopeMutex.GetRaw().OwnedByCurrentThread()
 s_nBufDepth < MAX_STACK_DEPTH
@@ -3701,7 +3709,7 @@ s_pKeyValuesSystem == NULL || pSystem == s_pKeyValuesSystem
 s_pVirtualMachineEncoderList != NULL
 scanf
 sem_type CThreadSyncObject::CreateSemaphoreInternal(const char *, int32, bool, bool *)
-semaphore creation failed %short
+semaphore creation failed %s
 setActionButtonTitle:
 setDelegate:
 setInformativeText:
@@ -3709,11 +3717,8 @@ setSoundName:
 setTitle:
 setjmp_fn
 short
-short,fff.
-short\fff.
-signed char?unsigned long long#char?sIe?
 space
-spewColor == UNSPECIFIED_LOGGING_COLOR || spewColor == m_RegisteredChannels[int].m_SpewColor || (m_RegisteredChannels[int].m_nModifiedFields & (uint8)LoggingChannel_t::MODIFIED_SPEWCOLOR)
+spewColor == UNSPECIFIED_LOGGING_COLOR || spewColor == m_RegisteredChannels[i].m_SpewColor || (m_RegisteredChannels[i].m_nModifiedFields & (uint8)LoggingChannel_t::MODIFIED_SPEWCOLOR)
 ssert
 stall
 static CFiber *CFiber::AllocPooledFiber(CFiber::SizeBuckets_t, size_t)
@@ -3730,8 +3735,13 @@ strlower_fast
 strtab
 superclass
 symtab
+t	[A\A^A_]
+t	[A^]
+t L;m
 t$ ffffff.
 t$$A9
+t(ffffff.
+t+ff.
 t1ffffff.
 t25EStringConvertErrorPolicy
 t2EP16ThreadHandle_t(bool)
@@ -3740,6 +3750,8 @@ t5H;H u!1
 t6G9l
 t7CThread11GetPriorityEv
 t9H9_
+t;fff.
+t>ffffff.
 tCG9|
 tEfffff.
 tIfffff.
@@ -3750,7 +3762,7 @@ tS0_i25EStringConvertErrorPolicy
 tartEj20ThreadPriorityEnum_t
 tbffff.
 terlockedExchange64
-the same event name (%short) was created as both manual and auto reset, something'short fubar'double
+the same event name (%s) was created as both manual and auto reset, something's fubar'd
 timeout != TT_INFINITE || result != TW_TIMEOUT
 timestamped.log
 typeinfo for BasicStatStructFieldDesc
@@ -3801,26 +3813,15 @@ uint64 Plat_GetCPUFrequency()
 uint64 V_atoui64(const char *)
 uldCollectMiniDumpsForFatalErrors
 ultiplier
-unexpected error %double trying to exclusively lock %short
+unexpected error %d trying to exclusively lock %s
 unknown
 unknown_module
-unsigned __int128@ fI
 unsigned char
-unsigned char[A\A]A^A_]
 unsigned int
-unsigned int (*)(unsigned int, CThreadEvent**, int, unsigned int)
 unsigned int CThread::Suspend()
 unsigned long
 unsigned long long
-unsigned long?H5p?
 unsigned short
-unsigned short	[A\A^A_]
-unsigned short	[A^]
-unsigned short L;unsigned long
-unsigned short(ffffff.
-unsigned short+ff.
-unsigned short;fff.
-unsigned short>ffffff.
 upPath
 upper
 upper_fast
@@ -3838,6 +3839,7 @@ utEnv
 u|M96
 v32@0:8@"NSUserNotificationCenter"16@"NSUserNotification"24
 v32@0:8@16@24
+v<HcM
 vYield
 virtual bool CThread::Start(unsigned int, ThreadPriorityEnum_t)
 virtual bool CThread::WaitForCreateComplete(CThreadEvent *)
@@ -3989,7 +3991,6 @@ void _V_AppendSlash(char *, int, char)
 void _V_DefaultExtension(char *, const char *, int)
 void _V_FileBase(const char *, char *, int)
 void _V_wcsncpy_bytes(wchar_t *, const wchar_t *, int)
-void<HcM
 vokeMiniDumpHandler
 volatile
 vpk:I
@@ -4006,7 +4007,6 @@ vtable for IStack_VM_Segment_Marker
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
-vtune
 w25EStringConvertErrorPolicy
 wFinish
 wJoin
@@ -4025,10 +4025,13 @@ wn>Jj
 wprintf
 write
 wscanf
+x	D95
 x15WaitForMultipleEiP
+x=fffff.
 xMutex7TryLockEv
 xNanoSleep
 xProcess
+x[A\A]A^A_]
 xhellExecute
 xitProcess
 xstoreWin32ConsoleColor
@@ -4046,6 +4049,7 @@ zHandle
 zTerminateProcessCode
 zWaitForProcessExit
 zWin32ConsoleCursorColumnIndex
+z`%1Is}
 zupWin32ConsoleIO
 {Active
 {MultiWait

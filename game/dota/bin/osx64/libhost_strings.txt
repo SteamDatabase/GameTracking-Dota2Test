@@ -18,7 +18,7 @@
 	val_short
 	worldname
         
-                CDefaultKeyValuesErrorSpew
+                26CDefaultKeyValuesErrorSpew
     Actual    : 
     Expected  : 
     Field type: 
@@ -42,7 +42,7 @@
  #GameUI_ServerRejectBadChallenge
  #Valve_Reject_Connect_From_Lobby
  #Valve_Reject_Reserved_For_Lobby
- '%short'
+ '%s'
  0 P0P0
  0 P0`0
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -58,14 +58,15 @@
  NETWORK_DISCONNECT_STEAM_DROPPED
  Outdent() without matching Indent().
  ReadToken overflow
- Tokenizer::ParseFloat() passed text that could not have been tokenized as signed char float: 
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as signed char string: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [$0]
  [A\A^A_]
  [A^]
  [default = $0
  `0P0
+ a protocol 
  args were given.  Full format string was: "
  contains invalid 
  ffff.
@@ -74,10 +75,9 @@
  of the Protocol Buffer runtime library, but the installed version is 
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
  of type 
- signed char protocol 
+ t+Hc{0H
+ t+Ic~dH
  t.Ic~DH
- unsigned short+Hc{0H
- unsigned short+Ic~dH
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !#GameUI_Disconnect_ConnectionLost
 !#GameUI_Disconnect_HLTVRestricted
@@ -117,26 +117,26 @@
 " has not been loaded.
 " imports "
 " in type "
-" is already defined (as something other than signed char package) in file "
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
 " is already defined in "
 " is already defined in file "
 " is already defined.
-" is an atomic type, not signed char message.
+" is an atomic type, not a message.
+" is not a field or extension of message "
+" is not a message type.
+" is not a type.
+" is not a valid identifier.
 " is not an enum type.
 " is not defined or is not an extension of "
 " is not defined.
-" is not signed char field or extension of message "
-" is not signed char message type.
-" is not signed char type.
-" is not signed char valid identifier.
 " is resolved to "
 " is resolved to "(
-" is signed char message. To set the entire message, use syntax like "
-" is signed char repeated message. Repeated message options must be initialized using an aggregate value.
 " is specified along with field "
 " is specified multiple times.
 " must be unique within 
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn'unsigned short be possible.
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " seems to be defined in "
 " unknown.
 " uses the same enum value as "
@@ -156,11 +156,11 @@
 ", but only 
 ", field number 
 ", found "
-", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., ".
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
-". This appears to be signed char value from signed char sibling type.
+". This appears to be a value from a sibling type.
 ". Value: "
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
@@ -173,8 +173,8 @@
 "NETWORK_DISCONNECT_STEAM_OWNERSHIP
 "SPAWN_GROUP_CREATE_NEW_SCENE_WORLD
 "SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP
+"e" must be followed by exponent.
 "host_computationtime_std_deviation
-"long double" must be followed by exponent.
 ##GameUI_Disconnect_BadRelayPassword
 ##GameUI_Disconnect_ReliableOverflow
 ##GameUI_Disconnect_SnapshotOverflow
@@ -262,7 +262,7 @@ $gender
 %#GameUI_Disconnect_StringTableMessage
 %#GameUI_ServerRejectInvalidConnection
 %#GameUI_ServerReject_InvalidKeyLength
-%%short%%short%%double:  sv[%%%d.%ds] cl[%%%d.%ds]
+%%s%%s%%d:  sv[%%%d.%ds] cl[%%%d.%ds]
 %NETWORK_DISCONNECT_CONNECTION_FAILURE
 %NETWORK_DISCONNECT_DISCONNECT_BY_USER
 %NETWORK_DISCONNECT_LOCALPROBLEM_OTHER
@@ -272,15 +272,15 @@ $gender
 %NETWORK_DISCONNECT_REJECT_NEWPROTOCOL
 %NETWORK_DISCONNECT_REJECT_OLDPROTOCOL
 %NETWORK_DISCONNECT_SOUNDSMSG_OVERFLOW
-%d.%d.%double
-%int %int %int %int
-%short%short%short
-%short:  IGameSystem::LoopActivateAllSystems
-%short:  IGameSystem::LoopDeactivateAllSystems
-%short:  IGameSystem::LoopInitAllSystems(finish)
-%short:  IGameSystem::LoopInitAllSystems(start)
-%short: %short
-%short: string format requested %double chars
+%d.%d.%d
+%i %i %i %i
+%s%s%s
+%s:  IGameSystem::LoopActivateAllSystems
+%s:  IGameSystem::LoopDeactivateAllSystems
+%s:  IGameSystem::LoopInitAllSystems(finish)
+%s:  IGameSystem::LoopInitAllSystems(start)
+%s: %s
+%s: string format requested %d chars
 &#GameUI_Disconnect_InvalidMessageError
 &#GameUI_Disconnect_NoPeerGroupHandlers
 &#GameUI_Disconnect_PureServer_Mismatch
@@ -319,7 +319,7 @@ $gender
 (#GameUI_Disconnect_LoopLevelLoadActivate
 (#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
-(*%short*), 
+(*%s*), 
 (GetChar()) == (0)
 (Hc{(1
 (IcD$0A
@@ -343,7 +343,7 @@ $gender
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uEHcK
 (uintp)m_pNextAlloc <= (uintp)m_pBufferBase + m_nBufferSize
-)", which is not defined. The innermost scope is searched first in name resolution. Consider using signed char leading '.'(i.e., "(.
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 )#GameUI_Disconnect_PureServer_ClientExtra
 )#GameUI_Disconnect_RemoteProblem_BadCrypt
 )#GameUI_Disconnect_SteamDeny_BadAntiCheat
@@ -353,7 +353,7 @@ $gender
 )NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE
 )ffff.
 *#GameUI_Disconnect_LocalProblem_ManyRelays
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 *NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL
 *NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS
 *NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE
@@ -388,7 +388,6 @@ $gender
 -sse3
 -sse4
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-...(;unsigned long long(H
 .CMsgQAngle
 .CMsgVector
 .CMsg_CVars"
@@ -482,10 +481,10 @@ $gender
 0A;uHu
 0A;u`u
 0A;uxu
+0A;v(u
 0A;v0u
 0A;vHu
-0A;void(u
-0A;void`u
+0A;v`u
 0A;vxu
 0D;{ |
 0Hc{01
@@ -494,26 +493,493 @@ $gender
 0[A\A^A_]
 0[A^]
 1 1 1
+10CHostUtils
+10CMsgQAngle
+10CMsgVector
+10CMsg_CVars
+10IHostUtils
+11CNETMsg_NOP
+11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+11CRenderMesh
+11IGameSystem
+11IVSSequence
+12CEmptyConVar
+12CMsgVector2D
+12CNETMsg_Tick
+12ISource2Host
+13CDotaMapUtils
+13CLoopModeBase
+13IBaseSequence
+13IDotaMapUtils
+13IPrerequisite
+14CAimConstraint
+14CBaseAppSystemI10IHostUtilsE
+14CBaseAppSystemI12ISource2HostE
+14CBaseAppSystemI13IDotaMapUtilsE
+14CBaseAppSystemI14IGameModelInfoE
+14CBaseAppSystemI18IDebugDrawQueueMgrE
+14CBaseAppSystemI18IPredictionDiffMgrE
+14CBaseAppSystemI19ISaveRestoreDataMgrE
+14CBaseAppSystemI20IGameSystem2HostHookE
+14CEmptySequence
+14CGameAppSystemI10IHostUtilsLi0EE
+14CGameAppSystemI12ISource2HostLi0EE
+14CGameAppSystemI13IDotaMapUtilsLi0EE
+14CGameAppSystemI18IDebugDrawQueueMgrLi0EE
+14CGameAppSystemI18IPredictionDiffMgrLi0EE
+14CGameAppSystemI20IGameSystem2HostHookLi0EE
+14CGameModelInfo
+14CMsgPlayerInfo
+14ConCommandBase
+14IGameModelInfo
+14ISchemaBinding
+15CAutoGameSystem
+15CBaseConstraint
+15CMsg_CVars_CVar
+15CTestGameSystem
+15CTier0AppSystemI10IHostUtilsE
+15CTier0AppSystemI12ISource2HostE
+15CTier0AppSystemI13IDotaMapUtilsE
+15CTier0AppSystemI14IGameModelInfoE
+15CTier0AppSystemI18IDebugDrawQueueMgrE
+15CTier0AppSystemI18IPredictionDiffMgrE
+15CTier0AppSystemI19ISaveRestoreDataMgrE
+15CTier0AppSystemI20IGameSystem2HostHookE
+15CTier1AppSystemI10IHostUtilsLi0EE
+15CTier1AppSystemI12ISource2HostLi0EE
+15CTier1AppSystemI13IDotaMapUtilsLi0EE
+15CTier1AppSystemI14IGameModelInfoLi0EE
+15CTier1AppSystemI18IDebugDrawQueueMgrLi0EE
+15CTier1AppSystemI18IPredictionDiffMgrLi0EE
+15CTier1AppSystemI19ISaveRestoreDataMgrLi0EE
+15CTier1AppSystemI20IGameSystem2HostHookLi0EE
+15CTier2AppSystemI10IHostUtilsLi0EE
+15CTier2AppSystemI12ISource2HostLi0EE
+15CTier2AppSystemI13IDotaMapUtilsLi0EE
+15CTier2AppSystemI14IGameModelInfoLi0EE
+15CTier2AppSystemI18IDebugDrawQueueMgrLi0EE
+15CTier2AppSystemI18IPredictionDiffMgrLi0EE
+15CTier2AppSystemI19ISaveRestoreDataMgrLi0EE
+15CTier2AppSystemI20IGameSystem2HostHookLi0EE
+15CTier3AppSystemI10IHostUtilsLi0EE
+15CTier3AppSystemI12ISource2HostLi0EE
+15CTier3AppSystemI13IDotaMapUtilsLi0EE
+15CTier3AppSystemI14IGameModelInfoLi0EE
+15CTier3AppSystemI18IDebugDrawQueueMgrLi0EE
+15CTier3AppSystemI18IPredictionDiffMgrLi0EE
+15CTier3AppSystemI19ISaveRestoreDataMgrLi0EE
+15CTier3AppSystemI20IGameSystem2HostHookLi0EE
+16CDefaultAccessor
+16CLoopModeFactoryI21CLoopModeGameHostDotaE
+16CMorphConstraint
+16CPointConstraint
+16CSource2HostBase
+16CTwistConstraint
+16ILoopModeFactory
+17CNETMsg_SetConVar
+17CNETMsg_StringCmd
+17COrientConstraint
+17CParentConstraint
+17CSVCMsg_GameEvent
+18CAtomicManipulatorI10CTransformE
+18CAtomicManipulatorI10CUtlStringE
+18CAtomicManipulatorI10CUtlVectorI10CHitBoxSet10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI10CUtlVectorI16CConstraintSlave10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI10CUtlVectorI17CConstraintTarget10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI10CUtlVectorI20RenderSkeletonBone_t10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI10CUtlVectorI23CMaterialDrawDescriptor10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI10CUtlVectorI7CHitBox10CUtlMemoryIS1_iEEE
+18CAtomicManipulatorI10CUtlVectorIP15CBaseConstraint10CUtlMemoryIS2_iEEE
+18CAtomicManipulatorI10CUtlVectorIP22CPhysSurfaceProperties10CUtlMemoryIS2_iEEE
+18CAtomicManipulatorI10CUtlVectorIi10CUtlMemoryIiiEEE
+18CAtomicManipulatorI10QuaternionE
+18CAtomicManipulatorI11CWeakHandleI25InfoForResourceTypeCModelEE
+18CAtomicManipulatorI11CWeakHandleI29InfoForResourceTypeIMaterial2EE
+18CAtomicManipulatorI11CWeakHandleI30InfoForResourceTypeCRenderMeshEE
+18CAtomicManipulatorI11CWeakHandleI31InfoForResourceTypeCTextureBaseEE
+18CAtomicManipulatorI11CWeakHandleI33InfoForResourceTypeMorphSetData_tEE
+18CAtomicManipulatorI11CWeakHandleI37InfoForResourceTypeCPhysAggregateDataEE
+18CAtomicManipulatorI11CWeakHandleI46InfoForResourceTypeSequenceGroupResourceData_tEE
+18CAtomicManipulatorI11CWeakHandleI47InfoForResourceTypeAnimationGroupResourceData_tEE
+18CAtomicManipulatorI11matrix3x4_tE
+18CAtomicManipulatorI12matrix3x4a_tE
+18CAtomicManipulatorI13CStrongHandleI29InfoForResourceTypeIMaterial2EE
+18CAtomicManipulatorI14CResourceArrayI10CTransformEE
+18CAtomicManipulatorI14CResourceArrayI10FlexDesc_tEE
+18CAtomicManipulatorI14CResourceArrayI10FlexRule_tEE
+18CAtomicManipulatorI14CResourceArrayI10QuaternionEE
+18CAtomicManipulatorI14CResourceArrayI11HitBoxSet_tEE
+18CAtomicManipulatorI14CResourceArrayI11MorphData_tEE
+18CAtomicManipulatorI14CResourceArrayI12BundleData_tEE
+18CAtomicManipulatorI14CResourceArrayI12BundleType_tEE
+18CAtomicManipulatorI14CResourceArrayI12RnHullDesc_tEE
+18CAtomicManipulatorI14CResourceArrayI12RnMeshDesc_tEE
+18CAtomicManipulatorI14CResourceArrayI12matrix3x4a_tEE
+18CAtomicManipulatorI14CResourceArrayI13VPhysXJoint_tEE
+18CAtomicManipulatorI14CResourceArrayI14RnSphereDesc_tEE
+18CAtomicManipulatorI14CResourceArrayI15CResourceStringEE
+18CAtomicManipulatorI14CResourceArrayI15MaterialGroup_tEE
+18CAtomicManipulatorI14CResourceArrayI15MorphRectData_tEE
+18CAtomicManipulatorI14CResourceArrayI15RnCapsuleDesc_tEE
+18CAtomicManipulatorI14CResourceArrayI16AttachmentData_tEE
+18CAtomicManipulatorI14CResourceArrayI16BaseConstraint_tEE
+18CAtomicManipulatorI14CResourceArrayI16FlexController_tEE
+18CAtomicManipulatorI14CResourceArrayI16VPhysXBodyPart_tEE
+18CAtomicManipulatorI14CResourceArrayI17ConstraintSlave_tEE
+18CAtomicManipulatorI14CResourceArrayI17SceneObjectData_tEE
+18CAtomicManipulatorI14CResourceArrayI18ConstraintTarget_tEE
+18CAtomicManipulatorI14CResourceArrayI18OnDiskBufferData_tEE
+18CAtomicManipulatorI14CResourceArrayI18PermModelExtPart_tEE
+18CAtomicManipulatorI14CResourceArrayI18RnSoftbodySpring_tEE
+18CAtomicManipulatorI14CResourceArrayI18SkeletonBoneBbox_tEE
+18CAtomicManipulatorI14CResourceArrayI19RnSoftbodyCapsule_tEE
+18CAtomicManipulatorI14CResourceArrayI19VPhysXConstraint2_tEE
+18CAtomicManipulatorI14CResourceArrayI20RnSoftbodyParticle_tEE
+18CAtomicManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI29InfoForResourceTypeIMaterial2EEEE
+18CAtomicManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI30InfoForResourceTypeCRenderMeshEEEE
+18CAtomicManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI37InfoForResourceTypeCPhysAggregateDataEEEE
+18CAtomicManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI46InfoForResourceTypeSequenceGroupResourceData_tEEEE
+18CAtomicManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI47InfoForResourceTypeAnimationGroupResourceData_tEEEE
+18CAtomicManipulatorI14CResourceArrayI21ModelBoneFlexDriver_tEE
+18CAtomicManipulatorI14CResourceArrayI21RenderBufferBinding_tEE
+18CAtomicManipulatorI14CResourceArrayI24MaterialDrawDescriptor_tEE
+18CAtomicManipulatorI14CResourceArrayI24RenderInputLayoutField_tEE
+18CAtomicManipulatorI14CResourceArrayI27VPhysXCollisionAttributes_tEE
+18CAtomicManipulatorI14CResourceArrayI28ModelBoneFlexDriverControl_tEE
+18CAtomicManipulatorI14CResourceArrayI6VectorEE
+18CAtomicManipulatorI14CResourceArrayI8FlexOp_tEE
+18CAtomicManipulatorI14CResourceArrayI8HitBox_tEE
+18CAtomicManipulatorI14CResourceArrayIS0_IhEEE
+18CAtomicManipulatorI14CResourceArrayIfEE
+18CAtomicManipulatorI14CResourceArrayIhEE
+18CAtomicManipulatorI14CResourceArrayIjEE
+18CAtomicManipulatorI14CResourceArrayIsEE
+18CAtomicManipulatorI14CResourceArrayItEE
+18CAtomicManipulatorI14CResourceArrayIyEE
+18CAtomicManipulatorI15CResourceStringE
+18CAtomicManipulatorI16CResourcePointerI17PhysFeModelDesc_tEE
+18CAtomicManipulatorI16CResourcePointerI20RenderSkeletonData_tEE
+18CAtomicManipulatorI16CResourcePointerI24VpropBreakablePartData_tEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI25InfoForResourceTypeCModelEEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI29InfoForResourceTypeIMaterial2EEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI30InfoForResourceTypeCRenderMeshEEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI31InfoForResourceTypeCTextureBaseEEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI33InfoForResourceTypeMorphSetData_tEEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI37InfoForResourceTypeCPhysAggregateDataEEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI46InfoForResourceTypeSequenceGroupResourceData_tEEE
+18CAtomicManipulatorI21CResourceExtReferenceI11CWeakHandleI47InfoForResourceTypeAnimationGroupResourceData_tEEE
+18CAtomicManipulatorI23CUtlVectorFixedGrowableI16CSceneObjectDataLm1EEE
+18CAtomicManipulatorI5ColorE
+18CAtomicManipulatorI6VectorE
+18CAtomicManipulatorI8Vector4DE
+18CDebugDrawQueueMgr
+18CNETMsg_Disconnect
+18CPredictionDiffMgr
+18CSchemaEnumBindingI12BundleType_tE
+18CSchemaEnumBindingI16ConstraintType_tE
+18CSchemaEnumBindingI18multiplayerBreak_tE
+18CSchemaEnumBindingI22MeshTranslucencyType_tE
+18CSchemaEnumBindingI24MeshDrawPrimitiveFlags_tE
+18CSchemaEnumBindingI24ModelBoneFlexComponent_tE
+18CSchemaEnumBindingI26AttachmentInfluenceFlags_tE
+18CSchemaEnumBindingI35RenderMeshFlexControllerRemapType_tE
+18CSchemaEnumBindingIN14MorphSetData_t12LookupType_tEE
+18CSchemaEnumBindingIN14MorphSetData_t14EncodingType_tEE
+18CSchemaEnumBindingIN15PermModelInfo_t8FlagEnumEE
+18CSchemaEnumBindingIN16VPhysXBodyPart_t16VPhysXFlagEnum_tEE
+18CSchemaEnumBindingIN19ModelSkeletonData_t11BoneFlags_tEE
+18CSchemaEnumBindingIN20RenderSkeletonData_t10FlagEnum_tEE
+18CSchemaEnumBindingIN21VPhysXAggregateData_t16VPhysXFlagEnum_tEE
+18CSchemaEnumBindingIN23VPhysXDiskShapeHeader_t12VersinEnum_tEE
+18CSchemaEnumBindingIN24VPhysXConstraintParams_t12EnumFlags0_tEE
+18CSchemaManipulatorI10CTransformE
+18CSchemaManipulatorI10CUtlStringE
+18CSchemaManipulatorI10CUtlVectorI10CHitBoxSet10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI10CUtlVectorI16CConstraintSlave10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI10CUtlVectorI17CConstraintTarget10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI10CUtlVectorI20RenderSkeletonBone_t10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI10CUtlVectorI23CMaterialDrawDescriptor10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI10CUtlVectorI7CHitBox10CUtlMemoryIS1_iEEE
+18CSchemaManipulatorI10CUtlVectorIP15CBaseConstraint10CUtlMemoryIS2_iEEE
+18CSchemaManipulatorI10CUtlVectorIP22CPhysSurfaceProperties10CUtlMemoryIS2_iEEE
+18CSchemaManipulatorI10CUtlVectorIi10CUtlMemoryIiiEEE
+18CSchemaManipulatorI10QuaternionE
+18CSchemaManipulatorI11CWeakHandleI25InfoForResourceTypeCModelEE
+18CSchemaManipulatorI11CWeakHandleI29InfoForResourceTypeIMaterial2EE
+18CSchemaManipulatorI11CWeakHandleI30InfoForResourceTypeCRenderMeshEE
+18CSchemaManipulatorI11CWeakHandleI31InfoForResourceTypeCTextureBaseEE
+18CSchemaManipulatorI11CWeakHandleI33InfoForResourceTypeMorphSetData_tEE
+18CSchemaManipulatorI11CWeakHandleI37InfoForResourceTypeCPhysAggregateDataEE
+18CSchemaManipulatorI11CWeakHandleI46InfoForResourceTypeSequenceGroupResourceData_tEE
+18CSchemaManipulatorI11CWeakHandleI47InfoForResourceTypeAnimationGroupResourceData_tEE
+18CSchemaManipulatorI11matrix3x4_tE
+18CSchemaManipulatorI12matrix3x4a_tE
+18CSchemaManipulatorI13CStrongHandleI29InfoForResourceTypeIMaterial2EE
+18CSchemaManipulatorI14CResourceArrayI10CTransformEE
+18CSchemaManipulatorI14CResourceArrayI10FlexDesc_tEE
+18CSchemaManipulatorI14CResourceArrayI10FlexRule_tEE
+18CSchemaManipulatorI14CResourceArrayI10QuaternionEE
+18CSchemaManipulatorI14CResourceArrayI11HitBoxSet_tEE
+18CSchemaManipulatorI14CResourceArrayI11MorphData_tEE
+18CSchemaManipulatorI14CResourceArrayI12BundleData_tEE
+18CSchemaManipulatorI14CResourceArrayI12BundleType_tEE
+18CSchemaManipulatorI14CResourceArrayI12RnHullDesc_tEE
+18CSchemaManipulatorI14CResourceArrayI12RnMeshDesc_tEE
+18CSchemaManipulatorI14CResourceArrayI12matrix3x4a_tEE
+18CSchemaManipulatorI14CResourceArrayI13VPhysXJoint_tEE
+18CSchemaManipulatorI14CResourceArrayI14RnSphereDesc_tEE
+18CSchemaManipulatorI14CResourceArrayI15CResourceStringEE
+18CSchemaManipulatorI14CResourceArrayI15MaterialGroup_tEE
+18CSchemaManipulatorI14CResourceArrayI15MorphRectData_tEE
+18CSchemaManipulatorI14CResourceArrayI15RnCapsuleDesc_tEE
+18CSchemaManipulatorI14CResourceArrayI16AttachmentData_tEE
+18CSchemaManipulatorI14CResourceArrayI16BaseConstraint_tEE
+18CSchemaManipulatorI14CResourceArrayI16FlexController_tEE
+18CSchemaManipulatorI14CResourceArrayI16VPhysXBodyPart_tEE
+18CSchemaManipulatorI14CResourceArrayI17ConstraintSlave_tEE
+18CSchemaManipulatorI14CResourceArrayI17SceneObjectData_tEE
+18CSchemaManipulatorI14CResourceArrayI18ConstraintTarget_tEE
+18CSchemaManipulatorI14CResourceArrayI18OnDiskBufferData_tEE
+18CSchemaManipulatorI14CResourceArrayI18PermModelExtPart_tEE
+18CSchemaManipulatorI14CResourceArrayI18RnSoftbodySpring_tEE
+18CSchemaManipulatorI14CResourceArrayI18SkeletonBoneBbox_tEE
+18CSchemaManipulatorI14CResourceArrayI19RnSoftbodyCapsule_tEE
+18CSchemaManipulatorI14CResourceArrayI19VPhysXConstraint2_tEE
+18CSchemaManipulatorI14CResourceArrayI20RnSoftbodyParticle_tEE
+18CSchemaManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI29InfoForResourceTypeIMaterial2EEEE
+18CSchemaManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI30InfoForResourceTypeCRenderMeshEEEE
+18CSchemaManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI37InfoForResourceTypeCPhysAggregateDataEEEE
+18CSchemaManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI46InfoForResourceTypeSequenceGroupResourceData_tEEEE
+18CSchemaManipulatorI14CResourceArrayI21CResourceExtReferenceI11CWeakHandleI47InfoForResourceTypeAnimationGroupResourceData_tEEEE
+18CSchemaManipulatorI14CResourceArrayI21ModelBoneFlexDriver_tEE
+18CSchemaManipulatorI14CResourceArrayI21RenderBufferBinding_tEE
+18CSchemaManipulatorI14CResourceArrayI24MaterialDrawDescriptor_tEE
+18CSchemaManipulatorI14CResourceArrayI24RenderInputLayoutField_tEE
+18CSchemaManipulatorI14CResourceArrayI27VPhysXCollisionAttributes_tEE
+18CSchemaManipulatorI14CResourceArrayI28ModelBoneFlexDriverControl_tEE
+18CSchemaManipulatorI14CResourceArrayI6VectorEE
+18CSchemaManipulatorI14CResourceArrayI8FlexOp_tEE
+18CSchemaManipulatorI14CResourceArrayI8HitBox_tEE
+18CSchemaManipulatorI14CResourceArrayIS0_IhEEE
+18CSchemaManipulatorI14CResourceArrayIfEE
+18CSchemaManipulatorI14CResourceArrayIhEE
+18CSchemaManipulatorI14CResourceArrayIjEE
+18CSchemaManipulatorI14CResourceArrayIsEE
+18CSchemaManipulatorI14CResourceArrayItEE
+18CSchemaManipulatorI14CResourceArrayIyEE
+18CSchemaManipulatorI15CResourceStringE
+18CSchemaManipulatorI16CResourcePointerI17PhysFeModelDesc_tEE
+18CSchemaManipulatorI16CResourcePointerI20RenderSkeletonData_tEE
+18CSchemaManipulatorI16CResourcePointerI24VpropBreakablePartData_tEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI25InfoForResourceTypeCModelEEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI29InfoForResourceTypeIMaterial2EEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI30InfoForResourceTypeCRenderMeshEEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI31InfoForResourceTypeCTextureBaseEEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI33InfoForResourceTypeMorphSetData_tEEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI37InfoForResourceTypeCPhysAggregateDataEEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI46InfoForResourceTypeSequenceGroupResourceData_tEEE
+18CSchemaManipulatorI21CResourceExtReferenceI11CWeakHandleI47InfoForResourceTypeAnimationGroupResourceData_tEEE
+18CSchemaManipulatorI23CUtlVectorFixedGrowableI16CSceneObjectDataLm1EEE
+18CSchemaManipulatorI5ColorE
+18CSchemaManipulatorI6VectorE
+18CSchemaManipulatorI8Vector4DE
+18IAtomicManipulator
+18IDebugDrawQueueMgr
+18IGameSystemFactory
+18IPredictionDiffMgr
+18ISchemaManipulator
+19CNETMsg_SignonState
+19CSVCMsg_UserMessage
+19CSaveRestoreDataMgr
+19CSchemaClassBindingI10CHitBoxSetE
+19CSchemaClassBindingI10FlexDesc_tE
+19CSchemaClassBindingI10FlexRule_tE
+19CSchemaClassBindingI11CAttachmentE
+19CSchemaClassBindingI11CRenderMeshE
+19CSchemaClassBindingI11HitBoxSet_tE
+19CSchemaClassBindingI11MorphData_tE
+19CSchemaClassBindingI12BundleData_tE
+19CSchemaClassBindingI13VPhysXJoint_tE
+19CSchemaClassBindingI13VPhysXRange_tE
+19CSchemaClassBindingI14CAimConstraintE
+19CSchemaClassBindingI14CHitBoxSetListE
+19CSchemaClassBindingI14EventSetTime_tE
+19CSchemaClassBindingI14MorphSetData_tE
+19CSchemaClassBindingI15CRenderSkeletonE
+19CSchemaClassBindingI15EventSimulate_tE
+19CSchemaClassBindingI15MaterialGroup_tE
+19CSchemaClassBindingI15MorphRectData_tE
+19CSchemaClassBindingI15PermModelData_tE
+19CSchemaClassBindingI15PermModelInfo_tE
+19CSchemaClassBindingI16AttachmentData_tE
+19CSchemaClassBindingI16BaseConstraint_tE
+19CSchemaClassBindingI16CConstraintSlaveE
+19CSchemaClassBindingI16CMorphConstraintE
+19CSchemaClassBindingI16CPointConstraintE
+19CSchemaClassBindingI16CSceneObjectDataE
+19CSchemaClassBindingI16CTwistConstraintE
+19CSchemaClassBindingI16FlexController_tE
+19CSchemaClassBindingI16VPhysXBodyPart_tE
+19CSchemaClassBindingI17CConstraintTargetE
+19CSchemaClassBindingI17COrientConstraintE
+19CSchemaClassBindingI17CParentConstraintE
+19CSchemaClassBindingI17ConstraintSlave_tE
+19CSchemaClassBindingI17EngineLoopState_tE
+19CSchemaClassBindingI17SceneObjectData_tE
+19CSchemaClassBindingI17VPhysXDiskMesh2_tE
+19CSchemaClassBindingI18ConstraintTarget_tE
+19CSchemaClassBindingI18EventAdvanceTick_tE
+19CSchemaClassBindingI18EventAppShutdown_tE
+19CSchemaClassBindingI18OnDiskBufferData_tE
+19CSchemaClassBindingI18PermModelExtPart_tE
+19CSchemaClassBindingI18PhysSoftbodyDesc_tE
+19CSchemaClassBindingI18SkeletonBoneBbox_tE
+19CSchemaClassBindingI19EventClientOutput_tE
+19CSchemaClassBindingI19ModelSkeletonData_tE
+19CSchemaClassBindingI19VPhysXConstraint2_tE
+19CSchemaClassBindingI19VPhysXDiskCapsule_tE
+19CSchemaClassBindingI19VPhysics2ShapeDef_tE
+19CSchemaClassBindingI20CRenderBufferBindingE
+19CSchemaClassBindingI20CTiltTwistConstraintE
+19CSchemaClassBindingI20EventFrameBoundary_tE
+19CSchemaClassBindingI20EventPreDataUpdate_tE
+19CSchemaClassBindingI20PermRenderMeshData_tE
+19CSchemaClassBindingI20RenderSkeletonBone_tE
+19CSchemaClassBindingI20RenderSkeletonData_tE
+19CSchemaClassBindingI20SkeletonBoneBounds_tE
+19CSchemaClassBindingI21EventClientSimulate_tE
+19CSchemaClassBindingI21EventModInitialized_tE
+19CSchemaClassBindingI21EventPostDataUpdate_tE
+19CSchemaClassBindingI21EventServerSimulate_tE
+19CSchemaClassBindingI21ModelBoneFlexDriver_tE
+19CSchemaClassBindingI21RenderBufferBinding_tE
+19CSchemaClassBindingI21VPhysXAggregateData_tE
+19CSchemaClassBindingI22CPhysSurfacePropertiesE
+19CSchemaClassBindingI22EventClientPollInput_tE
+19CSchemaClassBindingI22EventClientPreOutput_tE
+19CSchemaClassBindingI22EventClientSendInput_tE
+19CSchemaClassBindingI22EventPostAdvanceTick_tE
+19CSchemaClassBindingI23CMaterialDrawDescriptorE
+19CSchemaClassBindingI23EventClientPostOutput_tE
+19CSchemaClassBindingI23VPhysXDiskShapeHeader_tE
+19CSchemaClassBindingI24EventClientAdvanceTick_tE
+19CSchemaClassBindingI24EventClientPreSimulate_tE
+19CSchemaClassBindingI24EventServerAdvanceTick_tE
+19CSchemaClassBindingI24MaterialDrawDescriptor_tE
+19CSchemaClassBindingI24VPhysXConstraintParams_tE
+19CSchemaClassBindingI24VpropBreakablePartData_tE
+19CSchemaClassBindingI25EventClientPostSimulate_tE
+19CSchemaClassBindingI25EventClientProcessInput_tE
+19CSchemaClassBindingI25EventServerPostSimulate_tE
+19CSchemaClassBindingI26CPhysSurfacePropertiesGameE
+19CSchemaClassBindingI26EventClientFrameSimulate_tE
+19CSchemaClassBindingI26EventClientPauseSimulate_tE
+19CSchemaClassBindingI27CPhysSurfacePropertiesAudioE
+19CSchemaClassBindingI27EventClientPollNetworking_tE
+19CSchemaClassBindingI27EventServerPollNetworking_tE
+19CSchemaClassBindingI27VPhysXCollisionAttributes_tE
+19CSchemaClassBindingI28CVPhysXSurfacePropertiesListE
+19CSchemaClassBindingI28EventClientPostAdvanceTick_tE
+19CSchemaClassBindingI28EventServerPostAdvanceTick_tE
+19CSchemaClassBindingI28EventSimpleLoopFrameUpdate_tE
+19CSchemaClassBindingI28ModelBoneFlexDriverControl_tE
+19CSchemaClassBindingI28VPhysXShapeCompoundHeader2_tE
+19CSchemaClassBindingI29CPhysSurfacePropertiesPhysicsE
+19CSchemaClassBindingI29EventClientProcessGameInput_tE
+19CSchemaClassBindingI30EventClientProcessNetworking_tE
+19CSchemaClassBindingI30EventProfileStorageAvailable_tE
+19CSchemaClassBindingI30EventServerProcessNetworking_tE
+19CSchemaClassBindingI30EventSplitScreenStateChanged_tE
+19CSchemaClassBindingI32CPhysSurfacePropertiesSoundNamesE
+19CSchemaClassBindingI41EventClientSceneSystemThreadStateChange_tE
+19CSchemaClassBindingI7CHitBoxE
+19CSchemaClassBindingI8FlexOp_tE
+19CSchemaClassBindingI8HitBox_tE
+19CSchemaRegistration
+19IKeyValuesErrorSpew
+19ISaveRestoreDataMgr
 2#.CSVCMsgList_UserMessages.usermsg_t
 2#GameUI_Disconnect_RemoteProblem_TimeoutConnecting
+20CGameModelInfoClient
+20CGameModelInfoServer
+20CGameSystem2HostHook
+20CPostConnectCallback
+20CRefCountServiceBaseILb1E6CRefMTE
+20CTiltTwistConstraint
+20IGameSystem2HostHook
+21CLoopModeGameHostBase
+21CLoopModeGameHostDota
+22CBaseGameSystemFactory
+22CDontUseThisGameSystem
+22CSVCMsgList_GameEvents
+22CSchemaEnumBindingBase
+22CSchemaInstallCallback
+22IVTableIndexCalculator
+23CNETMsg_SpawnGroup_Load
+23CNETMsg_SplitScreenUser
+23CSVCMsg_GameEvent_key_t
+23CSchemaClassBindingBase
+23IConCommandBaseAccessor
+24CSVCMsgList_UserMessages
+24CSchemaRegistration_host
+25CNETMsg_SpawnGroup_Unload
+25CSchemaVisitorInfoMapBase
+26CGameSystemEventDispatcher
+26CSchemaFieldVisitorInfoMapI16CExtrefTraversalE
+26IGameSystemEventDispatcher
+27CSchemaUtlVectorManipulatorI10CUtlVectorI10CHitBoxSet10CUtlMemoryIS1_iEES1_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorI16CConstraintSlave10CUtlMemoryIS1_iEES1_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorI17CConstraintTarget10CUtlMemoryIS1_iEES1_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorI20RenderSkeletonBone_t10CUtlMemoryIS1_iEES1_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorI23CMaterialDrawDescriptor10CUtlMemoryIS1_iEES1_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorI7CHitBox10CUtlMemoryIS1_iEES1_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorIP15CBaseConstraint10CUtlMemoryIS2_iEES2_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorIP22CPhysSurfaceProperties10CUtlMemoryIS2_iEES2_E
+27CSchemaUtlVectorManipulatorI10CUtlVectorIi10CUtlMemoryIiiEEiE
+27CSchemaUtlVectorManipulatorI23CUtlVectorFixedGrowableI16CSceneObjectDataLm1EES1_E
+28ISchemaCollectionManipulator
+28ISchemaInspectionManipulator
 29C |.
+29CResourceManifestPrerequisite
 29K }
+30CGameSystemReallocatingFactoryI15CTestGameSystemS0_E
+30CSVCMsgList_GameEvents_event_t
+32CNETMsg_SpawnGroup_LoadCompleted
+32CSVCMsg_GameSessionConfiguration
 33333333I9
+33CNETMsg_SpawnGroup_ManifestUpdate
+34CNETMsg_SpawnGroup_SetCreationTick
+34CSVCMsgList_UserMessages_usermsg_t
+35CSchemaNonConstructibleClassBindingI15CBaseConstraintE
+38CSchemaWeakHandleInspectionManipulatorI25InfoForResourceTypeCModelE
+38CSchemaWeakHandleInspectionManipulatorI29InfoForResourceTypeIMaterial2E
+38CSchemaWeakHandleInspectionManipulatorI30InfoForResourceTypeCRenderMeshE
+38CSchemaWeakHandleInspectionManipulatorI31InfoForResourceTypeCTextureBaseE
+38CSchemaWeakHandleInspectionManipulatorI33InfoForResourceTypeMorphSetData_tE
+38CSchemaWeakHandleInspectionManipulatorI37InfoForResourceTypeCPhysAggregateDataE
+38CSchemaWeakHandleInspectionManipulatorI46InfoForResourceTypeSequenceGroupResourceData_tE
+38CSchemaWeakHandleInspectionManipulatorI47InfoForResourceTypeAnimationGroupResourceData_tE
+39CSchemaNonConstructibleClassBindingBase
 3A;v8u
 3A;vpu
 4$A;^
-40A;wchar_t
+40A;w
+40CSchemaStrongHandleInspectionManipulatorI29InfoForResourceTypeIMaterial2E
 49K }
 49S |}
 4A;t$8u
-4B;unsigned short;
+4B;t;
 4Hc{41
+4vHct
 528CSchemaRegistration_modellib
 5A;t$0u
 5A;t$pu
+6ConVar
 6[A\A^A_]
+7IConVar
 7fff.
 8#GameUI_Disconnect_LocalProblem_HostedServerPrimaryRelay
+8CFmtStrNILi256ELb0EE
 8NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY
 8[A\A]A^A_]
 8[A^A_]
@@ -521,12 +987,14 @@ $gender
 8ffffff.
 8x9,7
 92tBH
-9S |signed char
-9S |unsigned int
+9ILoopMode
+9ISequence
+9S |a
+9S |j
 9W(}!H
-: Protocol message serialized to signed char size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
-: Tried to copy from signed char message with signed char different type. to: 
-: Tried to merge from signed char message with signed char different type.  to: 
+: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
 :88888888
 ;A }(
 ;C(u	I
@@ -560,7 +1028,7 @@ $gender
 @L+H0I
 @L+H0L
 @LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
-@M;__float128 
+@M;g 
 @PHc{P1
 @PI;@XtAI
 @V_stristr_fast(char const*, char const*)
@@ -577,6 +1045,7 @@ $gender
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Msg
 @_OSAtomicCompareAndSwap64Barrier
 @_OSMemoryBarrier
 @_Plat_DebugPrint
@@ -640,7 +1109,6 @@ $gender
 @___stack_chk_guard
 @___stderrp
 @___tolower
-@__float128 short::*
 @_ceilf
 @_fflush
 @_floorf
@@ -728,7 +1196,7 @@ A+F(~&A
 A+FH~&A
 A+G$Hc
 A+M$Hc
-A+wchar_t@~
+A+w@~
 A,LcK,1
 A9D$(u
 A9F8}5I
@@ -749,15 +1217,15 @@ A;H(t.M
 A;M(L
 A;M(u
 A;MXu
+A;N(t
 A;N(u2A
-A;N(unsigned short
 A;UXuFA
 A;\$@|
 A;\$H|
 A;],|
 A;]H|
 A;]X|
-A;]long long|
+A;]x|
 A;^ |
 A;^(|
 A;^,|
@@ -765,22 +1233,22 @@ A;^8|
 A;^@|
 A;^H|
 A;^X|
-A;^long long|
+A;^h|
 A;^p|
-A;^unsigned char|
+A;^x|
 A;_ |
 A;_(|
 A;_,|
 A;_8|
 A;_X|
 A;t$0u
+A;v(u
 A;v0u
-A;void(u
 A;|$Xu
 A;}Pu
-APPSYSTEM: In ConnectGameInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectGameInterfaces(), s_nRegistrationCount is %d!
 APPSYSTEM: In ConnectGameInterfaces(), tried to use different connection modes!
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 APPSYSTEM: In ReconnectGameInterface(), tried to use different connection modes!
 ARAp8p8p
 ARBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBSATBp
@@ -850,10 +1318,10 @@ AddString
 AddUInt32
 AddUInt64
 Aim constraint always need at least two targets
-AimConstraint: %short - Cannot Find Aim Slave Bone
-AimConstraint: %short - Cannot Find Aim Up Target Attachment: %short
-AimConstraint: %short - Cannot Find Aim Up Target Bone
-Already saw decimal point or exponent; can'unsigned short have another one.
+AimConstraint: %s - Cannot Find Aim Slave Bone
+AimConstraint: %s - Cannot Find Aim Up Target Attachment: %s
+AimConstraint: %s - Cannot Find Aim Up Target Bone
+Already saw decimal point or exponent; can't have another one.
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -872,10 +1340,10 @@ BUNDLE_TYPE_COUNT
 BUNDLE_TYPE_NONE
 BUNDLE_TYPE_NORMAL_WRINKLE
 BUNDLE_TYPE_POSITION_SPEED
-BackUp() can only be called after signed char successful Next().
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
+BackUp() can only be called after a successful Next().
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
 BakedLODBuilderMgr001
 BaseConstraint_t
 BenchmarkService001
@@ -885,7 +1353,7 @@ BundleData_t
 BundleType_t
 Burst Randomize
 Burst Scale
-Byte size calculation and serialization were inconsistent.  This may indicate signed char bug in protocol buffers or it may be caused by concurrent modification of the message.
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
 C [A^]
 C$;CXuSL
 C(A9G
@@ -893,138 +1361,16 @@ C(IcO,I
 C,[A^]
 C0+K,9
 C0[A\A^A_]
+C10IAppSystem
 C@H+X0H
 C@L+X0L
 CAimConstraint
-CAtomicManipulator<CResourceArray<AttachmentData_t> >
-CAtomicManipulator<CResourceArray<BaseConstraint_t> >
-CAtomicManipulator<CResourceArray<BundleData_t> >
-CAtomicManipulator<CResourceArray<BundleType_t> >
-CAtomicManipulator<CResourceArray<CResourceArray<unsigned char> > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >
-CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >
-CAtomicManipulator<CResourceArray<CResourceString> >
-CAtomicManipulator<CResourceArray<CTransform> >
-CAtomicManipulator<CResourceArray<ConstraintSlave_t> >
-CAtomicManipulator<CResourceArray<ConstraintTarget_t> >
-CAtomicManipulator<CResourceArray<FlexController_t> >
-CAtomicManipulator<CResourceArray<FlexDesc_t> >
-CAtomicManipulator<CResourceArray<FlexOp_t> >
-CAtomicManipulator<CResourceArray<FlexRule_t> >
-CAtomicManipulator<CResourceArray<HitBoxSet_t> >
-CAtomicManipulator<CResourceArray<HitBox_t> >
-CAtomicManipulator<CResourceArray<MaterialDrawDescriptor_t> >
-CAtomicManipulator<CResourceArray<MaterialGroup_t> >
-CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >
-CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t> >
-CAtomicManipulator<CResourceArray<MorphData_t> >
-CAtomicManipulator<CResourceArray<MorphRectData_t> >
-CAtomicManipulator<CResourceArray<OnDiskBufferData_t> >
-CAtomicManipulator<CResourceArray<PermModelExtPart_t> >
-CAtomicManipulator<CResourceArray<Quaternion> >
-CAtomicManipulator<CResourceArray<RenderBufferBinding_t> >
-CAtomicManipulator<CResourceArray<RenderInputLayoutField_t> >
-CAtomicManipulator<CResourceArray<RnCapsuleDesc_t> >
-CAtomicManipulator<CResourceArray<RnHullDesc_t> >
-CAtomicManipulator<CResourceArray<RnMeshDesc_t> >
-CAtomicManipulator<CResourceArray<RnSoftbodyCapsule_t> >
-CAtomicManipulator<CResourceArray<RnSoftbodyParticle_t> >
-CAtomicManipulator<CResourceArray<RnSoftbodySpring_t> >
-CAtomicManipulator<CResourceArray<RnSphereDesc_t> >
-CAtomicManipulator<CResourceArray<SceneObjectData_t> >
-CAtomicManipulator<CResourceArray<SkeletonBoneBbox_t> >
-CAtomicManipulator<CResourceArray<VPhysXBodyPart_t> >
-CAtomicManipulator<CResourceArray<VPhysXCollisionAttributes_t> >
-CAtomicManipulator<CResourceArray<VPhysXConstraint2_t> >
-CAtomicManipulator<CResourceArray<VPhysXJoint_t> >
-CAtomicManipulator<CResourceArray<Vector> >
-CAtomicManipulator<CResourceArray<float> >
-CAtomicManipulator<CResourceArray<matrix3x4a_t> >
-CAtomicManipulator<CResourceArray<short> >
-CAtomicManipulator<CResourceArray<unsigned char> >
-CAtomicManipulator<CResourceArray<unsigned int> >
-CAtomicManipulator<CResourceArray<unsigned long long> >
-CAtomicManipulator<CResourceArray<unsigned short> >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t> > >
-CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >
-CAtomicManipulator<CResourcePointer<PhysFeModelDesc_t> >
-CAtomicManipulator<CResourcePointer<RenderSkeletonData_t> >
-CAtomicManipulator<CResourcePointer<VpropBreakablePartData_t> >
-CAtomicManipulator<CResourceString>
-CAtomicManipulator<CStrongHandle<InfoForResourceTypeIMaterial2> >
-CAtomicManipulator<CTransform>
-CAtomicManipulator<CUtlString>
-CAtomicManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >
-CAtomicManipulator<CUtlVector<CConstraintSlave, CUtlMemory<CConstraintSlave, int> > >
-CAtomicManipulator<CUtlVector<CConstraintTarget, CUtlMemory<CConstraintTarget, int> > >
-CAtomicManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
-CAtomicManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
-CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
-CAtomicManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
-CAtomicManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
-CAtomicManipulator<CUtlVector<int, CUtlMemory<int, int> > >
-CAtomicManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCModel> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeMorphSetData_t> >
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> >
-CAtomicManipulator<Color>
-CAtomicManipulator<Quaternion>
-CAtomicManipulator<Vector4D>
-CAtomicManipulator<Vector>
-CAtomicManipulator<matrix3x4_t>
-CAtomicManipulator<matrix3x4a_t>
 CAttachment
-CAutoGameSystem
-CBaseAppSystem<IDebugDrawQueueMgr>
-CBaseAppSystem<IDotaMapUtils>
-CBaseAppSystem<IGameModelInfo>
-CBaseAppSystem<IGameSystem2HostHook>
-CBaseAppSystem<IHostUtils>
-CBaseAppSystem<IPredictionDiffMgr>
-CBaseAppSystem<ISaveRestoreDataMgr>
-CBaseAppSystem<ISource2Host>
 CBaseConstraint
-CBaseGameSystemFactory
 CConstraintSlave
 CConstraintTarget
-CDebugDrawQueueMgr
-CDefaultAccessor
-CDontUseThisGameSystem
-CDotaMapUtils
-CDotaMapUtils: Failed to load tree map %short
-CEmptyConVar
-CEmptySequence
-CFieldPathHuffmanEncoder::INode
-CFieldPathHuffmanEncoder::InternalNode
-CFieldPathHuffmanEncoder::LeafNode
-CFmtStrN<256, false>
+CDotaMapUtils: Failed to load tree map %s
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CGameAppSystem<IDebugDrawQueueMgr, 0>
-CGameAppSystem<IDotaMapUtils, 0>
-CGameAppSystem<IGameSystem2HostHook, 0>
-CGameAppSystem<IHostUtils, 0>
-CGameAppSystem<IPredictionDiffMgr, 0>
-CGameAppSystem<ISource2Host, 0>
-CGameModelInfo
-CGameModelInfoClient
-CGameModelInfoServer
-CGameSystem2HostHook
-CGameSystemEventDispatcher
-CGameSystemReallocatingFactory<CTestGameSystem, CTestGameSystem>
 CHECK failed: !checkpoints_.empty(): 
 CHECK failed: !coded_out.HadError(): 
 CHECK failed: !extension->is_repeated: 
@@ -1144,16 +1490,11 @@ CHECK failed: value.size() <= kint32max:
 CHitBox
 CHitBoxSet
 CHitBoxSetList
-CHostUtils
-CKV3TransferLoadContext: Tried to load signed char polymorphic pointer with no '%short' key
-CKeyValues3Cluster allocated with bad alignment! (%p) (If this is inside of signed char heap allocation, you may need to inherit from CAlignedNewDelete< KV3_CLUSTER_SIZEOF >.)
+CKV3TransferLoadContext: Tried to load a polymorphic pointer with no '%s' key
+CKeyValues3Cluster allocated with bad alignment! (%p) (If this is inside of a heap allocation, you may need to inherit from CAlignedNewDelete< KV3_CLUSTER_SIZEOF >.)
 CKeyValues3Cluster::CKeyValues3Cluster()
 CKeyValues3Context *CKeyValues3Cluster::GetParentContext()
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
-CLoopModeBase
-CLoopModeFactory<CLoopModeGameHostDota>
-CLoopModeGameHostBase
-CLoopModeGameHostDota
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CMaterialDrawDescriptor
 CMorphConstraint
 CMsgPlayerInfo
@@ -1161,16 +1502,11 @@ CMsgQAngle
 CMsgVector
 CMsgVector2D
 CMsg_CVars
-CMsg_CVars_CVar
 CNETMsg_Disconnect
-CNETMsg_NOP
 CNETMsg_NOP"'
 CNETMsg_SetConVar
 CNETMsg_SignonState
 CNETMsg_SpawnGroup_Load
-CNETMsg_SpawnGroup_LoadCompleted
-CNETMsg_SpawnGroup_ManifestUpdate
-CNETMsg_SpawnGroup_SetCreationTick
 CNETMsg_SpawnGroup_Unload
 CNETMsg_SplitScreenUser
 CNETMsg_StringCmd
@@ -1207,10 +1543,6 @@ CPhysSurfacePropertiesGame
 CPhysSurfacePropertiesPhysics
 CPhysSurfacePropertiesSoundNames
 CPointConstraint
-CPostConnectCallback
-CPredictionDiffMgr
-CRefCountServiceBase<true, CRefMT>
-CRefCounted<CRefCountServiceBase<true, CRefMT> >
 CRenderBufferBinding
 CRenderMesh
 CRenderSkeleton
@@ -1220,292 +1552,13 @@ CResourceManifestPrerequisite
 CResourcePointer
 CResourceString
 CSVCMsgList_GameEvents
-CSVCMsgList_GameEvents_event_t
 CSVCMsgList_UserMessages
-CSVCMsgList_UserMessages_usermsg_t
 CSVCMsg_GameEvent
-CSVCMsg_GameEvent_key_t
-CSVCMsg_GameSessionConfiguration
 CSVCMsg_UserMessage
-CSaveRestoreDataMgr
 CSceneObjectData
-CSchemaClassBinding<AttachmentData_t>
-CSchemaClassBinding<BaseConstraint_t>
-CSchemaClassBinding<BundleData_t>
-CSchemaClassBinding<CAimConstraint>
-CSchemaClassBinding<CAttachment>
-CSchemaClassBinding<CConstraintSlave>
-CSchemaClassBinding<CConstraintTarget>
-CSchemaClassBinding<CHitBox>
-CSchemaClassBinding<CHitBoxSet>
-CSchemaClassBinding<CHitBoxSetList>
-CSchemaClassBinding<CMaterialDrawDescriptor>
-CSchemaClassBinding<CMorphConstraint>
-CSchemaClassBinding<COrientConstraint>
-CSchemaClassBinding<CParentConstraint>
-CSchemaClassBinding<CPhysSurfaceProperties>
-CSchemaClassBinding<CPhysSurfacePropertiesAudio>
-CSchemaClassBinding<CPhysSurfacePropertiesGame>
-CSchemaClassBinding<CPhysSurfacePropertiesPhysics>
-CSchemaClassBinding<CPhysSurfacePropertiesSoundNames>
-CSchemaClassBinding<CPointConstraint>
-CSchemaClassBinding<CRenderBufferBinding>
-CSchemaClassBinding<CRenderMesh>
-CSchemaClassBinding<CRenderSkeleton>
-CSchemaClassBinding<CSceneObjectData>
-CSchemaClassBinding<CTiltTwistConstraint>
-CSchemaClassBinding<CTwistConstraint>
-CSchemaClassBinding<CVPhysXSurfacePropertiesList>
-CSchemaClassBinding<ConstraintSlave_t>
-CSchemaClassBinding<ConstraintTarget_t>
-CSchemaClassBinding<EngineLoopState_t>
-CSchemaClassBinding<EventAdvanceTick_t>
-CSchemaClassBinding<EventAppShutdown_t>
-CSchemaClassBinding<EventClientAdvanceTick_t>
-CSchemaClassBinding<EventClientFrameSimulate_t>
-CSchemaClassBinding<EventClientOutput_t>
-CSchemaClassBinding<EventClientPauseSimulate_t>
-CSchemaClassBinding<EventClientPollInput_t>
-CSchemaClassBinding<EventClientPollNetworking_t>
-CSchemaClassBinding<EventClientPostAdvanceTick_t>
-CSchemaClassBinding<EventClientPostOutput_t>
-CSchemaClassBinding<EventClientPostSimulate_t>
-CSchemaClassBinding<EventClientPreOutput_t>
-CSchemaClassBinding<EventClientPreSimulate_t>
-CSchemaClassBinding<EventClientProcessGameInput_t>
-CSchemaClassBinding<EventClientProcessInput_t>
-CSchemaClassBinding<EventClientProcessNetworking_t>
-CSchemaClassBinding<EventClientSceneSystemThreadStateChange_t>
-CSchemaClassBinding<EventClientSendInput_t>
-CSchemaClassBinding<EventClientSimulate_t>
-CSchemaClassBinding<EventFrameBoundary_t>
-CSchemaClassBinding<EventModInitialized_t>
-CSchemaClassBinding<EventPostAdvanceTick_t>
-CSchemaClassBinding<EventPostDataUpdate_t>
-CSchemaClassBinding<EventPreDataUpdate_t>
-CSchemaClassBinding<EventProfileStorageAvailable_t>
-CSchemaClassBinding<EventServerAdvanceTick_t>
-CSchemaClassBinding<EventServerPollNetworking_t>
-CSchemaClassBinding<EventServerPostAdvanceTick_t>
-CSchemaClassBinding<EventServerPostSimulate_t>
-CSchemaClassBinding<EventServerProcessNetworking_t>
-CSchemaClassBinding<EventServerSimulate_t>
-CSchemaClassBinding<EventSetTime_t>
-CSchemaClassBinding<EventSimpleLoopFrameUpdate_t>
-CSchemaClassBinding<EventSimulate_t>
-CSchemaClassBinding<EventSplitScreenStateChanged_t>
-CSchemaClassBinding<FlexController_t>
-CSchemaClassBinding<FlexDesc_t>
-CSchemaClassBinding<FlexOp_t>
-CSchemaClassBinding<FlexRule_t>
-CSchemaClassBinding<HitBoxSet_t>
-CSchemaClassBinding<HitBox_t>
-CSchemaClassBinding<MaterialDrawDescriptor_t>
-CSchemaClassBinding<MaterialGroup_t>
-CSchemaClassBinding<ModelBoneFlexDriverControl_t>
-CSchemaClassBinding<ModelBoneFlexDriver_t>
-CSchemaClassBinding<ModelSkeletonData_t>
-CSchemaClassBinding<MorphData_t>
-CSchemaClassBinding<MorphRectData_t>
-CSchemaClassBinding<MorphSetData_t>
-CSchemaClassBinding<OnDiskBufferData_t>
-CSchemaClassBinding<PermModelData_t>
-CSchemaClassBinding<PermModelExtPart_t>
-CSchemaClassBinding<PermModelInfo_t>
-CSchemaClassBinding<PermRenderMeshData_t>
-CSchemaClassBinding<PhysSoftbodyDesc_t>
-CSchemaClassBinding<RenderBufferBinding_t>
-CSchemaClassBinding<RenderSkeletonBone_t>
-CSchemaClassBinding<RenderSkeletonData_t>
-CSchemaClassBinding<SceneObjectData_t>
-CSchemaClassBinding<SkeletonBoneBbox_t>
-CSchemaClassBinding<SkeletonBoneBounds_t>
-CSchemaClassBinding<VPhysXAggregateData_t>
-CSchemaClassBinding<VPhysXBodyPart_t>
-CSchemaClassBinding<VPhysXCollisionAttributes_t>
-CSchemaClassBinding<VPhysXConstraint2_t>
-CSchemaClassBinding<VPhysXConstraintParams_t>
-CSchemaClassBinding<VPhysXDiskCapsule_t>
-CSchemaClassBinding<VPhysXDiskMesh2_t>
-CSchemaClassBinding<VPhysXDiskShapeHeader_t>
-CSchemaClassBinding<VPhysXJoint_t>
-CSchemaClassBinding<VPhysXRange_t>
-CSchemaClassBinding<VPhysXShapeCompoundHeader2_t>
-CSchemaClassBinding<VPhysics2ShapeDef_t>
-CSchemaClassBinding<VpropBreakablePartData_t>
-CSchemaClassBindingBase
-CSchemaEnumBinding<AttachmentInfluenceFlags_t>
-CSchemaEnumBinding<BundleType_t>
-CSchemaEnumBinding<ConstraintType_t>
-CSchemaEnumBinding<MeshDrawPrimitiveFlags_t>
-CSchemaEnumBinding<MeshTranslucencyType_t>
-CSchemaEnumBinding<ModelBoneFlexComponent_t>
-CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>
-CSchemaEnumBinding<MorphSetData_t::EncodingType_t>
-CSchemaEnumBinding<MorphSetData_t::LookupType_t>
-CSchemaEnumBinding<PermModelInfo_t::FlagEnum>
-CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>
-CSchemaEnumBinding<RenderSkeletonData_t::FlagEnum_t>
-CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>
-CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>
-CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>
-CSchemaEnumBinding<VPhysXDiskShapeHeader_t::VersinEnum_t>
-CSchemaEnumBinding<multiplayerBreak_t>
-CSchemaEnumBindingBase
-CSchemaFieldVisitorInfoMap<CExtrefTraversal>
-CSchemaInstallCallback
-CSchemaManipulator<CResourceArray<AttachmentData_t> >
-CSchemaManipulator<CResourceArray<BaseConstraint_t> >
-CSchemaManipulator<CResourceArray<BundleData_t> >
-CSchemaManipulator<CResourceArray<BundleType_t> >
-CSchemaManipulator<CResourceArray<CResourceArray<unsigned char> > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >
-CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >
-CSchemaManipulator<CResourceArray<CResourceString> >
-CSchemaManipulator<CResourceArray<CTransform> >
-CSchemaManipulator<CResourceArray<ConstraintSlave_t> >
-CSchemaManipulator<CResourceArray<ConstraintTarget_t> >
-CSchemaManipulator<CResourceArray<FlexController_t> >
-CSchemaManipulator<CResourceArray<FlexDesc_t> >
-CSchemaManipulator<CResourceArray<FlexOp_t> >
-CSchemaManipulator<CResourceArray<FlexRule_t> >
-CSchemaManipulator<CResourceArray<HitBoxSet_t> >
-CSchemaManipulator<CResourceArray<HitBox_t> >
-CSchemaManipulator<CResourceArray<MaterialDrawDescriptor_t> >
-CSchemaManipulator<CResourceArray<MaterialGroup_t> >
-CSchemaManipulator<CResourceArray<ModelBoneFlexDriverControl_t> >
-CSchemaManipulator<CResourceArray<ModelBoneFlexDriver_t> >
-CSchemaManipulator<CResourceArray<MorphData_t> >
-CSchemaManipulator<CResourceArray<MorphRectData_t> >
-CSchemaManipulator<CResourceArray<OnDiskBufferData_t> >
-CSchemaManipulator<CResourceArray<PermModelExtPart_t> >
-CSchemaManipulator<CResourceArray<Quaternion> >
-CSchemaManipulator<CResourceArray<RenderBufferBinding_t> >
-CSchemaManipulator<CResourceArray<RenderInputLayoutField_t> >
-CSchemaManipulator<CResourceArray<RnCapsuleDesc_t> >
-CSchemaManipulator<CResourceArray<RnHullDesc_t> >
-CSchemaManipulator<CResourceArray<RnMeshDesc_t> >
-CSchemaManipulator<CResourceArray<RnSoftbodyCapsule_t> >
-CSchemaManipulator<CResourceArray<RnSoftbodyParticle_t> >
-CSchemaManipulator<CResourceArray<RnSoftbodySpring_t> >
-CSchemaManipulator<CResourceArray<RnSphereDesc_t> >
-CSchemaManipulator<CResourceArray<SceneObjectData_t> >
-CSchemaManipulator<CResourceArray<SkeletonBoneBbox_t> >
-CSchemaManipulator<CResourceArray<VPhysXBodyPart_t> >
-CSchemaManipulator<CResourceArray<VPhysXCollisionAttributes_t> >
-CSchemaManipulator<CResourceArray<VPhysXConstraint2_t> >
-CSchemaManipulator<CResourceArray<VPhysXJoint_t> >
-CSchemaManipulator<CResourceArray<Vector> >
-CSchemaManipulator<CResourceArray<float> >
-CSchemaManipulator<CResourceArray<matrix3x4a_t> >
-CSchemaManipulator<CResourceArray<short> >
-CSchemaManipulator<CResourceArray<unsigned char> >
-CSchemaManipulator<CResourceArray<unsigned int> >
-CSchemaManipulator<CResourceArray<unsigned long long> >
-CSchemaManipulator<CResourceArray<unsigned short> >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t> > >
-CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > >
-CSchemaManipulator<CResourcePointer<PhysFeModelDesc_t> >
-CSchemaManipulator<CResourcePointer<RenderSkeletonData_t> >
-CSchemaManipulator<CResourcePointer<VpropBreakablePartData_t> >
-CSchemaManipulator<CResourceString>
-CSchemaManipulator<CStrongHandle<InfoForResourceTypeIMaterial2> >
-CSchemaManipulator<CTransform>
-CSchemaManipulator<CUtlString>
-CSchemaManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >
-CSchemaManipulator<CUtlVector<CConstraintSlave, CUtlMemory<CConstraintSlave, int> > >
-CSchemaManipulator<CUtlVector<CConstraintTarget, CUtlMemory<CConstraintTarget, int> > >
-CSchemaManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> > >
-CSchemaManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> > >
-CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> > >
-CSchemaManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> > >
-CSchemaManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> > >
-CSchemaManipulator<CUtlVector<int, CUtlMemory<int, int> > >
-CSchemaManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCModel> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeCTextureBase> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeMorphSetData_t> >
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> >
-CSchemaManipulator<Color>
-CSchemaManipulator<Quaternion>
-CSchemaManipulator<Vector4D>
-CSchemaManipulator<Vector>
-CSchemaManipulator<matrix3x4_t>
-CSchemaManipulator<matrix3x4a_t>
-CSchemaNonConstructibleClassBinding<CBaseConstraint>
-CSchemaNonConstructibleClassBindingBase
-CSchemaRegistration
-CSchemaRegistration_host
-CSchemaStrongHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
-CSchemaUtlVectorManipulator<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> >, CBaseConstraint*>
-CSchemaUtlVectorManipulator<CUtlVector<CConstraintSlave, CUtlMemory<CConstraintSlave, int> >, CConstraintSlave>
-CSchemaUtlVectorManipulator<CUtlVector<CConstraintTarget, CUtlMemory<CConstraintTarget, int> >, CConstraintTarget>
-CSchemaUtlVectorManipulator<CUtlVector<CHitBox, CUtlMemory<CHitBox, int> >, CHitBox>
-CSchemaUtlVectorManipulator<CUtlVector<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >, CHitBoxSet>
-CSchemaUtlVectorManipulator<CUtlVector<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >, CMaterialDrawDescriptor>
-CSchemaUtlVectorManipulator<CUtlVector<CPhysSurfaceProperties*, CUtlMemory<CPhysSurfaceProperties*, int> >, CPhysSurfaceProperties*>
-CSchemaUtlVectorManipulator<CUtlVector<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> >, RenderSkeletonBone_t>
-CSchemaUtlVectorManipulator<CUtlVector<int, CUtlMemory<int, int> >, int>
-CSchemaUtlVectorManipulator<CUtlVectorFixedGrowable<CSceneObjectData, 1ul>, CSceneObjectData>
-CSchemaVisitorInfoMapBase
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeAnimationGroupResourceData_t>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCModel>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCPhysAggregateData>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCRenderMesh>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeCTextureBase>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeIMaterial2>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeMorphSetData_t>
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeSequenceGroupResourceData_t>
-CSource2HostBase
 CStrongHandle
-CTestGameSystem
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IDebugDrawQueueMgr>
-CTier0AppSystem<IDotaMapUtils>
-CTier0AppSystem<IGameModelInfo>
-CTier0AppSystem<IGameSystem2HostHook>
-CTier0AppSystem<IHostUtils>
-CTier0AppSystem<IPredictionDiffMgr>
-CTier0AppSystem<ISaveRestoreDataMgr>
-CTier0AppSystem<ISource2Host>
-CTier1AppSystem<IDebugDrawQueueMgr, 0>
-CTier1AppSystem<IDotaMapUtils, 0>
-CTier1AppSystem<IGameModelInfo, 0>
-CTier1AppSystem<IGameSystem2HostHook, 0>
-CTier1AppSystem<IHostUtils, 0>
-CTier1AppSystem<IPredictionDiffMgr, 0>
-CTier1AppSystem<ISaveRestoreDataMgr, 0>
-CTier1AppSystem<ISource2Host, 0>
-CTier2AppSystem<IDebugDrawQueueMgr, 0>
-CTier2AppSystem<IDotaMapUtils, 0>
-CTier2AppSystem<IGameModelInfo, 0>
-CTier2AppSystem<IGameSystem2HostHook, 0>
-CTier2AppSystem<IHostUtils, 0>
-CTier2AppSystem<IPredictionDiffMgr, 0>
-CTier2AppSystem<ISaveRestoreDataMgr, 0>
-CTier2AppSystem<ISource2Host, 0>
-CTier3AppSystem<IDebugDrawQueueMgr, 0>
-CTier3AppSystem<IDotaMapUtils, 0>
-CTier3AppSystem<IGameModelInfo, 0>
-CTier3AppSystem<IGameSystem2HostHook, 0>
-CTier3AppSystem<IHostUtils, 0>
-CTier3AppSystem<IPredictionDiffMgr, 0>
-CTier3AppSystem<ISaveRestoreDataMgr, 0>
-CTier3AppSystem<ISource2Host, 0>
 CTiltTwistConstraint
 CTransform
 CTransform CBaseConstraint::ComputeTargetTransform(const CModel *, const matrix3x4a_t *) const
@@ -1526,9 +1579,9 @@ CUtlVectorFixedGrowable
 CVPhysXSurfacePropertiesList
 CWeakHandle
 CX[A^]
-Can'unsigned short 
-Can'unsigned short get here.
-Can'unsigned short get here: failed to get default value as string
+Can't 
+Can't get here.
+Can't get here: failed to get default value as string
 Cannot allocate abstract class
 Cannot allocate buffer larger than kint32max for 
 Cannot construct abstract class
@@ -1541,11 +1594,9 @@ CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
 ClearField
 Collision Group Hash
 Color
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
-Conditional Error: %short
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
+Conditional Error: %s
 ConfigurationSystem_001
 ConstraintSlave_t
 ConstraintTarget_t
@@ -1554,7 +1605,7 @@ Construction is only allowed from the resolve function
 Could not create an instance of 
 Could not find field named "
 Could not find field type.
-Couldn'unsigned short parse default value "
+Couldn't parse default value "
 Count
 Cp[A^]
 CreateInterface
@@ -1595,7 +1646,7 @@ DmeSurfacePhysicsParams
 Do Not Cast Shadows
 DotaCardGameClient_001
 DotaMapUtils001
-Double-save to Member '%short'
+Double-save to Member '%s'
 E(IcL$,H
 E(fff.
 E,IcE(
@@ -1603,11 +1654,11 @@ E9l$(
 E9t9@
 E9t9T
 E9w0M
-E;__float128 A
-E;__int128 ~0
-E;float(A
+E;f(A
+E;g A
 E;g8|
 E;gHu
+E;n ~0
 E;p,|
 E;q(u
 E;~ A
@@ -1625,7 +1676,7 @@ E\IcEX
 E`H9B
 EconItemToolModel_001
 Empty VB array found for this draw descriptor
-Encountered too many releases for resource "%short"
+Encountered too many releases for resource "%s"
 End-of-file inside block comment.
 EngineLoopState_t
 EngineServiceMgr001
@@ -1677,7 +1728,7 @@ EventSimulate_t
 EventSplitScreenStateChanged_t
 EventSystem001
 Exceeded max number of actors in scripts/global_actors.txt
-Expect signed char decimal number.
+Expect a decimal number.
 Expected "
 Expected double.
 Expected eight hex digits up to 10ffff for \U escape sequence
@@ -1689,7 +1740,7 @@ Expected integer.
 Expected string.
 Extension "
 Extension conflicts with extension already in database: extend 
-Extension factory'short GetPrototype() returned NULL for extension: 
+Extension factory's GetPrototype() returned NULL for extension: 
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Extension number $0 has already been used in "$1" by extension "$2".
 Extension numbers cannot be greater than $0.
@@ -1699,7 +1750,7 @@ Extension range $0 to $1 overlaps with already-defined range $2 to $3.
 Extension range end number must be greater than start number.
 ExtensionRange
 Extensions of MessageSets must be optional messages.
-Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend signed char non-lite type to contain signed char lite type, but the reverse is allowed.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 F Hcz 1
 F [A^]
 F$Hcz$1
@@ -1707,8 +1758,8 @@ F$IcF
 F$fffff.
 F(@t3H
 F(Hcz(1
-F(L;long double
-F(L;unsigned long
+F(L;e
+F(L;m
 F([A^]
 F,Hcz,1
 F,IcF(
@@ -1728,17 +1779,17 @@ FLEXCONTROLLER_REMAP_PASSTHRU
 FL[A^]
 FPHczP1
 F\IcFX
+Fade Max Distance
+Fade Min Distance
 Fade Time
-Fade __int128 int::* Distance
-Fade long long signed char::* Distance
-Failed to allocate an instance of class '%short'
-Failed to find transfer interface %double (%short)
+Failed to allocate an instance of class '%s'
+Failed to find transfer interface %d (%s)
 Failed to save unsupported class
 False
 Field "
 Field does not match message type.
-Field is repeated; the method requires signed char singular field.
-Field is singular; the method requires signed char repeated field.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
 Field number $0 has already been used in "$1" by field "$2".
 Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
 Field numbers cannot be greater than $0.
@@ -1754,7 +1805,7 @@ FieldOptions
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File already exists in database: 
-File appears to be in generated pool but wasn'unsigned short registered: 
+File appears to be in generated pool but wasn't registered: 
 File is already registered: 
 File recursively imports itself: 
 FileDescriptorProto
@@ -1770,7 +1821,7 @@ FlexController_t
 FlexDesc_t
 FlexOp_t
 FlexRule_t
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Fp[A^]
@@ -1780,20 +1831,20 @@ FtIcFp
 Ft[A^]
 G Ic4
 G(HcH
-G(L;unsigned long
+G(L;m
 G8H	p(]
 G@H+x0H
 G@L+x0I
 GAMECONSOLE
 G`[A\A^A_]
-Game System %short is defined twice!
+Game System %s is defined twice!
 GameModelInfoClient001
 GameModelInfoServer001
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameSystem2HostHook
 GameUIService_001
-GetAsNumeric() - unsupported type '%double'!
+GetAsNumeric() - unsupported type '%d'!
 GetBool
 GetDouble
 GetEmptyStringAlreadyInited
@@ -1823,7 +1874,7 @@ GetUInt64
 GhHcWhD
 H	p(]
 H H;9u)H
-H!wchar_t(]
+H!w(]
 H+A0H
 H+A0I
 H+A0L
@@ -1847,20 +1898,20 @@ H+V0H
 H+X0H
 H+X@H
 H+Y@H
-H+long long@H
 H+p@H
 H+q0H
 H+q@H
-H+wchar_t@H
+H+w@H
+H+x@H
 H+{@H
 H9A@u
 H9GXt
-H9J short
+H9J s
 H9VXt%H
 H9_@u
-H9{@unsigned short
-H;C`unsigned short
-H;H short
+H9{@t
+H;C`t
+H;H s
 HIGHDPI
 HKeySymbol KeyValues::GetNameSymbol() const
 HKeySymbol KeyValues::GetNameSymbolCaseSensitive() const
@@ -1883,7 +1934,7 @@ HcO,I
 Hc_(H
 Hcw(H
 Health
-Height map file (%short) not found, this will make ground height traces more expensive! Recompile the map to generate signed char height map.
+Height map file (%s) not found, this will make ground height traces more expensive! Recompile the map to generate a height map.
 HelpSystem_001
 Hex and octal numbers must be integers.
 Hfffff.
@@ -1900,38 +1951,11 @@ I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable:
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I9FXt H
-I9}@unsigned short
-IAppSystemcomplex 
-IAtomicManipulator
-IBaseSequence
-IConCommandBaseAccessor
-IConVar
-IDebugDrawQueueMgr
-IDotaMapUtils
-IGameModelInfo
-IGameSystem
-IGameSystem2HostHook
+I9}@t
 IGameSystem::Init( %-80s ) %8.3f msec
 IGameSystem::PostInit( %-80s ) %8.3f msec
-IGameSystemEventDispatcher
-IGameSystemFactory
-IHostUtils
-IKeyValuesErrorSpew
-ILoopMode
-ILoopModeFactory
 INVALID_CPPTYPE
-IPredictionDiffMgr
-IPrerequisite
 IQuickTime001
-ISaveRestoreDataMgr
-ISchemaBinding
-ISchemaCollectionManipulator
-ISchemaInspectionManipulator
-ISchemaManipulator
-ISequence
-ISource2Host
-IVSSequence
-IVTableIndexCalculator
 IcD$(A
 IcD$,H
 IcD$,L
@@ -2028,10 +2052,10 @@ IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
 K(Ict$,L
 K8;C<
-K8;C<}int
+K8;C<}i
 K8;C<}p
-K8;C<}short
-K8;C<}unsigned short
+K8;C<}s
+K8;C<}t
 K8;C<}}
 KHIcT$,L
 KH[A^]
@@ -2041,13 +2065,13 @@ KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetNextKey() const
-KeyValues Error: %short in file %short
+KeyValues Error: %s in file %s
 KeyValues3 *CKeyValues3Table::MemberData(int)
 KeyValues3 *KeyValues3::FindOrCreateMember(CKV3MemberName, bool *)
 KeyValues3 *KeyValues3::GetArrayElement(int)
-KeyValues3::GetElement - Bad index %double (count = %double)
+KeyValues3::GetElement - Bad index %d (count = %d)
 KeyValues::FindKey called on NULL pointer!
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 Kfff.
 L$ Hc
 L$ Hc<
@@ -2065,7 +2089,7 @@ LITE_RUNTIME
 LOWVIOLENCE
 Label
 LcO,D
-LoadFromBuffer: expected '{', found '%short'
+LoadFromBuffer: expected '{', found '%s'
 Localize_001
 Location
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
@@ -2107,6 +2131,9 @@ MaterialDrawDescriptor_t
 MaterialGroup_t
 MaterialUtils_001
 McG,M
+Mcg I
+Mco I
+Mcw(L
 Mc~ I
 Member function called on NULL KeyValues
 MeshDrawPrimitiveFlags_t
@@ -2118,8 +2145,8 @@ Message missing required fields:
 Message type "
 MessageOptions
 MessageSets cannot have fields, only extensions.
-Messages can'unsigned short have default values!
-Messages can'unsigned short have default values.
+Messages can't have default values!
+Messages can't have default values.
 MethodDescriptorProto
 MethodOptions
 Mffff.
@@ -2175,6 +2202,9 @@ N(Hcz(1
 N,Hcz,1
 N0HcSPH
 N0Hcz01
+N24CFieldPathHuffmanEncoder12InternalNodeE
+N24CFieldPathHuffmanEncoder5INodeE
+N24CFieldPathHuffmanEncoder8LeafNodeE
 N4Hcz41
 N8Hcz81
 N@H+q0H
@@ -2225,7 +2255,7 @@ No VBs found for this draw descriptor
 No default value
 No field named "uninterpreted_option" in the Options proto.
 No value found when unserializing key/value pairs for utldict
-Non-primitive types can'unsigned short be packed.
+Non-primitive types can't be packed.
 Non-repeated field "
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NpJcL
@@ -2243,11 +2273,11 @@ OneofDescriptorProto
 OptimizeMode
 Option "
 Option field "
-Option must have signed char name.
+Option must have a name.
 Option must not use reserved name "uninterpreted_option".
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 P P@@ 
 P(;Q(}_H
 P(;Q(}pI
@@ -2320,7 +2350,7 @@ RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 Release
 ReleaseLast
 ReleaseMessage
@@ -2341,7 +2371,7 @@ RenderSkeletonData_t::FLAG_BLEND_WEIGHT_COUNT_SHIFT
 RenderSkeletonData_t::FlagEnum_t
 RenderSystemSurface001
 RenderUtils_001
-Repeated fields can'unsigned short have default values.
+Repeated fields can't have default values.
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
@@ -2429,7 +2459,7 @@ StringOutputStream.
 Surface Prop Hash
 SurfacePropertiesList
 Symbol name "
-System %short failed to init
+System %s failed to init
 T &CUtlStringMap<IGameSystem::FactoryInfo_t, CUtlSymbolTable>::operator[](UtlSymId_t) [T = IGameSystem::FactoryInfo_t, SymbolTableType_t = CUtlSymbolTable]
 T KeyValues3::GetValueAsNumeric() const [T = float]
 T KeyValues3::GetValueAsNumeric() const [T = int]
@@ -2486,10 +2516,10 @@ TestScriptMgr001
 TextLayout_001
 TextMessageMgr_001
 The total number of bytes read was 
-This ZeroCopyOutputStream doesn'unsigned short support aliasing. Reaching here usually means signed char ZeroCopyOutputStream implementation bug.
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This program requires version 
 This program was compiled against version 
-This shouldn'unsigned short be called if all the sizes are equal.
+This shouldn't be called if all the sizes are equal.
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -2498,11 +2528,11 @@ ToolScriptManager001
 ToolService_001
 TransferPostLoadFn
 TransferPostSaveFn
-Tree map file (%short) does not exist or is invalid. This will cause issues with remote clients picking trees correctly.
-Tried to load signed char polymorphic pointer with no '%short' key
+Tree map file (%s) does not exist or is invalid. This will cause issues with remote clients picking trees correctly.
+Tried to load a polymorphic pointer with no '%s' key
 Tried to merge messages of different types 
-Tried to register signed char non-generated type with the generated type registry.
-Type appears to be in generated pool but wasn'unsigned short 
+Tried to register a non-generated type with the generated type registry.
+Type appears to be in generated pool but wasn't 
 Type is already registered: 
 TypeManager
 U8A;M<
@@ -2513,9 +2543,9 @@ Unexpected end of string.
 Unexpected failure while serializing option submessage 
 Unimplemented type: 
 UninterpretedOption
-Unknown KV3 type '%double'.
+Unknown KV3 type '%d'.
 Unknown enumeration value of "
-Unrecognizd V1 mesh flag '%short'
+Unrecognizd V1 mesh flag '%s'
 UserInfoChangeService_001
 UtlHashHandle_t CUtlHash<BoneHashPairing_t, bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), unsigned int (*)(const BoneHashPairing_t &)>::BuildHandle(int, int) const [Data = BoneHashPairing_t, C = bool (*)(const BoneHashPairing_t &, const BoneHashPairing_t &), K = unsigned int (*)(const BoneHashPairing_t &)]
 VApplication001
@@ -2600,19 +2630,19 @@ Vector4D
 VisBuilder_001
 VpropBreakablePartData_t
 WARNING
-WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
-WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
+WARNING: Trying to access schema binding '%s' before bindings were registered in this module!
+WARNING: Trying to access schema enum binding before bindings were registered in this module! - %s()
 WAXBXBRBRBRE`
 WIN32
 WINDOWS
 WINXP
 Warning parsing text-format 
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 Warning: Unused import: "
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
-Wrong alignment %double
+Wrong alignment %d
 X2:jH
 X2:jL
 XBRAp
@@ -2632,13 +2662,13 @@ Yfffff.
 [PE9eX
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
-[unsigned short,fD
+[t,fD
 \$0E1
 \$HHc
 \%03o
 \U%08x
-\long long%02x
 \uRMc
+\x%02x
 ^(HcC
 ^LA+^H~jI
 ^V_TY
@@ -2732,10 +2762,8 @@ __common
 __const
 __cstring
 __data
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
-__int128 < m_Vector.Count()
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -2783,11 +2811,11 @@ _wcslen
 `0A9](
 `@fffff.
 `PA9^X
-`PD9{unsigned char
+`PD9{h
 `[A\A^A_]
 `[A^]
 ``A9^p
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 addons
 aggregate_value
 allactors
@@ -2822,9 +2850,9 @@ bulletimpact
 byte *CKV3TransferBlockAllocator::AllocBlockBytes(int, uintp)
 bytes
 bytes. 
+c(E9~(
+c(ffff.
 cc_generic_services
-char(E9~(
-char(ffff.
 climbable
 command
 const char *CKeyValues_Data::Internal_GetString(const char *, char *, size_t)
@@ -2835,6 +2863,7 @@ count >= 0
 creationsequence
 ctype
 cvars
+d+ D9
 dampening
 dat->m_pPeer == NULL
 default_value
@@ -2847,7 +2876,6 @@ diffcheck_playerslot
 diffcheck_spew
 dota_use_heightmap
 double
-double+ D9
 double_value
 down_cast
 dyld_stub_binder
@@ -2864,7 +2892,9 @@ experimental_map_key
 extend .$0 {
 extendee
 extension_range
+f == NULL || dynamic_cast<To>(f) != NULL
 f0D9{(
+f@LcV(H
 fPD9sh
 fakeplayer
 false
@@ -2878,8 +2908,6 @@ fixed32
 fixed64
 flags
 float
-float == NULL || dynamic_cast<To>(float) != NULL
-float@LcV(H
 friction
 g_pCVar
 g_pResourceHandleUtils
@@ -2893,6 +2921,8 @@ gfffffffH
 gfffffffL
 go_package
 group
+h[A\A]A^A_]
+h[A^A_]
 hex_digit_to_int
 hfff.
 hffff.
@@ -2900,6 +2930,7 @@ host_computationtime
 host_frametime
 host_frametime_std_deviation
 hostname
+i >= 0
 iBitsRight > 0
 identifier_value
 ifff.
@@ -2910,7 +2941,6 @@ impactsoft
 in1 != out
 infinity
 input_type
-int >= 0
 int CDisjointSetForest::Find(int)
 int CUtlString::FormatV(const char *, __va_list_tag *)
 int _V_strncmp(const char *, const char *, int)
@@ -2925,7 +2955,7 @@ is_localonly
 is_multiplayer
 is_transition
 ishltv
-isxdigit(char)
+isxdigit(c)
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
@@ -2935,6 +2965,7 @@ java_string_check_utf8
 jumpfactor
 key_t
 kffffff.
+l'@L;
 label
 landmarkname
 leading_comments
@@ -2943,11 +2974,6 @@ libhost.dylib
 localToGlobal
 localnamefixup
 location
-long long	IcO
-long long,@H>
-long long[A\A]A^A_]
-long long[A^A_]
-long'@L;
 m_Capsules
 m_CollisionAttributeIndices
 m_CollisionGroup
@@ -3147,7 +3173,7 @@ m_linearLimitRestitution
 m_linearLimitSpring
 m_linearLimitValue
 m_lodGroupSwitchDistances
-m_mapData.IsValidHandle( unsigned char )
+m_mapData.IsValidHandle( h )
 m_material
 m_materialGroups
 m_materials
@@ -3341,10 +3367,10 @@ m_walkStepRight
 magnitudeSqr
 manifestincomplete
 manifestloadpriority
-map key must name signed char scalar or string field.
-map type is only allowed for fields with signed char message type.
+map key must name a scalar or string field.
+map type is only allowed for fields with a message type.
 map type is only allowed for repeated fields.
-map_key must not name signed char repeated field.
+map_key must not name a repeated field.
 map_name
 maps/%s.trm
 maps/%s.vhcg
@@ -3367,6 +3393,7 @@ modellib
 msg_data
 msg_type
 multiplayerBreak_t
+n < m_Vector.Count()
 nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nAxis >= X_AXIS && nAxis <= Z_AXIS
@@ -3443,7 +3470,7 @@ pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
 pLoadFromValue != NULL
 pMapData->m_nRefCount > 0
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pPolymorphicClassName && pPolymorphicClassName[0] != '\0'
 pPool->m_SpaceUsed < 0xFFFF
@@ -3476,7 +3503,7 @@ position
 positive_int_value
 pppp 
 ppppP
-prerequisite '%short'
+prerequisite '%s'
 previouslevel
 pthread_mutex_lock: 
 pthread_mutex_unlock: 
@@ -3490,7 +3517,7 @@ q(;r(}$I
 q(;r(}6I
 q(;r(};H
 q(;r(}XH
-q(;wchar_t(H
+q(;w(H
 q.IsValid()
 qt.IsValid()
 r5fffff.
@@ -3505,6 +3532,8 @@ resourceName
 rolling
 runleft
 runright
+s(IcT$
+s(w&H
 s1_mapname
 s8[A\A^A_]
 sHw&H
@@ -3514,6 +3543,7 @@ s_nDLLIdentifier >= 0
 s_nGameConnectionCount > 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
+s`E9up
 savegamefilename
 savegamename
 scrapeRoughThreshold
@@ -3531,9 +3561,6 @@ set_type
 sfffff.
 sfixed32
 sfixed64
-short(IcT$
-short(wchar_t&H
-short`E9up
 signon_state
 sint32
 sint64
@@ -3719,10 +3746,24 @@ strings::Substitute format string invalid: asked for "$
 strnlen
 subtype mismatch
 surfacePropertyName
+t	[A^]
 t$ H9
 t$(H9
 t$0H9
 t$@H9
+t&H9[8tUH
+t&ff.
+t&fffff.
+t'IcO,I
+t+Hc{
+t+Hc{ H
+t+Hc{(H
+t+Hc{,H
+t+Ic~8H
+t+Ic~TH
+t+fff.
+t-IcG,L
+t-L9`
 t.Ic~ H
 t.Ic~$H
 t.Ic~(H
@@ -3744,10 +3785,13 @@ t7IcT$,L
 t80E1
 t8IcV,L
 t9IcG
+t<IcW,L
+t<fff.
 tEIcD$
 tFIcG,L
 tMff.
 tSff.
+t^fffff.
 text format contains deprecated field "
 tfI9D$Xt_H
 the global scope
@@ -3768,7 +3812,7 @@ u	L9G
 u!H9{
 u%H9y
 u8I9]
-u=...;L
+u=z;L
 u?M9D$
 u?M9G
 uFzDA
@@ -3782,31 +3826,10 @@ uint32
 uint64
 uninterpreted_option
 unknown
-unsigned __int128 char::* I
 unsigned char CGameModelInfoClient::ComputeScreenFade(const Vector &, float, float, const CGameModelInfoClient::ScreenFadeInfo_t &) const
-unsigned char[A\A]A^A_]
-unsigned char[A^A_]
-unsigned short	[A^]
-unsigned short&H9[8tUH
-unsigned short&ff.
-unsigned short&fffff.
-unsigned short'IcO,I
-unsigned short+Hc{
-unsigned short+Hc{ H
-unsigned short+Hc{(H
-unsigned short+Hc{,H
-unsigned short+Ic~8H
-unsigned short+Ic~TH
-unsigned short+fff.
-unsigned short-IcG,L
-unsigned short-L9`
-unsigned short<IcW,L
-unsigned short<fff.
-unsigned short^fffff.
 userid
 usermsgs
 v0[A^]
-vHct
 vXIc}(L
 vX[A^]
 val_bool
@@ -4128,23 +4151,27 @@ vsurf
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
+w(L;m
 walkleft
 walkright
-wchar_t char::*(L
-wchar_t(L;unsigned long
 weak_dependency
 world_offset_angle
 world_offset_pos
 worldgroupid
 wrong submessage type
+x	IcO
+x,@H>
 x8A;D$0}1Ic
 xHHc{
 xHcN(Hk
 xYA9^
+x[A\A]A^A_]
+x[A^A_]
 xqaBCFHTTFFFN
 xyA9^
 yxxxxxxxH
 yxxxxxxxI
+z(;y(H
 |$ H9
 |$ Hc
 |$ M9
@@ -4158,5 +4185,5 @@ yxxxxxxxI
 }	[A\A^A_]
 }HA;EP}
 ~$fffff.
-~(long double char::*(D
+~(Mce(D
 ~fIcM(D

@@ -49,7 +49,7 @@
  HcG(;G,}%H
  HcG(;G,}(H
  Hc_(;_
- Lco(D;unsigned __int128
+ Lco(D;o
  P   
  P@p `0
  PPP`
@@ -62,7 +62,7 @@
  `p `pP@@Pp
  ffffff.
  p```
-!	@icu_52::CalendarAstronomer::AngleFunc
+!	@N6icu_5218CalendarAstronomer9AngleFuncE
 !HcG(;G
 !fff.
 !fffff.
@@ -79,7 +79,7 @@ $fffff.
 %%CollationBin
 %%Parent
 %%ReorderCodes
-%+.*long double
+%+1.*e
 %+1.1f
 %1.15e
 %TransliH
@@ -89,8 +89,8 @@ $fffff.
 %ffffff.
 'fffff.
 'ulE1
-(?unsigned long)^([ \unsigned short]*(?:#.*?)?)$|^(?:\short*([0-9A-F]{4,})(?:..([0-9A-F]{4,}))?\short*;\short*([A-Za-...]+)\short*;\short*([A-Za-...]+)\short*;\short*(?:(A)|(L))[ \unsigned short]*(?:#.*?)?)$|^(.*?)$
-(?unsigned long)^[ \unsigned short]*([0-9A-Fa-float]+)[ \unsigned short]+;[ \unsigned short]*([0-9A-Fa-float]+(?:[ \unsigned short]+[0-9A-Fa-float]+)*)[ \unsigned short]*;\short*(?:(SL)|(SA)|(ML)|(MA))[ \unsigned short]*(?:#.*?)?$|^([ \unsigned short]*(?:#.*?)?)$|^(.*?)$
+(?m)^([ \t]*(?:#.*?)?)$|^(?:\s*([0-9A-F]{4,})(?:..([0-9A-F]{4,}))?\s*;\s*([A-Za-z]+)\s*;\s*([A-Za-z]+)\s*;\s*(?:(A)|(L))[ \t]*(?:#.*?)?)$|^(.*?)$
+(?m)^[ \t]*([0-9A-Fa-f]+)[ \t]+;[ \t]*([0-9A-Fa-f]+(?:[ \t]+[0-9A-Fa-f]+)*)[ \t]*;\s*(?:(SL)|(SA)|(ML)|(MA))[ \t]*(?:#.*?)?$|^([ \t]*(?:#.*?)?)$|^(.*?)$
 (A;\$@|
 (A;\$P|
 (A;\$`|
@@ -122,7 +122,7 @@ $fffff.
 -lanL
 -region
 .fffff.
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/char++/.2.1/typeinfo
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/typeinfo
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/ctype.h
 /Users/buildbot/buildslave/v8_osx/build/third_party/icu/source/i18n/
 /Users/buildbot/buildslave/v8_osx/build/xcodebuild/x64/icu.build/Release/icui18n.build/Objects-normal/x86_64/alphaindex.o
@@ -286,7 +286,7 @@ $fffff.
 /Users/buildbot/buildslave/v8_osx/build/xcodebuild/x64/icu.build/Release/icui18n.build/Objects-normal/x86_64/ztrans.o
 /usr/lib/libSystem.B.dylib
 /usr/lib/libgcc_s.1.dylib
-/usr/lib/libstdc++..dylib
+/usr/lib/libstdc++.6.dylib
 0    
 0     
 0 00@ 0pp
@@ -310,7 +310,7 @@ $fffff.
 0I;wP
 0I;wX
 0I;wx
-0I;wx}H
+0I;wx}1H
 0[A\A^A_]
 0[A^]
 0`0P`
@@ -325,9 +325,11 @@ $fffff.
 2ffffff.
 4$IcT$
 4fffff.
+5ffff.
 6m4A2
 7ffff.
 7fffff.
+7ffffff.
 7w]Ict
 8H+D1
 8H+D10]
@@ -419,7 +421,7 @@ $fffff.
 A+E D
 A+E H
 A+E$D
-A94	unsigned short
+A94	t
 A9L$ u	A
 A9]@~
 A9]D}
@@ -439,7 +441,7 @@ A;^H|
 A;^pr
 A;_H|
 A;_X|
-A;void\}>I
+A;v\}>I
 ANY
 AVSH9
 AWAVATS
@@ -480,7 +482,7 @@ AmPmMarkers
 AuxExemplarCharacters
 BN6icu_5213BasicTimeZoneE
 C toH
-C*unsigned short*H
+C*t*H
 C0;C@
 C0A;F0u
 C0A;F0u/
@@ -492,6 +494,7 @@ C4A;F4
 C4A;F4u*H
 C4A;F4u.
 C4[A^]
+C5latnL
 C8A;F8
 C8A;F8u%
 C8[A^]
@@ -516,6 +519,7 @@ CURRENCY_META
 CURR_ID
 C\[A^]
 C`A;F`uRH
+Ch[A\A^A_]
 Clamped
 Conversion syntax
 Countries
@@ -541,7 +545,7 @@ D$0M+,$I
 D$5latnL
 D$8E1
 D$8Hc
-D$@char32_t
+D$@Di
 D$HE1
 D$XE1
 D$Xi@
@@ -550,18 +554,18 @@ D$huN
 D$lE1
 D$xE)
 D$xE1
-D1@H9|H~
-D1@H9|P}-H)
+D1@H9|1H~
+D1@H9|1P}-H)
 D9x<u
 D;+~}E
 D;Z0}0
 D;Z0}3
 D;c8r
+D;h`|
 D;hp|
 D;k8H
 D;k8u
 D;sdt$H
-D;unsigned char`|
 DATE_STYLES
 DATE_STYLE_IDS
 DEFAULT
@@ -570,7 +574,7 @@ DEFAULT_ZONE
 DIGIT
 DOT_SET
 DateTimePatterns
-Day-float&&-Week
+Day-Of-Week
 Division by zero
 Division impossible
 Division undefined
@@ -605,11 +609,11 @@ ExA;Fx
 ExemplarCharacters
 ExemplarCharactersIndex
 ExemplarCharactersPunctuation
+F*t*I
 F*t0I
 F*t7I
 F*tBI
 F*taI
-F*unsigned short*I
 F,A;F0
 F0I;F(r
 F4A;F8
@@ -622,7 +626,7 @@ G HcH(;H
 G I;Fx
 G I;GXH
 G I;G`~yI
-G I;long longimaginary 
+G I;Gx
 G(M;nxM
 G(fffff.
 G(ffffff.
@@ -645,10 +649,10 @@ GX;FXuc
 G\;F\
 GxH;Axt
 H)B(H
-H+C long long	HcK
+H+C x	HcK
 H+G I
-H+G long long
-H+G long long	HcO
+H+G x
+H+G x	HcO
 H9|1 
 H9|1(}
 H;KXL
@@ -656,7 +660,6 @@ HALF_ENDERS
 HD;J0}:
 H[A\A]A^A_]
 H[A^A_]
-HcG
 HcG(;G
 HcG(;G,
 HcG(;G,}(H
@@ -674,7 +677,7 @@ Hcp,H
 Hcp4H
 HcplH
 HcxlH
-I+D$ long long
+I+D$ x
 I+L$ H
 I+] H
 I9U(rQ
@@ -688,12 +691,12 @@ I;Fx}6
 I;GX}<M
 I;GxL
 I;GxM
+I;Gx|
+I;Gx}3I
 I;N0t0A
 I;Nxt
 I;Nxt+A
 I;Oxu
-I;long longimaginary |
-I;long longimaginary }3I
 IBM420_ltr
 IBM420_rtl
 IBM424_ltr
@@ -762,6 +765,7 @@ K0HcH
 K0fff.
 KEYWORDS
 KOI8-R
+Kd[A\A^A_]
 L$	Ic
 L$ H%
 L$$Ai|$(
@@ -770,7 +774,7 @@ L$@Hc
 L$@fD
 L$tE1
 L$xHi
-L9{long long}	A
+L9{x}	A
 L>	H9
 LAST_RESORT_DATA
 LATIN_PIVOT
@@ -784,7 +788,7 @@ Lc@8I
 Lc`lA
 LcalA
 Lck L
-Lcw(D;wchar_t
+Lcw(D;w
 Lcx8H
 Lcx8L
 LcxhA
@@ -796,7 +800,7 @@ M0I+M H
 M0~+D
 M8fffff.
 M9fhsuA
-M9~long long}
+M9~x}
 M@Hc4
 M@I+M H
 MAP_CANONICAL_SYSTEM_LOCATION_ZONES
@@ -804,6 +808,7 @@ MAP_CANONICAL_SYSTEM_ZONES
 MAP_SYSTEM_ZONES
 MONTH_LENGTH
 MONTH_START
+Mcn M
 Mcu(L
 Mc|$8L
 Mc~0N
@@ -813,6 +818,229 @@ Minute
 Month
 Multiple status
 N0H;H
+N6icu_5210BucketListE
+N6icu_5210CECalendarE
+N6icu_5210DateFormatE
+N6icu_5210GenderInfoE
+N6icu_5210PatternMapE
+N6icu_5210QuantifierE
+N6icu_5211FormattableE
+N6icu_5211MeasureUnitE
+N6icu_5211NGramParserE
+N6icu_5211PluralRulesE
+N6icu_5211PtnSkeletonE
+N6icu_5211TextTrieMapE
+N6icu_5212ChoiceFormatE
+N6icu_5212CollationKeyE
+N6icu_5212CurrencyUnitE
+N6icu_5212DateTimeRuleE
+N6icu_5212DistanceInfoE
+N6icu_5212FormatParserE
+N6icu_5212NumberFormatE
+N6icu_5212OrConstraintE
+N6icu_5212PluralFormat14PluralSelectorE
+N6icu_5212PluralFormat21PluralSelectorAdapterE
+N6icu_5212PluralFormatE
+N6icu_5212RegexCompileE
+N6icu_5212RegexMatcherE
+N6icu_5212RegexPatternE
+N6icu_5212SelectFormatE
+N6icu_5212StringSearchE
+N6icu_5212TimeZoneRuleE
+N6icu_5213AndConstraintE
+N6icu_5213CalendarCacheE
+N6icu_5213DangiCalendarE
+N6icu_5213DecimalFormatE
+N6icu_5213FieldPositionE
+N6icu_5213MeasureFormatE
+N6icu_5213MessageFormat11DummyFormatE
+N6icu_5213MessageFormat22PluralSelectorProviderE
+N6icu_5213MessageFormatE
+N6icu_5213OlsonTimeZoneE
+N6icu_5213StringMatcherE
+N6icu_5213TZEnumerationE
+N6icu_5213TimeZoneNames19MatchInfoCollectionE
+N6icu_5213TimeZoneNamesE
+N6icu_5213UCollationPCEE
+N6icu_5214CopticCalendarE
+N6icu_5214CurrencyAmountE
+N6icu_5214CurrencyFormatE
+N6icu_5214GMTOffsetFieldE
+N6icu_5214HebrewCalendarE
+N6icu_5214IdentifierInfoE
+N6icu_5214IndianCalendarE
+N6icu_5214NFSubstitutionE
+N6icu_5214SearchIteratorE
+N6icu_5214SimpleTimeZoneE
+N6icu_5214StringReplacerE
+N6icu_5214TaiwanCalendarE
+N6icu_5214TimeUnitAmountE
+N6icu_5214TimeUnitFormatE
+N6icu_5214TimeZoneFormatE
+N6icu_5214TransliteratorE
+N6icu_5215AlphabeticIndex14ImmutableIndexE
+N6icu_5215AlphabeticIndex6BucketE
+N6icu_5215AlphabeticIndexE
+N6icu_5215CalendarServiceE
+N6icu_5215ChineseCalendarE
+N6icu_5215CollatorFactoryE
+N6icu_5215DateTimeMatcherE
+N6icu_5215IslamicCalendarE
+N6icu_5215NumberingSystemE
+N6icu_5215PersianCalendarE
+N6icu_5215ReplaceableGlueE
+N6icu_5215SortKeyByteSinkE
+N6icu_5215UnicodeReplacerE
+N6icu_5216BuddhistCalendarE
+N6icu_5216CharsetRecog_eucE
+N6icu_5216DateIntervalInfoE
+N6icu_5216EthiopicCalendarE
+N6icu_5216FunctionReplacerE
+N6icu_5216JapaneseCalendarE
+N6icu_5216LocalizationInfoE
+N6icu_5216NullSubstitutionE
+N6icu_5216PluralRuleParserE
+N6icu_5216RiseSetCoordFuncE
+N6icu_5216SimpleDateFormatE
+N6icu_5216SunTimeAngleFuncE
+N6icu_5217AnyTransliteratorE
+N6icu_5217CharsetRecog_2022E
+N6icu_5217CharsetRecog_UTF8E
+N6icu_5217CharsetRecog_big5E
+N6icu_5217CharsetRecog_mbcsE
+N6icu_5217CharsetRecog_sbcsE
+N6icu_5217CharsetRecog_sjisE
+N6icu_5217CharsetRecognizerE
+N6icu_5217DateFormatSymbolsE
+N6icu_5217GregorianCalendarE
+N6icu_5217MoonTimeAngleFuncE
+N6icu_5217RuleBasedCollatorE
+N6icu_5217RuleBasedTimeZoneE
+N6icu_5217TimeZoneNamesImplE
+N6icu_5218AnnualTimeZoneRuleE
+N6icu_5218CalendarAstronomer9CoordFuncE
+N6icu_5218CurrencyPluralInfoE
+N6icu_5218DateIntervalFormatE
+N6icu_5218GNameSearchHandlerE
+N6icu_5218ICUCollatorFactoryE
+N6icu_5218ICUCollatorServiceE
+N6icu_5218LocaleDisplayNamesE
+N6icu_5218NGramParser_IBM420E
+N6icu_5218NullTransliteratorE
+N6icu_5218PatternMapIteratorE
+N6icu_5218RelativeDateFormatE
+N6icu_5218TimeZoneTransitionE
+N6icu_5218ZNameSearchHandlerE
+N6icu_5218ZoneIdMatchHandlerE
+N6icu_5219BreakTransliteratorE
+N6icu_5219CharsetRecog_2022CNE
+N6icu_5219CharsetRecog_2022JPE
+N6icu_5219CharsetRecog_2022KRE
+N6icu_5219CharsetRecog_8859_1E
+N6icu_5219CharsetRecog_8859_2E
+N6icu_5219CharsetRecog_8859_5E
+N6icu_5219CharsetRecog_8859_6E
+N6icu_5219CharsetRecog_8859_7E
+N6icu_5219CharsetRecog_8859_8E
+N6icu_5219CharsetRecog_8859_9E
+N6icu_5219CharsetRecog_KOI8_RE
+N6icu_5219CharsetRecog_UTF_32E
+N6icu_5219CharsetRecog_euc_jpE
+N6icu_5219CharsetRecog_euc_krE
+N6icu_5219InitialTimeZoneRuleE
+N6icu_5219ModulusSubstitutionE
+N6icu_5219NumberFormatFactoryE
+N6icu_5219TransliterationRuleE
+N6icu_5220BasicCalendarFactoryE
+N6icu_5220CharsetRecog_UnicodeE
+N6icu_5220CollationKeyByteSinkE
+N6icu_5220CompactDecimalFormatE
+N6icu_5220DecimalFormatSymbolsE
+N6icu_5220EscapeTransliteratorE
+N6icu_5220FieldPositionHandlerE
+N6icu_5220FixedSortKeyByteSinkE
+N6icu_5220MoonRiseSetCoordFuncE
+N6icu_5220RemoveTransliteratorE
+N6icu_5220TimeZoneGenericNamesE
+N6icu_5221CaseMapTransliteratorE
+N6icu_5221CharsetRecog_gb_18030E
+N6icu_5221DTSkeletonEnumerationE
+N6icu_5221FieldPositionIteratorE
+N6icu_5221FormatNameEnumerationE
+N6icu_5221NumeratorSubstitutionE
+N6icu_5221NumsysNameEnumerationE
+N6icu_5221RegionNameEnumerationE
+N6icu_5221RuleBasedNumberFormatE
+N6icu_5221SameValueSubstitutionE
+N6icu_5221TimeArrayTimeZoneRuleE
+N6icu_5221TimeZoneNamesDelegateE
+N6icu_5222CharsetRecog_8859_5_ruE
+N6icu_5222CharsetRecog_8859_6_arE
+N6icu_5222CharsetRecog_8859_7_elE
+N6icu_5222CharsetRecog_8859_8_heE
+N6icu_5222CharsetRecog_8859_9_trE
+N6icu_5222CharsetRecog_IBM420_arE
+N6icu_5222CharsetRecog_IBM424_heE
+N6icu_5222CharsetRecog_UTF_16_BEE
+N6icu_5222CharsetRecog_UTF_16_LEE
+N6icu_5222CharsetRecog_UTF_32_BEE
+N6icu_5222CharsetRecog_UTF_32_LEE
+N6icu_5222CompoundTransliteratorE
+N6icu_5222DTRedundantEnumerationE
+N6icu_5222DefaultCalendarFactoryE
+N6icu_5222ICUNumberFormatFactoryE
+N6icu_5222ICUNumberFormatServiceE
+N6icu_5222LocaleDisplayNamesImplE
+N6icu_5222MetaZoneIDsEnumerationE
+N6icu_5222MultiplierSubstitutionE
+N6icu_5222StringLocalizationInfoE
+N6icu_5222TransliterationRuleSetE
+N6icu_5222TransliteratorRegistry11EnumerationE
+N6icu_5222UnescapeTransliteratorE
+N6icu_5223LowercaseTransliteratorE
+N6icu_5223RuleBasedTransliteratorE
+N6icu_5223TitlecaseTransliteratorE
+N6icu_5223UppercaseTransliteratorE
+N6icu_5224CharsetRecog_8859_8_I_heE
+N6icu_5224CollationElementIteratorE
+N6icu_5224DateTimePatternGeneratorE
+N6icu_5224FieldPositionOnlyHandlerE
+N6icu_5224IntegralPartSubstitutionE
+N6icu_5224PluralKeywordEnumerationE
+N6icu_5225AbsoluteValueSubstitutionE
+N6icu_5225CharsetRecog_windows_1251E
+N6icu_5225CharsetRecog_windows_1256E
+N6icu_5225NameUnicodeTransliteratorE
+N6icu_5225SimpleNumberFormatFactoryE
+N6icu_5225UnicodeNameTransliteratorE
+N6icu_5226CharsetRecog_IBM420_ar_ltrE
+N6icu_5226CharsetRecog_IBM420_ar_rtlE
+N6icu_5226CharsetRecog_IBM424_he_ltrE
+N6icu_5226CharsetRecog_IBM424_he_rtlE
+N6icu_5226FractionalPartSubstitutionE
+N6icu_5227NormalizationTransliteratorE
+N6icu_5228FieldPositionIteratorHandlerE
+N6icu_5230CollationLocaleListEnumerationE
+N6icu_5230TextTrieMapSearchResultHandlerE
+N6icu_5233PluralAvailableLocalesEnumerationE
+N6icu_526FormatE
+N6icu_526RegionE
+N6icu_526ZNamesE
+N6icu_527MeasureE
+N6icu_527PtnElemE
+N6icu_527TZNamesE
+N6icu_527UMemoryE
+N6icu_528CFactoryE
+N6icu_528CalendarE
+N6icu_528CollatorE
+N6icu_528TZGNCoreE
+N6icu_528TimeUnitE
+N6icu_528TimeZoneE
+N6icu_529NFFactoryE
+N6icu_529ParseDataE
+N6icu_529RuleChainE
+N6icu_529SpoofImplE
+N6icu_529VTimeZoneE
 N@I+N H
 NULL_ID
 NULL_STRING
@@ -911,7 +1139,7 @@ WORLD
 X(HcS
 X[A\A]A^A_]
 X[A^A_]
-XhE;long double
+XhE;e
 Zones
 [A\A]A^A_]
 [A\A^A_]
@@ -934,7 +1162,7 @@ Zones
 ]HH= 
 ]rPHc
 _ D;u
-_ I;long long
+_ I;_x
 _DECPOWERS
 _GMT
 _LNnn
@@ -958,9 +1186,7 @@ __data
 __dyld
 __dyld_func_lookup
 __eh_frame
-__float128@[A\A^A_]
 __got
-__int128 char::* M
 __la_symbol_ptr
 __stub_helper
 __stubs
@@ -1991,6 +2217,7 @@ bocsu.cpp
 brktrans.cpp
 buddhcal.cpp
 buddhist
+c@D+c<I
 cPD+cLI
 calendar
 calendar.cpp
@@ -2006,7 +2233,6 @@ casetrn.cpp
 ccLock
 cdf_cleanup()
 cecal.cpp
-char@D+char<I
 charsetMatchComparator(void const*, void const*, void const*)
 chinese
 chnsecal.cpp
@@ -2065,7 +2291,7 @@ dayNames
 dayperiod
 dcfmtsym.cpp
 decContext.c
-decNumber .61
+decNumber 3.61
 decNumber.c
 decfmtst.cpp
 decimal
@@ -2086,8 +2312,6 @@ delimiters
 didInit
 digitlst.cpp
 direction
-double const[A\A^A_]
-double|9Hi
 dtfmtsym.cpp
 dtitvfmt.cpp
 dtitvinf.cpp
@@ -2095,6 +2319,7 @@ dtptngen.cpp
 dtrule.cpp
 duration
 dyld_stub_binding_helper
+d|9Hi
 enumClose(UEnumeration*)
 enumCount(UEnumeration*, UErrorCode*)
 enumNext(UEnumeration*, int*, UErrorCode*)
@@ -2133,6 +2358,7 @@ fphdlimp.cpp
 fpositer.cpp
 frenchSub
 funcrepl.cpp
+g@[A\A^A_]
 gAvailableLocaleListInitOnce
 gCRegHead
 gCRegLock
@@ -2236,6 +2462,8 @@ gregoimp.cpp
 gregorian
 group
 grouping
+h[A\A]A^A_]
+h[A^A_]
 hebrew
 hebrwcal.cpp
 hourFormat
@@ -2247,7 +2475,6 @@ icu_52::ALT_GMT_STRINGS
 icu_52::ANY
 icu_52::ANY_NULL
 icu_52::ARG0
-icu_52::AbsoluteValueSubstitution
 icu_52::AbsoluteValueSubstitution::calcUpperBound(double) const
 icu_52::AbsoluteValueSubstitution::composeRuleValue(double, double) const
 icu_52::AbsoluteValueSubstitution::getDynamicClassID() const
@@ -2257,13 +2484,10 @@ icu_52::AbsoluteValueSubstitution::tokenChar() const
 icu_52::AbsoluteValueSubstitution::transformNumber(double) const
 icu_52::AbsoluteValueSubstitution::transformNumber(long long) const
 icu_52::AbsoluteValueSubstitution::~AbsoluteValueSubstitution()
-icu_52::AlphabeticIndex
 icu_52::AlphabeticIndex::AlphabeticIndex(icu_52::Locale const&, UErrorCode&)
 icu_52::AlphabeticIndex::AlphabeticIndex(icu_52::RuleBasedCollator*, UErrorCode&)
-icu_52::AlphabeticIndex::Bucket
 icu_52::AlphabeticIndex::Bucket::Bucket(icu_52::UnicodeString const&, icu_52::UnicodeString const&, UAlphabeticIndexLabelType)
 icu_52::AlphabeticIndex::Bucket::~Bucket()
-icu_52::AlphabeticIndex::ImmutableIndex
 icu_52::AlphabeticIndex::ImmutableIndex::getBucket(int) const
 icu_52::AlphabeticIndex::ImmutableIndex::getBucketCount() const
 icu_52::AlphabeticIndex::ImmutableIndex::getBucketIndex(icu_52::UnicodeString const&, UErrorCode&) const
@@ -2310,13 +2534,11 @@ icu_52::AlphabeticIndex::setMaxLabelCount(int, UErrorCode&)
 icu_52::AlphabeticIndex::setOverflowLabel(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::AlphabeticIndex::setUnderflowLabel(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::AlphabeticIndex::~AlphabeticIndex()
-icu_52::AndConstraint
 icu_52::AndConstraint::AndConstraint()
 icu_52::AndConstraint::AndConstraint(icu_52::AndConstraint const&)
 icu_52::AndConstraint::add()
 icu_52::AndConstraint::isFulfilled(icu_52::FixedDecimal const&)
 icu_52::AndConstraint::~AndConstraint()
-icu_52::AnnualTimeZoneRule
 icu_52::AnnualTimeZoneRule::AnnualTimeZoneRule(icu_52::AnnualTimeZoneRule const&)
 icu_52::AnnualTimeZoneRule::AnnualTimeZoneRule(icu_52::UnicodeString const&, int, int, icu_52::DateTimeRule const&, int, int)
 icu_52::AnnualTimeZoneRule::AnnualTimeZoneRule(icu_52::UnicodeString const&, int, int, icu_52::DateTimeRule*, int, int)
@@ -2338,7 +2560,6 @@ icu_52::AnnualTimeZoneRule::operator!=(icu_52::TimeZoneRule const&) const
 icu_52::AnnualTimeZoneRule::operator=(icu_52::AnnualTimeZoneRule const&)
 icu_52::AnnualTimeZoneRule::operator==(icu_52::TimeZoneRule const&) const
 icu_52::AnnualTimeZoneRule::~AnnualTimeZoneRule()
-icu_52::AnyTransliterator
 icu_52::AnyTransliterator::AnyTransliterator(icu_52::AnyTransliterator const&)
 icu_52::AnyTransliterator::AnyTransliterator(icu_52::UnicodeString const&, icu_52::UnicodeString const&, icu_52::UnicodeString const&, UScriptCode, UErrorCode&)
 icu_52::AnyTransliterator::clone() const
@@ -2354,7 +2575,6 @@ icu_52::ArgExtractor::ArgExtractor(icu_52::NumberFormat const&, icu_52::Formatta
 icu_52::ArgExtractor::~ArgExtractor()
 icu_52::BS_U
 icu_52::BS_u
-icu_52::BasicCalendarFactory
 icu_52::BasicCalendarFactory::create(icu_52::ICUServiceKey const&, icu_52::ICUService const*, UErrorCode&) const
 icu_52::BasicCalendarFactory::updateVisibleIDs(icu_52::Hashtable&, UErrorCode&) const
 icu_52::BasicCalendarFactory::~BasicCalendarFactory()
@@ -2367,7 +2587,6 @@ icu_52::BasicTimeZone::getTimeZoneRulesAfter(double, icu_52::InitialTimeZoneRule
 icu_52::BasicTimeZone::hasEquivalentTransitions(icu_52::BasicTimeZone const&, double, double, signed char, UErrorCode&) const
 icu_52::BasicTimeZone::~BasicTimeZone()
 icu_52::BreakIterator::createWordInstance(icu_52::Locale const&, UErrorCode&)
-icu_52::BreakTransliterator
 icu_52::BreakTransliterator::BreakTransliterator(icu_52::BreakTransliterator const&)
 icu_52::BreakTransliterator::BreakTransliterator(icu_52::UnicodeFilter*)
 icu_52::BreakTransliterator::clone() const
@@ -2380,9 +2599,7 @@ icu_52::BreakTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPos
 icu_52::BreakTransliterator::replaceableAsString(icu_52::Replaceable&)
 icu_52::BreakTransliterator::setInsertion(icu_52::UnicodeString const&)
 icu_52::BreakTransliterator::~BreakTransliterator()
-icu_52::BucketList
 icu_52::BucketList::~BucketList()
-icu_52::BuddhistCalendar
 icu_52::BuddhistCalendar::BuddhistCalendar(icu_52::BuddhistCalendar const&)
 icu_52::BuddhistCalendar::BuddhistCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::BuddhistCalendar::clone() const
@@ -2411,7 +2628,6 @@ icu_52::CEBuffer::CEBuffer(UStringSearch*, UErrorCode*)
 icu_52::CEBuffer::get(int)
 icu_52::CEBuffer::getPrevious(int)
 icu_52::CEBuffer::~CEBuffer()
-icu_52::CECalendar
 icu_52::CECalendar::CECalendar(icu_52::CECalendar const&)
 icu_52::CECalendar::CECalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::CECalendar::ceToJD(int, int, int, int)
@@ -2422,7 +2638,6 @@ icu_52::CECalendar::inDaylightTime(UErrorCode&) const
 icu_52::CECalendar::jdToCE(int, int, int&, int&, int&)
 icu_52::CECalendar::operator=(icu_52::CECalendar const&)
 icu_52::CECalendar::~CECalendar()
-icu_52::CFactory
 icu_52::CFactory::CFactory(icu_52::CollatorFactory*, UErrorCode&)
 icu_52::CFactory::create(icu_52::ICUServiceKey const&, icu_52::ICUService const*, UErrorCode&) const
 icu_52::CFactory::getDisplayName(icu_52::UnicodeString const&, icu_52::Locale const&, icu_52::UnicodeString&) const
@@ -2430,7 +2645,6 @@ icu_52::CFactory::getSupportedIDs(UErrorCode&) const
 icu_52::CFactory::~CFactory()
 icu_52::CLDR_FIELD_APPEND
 icu_52::CLDR_FIELD_NAME
-icu_52::Calendar
 icu_52::Calendar::Calendar(UErrorCode&)
 icu_52::Calendar::Calendar(icu_52::Calendar const&)
 icu_52::Calendar::Calendar(icu_52::TimeZone const&, icu_52::Locale const&, UErrorCode&)
@@ -2542,7 +2756,6 @@ icu_52::CalendarAstronomer::AngleFunc::~AngleFunc()
 icu_52::CalendarAstronomer::CalendarAstronomer()
 icu_52::CalendarAstronomer::CalendarAstronomer(double)
 icu_52::CalendarAstronomer::CalendarAstronomer(double, double)
-icu_52::CalendarAstronomer::CoordFunc
 icu_52::CalendarAstronomer::CoordFunc::~CoordFunc()
 icu_52::CalendarAstronomer::Ecliptic::toString() const
 icu_52::CalendarAstronomer::Equatorial::toString() const
@@ -2582,7 +2795,6 @@ icu_52::CalendarAstronomer::setJulianDay(double)
 icu_52::CalendarAstronomer::setTime(double)
 icu_52::CalendarAstronomer::timeOfAngle(icu_52::CalendarAstronomer::AngleFunc&, double, double, double, signed char)
 icu_52::CalendarAstronomer::~CalendarAstronomer()
-icu_52::CalendarCache
 icu_52::CalendarCache::CalendarCache(int, UErrorCode&)
 icu_52::CalendarCache::createCache(icu_52::CalendarCache**, UErrorCode&)
 icu_52::CalendarCache::get(icu_52::CalendarCache**, int, UErrorCode&)
@@ -2594,7 +2806,6 @@ icu_52::CalendarData::getByKey2(char const*, char const*, UErrorCode&)
 icu_52::CalendarData::getByKey3(char const*, char const*, char const*, UErrorCode&)
 icu_52::CalendarData::initData(char const*, char const*, UErrorCode&)
 icu_52::CalendarData::~CalendarData()
-icu_52::CalendarService
 icu_52::CalendarService::cloneInstance(icu_52::UObject*) const
 icu_52::CalendarService::handleDefault(icu_52::ICUServiceKey const&, icu_52::UnicodeString*, UErrorCode&) const
 icu_52::CalendarService::isDefault() const
@@ -2613,7 +2824,6 @@ icu_52::CaseFoldingUTextIterator::CaseFoldingUTextIterator(UText&)
 icu_52::CaseFoldingUTextIterator::inExpansion()
 icu_52::CaseFoldingUTextIterator::next()
 icu_52::CaseFoldingUTextIterator::~CaseFoldingUTextIterator()
-icu_52::CaseMapTransliterator
 icu_52::CaseMapTransliterator::CaseMapTransliterator(icu_52::CaseMapTransliterator const&)
 icu_52::CaseMapTransliterator::CaseMapTransliterator(icu_52::UnicodeString const&, int (*)(UCaseProps const*, int, int (*)(void*, signed char), void*, unsigned short const**, char const*, int*))
 icu_52::CaseMapTransliterator::getStaticClassID()
@@ -2646,174 +2856,131 @@ icu_52::CharsetMatch::getLanguage() const
 icu_52::CharsetMatch::getName() const
 icu_52::CharsetMatch::getUChars(unsigned short*, int, UErrorCode*) const
 icu_52::CharsetMatch::set(icu_52::InputText*, icu_52::CharsetRecognizer const*, int, char const*, char const*)
-icu_52::CharsetRecog_2022
 icu_52::CharsetRecog_2022::match_2022(unsigned char const*, int, unsigned char const (*) [5], int) const
 icu_52::CharsetRecog_2022::~CharsetRecog_2022()
-icu_52::CharsetRecog_2022CN
 icu_52::CharsetRecog_2022CN::getName() const
 icu_52::CharsetRecog_2022CN::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_2022CN::~CharsetRecog_2022CN()
-icu_52::CharsetRecog_2022JP
 icu_52::CharsetRecog_2022JP::getName() const
 icu_52::CharsetRecog_2022JP::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_2022JP::~CharsetRecog_2022JP()
-icu_52::CharsetRecog_2022KR
 icu_52::CharsetRecog_2022KR::getName() const
 icu_52::CharsetRecog_2022KR::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_2022KR::~CharsetRecog_2022KR()
-icu_52::CharsetRecog_8859_1
 icu_52::CharsetRecog_8859_1::getName() const
 icu_52::CharsetRecog_8859_1::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_1::~CharsetRecog_8859_1()
-icu_52::CharsetRecog_8859_2
 icu_52::CharsetRecog_8859_2::getName() const
 icu_52::CharsetRecog_8859_2::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_2::~CharsetRecog_8859_2()
-icu_52::CharsetRecog_8859_5
 icu_52::CharsetRecog_8859_5::getName() const
 icu_52::CharsetRecog_8859_5::~CharsetRecog_8859_5()
-icu_52::CharsetRecog_8859_5_ru
 icu_52::CharsetRecog_8859_5_ru::getLanguage() const
 icu_52::CharsetRecog_8859_5_ru::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_5_ru::~CharsetRecog_8859_5_ru()
-icu_52::CharsetRecog_8859_6
 icu_52::CharsetRecog_8859_6::getName() const
 icu_52::CharsetRecog_8859_6::~CharsetRecog_8859_6()
-icu_52::CharsetRecog_8859_6_ar
 icu_52::CharsetRecog_8859_6_ar::getLanguage() const
 icu_52::CharsetRecog_8859_6_ar::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_6_ar::~CharsetRecog_8859_6_ar()
-icu_52::CharsetRecog_8859_7
 icu_52::CharsetRecog_8859_7::getName() const
 icu_52::CharsetRecog_8859_7::~CharsetRecog_8859_7()
-icu_52::CharsetRecog_8859_7_el
 icu_52::CharsetRecog_8859_7_el::getLanguage() const
 icu_52::CharsetRecog_8859_7_el::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_7_el::~CharsetRecog_8859_7_el()
-icu_52::CharsetRecog_8859_8
 icu_52::CharsetRecog_8859_8::getName() const
 icu_52::CharsetRecog_8859_8::~CharsetRecog_8859_8()
-icu_52::CharsetRecog_8859_8_I_he
 icu_52::CharsetRecog_8859_8_I_he::getLanguage() const
 icu_52::CharsetRecog_8859_8_I_he::getName() const
 icu_52::CharsetRecog_8859_8_I_he::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_8_I_he::~CharsetRecog_8859_8_I_he()
-icu_52::CharsetRecog_8859_8_he
 icu_52::CharsetRecog_8859_8_he::getLanguage() const
 icu_52::CharsetRecog_8859_8_he::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_8_he::~CharsetRecog_8859_8_he()
-icu_52::CharsetRecog_8859_9
 icu_52::CharsetRecog_8859_9::getName() const
 icu_52::CharsetRecog_8859_9::~CharsetRecog_8859_9()
-icu_52::CharsetRecog_8859_9_tr
 icu_52::CharsetRecog_8859_9_tr::getLanguage() const
 icu_52::CharsetRecog_8859_9_tr::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_8859_9_tr::~CharsetRecog_8859_9_tr()
-icu_52::CharsetRecog_IBM420_ar
 icu_52::CharsetRecog_IBM420_ar::getLanguage() const
 icu_52::CharsetRecog_IBM420_ar::match_sbcs(icu_52::InputText*, int const*, unsigned char const*) const
 icu_52::CharsetRecog_IBM420_ar::~CharsetRecog_IBM420_ar()
-icu_52::CharsetRecog_IBM420_ar_ltr
 icu_52::CharsetRecog_IBM420_ar_ltr::getName() const
 icu_52::CharsetRecog_IBM420_ar_ltr::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_IBM420_ar_ltr::~CharsetRecog_IBM420_ar_ltr()
-icu_52::CharsetRecog_IBM420_ar_rtl
 icu_52::CharsetRecog_IBM420_ar_rtl::getName() const
 icu_52::CharsetRecog_IBM420_ar_rtl::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_IBM420_ar_rtl::~CharsetRecog_IBM420_ar_rtl()
-icu_52::CharsetRecog_IBM424_he
 icu_52::CharsetRecog_IBM424_he::getLanguage() const
 icu_52::CharsetRecog_IBM424_he::~CharsetRecog_IBM424_he()
-icu_52::CharsetRecog_IBM424_he_ltr
 icu_52::CharsetRecog_IBM424_he_ltr::getName() const
 icu_52::CharsetRecog_IBM424_he_ltr::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_IBM424_he_ltr::~CharsetRecog_IBM424_he_ltr()
-icu_52::CharsetRecog_IBM424_he_rtl
 icu_52::CharsetRecog_IBM424_he_rtl::getName() const
 icu_52::CharsetRecog_IBM424_he_rtl::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_IBM424_he_rtl::~CharsetRecog_IBM424_he_rtl()
-icu_52::CharsetRecog_KOI8_R
 icu_52::CharsetRecog_KOI8_R::getLanguage() const
 icu_52::CharsetRecog_KOI8_R::getName() const
 icu_52::CharsetRecog_KOI8_R::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_KOI8_R::~CharsetRecog_KOI8_R()
-icu_52::CharsetRecog_UTF8
 icu_52::CharsetRecog_UTF8::getName() const
 icu_52::CharsetRecog_UTF8::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_UTF8::~CharsetRecog_UTF8()
-icu_52::CharsetRecog_UTF_16_BE
 icu_52::CharsetRecog_UTF_16_BE::getName() const
 icu_52::CharsetRecog_UTF_16_BE::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_UTF_16_BE::~CharsetRecog_UTF_16_BE()
-icu_52::CharsetRecog_UTF_16_LE
 icu_52::CharsetRecog_UTF_16_LE::getName() const
 icu_52::CharsetRecog_UTF_16_LE::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_UTF_16_LE::~CharsetRecog_UTF_16_LE()
-icu_52::CharsetRecog_UTF_32
 icu_52::CharsetRecog_UTF_32::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_UTF_32::~CharsetRecog_UTF_32()
-icu_52::CharsetRecog_UTF_32_BE
 icu_52::CharsetRecog_UTF_32_BE::getChar(unsigned char const*, int) const
 icu_52::CharsetRecog_UTF_32_BE::getName() const
 icu_52::CharsetRecog_UTF_32_BE::~CharsetRecog_UTF_32_BE()
-icu_52::CharsetRecog_UTF_32_LE
 icu_52::CharsetRecog_UTF_32_LE::getChar(unsigned char const*, int) const
 icu_52::CharsetRecog_UTF_32_LE::getName() const
 icu_52::CharsetRecog_UTF_32_LE::~CharsetRecog_UTF_32_LE()
-icu_52::CharsetRecog_Unicode
 icu_52::CharsetRecog_Unicode::~CharsetRecog_Unicode()
-icu_52::CharsetRecog_big5
 icu_52::CharsetRecog_big5::getLanguage() const
 icu_52::CharsetRecog_big5::getName() const
 icu_52::CharsetRecog_big5::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_big5::nextChar(icu_52::IteratedChar*, icu_52::InputText*) const
 icu_52::CharsetRecog_big5::~CharsetRecog_big5()
-icu_52::CharsetRecog_euc
 icu_52::CharsetRecog_euc::nextChar(icu_52::IteratedChar*, icu_52::InputText*) const
 icu_52::CharsetRecog_euc::~CharsetRecog_euc()
-icu_52::CharsetRecog_euc_jp
 icu_52::CharsetRecog_euc_jp::getLanguage() const
 icu_52::CharsetRecog_euc_jp::getName() const
 icu_52::CharsetRecog_euc_jp::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_euc_jp::~CharsetRecog_euc_jp()
-icu_52::CharsetRecog_euc_kr
 icu_52::CharsetRecog_euc_kr::getLanguage() const
 icu_52::CharsetRecog_euc_kr::getName() const
 icu_52::CharsetRecog_euc_kr::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_euc_kr::~CharsetRecog_euc_kr()
-icu_52::CharsetRecog_gb_18030
 icu_52::CharsetRecog_gb_18030::getLanguage() const
 icu_52::CharsetRecog_gb_18030::getName() const
 icu_52::CharsetRecog_gb_18030::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_gb_18030::nextChar(icu_52::IteratedChar*, icu_52::InputText*) const
 icu_52::CharsetRecog_gb_18030::~CharsetRecog_gb_18030()
-icu_52::CharsetRecog_mbcs
 icu_52::CharsetRecog_mbcs::match_mbcs(icu_52::InputText*, unsigned short const*, int) const
 icu_52::CharsetRecog_mbcs::~CharsetRecog_mbcs()
-icu_52::CharsetRecog_sbcs
 icu_52::CharsetRecog_sbcs::CharsetRecog_sbcs()
 icu_52::CharsetRecog_sbcs::match_sbcs(icu_52::InputText*, int const*, unsigned char const*) const
 icu_52::CharsetRecog_sbcs::~CharsetRecog_sbcs()
-icu_52::CharsetRecog_sjis
 icu_52::CharsetRecog_sjis::getLanguage() const
 icu_52::CharsetRecog_sjis::getName() const
 icu_52::CharsetRecog_sjis::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_sjis::nextChar(icu_52::IteratedChar*, icu_52::InputText*) const
 icu_52::CharsetRecog_sjis::~CharsetRecog_sjis()
-icu_52::CharsetRecog_windows_1251
 icu_52::CharsetRecog_windows_1251::getLanguage() const
 icu_52::CharsetRecog_windows_1251::getName() const
 icu_52::CharsetRecog_windows_1251::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_windows_1251::~CharsetRecog_windows_1251()
-icu_52::CharsetRecog_windows_1256
 icu_52::CharsetRecog_windows_1256::getLanguage() const
 icu_52::CharsetRecog_windows_1256::getName() const
 icu_52::CharsetRecog_windows_1256::match(icu_52::InputText*, icu_52::CharsetMatch*) const
 icu_52::CharsetRecog_windows_1256::~CharsetRecog_windows_1256()
-icu_52::CharsetRecognizer
 icu_52::CharsetRecognizer::getLanguage() const
 icu_52::CharsetRecognizer::~CharsetRecognizer()
-icu_52::ChineseCalendar
 icu_52::ChineseCalendar::CHINESE_DATE_PRECEDENCE
 icu_52::ChineseCalendar::ChineseCalendar(icu_52::ChineseCalendar const&)
 icu_52::ChineseCalendar::ChineseCalendar(icu_52::Locale const&, UErrorCode&)
@@ -2852,7 +3019,6 @@ icu_52::ChineseCalendar::roll(icu_52::Calendar::EDateFields, int, UErrorCode&)
 icu_52::ChineseCalendar::synodicMonthsBetween(int, int) const
 icu_52::ChineseCalendar::winterSolstice(int) const
 icu_52::ChineseCalendar::~ChineseCalendar()
-icu_52::ChoiceFormat
 icu_52::ChoiceFormat::ChoiceFormat(double const*, icu_52::UnicodeString const*, int)
 icu_52::ChoiceFormat::ChoiceFormat(double const*, signed char const*, icu_52::UnicodeString const*, int)
 icu_52::ChoiceFormat::ChoiceFormat(icu_52::ChoiceFormat const&)
@@ -2886,7 +3052,6 @@ icu_52::ChoiceFormat::~ChoiceFormat()
 icu_52::ClockMath::floorDivide(double, double, double&)
 icu_52::ClockMath::floorDivide(double, int, int&)
 icu_52::ClockMath::floorDivide(int, int)
-icu_52::CollationElementIterator
 icu_52::CollationElementIterator::CollationElementIterator(icu_52::CharacterIterator const&, icu_52::RuleBasedCollator const*, UErrorCode&)
 icu_52::CollationElementIterator::CollationElementIterator(icu_52::CollationElementIterator const&)
 icu_52::CollationElementIterator::CollationElementIterator(icu_52::UnicodeString const&, icu_52::RuleBasedCollator const*, UErrorCode&)
@@ -2905,7 +3070,6 @@ icu_52::CollationElementIterator::setText(icu_52::CharacterIterator&, UErrorCode
 icu_52::CollationElementIterator::setText(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::CollationElementIterator::strengthOrder(int) const
 icu_52::CollationElementIterator::~CollationElementIterator()
-icu_52::CollationKey
 icu_52::CollationKey::CollationKey()
 icu_52::CollationKey::CollationKey(icu_52::CollationKey const&)
 icu_52::CollationKey::CollationKey(unsigned char const*, int)
@@ -2922,11 +3086,9 @@ icu_52::CollationKey::reset()
 icu_52::CollationKey::setLength(int)
 icu_52::CollationKey::setToBogus()
 icu_52::CollationKey::~CollationKey()
-icu_52::CollationKeyByteSink
 icu_52::CollationKeyByteSink::AppendBeyondCapacity(char const*, int, int)
 icu_52::CollationKeyByteSink::Resize(int, int)
 icu_52::CollationKeyByteSink::~CollationKeyByteSink()
-icu_52::CollationLocaleListEnumeration
 icu_52::CollationLocaleListEnumeration::clone() const
 icu_52::CollationLocaleListEnumeration::count(UErrorCode&) const
 icu_52::CollationLocaleListEnumeration::getDynamicClassID() const
@@ -2936,7 +3098,6 @@ icu_52::CollationLocaleListEnumeration::next(int*, UErrorCode&)
 icu_52::CollationLocaleListEnumeration::reset(UErrorCode&)
 icu_52::CollationLocaleListEnumeration::snext(UErrorCode&)
 icu_52::CollationLocaleListEnumeration::~CollationLocaleListEnumeration()
-icu_52::Collator
 icu_52::Collator::Collator()
 icu_52::Collator::Collator(UColAttributeValue, UNormalizationMode)
 icu_52::Collator::Collator(icu_52::Collator const&)
@@ -2976,11 +3137,9 @@ icu_52::Collator::setReorderCodes(int const*, int, UErrorCode&)
 icu_52::Collator::setStrength(icu_52::Collator::ECollationStrength)
 icu_52::Collator::unregister(void const*, UErrorCode&)
 icu_52::Collator::~Collator()
-icu_52::CollatorFactory
 icu_52::CollatorFactory::getDisplayName(icu_52::Locale const&, icu_52::Locale const&, icu_52::UnicodeString&)
 icu_52::CollatorFactory::visible() const
 icu_52::CollatorFactory::~CollatorFactory()
-icu_52::CompactDecimalFormat
 icu_52::CompactDecimalFormat::CompactDecimalFormat(icu_52::CompactDecimalFormat const&)
 icu_52::CompactDecimalFormat::CompactDecimalFormat(icu_52::DecimalFormat const&, UHashtable const*, double const*, icu_52::PluralRules*)
 icu_52::CompactDecimalFormat::clone() const
@@ -3002,7 +3161,6 @@ icu_52::CompactDecimalFormat::parse(icu_52::UnicodeString const&, icu_52::Format
 icu_52::CompactDecimalFormat::parse(icu_52::UnicodeString const&, icu_52::Formattable&, icu_52::ParsePosition&) const
 icu_52::CompactDecimalFormat::parseCurrency(icu_52::UnicodeString const&, icu_52::ParsePosition&) const
 icu_52::CompactDecimalFormat::~CompactDecimalFormat()
-icu_52::CompoundTransliterator
 icu_52::CompoundTransliterator::CompoundTransliterator(icu_52::CompoundTransliterator const&)
 icu_52::CompoundTransliterator::CompoundTransliterator(icu_52::Transliterator* const*, int, icu_52::UnicodeFilter*)
 icu_52::CompoundTransliterator::CompoundTransliterator(icu_52::UVector&, UParseError&, UErrorCode&)
@@ -3037,7 +3195,6 @@ icu_52::ConfusabledataBuilder::buildConfusableData(icu_52::SpoofImpl*, char cons
 icu_52::ConfusabledataBuilder::getMapping(int)
 icu_52::ConfusabledataBuilder::outputData(UErrorCode&)
 icu_52::ConfusabledataBuilder::~ConfusabledataBuilder()
-icu_52::CopticCalendar
 icu_52::CopticCalendar::CopticCalendar(icu_52::CopticCalendar const&)
 icu_52::CopticCalendar::CopticCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::CopticCalendar::clone() const
@@ -3051,7 +3208,6 @@ icu_52::CopticCalendar::getType() const
 icu_52::CopticCalendar::handleComputeFields(int, UErrorCode&)
 icu_52::CopticCalendar::handleGetExtendedYear()
 icu_52::CopticCalendar::~CopticCalendar()
-icu_52::CurrencyAmount
 icu_52::CurrencyAmount::CurrencyAmount(double, unsigned short const*, UErrorCode&)
 icu_52::CurrencyAmount::CurrencyAmount(icu_52::CurrencyAmount const&)
 icu_52::CurrencyAmount::CurrencyAmount(icu_52::Formattable const&, unsigned short const*, UErrorCode&)
@@ -3061,7 +3217,6 @@ icu_52::CurrencyAmount::getStaticClassID()
 icu_52::CurrencyAmount::getStaticClassID()::classID
 icu_52::CurrencyAmount::operator=(icu_52::CurrencyAmount const&)
 icu_52::CurrencyAmount::~CurrencyAmount()
-icu_52::CurrencyFormat
 icu_52::CurrencyFormat::CurrencyFormat(icu_52::CurrencyFormat const&)
 icu_52::CurrencyFormat::CurrencyFormat(icu_52::Locale const&, UErrorCode&)
 icu_52::CurrencyFormat::clone() const
@@ -3072,7 +3227,6 @@ icu_52::CurrencyFormat::getStaticClassID()::classID
 icu_52::CurrencyFormat::operator==(icu_52::Format const&) const
 icu_52::CurrencyFormat::parseObject(icu_52::UnicodeString const&, icu_52::Formattable&, icu_52::ParsePosition&) const
 icu_52::CurrencyFormat::~CurrencyFormat()
-icu_52::CurrencyPluralInfo
 icu_52::CurrencyPluralInfo::CurrencyPluralInfo(UErrorCode&)
 icu_52::CurrencyPluralInfo::CurrencyPluralInfo(icu_52::CurrencyPluralInfo const&)
 icu_52::CurrencyPluralInfo::CurrencyPluralInfo(icu_52::Locale const&, UErrorCode&)
@@ -3094,7 +3248,6 @@ icu_52::CurrencyPluralInfo::setLocale(icu_52::Locale const&, UErrorCode&)
 icu_52::CurrencyPluralInfo::setPluralRules(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::CurrencyPluralInfo::setupCurrencyPluralPattern(icu_52::Locale const&, UErrorCode&)
 icu_52::CurrencyPluralInfo::~CurrencyPluralInfo()
-icu_52::CurrencyUnit
 icu_52::CurrencyUnit::CurrencyUnit(icu_52::CurrencyUnit const&)
 icu_52::CurrencyUnit::CurrencyUnit(unsigned short const*, UErrorCode&)
 icu_52::CurrencyUnit::clone() const
@@ -3123,7 +3276,6 @@ icu_52::DEFAULT_PATTERN_FOR_WEEK
 icu_52::DEFAULT_PATTERN_FOR_YEAR
 icu_52::DQUOTE_STOPLIST
 icu_52::DST_STR
-icu_52::DTRedundantEnumeration
 icu_52::DTRedundantEnumeration::DTRedundantEnumeration()
 icu_52::DTRedundantEnumeration::add(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::DTRedundantEnumeration::count(UErrorCode&) const
@@ -3134,7 +3286,6 @@ icu_52::DTRedundantEnumeration::isCanonicalItem(icu_52::UnicodeString const&)
 icu_52::DTRedundantEnumeration::reset(UErrorCode&)
 icu_52::DTRedundantEnumeration::snext(UErrorCode&)
 icu_52::DTRedundantEnumeration::~DTRedundantEnumeration()
-icu_52::DTSkeletonEnumeration
 icu_52::DTSkeletonEnumeration::DTSkeletonEnumeration(icu_52::PatternMap&, icu_52::dtStrEnum, UErrorCode&)
 icu_52::DTSkeletonEnumeration::count(UErrorCode&) const
 icu_52::DTSkeletonEnumeration::getDynamicClassID() const
@@ -3149,7 +3300,6 @@ icu_52::DT_DateTimeAvailableFormatsTag
 icu_52::DT_DateTimeFieldsTag
 icu_52::DT_DateTimeGregorianTag
 icu_52::DT_DateTimePatternsTag
-icu_52::DangiCalendar
 icu_52::DangiCalendar::DangiCalendar(icu_52::DangiCalendar const&)
 icu_52::DangiCalendar::DangiCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::DangiCalendar::clone() const
@@ -3159,7 +3309,6 @@ icu_52::DangiCalendar::getStaticClassID()
 icu_52::DangiCalendar::getStaticClassID()::classID
 icu_52::DangiCalendar::getType() const
 icu_52::DangiCalendar::~DangiCalendar()
-icu_52::DateFormat
 icu_52::DateFormat::DateFormat()
 icu_52::DateFormat::DateFormat(icu_52::DateFormat const&)
 icu_52::DateFormat::adoptCalendar(icu_52::Calendar*)
@@ -3193,7 +3342,6 @@ icu_52::DateFormat::setLenient(signed char)
 icu_52::DateFormat::setNumberFormat(icu_52::NumberFormat const&)
 icu_52::DateFormat::setTimeZone(icu_52::TimeZone const&)
 icu_52::DateFormat::~DateFormat()
-icu_52::DateFormatSymbols
 icu_52::DateFormatSymbols::DateFormatSymbols(UErrorCode&)
 icu_52::DateFormatSymbols::DateFormatSymbols(char const*, UErrorCode&)
 icu_52::DateFormatSymbols::DateFormatSymbols(icu_52::DateFormatSymbols const&)
@@ -3247,7 +3395,6 @@ icu_52::DateFormatSymbols::setZoneStrings(icu_52::UnicodeString const* const*, i
 icu_52::DateFormatSymbols::~DateFormatSymbols()
 icu_52::DateInterval::DateInterval(double, double)
 icu_52::DateInterval::~DateInterval()
-icu_52::DateIntervalFormat
 icu_52::DateIntervalFormat::DateIntervalFormat()
 icu_52::DateIntervalFormat::DateIntervalFormat(icu_52::DateIntervalFormat const&)
 icu_52::DateIntervalFormat::DateIntervalFormat(icu_52::Locale const&, icu_52::DateIntervalInfo*, icu_52::UnicodeString const*, UErrorCode&)
@@ -3288,7 +3435,6 @@ icu_52::DateIntervalFormat::setSeparateDateTimePtn(icu_52::UnicodeString const&,
 icu_52::DateIntervalFormat::setTimeZone(icu_52::TimeZone const&)
 icu_52::DateIntervalFormat::splitPatternInto2Part(icu_52::UnicodeString const&)
 icu_52::DateIntervalFormat::~DateIntervalFormat()
-icu_52::DateIntervalInfo
 icu_52::DateIntervalInfo::DateIntervalInfo(UErrorCode&)
 icu_52::DateIntervalInfo::DateIntervalInfo(icu_52::DateIntervalInfo const&)
 icu_52::DateIntervalInfo::DateIntervalInfo(icu_52::Locale const&, UErrorCode&)
@@ -3313,7 +3459,6 @@ icu_52::DateIntervalInfo::setIntervalPattern(icu_52::UnicodeString const&, UCale
 icu_52::DateIntervalInfo::setIntervalPatternInternally(icu_52::UnicodeString const&, UCalendarDateFields, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::DateIntervalInfo::stringNumeric(int, int, char)
 icu_52::DateIntervalInfo::~DateIntervalInfo()
-icu_52::DateTimeMatcher
 icu_52::DateTimeMatcher::DateTimeMatcher()
 icu_52::DateTimeMatcher::DateTimeMatcher(icu_52::DateTimeMatcher const&)
 icu_52::DateTimeMatcher::copyFrom()
@@ -3327,7 +3472,6 @@ icu_52::DateTimeMatcher::getSkeletonPtr()
 icu_52::DateTimeMatcher::set(icu_52::UnicodeString const&, icu_52::FormatParser*)
 icu_52::DateTimeMatcher::set(icu_52::UnicodeString const&, icu_52::FormatParser*, icu_52::PtnSkeleton&)
 icu_52::DateTimeMatcher::~DateTimeMatcher()
-icu_52::DateTimePatternGenerator
 icu_52::DateTimePatternGenerator::DateTimePatternGenerator(UErrorCode&)
 icu_52::DateTimePatternGenerator::DateTimePatternGenerator(icu_52::DateTimePatternGenerator const&)
 icu_52::DateTimePatternGenerator::DateTimePatternGenerator(icu_52::Locale const&, UErrorCode&)
@@ -3381,7 +3525,6 @@ icu_52::DateTimePatternGenerator::setDateTimeFromCalendar(icu_52::Locale const&,
 icu_52::DateTimePatternGenerator::setDecimal(icu_52::UnicodeString const&)
 icu_52::DateTimePatternGenerator::setDecimalSymbols(icu_52::Locale const&, UErrorCode&)
 icu_52::DateTimePatternGenerator::~DateTimePatternGenerator()
-icu_52::DateTimeRule
 icu_52::DateTimeRule::DateTimeRule(icu_52::DateTimeRule const&)
 icu_52::DateTimeRule::DateTimeRule(int, int, int, icu_52::DateTimeRule::TimeRuleType)
 icu_52::DateTimeRule::DateTimeRule(int, int, int, int, icu_52::DateTimeRule::TimeRuleType)
@@ -3401,7 +3544,6 @@ icu_52::DateTimeRule::operator!=(icu_52::DateTimeRule const&) const
 icu_52::DateTimeRule::operator=(icu_52::DateTimeRule const&)
 icu_52::DateTimeRule::operator==(icu_52::DateTimeRule const&) const
 icu_52::DateTimeRule::~DateTimeRule()
-icu_52::DecimalFormat
 icu_52::DecimalFormat::DecimalFormat(UErrorCode&)
 icu_52::DecimalFormat::DecimalFormat(icu_52::DecimalFormat const&)
 icu_52::DecimalFormat::DecimalFormat(icu_52::UnicodeString const&, UErrorCode&)
@@ -3551,7 +3693,6 @@ icu_52::DecimalFormatStaticSets::cleanup()
 icu_52::DecimalFormatStaticSets::getSimilarDecimals(int, signed char)
 icu_52::DecimalFormatStaticSets::getStaticSets(UErrorCode&)
 icu_52::DecimalFormatStaticSets::~DecimalFormatStaticSets()
-icu_52::DecimalFormatSymbols
 icu_52::DecimalFormatSymbols::DecimalFormatSymbols()
 icu_52::DecimalFormatSymbols::DecimalFormatSymbols(UErrorCode&)
 icu_52::DecimalFormatSymbols::DecimalFormatSymbols(icu_52::DecimalFormatSymbols const&)
@@ -3570,7 +3711,6 @@ icu_52::DecimalFormatSymbols::operator==(icu_52::DecimalFormatSymbols const&) co
 icu_52::DecimalFormatSymbols::setPatternForCurrencySpacing(UCurrencySpacing, signed char, icu_52::UnicodeString const&)
 icu_52::DecimalFormatSymbols::setSymbol(icu_52::DecimalFormatSymbols::ENumberFormatSymbol, icu_52::UnicodeString const&, signed char)
 icu_52::DecimalFormatSymbols::~DecimalFormatSymbols()
-icu_52::DefaultCalendarFactory
 icu_52::DefaultCalendarFactory::create(icu_52::ICUServiceKey const&, icu_52::ICUService const*, UErrorCode&) const
 icu_52::DefaultCalendarFactory::~DefaultCalendarFactory()
 icu_52::DigitList::DigitList()
@@ -3611,12 +3751,10 @@ icu_52::DigitList::setRoundingMode(icu_52::DecimalFormat::ERoundingMode)
 icu_52::DigitList::toIntegralValue()
 icu_52::DigitList::trim()
 icu_52::DigitList::~DigitList()
-icu_52::DistanceInfo
 icu_52::DistanceInfo::setTo(icu_52::DistanceInfo&)
 icu_52::DistanceInfo::~DistanceInfo()
 icu_52::EMPTY
 icu_52::EmptyString
-icu_52::EscapeTransliterator
 icu_52::EscapeTransliterator::EscapeTransliterator(icu_52::EscapeTransliterator const&)
 icu_52::EscapeTransliterator::EscapeTransliterator(icu_52::UnicodeString const&, icu_52::UnicodeString const&, icu_52::UnicodeString const&, int, int, signed char, icu_52::EscapeTransliterator*)
 icu_52::EscapeTransliterator::clone() const
@@ -3626,7 +3764,6 @@ icu_52::EscapeTransliterator::getStaticClassID()::classID
 icu_52::EscapeTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPosition&, signed char) const
 icu_52::EscapeTransliterator::registerIDs()
 icu_52::EscapeTransliterator::~EscapeTransliterator()
-icu_52::EthiopicCalendar
 icu_52::EthiopicCalendar::EthiopicCalendar(icu_52::EthiopicCalendar const&)
 icu_52::EthiopicCalendar::EthiopicCalendar(icu_52::Locale const&, UErrorCode&, icu_52::EthiopicCalendar::EEraType)
 icu_52::EthiopicCalendar::clone() const
@@ -3643,31 +3780,26 @@ icu_52::EthiopicCalendar::handleGetLimit(UCalendarDateFields, icu_52::Calendar::
 icu_52::EthiopicCalendar::isAmeteAlemEra() const
 icu_52::EthiopicCalendar::setAmeteAlemEra(signed char)
 icu_52::EthiopicCalendar::~EthiopicCalendar()
-icu_52::FieldPosition
 icu_52::FieldPosition::clone() const
 icu_52::FieldPosition::getDynamicClassID() const
 icu_52::FieldPosition::getStaticClassID()
 icu_52::FieldPosition::getStaticClassID()::classID
 icu_52::FieldPosition::~FieldPosition()
-icu_52::FieldPositionHandler
 icu_52::FieldPositionHandler::addAttribute(int, int, int)
 icu_52::FieldPositionHandler::isRecording()
 icu_52::FieldPositionHandler::shiftLast(int)
 icu_52::FieldPositionHandler::~FieldPositionHandler()
-icu_52::FieldPositionIterator
 icu_52::FieldPositionIterator::FieldPositionIterator()
 icu_52::FieldPositionIterator::FieldPositionIterator(icu_52::FieldPositionIterator const&)
 icu_52::FieldPositionIterator::next(icu_52::FieldPosition&)
 icu_52::FieldPositionIterator::operator==(icu_52::FieldPositionIterator const&) const
 icu_52::FieldPositionIterator::setData(icu_52::UVector32*, UErrorCode&)
 icu_52::FieldPositionIterator::~FieldPositionIterator()
-icu_52::FieldPositionIteratorHandler
 icu_52::FieldPositionIteratorHandler::FieldPositionIteratorHandler(icu_52::FieldPositionIterator*, UErrorCode&)
 icu_52::FieldPositionIteratorHandler::addAttribute(int, int, int)
 icu_52::FieldPositionIteratorHandler::isRecording()
 icu_52::FieldPositionIteratorHandler::shiftLast(int)
 icu_52::FieldPositionIteratorHandler::~FieldPositionIteratorHandler()
-icu_52::FieldPositionOnlyHandler
 icu_52::FieldPositionOnlyHandler::FieldPositionOnlyHandler(icu_52::FieldPosition&)
 icu_52::FieldPositionOnlyHandler::addAttribute(int, int, int)
 icu_52::FieldPositionOnlyHandler::isRecording()
@@ -3687,11 +3819,9 @@ icu_52::FixedDecimal::getVisibleFractionDigitCount() const
 icu_52::FixedDecimal::init(double)
 icu_52::FixedDecimal::init(double, int, long long)
 icu_52::FixedDecimal::quickInit(double)
-icu_52::FixedSortKeyByteSink
 icu_52::FixedSortKeyByteSink::AppendBeyondCapacity(char const*, int, int)
 icu_52::FixedSortKeyByteSink::Resize(int, int)
 icu_52::FixedSortKeyByteSink::~FixedSortKeyByteSink()
-icu_52::Format
 icu_52::Format::Format()
 icu_52::Format::Format(icu_52::Format const&)
 icu_52::Format::format(icu_52::Formattable const&, icu_52::UnicodeString&, UErrorCode&) const
@@ -3704,7 +3834,6 @@ icu_52::Format::parseObject(icu_52::UnicodeString const&, icu_52::Formattable&, 
 icu_52::Format::setLocaleIDs(char const*, char const*)
 icu_52::Format::syntaxError(icu_52::UnicodeString const&, int, UParseError&)
 icu_52::Format::~Format()
-icu_52::FormatNameEnumeration
 icu_52::FormatNameEnumeration::FormatNameEnumeration(icu_52::UVector*, UErrorCode&)
 icu_52::FormatNameEnumeration::count(UErrorCode&) const
 icu_52::FormatNameEnumeration::getDynamicClassID() const
@@ -3713,7 +3842,6 @@ icu_52::FormatNameEnumeration::getStaticClassID()::classID
 icu_52::FormatNameEnumeration::reset(UErrorCode&)
 icu_52::FormatNameEnumeration::snext(UErrorCode&)
 icu_52::FormatNameEnumeration::~FormatNameEnumeration()
-icu_52::FormatParser
 icu_52::FormatParser::FormatParser()
 icu_52::FormatParser::getCanonicalIndex(icu_52::UnicodeString const&, signed char)
 icu_52::FormatParser::getQuoteLiteral(icu_52::UnicodeString&, int*)
@@ -3722,7 +3850,6 @@ icu_52::FormatParser::isQuoteLiteral(icu_52::UnicodeString const&) const
 icu_52::FormatParser::set(icu_52::UnicodeString const&)
 icu_52::FormatParser::setTokens(icu_52::UnicodeString const&, int, int*)
 icu_52::FormatParser::~FormatParser()
-icu_52::Formattable
 icu_52::Formattable::Formattable()
 icu_52::Formattable::Formattable(char const*)
 icu_52::Formattable::Formattable(double)
@@ -3769,7 +3896,6 @@ icu_52::Formattable::setInt64(long long)
 icu_52::Formattable::setLong(int)
 icu_52::Formattable::setString(icu_52::UnicodeString const&)
 icu_52::Formattable::~Formattable()
-icu_52::FractionalPartSubstitution
 icu_52::FractionalPartSubstitution::FractionalPartSubstitution(int, icu_52::NFRuleSet const*, icu_52::RuleBasedNumberFormat const*, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::FractionalPartSubstitution::calcUpperBound(double) const
 icu_52::FractionalPartSubstitution::composeRuleValue(double, double) const
@@ -3784,7 +3910,6 @@ icu_52::FractionalPartSubstitution::tokenChar() const
 icu_52::FractionalPartSubstitution::transformNumber(double) const
 icu_52::FractionalPartSubstitution::transformNumber(long long) const
 icu_52::FractionalPartSubstitution::~FractionalPartSubstitution()
-icu_52::FunctionReplacer
 icu_52::FunctionReplacer::FunctionReplacer(icu_52::FunctionReplacer const&)
 icu_52::FunctionReplacer::FunctionReplacer(icu_52::Transliterator*, icu_52::UnicodeFunctor*)
 icu_52::FunctionReplacer::addReplacementSetTo(icu_52::UnicodeSet&) const
@@ -3797,19 +3922,16 @@ icu_52::FunctionReplacer::setData(icu_52::TransliterationRuleData const*)
 icu_52::FunctionReplacer::toReplacer() const
 icu_52::FunctionReplacer::toReplacerPattern(icu_52::UnicodeString&, signed char) const
 icu_52::FunctionReplacer::~FunctionReplacer()
-icu_52::GMTOffsetField
 icu_52::GMTOffsetField::GMTOffsetField()
 icu_52::GMTOffsetField::createText(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::GMTOffsetField::createTimeField(icu_52::GMTOffsetField::FieldType, unsigned char, UErrorCode&)
 icu_52::GMTOffsetField::getTypeByLetter(unsigned short)
 icu_52::GMTOffsetField::isValid(icu_52::GMTOffsetField::FieldType, int)
 icu_52::GMTOffsetField::~GMTOffsetField()
-icu_52::GNameSearchHandler
 icu_52::GNameSearchHandler::GNameSearchHandler(unsigned int)
 icu_52::GNameSearchHandler::getMatches(int&)
 icu_52::GNameSearchHandler::handleMatch(int, icu_52::CharacterNode const*, UErrorCode&)
 icu_52::GNameSearchHandler::~GNameSearchHandler()
-icu_52::GenderInfo
 icu_52::GenderInfo::GenderInfo()
 icu_52::GenderInfo::getInstance(icu_52::Locale const&, UErrorCode&)
 icu_52::GenderInfo::getListGender(UGender const*, int, UErrorCode&) const
@@ -3826,7 +3948,6 @@ icu_52::Grego::dayOfWeekInMonth(int, int, int)
 icu_52::Grego::dayToFields(double, int&, int&, int&, int&, int&)
 icu_52::Grego::fieldsToDay(int, int, int)
 icu_52::Grego::timeToFields(double, int&, int&, int&, int&, int&, int&)
-icu_52::GregorianCalendar
 icu_52::GregorianCalendar::GregorianCalendar(UErrorCode&)
 icu_52::GregorianCalendar::GregorianCalendar(icu_52::GregorianCalendar const&)
 icu_52::GregorianCalendar::GregorianCalendar(icu_52::Locale const&, UErrorCode&)
@@ -3880,7 +4001,6 @@ icu_52::GregorianCalendar::yearLength() const
 icu_52::GregorianCalendar::yearLength(int) const
 icu_52::GregorianCalendar::~GregorianCalendar()
 icu_52::HACK_FIRST_CHARS_IN_SCRIPTS
-icu_52::HebrewCalendar
 icu_52::HebrewCalendar::HebrewCalendar(icu_52::HebrewCalendar const&)
 icu_52::HebrewCalendar::HebrewCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::HebrewCalendar::absoluteDayToDayOfWeek(int)
@@ -3932,10 +4052,8 @@ icu_52::ICAL_TZURL
 icu_52::ICAL_UNTIL
 icu_52::ICAL_VTIMEZONE
 icu_52::ICAL_YEARLY
-icu_52::ICUCollatorFactory
 icu_52::ICUCollatorFactory::create(icu_52::ICUServiceKey const&, icu_52::ICUService const*, UErrorCode&) const
 icu_52::ICUCollatorFactory::~ICUCollatorFactory()
-icu_52::ICUCollatorService
 icu_52::ICUCollatorService::cloneInstance(icu_52::UObject*) const
 icu_52::ICUCollatorService::getKey(icu_52::ICUServiceKey&, icu_52::UnicodeString*, UErrorCode&) const
 icu_52::ICUCollatorService::handleDefault(icu_52::ICUServiceKey const&, icu_52::UnicodeString*, UErrorCode&) const
@@ -3962,10 +4080,8 @@ icu_52::ICULocaleService::~ICULocaleService()
 icu_52::ICUNotifier::addListener(icu_52::EventListener const*, UErrorCode&)
 icu_52::ICUNotifier::notifyChanged()
 icu_52::ICUNotifier::removeListener(icu_52::EventListener const*, UErrorCode&)
-icu_52::ICUNumberFormatFactory
 icu_52::ICUNumberFormatFactory::handleCreate(icu_52::Locale const&, int, icu_52::ICUService const*, UErrorCode&) const
 icu_52::ICUNumberFormatFactory::~ICUNumberFormatFactory()
-icu_52::ICUNumberFormatService
 icu_52::ICUNumberFormatService::cloneInstance(icu_52::UObject*) const
 icu_52::ICUNumberFormatService::handleDefault(icu_52::ICUServiceKey const&, icu_52::UnicodeString*, UErrorCode&) const
 icu_52::ICUNumberFormatService::isDefault() const
@@ -4003,7 +4119,6 @@ icu_52::ICU_Utility::parsePattern(icu_52::UnicodeString const&, int, int, icu_52
 icu_52::ICU_Utility::parseUnicodeIdentifier(icu_52::UnicodeString const&, int&)
 icu_52::ICU_Utility::skipWhitespace(icu_52::UnicodeString const&, int&, signed char)
 icu_52::INTL_CURRENCY_SYMBOL_STR
-icu_52::IdentifierInfo
 icu_52::IdentifierInfo::ASCII
 icu_52::IdentifierInfo::CHINESE
 icu_52::IdentifierInfo::CONFUSABLE_WITH_LATIN
@@ -4026,7 +4141,6 @@ icu_52::IdentifierInfo::setIdentifier(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::IdentifierInfo::setIdentifierProfile(icu_52::UnicodeSet const&)
 icu_52::IdentifierInfo::~IdentifierInfo()
 icu_52::IdentifierInfo_cleanup()
-icu_52::IndianCalendar
 icu_52::IndianCalendar::IndianCalendar(icu_52::IndianCalendar const&)
 icu_52::IndianCalendar::IndianCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::IndianCalendar::clone() const
@@ -4052,7 +4166,6 @@ icu_52::IndianCalendar::initializeSystemDefaultCentury()
 icu_52::IndianCalendar::internalGetDefaultCenturyStart() const
 icu_52::IndianCalendar::internalGetDefaultCenturyStartYear() const
 icu_52::IndianCalendar::~IndianCalendar()
-icu_52::InitialTimeZoneRule
 icu_52::InitialTimeZoneRule::InitialTimeZoneRule(icu_52::InitialTimeZoneRule const&)
 icu_52::InitialTimeZoneRule::InitialTimeZoneRule(icu_52::UnicodeString const&, int, int)
 icu_52::InitialTimeZoneRule::clone() const
@@ -4074,7 +4187,6 @@ icu_52::InputText::isSet() const
 icu_52::InputText::setDeclaredEncoding(char const*, int)
 icu_52::InputText::setText(char const*, int)
 icu_52::InputText::~InputText()
-icu_52::IntegralPartSubstitution
 icu_52::IntegralPartSubstitution::calcUpperBound(double) const
 icu_52::IntegralPartSubstitution::composeRuleValue(double, double) const
 icu_52::IntegralPartSubstitution::getDynamicClassID() const
@@ -4084,7 +4196,6 @@ icu_52::IntegralPartSubstitution::tokenChar() const
 icu_52::IntegralPartSubstitution::transformNumber(double) const
 icu_52::IntegralPartSubstitution::transformNumber(long long) const
 icu_52::IntegralPartSubstitution::~IntegralPartSubstitution()
-icu_52::IslamicCalendar
 icu_52::IslamicCalendar::IslamicCalendar(icu_52::IslamicCalendar const&)
 icu_52::IslamicCalendar::IslamicCalendar(icu_52::Locale const&, UErrorCode&, icu_52::IslamicCalendar::ECalculationType)
 icu_52::IslamicCalendar::civilLeapYear(int)
@@ -4113,7 +4224,6 @@ icu_52::IslamicCalendar::yearStart(int) const
 icu_52::IslamicCalendar::~IslamicCalendar()
 icu_52::IteratedChar::IteratedChar()
 icu_52::IteratedChar::nextByte(icu_52::InputText*)
-icu_52::JapaneseCalendar
 icu_52::JapaneseCalendar::JapaneseCalendar(icu_52::JapaneseCalendar const&)
 icu_52::JapaneseCalendar::JapaneseCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::JapaneseCalendar::clone() const
@@ -4162,11 +4272,9 @@ icu_52::Locale::~Locale()
 icu_52::LocaleBased::getLocale(ULocDataLocaleType, UErrorCode&) const
 icu_52::LocaleBased::getLocaleID(ULocDataLocaleType, UErrorCode&) const
 icu_52::LocaleBased::setLocaleIDs(char const*, char const*)
-icu_52::LocaleDisplayNames
 icu_52::LocaleDisplayNames::createInstance(icu_52::Locale const&, UDialectHandling)
 icu_52::LocaleDisplayNames::createInstance(icu_52::Locale const&, UDisplayContext*, int)
 icu_52::LocaleDisplayNames::~LocaleDisplayNames()
-icu_52::LocaleDisplayNamesImpl
 icu_52::LocaleDisplayNamesImpl::LocaleDisplayNamesImpl(icu_52::Locale const&, UDialectHandling)
 icu_52::LocaleDisplayNamesImpl::LocaleDisplayNamesImpl(icu_52::Locale const&, UDisplayContext*, int)
 icu_52::LocaleDisplayNamesImpl::adjustForUsageAndContext(icu_52::LocaleDisplayNamesImpl::CapContextUsage, icu_52::UnicodeString&) const
@@ -4198,12 +4306,10 @@ icu_52::LocaleKeyFactory::updateVisibleIDs(icu_52::Hashtable&, UErrorCode&) cons
 icu_52::LocaleKeyFactory::~LocaleKeyFactory()
 icu_52::LocaleUtility::initLocaleFromName(icu_52::UnicodeString const&, icu_52::Locale&)
 icu_52::LocaleUtility::initNameFromLocale(icu_52::Locale const&, icu_52::UnicodeString&)
-icu_52::LocalizationInfo
 icu_52::LocalizationInfo::indexForLocale(unsigned short const*) const
 icu_52::LocalizationInfo::indexForRuleSet(unsigned short const*) const
 icu_52::LocalizationInfo::operator==(icu_52::LocalizationInfo const*) const
 icu_52::LocalizationInfo::~LocalizationInfo()
-icu_52::LowercaseTransliterator
 icu_52::LowercaseTransliterator::LowercaseTransliterator()
 icu_52::LowercaseTransliterator::LowercaseTransliterator(icu_52::LowercaseTransliterator const&)
 icu_52::LowercaseTransliterator::clone() const
@@ -4212,23 +4318,18 @@ icu_52::LowercaseTransliterator::getStaticClassID()
 icu_52::LowercaseTransliterator::getStaticClassID()::classID
 icu_52::LowercaseTransliterator::~LowercaseTransliterator()
 icu_52::MONTHLENGTH
-icu_52::Measure
 icu_52::Measure::Measure()
 icu_52::Measure::Measure(icu_52::Formattable const&, icu_52::MeasureUnit*, UErrorCode&)
 icu_52::Measure::Measure(icu_52::Measure const&)
 icu_52::Measure::operator=(icu_52::Measure const&)
 icu_52::Measure::operator==(icu_52::UObject const&) const
 icu_52::Measure::~Measure()
-icu_52::MeasureFormat
 icu_52::MeasureFormat::MeasureFormat()
 icu_52::MeasureFormat::createCurrencyFormat(UErrorCode&)
 icu_52::MeasureFormat::createCurrencyFormat(icu_52::Locale const&, UErrorCode&)
 icu_52::MeasureFormat::~MeasureFormat()
-icu_52::MeasureUnit
 icu_52::MeasureUnit::MeasureUnit()
 icu_52::MeasureUnit::~MeasureUnit()
-icu_52::MessageFormat
-icu_52::MessageFormat::DummyFormat
 icu_52::MessageFormat::DummyFormat::clone() const
 icu_52::MessageFormat::DummyFormat::format(icu_52::Formattable const&, icu_52::UnicodeString&, UErrorCode&) const
 icu_52::MessageFormat::DummyFormat::format(icu_52::Formattable const&, icu_52::UnicodeString&, icu_52::FieldPosition&, UErrorCode&) const
@@ -4240,7 +4341,6 @@ icu_52::MessageFormat::MessageFormat(icu_52::MessageFormat const&)
 icu_52::MessageFormat::MessageFormat(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::MessageFormat::MessageFormat(icu_52::UnicodeString const&, icu_52::Locale const&, UErrorCode&)
 icu_52::MessageFormat::MessageFormat(icu_52::UnicodeString const&, icu_52::Locale const&, UParseError&, UErrorCode&)
-icu_52::MessageFormat::PluralSelectorProvider
 icu_52::MessageFormat::PluralSelectorProvider::PluralSelectorProvider(icu_52::MessageFormat const&, UPluralType)
 icu_52::MessageFormat::PluralSelectorProvider::reset()
 icu_52::MessageFormat::PluralSelectorProvider::select(void*, double, UErrorCode&) const
@@ -4318,7 +4418,6 @@ icu_52::MessagePattern::parsePluralStyle(icu_52::UnicodeString const&, UParseErr
 icu_52::MessagePattern::parseSelectStyle(icu_52::UnicodeString const&, UParseError*, UErrorCode&)
 icu_52::MessagePattern::validateArgumentName(icu_52::UnicodeString const&)
 icu_52::MessagePattern::~MessagePattern()
-icu_52::MetaZoneIDsEnumeration
 icu_52::MetaZoneIDsEnumeration::MetaZoneIDsEnumeration()
 icu_52::MetaZoneIDsEnumeration::MetaZoneIDsEnumeration(icu_52::UVector const&)
 icu_52::MetaZoneIDsEnumeration::MetaZoneIDsEnumeration(icu_52::UVector*)
@@ -4329,7 +4428,6 @@ icu_52::MetaZoneIDsEnumeration::getStaticClassID()::classID
 icu_52::MetaZoneIDsEnumeration::reset(UErrorCode&)
 icu_52::MetaZoneIDsEnumeration::snext(UErrorCode&)
 icu_52::MetaZoneIDsEnumeration::~MetaZoneIDsEnumeration()
-icu_52::ModulusSubstitution
 icu_52::ModulusSubstitution::ModulusSubstitution(int, double, icu_52::NFRule const*, icu_52::NFRuleSet const*, icu_52::RuleBasedNumberFormat const*, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::ModulusSubstitution::calcUpperBound(double) const
 icu_52::ModulusSubstitution::composeRuleValue(double, double) const
@@ -4347,13 +4445,10 @@ icu_52::ModulusSubstitution::tokenChar() const
 icu_52::ModulusSubstitution::transformNumber(double) const
 icu_52::ModulusSubstitution::transformNumber(long long) const
 icu_52::ModulusSubstitution::~ModulusSubstitution()
-icu_52::MoonRiseSetCoordFunc
 icu_52::MoonRiseSetCoordFunc::eval(icu_52::CalendarAstronomer::Equatorial&, icu_52::CalendarAstronomer&)
 icu_52::MoonRiseSetCoordFunc::~MoonRiseSetCoordFunc()
-icu_52::MoonTimeAngleFunc
 icu_52::MoonTimeAngleFunc::eval(icu_52::CalendarAstronomer&)
 icu_52::MoonTimeAngleFunc::~MoonTimeAngleFunc()
-icu_52::MultiplierSubstitution
 icu_52::MultiplierSubstitution::calcUpperBound(double) const
 icu_52::MultiplierSubstitution::composeRuleValue(double, double) const
 icu_52::MultiplierSubstitution::getDynamicClassID() const
@@ -4365,7 +4460,6 @@ icu_52::MultiplierSubstitution::tokenChar() const
 icu_52::MultiplierSubstitution::transformNumber(double) const
 icu_52::MultiplierSubstitution::transformNumber(long long) const
 icu_52::MultiplierSubstitution::~MultiplierSubstitution()
-icu_52::NFFactory
 icu_52::NFFactory::create(icu_52::ICUServiceKey const&, icu_52::ICUService const*, UErrorCode&) const
 icu_52::NFFactory::getSupportedIDs(UErrorCode&) const
 icu_52::NFFactory::~NFFactory()
@@ -4401,7 +4495,6 @@ icu_52::NFRuleSet::operator==(icu_52::NFRuleSet const&) const
 icu_52::NFRuleSet::parse(icu_52::UnicodeString const&, icu_52::ParsePosition&, double, icu_52::Formattable&) const
 icu_52::NFRuleSet::parseRules(icu_52::UnicodeString&, icu_52::RuleBasedNumberFormat const*, UErrorCode&)
 icu_52::NFRuleSet::~NFRuleSet()
-icu_52::NFSubstitution
 icu_52::NFSubstitution::NFSubstitution(int, icu_52::NFRuleSet const*, icu_52::RuleBasedNumberFormat const*, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::NFSubstitution::doParse(icu_52::UnicodeString const&, icu_52::ParsePosition&, double, double, signed char, icu_52::Formattable&) const
 icu_52::NFSubstitution::doSubstitution(double, icu_52::UnicodeString&, int) const
@@ -4416,7 +4509,6 @@ icu_52::NFSubstitution::operator==(icu_52::NFSubstitution const&) const
 icu_52::NFSubstitution::setDivisor(int, int, UErrorCode&)
 icu_52::NFSubstitution::toString(icu_52::UnicodeString&) const
 icu_52::NFSubstitution::~NFSubstitution()
-icu_52::NGramParser
 icu_52::NGramParser::NGramParser(int const*, unsigned char const*)
 icu_52::NGramParser::addByte(int)
 icu_52::NGramParser::lookup(int)
@@ -4424,13 +4516,11 @@ icu_52::NGramParser::nextByte(icu_52::InputText*)
 icu_52::NGramParser::parse(icu_52::InputText*)
 icu_52::NGramParser::parseCharacters(icu_52::InputText*)
 icu_52::NGramParser::search(int const*, int)
-icu_52::NGramParser_IBM420
 icu_52::NGramParser_IBM420::NGramParser_IBM420(int const*, unsigned char const*)
 icu_52::NGramParser_IBM420::isLamAlef(int)
 icu_52::NGramParser_IBM420::nextByte(icu_52::InputText*)
 icu_52::NGramParser_IBM420::parseCharacters(icu_52::InputText*)
 icu_52::NOQUOTE_STOPLIST
-icu_52::NameUnicodeTransliterator
 icu_52::NameUnicodeTransliterator::NameUnicodeTransliterator(icu_52::NameUnicodeTransliterator const&)
 icu_52::NameUnicodeTransliterator::NameUnicodeTransliterator(icu_52::UnicodeFilter*)
 icu_52::NameUnicodeTransliterator::clone() const
@@ -4439,7 +4529,6 @@ icu_52::NameUnicodeTransliterator::getStaticClassID()
 icu_52::NameUnicodeTransliterator::getStaticClassID()::classID
 icu_52::NameUnicodeTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPosition&, signed char) const
 icu_52::NameUnicodeTransliterator::~NameUnicodeTransliterator()
-icu_52::NormalizationTransliterator
 icu_52::NormalizationTransliterator::NormalizationTransliterator(icu_52::NormalizationTransliterator const&)
 icu_52::NormalizationTransliterator::NormalizationTransliterator(icu_52::UnicodeString const&, icu_52::Normalizer2 const&)
 icu_52::NormalizationTransliterator::_create(icu_52::UnicodeString const&, icu_52::Transliterator::Token)
@@ -4459,7 +4548,6 @@ icu_52::Normalizer2Factory::getNFDInstance(UErrorCode&)
 icu_52::Normalizer2Impl::getDecomposition(int, unsigned short*, int&) const
 icu_52::Normalizer2Impl::getFCD16FromNormData(int) const
 icu_52::Normalizer::quickCheck(icu_52::UnicodeString const&, UNormalizationMode, int, UErrorCode&)
-icu_52::NullSubstitution
 icu_52::NullSubstitution::calcUpperBound(double) const
 icu_52::NullSubstitution::composeRuleValue(double, double) const
 icu_52::NullSubstitution::doParse(icu_52::UnicodeString const&, icu_52::ParsePosition&, double, double, signed char, icu_52::Formattable&) const
@@ -4474,7 +4562,6 @@ icu_52::NullSubstitution::tokenChar() const
 icu_52::NullSubstitution::transformNumber(double) const
 icu_52::NullSubstitution::transformNumber(long long) const
 icu_52::NullSubstitution::~NullSubstitution()
-icu_52::NullTransliterator
 icu_52::NullTransliterator::NullTransliterator()
 icu_52::NullTransliterator::clone() const
 icu_52::NullTransliterator::getDynamicClassID() const
@@ -4482,7 +4569,6 @@ icu_52::NullTransliterator::getStaticClassID()
 icu_52::NullTransliterator::getStaticClassID()::classID
 icu_52::NullTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPosition&, signed char) const
 icu_52::NullTransliterator::~NullTransliterator()
-icu_52::NumberFormat
 icu_52::NumberFormat::NumberFormat()
 icu_52::NumberFormat::NumberFormat(icu_52::NumberFormat const&)
 icu_52::NumberFormat::createCurrencyInstance(UErrorCode&)
@@ -4542,9 +4628,7 @@ icu_52::NumberFormat::setMinimumIntegerDigits(int)
 icu_52::NumberFormat::setParseIntegerOnly(signed char)
 icu_52::NumberFormat::unregister(void const*, UErrorCode&)
 icu_52::NumberFormat::~NumberFormat()
-icu_52::NumberFormatFactory
 icu_52::NumberFormatFactory::~NumberFormatFactory()
-icu_52::NumberingSystem
 icu_52::NumberingSystem::NumberingSystem()
 icu_52::NumberingSystem::NumberingSystem(icu_52::NumberingSystem const&)
 icu_52::NumberingSystem::createInstance(UErrorCode&)
@@ -4566,7 +4650,6 @@ icu_52::NumberingSystem::setDesc(icu_52::UnicodeString)
 icu_52::NumberingSystem::setName(char const*)
 icu_52::NumberingSystem::setRadix(int)
 icu_52::NumberingSystem::~NumberingSystem()
-icu_52::NumeratorSubstitution
 icu_52::NumeratorSubstitution::LTLT
 icu_52::NumeratorSubstitution::calcUpperBound(double) const
 icu_52::NumeratorSubstitution::composeRuleValue(double, double) const
@@ -4581,7 +4664,6 @@ icu_52::NumeratorSubstitution::tokenChar() const
 icu_52::NumeratorSubstitution::transformNumber(double) const
 icu_52::NumeratorSubstitution::transformNumber(long long) const
 icu_52::NumeratorSubstitution::~NumeratorSubstitution()
-icu_52::NumsysNameEnumeration
 icu_52::NumsysNameEnumeration::NumsysNameEnumeration(icu_52::UVector*, UErrorCode&)
 icu_52::NumsysNameEnumeration::count(UErrorCode&) const
 icu_52::NumsysNameEnumeration::getDynamicClassID() const
@@ -4594,7 +4676,6 @@ icu_52::OPEN
 icu_52::OPEN_DELIM
 icu_52::OTHER_STRING
 icu_52::OUTLYING_OCEANIA_REGION_ID
-icu_52::OlsonTimeZone
 icu_52::OlsonTimeZone::OlsonTimeZone(UResourceBundle const*, UResourceBundle const*, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::OlsonTimeZone::OlsonTimeZone(icu_52::OlsonTimeZone const&)
 icu_52::OlsonTimeZone::checkTransitionRules(UErrorCode&) const
@@ -4625,7 +4706,6 @@ icu_52::OlsonTimeZone::setRawOffset(int)
 icu_52::OlsonTimeZone::transitionTimeInSeconds(short) const
 icu_52::OlsonTimeZone::useDaylightTime() const
 icu_52::OlsonTimeZone::~OlsonTimeZone()
-icu_52::OrConstraint
 icu_52::OrConstraint::OrConstraint()
 icu_52::OrConstraint::OrConstraint(icu_52::OrConstraint const&)
 icu_52::OrConstraint::add()
@@ -4663,7 +4743,6 @@ icu_52::PRAGMA_NFC_RULES
 icu_52::PRAGMA_NFD_RULES
 icu_52::PRAGMA_USE
 icu_52::PRAGMA_VARIABLE_RANGE
-icu_52::ParseData
 icu_52::ParseData::ParseData(icu_52::TransliterationRuleData const*, icu_52::UVector const*, icu_52::Hashtable const*)
 icu_52::ParseData::isMatcher(int)
 icu_52::ParseData::isReplacer(int)
@@ -4672,7 +4751,6 @@ icu_52::ParseData::lookupMatcher(int) const
 icu_52::ParseData::parseReference(icu_52::UnicodeString const&, icu_52::ParsePosition&, int) const
 icu_52::ParseData::~ParseData()
 icu_52::ParsePosition::~ParsePosition()
-icu_52::PatternMap
 icu_52::PatternMap::PatternMap()
 icu_52::PatternMap::add(icu_52::UnicodeString const&, icu_52::PtnSkeleton const&, icu_52::UnicodeString const&, signed char, UErrorCode&)
 icu_52::PatternMap::copyFrom(icu_52::PatternMap const&, UErrorCode&)
@@ -4682,7 +4760,6 @@ icu_52::PatternMap::getHeader(unsigned short)
 icu_52::PatternMap::getPatternFromBasePattern(icu_52::UnicodeString&, signed char&)
 icu_52::PatternMap::getPatternFromSkeleton(icu_52::PtnSkeleton&, icu_52::PtnSkeleton const**)
 icu_52::PatternMap::~PatternMap()
-icu_52::PatternMapIterator
 icu_52::PatternMapIterator::PatternMapIterator()
 icu_52::PatternMapIterator::getSkeleton()
 icu_52::PatternMapIterator::hasNext()
@@ -4693,7 +4770,6 @@ icu_52::PatternProps::isIdentifier(unsigned short const*, int)
 icu_52::PatternProps::isWhiteSpace(int)
 icu_52::PatternProps::skipWhiteSpace(unsigned short const*, int)
 icu_52::PatternProps::trimWhiteSpace(unsigned short const*, int&)
-icu_52::PersianCalendar
 icu_52::PersianCalendar::PersianCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::PersianCalendar::PersianCalendar(icu_52::PersianCalendar const&)
 icu_52::PersianCalendar::clone() const
@@ -4715,13 +4791,11 @@ icu_52::PersianCalendar::isLeapYear(int)
 icu_52::PersianCalendar::monthStart(int, int) const
 icu_52::PersianCalendar::yearStart(int)
 icu_52::PersianCalendar::~PersianCalendar()
-icu_52::PluralAvailableLocalesEnumeration
 icu_52::PluralAvailableLocalesEnumeration::PluralAvailableLocalesEnumeration(UErrorCode&)
 icu_52::PluralAvailableLocalesEnumeration::count(UErrorCode&) const
 icu_52::PluralAvailableLocalesEnumeration::next(int*, UErrorCode&)
 icu_52::PluralAvailableLocalesEnumeration::reset(UErrorCode&)
 icu_52::PluralAvailableLocalesEnumeration::~PluralAvailableLocalesEnumeration()
-icu_52::PluralFormat
 icu_52::PluralFormat::PluralFormat(UErrorCode&)
 icu_52::PluralFormat::PluralFormat(icu_52::Locale const&, UErrorCode&)
 icu_52::PluralFormat::PluralFormat(icu_52::Locale const&, UPluralType, UErrorCode&)
@@ -4733,9 +4807,7 @@ icu_52::PluralFormat::PluralFormat(icu_52::PluralFormat const&)
 icu_52::PluralFormat::PluralFormat(icu_52::PluralRules const&, UErrorCode&)
 icu_52::PluralFormat::PluralFormat(icu_52::PluralRules const&, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::PluralFormat::PluralFormat(icu_52::UnicodeString const&, UErrorCode&)
-icu_52::PluralFormat::PluralSelector
 icu_52::PluralFormat::PluralSelector::~PluralSelector()
-icu_52::PluralFormat::PluralSelectorAdapter
 icu_52::PluralFormat::PluralSelectorAdapter::reset()
 icu_52::PluralFormat::PluralSelectorAdapter::select(void*, double, UErrorCode&) const
 icu_52::PluralFormat::PluralSelectorAdapter::~PluralSelectorAdapter()
@@ -4761,7 +4833,6 @@ icu_52::PluralFormat::setLocale(icu_52::Locale const&, UErrorCode&)
 icu_52::PluralFormat::setNumberFormat(icu_52::NumberFormat const*, UErrorCode&)
 icu_52::PluralFormat::toPattern(icu_52::UnicodeString&)
 icu_52::PluralFormat::~PluralFormat()
-icu_52::PluralKeywordEnumeration
 icu_52::PluralKeywordEnumeration::PluralKeywordEnumeration(icu_52::RuleChain*, UErrorCode&)
 icu_52::PluralKeywordEnumeration::count(UErrorCode&) const
 icu_52::PluralKeywordEnumeration::getDynamicClassID() const
@@ -4770,7 +4841,6 @@ icu_52::PluralKeywordEnumeration::getStaticClassID()::classID
 icu_52::PluralKeywordEnumeration::reset(UErrorCode&)
 icu_52::PluralKeywordEnumeration::snext(UErrorCode&)
 icu_52::PluralKeywordEnumeration::~PluralKeywordEnumeration()
-icu_52::PluralRuleParser
 icu_52::PluralRuleParser::PluralRuleParser()
 icu_52::PluralRuleParser::charType(unsigned short)
 icu_52::PluralRuleParser::checkSyntax(UErrorCode&)
@@ -4779,7 +4849,6 @@ icu_52::PluralRuleParser::getNextToken(UErrorCode&)
 icu_52::PluralRuleParser::getNumberValue(icu_52::UnicodeString const&)
 icu_52::PluralRuleParser::parse(icu_52::UnicodeString const&, icu_52::PluralRules*, UErrorCode&)
 icu_52::PluralRuleParser::~PluralRuleParser()
-icu_52::PluralRules
 icu_52::PluralRules::PluralRules(UErrorCode&)
 icu_52::PluralRules::PluralRules(icu_52::PluralRules const&)
 icu_52::PluralRules::clone() const
@@ -4806,10 +4875,8 @@ icu_52::PluralRules::select(double) const
 icu_52::PluralRules::select(icu_52::FixedDecimal const&) const
 icu_52::PluralRules::select(int) const
 icu_52::PluralRules::~PluralRules()
-icu_52::PtnElem
 icu_52::PtnElem::PtnElem(icu_52::UnicodeString const&, icu_52::UnicodeString const&)
 icu_52::PtnElem::~PtnElem()
-icu_52::PtnSkeleton
 icu_52::PtnSkeleton::PtnSkeleton()
 icu_52::PtnSkeleton::PtnSkeleton(icu_52::PtnSkeleton const&)
 icu_52::PtnSkeleton::equals(icu_52::PtnSkeleton const&)
@@ -4817,7 +4884,6 @@ icu_52::PtnSkeleton::getBaseSkeleton()
 icu_52::PtnSkeleton::getSkeleton()
 icu_52::PtnSkeleton::operator=(icu_52::PtnSkeleton const&)
 icu_52::PtnSkeleton::~PtnSkeleton()
-icu_52::Quantifier
 icu_52::Quantifier::Quantifier(icu_52::Quantifier const&)
 icu_52::Quantifier::Quantifier(icu_52::UnicodeFunctor*, unsigned int, unsigned int)
 icu_52::Quantifier::addMatchSetTo(icu_52::UnicodeSet&) const
@@ -4839,7 +4905,6 @@ icu_52::RCEBuffer::~RCEBuffer()
 icu_52::RegexCImpl::appendReplacement(icu_52::RegularExpression*, unsigned short const*, int, unsigned short**, int*, UErrorCode*)
 icu_52::RegexCImpl::appendTail(icu_52::RegularExpression*, unsigned short**, int*, UErrorCode*)
 icu_52::RegexCImpl::split(icu_52::RegularExpression*, unsigned short*, int, int*, unsigned short**, int, UErrorCode*)
-icu_52::RegexCompile
 icu_52::RegexCompile::RegexCompile(icu_52::RegexPattern*, UErrorCode&)
 icu_52::RegexCompile::blockTopLoc(signed char)
 icu_52::RegexCompile::compile(UText*, UParseError&, UErrorCode&)
@@ -4869,7 +4934,6 @@ icu_52::RegexCompile::setEval(int)
 icu_52::RegexCompile::setPushOp(int)
 icu_52::RegexCompile::stripNOPs()
 icu_52::RegexCompile::~RegexCompile()
-icu_52::RegexMatcher
 icu_52::RegexMatcher::IncrementTime(UErrorCode&)
 icu_52::RegexMatcher::MatchAt(long long, signed char, UErrorCode&)
 icu_52::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)
@@ -4953,7 +5017,6 @@ icu_52::RegexMatcher::start64(int, UErrorCode&) const
 icu_52::RegexMatcher::useAnchoringBounds(signed char)
 icu_52::RegexMatcher::useTransparentBounds(signed char)
 icu_52::RegexMatcher::~RegexMatcher()
-icu_52::RegexPattern
 icu_52::RegexPattern::RegexPattern()
 icu_52::RegexPattern::RegexPattern(icu_52::RegexPattern const&)
 icu_52::RegexPattern::clone() const
@@ -4985,7 +5048,6 @@ icu_52::RegexStaticSets::cleanup()
 icu_52::RegexStaticSets::gStaticSets
 icu_52::RegexStaticSets::initGlobals(UErrorCode*)
 icu_52::RegexStaticSets::~RegexStaticSets()
-icu_52::Region
 icu_52::Region::Region()
 icu_52::Region::cleanupRegionData()
 icu_52::Region::contains(icu_52::Region const&) const
@@ -5004,7 +5066,6 @@ icu_52::Region::loadRegionData()
 icu_52::Region::operator!=(icu_52::Region const&) const
 icu_52::Region::operator==(icu_52::Region const&) const
 icu_52::Region::~Region()
-icu_52::RegionNameEnumeration
 icu_52::RegionNameEnumeration::RegionNameEnumeration(icu_52::UVector*, UErrorCode&)
 icu_52::RegionNameEnumeration::count(UErrorCode&) const
 icu_52::RegionNameEnumeration::getDynamicClassID() const
@@ -5015,7 +5076,6 @@ icu_52::RegionNameEnumeration::snext(UErrorCode&)
 icu_52::RegionNameEnumeration::~RegionNameEnumeration()
 icu_52::RegularExpression::RegularExpression()
 icu_52::RegularExpression::~RegularExpression()
-icu_52::RelativeDateFormat
 icu_52::RelativeDateFormat::RelativeDateFormat(UDateFormatStyle, UDateFormatStyle, icu_52::Locale const&, UErrorCode&)
 icu_52::RelativeDateFormat::RelativeDateFormat(icu_52::RelativeDateFormat const&)
 icu_52::RelativeDateFormat::applyPatterns(icu_52::UnicodeString const&, icu_52::UnicodeString const&, UErrorCode&)
@@ -5038,7 +5098,6 @@ icu_52::RelativeDateFormat::toPattern(icu_52::UnicodeString&, UErrorCode&) const
 icu_52::RelativeDateFormat::toPatternDate(icu_52::UnicodeString&, UErrorCode&) const
 icu_52::RelativeDateFormat::toPatternTime(icu_52::UnicodeString&, UErrorCode&) const
 icu_52::RelativeDateFormat::~RelativeDateFormat()
-icu_52::RemoveTransliterator
 icu_52::RemoveTransliterator::RemoveTransliterator()
 icu_52::RemoveTransliterator::clone() const
 icu_52::RemoveTransliterator::getDynamicClassID() const
@@ -5051,7 +5110,6 @@ icu_52::RemoveTransliterator_create(icu_52::UnicodeString const&, icu_52::Transl
 icu_52::Replaceable::clone() const
 icu_52::Replaceable::hasMetaData() const
 icu_52::Replaceable::~Replaceable()
-icu_52::ReplaceableGlue
 icu_52::ReplaceableGlue::ReplaceableGlue(void**, UReplaceableCallbacks*)
 icu_52::ReplaceableGlue::copy(int, int, int)
 icu_52::ReplaceableGlue::extractBetween(int, int, icu_52::UnicodeString&) const
@@ -5070,10 +5128,8 @@ icu_52::ResourceBundle::getStringEx(char const*, UErrorCode&) const
 icu_52::ResourceBundle::getStringEx(int, UErrorCode&) const
 icu_52::ResourceBundle::~ResourceBundle()
 icu_52::Resource_Fields
-icu_52::RiseSetCoordFunc
 icu_52::RiseSetCoordFunc::eval(icu_52::CalendarAstronomer::Equatorial&, icu_52::CalendarAstronomer&)
 icu_52::RiseSetCoordFunc::~RiseSetCoordFunc()
-icu_52::RuleBasedCollator
 icu_52::RuleBasedCollator::RuleBasedCollator()
 icu_52::RuleBasedCollator::RuleBasedCollator(icu_52::Locale const&, UErrorCode&)
 icu_52::RuleBasedCollator::RuleBasedCollator(icu_52::RuleBasedCollator const&)
@@ -5123,7 +5179,6 @@ icu_52::RuleBasedCollator::setVariableTop(icu_52::UnicodeString const&, UErrorCo
 icu_52::RuleBasedCollator::setVariableTop(unsigned int, UErrorCode&)
 icu_52::RuleBasedCollator::setVariableTop(unsigned short const*, int, UErrorCode&)
 icu_52::RuleBasedCollator::~RuleBasedCollator()
-icu_52::RuleBasedNumberFormat
 icu_52::RuleBasedNumberFormat::RuleBasedNumberFormat(icu_52::RuleBasedNumberFormat const&)
 icu_52::RuleBasedNumberFormat::RuleBasedNumberFormat(icu_52::URBNFRuleSetTag, icu_52::Locale const&, UErrorCode&)
 icu_52::RuleBasedNumberFormat::RuleBasedNumberFormat(icu_52::UnicodeString const&, UParseError&, UErrorCode&)
@@ -5165,7 +5220,6 @@ icu_52::RuleBasedNumberFormat::setDefaultRuleSet(icu_52::UnicodeString const&, U
 icu_52::RuleBasedNumberFormat::setLenient(signed char)
 icu_52::RuleBasedNumberFormat::stripWhitespace(icu_52::UnicodeString&)
 icu_52::RuleBasedNumberFormat::~RuleBasedNumberFormat()
-icu_52::RuleBasedTimeZone
 icu_52::RuleBasedTimeZone::RuleBasedTimeZone(icu_52::RuleBasedTimeZone const&)
 icu_52::RuleBasedTimeZone::RuleBasedTimeZone(icu_52::UnicodeString const&, icu_52::InitialTimeZoneRule*)
 icu_52::RuleBasedTimeZone::addTransitionRule(icu_52::TimeZoneRule*, UErrorCode&)
@@ -5201,7 +5255,6 @@ icu_52::RuleBasedTimeZone::operator==(icu_52::TimeZone const&) const
 icu_52::RuleBasedTimeZone::setRawOffset(int)
 icu_52::RuleBasedTimeZone::useDaylightTime() const
 icu_52::RuleBasedTimeZone::~RuleBasedTimeZone()
-icu_52::RuleBasedTransliterator
 icu_52::RuleBasedTransliterator::RuleBasedTransliterator(icu_52::RuleBasedTransliterator const&)
 icu_52::RuleBasedTransliterator::RuleBasedTransliterator(icu_52::UnicodeString const&, icu_52::TransliterationRuleData const*, icu_52::UnicodeFilter*)
 icu_52::RuleBasedTransliterator::RuleBasedTransliterator(icu_52::UnicodeString const&, icu_52::TransliterationRuleData*, signed char)
@@ -5216,7 +5269,6 @@ icu_52::RuleBasedTransliterator::handleGetSourceSet(icu_52::UnicodeSet&) const
 icu_52::RuleBasedTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPosition&, signed char) const
 icu_52::RuleBasedTransliterator::toRules(icu_52::UnicodeString&, signed char) const
 icu_52::RuleBasedTransliterator::~RuleBasedTransliterator()
-icu_52::RuleChain
 icu_52::RuleChain::RuleChain()
 icu_52::RuleChain::RuleChain(icu_52::RuleChain const&)
 icu_52::RuleChain::dumpRules(icu_52::UnicodeString&)
@@ -5252,7 +5304,6 @@ icu_52::SQUOTE_STOPLIST
 icu_52::STD_STR
 icu_52::STYLE_PARSE_FLAGS
 icu_52::SUPPRESS_NEGATIVE_PREFIX
-icu_52::SameValueSubstitution
 icu_52::SameValueSubstitution::SameValueSubstitution(int, icu_52::NFRuleSet const*, icu_52::RuleBasedNumberFormat const*, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::SameValueSubstitution::calcUpperBound(double) const
 icu_52::SameValueSubstitution::composeRuleValue(double, double) const
@@ -5286,7 +5337,6 @@ icu_52::ScriptSet::set(UScriptCode, UErrorCode&)
 icu_52::ScriptSet::setAll()
 icu_52::ScriptSet::test(UScriptCode, UErrorCode&) const
 icu_52::ScriptSet::~ScriptSet()
-icu_52::SearchIterator
 icu_52::SearchIterator::SearchIterator()
 icu_52::SearchIterator::SearchIterator(icu_52::CharacterIterator&, icu_52::BreakIterator*)
 icu_52::SearchIterator::SearchIterator(icu_52::SearchIterator const&)
@@ -5314,7 +5364,6 @@ icu_52::SearchIterator::setMatchStart(int)
 icu_52::SearchIterator::setText(icu_52::CharacterIterator&, UErrorCode&)
 icu_52::SearchIterator::setText(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::SearchIterator::~SearchIterator()
-icu_52::SelectFormat
 icu_52::SelectFormat::SelectFormat(icu_52::SelectFormat const&)
 icu_52::SelectFormat::SelectFormat(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::SelectFormat::applyPattern(icu_52::UnicodeString const&, UErrorCode&)
@@ -5331,7 +5380,6 @@ icu_52::SelectFormat::operator==(icu_52::Format const&) const
 icu_52::SelectFormat::parseObject(icu_52::UnicodeString const&, icu_52::Formattable&, icu_52::ParsePosition&) const
 icu_52::SelectFormat::toPattern(icu_52::UnicodeString&)
 icu_52::SelectFormat::~SelectFormat()
-icu_52::SimpleDateFormat
 icu_52::SimpleDateFormat::SimpleDateFormat(UErrorCode&)
 icu_52::SimpleDateFormat::SimpleDateFormat(icu_52::DateFormat::EStyle, icu_52::DateFormat::EStyle, icu_52::Locale const&, UErrorCode&)
 icu_52::SimpleDateFormat::SimpleDateFormat(icu_52::Locale const&, UErrorCode&)
@@ -5404,12 +5452,10 @@ icu_52::SimpleDateFormatStaticSets::SimpleDateFormatStaticSets(UErrorCode&)
 icu_52::SimpleDateFormatStaticSets::cleanup()
 icu_52::SimpleDateFormatStaticSets::getIgnorables(UDateFormatField)
 icu_52::SimpleDateFormatStaticSets::~SimpleDateFormatStaticSets()
-icu_52::SimpleNumberFormatFactory
 icu_52::SimpleNumberFormatFactory::SimpleNumberFormatFactory(icu_52::Locale const&, signed char)
 icu_52::SimpleNumberFormatFactory::getSupportedIDs(int&, UErrorCode&) const
 icu_52::SimpleNumberFormatFactory::visible() const
 icu_52::SimpleNumberFormatFactory::~SimpleNumberFormatFactory()
-icu_52::SimpleTimeZone
 icu_52::SimpleTimeZone::STATICMONTHLENGTH
 icu_52::SimpleTimeZone::SimpleTimeZone(icu_52::SimpleTimeZone const&)
 icu_52::SimpleTimeZone::SimpleTimeZone(int, icu_52::UnicodeString const&)
@@ -5455,7 +5501,6 @@ icu_52::SimpleTimeZone::setStartRule(int, int, int, int, icu_52::SimpleTimeZone:
 icu_52::SimpleTimeZone::setStartYear(int)
 icu_52::SimpleTimeZone::useDaylightTime() const
 icu_52::SimpleTimeZone::~SimpleTimeZone()
-icu_52::SortKeyByteSink
 icu_52::SortKeyByteSink::Append(char const*, int)
 icu_52::SortKeyByteSink::GetAppendBuffer(int, int, char*, int, int*)
 icu_52::SortKeyByteSink::~SortKeyByteSink()
@@ -5472,7 +5517,6 @@ icu_52::SpoofData::reserveSpace(int, UErrorCode&)
 icu_52::SpoofData::reset()
 icu_52::SpoofData::validateDataVersion(icu_52::SpoofDataHeader const*, UErrorCode&)
 icu_52::SpoofData::~SpoofData()
-icu_52::SpoofImpl
 icu_52::SpoofImpl::ScanHex(unsigned short const*, int, int, UErrorCode&)
 icu_52::SpoofImpl::SpoofImpl()
 icu_52::SpoofImpl::SpoofImpl(icu_52::SpoofData*, UErrorCode&)
@@ -5501,7 +5545,6 @@ icu_52::StringEnumeration::setChars(char const*, int, UErrorCode&)
 icu_52::StringEnumeration::snext(UErrorCode&)
 icu_52::StringEnumeration::unext(int*, UErrorCode&)
 icu_52::StringEnumeration::~StringEnumeration()
-icu_52::StringLocalizationInfo
 icu_52::StringLocalizationInfo::create(icu_52::UnicodeString const&, UParseError&, UErrorCode&)
 icu_52::StringLocalizationInfo::getDisplayName(int, int) const
 icu_52::StringLocalizationInfo::getLocaleName(int) const
@@ -5509,7 +5552,6 @@ icu_52::StringLocalizationInfo::getNumberOfDisplayLocales() const
 icu_52::StringLocalizationInfo::getNumberOfRuleSets() const
 icu_52::StringLocalizationInfo::getRuleSetName(int) const
 icu_52::StringLocalizationInfo::~StringLocalizationInfo()
-icu_52::StringMatcher
 icu_52::StringMatcher::StringMatcher(icu_52::StringMatcher const&)
 icu_52::StringMatcher::StringMatcher(icu_52::UnicodeString const&, int, int, int, icu_52::TransliterationRuleData const&)
 icu_52::StringMatcher::addMatchSetTo(icu_52::UnicodeSet&) const
@@ -5529,7 +5571,6 @@ icu_52::StringMatcher::toReplacer() const
 icu_52::StringMatcher::toReplacerPattern(icu_52::UnicodeString&, signed char) const
 icu_52::StringMatcher::~StringMatcher()
 icu_52::StringPiece::StringPiece(char const*)
-icu_52::StringReplacer
 icu_52::StringReplacer::StringReplacer(icu_52::StringReplacer const&)
 icu_52::StringReplacer::StringReplacer(icu_52::UnicodeString const&, icu_52::TransliterationRuleData const*)
 icu_52::StringReplacer::StringReplacer(icu_52::UnicodeString const&, int, icu_52::TransliterationRuleData const*)
@@ -5543,7 +5584,6 @@ icu_52::StringReplacer::setData(icu_52::TransliterationRuleData const*)
 icu_52::StringReplacer::toReplacer() const
 icu_52::StringReplacer::toReplacerPattern(icu_52::UnicodeString&, signed char) const
 icu_52::StringReplacer::~StringReplacer()
-icu_52::StringSearch
 icu_52::StringSearch::StringSearch(icu_52::StringSearch const&)
 icu_52::StringSearch::StringSearch(icu_52::UnicodeString const&, icu_52::CharacterIterator&, icu_52::Locale const&, icu_52::BreakIterator*, UErrorCode&)
 icu_52::StringSearch::StringSearch(icu_52::UnicodeString const&, icu_52::CharacterIterator&, icu_52::RuleBasedCollator*, icu_52::BreakIterator*, UErrorCode&)
@@ -5568,14 +5608,12 @@ icu_52::StringSearch::setPattern(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::StringSearch::setText(icu_52::CharacterIterator&, UErrorCode&)
 icu_52::StringSearch::setText(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::StringSearch::~StringSearch()
-icu_52::SunTimeAngleFunc
 icu_52::SunTimeAngleFunc::eval(icu_52::CalendarAstronomer&)
 icu_52::SunTimeAngleFunc::~SunTimeAngleFunc()
 icu_52::SymbolTable::~SymbolTable()
 icu_52::TRANSLITERATE
 icu_52::TRANSLITERATE_FROM
 icu_52::TRANSLITERATE_TO
-icu_52::TZEnumeration
 icu_52::TZEnumeration::clone() const
 icu_52::TZEnumeration::count(UErrorCode&) const
 icu_52::TZEnumeration::create(USystemTimeZoneType, char const*, int const*, UErrorCode&)
@@ -5587,7 +5625,6 @@ icu_52::TZEnumeration::getStaticClassID()::classID
 icu_52::TZEnumeration::reset(UErrorCode&)
 icu_52::TZEnumeration::snext(UErrorCode&)
 icu_52::TZEnumeration::~TZEnumeration()
-icu_52::TZGNCore
 icu_52::TZGNCore::TZGNCore(icu_52::Locale const&, UErrorCode&)
 icu_52::TZGNCore::cleanup()
 icu_52::TZGNCore::findBestMatch(icu_52::UnicodeString const&, int, unsigned int, icu_52::UnicodeString&, UTimeZoneFormatTimeType&, UErrorCode&) const
@@ -5603,12 +5640,10 @@ icu_52::TZGNCore::initialize(icu_52::Locale const&, UErrorCode&)
 icu_52::TZGNCore::loadStrings(icu_52::UnicodeString const&)
 icu_52::TZGNCore::~TZGNCore()
 icu_52::TZID_GMT
-icu_52::TZNames
 icu_52::TZNames::TZNames(unsigned short const**)
 icu_52::TZNames::createInstance(UResourceBundle*, char const*, icu_52::UnicodeString const&)
 icu_52::TZNames::getName(UTimeZoneNameType)
 icu_52::TZNames::~TZNames()
-icu_52::TaiwanCalendar
 icu_52::TaiwanCalendar::TaiwanCalendar(icu_52::Locale const&, UErrorCode&)
 icu_52::TaiwanCalendar::TaiwanCalendar(icu_52::TaiwanCalendar const&)
 icu_52::TaiwanCalendar::clone() const
@@ -5624,7 +5659,6 @@ icu_52::TaiwanCalendar::handleGetLimit(UCalendarDateFields, icu_52::Calendar::EL
 icu_52::TaiwanCalendar::haveDefaultCentury() const
 icu_52::TaiwanCalendar::operator=(icu_52::TaiwanCalendar const&)
 icu_52::TaiwanCalendar::~TaiwanCalendar()
-icu_52::TextTrieMap
 icu_52::TextTrieMap::TextTrieMap(signed char, void (*)(void*))
 icu_52::TextTrieMap::addChildNode(icu_52::CharacterNode*, unsigned short, UErrorCode&)
 icu_52::TextTrieMap::buildTrie(UErrorCode&)
@@ -5637,10 +5671,8 @@ icu_52::TextTrieMap::putImpl(icu_52::UnicodeString const&, void*, UErrorCode&)
 icu_52::TextTrieMap::search(icu_52::CharacterNode*, icu_52::UnicodeString const&, int, int, icu_52::TextTrieMapSearchResultHandler*, UErrorCode&) const
 icu_52::TextTrieMap::search(icu_52::UnicodeString const&, int, icu_52::TextTrieMapSearchResultHandler*, UErrorCode&) const
 icu_52::TextTrieMap::~TextTrieMap()
-icu_52::TextTrieMapSearchResultHandler
 icu_52::TextTrieMapSearchResultHandler::~TextTrieMapSearchResultHandler()
 icu_52::TextTrieMutex
-icu_52::TimeArrayTimeZoneRule
 icu_52::TimeArrayTimeZoneRule::TimeArrayTimeZoneRule(icu_52::TimeArrayTimeZoneRule const&)
 icu_52::TimeArrayTimeZoneRule::TimeArrayTimeZoneRule(icu_52::UnicodeString const&, int, int, double const*, int, icu_52::DateTimeRule::TimeRuleType)
 icu_52::TimeArrayTimeZoneRule::clone() const
@@ -5661,7 +5693,6 @@ icu_52::TimeArrayTimeZoneRule::operator!=(icu_52::TimeZoneRule const&) const
 icu_52::TimeArrayTimeZoneRule::operator=(icu_52::TimeArrayTimeZoneRule const&)
 icu_52::TimeArrayTimeZoneRule::operator==(icu_52::TimeZoneRule const&) const
 icu_52::TimeArrayTimeZoneRule::~TimeArrayTimeZoneRule()
-icu_52::TimeUnit
 icu_52::TimeUnit::TimeUnit(icu_52::TimeUnit const&)
 icu_52::TimeUnit::TimeUnit(icu_52::TimeUnit::UTimeUnitFields)
 icu_52::TimeUnit::clone() const
@@ -5673,7 +5704,6 @@ icu_52::TimeUnit::getTimeUnitField() const
 icu_52::TimeUnit::operator=(icu_52::TimeUnit const&)
 icu_52::TimeUnit::operator==(icu_52::UObject const&) const
 icu_52::TimeUnit::~TimeUnit()
-icu_52::TimeUnitAmount
 icu_52::TimeUnitAmount::TimeUnitAmount(double, icu_52::TimeUnit::UTimeUnitFields, UErrorCode&)
 icu_52::TimeUnitAmount::TimeUnitAmount(icu_52::Formattable const&, icu_52::TimeUnit::UTimeUnitFields, UErrorCode&)
 icu_52::TimeUnitAmount::TimeUnitAmount(icu_52::TimeUnitAmount const&)
@@ -5686,7 +5716,6 @@ icu_52::TimeUnitAmount::getTimeUnitField() const
 icu_52::TimeUnitAmount::operator=(icu_52::TimeUnitAmount const&)
 icu_52::TimeUnitAmount::operator==(icu_52::UObject const&) const
 icu_52::TimeUnitAmount::~TimeUnitAmount()
-icu_52::TimeUnitFormat
 icu_52::TimeUnitFormat::TimeUnitFormat(UErrorCode&)
 icu_52::TimeUnitFormat::TimeUnitFormat(icu_52::Locale const&, UErrorCode&)
 icu_52::TimeUnitFormat::TimeUnitFormat(icu_52::Locale const&, UTimeUnitFormatStyle, UErrorCode&)
@@ -5712,7 +5741,6 @@ icu_52::TimeUnitFormat::setLocale(icu_52::Locale const&, UErrorCode&)
 icu_52::TimeUnitFormat::setNumberFormat(icu_52::NumberFormat const&, UErrorCode&)
 icu_52::TimeUnitFormat::setup(UErrorCode&)
 icu_52::TimeUnitFormat::~TimeUnitFormat()
-icu_52::TimeZone
 icu_52::TimeZone::TimeZone()
 icu_52::TimeZone::TimeZone(icu_52::TimeZone const&)
 icu_52::TimeZone::TimeZone(icu_52::UnicodeString const&)
@@ -5755,7 +5783,6 @@ icu_52::TimeZone::operator==(icu_52::TimeZone const&) const
 icu_52::TimeZone::parseCustomID(icu_52::UnicodeString const&, int&, int&, int&, int&)
 icu_52::TimeZone::setDefault(icu_52::TimeZone const&)
 icu_52::TimeZone::~TimeZone()
-icu_52::TimeZoneFormat
 icu_52::TimeZoneFormat::TimeZoneFormat(icu_52::Locale const&, UErrorCode&)
 icu_52::TimeZoneFormat::TimeZoneFormat(icu_52::TimeZoneFormat const&)
 icu_52::TimeZoneFormat::adoptTimeZoneNames(icu_52::TimeZoneNames*)
@@ -5831,7 +5858,6 @@ icu_52::TimeZoneGenericNameMatchInfo::getMatchLength(int) const
 icu_52::TimeZoneGenericNameMatchInfo::getTimeZoneID(int, icu_52::UnicodeString&) const
 icu_52::TimeZoneGenericNameMatchInfo::size() const
 icu_52::TimeZoneGenericNameMatchInfo::~TimeZoneGenericNameMatchInfo()
-icu_52::TimeZoneGenericNames
 icu_52::TimeZoneGenericNames::TimeZoneGenericNames()
 icu_52::TimeZoneGenericNames::clone() const
 icu_52::TimeZoneGenericNames::createInstance(icu_52::Locale const&, UErrorCode&)
@@ -5841,8 +5867,6 @@ icu_52::TimeZoneGenericNames::getGenericLocationName(icu_52::UnicodeString const
 icu_52::TimeZoneGenericNames::operator!=(icu_52::TimeZoneGenericNames const&) const
 icu_52::TimeZoneGenericNames::operator==(icu_52::TimeZoneGenericNames const&) const
 icu_52::TimeZoneGenericNames::~TimeZoneGenericNames()
-icu_52::TimeZoneNames
-icu_52::TimeZoneNames::MatchInfoCollection
 icu_52::TimeZoneNames::MatchInfoCollection::MatchInfoCollection()
 icu_52::TimeZoneNames::MatchInfoCollection::addMetaZone(UTimeZoneNameType, int, icu_52::UnicodeString const&, UErrorCode&)
 icu_52::TimeZoneNames::MatchInfoCollection::addZone(UTimeZoneNameType, int, icu_52::UnicodeString const&, UErrorCode&)
@@ -5857,7 +5881,6 @@ icu_52::TimeZoneNames::createInstance(icu_52::Locale const&, UErrorCode&)
 icu_52::TimeZoneNames::getDisplayName(icu_52::UnicodeString const&, UTimeZoneNameType, double, icu_52::UnicodeString&) const
 icu_52::TimeZoneNames::getExemplarLocationName(icu_52::UnicodeString const&, icu_52::UnicodeString&) const
 icu_52::TimeZoneNames::~TimeZoneNames()
-icu_52::TimeZoneNamesDelegate
 icu_52::TimeZoneNamesDelegate::TimeZoneNamesDelegate()
 icu_52::TimeZoneNamesDelegate::TimeZoneNamesDelegate(icu_52::Locale const&, UErrorCode&)
 icu_52::TimeZoneNamesDelegate::clone() const
@@ -5872,7 +5895,6 @@ icu_52::TimeZoneNamesDelegate::getTimeZoneDisplayName(icu_52::UnicodeString cons
 icu_52::TimeZoneNamesDelegate::operator!=(icu_52::TimeZoneNames const&) const
 icu_52::TimeZoneNamesDelegate::operator==(icu_52::TimeZoneNames const&) const
 icu_52::TimeZoneNamesDelegate::~TimeZoneNamesDelegate()
-icu_52::TimeZoneNamesImpl
 icu_52::TimeZoneNamesImpl::TimeZoneNamesImpl(icu_52::Locale const&, UErrorCode&)
 icu_52::TimeZoneNamesImpl::cleanup()
 icu_52::TimeZoneNamesImpl::clone() const
@@ -5891,7 +5913,6 @@ icu_52::TimeZoneNamesImpl::loadStrings(icu_52::UnicodeString const&)
 icu_52::TimeZoneNamesImpl::loadTimeZoneNames(icu_52::UnicodeString const&)
 icu_52::TimeZoneNamesImpl::operator==(icu_52::TimeZoneNames const&) const
 icu_52::TimeZoneNamesImpl::~TimeZoneNamesImpl()
-icu_52::TimeZoneRule
 icu_52::TimeZoneRule::TimeZoneRule(icu_52::TimeZoneRule const&)
 icu_52::TimeZoneRule::TimeZoneRule(icu_52::UnicodeString const&, int, int)
 icu_52::TimeZoneRule::getDSTSavings() const
@@ -5902,7 +5923,6 @@ icu_52::TimeZoneRule::operator!=(icu_52::TimeZoneRule const&) const
 icu_52::TimeZoneRule::operator=(icu_52::TimeZoneRule const&)
 icu_52::TimeZoneRule::operator==(icu_52::TimeZoneRule const&) const
 icu_52::TimeZoneRule::~TimeZoneRule()
-icu_52::TimeZoneTransition
 icu_52::TimeZoneTransition::TimeZoneTransition()
 icu_52::TimeZoneTransition::TimeZoneTransition(double, icu_52::TimeZoneRule const&, icu_52::TimeZoneRule const&)
 icu_52::TimeZoneTransition::TimeZoneTransition(icu_52::TimeZoneTransition const&)
@@ -5922,7 +5942,6 @@ icu_52::TimeZoneTransition::setFrom(icu_52::TimeZoneRule const&)
 icu_52::TimeZoneTransition::setTime(double)
 icu_52::TimeZoneTransition::setTo(icu_52::TimeZoneRule const&)
 icu_52::TimeZoneTransition::~TimeZoneTransition()
-icu_52::TitlecaseTransliterator
 icu_52::TitlecaseTransliterator::TitlecaseTransliterator()
 icu_52::TitlecaseTransliterator::TitlecaseTransliterator(icu_52::TitlecaseTransliterator const&)
 icu_52::TitlecaseTransliterator::clone() const
@@ -5931,7 +5950,6 @@ icu_52::TitlecaseTransliterator::getStaticClassID()
 icu_52::TitlecaseTransliterator::getStaticClassID()::classID
 icu_52::TitlecaseTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPosition&, signed char) const
 icu_52::TitlecaseTransliterator::~TitlecaseTransliterator()
-icu_52::TransliterationRule
 icu_52::TransliterationRule::TransliterationRule(icu_52::TransliterationRule&)
 icu_52::TransliterationRule::TransliterationRule(icu_52::UnicodeString const&, int, int, icu_52::UnicodeString const&, int, int, icu_52::UnicodeFunctor**, int, signed char, signed char, icu_52::TransliterationRuleData const*, UErrorCode&)
 icu_52::TransliterationRule::addSourceSetTo(icu_52::UnicodeSet&) const
@@ -5950,7 +5968,6 @@ icu_52::TransliterationRuleData::lookup(int) const
 icu_52::TransliterationRuleData::lookupMatcher(int) const
 icu_52::TransliterationRuleData::lookupReplacer(int) const
 icu_52::TransliterationRuleData::~TransliterationRuleData()
-icu_52::TransliterationRuleSet
 icu_52::TransliterationRuleSet::TransliterationRuleSet(UErrorCode&)
 icu_52::TransliterationRuleSet::TransliterationRuleSet(icu_52::TransliterationRuleSet const&)
 icu_52::TransliterationRuleSet::addRule(icu_52::TransliterationRule*, UErrorCode&)
@@ -5961,7 +5978,6 @@ icu_52::TransliterationRuleSet::setData(icu_52::TransliterationRuleData const*)
 icu_52::TransliterationRuleSet::toRules(icu_52::UnicodeString&, signed char) const
 icu_52::TransliterationRuleSet::transliterate(icu_52::Replaceable&, UTransPosition&, signed char)
 icu_52::TransliterationRuleSet::~TransliterationRuleSet()
-icu_52::Transliterator
 icu_52::Transliterator::Transliterator(icu_52::Transliterator const&)
 icu_52::Transliterator::Transliterator(icu_52::UnicodeString const&, icu_52::UnicodeFilter*)
 icu_52::Transliterator::_countAvailableSources()
@@ -6068,7 +6084,6 @@ icu_52::TransliteratorParser::setSegmentObject(int, icu_52::StringMatcher*, UErr
 icu_52::TransliteratorParser::setVariableRange(int, int, UErrorCode&)
 icu_52::TransliteratorParser::syntaxError(UErrorCode, icu_52::UnicodeString const&, int, UErrorCode&)
 icu_52::TransliteratorParser::~TransliteratorParser()
-icu_52::TransliteratorRegistry::Enumeration
 icu_52::TransliteratorRegistry::Enumeration::Enumeration(icu_52::TransliteratorRegistry const&)
 icu_52::TransliteratorRegistry::Enumeration::count(UErrorCode&) const
 icu_52::TransliteratorRegistry::Enumeration::getDynamicClassID() const
@@ -6115,7 +6130,6 @@ icu_52::TransliteratorSpec::next()
 icu_52::TransliteratorSpec::reset()
 icu_52::TransliteratorSpec::setupNext()
 icu_52::TransliteratorSpec::~TransliteratorSpec()
-icu_52::UCollationPCE
 icu_52::UCollationPCE::UCollationPCE(UCollationElements*)
 icu_52::UCollationPCE::getDynamicClassID() const
 icu_52::UCollationPCE::getStaticClassID()
@@ -6124,7 +6138,6 @@ icu_52::UCollationPCE::init(UCollator const*)
 icu_52::UCollationPCE::~UCollationPCE()
 icu_52::UDATPG_ItemFormat
 icu_52::UMALQURA_MONTHLENGTH
-icu_52::UMemory
 icu_52::UMemory::operator delete(void*)
 icu_52::UMemory::operator delete[](void*)
 icu_52::UMemory::operator new(unsigned long)
@@ -6181,7 +6194,6 @@ icu_52::UVector::sort(signed char (*)(UElement, UElement), UErrorCode&)
 icu_52::UVector::sortWithUComparator(int (*)(void const*, void const*, void const*), void const*, UErrorCode&)
 icu_52::UVector::toArray(void**) const
 icu_52::UVector::~UVector()
-icu_52::UnescapeTransliterator
 icu_52::UnescapeTransliterator::UnescapeTransliterator(icu_52::UnescapeTransliterator const&)
 icu_52::UnescapeTransliterator::UnescapeTransliterator(icu_52::UnicodeString const&, unsigned short const*)
 icu_52::UnescapeTransliterator::clone() const
@@ -6195,7 +6207,6 @@ icu_52::UnicodeFunctor::toMatcher() const
 icu_52::UnicodeFunctor::toReplacer() const
 icu_52::UnicodeFunctor::~UnicodeFunctor()
 icu_52::UnicodeMatcher::~UnicodeMatcher()
-icu_52::UnicodeNameTransliterator
 icu_52::UnicodeNameTransliterator::UnicodeNameTransliterator(icu_52::UnicodeFilter*)
 icu_52::UnicodeNameTransliterator::UnicodeNameTransliterator(icu_52::UnicodeNameTransliterator const&)
 icu_52::UnicodeNameTransliterator::clone() const
@@ -6204,7 +6215,6 @@ icu_52::UnicodeNameTransliterator::getStaticClassID()
 icu_52::UnicodeNameTransliterator::getStaticClassID()::classID
 icu_52::UnicodeNameTransliterator::handleTransliterate(icu_52::Replaceable&, UTransPosition&, signed char) const
 icu_52::UnicodeNameTransliterator::~UnicodeNameTransliterator()
-icu_52::UnicodeReplacer
 icu_52::UnicodeReplacer::~UnicodeReplacer()
 icu_52::UnicodeSet::UnicodeSet()
 icu_52::UnicodeSet::UnicodeSet(icu_52::UnicodeSet const&)
@@ -6294,7 +6304,6 @@ icu_52::UnicodeString::unescape() const
 icu_52::UnicodeString::unescapeAt(int&) const
 icu_52::UnicodeString::~UnicodeString()
 icu_52::UnicodeStringAppendable::~UnicodeStringAppendable()
-icu_52::UppercaseTransliterator
 icu_52::UppercaseTransliterator::UppercaseTransliterator()
 icu_52::UppercaseTransliterator::UppercaseTransliterator(icu_52::UppercaseTransliterator const&)
 icu_52::UppercaseTransliterator::clone() const
@@ -6310,7 +6319,6 @@ icu_52::VTZWriter::write(icu_52::UnicodeString const&)
 icu_52::VTZWriter::write(unsigned short const*)
 icu_52::VTZWriter::write(unsigned short)
 icu_52::VTZWriter::~VTZWriter()
-icu_52::VTimeZone
 icu_52::VTimeZone::VTimeZone()
 icu_52::VTimeZone::VTimeZone(icu_52::VTimeZone const&)
 icu_52::VTimeZone::appendUNTIL(icu_52::VTZWriter&, icu_52::UnicodeString const&, UErrorCode&) const
@@ -6374,18 +6382,15 @@ icu_52::ZNStringPool::get(icu_52::UnicodeString const&, UErrorCode&)
 icu_52::ZNStringPool::get(unsigned short const*, UErrorCode&)
 icu_52::ZNStringPool::~ZNStringPool()
 icu_52::ZNStringPoolChunk::ZNStringPoolChunk()
-icu_52::ZNameSearchHandler
 icu_52::ZNameSearchHandler::ZNameSearchHandler(unsigned int)
 icu_52::ZNameSearchHandler::getMatches(int&)
 icu_52::ZNameSearchHandler::handleMatch(int, icu_52::CharacterNode const*, UErrorCode&)
 icu_52::ZNameSearchHandler::~ZNameSearchHandler()
-icu_52::ZNames
 icu_52::ZNames::ZNames(unsigned short const**)
 icu_52::ZNames::createInstance(UResourceBundle*, char const*)
 icu_52::ZNames::getName(UTimeZoneNameType)
 icu_52::ZNames::loadData(UResourceBundle*, char const*)
 icu_52::ZNames::~ZNames()
-icu_52::ZoneIdMatchHandler
 icu_52::ZoneIdMatchHandler::ZoneIdMatchHandler()
 icu_52::ZoneIdMatchHandler::getID()
 icu_52::ZoneIdMatchHandler::getMatchLen()
@@ -6753,15 +6758,12 @@ keyTypeData
 keyTypePattern
 l$0E1
 languages
-latnLcomplex 
 lfff.
 links
 localeDisplayPattern
 locales
 locales_ordinals
 locdspnm.cpp
-long long Hcw
-long long[A\A]A^A_]
 maleTaints
 mapTimezones
 max3Trail
@@ -6834,6 +6836,7 @@ numeric
 numfmt.cpp
 numfmt_cleanup()
 numsys.cpp
+o M;ox
 olsontz.cpp
 onOffSub
 operator delete(void*)
@@ -6907,8 +6910,11 @@ resource
 rules
 rulesOptions
 r}ffff.
+s(IcV
 s0[A^]
+s@[A^]
 sH[A^]
+s`[A^]
 scientificFormat
 script
 scriptset.cpp
@@ -6918,9 +6924,6 @@ second
 selfmt.cpp
 separator
 short
-short(IcV
-short@[A^]
-short`[A^]
 simpletz.cpp
 smpdtfmt.cpp
 smpdtfst.cpp
@@ -7013,19 +7016,36 @@ stsearch.cpp
 supplementalData
 surroundingMatch
 symbols
+t	D9s<H
+t	[A\A^A_]
+t	[A^]
+t HcSt1
+t ff.
 t$ IcT$,H
 t$HH)
 t$HMc
+t)HcO
+t,fffff.
+t-Ic|$(H
 t1fff.
 t1ffffff.
 t3ffffff.
 t6ffffff.
+t;Ik^
+t;ffffff.
+t=Ic|$,H
+t=Ic~pH
+t>	I9
+t?ff.
 tAIc|$(H
 tBff.
 tDIcVp
 tKff.
 tPE;.}K
-taE;long double
+t]HcV
+t`IcD$(A;D$,}&H
+t`IcQ
+taE;e
 taiwncal.cpp
 tbHcx
 tblcoll.cpp
@@ -7529,7 +7549,7 @@ tznames_impl.cpp
 tzrule.cpp
 tztrans.cpp
 u"ffff.
-u#...!M
+u#z!M
 u)IcL$
 u+D;Z0}8A
 u-I;Oxt'
@@ -7538,16 +7558,17 @@ u/HcO
 u0HcP
 u0I;D$
 u0I;Gxt*
+u3HcG
 u4I;Oxt.H
 u4I;Wxt.H
 u8fffff.
-u9L;__float128
+u9L;g
 u=ffff.
 u@I+u H
 uFD"U
-uHD"unsigned long
+uHD"m
 uKzIH
-uMD"unsigned long
+uMD"m
 uNzLH
 uQD"U
 uTHcO
@@ -7597,7 +7618,7 @@ ucurr_resetCurrencyList(UEnumeration*, UErrorCode*)
 udat.cpp
 udateintervalformat.cpp
 udatpg.cpp
-ufM;}long long
+ufM;}x
 uhash_compareTokens(UElement, UElement)
 uhash_hashTokens(UElement)
 ulocdata.c
@@ -7606,27 +7627,6 @@ unesctrn.cpp
 uni2name.cpp
 units
 unitsShort
-unsigned __int128 M;ox
-unsigned char[A\A]A^A_]
-unsigned char[A^A_]
-unsigned charcomplex [A\A^A_]
-unsigned short	D9s<H
-unsigned short	[A\A^A_]
-unsigned short	[A^]
-unsigned short HcSt1
-unsigned short ff.
-unsigned short)HcO
-unsigned short,fffff.
-unsigned short-Ic|$(H
-unsigned short;Ik^
-unsigned short;ffffff.
-unsigned short=Ic|$,H
-unsigned short=Ic~pH
-unsigned short>	I9
-unsigned short?ff.
-unsigned short]HcV
-unsigned short`IcD$(A;D$,}&H
-unsigned short`IcQ
 unum.cpp
 unumsys.cpp
 upluralrules.cpp
@@ -7649,8 +7649,8 @@ uspoof_conf.cpp
 uspoof_getSkeletonUnicodeString_52(USpoofChecker const*, unsigned int, icu_52::UnicodeString const&, icu_52::UnicodeString&, UErrorCode*)
 uspoof_impl.cpp
 uspoof_swap(): Spoof Data header is invalid.
-uspoof_swap(): data format %x.%x.%x.%02x (format version %02x %02x %02x %02x) is not recognized
-uspoof_swap(): too few bytes (%double after ICU Data header) for spoof data.
+uspoof_swap(): data format %02x.%02x.%02x.%02x (format version %02x %02x %02x %02x) is not recognized
+uspoof_swap(): too few bytes (%d after ICU Data header) for spoof data.
 uspoof_wsconf.cpp
 utmscale.c
 utrans.cpp
@@ -7892,10 +7892,10 @@ vtable for icu_52::ZNames
 vtable for icu_52::ZoneIdMatchHandler
 vtzone.cpp
 vzone.cpp
+w(IcD
 wBfffff.
 wNI9E(rH
-wchar_t(IcD
-wchar_t^I9\$(rWE
+w^I9\$(rWE
 weekData
 weekday
 windows-1250
@@ -7906,6 +7906,8 @@ windows-1254
 windows-1255
 windows-1256
 windowsZones
+x Hcw
+x[A\A]A^A_]
 years
 yffffff.
 zone-long
@@ -7932,21 +7934,21 @@ ztrans.cpp
 |$ H9
 |$(D9
 |$0fE
+|$2fE
 |$4fE
 |$@H)
 |$hLc
 |_HcE
-|fE
 } HcG(;G,}
 } HcG(;G,}$H
 } HcG(;G,}%H
 } HcG(;G,}3H
 } HcG(;G,}4H
 } Hc_(;_
-} Lcg(D;__float128
+} Lcg(D;g
 }(uXH
 }w1;z0}(A
-}~D;unsigned long
+}~D;m
 ~	[A\A^A_]
 ~ HcG(;G
 ~ HcG(;G,}$H
@@ -7954,7 +7956,7 @@ ztrans.cpp
 ~(fff.
 ~*ffffff.
 ~+fffff.
-~8D;__float128
+~8D;g
 ~8Mcn@M
 ~8fffff.
 ~?fff.

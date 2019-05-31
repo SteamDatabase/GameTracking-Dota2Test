@@ -1,0 +1,39 @@
+,^_[]
+/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/usr/lib/libSystem.B.dylib
+/usr/lib/libgcc_s.1.dylib
+/usr/lib/libiconv.2.dylib
+@loader_path/libglib-2.0.dylib
+@loader_path/libgthread-2.0.dylib
+GThread
+GThread system no longer supports custom thread implementations.
+GThread system no longer supports errorcheck mutexes.
+__DATA
+__LINKEDIT
+__TEXT
+___stack_chk_fail
+___stack_chk_guard
+__cstring
+__data
+__dyld
+__dyld_func_lookup
+__eh_frame
+__got
+__la_symbol_ptr
+__stub_helper
+__stubs
+__symbol_stub
+__text
+__unwind_info
+_g_assertion_message_expr
+_g_logv
+_g_thread_init
+_g_thread_init_with_errorcheck_mutexes
+_g_warning
+dyld__mach_header
+dyld_stub_binding_helper
+ffff.
+g_thread_init_with_errorcheck_mutexes
+gthread-impl.c
+vtable == NULL

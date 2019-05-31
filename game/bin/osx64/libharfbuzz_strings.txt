@@ -1,9 +1,9 @@
 									
 										
-	'	8	I	Z	long long	
-	...	|	|	|	|	|	|	|	|	|	|
-	...-909-90909-909,,-909,9	|	|
-	{	"agxy""	:	909	}	}	}""	:	909	}	}ll""	:	9	}	}xy""	:	909	}	}""	:	909	}	}""	:	9Az"...	}	}	]	{
+	'	8	I	Z	x	
+	z	|	|	|	|	|	|	|	|	|	|
+	z-909-90909-909,,-909,9	|	|
+	{	"agxy""	:	909	}	}	}""	:	909	}	}ll""	:	9	}	}xy""	:	909	}	}""	:	909	}	}""	:	9Az"z	}	}	]	{
       @@@     @@@              @                @              0   0   `
       @`P@` 
      0  @    0      
@@ -319,6 +319,7 @@
  MKTtl
  MLKxh
  MOKkvd
+ MORrom
  MRBmym
  MRKkdt
  MSAast
@@ -433,6 +434,7 @@
  RCDcy
  RCEcrl
  RCEcrm
+ RCMcrx
  RCOom
  RDMmdy
  REBbfq
@@ -453,6 +455,7 @@
  RNKkri
  ROCkxc
  ROKkoi
+ ROMas
  RONnco
  RONnod
  RRCcs
@@ -573,10 +576,7 @@
  ^_[]
  ` 0  @
  hmttn
- long long restrict char::*complex &
- short signed char::*&
- unsigned long unsigned __int128 restrict&::*
-!allocated_var_bytes[int]
+!allocated_var_bytes[i]
 !buffer->has_separate_output ()
 !has_reph
 !this->ran_out_of_room
@@ -589,8 +589,8 @@ $0000P@p@@
 %00 0P0p0@ 
 %3333
 %UUUU)
-%double glyphs
-%short refcount=%double
+%d glyphs
+%s refcount=%d
 &&&&&
 (!buffer->len && buffer->content_type == HB_BUFFER_CONTENT_TYPE_INVALID) || buffer->content_type == HB_BUFFER_CONTENT_TYPE_GLYPHS
 (^_[]
@@ -608,9 +608,9 @@ $0000P@p@@
 *******.******
 *******.**.***
 , !"#$#$
-,"ax":%double,"ay":%double
+,"ax":%d,"ay":%d
 ,"cl":%u
-,"dx":%double,"dy":%double
+,"dx":%d,"dy":%d
 ,&'(*+)
 ,+,-.
 ,,,,,
@@ -778,7 +778,7 @@ $0000P@p@@
 /usr/lib/libSystem.B.dylib
 /usr/lib/libgcc_s.1.dylib
 0         0     00          00000           000    0 0      
-0 == strcmp (allocated_var_owner[int], owner)
+0 == strcmp (allocated_var_owner[i], owner)
 0 p      0    @0   00000000000   
 0.9.35
 00   0
@@ -833,7 +833,7 @@ $0000P@p@@
 @  @ @ 
 @  @ @0
 @ @ P
-@%double,%double
+@%d,%d
 @0 0 @@0          00
 @00p@0P`
 @0` P0   000P0@@@           00P0 
@@ -866,8 +866,8 @@ AAAAA
 APPLY
 AWAVAUATSH
 AWAVSH
-Allocating var bytes %d..%double for %short
-Asserting var bytes %d..%double for %short
+Allocating var bytes %d..%d for %s
+Asserting var bytes %d..%d for %s
 BUFFER
 BUSGA
 BUSGH
@@ -875,9 +875,9 @@ BUSGSOPG
 CDDDDDDDDD
 CLOSURE
 COLLECT_GLYPHS
-Current var allocation: %short
+Current var allocation: %s
 DENIED
-Deallocating var bytes %d..%double for %short
+Deallocating var bytes %d..%d for %s
 EEEEEEEEEEEEEEEEEEEEEEEEEE
 FAILED
 FEDGH
@@ -2765,7 +2765,7 @@ aehhH
 agil1
 all_shapers
 allocate_var
-allocated_var_bytes[int]
+allocated_var_bytes[i]
 altrH
 apply_string
 arabic
@@ -3361,8 +3361,8 @@ byte_i < 8 && byte_i + count <= 8
 calling mprotect on [%p..%p] (%lu bytes)
 canon_map
 carfH
-check_array [%p..%p] (%double*%double=%ld bytes) in [%p..%p]
-check_range [%p..%p] (%double bytes) in [%p..%p]
+check_array [%p..%p] (%d*%d=%ld bytes) in [%p..%p]
+check_range [%p..%p] (%d bytes) in [%p..%p]
 cinuH
 clear_syllables(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
 collect_features_arabic(hb_ot_shape_planner_t*)
@@ -3408,13 +3408,13 @@ dupped successfully -> %p
 dyld__mach_header
 dyld_stub_binding_helper
 end [%p..%p] %u edit requests
-end [%p..%p] serialized %double bytes; %short
+end [%p..%p] serialized %d bytes; %s
 extend
 extend_min
 ezis9
 ezisH
-face=%p num_features=%double shaper_list=%p
-failed to get pagesize: %short
+face=%p num_features=%d shaper_list=%p
+failed to get pagesize: %s
 fallback
 false
 ferp1
@@ -3446,6 +3446,7 @@ gilcH
 glyph_index
 glyph_props
 guess_segment_properties
+h[A^A_]
 handle_variation_selector_cluster(hb_ot_shape_normalize_context_t const*, unsigned int, bool)
 hangul
 hangul_features
@@ -3833,7 +3834,9 @@ hb_utf_t<unsigned short, true>::strlen(unsigned short const*)
 hebrew
 hijklmnopqrstuvwxyz{|}~
 horizontal_features
-idx %double codepoint %u
+i <= len
+i <= out_len + (len - idx)
+idx %d codepoint %u
 idx >= count
 indic
 indic_category
@@ -3858,8 +3861,6 @@ initial_reordering_symbol_cluster(hb_ot_shape_plan_t const*, hb_face_t*, hb_buff
 initial_reordering_vowel_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int)
 insert_dotted_circles(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
 inserted into cache
-int <= len
-int <= out_len + (len - idx)
 int MAX<int>(int const&, int const&)
 int MIN<int>(int const&, int const&)
 int OT::ArrayOf<OT::EncodingRecord, OT::IntType<unsigned short, 2u> >::lsearch<OT::EncodingRecord>(OT::EncodingRecord const&) const
@@ -3881,29 +3882,27 @@ is_zero_width_char(hb_font_t*, unsigned int)
 joining_table
 joining_type(unsigned int)
 kram$
+l^_[]
 lang_compare_first_component(char const*, char const*)
 lang_equal(hb_language_impl_t const*, void const*)
 lang_find_or_insert(char const*)
 lang_matches(char const*, char const*)
 langs
 lcolH
-len < ARRAY_LENGTH (short)
+len < ARRAY_LENGTH (s)
 lig_props
 ligature_table
-long long-hbot
-long long[A\A]A^A_]
-long^_[]
 losianif2nif3nifidem2demtini
 make_room_for
 making writable -> FAILED
 making writable inplace
 matra_position(unsigned int, indic_position_t)
-may_edit(%u) [%p..%p] (%double bytes) in [%p..%p] -> %short
+may_edit(%u) [%p..%p] (%d bytes) in [%p..%p] -> %s
 mltrH
 mondH
 mongolian_variation_selectors(hb_buffer_t*)
 move_to
-mprotect failed: %short
+mprotect failed: %s
 mrtlH
 myanmar
 myanmar_category
@@ -3914,8 +3913,8 @@ nrek1
 nrekH
 ntalH
 nuke_joiners(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
-num_features=%double shaper_func=%p
-num_features=%double shaper_list=%p
+num_features=%d shaper_func=%p
+num_features=%d shaper_list=%p
 num_items > 0
 omjlomjvomjt0
 operator&(hb_ot_map_feature_flags_t, hb_ot_map_feature_flags_t)
@@ -3953,7 +3952,7 @@ parse_one_feature(char const**, char const*, hb_feature_t*)
 parse_space(char const**, char const*)
 parse_uint(char const**, char const*, unsigned int*)
 parse_uint(char const*, char const*, unsigned int*)
-passed first round with %double edits; going for second round
+passed first round with %d edits; going for second round
 pmccH
 pmcclcolkramkmkmgilr
 pmcclcolkramkmkmgilrtlacgilcsrucnrekagiltlcrtrev
@@ -3968,7 +3967,7 @@ ra_chars
 recategorize_combining_class(unsigned int, unsigned int)
 reference_table(hb_face_t*, unsigned int, void*)
 reph_pos != REPH_POS_DONT_CARE
-requested %double edits in second round; FAILLING
+requested %d edits in second round; FAILLING
 retry
 rmunH
 rtttttttttt
@@ -4098,7 +4097,6 @@ typename context_t::return_t OT::SubstLookupSubTable::dispatch(context_t *, unsi
 unicode_props0
 unicode_props1
 uniscribe-bug-compatible
-unsigned char[A^A_]
 unsigned int ARRAY_LENGTH<LangTag, 531u>(LangTag const (&) [531u])
 unsigned int ARRAY_LENGTH<LangTagLong, 7u>(LangTagLong const (&) [7u])
 unsigned int ARRAY_LENGTH<OT::IntType<unsigned short, 2u>, 2u>(OT::IntType<unsigned short, 2u> const (&) [2u])
@@ -4229,6 +4227,7 @@ void* hb_object_get_user_data<hb_shape_plan_t>(hb_shape_plan_t*, hb_user_data_ke
 void* hb_object_get_user_data<hb_unicode_funcs_t>(hb_unicode_funcs_t*, hb_user_data_key_t*)
 would_substitute_feature_t::init(hb_ot_map_t const*, unsigned int, bool)
 would_substitute_feature_t::would_substitute(unsigned int const*, unsigned int, hb_face_t*) const
+x-hbot
 x42mym
 x4TLFD
 x4rmym
@@ -4236,6 +4235,7 @@ xHltuo
 xX2mym
 xXTLFD
 xXrmym
+x[A\A]A^A_]
 xhaveD
 xhlmaT
 xhmylM

@@ -1,13 +1,13 @@
-	Expected %short, encountered %s.
-	Invalid variable type "%short"!
+	Expected %s, encountered %s.
+	Invalid variable type "%s"!
 	LogMultiline
 	ParseToken
-	Value is actually %short, code is expecting signed char %short value
-	Value is actually type %short, code is expecting signed char %short type value
+	Value is actually %s, code is expecting a %s value
+	Value is actually type %s, code is expecting a %s type value
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	child: "%short"
+	child: "%s"
 	fffff.
-	parent (wins): "%short"
+	parent (wins): "%s"
 	plitWString
 	strnlen
       
@@ -17,21 +17,21 @@
                                             // 'detailed' allows for walls of text that are usually useful
                                             // 'essential' turns on vital logs
                                             // 'max' allows everything
-                CDefaultKeyValuesErrorSpew
+                26CDefaultKeyValuesErrorSpew
            detailed, max                     // 'off' turns all spew off
         H
-      <+/->ConsoleOnly                      // Enable/disable signed char flag to send text only to the console.
+      <+/->ConsoleOnly                      // Enable/disable a flag to send text only to the console.
     log_color <channel specifiers> <hex color>
     log_color renderdebug bsp FFC08040      // Sets the 'renderdebug' and 'bsp' channels to the RGBA color (64, 128, 192, 255).
     log_flags +developer +donotecho         // Turns on the LCF_DO_NOT_ECHO flag for all channels with the 'developer' tag.
     log_flags <channel specifiers> <+/-flag>
     log_verbosity +console -developer verbose   // Sets minimum spew level of channels with the tag
     log_verbosity <channel specifiers> <verbosity>
-   "%short"
-   %short
-   - %short
+   "%s"
+   %s
+   - %s
   @``0 
- ( def. "%short" )
+ ( def. "%s" )
  (once).
  @0 @@
  ReadToken overflow
@@ -39,8 +39,8 @@
  [A\A^A_]
  [A^]
  ffff.
- max. %float
- min. %float
+ max. %f
+ min. %f
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
@@ -66,9 +66,9 @@
 !pExternalAllocation
 !pOutBuffer->IsText() || pOutBuffer->ContainsCRLF()
 !s_pTempAllocator
-"%short" 
-"%short" = "%short"
-"%short","%short",%short,"%short"
+"%s" 
+"%s" = "%s"
+"%s","%s",%s,"%s"
 "ffffff.
 #base
 #base is NULL 
@@ -79,36 +79,36 @@
 $$t4M
 %%-%ds 
 %-120s
-%-120s - %short
+%-120s - %s
 %-32s
 %-32s    
 %-4d    %-32s    %-10s    
 %-4s    %-32s    %-10s    %-10s    %-32s    %-32s
 %-8.3f
-%-80s : %-16s : %-32s : %short
-%3i convars/concommands for [%short]
+%-80s : %-16s : %-32s : %s
+%3i convars/concommands for [%s]
 %3i total convars/concommands
 %fffff.
-%int %int %int %int
-%short %char%short
-%short %double
-%short %short
-%short %short %short %short
-%short %short -nominidumps
-%short: string format requested %double chars
+%i %i %i %i
+%s %c%s
+%s %d
+%s %s
+%s %s %s %s
+%s %s -nominidumps
+%s: string format requested %d chars
 &YA1H
 &YA1L
 &ffffff.
 'ffff.
 ( (m_alignment-1) & (uintp)m_pBase ) == 0
-( __int128 - 1 ) * nBlockSize < num
 ( alignment >= 4 ) && ( m_alignment == alignment )
 ( m_nCurrDataOffset & 0x3 ) == 0
+( n - 1 ) * nBlockSize < num
 ( nChangeCallbackIndex != 0 ) && ( nChangeCallbackIndex < (1 << CHANGE_CALLBACK_INDEX_BIT_COUNT) )
 ( ndxBucket >= 0 ) && ( ndxBucket < 65536 )
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
 (((uintp)pNew & 0x3) == 0)
-(*%short*), 
+(*%s*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
 (intp)this % 16 == 0
@@ -121,11 +121,11 @@ $$t4M
 )fff.
 )fffff.
 )ffffff.
-*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConCommand "%s" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 +K Hc
 +K<Hc
-,>L;int v2
+,>L;i v2
 ,@~cH
 ,ffff.
 ,ffffff.
@@ -198,38 +198,116 @@ $$t4M
 0x%016llX
 0x%08X    
 1) tag specifiers: +/-tag1 +/-tag2 ...      // Narrows down to channels with & without given tags.
+10CJobThread
 10CUtlString10CUtlMemoryIS2_iEEb
+10ConCommand
+10IAppSystem
+10ICvarQuery
+11CFunctorJob
+11CThreadPool
+11IRefCounted
+11IThreadPool
+12CEmptyConVar
+12CEventSystem
+12CRefCounted1I11IRefCounted20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1I11IThreadPool20CRefCountServiceBaseILb1E6CRefMTEE
+12IEventSystem
+13COneTimeEvent
 13COneTimeEvent8AllocateEv
+13CProcessUtils
+13CWorkerThread
+13IProcessUtils
+14CBaseAppSystemI10ICvarQueryE
+14CBaseAppSystemI12IEventSystemE
+14CBaseAppSystemI13IProcessUtilsE
+14CBaseAppSystemI14ITestScriptMgrE
+14CBaseAppSystemI20IConfigurationSystemE
+14CBaseAppSystemI21IUtlStringTokenSystemE
+14CBaseAppSystemI5ICvarE
+14CTestScriptMgr
+14ConCommandBase
+14ITestScriptMgr
+15CTier0AppSystemI12IEventSystemE
+15CTier0AppSystemI13IProcessUtilsE
+15CTier0AppSystemI14ITestScriptMgrE
+15CTier0AppSystemI20IConfigurationSystemE
+15CTier1AppSystemI12IEventSystemLi0EE
+15CTier1AppSystemI13IProcessUtilsLi0EE
+15CTier1AppSystemI14ITestScriptMgrLi0EE
+15CTier1AppSystemI20IConfigurationSystemLi0EE
+16CDefaultAccessor
+16CKeyValuesSystem
+16CProcessPipeRead
+16ICommandCallback
+16IGlobalSymbolMap
+16IKeyValuesSystem
+17CDefaultCvarQuery
+17CGlobalThreadPool
+17CPooledFunctorJob
+18CUtlCharConversion
+18ITSHashConstructorI8CEventIdE
+18ITSHashConstructorIN21CUtlStringTokenSystem21CTokenStringAndSourceEE
+19CDmSymbolTableLarge
+19CUtlNoEscConversion
+19IKeyValuesErrorSpew
 1CGaussianRandomStream
 1EP20IUniformRandomStream
 1RandomFloatEff
 1V_SplitString2InPlacePcPPKciR10CUtlVectorIS1_10CUtlMemoryIS1_iEE
 2) channel names: name1 name2 ...           // Lists channels by name.
+20CConfigurationSystem
+20CRefCountServiceBaseILb1E6CRefMTE
+20CUniformRandomStream
 20GenerateRandomNumberEv
+20IConfigurationSystem
+20IUniformRandomStream
+21CUtlCStringConversion
+21CUtlStringTokenSystem
+21IUtlStringTokenSystem
+22IFiberThreadWorkerPool
+23CSplitScreenAddedConVar
+23IConCommandBaseAccessor
+24IAsyncScheduledFunctions
+25CConCommandMemberAccessorI5CCvarE
+25CDefaultTSHashConstructorI8CEventIdE
+26ICommandCompletionCallback
 29K }
 2EP20IUniformRandomStream
+30CAsyncScheduledFunctionManager
 3V_SplitStringPKcS0_R10CUtlVectorI
 3ffff.
 3ffffff.
 49K }
 49S |}
 4AttachToStreamEP20IUniformRandomStream
+4CJob
 4RandomFloatExpEfff
+4vHct
+5CCvar
+5ICvar
+6ConVar
+6fffff.
+7IConVar
 7SetSeedEi
+8CFmtStrNILi1024ELb0EE
+8CFmtStrNILi256ELb0EE
+8CProcess
+8IProcess
 8[A\A]A^A_]
 8[A^A_]
 8ffff.
 8ffffff.
+9IPipeRead
 9RandomIntEii
-9S |signed char
-9S |unsigned int
+9S |a
+9S |j
 ;L9'u
 ;L97u
-<#L;unsigned long long v2
+<#L;y v2
 <$L9?u
 <(9{ |jI
 </script>
-<4M;} void"
+<4M;} v"
 <NULL>
 <invalid handle>
 <null>
@@ -316,6 +394,7 @@ $$t4M
 @_LoggingSystem_SetChannelFlags
 @_LoggingSystem_SetChannelVerbosity
 @_LoggingSystem_TagName
+@_Msg
 @_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_FileExists
@@ -415,7 +494,6 @@ $$t4M
 @___stderrp
 @___tolower
 @__exit
-@__float128 short::*
 @_chdir
 @_close
 @_dup
@@ -488,12 +566,12 @@ A;Mx|
 A;O ~
 A;\$@|
 A;](vFH
-A;]long long|
+A;]x|
 A;_8|
 A;_X|
 A;}Pu
 ACCESSIBLE_FROM_THREADS
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARARAp
 ARCHIVE
 ARCHIVE_XBOX
@@ -541,25 +619,25 @@ AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
 AsyncScheduledFunctions
-Attempt to set different default group for config value '%short'
-Attempt to set different default values for config value '%short'
+Attempt to set different default group for config value '%s'
+Attempt to set different default values for config value '%s'
 Attempted resume when not suspended
-Attempted to access global configuration value "%short" as if it was signed char per-user value!
-Attempted to access per-user configuration value "%short" with signed char bogus slot #!
+Attempted to access global configuration value "%s" as if it was a per-user value!
+Attempted to access per-user configuration value "%s" with a bogus slot #!
 Attempted to add job to job queue that has already been completed
 Attempted to apply queued config changes but the queue is locked!
-Attempted to set configuration value "%short" using incorrect data type!
-Attempted to set global configuration value "%short" but specified signed char splitscreen slot!
-Attempted to set per-user configuration value "%short" for an invalid splitscreen slot!
-Attempted to set read-only configuration value "%short"!
-Attempted to set unknown configuration value %short!
+Attempted to set configuration value "%s" using incorrect data type!
+Attempted to set global configuration value "%s" but specified a splitscreen slot!
+Attempted to set per-user configuration value "%s" for an invalid splitscreen slot!
+Attempted to set read-only configuration value "%s"!
+Attempted to set unknown configuration value %s!
 Attempted to set unknown configuration value!
 Available flags to search for: 
 B(I3D$(I
 BRBRBVBRBUARB`
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
 BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
@@ -569,68 +647,34 @@ C8+C(D9
 C8;C(uQ
 C;T4 u
 C<D){8H
-CAsyncScheduledFunctionManager
-CBaseAppSystem<IConfigurationSystem>
-CBaseAppSystem<ICvar>
-CBaseAppSystem<ICvarQuery>
-CBaseAppSystem<IEventSystem>
-CBaseAppSystem<IProcessUtils>
-CBaseAppSystem<ITestScriptMgr>
-CBaseAppSystem<IUtlStringTokenSystem>
 CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CConCommandHash::CCommandHashHandle_t CConCommandHash::Find(const ConCommandBase *) const
-CConCommandMemberAccessor<CCvar>
-CConfigurationSystem
 CConfigurationSystem::CConfigurationSystem()
 CConfigurationSystem::ReadConfiguration: Error parsing configuration file!
-CConfigurationSystem::UnlockConfigValues: Unlocked without signed char preceeding lock!
-CCvar
-CCvar::CCVarIteratorInternal
+CConfigurationSystem::UnlockConfigValues: Unlocked without a preceeding lock!
 CCvar::FindCommandBase
-CDefaultAccessor
-CDefaultCvarQuery
-CDefaultTSHashConstructor<CEventId>
-CDmSymbolTableLarge
-CEmptyConVar
 CEventQueue::~CEventQueue()
-CEventSystem
 CFiber::IsReadyToResume()
 CFiber::ReachedZeroReferences()
 CFiber::ResumeJob(void*)
-CFmtStrN<1024, false>
 CFmtStrN<1024, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 1024, QUIET_TRUNCATION = false]
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CFunctorJob
 CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 CGaussianRandomStream::RandomFloat(float, float)
-CGlobalThreadPool
 CHEAT
-CJob
-CJobThread
-CKeyValuesSystem
 CKeyValuesSystem::hash_item_t CUtlMemoryPool
 CKeyValuesSystem::m_Strings
 CKeyValuesSystem::m_pMemPool
 CKeyValuesSystem::~CKeyValuesSystem()
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CLIENTCMD_CAN_EXECUTE
 CLIENTDLL
 COLORCORRECTION_VERSION_1
-COneTimeEvent
 COneTimeEvent::Allocate()
-CPooledFunctorJob
 CPooledFunctorJob CUtlMemoryPool
-CProcess
 CProcess::CProcess(CProcessUtils *, const ProcessInfo_t &)
-CProcessPipeRead
-CProcessUtils
-CRefCountServiceBase<true, CRefMT>
-CRefCounted1<IRefCounted, CRefCountServiceBase<true, CRefMT> >
-CRefCounted1<IThreadPool, CRefCountServiceBase<true, CRefMT> >
-CSplitScreenAddedConVar
 CSplitScreenAddedConVar::CSplitScreenAddedConVar(CSplitScreenSlot, const char *, const ConVar *)
 CStackTop_ReferenceParentStack::CStackTop_ReferenceParentStack(void const* const*, int, CCallStackMarkerBase const&)
 CStackTop_ReferenceParentStack::~CStackTop_ReferenceParentStack()
@@ -656,15 +700,14 @@ CTSQueue<CFunctorCallback *, false>::CTSQueue() [T = CFunctorCallback *, bTestOp
 CTSQueue<CFunctorCallback *, false>::~CTSQueue() [T = CFunctorCallback *, bTestOptimizer = false]
 CTSQueue<CJob *, false>::CTSQueue() [T = CJob *, bTestOptimizer = false]
 CTSQueue<CJob *, false>::~CTSQueue() [T = CJob *, bTestOptimizer = false]
-CTestScriptMgr
 CTestScriptMgr: not initialized.
 CTestScriptMgr::InsertCommandsBeforeCheckpoint()
 CTestScriptMgr::InsertCommandsBeforeCheckpoint() adding to tail
-CTestScriptMgr::InsertCommandsBeforeCheckpoint() before checkpoint "%short"
-CTestScriptMgr::InsertCommandsBeforeCheckpoint() currently waiting on checkpoint "%short", executing commands now
-CTestScriptMgr::LoopCount( %short ): no loop with this name exists.
-CTestScriptMgr::LoopForNumSeconds( %short ): no loop with this name exists.
-CTestScriptMgr::StartLoop( %short ): loop already exists.
+CTestScriptMgr::InsertCommandsBeforeCheckpoint() before checkpoint "%s"
+CTestScriptMgr::InsertCommandsBeforeCheckpoint() currently waiting on checkpoint "%s", executing commands now
+CTestScriptMgr::LoopCount( %s ): no loop with this name exists.
+CTestScriptMgr::LoopForNumSeconds( %s ): no loop with this name exists.
+CTestScriptMgr::StartLoop( %s ): loop already exists.
 CThread::GetThreadHandle()
 CThread::Init()
 CThread::IsThreadRunning()
@@ -690,8 +733,6 @@ CThreadMultiWaitSemaphore::CThreadMultiWaitSemaphore()
 CThreadMultiWaitSemaphore::Release()
 CThreadMultiWaitSemaphore::~CThreadMultiWaitSemaphore()
 CThreadMutex::TryLock()
-CThreadPool
-CThreadPool::GetDummyJob()::CDummyJob
 CThreadPool::RemoveJob not implemented right now
 CThreadPool::Start called and it was already initialized.
 CThreadRWLock_FastRead::CThreadRWLock_FastRead()
@@ -708,17 +749,7 @@ CThreadSpinRWLock::UnlockRead()
 CThreadSpinRWLock::UnlockWrite()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IConfigurationSystem>
-CTier0AppSystem<IEventSystem>
-CTier0AppSystem<IProcessUtils>
-CTier0AppSystem<ITestScriptMgr>
-CTier1AppSystem<IConfigurationSystem, 0>
-CTier1AppSystem<IEventSystem, 0>
-CTier1AppSystem<IProcessUtils, 0>
-CTier1AppSystem<ITestScriptMgr, 0>
-CUniformRandomStream
-CUniformRandomStream had an array overrun: tried to write to element %double of 0..31. Contact Tom or Elan.
-CUniformRandomStream volatile
+CUniformRandomStream had an array overrun: tried to write to element %d of 0..31. Contact Tom or Elan.
 CUniformRandomStream::CUniformRandomStream()
 CUniformRandomStream::GenerateRandomNumber()
 CUniformRandomStream::RandomFloat(float, float)
@@ -727,8 +758,6 @@ CUniformRandomStream::RandomInt(int, int)
 CUniformRandomStream::SetSeed(int)
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
-CUtlCStringConversion
-CUtlCharConversion
 CUtlCharConversion::CUtlCharConversion(char, const char *, int, const CUtlCharConversion::ConversionArray_t *)
 CUtlFixedMemory overflow!
 CUtlFixedMemory::Iterator_t CUtlFixedMemory<UtlLinkedListElem_t<CConCommandHash::HashEntry_t, long long> >::Next(const CUtlFixedMemory::Iterator_t &) const [T = UtlLinkedListElem_t<CConCommandHash::HashEntry_t, long long>]
@@ -740,50 +769,43 @@ CUtlLinkedList overflow! (exhausted memory allocator)
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, const char *)
 CUtlMemoryPoolBase::FreeList_t *CUtlMemoryPoolBase::AddNewBlob()
-CUtlNoEscConversion
 CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CUtlStringTokenHash_DatabaseFormat::CUtlStringTokenHash_DatabaseFormat(uint32)
-CUtlStringTokenSystem
-CUtlStringTokenSystem could not open database file "%short" for writing. Aborting update operation
-CUtlStringTokenSystem could not update token database "%short" because the file is read-only.
-CUtlStringTokenSystem: Encountered string token collision: "%short" and "%short" both hash to %X!
-CUtlStringTokenSystem::CStringConstructor
+CUtlStringTokenSystem could not open database file "%s" for writing. Aborting update operation
+CUtlStringTokenSystem could not update token database "%s" because the file is read-only.
+CUtlStringTokenSystem: Encountered string token collision: "%s" and "%s" both hash to %X!
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
 CVAR_
 CVProfCounter::CVProfCounter(const tchar *, CounterGroup_t)
 CVProfile::FindOrCreateCounter(char const*, CounterGroup_t)
-CWorkerThread
 CWorkerThread::CWorkerThread()
-Can'unsigned short open file (%short) passed to -testscript
-Cannot add signed char thread job already committed to another thread pool
+Can't open file (%s) passed to -testscript
+Cannot add a thread job already committed to another thread pool
 Cannot mix and match tag specifiers with channel name specifiers.
 Channel Name
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
 CmpJob
 Color
-ConCommand
-ConCommand %short couldn'unsigned short be found by pointer, but was found by name!
-ConCommand %short had two entries in the hash!
-ConCommand %short has conflicting %short flags (child: %short%short, parent: %short%short, parent wins)
-ConCommand %short has multiple help strings:
-ConCommandBase
+ConCommand %s couldn't be found by pointer, but was found by name!
+ConCommand %s had two entries in the hash!
+ConCommand %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)
+ConCommand %s has multiple help strings:
 ConMsg(char const*, ...)
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
-Conditional Error: %short
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
+Conditional Error: %s
 ConfigurationSystem_001
 Console
-Console command %short added twice!
+Console command %s added twice!
 Construction is only allowed from the resolve function
 ContainsCRLF()
 ContainsCRLF() == bContainsCRLF
-Convar %short has conflicting %short flags (child: %short%short, parent: %short%short, parent wins)
-Convar %short has multiple help strings:
+Convar %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)
+Convar %s has multiple help strings:
 Could not execute the command:
-Could not read from pipe associated with command %short
-Couldn'unsigned short open '%short' for writing!
+Could not read from pipe associated with command %s
+Couldn't open '%s' for writing!
 Create
 CreateHandle
 D#0E1
@@ -814,29 +836,29 @@ Dumps information about all logging channels.
 E(fff.
 E+h8D
 E9|$$|
-E;__int128 ~0
-E;float u
-E;float@u
+E;f u
+E;f@u
 E;l$ u
 E;l$H
 E;l$hu
 E;l$x
-E;unsigned __int128 tQA
+E;n ~0
+E;o tQA
 ENGLISH
 EXECUTE_PER_TICK
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EXfff.
 EconItemToolModel_001
-Enabling flag '%short' on channel '%short'.
-Encountered ConCommand '%short' without signed char callback!
+Enabling flag '%s' on channel '%s'.
+Encountered ConCommand '%s' without a callback!
 EngineServiceMgr001
 EnvironmentMapBuilder_001
-Error in configuration schema file "%short":
-Error parsing configuration defaults file "%short"!
-Error parsing configuration schema file "%short"!
-Error parsing default value for config value "%short", default value "%short"!
-Error parsing value to set configuration value "%short" to ("%short")!
-Error reading configuration defaults file "%short"!
+Error in configuration schema file "%s":
+Error parsing configuration defaults file "%s"!
+Error parsing configuration schema file "%s"!
+Error parsing default value for config value "%s", default value "%s"!
+Error parsing value to set configuration value "%s" to ("%s")!
+Error reading configuration defaults file "%s"!
 EventSystem001
 Event_
 F8A+F(9
@@ -847,22 +869,22 @@ FCVAR_DONTRECORD
 FCVAR_NEVER_AS_STRING
 FCVAR_REPLICATED
 FRENCH
-Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
-Field %short has inverted min/max values![%float->%float]
-Field %short tried to quantize an out-of-range value (%float, range is %float->%float) clamping.
-Field %short tried to quantize an out-of-range value (%float, range is %float->%float), clamping.
-Field %short was flagged QFE_ENCODE_INTEGERS_EXACTLY, but didn'unsigned short specify enough bits, upping bitcount from %double to %double for range [%float->%float]
-Field %short was flagged to both round up and down, these flags are mutually exclusive [%float->%float]
-Field %short was flagged to encode zero exactly, but min/max range doesn'unsigned short span zero [%float->%float]
+Failed to allocate CUtlMemoryPoolBase blob of size %d ('%s' blob count = %d)
+Field %s has inverted min/max values![%f->%f]
+Field %s tried to quantize an out-of-range value (%f, range is %f->%f) clamping.
+Field %s tried to quantize an out-of-range value (%f, range is %f->%f), clamping.
+Field %s was flagged QFE_ENCODE_INTEGERS_EXACTLY, but didn't specify enough bits, upping bitcount from %d to %d for range [%f->%f]
+Field %s was flagged to both round up and down, these flags are mutually exclusive [%f->%f]
+Field %s was flagged to encode zero exactly, but min/max range doesn't span zero [%f->%f]
 Find concommands by flags.
 Find concommands with the specified string in their name/help text.
-Find help about signed char convar/concommand.
+Find help about a convar/concommand.
 FindCommandBase(variable->GetName()) == NULL
 First character of flag specifier must be + or -.
 Flags
 FlattenedSerializersVersion001
 Float
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 Forced execute test failed!
@@ -880,8 +902,8 @@ GetDmElementTypeSymbolMap
 GlobPool
 GlobalObject
 H	p(]
-H	wchar_t(]
-H!wchar_t(]
+H	w(]
+H!w(]
 H+Y8A
 HIGHDPI
 HKeySymbol KeyValues::GetNameSymbol() const
@@ -914,34 +936,9 @@ I CUtlRBTree<ConVarOrConfigValue, unsigned short, bool (*)(const ConVarOrConfigV
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
 I#D$(H	B(A
 I20CUniformRandomStream
-IAppSystem
-IAsyncScheduledFunctions
-ICommandCallback
-ICommandCompletionCallback
-IConCommandBaseAccessor
-IConVar
-IConfigurationSystem
-ICvar
-ICvar::ICVarIteratorInternal
-ICvarQuery
-IEventSystem
-IFiberThreadWorkerPool
-IGlobalSymbolMap
-IKeyValuesErrorSpew
-IKeyValuesSystem
 IOJob
-IPipeRead
-IProcess
-IProcessUtils
 IQuickTime001
-IRefCounted
 ITALIAN
-ITSHashConstructor<CEventId>
-ITSHashConstructor<CUtlStringTokenSystem::CTokenStringAndSource>
-ITestScriptMgr
-IThreadPool
-IUniformRandomStream
-IUtlStringTokenSystem
 IcL$ H
 IcL$hH
 IcMPH
@@ -960,10 +957,10 @@ Interface
 Internal_GetSubKey() != NULL
 Internal_GetSubKey() == NULL
 Internal_GetSubKey() == dat
-Invalid group index %double
+Invalid group index %d
 InvalidHandle() == dbghand
 IsFlagSet( FCVAR_SS_ADDED )
-IsIdxValid(int)
+IsIdxValid(i)
 IsInList(before)
 IsInitted()
 IsPowerOfTwo( m_nAlignment )
@@ -972,14 +969,14 @@ IsValid()
 IsValidHandle( handle )
 IsValidIndex(elem)
 IsValidIndex(elem) && IndexInRange( elem )
-IsValidIndex(int) && (int != InvalidIndex())
+IsValidIndex(i) && (i != InvalidIndex())
 IsValidIterator( it )
 JAPANESE
 JobStatus_t CJob::Abort(bool)
 JobStatus_t CJob::Execute()
 KOREAN
 KV Conditional Evaluation Error
-KV Conditional: Unknown symbol %short
+KV Conditional: Unknown symbol %s
 KeyValueCache001
 KeyValues *CConfigurationSystem::GenerateConfigurationKeys(ConfigType_t, CSplitScreenSlot)
 KeyValues *KeyValues::FindKey(HKeySymbol) const
@@ -988,30 +985,30 @@ KeyValues *KeyValues::GetFirstSubKey() const
 KeyValues *KeyValues::GetFirstValue()
 KeyValues *KeyValues::GetNextKey() const
 KeyValues *KeyValues::GetNextValue()
-KeyValues Error: %short in file %short
+KeyValues Error: %s in file %s
 KeyValues::FindKey called on NULL pointer!
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 L$ E1
 L$8;Yx|
-L%unsigned short*%K
-L&unsigned short**K
+L%Pt%K
+L&Pt*K
 L/Pt2J
 L40t*K
 L90t*H
 L;>t1L9
-L;int void
-L;unsigned long long void
-L;{ void
-L;{ void-
+L;i v
+L;y v
+L;{ v
+L;{ v-
 L?333?
-L?unsigned short*)H
+L?Pt)H
 LINKED_CONCOMMAND
 LINUX
 LOWVIOLENCE
 Lc539 
 Lcs E1
-LoadFromBuffer: expected '{', found '%short'
+LoadFromBuffer: expected '{', found '%s'
 Localize_001
 LockGlobalObjectRegistry
 Log Function Help: 
@@ -1020,7 +1017,7 @@ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ..
 M96u/H
 M96u;H
 M;w8u
-M;} void
+M;} v
 MATCHFRAMEWORK_001
 MATERIAL_SYSTEM_THREAD
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
@@ -1028,6 +1025,7 @@ MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MaterialUtils_001
 Mc<$J
+Mcg I
 Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
@@ -1035,6 +1033,12 @@ Mffff.
 ModelDocUtils001
 Mutex Should have protected use while processing
 N([A^]
+N14ThreadPoolTest15CExecuteTestJobE
+N14ThreadPoolTest22CExecuteTestExecuteJobE
+N14ThreadPoolTest9CCountJobE
+N21CUtlStringTokenSystem18CStringConstructorE
+N5CCvar21CCVarIteratorInternalE
+N5ICvar21ICVarIteratorInternalE
 NEVER_AS_STRING
 NOTIFY
 NOT_CONNECTED
@@ -1049,8 +1053,8 @@ NewThreadPool
 OS error message:
 OrCreateQuantizedFloatEncoder
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 Out of keyvalue string space
 POLISH
 PORTUGUESE
@@ -1061,7 +1065,7 @@ P[A^]
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
-Parent and child ConVars with different default values! %short child: %short parent: %short (parent wins)
+Parent and child ConVars with different default values! %s child: %s parent: %s (parent wins)
 ParticleSystemMgr002
 Pc10CUtlMemoryIS2_iEE
 Perf warning: Forgot to unregister listeners on event queue %p
@@ -1094,15 +1098,15 @@ RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
-RegisterConfigValue: Cannot register two different completion callbacks for config value "%short"!
-RegisterConfigValue: Error registering config value "%short", the hash of its name collides with another config value %short, rename it!
-RegisterConfigValue: Error with config value "%short"
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Cannot register two different completion callbacks for config value "%s"!
+RegisterConfigValue: Error registering config value "%s", the hash of its name collides with another config value %s, rename it!
+RegisterConfigValue: Error with config value "%s"
+RegisterConfigValue: Unknown error constructing config value "%s"!
 RegisterGlobalObject
 RegisteredGlobalObjectInternal
 Release
 Releasing global thread pool object!
-Removing string token database entry "%short" for reason "%short"
+Removing string token database entry "%s" for reason "%s"
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
@@ -1113,7 +1117,7 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-Reverts to signed char convar snapshot
+Reverts to a convar snapshot
 Rffffff.
 S20CUniformRandomStream
 SATAp
@@ -1131,12 +1135,12 @@ SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 ServerUploadGameStats001
-Set the color of signed char logging channel.
-Set the flags on signed char logging channel.
-Set the spew level of signed char logging channel.
-Set the verbosity of signed char logging channel.
-Setting channel '%short' color to %08X.
-Setting channel '%short' verbosity to '%short'.
+Set the color of a logging channel.
+Set the flags on a logging channel.
+Set the spew level of a logging channel.
+Set the verbosity of a logging channel.
+Setting channel '%s' color to %08X.
+Setting channel '%s' verbosity to '%s'.
 Severity
 Show all convars which are not at their default values (optional restricted to specific flags).
 Show the list of convars/concommands.
@@ -1158,7 +1162,7 @@ Source2Server001
 Source2ServerSerializers002
 SpecialCommand_Test_SetEvent <event name> : requires an event name.
 SplitString2PKcPS0_iR10CUtlVectorIPc10CUtlMemoryIS3_iEE
-Start signed char test script running..
+Start a test script running..
 StatsService_001
 StdLib_GetICVarFactory
 SteamAudio001
@@ -1189,10 +1193,10 @@ TCWARBRAUBSASATB`
 TCZAp
 TC`6ATAp
 TC`9ATAp
-TESTSCRIPT: CheckPoint -> '%short'.
-TESTSCRIPT: waiting for checkpoint '%short'%short
+TESTSCRIPT: CheckPoint -> '%s'.
+TESTSCRIPT: waiting for checkpoint '%s'%s
 TM96u/H
-Takes signed char convar snapshot
+Takes a convar snapshot
 TestForcedExecute
 TestForcedExecute DONE
 TestScriptMgr001
@@ -1200,21 +1204,21 @@ Test_ExitProcess
 Test_ExitProcess <exit code> - immediately kill the process.
 Test_Loop
 Test_Loop <loop name> - loop back to the specified loop start point unconditionally.
-Test_Loop: requires signed char loop name.
+Test_Loop: requires a loop name.
 Test_LoopCount
 Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.
-Test_LoopCount: requires signed char loop name and number of times to loop.
+Test_LoopCount: requires a loop name and number of times to loop.
 Test_LoopForNumSeconds
 Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.
-Test_LoopLoopForNumSeconds: requires signed char loop name and number of seconds to loop.
+Test_LoopLoopForNumSeconds: requires a loop name and number of seconds to loop.
 Test_RandomChance
 Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percentage chance.
 Test_RandomChance: requires percentage chance parameter (0-100) followed by command to execute.
 Test_RunFrame
 Test_SetEvent
 Test_StartLoop
-Test_StartLoop <loop name> - Denote the start of signed char loop. Really just defines signed char named point you can jump to.
-Test_StartLoop: requires signed char loop name.
+Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.
+Test_StartLoop: requires a loop name.
 Test_StartScript
 Test_StartScript: requires filename of script to start (file must be under testscripts directory).
 Test_Wait
@@ -1225,8 +1229,8 @@ TextLayout_001
 TextMessageMgr_001
 ThreadInMainThread()
 ThreadPool
-ThreadPoolTest:         %double threads -- %double (%double) jobs processed in %fms, %fms to suspend (%float/%float) [ (main) %double, %double, %double, %double, %double, %double, %double, %double, %double]
-ThreadPoolTest:         Testing! Sleep %double, interleave %double, prioritized %double 
+ThreadPoolTest:         %d threads -- %d (%d) jobs processed in %fms, %fms to suspend (%f/%f) [ (main) %d, %d, %d, %d, %d, %d, %d, %d, %d]
+ThreadPoolTest:         Testing! Sleep %d, interleave %d, prioritized %d 
 ThreadPoolTest:     Distribute
 ThreadPoolTest:     Distribute NO Sleep
 ThreadPoolTest:     NO Sleep
@@ -1234,12 +1238,9 @@ ThreadPoolTest:     Non-distribute
 ThreadPoolTest:   NOT to completion
 ThreadPoolTest:   To completion
 ThreadPoolTest: Job distribution speed
-ThreadPoolTest: Jobs doing work, %short main thread
-ThreadPoolTest::CCountJob
-ThreadPoolTest::CExecuteTestExecuteJob
-ThreadPoolTest::CExecuteTestJob
+ThreadPoolTest: Jobs doing work, %s main thread
 ToArray
-Too many channel specifiers (max: %double).
+Too many channel specifiers (max: %d).
 ToolFramework2_002
 ToolGameSimulationDispatcher_001
 ToolGameSimulationSystem_001
@@ -1248,12 +1249,12 @@ ToolScriptManager001
 ToolService_001
 TransferMemory
 Tried to install the same listener on the same event id + queue twice!
-Tried to look up command %short as if it were signed char variable.
+Tried to look up command %s as if it were a variable.
 UNLOGGED
 UPDATE_STRING_TOKEN_DATABASE
 USERINFO
-Unable to create thread in %short
-Unable to exec '%short'
+Unable to create thread in %s
+Unable to exec '%s'
 Unable to initialize stderr pipe
 Unable to initialize stdout pipe
 Unknown job state
@@ -1268,6 +1269,7 @@ UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<CConfigurationSystem::CompletionLookup_t, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = CConfigurationSystem::CompletionLookup_t, CHashFunction = CDefaultHash32]
 UtlHashFastHandle_t CUtlScalarHash<CConfigurationSystem::ValueLookup_t, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = CConfigurationSystem::ValueLookup_t, CHashFunction = CDefaultHash32]
 UtlHashHandle_t CUtlHash<CUtlHashDict<void *, true, true>::Entry_t, CUtlHashDict<void *, true, true>::CCompare<true>, CUtlHashDict<void *, true, true>::CHash<true> >::BuildHandle(int, int) const [Data = CUtlHashDict<void *, true, true>::Entry_t, C = CUtlHashDict<void *, true, true>::CCompare<true>, K = CUtlHashDict<void *, true, true>::CHash<true>]
+V20CUniformRandomStream
 V8ff.
 VApplication001
 VAvi001
@@ -1315,11 +1317,11 @@ V_stristr_fast(char const*, char const*)
 V_wcsistr(wchar_t const*, wchar_t const*)
 Value
 VisBuilder_001
-WARNING: unable to link %short and %short because both ConCommands are not marked FCVAR_LINKED_CONCOMMAND
+WARNING: unable to link %s and %s because both ConCommands are not marked FCVAR_LINKED_CONCOMMAND
 WIN32
 WINDOWS
 WINXP
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
@@ -1332,9 +1334,10 @@ X360WIDE
 X[A\A]A^A_]
 Yfffff.
 Yffffff.
-[%float %float %float %float]
-[%float %float %float]
-[%float %float]
+ZN11CThreadPool11GetDummyJobEvE9CDummyJob
+[%f %f %f %f]
+[%f %f %f]
+[%f %f]
 [0 0 0 0]
 [0 0 0]
 [0 0]
@@ -1346,7 +1349,7 @@ Yffffff.
 [A^A_]
 [ConsoleOnly]
 [DoNotEcho]
-[unsigned short,fD
+[t,fD
 \$0E1
 \<`H9
 ^ [A^]
@@ -1512,11 +1515,8 @@ __const
 __cstring
 __data
 __exit
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
-__int128 * nBlockSize >= num
-__int128 < m_Vector.Count()
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1572,7 +1572,7 @@ _write
 `` @ 
 ``Pp0 
 ````````
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 andom
 appears in lower database
 application
@@ -1606,10 +1606,10 @@ bool KeyValues::LoadFromBuffer(const char *, CUtlBuffer &, IBaseFileSystem *, co
 bool KeyValues::LoadFromFile(IBaseFileSystem *, const char *, const char *, GetSymbolProc_t)
 bounds
 buffer
-c8D+char(E9
+c(ffff.
+c8D+c(E9
 callback
 callback && m_GlobalChangeCallbacks.Find( callback ) < 0
-char(ffff.
 cheat
 cl_language
 client
@@ -1655,14 +1655,13 @@ execute_per_tick
 extra.AddToTail() == nTail
 false
 fcntl failed to set F_NOCACHE
-ff.
 ffff.
 fffff.
 ffffff.
 filetoinclude
 findflags
 findflags 
-flag: <+/->DoNotEcho                        // Enable/disable signed char flag to turn off echoing to the console.
+flag: <+/->DoNotEcho                        // Enable/disable a flag to turn off echoing to the console.
 flags
 float CQuantizedFloatEncoder::AssignRangeMultiplier(uint32, float)
 float CQuantizedFloatEncoder::GetExactEncodeTestCase(int) const
@@ -1672,16 +1671,17 @@ g_pCVar
 gister
 hCaseSensitiveSymbol <= INVALID_KEY_SYMBOL
 hElem != m_SharedStrings.Hash.InvalidHandle()
+h[A\A]A^A_]
 help 
 help text
-help:  no cvar or command named %short
+help:  no cvar or command named %s
 hex color: RRGGBBAA                         // A hexadecimal color value in the order RGBA.
 hfff.
 hpff.
+i < ( 1 << HandleBits )
 iElement == Find(cmd->GetName())
 info.m_pReplacementString == 0
 initialCommit <= m_maxSize
-int < ( 1 << HandleBits )
 int CConfigurationSystem::AllocDataMemory(int)
 int CConfigurationSystem::AllocNameMemory(int)
 int CProcessPipeRead::CacheOutput()
@@ -1705,13 +1705,8 @@ log_color
 log_dumpchannels
 log_flags
 log_level
-log_level is deprecated, please use log_verbosity. Severity '%short' translates to verbosity '%short'.
+log_level is deprecated, please use log_verbosity. Severity '%s' translates to verbosity '%s'.
 log_verbosity
-long long E9|$
-long long"A9^
-long long'A9^
-long long'E9t$
-long long[A\A]A^A_]
 m_Blobs.IsPeeked()
 m_ConVarListeners.Find( pConVarListener ) < 0
 m_Count == 0
@@ -1747,7 +1742,7 @@ m_iDataType == TYPE_NONE
 m_maxSize > 0
 m_nAllocStatsId == INVALID_ALLOC_STATS_ID
 m_nArgv0Size != 0
-m_nConfigLock[int] >= 0
+m_nConfigLock[i] >= 0
 m_nCurrNameOffset < ( 1 << ( 32 - CHANGE_CALLBACK_INDEX_BIT_COUNT ) )
 m_nIdleThreads == 0
 m_nJobs >= 0
@@ -1765,6 +1760,8 @@ m_tail != QUEUE_ITERATOR_INVALID
 m_tail == QUEUE_ITERATOR_INVALID
 machine
 mffff.
+n * nBlockSize >= num
+n < m_Vector.Count()
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nArgvBufferSize <= COMMAND_MAX_LENGTH
 nBitCount >= 0 && nBitCount <= UINT8_MAX
@@ -1809,18 +1806,18 @@ operator new(unsigned long)
 operator new[](unsigned long)
 out of order
 outStrings.Count() == 0
-p4 add -unsigned short binary "%short"
-p4 edit -unsigned short binary "%short"
+p4 add -t binary "%s"
+p4 edit -t binary "%s"
 pBlob
 pCallback == NULL
 pCurrentKey
 pFileContents[0] == UTLSTRINGTOKEN_DATABASE_VERSION
-pFileContents[nFileSize - 1] == '\__int128'
+pFileContents[nFileSize - 1] == '\n'
 pFileSystem
 pLastChild == NULL || pLastChild->m_pPeer == dat
 pLastChild->m_pPeer == NULL
 pLastChild->m_pPeer == dat
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pOpcodeTable->m_nDstPointerIndex < nNumDstPointers
 pOpcodeTable->m_nSrcPointerIndex < nNumSrcPointers
@@ -1848,7 +1845,8 @@ replicated
 resourceName
 ret != 0
 ret == 0
-s8D+short(D
+s < ( 1 << ( 31 - HandleBits ) )
+s8D+s(D
 sTemp.Length() == nToRead
 s_nConnectionCount > 0
 s_nDLLIdentifier < 0
@@ -1859,7 +1857,6 @@ schema
 script
 server_can_execute
 server_cant_query
-short < ( 1 << ( 31 - HandleBits ) )
 singleplayer
 size < 1024 * 1024
 size >= 0
@@ -1877,13 +1874,24 @@ symbol <= INVALID_KEY_SYMBOL
 t$ E1
 t$8A)
 t$fff.
+t%ffff.
+t&H9[8tUH
+t&L9#u
+t&fffff.
+t+ff.
+t,fff.
+t-L9`
+t/ff.
 t3ffff.
 t993u
+t;ff.
+t<fff.
 tFL9;u
 tHE;~
 tHIcD$
 tLMc~
 tMff.
+t\E9g
 testscript_debug
 threadsafe
 tripAndPreserveHTML
@@ -1898,6 +1906,8 @@ u(J9\
 u*J9\)
 u0H9[
 u1D9t
+u3ff.
+u3z1H
 u;A;R
 uOHc~
 uiKey != UnusedElementKey()
@@ -1907,21 +1917,8 @@ uint64
 unThreadPoolTests
 unit test
 unknown
-unsigned char[A\A]A^A_]
-unsigned short%ffff.
-unsigned short&H9[8tUH
-unsigned short&L9#u
-unsigned short&fffff.
-unsigned short+ff.
-unsigned short,fff.
-unsigned short-L9`
-unsigned short/ff.
-unsigned short;ff.
-unsigned short<fff.
-unsigned short\E9g
 unsigned(hHash)<=m_uiBucketMask
 uwHcE
-vHct
 value
 value.m_nConfigType == CONFIG_LAUNCH || value.m_nConfigType == CONFIG_MACHINE || value.m_nConfigType == CONFIG_APPLICATION
 vconsole_fuzzy
@@ -1929,7 +1926,7 @@ vconsole_set_focus
 vector2
 vector3
 vector4
-verbosity: off, essential, default,         // Sets how verbose signed char channel is allowed to be.
+verbosity: off, essential, default,         // Sets how verbose a channel is allowed to be.
 vhw'H
 virtual ConCommandBase *CCvar::CCVarIteratorInternal::Get()
 virtual ConVar *CCvar::FindVar(const char *)
@@ -2098,15 +2095,19 @@ vtable for CUniformRandomStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
+w w'H
+w@w'H
+w`w'H
 warning
-wchar_t wchar_t'H
-wchar_t@wchar_t'H
-wchar_t`wchar_t'H
 without
+x E9|$
+x"A9^
+x'A9^
+x'E9t$
+x[A\A]A^A_]
 xbox_archive
 xhA9^
-z1H
-{%double %double %double %double}
+{%d %d %d %d}
 {0 0 0 255}
 {}()':
 |$XHc

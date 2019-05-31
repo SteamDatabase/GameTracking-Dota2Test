@@ -1,12 +1,12 @@
-		"wave"	"%short"
-	"channel"		"%short"
-	"delay_msec"	"%int"
-	"pitch"			"%short"
+		"wave"	"%s"
+	"channel"		"%s"
+	"delay_msec"	"%i"
+	"pitch"			"%s"
 	"play_to_owner_only"	"1"
 	"rndwave"
-	"soundlevel"	"%short"
-	"volume"		"%short"
-	"wave"			"%short"
+	"soundlevel"	"%s"
+	"volume"		"%s"
+	"wave"			"%s"
         
                 
   P0 
@@ -35,13 +35,13 @@
 $1HcT1
 $gender
 %.3f, %.3f
-%int %int %int %int
-%int, %int
-%short : %short
-%short%short%short
+%i %i %i %i
+%i, %i
+%s : %s
+%s%s%s
 &YA1L
 ( g_pSchemaSystem == NULL ) || (s_pSchemaBinding != NULL)
-(*%short*), 
+(*%s*), 
 (GetChar()) == (0)
 ([A\A]A^A_]
 ([A\A]A^A_]A
@@ -51,15 +51,15 @@ $gender
 (s_pThisModuleBindingPointer != NULL)
 (size_t)hResource % 4 == 0
 (uBHcC
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 +C$A9E
 ,$A9}
 .CTv*H
 .Clv*H
 // NOTE: Skipped gender expanded waves!
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/ctype.h
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/char++/v1/algorithm
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/char++/v1/type_traits
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /Users/buildbot/buildslave/source2_osx64/build/src/_generated_code/soundemittersystem/release/osx64/
@@ -193,14 +193,82 @@ $gender
 /usr/lib/libSystem.B.dylib
 /usr/lib/libc++.1.dylib
 /usr/lib/libiconv.2.dylib
-09S |__float128
+09S |g
+10IAppSystem
+12CEmptyConVar
+14CBaseAppSystemI23ISoundEmitterSystemBaseE
+14ConCommandBase
+14ISchemaBinding
+15CTier0AppSystemI23ISoundEmitterSystemBaseE
+15CTier1AppSystemI23ISoundEmitterSystemBaseLi0EE
+15CTier2AppSystemI23ISoundEmitterSystemBaseLi0EE
+16CDefaultAccessor
+16CExtrefTraversal
+16CStackAnnotationIPK17CSchemaClassFieldbvvvvvvvE
+18CAtomicManipulatorI10CUtlStringE
+18CAtomicManipulatorI11CWeakHandleI27InfoForResourceTypeVSound_tEE
+18CAtomicManipulatorI14CResourceArrayI12VGameSound_tEE
+18CAtomicManipulatorI14CResourceArrayI26CResourceDeferredReferenceI11CWeakHandleI27InfoForResourceTypeVSound_tEEEE
+18CAtomicManipulatorI14CResourceArrayIfEE
+18CAtomicManipulatorI14CResourceArrayIhEE
+18CAtomicManipulatorI15CResourceStringE
+18CAtomicManipulatorI26CResourceDeferredReferenceI11CWeakHandleI27InfoForResourceTypeVSound_tEEE
+18CAtomicManipulatorI9KeyValuesE
+18CSchemaEnumBindingI12soundlevel_tE
+18CSchemaEnumBindingI8gender_tE
+18CSchemaManipulatorI10CUtlStringE
+18CSchemaManipulatorI11CWeakHandleI27InfoForResourceTypeVSound_tEE
+18CSchemaManipulatorI14CResourceArrayI12VGameSound_tEE
+18CSchemaManipulatorI14CResourceArrayI26CResourceDeferredReferenceI11CWeakHandleI27InfoForResourceTypeVSound_tEEEE
+18CSchemaManipulatorI14CResourceArrayIfEE
+18CSchemaManipulatorI14CResourceArrayIhEE
+18CSchemaManipulatorI15CResourceStringE
+18CSchemaManipulatorI26CResourceDeferredReferenceI11CWeakHandleI27InfoForResourceTypeVSound_tEEE
+18CSchemaManipulatorI9KeyValuesE
+18CSchemaVisitorBase
+18CUtlCharConversion
+18IAtomicManipulator
+18ISchemaManipulator
+19CSchemaClassBindingI12VGameSound_tE
+19CSchemaClassBindingI16CSoundParametersE
+19CSchemaClassBindingI18VGameSoundScript_tE
+19CSchemaFieldVisitor
+19CSchemaRegistration
+19CUtlNoEscConversion
+19ISchemaSearchTesterIPK16CSchemaClassInfoE
+20CPostConnectCallback
+20IResourceTypeManager
+20IUniformRandomStream
+21CUtlCStringConversion
+22CSchemaEnumBindingBase
+22CSchemaInstallCallback
+23CResourceAllocatorUtils
+23CSchemaClassBindingBase
+23CSoundEmitterSystemBase
+23IConCommandBaseAccessor
+23IResourceAllocatorUtils
+23ISoundEmitterSystemBase
+25CSchemaVisitorInfoMapBase
+26CReferenceCleanupTraversal
+26CSchemaFieldVisitorInfoMapI16CExtrefTraversalE
+28CBaseIntrospectedTypeManager
+28CVGameSoundScriptTypeManager
+28ISchemaInspectionManipulator
 29K }
+31CDefaultIntrospectedTypeManagerILy491294779254E18VGameSoundScript_tE
+32CResourceReferenceFixupTraversal
+32CSoundEmitterUniformRandomStream
+38CSchemaRegistration_soundemittersystem
+38CSchemaWeakHandleInspectionManipulatorI27InfoForResourceTypeVSound_tE
 49K }
 49S |}
+6ConVar
+7IConVar
+8CFmtStrNILi256ELb0EE
 8[A\A]A^A_]
 8[A^A_]
 8fffff.
-9S |signed char
+9S |a
 :thL9
 ;C ~1
 ;Y(uTI
@@ -231,6 +299,7 @@ $gender
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Msg
 @_Plat_ExitProcess
 @_Plat_GetEnv
 @_Plat_IsHighDPI
@@ -258,7 +327,6 @@ $gender
 @___stack_chk_fail
 @___stack_chk_guard
 @___tolower
-@__float128 short::*
 @_atof
 @_atoi
 @_g_pMemAlloc
@@ -301,9 +369,9 @@ A9V }	A
 A9W }
 A;G ~
 A;\$@|
-A;]long long|
+A;]x|
 A;_Pu
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ASARBSAXBSARBSAXBRB]ARBRARERA
 ASARBSAXBSARBSAXBTBRBRBRAp
 ATBSATAp
@@ -337,15 +405,14 @@ AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
 BSATAp
-Bad expression operator: '%char%char', expected C style boolean expression operator.
-Bad expression syntax: '%short', expected signed char single matching pair of enclosing braces.
-Bad expression token: %char
+Bad expression operator: '%c%c', expected C style boolean expression operator.
+Bad expression syntax: '%s', expected a single matching pair of enclosing braces.
+Bad expression token: %c
 BakedLODBuilderMgr001
 BenchmarkService001
 C [A^]
-C:float+C8fA
+C:f+C8fA
 C=*C<A
-CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >
 CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::Allocate()
 CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::AllocateAndCopy(void const*)
 CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::CanAllocate() const
@@ -354,7 +421,6 @@ CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoFor
 CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::Get()::val
 CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::GetAlignOf()
 CAtomicManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::GetSizeOf()
-CAtomicManipulator<CResourceArray<VGameSound_t> >
 CAtomicManipulator<CResourceArray<VGameSound_t> >::Allocate()
 CAtomicManipulator<CResourceArray<VGameSound_t> >::AllocateAndCopy(void const*)
 CAtomicManipulator<CResourceArray<VGameSound_t> >::CanAllocate() const
@@ -363,7 +429,6 @@ CAtomicManipulator<CResourceArray<VGameSound_t> >::Deallocate(void*)
 CAtomicManipulator<CResourceArray<VGameSound_t> >::Get()::val
 CAtomicManipulator<CResourceArray<VGameSound_t> >::GetAlignOf()
 CAtomicManipulator<CResourceArray<VGameSound_t> >::GetSizeOf()
-CAtomicManipulator<CResourceArray<float> >
 CAtomicManipulator<CResourceArray<float> >::Allocate()
 CAtomicManipulator<CResourceArray<float> >::AllocateAndCopy(void const*)
 CAtomicManipulator<CResourceArray<float> >::CanAllocate() const
@@ -372,7 +437,6 @@ CAtomicManipulator<CResourceArray<float> >::Deallocate(void*)
 CAtomicManipulator<CResourceArray<float> >::Get()::val
 CAtomicManipulator<CResourceArray<float> >::GetAlignOf()
 CAtomicManipulator<CResourceArray<float> >::GetSizeOf()
-CAtomicManipulator<CResourceArray<unsigned char> >
 CAtomicManipulator<CResourceArray<unsigned char> >::Allocate()
 CAtomicManipulator<CResourceArray<unsigned char> >::AllocateAndCopy(void const*)
 CAtomicManipulator<CResourceArray<unsigned char> >::CanAllocate() const
@@ -381,7 +445,6 @@ CAtomicManipulator<CResourceArray<unsigned char> >::Deallocate(void*)
 CAtomicManipulator<CResourceArray<unsigned char> >::Get()::val
 CAtomicManipulator<CResourceArray<unsigned char> >::GetAlignOf()
 CAtomicManipulator<CResourceArray<unsigned char> >::GetSizeOf()
-CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >
 CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::Allocate()
 CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::AllocateAndCopy(void const*)
 CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::CanAllocate() const
@@ -390,7 +453,6 @@ CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSo
 CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::Get()::val
 CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::GetAlignOf()
 CAtomicManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::GetSizeOf()
-CAtomicManipulator<CResourceString>
 CAtomicManipulator<CResourceString>::Allocate()
 CAtomicManipulator<CResourceString>::AllocateAndCopy(void const*)
 CAtomicManipulator<CResourceString>::CanAllocate() const
@@ -399,7 +461,6 @@ CAtomicManipulator<CResourceString>::Deallocate(void*)
 CAtomicManipulator<CResourceString>::Get()::val
 CAtomicManipulator<CResourceString>::GetAlignOf()
 CAtomicManipulator<CResourceString>::GetSizeOf()
-CAtomicManipulator<CUtlString>
 CAtomicManipulator<CUtlString>::Allocate()
 CAtomicManipulator<CUtlString>::AllocateAndCopy(void const*)
 CAtomicManipulator<CUtlString>::CanAllocate() const
@@ -408,7 +469,6 @@ CAtomicManipulator<CUtlString>::Deallocate(void*)
 CAtomicManipulator<CUtlString>::Get()::val
 CAtomicManipulator<CUtlString>::GetAlignOf()
 CAtomicManipulator<CUtlString>::GetSizeOf()
-CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::Allocate()
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::AllocateAndCopy(void const*)
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::CanAllocate() const
@@ -417,7 +477,6 @@ CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::Deallocate(void*)
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::Get()::val
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::GetAlignOf()
 CAtomicManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::GetSizeOf()
-CAtomicManipulator<KeyValues>
 CAtomicManipulator<KeyValues>::Allocate()
 CAtomicManipulator<KeyValues>::AllocateAndCopy(void const*)
 CAtomicManipulator<KeyValues>::CanAllocate() const
@@ -426,12 +485,10 @@ CAtomicManipulator<KeyValues>::Deallocate(void*)
 CAtomicManipulator<KeyValues>::Get()::val
 CAtomicManipulator<KeyValues>::GetAlignOf()
 CAtomicManipulator<KeyValues>::GetSizeOf()
-CBaseAppSystem<ISoundEmitterSystemBase>
 CBaseAppSystem<ISoundEmitterSystemBase>::GetBuildType()
 CBaseAppSystem<ISoundEmitterSystemBase>::IsSingleton()
 CBaseAppSystem<ISoundEmitterSystemBase>::PreShutdown()
-CBaseIntrospectedTypeManager
-CBaseIntrospectedTypeManager:  Bindings don'unsigned short match.
+CBaseIntrospectedTypeManager:  Bindings don't match.
 CBaseIntrospectedTypeManager:  Missing TYPEMETA MDiskDataForResourceType
 CBaseIntrospectedTypeManager::Allocate(void const*, IResourceAllocatorUtils*)
 CBaseIntrospectedTypeManager::AllocateResource(ResourceBindingBase_t const*, ResourceId_t, ResourceFileHeader_t const*, IRD_RegisterResourceDataUtils*)
@@ -455,11 +512,8 @@ CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle
 CClassVisitInfo::ClassIsRelevant()
 CClassVisitInfo::UpdateState(CSchemaVisitorInfoMapBase*)
 CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
-CDefaultAccessor
 CDefaultAccessor::RegisterConCommandBase(ConCommandBase*)
-CDefaultIntrospectedTypeManager<491294779254ull, VGameSoundScript_t>
 CDefaultIntrospectedTypeManager<491294779254ull, VGameSoundScript_t>::Init(IResourceSystemUtils*)
-CEmptyConVar
 CEmptyConVar::GetName() const
 CEmptyConVar::IsFlagSet(long long) const
 CEmptyConVar::SetValue(char const*)
@@ -474,7 +528,6 @@ CExpressionEvaluator::MakeExpression(ExprNode*&)
 CExpressionEvaluator::MakeFactor(ExprNode*&)
 CExpressionEvaluator::SimplifyNode(ExprNode*&)
 CExpressionEvaluator::~CExpressionEvaluator()
-CExtrefTraversal
 CExtrefTraversal::VisitRelevantField(void*, CSchemaType*, CSchemaClassField const*)
 CExtrefTraversal::VisitRelevantField(void*, CSchemaType*, CSchemaClassField const*)::_assertionConstants
 CExtrefTraversal::VisitRelevantField(void*, CSchemaType*, CSchemaClassField const*)::_assertionStatics
@@ -486,19 +539,15 @@ CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup()
 CFieldPathHuffmanEncoder::BuildTree()
 CFieldPathHuffmanEncoder::CFieldPathHuffmanEncoder()
 CFieldPathHuffmanEncoder::GenerateOpCodeToHuffmanMap(CFieldPathHuffmanEncoder::INode const*, CFieldPathHuffmanEncoder::HuffCode const&)
-CFieldPathHuffmanEncoder::INode
 CFieldPathHuffmanEncoder::INodeLessFunc(CFieldPathHuffmanEncoder::INode* const&, CFieldPathHuffmanEncoder::INode* const&)
-CFieldPathHuffmanEncoder::InternalNode
 CFieldPathHuffmanEncoder::InternalNode::IsLeafNode() const
 CFieldPathHuffmanEncoder::InternalNode::~InternalNode()
-CFieldPathHuffmanEncoder::LeafNode
 CFieldPathHuffmanEncoder::LeafNode::IsLeafNode() const
 CFieldPathHuffmanEncoder::LeafNode::~LeafNode()
 CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder()
 CFixedBudgetMemoryPool<64ul, 512>::Alloc()
 CFixedBudgetMemoryPool<64ul, 512>::Alloc()::autoMutex__
 CFixedBudgetMemoryPool<64ul, 512>::~CFixedBudgetMemoryPool()
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(char const*, ...)
 CFmtStrN<256, false>::CFmtStrN(char const*, ...)::_assertionConstants
 CFmtStrN<256, false>::CFmtStrN(char const*, ...)::_assertionStatics
@@ -527,7 +576,7 @@ CKeyValuesErrorStack::Reset(int, HKeySymbol)::_assertionStatics
 CKeyValuesTokenReader::ReadToken(bool&, bool&)
 CKeyValuesTokenReader::SeekBackOneToken()::_assertionConstants
 CKeyValuesTokenReader::SeekBackOneToken()::_assertionStatics
-CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at signed char time
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
 CKeyValuesTokenReader::s_pTokenBuf
 CKeyValues_Data::Internal_ClearData()
 CKeyValues_Data::Internal_ClearData()::_assertionConstants
@@ -545,14 +594,11 @@ CKeyValues_Data::Internal_SetWString(wchar_t const*)
 CManifestRegistrar::RegisterAll()
 CManifestRegistrar::UnregisterAll()
 COLORCORRECTION_VERSION_1
-CPostConnectCallback
 CPostConnectCallback::CPostConnectCallback(int)
 CPostConnectCallback::s_nInstallOrder
 CPostConnectCallback::s_pFirstCallback
-CReferenceCleanupTraversal
 CReferenceCleanupTraversal::CReferenceCleanupTraversal(ResourceBindingBase_t const*, unsigned long long)
 CReferenceCleanupTraversal::HandleExtref(unsigned long long, CResourceExtReferenceBase*, bool, CSchemaClassField const*)
-CResourceAllocatorUtils
 CResourceAllocatorUtils::AssumeControl(void const*)
 CResourceAllocatorUtils::AssumeControl(void const*)::_assertionConstants
 CResourceAllocatorUtils::AssumeControl(void const*)::_assertionStatics
@@ -564,7 +610,6 @@ CResourceArray
 CResourceDeferredReference
 CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> >::GetHandle(bool) const::_assertionConstants
 CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> >::GetHandle(bool) const::_assertionStatics
-CResourceReferenceFixupTraversal
 CResourceReferenceFixupTraversal::CResourceReferenceFixupTraversal(IRD_RegisterResourceDataUtils*, ResourceFileHeader_t const*, ResourceBindingBase_t const*, unsigned long long)
 CResourceReferenceFixupTraversal::HandleExtref(unsigned long long, CResourceExtReferenceBase*, bool, CSchemaClassField const*)
 CResourceReferenceFixupTraversal::HandleExtref(unsigned long long, CResourceExtReferenceBase*, bool, CSchemaClassField const*)::_assertionConstants
@@ -573,7 +618,6 @@ CResourceReferenceFixupTraversal::InvalidReferencesEncountered()
 CResourceReferenceFixupTraversal::RegisterRefs()
 CResourceString
 CSchemaAutoRegistration_soundemittersystem
-CSchemaClassBinding<CSoundParameters>
 CSchemaClassBinding<CSoundParameters>::Allocate() const
 CSchemaClassBinding<CSoundParameters>::AllocateAndCopyConstruct(void const*) const
 CSchemaClassBinding<CSoundParameters>::CanAllocate() const
@@ -585,7 +629,6 @@ CSchemaClassBinding<CSoundParameters>::DestructInPlace(void*) const
 CSchemaClassBinding<CSoundParameters>::GetSize() const
 CSchemaClassBinding<CSoundParameters>::IsAbstractBinding() const
 CSchemaClassBinding<CSoundParameters>::Register(ISchemaSystem*, char const*, char const*)
-CSchemaClassBinding<VGameSoundScript_t>
 CSchemaClassBinding<VGameSoundScript_t>::Allocate() const
 CSchemaClassBinding<VGameSoundScript_t>::AllocateAndCopyConstruct(void const*) const
 CSchemaClassBinding<VGameSoundScript_t>::CanAllocate() const
@@ -597,7 +640,6 @@ CSchemaClassBinding<VGameSoundScript_t>::DestructInPlace(void*) const
 CSchemaClassBinding<VGameSoundScript_t>::GetSize() const
 CSchemaClassBinding<VGameSoundScript_t>::IsAbstractBinding() const
 CSchemaClassBinding<VGameSoundScript_t>::Register(ISchemaSystem*, char const*, char const*)
-CSchemaClassBinding<VGameSound_t>
 CSchemaClassBinding<VGameSound_t>::Allocate() const
 CSchemaClassBinding<VGameSound_t>::AllocateAndCopyConstruct(void const*) const
 CSchemaClassBinding<VGameSound_t>::CanAllocate() const
@@ -609,7 +651,6 @@ CSchemaClassBinding<VGameSound_t>::DestructInPlace(void*) const
 CSchemaClassBinding<VGameSound_t>::GetSize() const
 CSchemaClassBinding<VGameSound_t>::IsAbstractBinding() const
 CSchemaClassBinding<VGameSound_t>::Register(ISchemaSystem*, char const*, char const*)
-CSchemaClassBindingBase
 CSchemaClassBindingBase::AsClassBinding() const
 CSchemaClassBindingBase::AsEnumBinding() const
 CSchemaClassBindingBase::GetBinaryName() const
@@ -622,7 +663,6 @@ CSchemaClassInfo::CompleteInitializationInternal(CSchemaType*, CSchemaClassBindi
 CSchemaClassInfo::CompleteInitializationInternal(CSchemaType*, CSchemaClassBindingBase const*)::_assertionStatics
 CSchemaClassInfo::MetaGetPtr(char const*, SchemaBaseClassTraversal_t, CSchemaClassInfo const*) const
 CSchemaClassInfo::MetaIsPresent(char const*, SchemaBaseClassTraversal_t, CSchemaClassInfo const*) const
-CSchemaEnumBinding<gender_t>
 CSchemaEnumBinding<gender_t>::Allocate() const
 CSchemaEnumBinding<gender_t>::AllocateAndCopyConstruct(void const*) const
 CSchemaEnumBinding<gender_t>::AssignEnumValue(void*, long long)
@@ -635,7 +675,6 @@ CSchemaEnumBinding<gender_t>::Register(ISchemaSystem*, char const*, char const*,
 CSchemaEnumBinding<gender_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem*, char const*, char const*)::ImplSchema_EnumInfo_gender_t
 CSchemaEnumBinding<gender_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem*, char const*, char const*)::ImplSchema_EnumMembersOf_gender_t
 CSchemaEnumBinding<gender_t>::s_pThisModuleBindingPointer
-CSchemaEnumBinding<soundlevel_t>
 CSchemaEnumBinding<soundlevel_t>::Allocate() const
 CSchemaEnumBinding<soundlevel_t>::AllocateAndCopyConstruct(void const*) const
 CSchemaEnumBinding<soundlevel_t>::AssignEnumValue(void*, long long)
@@ -648,7 +687,6 @@ CSchemaEnumBinding<soundlevel_t>::Register(ISchemaSystem*, char const*, char con
 CSchemaEnumBinding<soundlevel_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem*, char const*, char const*)::ImplSchema_EnumInfo_soundlevel_t
 CSchemaEnumBinding<soundlevel_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem*, char const*, char const*)::ImplSchema_EnumMembersOf_soundlevel_t
 CSchemaEnumBinding<soundlevel_t>::s_pThisModuleBindingPointer
-CSchemaEnumBindingBase
 CSchemaEnumBindingBase::AsClassBinding() const
 CSchemaEnumBindingBase::AsEnumBinding() const
 CSchemaEnumBindingBase::GetBinaryName() const
@@ -670,9 +708,7 @@ CSchemaFieldIterator::IsValid() const
 CSchemaFieldIterator::Reset()
 CSchemaFieldIterator::Reset()::_assertionConstants
 CSchemaFieldIterator::Reset()::_assertionStatics
-CSchemaFieldVisitor
 CSchemaFieldVisitor::VisitRelevantClass(void*, CSchemaClassInfo const*)
-CSchemaFieldVisitorInfoMap<CExtrefTraversal>
 CSchemaFieldVisitorInfoMap<CExtrefTraversal>::IsRelevantClassType(CSchemaClassInfo const*)
 CSchemaFieldVisitorInfoMap<CExtrefTraversal>::IsRelevantFieldType(CSchemaType const*)
 CSchemaFieldVisitorInfoMap<CExtrefTraversal>::~CSchemaFieldVisitorInfoMap()
@@ -680,52 +716,36 @@ CSchemaInheritanceIterator::CSchemaInheritanceIterator()
 CSchemaInheritanceIterator::PopulateTraversal_R(CSchemaClassInfo const*, CSchemaClassInfo const*, unsigned int, bool, bool)
 CSchemaInheritanceIterator::PopulateTraversal_R(CSchemaClassInfo const*, CSchemaClassInfo const*, unsigned int, bool, bool)::_assertionConstants
 CSchemaInheritanceIterator::PopulateTraversal_R(CSchemaClassInfo const*, CSchemaClassInfo const*, unsigned int, bool, bool)::_assertionStatics
-CSchemaInstallCallback
 CSchemaInstallCallback::OnConnect()
-CSchemaManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >
 CSchemaManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CResourceArray<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > > >::StaticAccessor()::m
-CSchemaManipulator<CResourceArray<VGameSound_t> >
 CSchemaManipulator<CResourceArray<VGameSound_t> >::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CResourceArray<VGameSound_t> >::StaticAccessor()::m
-CSchemaManipulator<CResourceArray<float> >
 CSchemaManipulator<CResourceArray<float> >::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CResourceArray<float> >::StaticAccessor()::m
-CSchemaManipulator<CResourceArray<unsigned char> >
 CSchemaManipulator<CResourceArray<unsigned char> >::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CResourceArray<unsigned char> >::StaticAccessor()::m
-CSchemaManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >
 CSchemaManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CResourceDeferredReference<CWeakHandle<InfoForResourceTypeVSound_t> > >::StaticAccessor()::m
-CSchemaManipulator<CResourceString>
 CSchemaManipulator<CResourceString>::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CResourceString>::StaticAccessor()::m
-CSchemaManipulator<CUtlString>
 CSchemaManipulator<CUtlString>::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CUtlString>::StaticAccessor()::m
-CSchemaManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<CWeakHandle<InfoForResourceTypeVSound_t> >::StaticAccessor()::m
-CSchemaManipulator<KeyValues>
 CSchemaManipulator<KeyValues>::SearchForInterface(SchemaManipulatorInterfaceType_t)
 CSchemaManipulator<KeyValues>::StaticAccessor()::m
-CSchemaRegistration
 CSchemaRegistration::s_pSchemaRegistrationList
-CSchemaRegistration_soundemittersystem
 CSchemaRegistration_soundemittersystem::RegisterAllBindings(ISchemaSystem*, SchemaRegistrationPhase_t)
-CSchemaVisitorBase
 CSchemaVisitorBase::TraverseClass(void*, CSchemaClassInfo const*)
 CSchemaVisitorBase::TraverseField(void*, CSchemaType*, CSchemaClassField const*)
-CSchemaVisitorInfoMapBase
 CSchemaVisitorInfoMapBase::CSchemaVisitorInfoMapBase()
 CSchemaVisitorInfoMapBase::FindOrCreate(CSchemaClassInfo const*)
 CSchemaVisitorInfoMapBase::LookupClass(CSchemaClassInfo const*)
 CSchemaVisitorInfoMapBase::LookupClass(CSchemaClassInfo const*)::_assertionConstants
 CSchemaVisitorInfoMapBase::LookupClass(CSchemaClassInfo const*)::_assertionStatics
 CSchemaVisitorInfoMapBase::~CSchemaVisitorInfoMapBase()
-CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeVSound_t>
 CSchemaWeakHandleInspectionManipulator<InfoForResourceTypeVSound_t>::Inspect(void const*, ISchemaSerializationTarget*)
-CSoundEmitterSystemBase
 CSoundEmitterSystemBase::AddSoundEntries entry with empty name
 CSoundEmitterSystemBase::AddSoundEntries(VGameSoundScript_t const*)
 CSoundEmitterSystemBase::AddWaveName(char const*)
@@ -746,8 +766,8 @@ CSoundEmitterSystemBase::GenderExpandString(gender_t, char const*, char*, int)::
 CSoundEmitterSystemBase::GetActorGender(char const*)
 CSoundEmitterSystemBase::GetDependencies()
 CSoundEmitterSystemBase::GetParametersForSound(char const*, CSoundParameters&, gender_t, bool)
-CSoundEmitterSystemBase::GetParametersForSound:  No such sound %short
-CSoundEmitterSystemBase::GetParametersForSound:  sound %short has no wave or rndwave key!
+CSoundEmitterSystemBase::GetParametersForSound:  No such sound %s
+CSoundEmitterSystemBase::GetParametersForSound:  sound %s has no wave or rndwave key!
 CSoundEmitterSystemBase::GetSoundDuration(char const*) const
 CSoundEmitterSystemBase::GetSoundDuration(int) const
 CSoundEmitterSystemBase::GetSoundFileForGameSound(char const*, char const*)
@@ -769,7 +789,6 @@ CSoundEmitterSystemBase::ShutdownSounds()
 CSoundEmitterSystemBase::ShutdownSounds()::_assertionConstants
 CSoundEmitterSystemBase::ShutdownSounds()::_assertionStatics
 CSoundEmitterSystemBase::~CSoundEmitterSystemBase()
-CSoundEmitterUniformRandomStream
 CSoundEmitterUniformRandomStream::RandomFloat(float, float)
 CSoundEmitterUniformRandomStream::RandomFloatExp(float, float, float)
 CSoundEmitterUniformRandomStream::RandomInt(int, int)
@@ -798,7 +817,6 @@ CSoundParametersInternal::SoundLevelToString() const::sz
 CSoundParametersInternal::VolumeToString() const
 CSoundParametersInternal::VolumeToString() const::sz
 CSoundParametersInternal::~CSoundParametersInternal()
-CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>
 CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>::Resolve(IAnnotationPackager*)
 CStackAnnotation<CSchemaClassField const*, bool, void, void, void, void, void, void, void>::~CStackAnnotation()
 CTSSimpleList<CTempFieldPathList::SListElement>::~CTSSimpleList()
@@ -810,9 +828,6 @@ CThreadRWLock::LockForWrite()
 CThreadRWLock::UnlockWrite()
 CThreadRWLock::WaitForRead()
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<ISoundEmitterSystemBase>
-CTier1AppSystem<ISoundEmitterSystemBase, 0>
-CTier2AppSystem<ISoundEmitterSystemBase, 0>
 CTier2AppSystem<ISoundEmitterSystemBase, 0>::GetTier()
 CTier2AppSystem<ISoundEmitterSystemBase, 0>::Reconnect(void* (*)(char const*, int*), char const*)
 CUtlBuffer::AddNullTermination()
@@ -841,9 +856,7 @@ CUtlBuffer::PeekGet(int, int)::_assertionStatics
 CUtlBuffer::PeekStringLength()
 CUtlBuffer::PeekWhiteSpace(int)
 CUtlBuffer::PutOverflow(int)
-CUtlCStringConversion
 CUtlCStringConversion::FindConversion(char const*, int*)
-CUtlCharConversion
 CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
 CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)::_assertionConstants
 CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)::_assertionStatics
@@ -872,7 +885,6 @@ CUtlMemory<char, int>::Grow(int)
 CUtlMemory<int, int>::Grow(int)
 CUtlMemory<unsigned char, int>::Grow(int)
 CUtlMemory<void (*)(IConVar*, char const*, float), int>::Grow(int)
-CUtlNoEscConversion
 CUtlNoEscConversion::FindConversion(char const*, int*)
 CUtlRBTree<CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned char, CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned char>, unsigned char> >::Find(CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::Node_t const&) const::_assertionConstants
 CUtlRBTree<CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned char, CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::Node_t, unsigned char>, unsigned char> >::Find(CUtlMap<char const*, gender_t, unsigned char, bool (*)(char const* const&, char const* const&)>::Node_t const&) const::_assertionStatics
@@ -938,19 +950,17 @@ CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableMT::String(CUtlSymbol) const
 CUtlVectorBase<CSchemaInheritanceIterator::ClassToTraverse_t, CUtlMemoryFixedGrowable<CSchemaInheritanceIterator::ClassToTraverse_t, 8ul, int> >::~CUtlVectorBase()
-CVGameSoundScriptTypeManager
 CVGameSoundScriptTypeManager::Allocate(void const*, IResourceAllocatorUtils*)
 CVGameSoundScriptTypeManager::Deallocate(void*, IResourceDeallocatorUtils*)
 CWeakHandle
 CallPostConnect()
 CallPostConnect()::_assertionConstants
 CallPostConnect()::_assertionStatics
-Cannot determine resource type for handle '%short' - schema data not loaded for the referred-to type?
+Cannot determine resource type for handle '%s' - schema data not loaded for the referred-to type?
 CaselessStringLessThan(char const* const&, char const* const&)
 CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
 ClassIntrospectionHandle_t FindDiskDataClassForResourceType(ResourceType_t)
 ComputeResourceIdFromResourceName(char const*)
-ConCommandBase
 ConCommandBase::Create(char const*, char const*, long long)
 ConCommandBase::Create(char const*, char const*, long long)::_assertionConstants
 ConCommandBase::Create(char const*, char const*, long long)::_assertionStatics
@@ -958,8 +968,7 @@ ConCommandBase::GetDLLIdentifier() const
 ConCommandBase::RemoveFlags(long long)
 ConCommandBase::s_pAccessor
 ConCommandBase::s_pConCommandBases
-ConVar
-ConVar(%short) defined with infinite float value (%short)
+ConVar(%s) defined with infinite float value (%s)
 ConVar::AddFlags(long long)
 ConVar::ChangeStringValue(char const*, float)
 ConVar::ChangeStringValue(char const*, float)::_assertionConstants
@@ -999,7 +1008,7 @@ ConVar_Register(long long, IConCommandBaseAccessor*)::_assertionStatics
 ConVar_Unregister()
 ConVar_Unregister()::_assertionConstants
 ConVar_Unregister()::_assertionStatics
-Conditional Error: %short
+Conditional Error: %s
 ConfigurationSystem_001
 ConnectInterfaces(void* (**)(char const*, int*), int)
 ConnectTier1Libraries(void* (**)(char const*, int*), int)
@@ -1020,7 +1029,7 @@ DisconnectTier1Libraries()
 DisconnectTier2Libraries()
 DoesClassRequireExtrefFixup(CSchemaClassInfo const*)
 DotaCardGameClient_001
-E;__int128 ~0
+E;n ~0
 E;|$8|
 ERROR: CAtomicManipulator::Allocate() Cannot allocate CResourceArray
 ERROR: CAtomicManipulator::Allocate() Cannot allocate KeyValues
@@ -1030,26 +1039,26 @@ ERROR: CAtomicManipulator::Copy() Cannot copy CResourceArray(FIXME: maybe you ca
 ERROR: CAtomicManipulator::Copy() Cannot copy KeyValues(FIXME: maybe you can?)
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate CResourceArray
 ERROR: CAtomicManipulator::Deallocate() Cannot deallocate KeyValues
-ERROR: Could not find schema data for helper class for resource type %lld '%short'. (Missing MDiskDataForResourceType metadata or schema data isn'unsigned short loaded?)
-ERROR: Multiple classes registered as disk data for resource type %lld '%short'. (Should only have one class MDiskDataForResourceType - %double listed above.)
-ERROR: Problem allocating permanent data for resource in file '%short'. See above for reason(short)
+ERROR: Could not find schema data for helper class for resource type %lld '%s'. (Missing MDiskDataForResourceType metadata or schema data isn't loaded?)
+ERROR: Multiple classes registered as disk data for resource type %lld '%s'. (Should only have one class MDiskDataForResourceType - %d listed above.)
+ERROR: Problem allocating permanent data for resource in file '%s'. See above for reason(s)
 EngineServiceMgr001
 EnvironmentMapBuilder_001
 Error
-Error loading resource "%short" (Invalid resource version: %double != %double)
+Error loading resource "%s" (Invalid resource version: %d != %d)
 EventSystem001
 Exceeded max number of actors in scripts/global_actors.txt
 F([A^]
 Failed to call CBaseIntrospectedTypeManager::Init
 Failed to call CBaseIntrospectedTypeManager::SetDiskDataBinding
-Failed to fix resource reference '%short' (%short)- ID = %016llX, Expected in: '%short'
+Failed to fix resource reference '%s' (%s)- ID = %016llX, Expected in: '%s'
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
 FindDiskDataClassForResourceType(unsigned long long)
 FixupResourceName(char const*, char*, int)
-FixupResourceName: Illegal full path passed in ("%short")!
-FixupResourceName: Illegal path, missing extension passed in ("%short")!
+FixupResourceName: Illegal full path passed in ("%s")!
+FixupResourceName: Illegal path, missing extension passed in ("%s")!
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 From Class Binding
@@ -1087,9 +1096,9 @@ GetNoEscCharConversion()
 GetResourceTypeOfWeakHandle(CSchemaType const*)
 GetResourceTypeOfWeakHandle(CSchemaType const*)::_assertionConstants
 GetResourceTypeOfWeakHandle(CSchemaType const*)::_assertionStatics
-GetSoundDuration called on unknown sound '%short'
-GetSoundDuration called with missing script handle %double
-H!wchar_t(]
+GetSoundDuration called on unknown sound '%s'
+GetSoundDuration called with missing script handle %d
+H!w(]
 H9^0u
 H;A(uxH
 HGameSoundScript
@@ -1113,13 +1122,7 @@ I CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char 
 I CUtlRBTree<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char, CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char> >::NewNode(const T *) [T = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, I = unsigned char, L = CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<const char *, gender_t, unsigned char, bool (*)(const char *const &, const char *const &)>::Node_t, unsigned char>, unsigned char>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::Insert(const T &, ERBTreeInsertBehavior) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
 I CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlSymbolTable::CStringPoolIndex, I = unsigned short, L = CUtlSymbolTable::CLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTable::CStringPoolIndex, unsigned short>, unsigned short>]
-IAppSystem
-IAtomicManipulator
-IConCommandBaseAccessor
-IConVar
 IQuickTime001
-IResourceAllocatorUtils
-IResourceTypeManager
 IResourceTypeManager::DoesResourceTypeContainStreamingData() const
 IResourceTypeManager::GetNonStreamingDataLoadSize() const
 IResourceTypeManager::GetNonStreamingDataLoadSize() const::_assertionConstants
@@ -1127,14 +1130,8 @@ IResourceTypeManager::GetNonStreamingDataLoadSize() const::_assertionStatics
 IResourceTypeManager::LoadStreamingData(ResourceBindingBase_t const*, IResourceSystemUtils*)
 IResourceTypeManager::LoadStreamingData(ResourceBindingBase_t const*, IResourceSystemUtils*)::_assertionConstants
 IResourceTypeManager::LoadStreamingData(ResourceBindingBase_t const*, IResourceSystemUtils*)::_assertionStatics
-ISchemaBinding
-ISchemaInspectionManipulator
-ISchemaManipulator
-ISchemaSearchTester<CSchemaClassInfo const*>
-ISoundEmitterSystemBase
 IStack_Annotation::IStack_Annotation(CCallStackMarkerBase const&)
 IStack_Annotation::~IStack_Annotation()
-IUniformRandomStream
 IcF0H
 InfoForResourceTypeVSound_t
 InputService_001
@@ -1148,7 +1145,7 @@ InterfaceReg::InterfaceReg(void* (*)(), char const*)
 Internal_GetSubKey() != NULL
 Internal_GetSubKey() == NULL
 Internal_GetSubKey() == dat
-IsLooping called with missing script handle %double
+IsLooping called with missing script handle %d
 IsRelevantFieldType( pFieldType )
 IsResourceWeakHandle( pHandleType )
 IsValid()
@@ -1159,7 +1156,7 @@ KeyValues *KeyValues::FindKey(HKeySymbol) const
 KeyValues *KeyValues::FindKey(const char *, bool)
 KeyValues *KeyValues::GetFirstSubKey()
 KeyValues *KeyValues::GetNextKey()
-KeyValues Error: %short in file %short
+KeyValues Error: %s in file %s
 KeyValues::AddSubKey(KeyValues*)
 KeyValues::AddSubKey(KeyValues*)::_assertionConstants
 KeyValues::AddSubKey(KeyValues*)::_assertionStatics
@@ -1205,7 +1202,7 @@ KeyValues::MergeBaseKeys(CUtlVector<KeyValues*, CUtlMemory<KeyValues*, int> >&):
 KeyValues::ParseIncludedKeys(char const*, char const*, IBaseFileSystem*, char const*, CUtlVector<KeyValues*, CUtlMemory<KeyValues*, int> >&, bool (*)(char const*))
 KeyValues::ParseIncludedKeys(char const*, char const*, IBaseFileSystem*, char const*, CUtlVector<KeyValues*, CUtlMemory<KeyValues*, int> >&, bool (*)(char const*))::_assertionConstants
 KeyValues::ParseIncludedKeys(char const*, char const*, IBaseFileSystem*, char const*, CUtlVector<KeyValues*, CUtlMemory<KeyValues*, int> >&, bool (*)(char const*))::_assertionStatics
-KeyValues::ParseIncludedKeys: Couldn'unsigned short load included keyvalue file %short
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s
 KeyValues::RecursiveLoadFromBuffer(char const*, CKeyValuesTokenReader&, bool (*)(char const*))
 KeyValues::RecursiveLoadFromBuffer(char const*, CKeyValuesTokenReader&, bool (*)(char const*))::_assertionConstants
 KeyValues::RecursiveLoadFromBuffer(char const*, CKeyValuesTokenReader&, bool (*)(char const*))::_assertionStatics
@@ -1219,13 +1216,12 @@ KeyValues::operator new(unsigned long)
 LINUX
 LOWVIOLENCE
 LightingBuilderMgr001
-LoadFromBuffer: expected '{', found '%short'
+LoadFromBuffer: expected '{', found '%s'
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 MATCHFRAMEWORK_001
 MDiskDataForResourceType
-MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle_t
 MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle_t::Test(CSchemaClassInfo const*)
 MResourceTypeForInfoType
 MResourceVersion
@@ -1238,8 +1234,12 @@ ModelProcessingSystem001
 MurmurHash2(void const*, int, unsigned int)
 MurmurHash2LowerCase(char const*, unsigned int)
 MurmurHash64(void const*, int, unsigned int)
+N24CFieldPathHuffmanEncoder12InternalNodeE
+N24CFieldPathHuffmanEncoder5INodeE
+N24CFieldPathHuffmanEncoder8LeafNodeE
+N24MDiskDataForResourceType45CValueSearchTester_ClassIntrospectionHandle_tE
 NTROL
-Need to long double restrict-generate gender expansions to use this feature fully.
+Need to re-generate gender expansions to use this feature fully.
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkServerService_001
@@ -1247,7 +1247,7 @@ NetworkService_001
 NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 O [A\A^A_]
-O%unsigned short"A
+O%t"A
 PITCH_HIGH
 PITCH_LOW
 PITCH_NORM
@@ -1277,7 +1277,7 @@ RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
-RegisterConfigValue: Unknown error constructing config value "%short"!
+RegisterConfigValue: Unknown error constructing config value "%s"!
 RegisterConfigValues()
 RegisterInterface(void* (*)(char const*, int*), char const*, void**)::_assertionConstants
 RegisterInterface(void* (*)(char const*, int*), char const*, void**)::_assertionStatics
@@ -1290,7 +1290,7 @@ RenderHardwareConfig002
 RenderService_001
 RenderSystemSurface001
 RenderUtils_001
-Resource %short
+Resource %s
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceId_t UpdateResourceIdForUGC(const char *, UGCHandle_t, ResourceId_t, const CResourceRefTable *, char *, int)
@@ -1353,7 +1353,7 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 ServerUploadGameStats001
 SoundEmitterSystem
-SoundEmitterSystemBase::DescribeSound:  No such sound %short
+SoundEmitterSystemBase::DescribeSound:  No such sound %s
 SoundMixGroupSystem001
 SoundOpSystem001
 SoundOpSystemEdit001
@@ -1398,7 +1398,7 @@ TypeManager
 UGetResourceManifest
 UNSPECIFIED_LOGGING_COLOR
 UPDATE_STRING_TOKEN_DATABASE
-Unhandled field type for field '%short': '%short' (Why did it pass SchemaRecurseType?)
+Unhandled field type for field '%s': '%s' (Why did it pass SchemaRecurseType?)
 UpdateResourceIdForUGC(char const*, unsigned long long, ResourceId_t, CResourceRefTable const*, char*, int)
 UpdateResourceIdForUGC(char const*, unsigned long long, ResourceId_t, CResourceRefTable const*, char*, int)::_assertionConstants
 UpdateResourceIdForUGC(char const*, unsigned long long, ResourceId_t, CResourceRefTable const*, char*, int)::_assertionStatics
@@ -1477,15 +1477,15 @@ V_vsnprintf(char*, int, char const*, __va_list_tag*)
 V_vsnprintf(char*, int, char const*, __va_list_tag*)::_assertionConstants
 V_vsnprintf(char*, int, char const*, __va_list_tag*)::_assertionStatics
 VisBuilder_001
-WARNING: Missing data block for file: %short
-WARNING: Missing introspection manifest for file: %short
-WARNING: Problems encounted with external references in resource '%short'. See above for reason(short)
-WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
-WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
+WARNING: Missing data block for file: %s
+WARNING: Missing introspection manifest for file: %s
+WARNING: Problems encounted with external references in resource '%s'. See above for reason(s)
+WARNING: Trying to access schema binding '%s' before bindings were registered in this module!
+WARNING: Trying to access schema enum binding before bindings were registered in this module! - %s()
 WIN32
 WINDOWS
 WINXP
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 WorldRendererBuilderMgr001
 WorldRendererMgr001
 X[A\A]A^A_]
@@ -1496,7 +1496,7 @@ Yfffff.
 [A\A^A_]A
 [A^A_]
 [A^]A
-[Disk class %double/%double] Name = '%short'; Project = '%short'; Binary = '%short'
+[Disk class %d/%d] Name = '%s'; Project = '%s'; Binary = '%s'
 _.memset_pattern
 _AssertMsg_ConditionFailed
 _CMemAllocSystemInitialize
@@ -1577,7 +1577,6 @@ __data
 __g_InterfaceRegCSoundEmitterSystemBaseISoundEmitterSystemBase_reg
 __gcc_except_tab__TEXT
 __got
-__int128 >= 0
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1834,6 +1833,7 @@ hResource->m_nDeferredCount <= hResource->m_nRefCount
 hResource->m_nDeferredCount > 0
 hResource->m_nDeferredCount >= 0
 hResource->m_nRefCount > 0
+h[A\A]A^A_]
 hospital_patient
 iBitsRight > 0
 info.m_pReplacementString == 0
@@ -1863,7 +1863,6 @@ isoundemittersystembase_h_schema.gen_cpp
 jimmy
 keyvalues.cpp
 libsoundemittersystem.dylib
-long long[A\A]A^A_]
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
@@ -1880,7 +1879,7 @@ m_SoundGenders
 m_SoundName
 m_SoundNames
 m_Sounds
-m_Sounds[ int ]->m_bRemoved
+m_Sounds[ i ]->m_bRemoved
 m_SpecialWaveFlags
 m_bHadMissingResources
 m_bIsLooping
@@ -1914,6 +1913,7 @@ maxLen >= sizeof( *pDest )
 maxlen >= 1
 mechanic
 memoverride.cpp
+n >= 0
 nBits <= nBytes*8
 nChars <= MIN( V_strnlen(pValue, nChars) + 1, nChars )
 nChars == Q_strlen(m_pString)
@@ -2027,6 +2027,9 @@ strtools.cpp
 strtools_unicode.cpp
 t$8[A\A^A_]
 t$H9[8u
+t&H9[8tAH
+t&H9[8tCH
+t'L9p
 t0IcG
 tMff.
 teengirl
@@ -2184,10 +2187,6 @@ uiKey != (uint)InvalidHandle()
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
 undistractable
 unknown
-unsigned char[A\A]A^A_]
-unsigned short&H9[8tAH
-unsigned short&H9[8tCH
-unsigned short'L9p
 utlbuffer.cpp
 utlmemory.cpp
 utlstring.cpp
@@ -2333,7 +2332,8 @@ vtable for MDiskDataForResourceType::CValueSearchTester_ClassIntrospectionHandle
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
-yGD;long double
+x[A\A]A^A_]
+yGD;e
 |$0E1
 }HA;EP}
 ~$IcF

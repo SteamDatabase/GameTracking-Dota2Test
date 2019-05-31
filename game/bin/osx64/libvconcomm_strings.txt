@@ -1,7 +1,7 @@
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
 	fffff.
         
-  (%short, v. %3d) '%short'
+  (%s, v. %3d) '%s'
  A;\$H
  [A\A^A_]
  [A^]
@@ -14,10 +14,10 @@
 !fffff.
 !g_pSchemaSystem || g_pSchemaSystem == pSchemaSystem
 !m_Pipes[ nPipe ].m_bOpen
-!m_Pipes[int].m_pHelper
+!m_Pipes[i].m_pHelper
 !m_bStoredSubKey
 #fff.
-%int %int %int %int
+%i %i %i %i
 'ffff.
 ( error_value != SOCKET_ERROR ) && ( error_value != WSAENOTCONN )
 ([A\A]A^A_]
@@ -25,8 +25,8 @@
 (m_nRefCount & (uint32)(INTERNAL_IS_CONSTRUCTED | INTERNAL_CONSTRUCTOR_ALLOWED)) == (uint32)INTERNAL_CONSTRUCTOR_ALLOWED
 (m_nRefCount & (uint32)INTERNAL_REFCOUNT_MASK) > 0
 (m_nRefCount & INTERNAL_LOCKED) != 0
-*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConCommand "%s" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 ,[A^]
 -consoleapp
 -nofocus
@@ -63,21 +63,57 @@
 0000`PP
 0[A\A^A_]
 0x%016llX
+10ConCommand
+10IAppSystem
+12CEmptyConVar
+13IVConPipeHost
+14CBaseAppSystemI10IAppSystemE
+14CBaseAppSystemI9IVConCommE
+14ConCommandBase
+15CTier0AppSystemI9IVConCommE
+15CTier1AppSystemI9IVConCommLi0EE
+15CTier2AppSystemI9IVConCommLi0EE
+15CVConCommThread
+15IConVarListener
+16CDefaultAccessor
+16CVConPingMessage
+16ICommandCallback
+16ILoggingListener
+17CVConBasePipeHost
+17CVConFocusMessage
+18CServicePollThread
+18CVConCommThread_PC
+20CPostConnectCallback
+21IVConCommDataReceived
+22IModuleMappingListener
+23CVConChannelPokeMessage
+23CVConsoleConVarListener
+23IConCommandBaseAccessor
+24CVConsoleLoggingListener
+25CConCommandMemberAccessorI9CVConCommE
+26ICommandCompletionCallback
+30CVConsoleModuleMappingListener
+32IConfigValueRegistrationListener
 49S |}
+6ConVar
+7IConVar
+8CFmtStrNILi256ELb0EE
 8[A\A]A^A_]
 8[A^A_]
-9S |signed char
+9CVConComm
+9IVConComm
+9S |a
 <Unknown Shutdown Context>
 <null>
 =============== End VConsole Buffered Messages ===============
-=============== Excessive Messages Truncacted - Buffer Size: %double bytes ===============
+=============== Excessive Messages Truncacted - Buffer Size: %d bytes ===============
 =============== VConsole Buffered Messages ===============
 ==========================================================
 ==============================================================
 =NAHCu L
 =TNRP
 >L97t-H
-?CSchemaInstallCallback
+?22CSchemaInstallCallback
 @CThread::CThread()
 @CThread::Init()
 @CThread::IsAlive()
@@ -210,10 +246,10 @@ A;F@|6H
 A;FH|6H
 A;GH|6H
 A;O ~
-A;]long long|
+A;]x|
 ADONfA
 AINFfA
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARARAp
 AWAVATS
 AWAVATSA
@@ -246,23 +282,15 @@ BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
 C [A^]
-CBaseAppSystem<IAppSystem>
-CBaseAppSystem<IVConComm>
 CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
-CConCommandMemberAccessor<CVConComm>
-CDL;long double
-CDefaultAccessor
-CEmptyConVar
+CDL;e
 CFGVf
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
 CHANf
 COLORCORRECTION_VERSION_1
-CPostConnectCallback
 CRC32_t CVConComm::GetUniqueIDForChannel(LoggingChannelID_t)
-CServicePollThread
-CSocketConnection object must be cleaned up before it can be long double restrict-initialized.
+CSocketConnection object must be cleaned up before it can be re-initialized.
 CSocketConnection object was not properly cleaned up.
 CSocketConnection::~CSocketConnection()
 CTSListBase: Misaligned list
@@ -291,26 +319,13 @@ CThreadEvent::Set()
 CThreadFastMutex::Lock(unsigned long long, unsigned int) volatile
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<IVConComm>
-CTier1AppSystem<IVConComm, 0>
-CTier2AppSystem<IVConComm, 0>
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
 CUtlRBTree overflow with %u elements!
 CUtlString::SetDirect does not support resizing strings in place.
 CVARf
-CVConBasePipeHost
-CVConChannelPokeMessage
-CVConComm
-CVConCommThread
-CVConCommThread_PC
-CVConFocusMessage
-CVConPingMessage
-CVConPipeHelper for pipe %double not unregistered, when CVConBasePipeHost is destroyed!
-CVConsoleConVarListener
-CVConsoleLoggingListener
-CVConsoleModuleMappingListener
+CVConPipeHelper for pipe %d not unregistered, when CVConBasePipeHost is destroyed!
 CVirtualMachineCallStackTranslationEncoder::EnumerateEncodingIndices(bool (*)(CVirtualMachineCallStackTranslationEncoder*, unsigned int, char const*, char const*, unsigned int, void*), void*)
 CVirtualMachineCallStackTranslationEncoder::GetIndexBitMask()
 CVirtualMachineCallStackTranslationEncoder::GetIndexBitShift()
@@ -327,13 +342,10 @@ Can only read from connected socket.
 Can only write to connected socket.
 Cannot recover from failed socket shutdown.
 Cannot recover from failure in closesocket()
-ConCommand
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
 ConfigurationSystem_001
-Connection will timeout in %double seconds...
+Connection will timeout in %d seconds...
 Construction is only allowed from the resolve function
 Could not unregister helper, not registered to this VConsolePipe_t!
 Count
@@ -346,20 +358,20 @@ DebugTextureInfo001
 DependencyClass::m_pDependencyLL == NULL
 DotaCardGameClient_001
 Dumps the state of all existing VConsole pipes
-Duplicate PIPE_CLOSE message received for pipe (%double|%short)!
-Duplicate PIPE_OPEN_ACK message received for pipe (%double|%short)!
-Duplicate PIPE_OPEN_REQUEST message received for pipe (%double|%short)!
-E;long double@u
+Duplicate PIPE_CLOSE message received for pipe (%d|%s)!
+Duplicate PIPE_OPEN_ACK message received for pipe (%d|%s)!
+Duplicate PIPE_OPEN_REQUEST message received for pipe (%d|%s)!
+E;e@u
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
-Encountered ConCommand '%short' without signed char callback!
+Encountered ConCommand '%s' without a callback!
 Endpoint index out of range
 Endpoint index out of range.
 EngineServiceMgr001
 EnvironmentMapBuilder_001
 EventSystem001
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 G8H	p(]
@@ -367,8 +379,8 @@ GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 H	p(]
-H	wchar_t(]
-H!wchar_t(]
+H	w(]
+H!w(]
 H[A\A]A^A_]
 H[A^A_]
 H__ZdaPv
@@ -380,30 +392,18 @@ HcK@H
 HelpSystem_001
 HostStateMgr001
 I CUtlRBTree<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short, CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short> >::NewNode(const T *) [T = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, I = unsigned short, L = CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::CKeyLess, M = CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int, MessageDataInfo_t *, unsigned short, bool (*)(const unsigned int &, const unsigned int &)>::Node_t, unsigned short>, unsigned short>]
-IAppSystem
-ICommandCallback
-ICommandCompletionCallback
-IConCommandBaseAccessor
-IConVar
-IConVarListener
-IConfigValueRegistrationListener
-ILoggingListener
-IModuleMappingListener
 IQuickTime001
-IVConComm
-IVConCommDataReceived
-IVConPipeHost
 IcM@H
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
 InstallSchemaBindings
 Intentionally vague touch behavior for %p
-Invalid VConsolePipe_t pipe name '%short'! (max %double chars)
+Invalid VConsolePipe_t pipe name '%s'! (max %d chars)
 Invalid connection type.
 Invalid number of allowed connections.
 IsValid()
-IsValidIndex(int) && (int != InvalidIndex())
+IsValidIndex(i) && (i != InvalidIndex())
 IsValidPipe( nPipe )
 IsValidPipe( nPipe ) || ( nMessageID == VCONMSG_TOVCON_PIPE_CREATE )
 KeyValueCache001
@@ -422,15 +422,15 @@ MATCHFRAMEWORK_001
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MODMf
-Make VConsole Foreground(): ReturnToWindow:0x%p, Timeout:%double, UseHostPath:%double
+Make VConsole Foreground(): ReturnToWindow:0x%p, Timeout:%d, UseHostPath:%d
 MapListService_001
 MaterialUtils_001
 Member function called on NULL KeyValues
 MeshSystem001
 MeshUtils001
-Message Version Mismatch: '%short', Expected %double, Got %double
-Message received for VConsolePipe_t with no registered helper (%short)
-Message received on closed VConsole Pipe! (%short)
+Message Version Mismatch: '%s', Expected %d, Got %d
+Message received for VConsolePipe_t with no registered helper (%s)
+Message received on closed VConsole Pipe! (%s)
 Message received on unrecognized VConsolePipe_t!
 ModelDocUtils001
 NetworkClientService_001
@@ -444,8 +444,8 @@ No VConsole, Ignoring.
 Only TCP sockets are implemented at the moment.
 Only one helper may be registered per VConsolePipe_t!
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 OwnedByCurrentThread()
 P[A^]
 PanoramaTextServices001
@@ -462,8 +462,8 @@ RBRAp
 RBRBRBRAp
 RCPPt6H
 RCPPuo9
-RegisterConfigValue: Unknown error constructing config value "%short"!
-Rejecting registering message '%short'. Already registered to an alternate handler.
+RegisterConfigValue: Unknown error constructing config value "%s"!
+Rejecting registering message '%s'. Already registered to an alternate handler.
 Release
 RenderDevice003
 RenderDeviceMgr001
@@ -541,23 +541,23 @@ VBAllocTracker001
 VBaseFileSystem011
 VBik001
 VConComm
-VConComm Discarding Oversized Outgoing Message: '%short' (%double bytes)
+VConComm Discarding Oversized Outgoing Message: '%s' (%d bytes)
 VConComm Failed To Initialize!
 VConComm001
 VConCommThread_PC
 VConsole Connected.
-VConsole Rejecting Message: '%short', No Message Handler Claimed Ownership.
+VConsole Rejecting Message: '%s', No Message Handler Claimed Ownership.
 VConsole disconnect
-VConsole pipe (%short): '0' is an invalid pipe version number!
-VConsole pipe (%short): PIPE_CLOSE message received - PIPE CLOSED
-VConsole pipe (%short): create message received, creating new pipe
-VConsole pipe (%short): create message received, pipe already exists
-VConsole pipe (%short): open ack received - PIPE OPEN
-VConsole pipe (%short): open request accepted - PIPE OPEN
-VConsole pipe (%short): open request denied
-VConsole pipe (%short): open request parried
-VConsole pipe (%short): version mismatch! (%double/%double) App & tool do not match - build or synch your BINs!
-VConsole pipes (game-side): %double
+VConsole pipe (%s): '0' is an invalid pipe version number!
+VConsole pipe (%s): PIPE_CLOSE message received - PIPE CLOSED
+VConsole pipe (%s): create message received, creating new pipe
+VConsole pipe (%s): create message received, pipe already exists
+VConsole pipe (%s): open ack received - PIPE OPEN
+VConsole pipe (%s): open request accepted - PIPE OPEN
+VConsole pipe (%s): open request denied
+VConsole pipe (%s): open request parried
+VConsole pipe (%s): version mismatch! (%d/%d) App & tool do not match - build or synch your BINs!
+VConsole pipes (game-side): %d
 VConsolePipe_t CVConBasePipeHost::CreatePipe(const char *, uint16)
 VDebugService_001
 VDmeMakeFileUtils001
@@ -587,11 +587,11 @@ VScriptManager010
 VStringTokenSystem001
 VisBuilder_001
 Waiting For VConsole To Connect...
-Warning:  %short = '%short' is infinite, clamping value.
+Warning:  %s = '%s' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
-X(unsigned short/L
+X(t/L
 Xbox VDP is not supported on this platform.
 [A\A]A^A_]
 [A\A^A_]
@@ -705,8 +705,8 @@ _strlen
 _strnlen
 _wcslen
 `[A\A^A_]
-`unsigned char[A\A^A_]
-arg%double
+`h[A\A^A_]
+arg%d
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto COrderedConstructor_Create<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, false>::AddRef(bool)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>, RESOLVECLASS = CResolveOrderedFunc<COrderedInitShutdownRefWrapper<&EarlyInit_Common>, &_ORDERED_INIT_SHUTDOWN_WRAPPER_RESOLVEFUNC>, bCONSTRUCT_ON_FIRST_USE = false]
 auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&EarlyInit_Common> >::InternalConstruct(COrderedConstructor_DependencyManagement<void> *&&)::(anonymous class)::operator()() const [T = COrderedInitShutdownRefWrapper<&EarlyInit_Common>]
@@ -735,20 +735,20 @@ fffff.
 ffffff.
 g_pCVar
 global
+h[A\A]A^A_]
 int CSocketConnection::GetFirstAvailableListeningEndpoint()
 int CSocketTransportCompatible::ReadMessages()
 int CSocketTransportCompatible::WriteMessages()
 int CUtlBuffer::ParseToken(characterset_t *, char *, int, bool)
 invalid
 libvconcomm.dylib
-long long[A\A]A^A_]
 m_ConnectionType == CT_INDETERMINATE && m_SocketProtocol == SP_INDETERMINATE
 m_ConnectionType == CT_SERVER
 m_Count == 0
 m_Elements.IsValidIterator( it )
 m_Elements.IsValidIterator( m_LastAlloc )
 m_Elements.IsValidIterator( m_LastAlloc ) || m_NumElements == 0
-m_EndpointStates[int] == SSTATE_UNINITIALIZED && m_EndpointSockets[int] == InvalidSocketHandle
+m_EndpointStates[i] == SSTATE_UNINITIALIZED && m_EndpointSockets[i] == InvalidSocketHandle
 m_FirstFree == InvalidIndex()
 m_Head.value.pNode != End()
 m_Head.value.pNode == m_Tail.value.pNode
@@ -761,7 +761,7 @@ m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + nMaxSize - 1 )
 m_Memory.IsIdxValid( Index ) && m_Memory.IsIdxValid( Index + size - 1 )
 m_MessageDataInfosMutex.AssertOwnedByCurrentThread()
 m_NumElements == 0
-m_Pipes[int].m_nVersion == nVersion
+m_Pipes[i].m_nVersion == nVersion
 m_Root == InvalidIndex()
 m_fnChangeCallbacks.Count() == 0
 m_iDataType == TYPE_NONE
@@ -792,20 +792,20 @@ operator new[](unsigned long)
 p   00 
 pCallback == NULL
 pHVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBVBp
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pSchemaSystem != NULL
 pTarget == ( pData + nDataLength )
 pipe.m_bOpen
 radr://5614542
 recv_return_value > 0
+s,HcS(H
 s_nConnectionCount > 0
 s_nDLLIdentifier < 0
 s_nDLLIdentifier >= 0
 s_nRegistrationCount < ARRAYSIZE(s_pConnectionRegistration)
 s_nResourceFCRegisteredCount > 0
 send_return_value > 0
-short,HcS(H
 size < 1024 * 1024
 size >= 0
 socketProtocol == SP_TCP
@@ -813,17 +813,16 @@ static void CGlobalConfigValueRegistry::HookUpConfigValue(const char *, ConfigTy
 static void ConVarRef::InitDeferredConVarRefs()
 std::terminate()
 strnlen
+t&H9[8tUH
 t3ffff.
+t<fff.
 tMff.
 typeinfo for CThread
 typeinfo for std::bad_alloc
 uGetResourceManifest
 uint16 CVConBasePipeHost::PipeVersion(VConsolePipe_t)
-unsigned char[A\A]A^A_]
-unsigned short&H9[8tUH
-unsigned short<fff.
 uwHcE
-vc_exit %short
+vc_exit %s
 vcon_pipe_dump
 virtual CVConBasePipeHost::~CVConBasePipeHost()
 virtual InitReturnVal_t CVConComm::Init()
@@ -870,5 +869,6 @@ vstdlib
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
+x[A\A]A^A_]
 {}()':
 }HA;EP}

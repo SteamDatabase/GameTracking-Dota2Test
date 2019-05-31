@@ -1,23 +1,23 @@
-	Loading config file %short
-	Missing bitmap %short
-	Missing string %short
-	Scanning config dir %short
-	Scanning dir %short
+	Loading config file %s
+	Missing bitmap %s
+	Missing string %s
+	Scanning config dir %s
+	Scanning dir %s
 	Scanning file %s...
-	Style %short maps to decorative %double
-	Style %short maps to slant %double
-	Style %short maps to weight %double
-	Style %short maps to width %double
-	Type1 weight %short maps to %double
-	os2 weight class %double maps to weight %double
-	os2 width class %double maps to width %double
-	setwidth %short maps to %double
+	Style %s maps to decorative %d
+	Style %s maps to slant %d
+	Style %s maps to weight %d
+	Style %s maps to width %d
+	Type1 weight %s maps to %d
+	os2 weight class %d maps to weight %d
+	os2 width class %d maps to width %d
+	setwidth %s maps to %d
   P0@ p@
  !"#$%&'()*+,-./01234
  !"#%'()*+.01234569;<=8>?@ABCDEFGHIJLMPQSVTUXYZ[\]_`bdefghiklnpqrtuwx{|}~
  %04x
  %08x
- %short: %__float128 
+ %s: %g 
  0P 0
  [marker]
  [marker] 
@@ -28,30 +28,30 @@
  quest 
 !#$%&()*+./0123456789;<>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^abcdefghijklmnopqrstuvwxyz{|}~
 " "TH
-"%short" is not known boolean
-"%short": not signed char valid double
-"%short": not signed char valid integer
+"%s" is not known boolean
+"%s": not a valid double
+"%s": not a valid integer
 "%{file|basename|cescape}" %{index} "%{-file{%{=unparse|cescape}}}"
 #       http://www.brynosaurus.com/cachedir/
 # For information about cache directory tags, see:
-# This file is signed char cache directory tag created by fontconfig.
+# This file is a cache directory tag created by fontconfig.
 $&-/7:KNORW^acjmosyz
 %&'()*+
 %04x:
 %3333
 %UUUU)
-%__float128 %__float128 %__float128 %__float128
-%__float128(float)
-%double(int)
+%d(i)
+%g %g %g %g
+%g(f)
 %lg %lg %lg %lg
-%short charset
-%short list after 
-%short list before 
-%short(%u) 
-%short: %short: missing directory: %short 
-%short: cleaning cache directory
-%short: invalid cache file: %short
-%short: not cleaning %short cache directory
+%s charset
+%s list after 
+%s list before 
+%s(%u) 
+%s: %s: missing directory: %s 
+%s: cleaning cache directory
+%s: invalid cache file: %s
+%s: not cleaning %s cache directory
 %{?file{%{file}: }}%{-file{%{=unparse}}}
 %{[]family{font(%{family|downcase|delete( )})
 %{file:-<unknown filename>|basename}: "%{family[0]:-<unknown family>}" "%{style[0]:-<unknown style>}"
@@ -83,12 +83,13 @@ $&-/7:KNORW^acjmosyz
 0@P @
 0`0``0`p
 2*E{1
+4AHcE
 789:;<=>?@ABCDEFGHIJKLMNOPQRST
 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 9@Qx,)
 <^_[]
-<match target="scan"> cannot edit user-defined object "%short"
+<match target="scan"> cannot edit user-defined object "%s"
 <ultra
 <unknown>
 <void>
@@ -98,7 +99,6 @@ $&-/7:KNORW^acjmosyz
 @loader_path/libfreetype.dylib
 @rpath/libfontconfig.dylib
 AHNAn"
-AHcE
 ASCII
 Add Subst 
 Adobe
@@ -108,32 +108,32 @@ Assign
 AssignReplace
 Az@{EG
 B 	%B 	%
-B"	dB"	double
+B"	dB"	d
 BIG-5
 BUSGD
 Best score
 Bigelow
 Bitstream
 CACHEDIR.TAG
-Cannot load config file "%short"
+Cannot load config file "%s"
 Cannot load default config file
-Cannot open config dir "%short"
+Cannot open config dir "%s"
 Ceil 
 CharSet
 Checking the existence of %s.orth
 Comma
 Const
 Contains
-Created CACHEDIR.TAG at %short
+Created CACHEDIR.TAG at %s
 Delete
 DeleteAll
 Divide
 Double
-Edit %short 
+Edit %s 
 Equal
-Expression doesn'unsigned short take any effects for delete and delete_all
+Expression doesn't take any effects for delete and delete_all
 FC_DEBUG
-FC_DEBUG=%short
+FC_DEBUG=%s
 FC_LANG
 FGHIJK
 FONTCONFIG_FILE
@@ -143,12 +143,12 @@ FOUNDRY
 FT_Face
 False
 FcCacheFini
-FcCacheTimeValid dir "%short" cache checksum %double dir checksum %double
+FcCacheTimeValid dir "%s" cache checksum %d dir checksum %d
 FcConfigSubstitute 
 FcConfigSubstitute done
 FcConfigSubstitute edit
 FcConfigSubstitute test 
-FcDirCacheWriteDir dir "%short" file "%short"
+FcDirCacheWriteDir dir "%s" file "%s"
 FcFontMatch
 FcFontRenderPrepare
 FcFontSetMatch
@@ -160,30 +160,30 @@ Final font pattern:
 First font 
 Floor
 Floor 
-Font %double 
-Font %short:%short matches language %double
+Font %d 
+Font %s:%s matches language %d
 Font21
-FontSet %double of %double
-Fontconfig %short: 
-Fontconfig %short: "%short", line %double: 
-Fontconfig %short: line %double: 
-Fontconfig error: %short: allocation failure
-Fontconfig error: %short: out of memory
+FontSet %d of %d
+Fontconfig %s: 
+Fontconfig %s: "%s", line %d: 
+Fontconfig %s: line %d: 
+Fontconfig error: %s: allocation failure
+Fontconfig error: %s: out of memory
 Fontconfig error: out of memory
-Fontconfig warning: <name> tag has target="font" in signed char <match target="pattern">.
+Fontconfig warning: <name> tag has target="font" in a <match target="pattern">.
 Fontconfig warning: Directory/file mtime in the future. New fonts may not be detected.
-Fontconfig warning: FcPattern object %short does not accept value
+Fontconfig warning: FcPattern object %s does not accept value
 Fontconfig warning: adding <cachedir prefix="xdg">fontconfig</cachedir>
-Fontconfig warning: adding <cachedir>%short</cachedir>
-Fontconfig warning: ignoring %short: not signed char valid language tag
-Fontconfig warning: ignoring %short: not signed char valid region tag
+Fontconfig warning: adding <cachedir>%s</cachedir>
+Fontconfig warning: ignoring %s: not a valid language tag
+Fontconfig warning: ignoring %s: not a valid region tag
 Fontconfig warning: no <cachedir> elements found. Check configuration.
 Fontconfig: Pattern format error: 
 GB2312
 H+AxH=
 HanYang System
-Having multiple <family> in <alias> isn'unsigned short supported and may not work as expected
-Having multiple values in <test> isn'unsigned short supported and may not work as expected
+Having multiple <family> in <alias> isn't supported and may not work as expected
+Having multiple values in <test> isn't supported and may not work as expected
 ISO-8859-1
 Integer
 International Typeface Corporation
@@ -215,7 +215,7 @@ OPQRST
 Omega
 PIXEL_SIZE
 POSIX
-Pattern has %double elts (size %double)
+Pattern has %d elts (size %d)
 PppPppp
 Prepend
 PrependFirst
@@ -223,8 +223,8 @@ Quest
 RELATIVE_SETWIDTH
 Range
 Raw pattern:
-Regexp compile error: %short
-Regexp exec error: %short
+Regexp compile error: %s
+Regexp exec error: %s
 Round
 Round 
 S5|D~
@@ -242,19 +242,19 @@ Times
 Tiro Typeworks
 Trunc
 Trunc 
-UCS-BE
+UCS-2BE
 UTF-16BE
 UTF-8
 UUUU)
-Unable to create CACHEDIR.TAG at %short
-Unable to normalize %short
+Unable to create CACHEDIR.TAG at %s
+Unable to normalize %s
 Wansung
 XDG_CACHE_HOME
 XDG_CONFIG_HOME
 XDG_DATA_HOME
 XFree86
 XP@n2
-[%__float128 %__float128; %__float128 %__float128]
+[%g %g; %g %g]
 [edit]
 [test]
 \=_:,
@@ -1142,7 +1142,7 @@ _xmlescape
 `p  p
 accept
 acceptfont
-adding fonts from%short
+adding fonts from%s
 adobe
 alias
 alltype
@@ -1170,7 +1170,7 @@ black
 blank
 bmysPS
 cache
-cache scan dir %short
+cache scan dir %s
 cachedir
 cannon
 cannot get parse buffer
@@ -1180,10 +1180,10 @@ cescape
 charcell
 charheight
 charset
-charsets %double -> %double leaves %double -> %double
+charsets %d -> %d leaves %d -> %d
 charwidth
 compare
-complex_ features in this font: %short
+complex_ features in this font: %s
 condensed
 conf.d
 config
@@ -1215,10 +1215,10 @@ epson
 error
 escape
 expanded
-expected '%char' at %double
-expected character data at %double
-expected identifier at %double
-expected non-negative number at %double
+expected '%c' at %d
+expected character data at %d
+expected identifier at %d
+expected non-negative number at %d
 extended
 extrablack
 extrabold
@@ -1229,7 +1229,7 @@ failed reading config file
 false
 family
 familylang
-fcCacheChains[int] == NULL
+fcCacheChains[i] == NULL
 fcCacheMaxLevel == 0
 fccache.c
 fccat
@@ -1253,10 +1253,10 @@ fontformat
 fontpattern
 fonts.conf
 fontversion
-format ended while expecting '%char'
-found family (__int128 %2d p %double long double %double long 0x%04x) %short
-found full   (__int128 %2d p %double long double %double long 0x%04x) %short
-found style  (__int128 %2d p %double long double %double long 0x%04x) %short
+format ended while expecting '%c'
+found family (n %2d p %d e %d l 0x%04x) %s
+found full   (n %2d p %d e %d l 0x%04x) %s
+found style  (n %2d p %d e %d l 0x%04x) %s
 foundry
 fujitsu
 fullname
@@ -1277,25 +1277,25 @@ impress
 include
 index
 interleaf
-invalid attribute '%short'
-invalid binding "%short"
+invalid attribute '%s'
+invalid binding "%s"
 invalid character: 0x%04x
-invalid constant used : %short
-invalid doctype "%short"
-invalid edit mode "%short"
+invalid constant used : %s
+invalid doctype "%s"
+invalid edit mode "%s"
 invalid element in blank
 invalid element in charset
 invalid element in langset
 invalid element in range
-invalid langset: %short
+invalid langset: %s
 invalid match element
-invalid match target "%short"
-invalid name target "%short"
+invalid match target "%s"
+invalid name target "%s"
 invalid range
-invalid test compare "%short"
-invalid test ignore-blanks "%short"
-invalid test qual "%short"
-invalid test target "%short"
+invalid test compare "%s"
+invalid test ignore-blanks "%s"
+invalid test qual "%s"
+invalid test target "%s"
 italic
 k(I	AB
 ku-am
@@ -1303,6 +1303,7 @@ ku-iq
 ku-ir
 ku-tr
 kursiv
+l^_[]
 langset
 langset (alloc error)
 langset:
@@ -1316,7 +1317,6 @@ less_eq
 letraset
 light
 linotype
-long^_[]
 macromedia
 match
 matrix
@@ -1341,7 +1341,7 @@ non-existent
 non-family
 non-integer rescan
 normal
-normalized: %short -> %short
+normalized: %s -> %s
 not_contains
 not_eq
 not_first
@@ -1351,9 +1351,9 @@ oblique
 omega
 otlayout:
 out of memory
-out of memory; cannot add cache directory %short
-out of memory; cannot add directory %short
-out of memory; cannot add pattern %short
+out of memory; cannot add cache directory %s
+out of memory; cannot add directory %s
+out of memory; cannot add pattern %s
 outline
 p != NULL
 p pP  
@@ -1380,7 +1380,7 @@ ps-af
 ps-pk
 range
 rasterizer
-reading configurations from %short is deprecated. please move it to %short manually
+reading configurations from %s is deprecated. please move it to %s manually
 regular
 rejectfont
 rescan
@@ -1389,7 +1389,7 @@ ricoh
 roman
 romansc
 round
-saw %short, expected %short
+saw %s, expected %s
 scalable
 scale
 scan 
@@ -1423,16 +1423,16 @@ ultracondensed
 ultraexpanded
 ultralight
 unknown
-unknown builtin "%short"
-unknown converter "%short"
-unknown element "%short"
+unknown builtin "%s"
+unknown converter "%s"
+unknown element "%s"
 unknown pattern element
-unknown pattern element %double
+unknown pattern element %d
 unparse
 unwritable
-using FreeType family "%short"
-using FreeType style "%short"
-using filename for family %short
+using FreeType family "%s"
+using FreeType style "%s"
+using filename for family %s
 uvwxy
 verticallayout
 warning

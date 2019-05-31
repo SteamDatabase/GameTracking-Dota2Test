@@ -1,22 +1,22 @@
-	%short %short @ %double
-	Mismatch - %short
-	Module 1 - %short
-	Module 2 - %short
+	%s %s @ %d
+	Mismatch - %s
+	Module 1 - %s
+	Module 2 - %s
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
         
-                CUtlCStringConversion
+                21CUtlCStringConversion
      0
     0         0
    pppp
  (Abstract)
- - %short
+ - %s
  @ @   0  @P
  @@@@@@
  [A\A^A_]
  [A^]
  ffff.
 !"Allowing insert of dupe without explicit dupe insertion. Fix code callpoint to allow dupes."
-!"CDynDataTextWriter::WriteElementValue() encountered NULL element value\__int128"
+!"CDynDataTextWriter::WriteElementValue() encountered NULL element value\n"
 !"CNewLoadWriter::AssignValue_String - Unrecognized enumerant"
 !"CSchemaSystem::SchemaLoadDynData - Unrecognized serialization format."
 !"CSchemaSystem::SchemaSaveDynData - Unrecognized serialization format."
@@ -24,7 +24,7 @@
 !"CSchemaSystem::Unserialize - Unrecognized serialization format."
 !"CUtlMemoryPoolBase::AddNewBlob: mode == UTLMEMORYPOOL_GROW_NONE"
 !"CUtlMemoryPoolBase::Alloc: ran out of memory"
-!"Cannot serialize text data into signed char non-text buffer."
+!"Cannot serialize text data into a non-text buffer."
 !"Invalid field type for CSchemaTextTarget::PutBuiltinValue"
 !"Unsupported schema enum size"
 !"Unsupported schema type for float deserialization"
@@ -49,48 +49,48 @@
 !pTarget
 #fff.
 $$Ic]HH
-$$L;long double
+$$L;e
 $ffff.
 %-10s%-10s %-8s %-8s %-40s %-40s %-40s
 %-10s%-10u %-8u %-8d %-40s %-40s %-40s
-%-10s[ Inline %short ]
+%-10s[ Inline %s ]
 %-40s = 0x%016llX (%lld)
 %-60s %-25s %-25s 
-%-60s %-25s %-25s %short
+%-60s %-25s %-25s %s
 %7.4f %7.4f %7.4f %10g
-%double %double %double %double
-%double base classe%short:
-%double enumerators:
-%float %float
-%float %float %float
-%float %float %float %float
-%float %float %float %float %float %float %float %float %float %float %float %float %float %float %float %float
-%int %int %int %int
-%s_%double
-%short #%double: '%short'/'%short': %double != %double
-%short #%double: '%short'/'%short': '%short' != '%short'
-%short %short
-%short%short%short
-%short+--
-%short+-- Schema Class: %short
-%short+-- Schema Type: %short
-%short: %double != %double
-%short: '%short' != '%short'
-%short: string format requested %double chars
-%short:%short
-%short< %double >
-%short< %short >
-%short< %short, %short >
-%short[%double]
-%short|  % 2d: %short [Offset: %double]
-%short|  % 2d: [% 3d - % 3d] %-12s %short
-%short| (No Binding) - "%short"
-%short| AlignOf: %double
-%short| Base Class%short: %double
-%short| Fields:
-%short| Project: '%short' Binary: '%short' - "%short"
-%short| SizeOf: %double
-%short| Virtual: %short; Abstract: %short; TrivialConstr: %short; TrivialDestr: %short
+%d %d %d %d
+%d base classe%s:
+%d enumerators:
+%f %f
+%f %f %f
+%f %f %f %f
+%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f
+%i %i %i %i
+%s #%d: '%s'/'%s': %d != %d
+%s #%d: '%s'/'%s': '%s' != '%s'
+%s %s
+%s%s%s
+%s+--
+%s+-- Schema Class: %s
+%s+-- Schema Type: %s
+%s: %d != %d
+%s: '%s' != '%s'
+%s: string format requested %d chars
+%s:%s
+%s< %d >
+%s< %s >
+%s< %s, %s >
+%s[%d]
+%s_%d
+%s|  % 2d: %s [Offset: %d]
+%s|  % 2d: [% 3d - % 3d] %-12s %s
+%s| (No Binding) - "%s"
+%s| AlignOf: %d
+%s| Base Class%s: %d
+%s| Fields:
+%s| Project: '%s' Binary: '%s' - "%s"
+%s| SizeOf: %d
+%s| Virtual: %s; Abstract: %s; TrivialConstr: %s; TrivialDestr: %s
 &fff.
 &ffffff.
 'fff.
@@ -105,11 +105,11 @@ $ffff.
 ( ndxKeyData >= 0 ) && ( ndxKeyData < 65536 )
 ( pObj->m_pClassType == NULL ) == ( pObj->m_pInstance == NULL )
 ( pSynthClass->m_nStructFlags & STRUCT_TREE_REQUIRES_SCATTER ) == 0
-(%__float128,%__float128,%__float128,%__float128)
-(%double,%double,%double,%double)
-(%float,%float)
-(%float,%float,%float)
-(%float,%float,%float,%float)
+(%d,%d,%d,%d)
+(%f,%f)
+(%f,%f,%f)
+(%f,%f,%f,%f)
+(%g,%g,%g,%g)
 (*pPointerToStorage) != NULL
 (GetChar()) == (0)
 (None)
@@ -127,8 +127,8 @@ $ffff.
 (s_pThisModuleBindingPointer != NULL)
 (static_cast<CONTAINER_TYPE *>(pPushNode)->*LINKED_LIST_PTR) == nullptr
 (uintp)m_pAllocChunkNextAlloc <= (uintp)m_pAllocChunkBase + m_nCalculatedRequiredSize
-*** ConCommand "%short" (%p) was not unregistered! Shutdown crash imminent!
-*** ConVar "%short" was not unregistered! Shutdown crash imminent!
+*** ConCommand "%s" (%p) was not unregistered! Shutdown crash imminent!
+*** ConVar "%s" was not unregistered! Shutdown crash imminent!
 ***!        ENTERING THE DANGER ZONE         !***
 ***! Disregarding mismatched schema bindings !***
 *************************************************
@@ -141,8 +141,8 @@ $ffff.
 +ffff.
 ,ffff.
 --  Increase the size of the resource stream   --
---  Need %double bytes, but only have %double bytes
---- (No Disk Introspection for struct %short)
+--  Need %d bytes, but only have %d bytes
+--- (No Disk Introspection for struct %s)
 ----------------------------------------------------------------------------------------------------------
 --------------------WARNING----------------------
 -DANGER_MODE_ignore_schema_mismatches
@@ -155,9 +155,8 @@ $ffff.
 -sse4
 -use_tier2_bundle
 -use_tier3_bundle
-... (total %double bytes) ...
+... (total %d bytes) ...
 ...(skipping %u of %u elements)...
-...:CTier2AppSystem<ISchemaSystem, 0> const
 .ETv*H
 .Elv*H
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -239,19 +238,181 @@ $ffff.
 0x%02X
 0x%04X
 0x%08X
+10ConCommand
+10IAppSystem
+11CSchemaType
+12CEmptyConVar
+13CSchemaSystem
+13ISchemaSystem
+14CBaseAppSystemI13ISchemaSystemE
+14CNewLoadWriter
+14ConCommandBase
+14ISchemaBinding
+15CResourceStream
+15CSchemaType_Ptr
+15CTier0AppSystemI13ISchemaSystemE
+15CTier1AppSystemI13ISchemaSystemLi0EE
+15ITextLoadWriter
+16CDefaultAccessor
+16ICommandCallback
+17CResourceStreamVM
+17CSchemaTextTarget
+18CAtomicManipulatorI10CTransformE
+18CAtomicManipulatorI10CUtlStringE
+18CAtomicManipulatorI10CUtlSymbolE
+18CAtomicManipulatorI10QuaternionE
+18CAtomicManipulatorI11CSchemaTypeE
+18CAtomicManipulatorI11DegreeEulerE
+18CAtomicManipulatorI11RadianEulerE
+18CAtomicManipulatorI11matrix3x4_tE
+18CAtomicManipulatorI12matrix3x4a_tE
+18CAtomicManipulatorI13SchemaArray_tI14SchemaString_tEE
+18CAtomicManipulatorI13SchemaArray_tI21SchemaMetaModifyAdd_tEE
+18CAtomicManipulatorI13SchemaArray_tI22SchemaClassFieldData_tEE
+18CAtomicManipulatorI13SchemaArray_tI25SchemaBaseClassInfoData_tEE
+18CAtomicManipulatorI13SchemaArray_tI25SchemaMetadataEntryData_tEE
+18CAtomicManipulatorI13SchemaArray_tI26SchemaEnumeratorInfoData_tEE
+18CAtomicManipulatorI13SchemaArray_tI33SchemaFieldMetadataOverrideData_tEE
+18CAtomicManipulatorI13SchemaArray_tIPK15CSchemaEnumInfoEE
+18CAtomicManipulatorI13SchemaArray_tIPK16CSchemaClassInfoEE
+18CAtomicManipulatorI13VectorAlignedE
+18CAtomicManipulatorI14CResourceArrayI16CResourcePointerI15CResourceStringEEE
+18CAtomicManipulatorI14SchemaString_tE
+18CAtomicManipulatorI15CResourceStringE
+18CAtomicManipulatorI15CUtlBinaryBlockE
+18CAtomicManipulatorI15CUtlStringTokenE
+18CAtomicManipulatorI16CResourcePointerI15CResourceStringEE
+18CAtomicManipulatorI5ColorE
+18CAtomicManipulatorI6QAngleE
+18CAtomicManipulatorI6VectorE
+18CAtomicManipulatorI8Vector2DE
+18CAtomicManipulatorI8Vector4DE
+18CAtomicManipulatorI9KeyValuesE
+18CDynDataLoadWriter
+18CSchemaEnumBindingI12ThreeState_tE
+18CSchemaEnumBindingI17SchemaFieldType_tE
+18CSchemaEnumBindingI18SchemaClassFlags_tE
+18CSchemaEnumBindingI21ResourceStructFlags_tE
+18CSchemaManipulatorI10CTransformE
+18CSchemaManipulatorI10CUtlStringE
+18CSchemaManipulatorI10CUtlSymbolE
+18CSchemaManipulatorI10QuaternionE
+18CSchemaManipulatorI11CSchemaTypeE
+18CSchemaManipulatorI11DegreeEulerE
+18CSchemaManipulatorI11RadianEulerE
+18CSchemaManipulatorI11matrix3x4_tE
+18CSchemaManipulatorI12matrix3x4a_tE
+18CSchemaManipulatorI13SchemaArray_tI14SchemaString_tEE
+18CSchemaManipulatorI13SchemaArray_tI21SchemaMetaModifyAdd_tEE
+18CSchemaManipulatorI13SchemaArray_tI22SchemaClassFieldData_tEE
+18CSchemaManipulatorI13SchemaArray_tI25SchemaBaseClassInfoData_tEE
+18CSchemaManipulatorI13SchemaArray_tI25SchemaMetadataEntryData_tEE
+18CSchemaManipulatorI13SchemaArray_tI26SchemaEnumeratorInfoData_tEE
+18CSchemaManipulatorI13SchemaArray_tI33SchemaFieldMetadataOverrideData_tEE
+18CSchemaManipulatorI13SchemaArray_tIPK15CSchemaEnumInfoEE
+18CSchemaManipulatorI13SchemaArray_tIPK16CSchemaClassInfoEE
+18CSchemaManipulatorI13VectorAlignedE
+18CSchemaManipulatorI14CResourceArrayI16CResourcePointerI15CResourceStringEEE
+18CSchemaManipulatorI14SchemaString_tE
+18CSchemaManipulatorI15CResourceStringE
+18CSchemaManipulatorI15CUtlBinaryBlockE
+18CSchemaManipulatorI15CUtlStringTokenE
+18CSchemaManipulatorI16CResourcePointerI15CResourceStringEE
+18CSchemaManipulatorI5ColorE
+18CSchemaManipulatorI6QAngleE
+18CSchemaManipulatorI6VectorE
+18CSchemaManipulatorI8Vector2DE
+18CSchemaManipulatorI8Vector4DE
+18CSchemaManipulatorI9KeyValuesE
+18CSchemaSystemUtils
+18CSchemaType_Atomic
+18CSchemaVisitorBase
+18CUtlCharConversion
+18IAtomicManipulator
+18ISchemaManipulator
+18ISchemaSystemUtils
+19CSchemaClassBindingI15CSchemaEnumInfoE
+19CSchemaClassBindingI16CSchemaClassInfoE
+19CSchemaClassBindingI17CSchemaClassFieldE
+19CSchemaClassBindingI18CSchemaMetadataSetE
+19CSchemaClassBindingI18CSchemaStaticFieldE
+19CSchemaClassBindingI20CSchemaBaseClassInfoE
+19CSchemaClassBindingI20CSchemaMetaModifyAddE
+19CSchemaClassBindingI20CSchemaMetadataEntryE
+19CSchemaClassBindingI20SchemaEnumInfoData_tE
+19CSchemaClassBindingI21CSchemaEnumeratorInfoE
+19CSchemaClassBindingI21SchemaClassInfoData_tE
+19CSchemaClassBindingI21SchemaMetaModifyAdd_tE
+19CSchemaClassBindingI22SchemaClassFieldData_tE
+19CSchemaClassBindingI23SchemaMetadataSetData_tE
+19CSchemaClassBindingI23SchemaStaticFieldData_tE
+19CSchemaClassBindingI25SchemaBaseClassInfoData_tE
+19CSchemaClassBindingI25SchemaMetadataEntryData_tE
+19CSchemaClassBindingI26SchemaEnumeratorInfoData_tE
+19CSchemaClassBindingI28CSchemaFieldMetadataOverrideE
+19CSchemaClassBindingI33CSchemaSystemInternalRegistrationE
+19CSchemaClassBindingI33SchemaFieldMetadataOverrideData_tE
+19CSchemaClassBindingI44InfoForResourceTypeCResourceManifestInternalE
+19CSchemaClassVisitor
+19CSchemaRegistration
+19CSchemaType_Builtin
+20CDestructorTraversal
+20CPostConnectCallback
+20CSchemaSaveTraversal
+20CSchemaType_Atomic_I
+20CSchemaType_Atomic_T
+20CSchemaType_Bitfield
+21CIntrospectionPrinter
+21CSchemaType_Atomic_TT
+22CResourceDiskTraversal
+22CSchemaEnumBindingBase
+22CSchemaInstallCallback
+22CSchemaKeyValuesTarget
+22CSchemaObjectTraversal
+22CSchemaSystemTypeScope
+22CSchemaType_FixedArray
+22ISchemaSystemTypeScope
+23CSchemaArrayManipulatorI14SchemaString_tE
+23CSchemaArrayManipulatorI21SchemaMetaModifyAdd_tE
+23CSchemaArrayManipulatorI22SchemaClassFieldData_tE
+23CSchemaArrayManipulatorI25SchemaBaseClassInfoData_tE
+23CSchemaArrayManipulatorI25SchemaMetadataEntryData_tE
+23CSchemaArrayManipulatorI26SchemaEnumeratorInfoData_tE
+23CSchemaArrayManipulatorI33SchemaFieldMetadataOverrideData_tE
+23CSchemaArrayManipulatorIPK15CSchemaEnumInfoE
+23CSchemaArrayManipulatorIPK16CSchemaClassInfoE
+23CSchemaClassBindingBase
+23IConCommandBaseAccessor
+24CSchemaType_DeclaredEnum
+24CSchemaType_NoschemaType
+25CConCommandMemberAccessorI13CSchemaSystemE
+25CSchemaType_DeclaredClass
+25CSchemaVisitorInfoMapBase
+26CSchemaClassVisitorInfoMapI20CDestructorTraversalE
+26ICommandCompletionCallback
+26ISchemaSerializationTarget
+28ISchemaCollectionManipulator
 29C |.
+29CSchemaRegistration_schemalib
 29K }
-40A;wchar_t
+32CSchemaRegistration_resourcefile
+32CSchemaRegistration_schemasystem
+40A;w
 49K }
 49S |}
+4vHct
+6ConVar
 6[A\A^A_]
+7IConVar
+8CFmtStrNILi256ELb0EE
+8CFmtStrNILi32768ELb0EE
 8[A\A]A^A_]
 8[A^A_]
 8ffffff.
-9S |signed char
-9S |unsigned int
+9S |a
+9S |j
 ;X(u#
-<!-- schema text {%short} generic {%short} -->
+<!-- schema text {%s} generic {%s} -->
 <IL9,
 <null>
 =ffff.
@@ -276,6 +437,7 @@ $ffff.
 @_LoggingSystem_IsChannelEnabled
 @_LoggingSystem_Log
 @_LoggingSystem_RegisterLoggingChannel
+@_Msg
 @_Plat_DebugPrint
 @_Plat_ExitProcess
 @_Plat_GetEnv
@@ -321,7 +483,6 @@ $ffff.
 @___gxx_personality_v0
 @___stack_chk_fail
 @___stack_chk_guard
-@__float128 short::*
 @_g_Tier1_CRC32Table
 @_g_pMemAlloc
 @_memchr
@@ -336,9 +497,9 @@ $ffff.
 @_strlen
 @_strstr
 @dyld_stub_binder
-@hL;long double
+@hL;e
 @loader_path
-@pL;long double
+@pL;e
 @r8Ic
 @rpath/libschemasystem.dylib
 @rpath/libtier0.dylib
@@ -367,13 +528,13 @@ A9^$|
 A;G ~
 A;\$0|
 A;\$@|
-A;]long long|
+A;]x|
 A;^0|
 A;^@|
 A;_0|
 A;|$Xu
 A;}Pu
-APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %double!
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ARARAp
 ARAp8p8p
 ARBRAp
@@ -409,9 +570,9 @@ AWAVSPM
 AZBSBp
 A[ATAp
 AbstractImplicit
-Alignment: %double bytes%short
+Alignment: %d bytes%s
 Alignment?
-All errors logged to console. First error (of %double):
+All errors logged to console. First error (of %d):
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -419,15 +580,15 @@ AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
-AssignValue_Float expecting signed char float type but got '%short'!
-AssignValue_Int expecting an integer type but got '%short'!
+AssignValue_Float expecting a float type but got '%s'!
+AssignValue_Int expecting an integer type but got '%s'!
 BAD BINDING
 BHHcJPH
 BRBRB`
 BSATAp
-Bad builtin type '%double' in SynthTypeFromIntrospection
+Bad builtin type '%d' in SynthTypeFromIntrospection
 Bad object
-Bad registered schema binding '%short' (binary '%short' project '%short') - not signed char class or enum!
+Bad registered schema binding '%s' (binary '%s' project '%s') - not a class or enum!
 BakedLODBuilderMgr001
 BenchmarkService001
 Binary
@@ -435,193 +596,53 @@ BinaryProperties_GetValue
 C [A\A^A_]
 C [A^]
 C ffff.
-CAtomicManipulator<CResourceArray<CResourcePointer<CResourceString> > >
-CAtomicManipulator<CResourcePointer<CResourceString> >
-CAtomicManipulator<CResourceString>
-CAtomicManipulator<CSchemaType>
-CAtomicManipulator<CTransform>
-CAtomicManipulator<CUtlBinaryBlock>
-CAtomicManipulator<CUtlString>
-CAtomicManipulator<CUtlStringToken>
-CAtomicManipulator<CUtlSymbol>
-CAtomicManipulator<Color>
-CAtomicManipulator<DegreeEuler>
-CAtomicManipulator<KeyValues>
-CAtomicManipulator<QAngle>
-CAtomicManipulator<Quaternion>
-CAtomicManipulator<RadianEuler>
-CAtomicManipulator<SchemaArray_t<CSchemaClassInfo const*> >
-CAtomicManipulator<SchemaArray_t<CSchemaEnumInfo const*> >
-CAtomicManipulator<SchemaArray_t<SchemaBaseClassInfoData_t> >
-CAtomicManipulator<SchemaArray_t<SchemaClassFieldData_t> >
-CAtomicManipulator<SchemaArray_t<SchemaEnumeratorInfoData_t> >
-CAtomicManipulator<SchemaArray_t<SchemaFieldMetadataOverrideData_t> >
-CAtomicManipulator<SchemaArray_t<SchemaMetaModifyAdd_t> >
-CAtomicManipulator<SchemaArray_t<SchemaMetadataEntryData_t> >
-CAtomicManipulator<SchemaArray_t<SchemaString_t> >
-CAtomicManipulator<SchemaString_t>
-CAtomicManipulator<Vector2D>
-CAtomicManipulator<Vector4D>
-CAtomicManipulator<Vector>
-CAtomicManipulator<VectorAligned>
-CAtomicManipulator<matrix3x4_t>
-CAtomicManipulator<matrix3x4a_t>
-CBaseAppSystem<ISchemaSystem>
 CBitVec
 CClassVisitInfo *CSchemaVisitorInfoMapBase::LookupClass(ClassIntrospectionHandle_t)
-CConCommandMemberAccessor<CSchemaSystem>
-CDefaultAccessor
-CDestructorTraversal
 CDynContextBase::SetDeferredElementFrees inconsistently called!
 CDynData CDynData::GetTupleOrArrayElement(int)
 CDynData CDynElement::GetAttrByIndex(DynAttrIndex_t)
-CDynDataLoadWriter
 CDynDataOwner::~CDynDataOwner()
 CDynElement::CDynAttribute *CDynElement::InternalAddAttr(DynSymbol_t, DynTypeHandle_t, bool)
 CDynElement::CDynAttribute::CDynAttribute(CDynElement *, DynSymbol_t, DynTypeHandle_t)
-CEmptyConVar
 CEntityHandle
 CEntityIndex
-CFmtStrN<256, false>
 CFmtStrN<256, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 256, QUIET_TRUNCATION = false]
-CFmtStrN<32768, false>
 CFmtStrN<32768, false>::CFmtStrN(const char *, ...) [SIZE_BUF = 32768, QUIET_TRUNCATION = false]
 CHHcCPH
 CHandle
-CIntrospectionPrinter
-CNewLoadWriter
 COLORCORRECTION_VERSION_1
 CPlayerSlot
-CPostConnectCallback
 CResourceArray
 CResourceDiskStructField
-CResourceDiskTraversal
 CResourceExtReference
 CResourcePointer
-CResourceStream
-CResourceStreamVM
 CResourceString
 CSchemaArrayManipulator::AllocateUtlVector unimplemented!
 CSchemaArrayManipulator::DeallocateUtlVector unimplemented!
 CSchemaArrayManipulator::InsertMultipleBefore unimplemented!
 CSchemaArrayManipulator::RemoveMultiple unimplemented!
-CSchemaArrayManipulator<CSchemaClassInfo const*>
-CSchemaArrayManipulator<CSchemaEnumInfo const*>
-CSchemaArrayManipulator<SchemaBaseClassInfoData_t>
-CSchemaArrayManipulator<SchemaClassFieldData_t>
-CSchemaArrayManipulator<SchemaEnumeratorInfoData_t>
-CSchemaArrayManipulator<SchemaFieldMetadataOverrideData_t>
-CSchemaArrayManipulator<SchemaMetaModifyAdd_t>
-CSchemaArrayManipulator<SchemaMetadataEntryData_t>
-CSchemaArrayManipulator<SchemaString_t>
 CSchemaBaseClassInfo
-CSchemaClassBinding<CSchemaBaseClassInfo>
-CSchemaClassBinding<CSchemaClassField>
-CSchemaClassBinding<CSchemaClassInfo>
-CSchemaClassBinding<CSchemaEnumInfo>
-CSchemaClassBinding<CSchemaEnumeratorInfo>
-CSchemaClassBinding<CSchemaFieldMetadataOverride>
-CSchemaClassBinding<CSchemaMetaModifyAdd>
-CSchemaClassBinding<CSchemaMetadataEntry>
-CSchemaClassBinding<CSchemaMetadataSet>
-CSchemaClassBinding<CSchemaStaticField>
-CSchemaClassBinding<CSchemaSystemInternalRegistration>
-CSchemaClassBinding<InfoForResourceTypeCResourceManifestInternal>
-CSchemaClassBinding<SchemaBaseClassInfoData_t>
-CSchemaClassBinding<SchemaClassFieldData_t>
-CSchemaClassBinding<SchemaClassInfoData_t>
-CSchemaClassBinding<SchemaEnumInfoData_t>
-CSchemaClassBinding<SchemaEnumeratorInfoData_t>
-CSchemaClassBinding<SchemaFieldMetadataOverrideData_t>
-CSchemaClassBinding<SchemaMetaModifyAdd_t>
-CSchemaClassBinding<SchemaMetadataEntryData_t>
-CSchemaClassBinding<SchemaMetadataSetData_t>
-CSchemaClassBinding<SchemaStaticFieldData_t>
-CSchemaClassBindingBase
 CSchemaClassField
 CSchemaClassInfo
-CSchemaClassVisitor
-CSchemaClassVisitorInfoMap<CDestructorTraversal>
-CSchemaEnumBinding<ResourceStructFlags_t>
-CSchemaEnumBinding<SchemaClassFlags_t>
-CSchemaEnumBinding<SchemaFieldType_t>
-CSchemaEnumBinding<ThreeState_t>
-CSchemaEnumBindingBase
 CSchemaEnumInfo
 CSchemaEnumeratorInfo
 CSchemaFieldMetadataOverride
-CSchemaInstallCallback
-CSchemaKeyValuesTarget
 CSchemaLoadContext: Trying to take control of objects
-CSchemaLoadContext: Trying to take control of objects inside of signed char block allocation.
-CSchemaManipulator<CResourceArray<CResourcePointer<CResourceString> > >
-CSchemaManipulator<CResourcePointer<CResourceString> >
-CSchemaManipulator<CResourceString>
-CSchemaManipulator<CSchemaType>
-CSchemaManipulator<CTransform>
-CSchemaManipulator<CUtlBinaryBlock>
-CSchemaManipulator<CUtlString>
-CSchemaManipulator<CUtlStringToken>
-CSchemaManipulator<CUtlSymbol>
-CSchemaManipulator<Color>
-CSchemaManipulator<DegreeEuler>
-CSchemaManipulator<KeyValues>
-CSchemaManipulator<QAngle>
-CSchemaManipulator<Quaternion>
-CSchemaManipulator<RadianEuler>
-CSchemaManipulator<SchemaArray_t<CSchemaClassInfo const*> >
-CSchemaManipulator<SchemaArray_t<CSchemaEnumInfo const*> >
-CSchemaManipulator<SchemaArray_t<SchemaBaseClassInfoData_t> >
-CSchemaManipulator<SchemaArray_t<SchemaClassFieldData_t> >
-CSchemaManipulator<SchemaArray_t<SchemaEnumeratorInfoData_t> >
-CSchemaManipulator<SchemaArray_t<SchemaFieldMetadataOverrideData_t> >
-CSchemaManipulator<SchemaArray_t<SchemaMetaModifyAdd_t> >
-CSchemaManipulator<SchemaArray_t<SchemaMetadataEntryData_t> >
-CSchemaManipulator<SchemaArray_t<SchemaString_t> >
-CSchemaManipulator<SchemaString_t>
-CSchemaManipulator<Vector2D>
-CSchemaManipulator<Vector4D>
-CSchemaManipulator<Vector>
-CSchemaManipulator<VectorAligned>
-CSchemaManipulator<matrix3x4_t>
-CSchemaManipulator<matrix3x4a_t>
+CSchemaLoadContext: Trying to take control of objects inside of a block allocation.
 CSchemaMetaModifyAdd
 CSchemaMetadataEntry
 CSchemaMetadataSet
-CSchemaObjectTraversal
 CSchemaObjectTraversal::ObjectOwnership_t CSchemaObjectTraversal::GetCurrentOwnership()
-CSchemaRegistration
-CSchemaRegistration_resourcefile
-CSchemaRegistration_schemalib
-CSchemaRegistration_schemasystem
-CSchemaSaveTraversal
-CSchemaSaveTraversal::RegisterClassInstance - Got inconsistent classes '%short' and '%short' for signed char single object.
+CSchemaSaveTraversal::RegisterClassInstance - Got inconsistent classes '%s' and '%s' for a single object.
 CSchemaStaticField
-CSchemaSystem
 CSchemaSystemInternalRegistration
-CSchemaSystemTypeScope
 CSchemaSystemTypeScope::CSchemaSystemTypeScope(const char *, CSchemaSystemTypeScope *)
-CSchemaSystemUtils
-CSchemaTextTarget
 CSchemaType
-CSchemaType_Atomic
-CSchemaType_Atomic_I
-CSchemaType_Atomic_T
 CSchemaType_Atomic_T *CSchemaSystemTypeScope::FindType_Atomic_T_Internal(int, CSchemaType *)
-CSchemaType_Atomic_TT
 CSchemaType_Atomic_TT *CSchemaSystemTypeScope::FindType_Atomic_TT_Internal(int, CSchemaType *, CSchemaType *)
-CSchemaType_Bitfield
-CSchemaType_Builtin
-CSchemaType_Builtin: Unable to copy construct type %short
-CSchemaType_Builtin: Unable to copy type %short
-CSchemaType_Builtin: Unable to deallocate type %short
-CSchemaType_DeclaredClass
-CSchemaType_DeclaredEnum
-CSchemaType_FixedArray
-CSchemaType_NoschemaType
-CSchemaType_Ptr
-CSchemaVisitorBase
-CSchemaVisitorInfoMapBase
+CSchemaType_Builtin: Unable to copy construct type %s
+CSchemaType_Builtin: Unable to copy type %s
+CSchemaType_Builtin: Unable to deallocate type %s
 CSplitScreenSlot
 CTextParseType *MakeTextType(const CSchemaType *)
 CTextParseType::CTextParseType(TextParseTypeCategory_t, CTextParseType *)
@@ -632,15 +653,12 @@ CThreadSpinRWLock::SpinLockForWrite(unsigned long long)
 CThreadSpinRWLock::UnlockRead()
 CThreadSpinRWLock::UnlockWrite()
 CThreadSyncObject::~CThreadSyncObject()
-CTier0AppSystem<ISchemaSystem>
-CTier1AppSystem<ISchemaSystem, 0>
 CTransform
 CUtlBinaryBlock
 CUtlBinaryBlock &CUtlBinaryBlock::operator=(const CUtlBinaryBlock &)
 CUtlBuffer::CUtlBuffer(const void *, int, int)
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::VaPrintf: String overflowed buffer [%llu]
-CUtlCharConversion
 CUtlCharConversion::CUtlCharConversion(char, const char *, int, const CUtlCharConversion::ConversionArray_t *)
 CUtlIncrementalVector
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
@@ -651,7 +669,7 @@ CUtlReference
 CUtlString
 CUtlString CSchemaFieldIterator::GetFullyQualifiedFieldName() const
 CUtlString::SetDirect does not support resizing strings in place.
-CUtlStringMap inserted signed char string and got index %double, but there are only %double entries already inside.
+CUtlStringMap inserted a string and got index %d, but there are only %d entries already inside.
 CUtlStringToken
 CUtlSymbol
 CUtlSymbol CUtlSymbolTable::AddString(const char *)
@@ -671,32 +689,29 @@ Calling CDynData::SetInt64 with non-numeric data!
 Calling CDynData::SetUInt with non-numeric data!
 Calling CDynData::SetUInt64 with non-numeric data!
 Can only serialize pointers to classes
-Cannot %short - unknown type
-Cannot %short signed char class with no binding: '%short' (Missing $SchemaFile, DLL not loaded, or needs REFERENCE_LIB_SCHEMA_INFORMATION)
-Cannot %short signed char non-class type: '%short'
+Cannot %s - unknown type
+Cannot %s a class with no binding: '%s' (Missing $SchemaFile, DLL not loaded, or needs REFERENCE_LIB_SCHEMA_INFORMATION)
+Cannot %s a non-class type: '%s'
 Cannot allocate virtual address space in CResourceStreamVM::ReserveVirtualMemory, error %u
-Cannot call Allocate() for signed char Noschema type!
-Cannot call AllocateAndCopy() for signed char Noschema type!
-Cannot call Copy() for signed char Noschema type!
-Cannot call Deallocate() for signed char Noschema type!
+Cannot call Allocate() for a Noschema type!
+Cannot call AllocateAndCopy() for a Noschema type!
+Cannot call Copy() for a Noschema type!
+Cannot call Deallocate() for a Noschema type!
 Cannot change the element handle for element-value attributes.
-Cannot determine resource type for handle '%short' - schema data not loaded for the referred-to type?
-Cannot find class binding for signed char field %short, %short, %short
-Cannot serialize default non-simple field %short, currently only resource arrays can be serialized as default value, and even then only empty one.
-Cannot serialize text data into signed char non-text buffer
-Cannot specify string for default value of signed char struct (%short)
+Cannot determine resource type for handle '%s' - schema data not loaded for the referred-to type?
+Cannot find class binding for a field %s, %s, %s
+Cannot serialize default non-simple field %s, currently only resource arrays can be serialized as default value, and even then only empty one.
+Cannot serialize text data into a non-text buffer
+Cannot specify string for default value of a struct (%s)
 Class
-Class '%short
+Class '%s
 Class Name
 Class Size
 Class: %7d bytes, %7d unaccounted bytes, %4d fields, %4d nonderived fields 
 CmdLinkAH
 Color
-ConCommand
-ConCommandBase
-ConVar
-ConVar(%short) defined with infinite float value (%short)
-ConVarRef %short doesn'unsigned short point to an existing ConVar
+ConVar(%s) defined with infinite float value (%s)
+ConVarRef %s doesn't point to an existing ConVar
 ConfigurationSystem_001
 Construction is only allowed from the resolve function
 Count
@@ -705,7 +720,7 @@ D$ Ik
 D$(A9
 D$(H9
 D$@ H
-D$@ unsigned short
+D$@ t
 D$@Ic
 D$@IcL$HI
 D$DD	
@@ -715,7 +730,7 @@ D9sXu
 D;kHu
 D;xHu@
 D;{ H
-DISK: %short
+DISK: %s
 DebugTextureInfo001
 DegreeEuler
 DependencyClass::m_pDependencyLL == NULL
@@ -728,20 +743,20 @@ DynSymbol_t CDynElement::GetAttrNameByIndex(DynAttrIndex_t)
 DynTypeHandle_t MakeDynType(CDynContextBase *, CTextParseType *)
 E$A+E4H
 E(fff.
-E0E;long double
+E0E;e
 E0E;u
-E;__float128 u
-E;__int128 ~0
+E;e(uYA
+E;e(uZA
+E;e@u
 E;exu
 E;fxuhA
-E;long double(uYA
-E;long double(uZA
-E;long double@u
+E;g u
+E;n ~0
 E;n8u
+E;o u
+E;o |
 E;t$Xu
 E;u`u
-E;unsigned __int128 u
-E;unsigned __int128 |
 E;|$8u
 E;|$8|
 E;}PuwA
@@ -773,37 +788,37 @@ ERROR: Cannot call CSchemaType_FixedArray::AllocateAndCopy()
 ERROR: Cannot call CSchemaType_FixedArray::Deallocate()
 ERROR: DynData GetTupleElement() - Unsupported array-of type
 ERROR: DynData OperateOnArray() - Unsupported array-of type
-ERROR: Failed to register '%short' (id=%double); inconsistent with '%short' (id=%double)
-ERROR: Inconsistent atomic type ID '%double': shared by '%short' and '%short' (check schema_atomic_types.cfg)
-ERROR: Inconsistent class ID '%double': shared by '%short' and '%short' (hash collision?)
-ERROR: Inconsistent class handle for CSchemaType '%short' vs. '%short' ('%short:%short' vs. '%short:%short')
-ERROR: Inconsistent enum ID '%double': shared by '%short' and '%short' (hash collision?)
-ERROR: Invalid / unregistered atomic type '%short' (id=%double) - you probably need to $SchemaFile the header it is in?
-ERROR: Invalid SCHEMA_TYPE_BUILTIN category (%double) in MakeTextType
+ERROR: Failed to register '%s' (id=%d); inconsistent with '%s' (id=%d)
+ERROR: Inconsistent atomic type ID '%d': shared by '%s' and '%s' (check schema_atomic_types.cfg)
+ERROR: Inconsistent class ID '%d': shared by '%s' and '%s' (hash collision?)
+ERROR: Inconsistent class handle for CSchemaType '%s' vs. '%s' ('%s:%s' vs. '%s:%s')
+ERROR: Inconsistent enum ID '%d': shared by '%s' and '%s' (hash collision?)
+ERROR: Invalid / unregistered atomic type '%s' (id=%d) - you probably need to $SchemaFile the header it is in?
+ERROR: Invalid SCHEMA_TYPE_BUILTIN category (%d) in MakeTextType
 ERROR: Invalid destination binding.
 ERROR: Invalid type category in CDynDataTextWriter::Write
 ERROR: Invalid type category in CSchemaTextWriter::Write
-ERROR: Invalid type category in CTextParseType::PutTypeName() [%double]
+ERROR: Invalid type category in CTextParseType::PutTypeName() [%d]
 ERROR: Out-of-date source introspection dictionary
 ERROR: Schema mismatches reported! Aborting to prevent data corruption.
-ERROR: Schema registration error - class '%short' is not marked as MModuleLocalTypeScope but contains locally-scoped member '%short'
-ERROR: Schema registration error - class '%short' is not marked as MModuleLocalTypeScope but derives from locally-scoped class '%short'
-ERROR: Schema registration error - subclass '%short' registered before base class '%short'
+ERROR: Schema registration error - class '%s' is not marked as MModuleLocalTypeScope but contains locally-scoped member '%s'
+ERROR: Schema registration error - class '%s' is not marked as MModuleLocalTypeScope but derives from locally-scoped class '%s'
+ERROR: Schema registration error - subclass '%s' registered before base class '%s'
 ERROR: StorageToDataPtr() - Unsupported array-of type
 ERROR: TODO - implement CSchemaType_FixedArray::Copy()
 ERROR: Unknown type category in CSchemaObjectTraversal::Traverse()
-ERROR: Unrecognized resource handle type for %short::%short: %short (%short)
-ERROR: Unsupported atomic type in CSchemaTextWriter::WriteAtomic: '%short' (id:%double)
+ERROR: Unrecognized resource handle type for %s::%s: %s (%s)
+ERROR: Unsupported atomic type in CSchemaTextWriter::WriteAtomic: '%s' (id:%d)
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EconItemToolModel_001
-Encountered ConCommand '%short' without signed char callback!
+Encountered ConCommand '%s' without a callback!
+Encountered a non-array char while serializing defaults... (%s)
 Encountered an element from the wrong context
 Encountered an unexpected invalid element
-Encountered signed char non-array char while serializing defaults... (%short)
 EngineServiceMgr001
-Enum '%short' (binary '%short' project '%short')
+Enum '%s' (binary '%s' project '%s')
 Enum Name
-Enum name collision: '%short' and '%short' (%double)
+Enum name collision: '%s' and '%s' (%d)
 Enum not found
 Enum: %3d enumerators 
 Enumerator Name
@@ -811,40 +826,40 @@ Enumerator Value
 EnvironmentMapBuilder_001
 Error during custom string deserialization
 EventSystem001
-Expected "="after member '%short'
+Expected "="after member '%s'
 Expected '&' and instance name or 'NULL'
-Expected ',' or '%short'
+Expected ',' or '%s'
 Expected '[' or '('
 Expected '{'
 Expected ( <count> )
 Expected <member name> after type
 Expected []
-Expected pointer for reference to object '%short'
-Expected pointer to class for reference to object '%short'
+Expected pointer for reference to object '%s'
+Expected pointer to class for reference to object '%s'
 Expected token
 Expected type of next member
 Expected value or ']'
 ExternalReference
-FATAL ERROR: Failed to find enum introspection for ID 0x%08X, member of struct '%short' (Schema data was probably not registered. Add $SchemaFile to your project)
-FATAL ERROR: Failed to find struct introspection for ID 0x%08X struct '%short' (Schema data was probably not registered. Add $SchemaFile to your project)
+FATAL ERROR: Failed to find enum introspection for ID 0x%08X, member of struct '%s' (Schema data was probably not registered. Add $SchemaFile to your project)
+FATAL ERROR: Failed to find struct introspection for ID 0x%08X struct '%s' (Schema data was probably not registered. Add $SchemaFile to your project)
 FHIcNPI
-Failed to allocate CUtlMemoryPoolBase blob of size %double ('%short' blob count = %double)
+Failed to allocate CUtlMemoryPoolBase blob of size %d ('%s' blob count = %d)
 Failed to assign bool literal value
 Failed to assign float literal value
 Failed to assign int literal value
 Failed to assign string literal value
 Failed to assign symbol literal value
 Failed to call CDynDataOwner::Free!
-Failed to find object (%p) of type '%short' in pre-serialization traversal - object will not be serialized.
+Failed to find object (%p) of type '%s' in pre-serialization traversal - object will not be serialized.
 Failed trying to Commit %u bytes, used %u bytes, reserved %u bytes
-Fatal error: class '%short' has the wrong name '%short' in its registration macro (check for whitespace)
-Fatal error: class '%short' has whitespace in its registration macro.
-Fatal error: enum '%short' has the wrong name '%short' in its registration macro (check for whitespace)
-Fatal resource compiler error serializing class %short
-Fatal resource compiler error serializing enum %short
+Fatal error: class '%s' has the wrong name '%s' in its registration macro (check for whitespace)
+Fatal error: class '%s' has whitespace in its registration macro.
+Fatal error: enum '%s' has the wrong name '%s' in its registration macro (check for whitespace)
+Fatal resource compiler error serializing class %s
+Fatal resource compiler error serializing enum %s
 FeSimdQuad_t
 Field
-Field '%short' of type '%short' - Cannot use opaque data in old-style schema formats.
+Field '%s' of type '%s' - Cannot use opaque data in old-style schema formats.
 Field Name
 Field Offset
 FieldIntrospectionHandle_t CSchemaFieldIterator::GetRawFieldHandle() const
@@ -853,7 +868,7 @@ Flag: SCHEMA_CLASS_HAS_TRIVIAL_DESTRUCTOR
 Flag: SCHEMA_CLASS_HAS_VIRTUAL_MEMBERS
 Flag: SCHEMA_CLASS_IS_ABSTRACT
 FlattenedSerializersVersion001
-FmtStrVSNPrintf truncated to %double without QUIET_TRUNCATION specified! String: "%short"
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified! String: "%s"
 FmtStrVSNPrintf truncated without QUIET_TRUNCATION specified!
 FontManager_001
 FourVectors
@@ -863,23 +878,23 @@ G$A+G4H
 G$IcO
 G8H	p(]
 GHIcOPI
-GLOBAL: %short
+GLOBAL: %s
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 H	p(]
-H	wchar_t(]
-H!wchar_t(]
+H	w(]
+H!w(]
 H+N H
-H9w(unsigned short
+H9w(t
 H[A\A]A^A_]
 H__ZdaPv
 H__ZdlPv
 H__Znam
 H__Znwm
 HammerMapLoader001
-Has Trivial Constructor: %short
-Has Trivial Destructor: %short
+Has Trivial Constructor: %s
+Has Trivial Destructor: %s
 HcBXH
 HcHXH
 HcI(H
@@ -904,25 +919,11 @@ I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CN
 I CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *, long long, CTreeEntryLess<CNonThreadsafeTree<false>, false>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long> >::NewNode(const T *) [T = CUtlSymbolTableLargeBaseTreeEntry_t *, I = long long, L = CTreeEntryLess<CNonThreadsafeTree<false>, false>, M = CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *, long long>, long long>]
 I CUtlRBTree<unsigned int, unsigned short, bool (*)(const unsigned int &, const unsigned int &), CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short> >::NewNode(const T *) [T = unsigned int, I = unsigned short, L = bool (*)(const unsigned int &, const unsigned int &), M = CUtlMemory<UtlRBTreeNode_t<unsigned int, unsigned short>, unsigned short>]
 I CUtlRBTree<void *, int, bool (*)(void *const &, void *const &), CUtlMemory<UtlRBTreeNode_t<void *, int>, int> >::NewNode(const T *) [T = void *, I = int, L = bool (*)(void *const &, void *const &), M = CUtlMemory<UtlRBTreeNode_t<void *, int>, int>]
+I9_(t'I9^(t!H
 I9_(t6I9^(t0H
-I9_(unsigned short'I9^(unsigned short!H
-IAppSystem
-IAtomicManipulator
-ICommandCallback
-ICommandCompletionCallback
-IConCommandBaseAccessor
-IConVar
 ID: %016llX
 IQuickTime001
-ISchemaBinding
-ISchemaCollectionManipulator
-ISchemaManipulator
-ISchemaSerializationTarget
-ISchemaSystem
-ISchemaSystem::FindSchemaTypeByOldEnum: Unimplemented type %double
-ISchemaSystemTypeScope
-ISchemaSystemUtils
-ITextLoadWriter
+ISchemaSystem::FindSchemaTypeByOldEnum: Unimplemented type %d
 IcEHH
 IcEXI
 IcL$8H
@@ -949,16 +950,16 @@ InputSystemVersion001
 InstallSchemaBindings
 Intentionally vague touch behavior for %p
 Invalid
-Invalid data for member '%short'
+Invalid data for member '%s'
 Invalid element handle in root list
 Invalid element handle in traversed element list
 Invalid header
-Invalid object reference to '%short': type '%short' not compatible with expected type '%short'
-Is Polymorphic: %short
+Invalid object reference to '%s': type '%s' not compatible with expected type '%s'
+Is Polymorphic: %s
 IsInitialized()
 IsPowerOfTwo( m_nAlignment )
 IsValid()
-IsValidIndex(int) && (int != InvalidIndex())
+IsValidIndex(i) && (i != InvalidIndex())
 Jct;PH
 K9t&Xu
 KHHcCPH
@@ -970,20 +971,20 @@ L$8H9
 L$@H9
 L$TE1
 L&`fff.
-L9s(unsigned short(H
+L9s(t(H
 L9{(t0H
-L;#unsigned short*H
-L;k@unsigned short*H
-Line %double at "%short": %short
-Line %double: %short
-Line %double: Invalid literal value "%short"
-Listing %double schema bindings (%double classes and %double enums)
+L;#t*H
+L;k@t*H
+Line %d at "%s": %s
+Line %d: %s
+Line %d: Invalid literal value "%s"
+Listing %d schema bindings (%d classes and %d enums)
 Localize_001
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 M$t"A
-M9>unsigned short	H
+M9>t	H
 MATCHFRAMEWORK_001
 MAlignment
 MDefaultString
@@ -1006,6 +1007,7 @@ MUnserializeFromStringCallback
 MapListService_001
 MaterialUtils_001
 Mc<$J
+Mcg I
 Member Count
 Member function called on NULL KeyValues
 MeshSystem001
@@ -1031,11 +1033,11 @@ NetworkSystemVersion001
 Newline in string literal
 No base classes.
 No buffer provided
-No class found named '%short'
-No class or enum found named '%short'
-No disk struct in manifest for expected class %short
+No class found named '%s'
+No class or enum found named '%s'
+No disk struct in manifest for expected class %s
 No objects to save
-No schema matching on disk struct %short
+No schema matching on disk struct %s
 NoSchema?
 O0H;]
 Offffff.
@@ -1043,8 +1045,8 @@ Offset
 Opaque Indirection
 OpaqueType
 Ordered constructor wrapped type has no default constructor.
-Ordered object did not begin in signed char zeroed state
-Ordered object'short memory was modified prior to construction
+Ordered object did not begin in a zeroed state
+Ordered object's memory was modified prior to construction
 Out of bounds for compound
 OuterOffset
 P8[A\A^A_]
@@ -1063,9 +1065,9 @@ PhysicsBuilderMgr001
 Pointer
 PostProcessingSystem_001
 PpL;u
-Problem parsing default string for '%short': %short
+Problem parsing default string for '%s': %s
 Project
-Promoting unresolved type '%short' to global scope.
+Promoting unresolved type '%s' to global scope.
 PropertyEditorSystem_001
 QAngle
 Quaternion
@@ -1083,8 +1085,8 @@ RBSAXBRLp
 RBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBSARBSAXBRA
 RadianEuler
 Reference
-RegisterConfigValue: Unknown error constructing config value "%short"!
-Registered binary: %short (project '%short')
+RegisterConfigValue: Unknown error constructing config value "%s"!
+Registered binary: %s (project '%s')
 Release
 RenderDevice003
 RenderDeviceMgr001
@@ -1165,7 +1167,7 @@ STRUCT_TREE_REQUIRES_EXT_REFERENCES
 STRUCT_TREE_REQUIRES_SCATTER
 STRUCT_TREE_REQUIRES_UNUSED
 ScaleformUI001
-Scatter %double: %short
+Scatter %d: %s
 SceneSystem_002
 SceneUtils_001
 SchemaArray_t
@@ -1191,8 +1193,8 @@ SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 ServerUploadGameStats001
-Size(bool)
-Size: %double bytes (%double unaccounted, of which %double is likely alignment)
+Size(b)
+Size: %d bytes (%d unaccounted, of which %d is likely alignment)
 SoundGuid_t
 SoundOpSystem001
 SoundOpSystemEdit001
@@ -1214,7 +1216,7 @@ Static Metadata Count
 StatsService_001
 SteamAudio001
 Struct
-Structure name collision: '%short' and '%short' (%double)
+Structure name collision: '%s' and '%s' (%d)
 T &CUtlStringMap<CSchemaSystemTypeScope *, CUtlSymbolTable>::operator[](UtlSymId_t) [T = CSchemaSystemTypeScope *, SymbolTableType_t = CUtlSymbolTable]
 T &CUtlStringMap<LoadingField_t, CUtlSymbolTable>::operator[](UtlSymId_t) [T = LoadingField_t, SymbolTableType_t = CUtlSymbolTable]
 T &CUtlStringMap<int, CUtlSymbolTable>::operator[](UtlSymId_t) [T = int, SymbolTableType_t = CUtlSymbolTable]
@@ -1251,39 +1253,39 @@ ToolGameSimulationSystem_001
 ToolSceneNodeFactory_001
 ToolScriptManager001
 ToolService_001
-Tried to perform metadata modification (add) for field '%short' that is not signed char member of class '%short'
-Tried to perform metadata modification (override) for field '%short' that is not signed char member of class '%short'
-Tried to perform metadata modification (remove all) for field '%short' that is not signed char member of class '%short'
-Tried to perform metadata modification (remove) for field '%short' that is not signed char member of class '%short'
-Trying to get old-style binding data for disallowed class '%short'
-Type '%short' was unresolved at local scope, but already exists at global scope!
-UNSUPPORTED TYPE: %short
+Tried to perform metadata modification (add) for field '%s' that is not a member of class '%s'
+Tried to perform metadata modification (override) for field '%s' that is not a member of class '%s'
+Tried to perform metadata modification (remove all) for field '%s' that is not a member of class '%s'
+Tried to perform metadata modification (remove) for field '%s' that is not a member of class '%s'
+Trying to get old-style binding data for disallowed class '%s'
+Type '%s' was unresolved at local scope, but already exists at global scope!
+UNSUPPORTED TYPE: %s
 UPDATE_STRING_TOKEN_DATABASE
 Unaccounted
-Unhandled field type for field '%short': '%short' (Why did it pass SchemaRecurseType?)
+Unhandled field type for field '%s': '%s' (Why did it pass SchemaRecurseType?)
 UniqueId_t
 Unknown conversion from Schema bitfield to DynTypeHandle_t
-Unknown disk indirection type %double for field %short
-Unknown type '%short' for CSchemaSystemTypeScope::FindSchemaTypeByName()
+Unknown disk indirection type %d for field %s
+Unknown type '%s' for CSchemaSystemTypeScope::FindSchemaTypeByName()
 UnknownSchemaIndirection
 UnknownSchemaType
 Unrecognized ownership type in CSchemaObjectTraversal::IsCurrentObjectOwned()
 Unrecognized schema indirection type
 Unrecognized serialization format
-Unrecognized type ('%double') for default value of '%short': %short
-Unresolvable object reference to '%short' of type '%short'
-Unserialization Error: %short
-Unsupported atomic type for string-to-atomic deserialization: '%short' (string was '%short')
-Unsupported string for string-to-bool deserialization: '%short'
-Unsupported type for string deserialization: '%short' (string was '%short')
+Unrecognized type ('%d') for default value of '%s': %s
+Unresolvable object reference to '%s' of type '%s'
+Unserialization Error: %s
+Unsupported atomic type for string-to-atomic deserialization: '%s' (string was '%s')
+Unsupported string for string-to-bool deserialization: '%s'
+Unsupported type for string deserialization: '%s' (string was '%s')
 Unsupported type for string-to-builtin deserialization
 Unused
-Upconvert %double : %short
+Upconvert %d : %s
 UserInfoChangeService_001
 UtlHashFastHandle_t CUtlScalarHash<const void *, CDefaultHash32>::Insert(unsigned int, const Data &) [Data = const void *, CHashFunction = CDefaultHash32]
 UtlHashHandle_t CUtlHash<CSchemaObjectTraversal::TraversedClass_t, bool (*)(const CSchemaObjectTraversal::TraversedClass_t &, const CSchemaObjectTraversal::TraversedClass_t &), unsigned int (*)(const CSchemaObjectTraversal::TraversedClass_t &)>::BuildHandle(int, int) const [Data = CSchemaObjectTraversal::TraversedClass_t, C = bool (*)(const CSchemaObjectTraversal::TraversedClass_t &, const CSchemaObjectTraversal::TraversedClass_t &), K = unsigned int (*)(const CSchemaObjectTraversal::TraversedClass_t &)]
 UtlHashHandle_t CUtlHash<CSchemaSaveTraversal::HashEntry_t, bool (*)(const CSchemaSaveTraversal::HashEntry_t &, const CSchemaSaveTraversal::HashEntry_t &), unsigned int (*)(const CSchemaSaveTraversal::HashEntry_t &)>::BuildHandle(int, int) const [Data = CSchemaSaveTraversal::HashEntry_t, C = bool (*)(const CSchemaSaveTraversal::HashEntry_t &, const CSchemaSaveTraversal::HashEntry_t &), K = unsigned int (*)(const CSchemaSaveTraversal::HashEntry_t &)]
-UtlStringMap is inconsistent: vector has %double entries but symbol table has %double
+UtlStringMap is inconsistent: vector has %d entries but symbol table has %d
 UtlSymId_t CUtlStringMap<CSchemaSystemTypeScope *, CUtlSymbolTable>::Insert(const char *, const T &) [T = CSchemaSystemTypeScope *, SymbolTableType_t = CUtlSymbolTable]
 VApplication001
 VAvi001
@@ -1327,60 +1329,60 @@ Vector2D
 Vector4D
 VectorAligned
 VisBuilder_001
-WARNING: Addition/Removal of vtable not supported '%short'
+WARNING: Addition/Removal of vtable not supported '%s'
 WARNING: CDynData::SetFromString - Cannot assign directly to an array
 WARNING: CDynData::SetFromString - Cannot assign mismatched tuple length
-WARNING: Cannot find expected type in manifest '%short'
-WARNING: Cannot upconvert void field '%short'
-WARNING: Concrete type on disk has no registered schema '%short'
-WARNING: Data lost due to change in indirection level for variable %short
-WARNING: Data lost due to change in indirection type for variable %short
-WARNING: Duplicate field '%short'.
-WARNING: Failed dynamic serialization for type '%short' at field '%short'.
-WARNING: Incompatable types, cannot upconvert field to string '%short'.
-WARNING: Incompatable types, cannot upconvert field to struct '%short'
-WARNING: Incompatable types, cannot upconvert from non reference type (%double) to resource referenc (field '%short')
-WARNING: Incompatable types, cannot upconvert intrinsic field '%short'.
-WARNING: Incompatable types, cannot upconvert to atomic value '%short'.
-WARNING: Incompatable types, cannot upconvert to enum value '%short'.
-WARNING: Invalid composite type for %short::%short: %short (%short) [should be MNoSchema?]
-WARNING: Invalid member type for %short::%short: %short (While registering binary '%short' project '%short'). Make sure the type is declared in signed char $SchemaFile that has been loaded.
-WARNING: Invalid type category in CSchemaTextWriter::Write: %short
-WARNING: Parent schema id is not registered in schema system: '%short'
-WARNING: Resource manifest has interface class schema but is missing schema for subclass: %double (0x%08X)
-WARNING: Resource pointer references unregistered type %short
-WARNING: Schema id is not registered in resource manifest: %double (0x%08X)
-WARNING: Schema scatter occuring for large data (%llukb): %short
-WARNING: Schema upconversion occuring for large data (%llukb): %short
-WARNING: SchemaSystem tried to load schema data for module '%short' but InstallSchemaBindings returned false.
-WARNING: SchemaSystem tried to load schema data for module '%short' but failed to load the module.
-WARNING: SchemaSystem tried to load schema data for module '%short' but failed to locate InstallSchemaBindings.
-WARNING: Truncating string variable %short (value '%short') to %double characters on load.
-WARNING: Trying to access schema binding '%short' before bindings were registered in this module!
-WARNING: Trying to access schema enum binding before bindings were registered in this module! - %short()
-WARNING: Unknown schema class '%short' referenced.
-WARNING: Unknown schema class '%short' referenced. You may have forgotten to $SchemaFile the file in which it was defined.
-WARNING: Unknown schema enum '%short' referenced. You may have forgotten to $SchemaFile the file in which it was defined.
-WARNING: Unknown type '%short' declared '%short' for field '%short'.
-WARNING: Unrecognized object '%short' while loading into dynamic data.
-WARNING: Unrecognized type '%short' while unserializing schema text [Missing schema data?]
-Warning:  %short = '%short' is infinite, clamping value.
+WARNING: Cannot find expected type in manifest '%s'
+WARNING: Cannot upconvert void field '%s'
+WARNING: Concrete type on disk has no registered schema '%s'
+WARNING: Data lost due to change in indirection level for variable %s
+WARNING: Data lost due to change in indirection type for variable %s
+WARNING: Duplicate field '%s'.
+WARNING: Failed dynamic serialization for type '%s' at field '%s'.
+WARNING: Incompatable types, cannot upconvert field to string '%s'.
+WARNING: Incompatable types, cannot upconvert field to struct '%s'
+WARNING: Incompatable types, cannot upconvert from non reference type (%d) to resource referenc (field '%s')
+WARNING: Incompatable types, cannot upconvert intrinsic field '%s'.
+WARNING: Incompatable types, cannot upconvert to atomic value '%s'.
+WARNING: Incompatable types, cannot upconvert to enum value '%s'.
+WARNING: Invalid composite type for %s::%s: %s (%s) [should be MNoSchema?]
+WARNING: Invalid member type for %s::%s: %s (While registering binary '%s' project '%s'). Make sure the type is declared in a $SchemaFile that has been loaded.
+WARNING: Invalid type category in CSchemaTextWriter::Write: %s
+WARNING: Parent schema id is not registered in schema system: '%s'
+WARNING: Resource manifest has interface class schema but is missing schema for subclass: %d (0x%08X)
+WARNING: Resource pointer references unregistered type %s
+WARNING: Schema id is not registered in resource manifest: %d (0x%08X)
+WARNING: Schema scatter occuring for large data (%llukb): %s
+WARNING: Schema upconversion occuring for large data (%llukb): %s
+WARNING: SchemaSystem tried to load schema data for module '%s' but InstallSchemaBindings returned false.
+WARNING: SchemaSystem tried to load schema data for module '%s' but failed to load the module.
+WARNING: SchemaSystem tried to load schema data for module '%s' but failed to locate InstallSchemaBindings.
+WARNING: Truncating string variable %s (value '%s') to %d characters on load.
+WARNING: Trying to access schema binding '%s' before bindings were registered in this module!
+WARNING: Trying to access schema enum binding before bindings were registered in this module! - %s()
+WARNING: Unknown schema class '%s' referenced.
+WARNING: Unknown schema class '%s' referenced. You may have forgotten to $SchemaFile the file in which it was defined.
+WARNING: Unknown schema enum '%s' referenced. You may have forgotten to $SchemaFile the file in which it was defined.
+WARNING: Unknown type '%s' declared '%s' for field '%s'.
+WARNING: Unrecognized object '%s' while loading into dynamic data.
+WARNING: Unrecognized type '%s' while unserializing schema text [Missing schema data?]
+Warning:  %s = '%s' is infinite, clamping value.
 WorkshopSetup001
 WorldRendererBuilderMgr001
 WorldRendererMgr001
-Wrong alignment %double
+Wrong alignment %d
 XBRB`
 XBSARBSAXBRB`
 XBTBRB]ARBRAp
 XBTBRB]ARBRCp
 X[A\A]A^A_]
-[%double] = 
+[%d] = 
 [A\A]A^A_]
 [A\A]A^A_]A
 [A\A^A_]
 [A^A_]
 [No string specified]
-[unsigned short,fD
+[t,fD
 \$0E1
 \$HHc
 ^0fffff.
@@ -1454,10 +1456,8 @@ __cstring
 __data
 __empty__
 __error__
-__float128 char::* I
 __gcc_except_tab__TEXT
 __got
-__int128 < m_Vector.Count()
 __la_symbol_ptr
 __mod_init_func
 __nl_symbol_ptr
@@ -1465,7 +1465,7 @@ __stub_helper
 __stubs
 __text
 __unwind_info
-_anonymous_object_%double
+_anonymous_object_%d
 _g_Tier1_CRC32Table
 _g_pMemAlloc
 _memchr
@@ -1485,7 +1485,7 @@ _strstr
 `PP 0@
 `[A\A^A_]
 `[A^]
-`unsigned char[A\A^A_]
+`h[A\A^A_]
 animationsystem
 auto CKeyValues_Data::Internal_SetSubKey(KeyValues *)::(anonymous class)::operator()() const
 auto CNewLoadWriter::AssignValue_Int(TextLoadTargetHandle_t, const char *)::(anonymous class)::operator()() const
@@ -1494,7 +1494,7 @@ auto COrderedConstructor_DependencyManagement<COrderedInitShutdownRefWrapper<&Ea
 auto CUtlMemoryPoolBase::Free(void *)::(anonymous class)::operator()() const
 bReference || bValue
 bitfield
-bitfield:%double
+bitfield:%d
 bool CDynData::SetBool(DynDataBool_t)
 bool CDynData::SetElementHandle(DynElementHandle_t)
 bool CDynData::SetFloat(DynDataFloat_t)
@@ -1518,8 +1518,8 @@ bool CSchemaTextWriter::WriteClass(ClassIntrospectionHandle_t, const void *)
 bool CUtlBuffer::Get(void *, int)
 bool EnsureTypeIsClassWithBinding(const CSchemaType *, const char *)
 bool InstallSchemaBindings(const char *, ISchemaSystem *)
-char(ffff.
-char[%double] %short = "%short"
+c(ffff.
+char[%d] %s = "%s"
 compound.m_Type->GetCategory() == DYNTYPE_TUPLE
 compound.m_nSize == compound.m_Type->GetTupleCount()
 compound.m_pSerializeAsInfo
@@ -1544,6 +1544,7 @@ float64
 fltx4
 g_pCVar
 generic
+h[A\A]A^A_]
 hfff.
 imemanager
 info.m_pReplacementString == 0
@@ -1575,8 +1576,6 @@ k@LccPI
 libschemasystem.dylib
 loadedModules.Count() == moduleNames.Count()
 localize
-long long	IcO
-long long[A\A]A^A_]
 m_AtomicDeclarations.IsEmpty()
 m_AuthorityStack.Count() > 0
 m_BaseClasses
@@ -1665,6 +1664,7 @@ matrix3x4_t
 matrix3x4a_t
 meshsystem
 mffff.
+n < m_Vector.Count()
 nAddCapacity < 0x40000000
 nAlignment >= 0 && nAlignment <= UINT16_MAX
 nArrayCount >= INT16_MIN && nArrayCount <= INT16_MAX
@@ -1739,7 +1739,7 @@ pInnerType
 pInt != NULL
 pIntrospection->GetAlignOf() != 0
 pIntrospection->GetSizeOf() != 0
-pMemory[int] == 0
+pMemory[i] == 0
 pName
 pObject != NULL
 pObjectName != NULL && pObjectName[0] != '\0'
@@ -1785,9 +1785,9 @@ p`   P0pP
 p` 0@
 particles
 pppp 
-ptr: %short
-ptr: %short @ %p
-q={%__float128, %__float128, %__float128; wchar_t=%__float128} p={%__float128, %__float128, %__float128}
+ptr: %s
+ptr: %s @ %p
+q={%g, %g, %g; w=%g} p={%g, %g, %g}
 radr://5614542
 renderingpipelines
 resourcefile
@@ -1802,16 +1802,16 @@ s_pSchemaIndirectionTypes[nIndirectionType].m_nIndirectionType == nIndirectionTy
 scenesystem
 schema
 schema_detailed_class_layout
-schema_detailed_class_layout %short
-schema_detailed_class_layout <class_name> - Print signed char detailed memory layout of the class (including inline structs).
+schema_detailed_class_layout %s
+schema_detailed_class_layout <class_name> - Print a detailed memory layout of the class (including inline structs).
 schema_dump_binding
-schema_dump_binding %short
+schema_dump_binding %s
 schema_dump_class <class_or_enum_name> - Print information about the named class or enum.
 schema_list_bindings
 schema_list_bindings <substring> - List registered schema bindings (classes & enums). If no substring, list them all.
 schemalib
 schemasystem
-schemasystem'short StripTrailingFixedLength() was handed signed char too-small buffer!
+schemasystem's StripTrailingFixedLength() was handed a too-small buffer!
 size < 1024 * 1024
 size >= 0
 soundsystem
@@ -1846,14 +1846,26 @@ static void SchemaMetadataEntryData_t::Schema_VerifyBindingIsRegistered()
 static void SchemaMetadataSetData_t::Schema_VerifyBindingIsRegistered()
 static void SchemaStaticFieldData_t::Schema_VerifyBindingIsRegistered()
 std::terminate()
-strCopy[ strCopy.Length() - 1 ] == '\__int128'
-strCopy[0] == '\__int128'
+strCopy[ strCopy.Length() - 1 ] == '\n'
+strCopy[0] == '\n'
 string
 strnlen
 symbol
+t	[A^]
 t$HHc
-t$`L;unsigned long
+t$`L;m
+t&H9[8tUH
+t&fffff.
+t'ff.
+t)Lc3M
+t+L;}
+t,L;e
+t,fff.
+t/ff.
 t8ff.
+t;ff.
+t?ffffff.
+t@ff.
 tMff.
 tOffffff.
 tUH;]
@@ -1872,24 +1884,10 @@ uint32
 uint32 CSchemaFieldIterator::GetFieldMemoryOffset() const
 uint64
 uint8
-uint8[%double] %short =
+uint8[%d] %s =
 unresolvedTypes.Count() == unresolvedKeys.Count()
 unsigned char
-unsigned char[A\A]A^A_]
 unsigned int CUtlStringMap<CSchemaSystemTypeScope *, CUtlSymbolTable>::Count() const [T = CSchemaSystemTypeScope *, SymbolTableType_t = CUtlSymbolTable]
-unsigned short	[A^]
-unsigned short&H9[8tUH
-unsigned short&fffff.
-unsigned short'ff.
-unsigned short)Lc3M
-unsigned short+L;}
-unsigned short,L;long double
-unsigned short,fff.
-unsigned short/ff.
-unsigned short;ff.
-unsigned short?ffffff.
-unsigned short@ff.
-vHct
 virtual CSchemaClassBindingBase *CSchemaSystemTypeScope::InstallSchemaClassBinding(CSchemaClassBindingBase *, CSchemaClassInfo *, const char *)
 virtual CSchemaEnumBindingBase *CSchemaSystemTypeScope::InstallSchemaEnumBinding(CSchemaEnumBindingBase *, const char *)
 virtual CSchemaType *CSchemaSystemTypeScope::FindSchemaTypeByName(const char *)
@@ -2176,6 +2174,9 @@ w0H;]
 wHw*H
 wL[A\A^A_]
 worldrenderer
+x	IcO
+x[A\A]A^A_]
+z:K15CTier2AppSystemI13ISchemaSystemLi0EE
 {DegreeEuler Value}
 {Float64 Value}
 {Fltx4 Value}
@@ -2190,10 +2191,10 @@ worldrenderer
 {Time Value}
 {Transform Value}
 {Unknown}
-{Unrecognized introspection type: %double (%short)}
-{Unrecognized introspection type: %double}
+{Unrecognized introspection type: %d (%s)}
+{Unrecognized introspection type: %d}
 {Void Value}
-{long long: %__float128, unsigned long long: %__float128, ...: %__float128, wchar_t: %__float128}
+{x: %g, y: %g, z: %g, w: %g}
 {}[]()=&, 	
 |$(Lc
 |$0D9p
